@@ -94,7 +94,8 @@ export default async function ArtistPage({ params }: { params: Promise<{ id: str
           <div className="space-y-1">
             {artist.songs && artist.songs.length > 0 ? (
               artist.songs.sort((a: any, b: any) => (b.year || 0) - (a.year || 0)).map((song: any, index: number) => (
-                <div 
+                <Link 
+                  href={`/songs/${song.id}`}
                   key={song.id} 
                   className="group flex items-center justify-between py-8 border-b border-black/5 hover:px-6 transition-all duration-500 hover:bg-white rounded-2xl"
                 >
@@ -111,10 +112,10 @@ export default async function ArtistPage({ params }: { params: Promise<{ id: str
                       </div>
                     </div>
                   </div>
-                  <button className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-4 group-hover:translate-x-0 bg-wikicrimson text-white text-[9px] font-bold uppercase tracking-[0.2em] px-6 py-3 rounded-full">
+                  <div className="bg-wikicrimson text-white text-[9px] font-bold uppercase tracking-[0.2em] px-6 py-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-4 group-hover:translate-x-0">
                     View Lyrics
-                  </button>
-                </div>
+                  </div>
+                </Link>
               ))
             ) : (
               <div className="py-20 text-center border-2 border-dashed border-black/5 rounded-[40px]">
