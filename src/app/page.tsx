@@ -20,10 +20,10 @@ export default async function Home() {
     <>
       <header className="fixed top-0 left-0 right-0 z-50 py-8 px-10 md:px-20 flex items-center justify-between pointer-events-none">
         <Link href="/" className="font-serif italic text-2xl text-wikicrimson pointer-events-auto">
-          Wikimusic
+          WikiMusic.do
         </Link>
         <div className="text-[10px] font-bold uppercase tracking-[0.3em] opacity-40">
-          Dominican Archive v1.0
+          Dominican Music Database v1.0
         </div>
       </header>
 
@@ -95,7 +95,7 @@ export default async function Home() {
       </main>
 
       <footer className="p-20 text-center border-t border-black/5">
-        <p className="text-sm opacity-50">© 2026 Wikimusic. All rights reserved.</p>
+        <p className="text-sm opacity-50">© 2026 WikiMusic.do All rights reserved.</p>
       </footer>
     </>
   );

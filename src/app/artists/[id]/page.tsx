@@ -27,7 +27,7 @@ export default async function ArtistPage({ params }: { params: Promise<{ id: str
       <header className="fixed top-0 w-full z-50 p-8 md:p-12 flex justify-between items-center mix-blend-difference text-white pointer-events-none">
         <Link href="/" className="font-serif italic text-2xl pointer-events-auto">Wikimusic</Link>
         <Link href="/" className="text-[10px] font-bold uppercase tracking-[0.3em] pointer-events-auto border border-white/20 px-4 py-2 rounded-full hover:bg-white hover:text-black transition-all">
-          Back to Archive
+          Back to Home
         </Link>
       </header>
 
@@ -128,7 +128,7 @@ export default async function ArtistPage({ params }: { params: Promise<{ id: str
 
       <footer className="p-20 text-center border-t border-black/5">
         <div className="text-[10px] font-bold uppercase tracking-[0.4em] opacity-20">
-          Wikimusic Archive &copy; 2026
+          WikiMusic.do &copy; 2026
         </div>
       </footer>
     </div>
