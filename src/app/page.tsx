@@ -94,7 +94,7 @@ export default async function Home() {
         </section>
       </main>
 
-      <footer className="p-20 text-center border-t border-black/5">
+      <footer className="p-05 text-center border-t border-black/5">
         <p className="text-sm opacity-50">© 2026 WikiMusic.do All rights reserved.</p>
       </footer>
     </>
