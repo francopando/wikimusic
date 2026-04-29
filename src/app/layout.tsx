@@ -1,12 +1,16 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Outfit } from "next/font/google";
+import { Outfit, Instrument_Serif } from "next/font/google";
 
-// Configure the Outfit font
 const outfit = Outfit({
   subsets: ["latin"],
-  display: "swap",
   variable: "--font-outfit",
+});
+
+const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-serif",
 });
 
 export const metadata: Metadata = {
@@ -20,13 +24,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={outfit.variable}>
-      <body className={`${outfit.className} min-h-screen bg-[#FBFBFD] text-[#1d1d1f] antialiased`}>
-        {/* Subtle background glow to give it depth across all pages */}
-        <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
-          <div className="absolute -top-[10%] -right-[10%] w-[40%] h-[40%] bg-pink-50/50 blur-[120px] rounded-full" />
+    <html lang="en" className={`${outfit.variable} ${instrumentSerif.variable}`} suppressHydrationWarning>
+      <body className="min-h-screen relative font-outfit">
+        {/* Subtle Textured Background */}
+        <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none opacity-40">
+          <div className="absolute top-[-10%] right-[-5%] w-[50%] h-[50%] bg-red-200/20 blur-[140px] rounded-full" />
+          <div className="absolute bottom-[-10%] left-[-5%] w-[40%] h-[40%] bg-slate-200/40 blur-[120px] rounded-full" />
         </div>
-        
         {children}
       </body>
     </html>

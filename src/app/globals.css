@@ -1,72 +1,23 @@
 @import "tailwindcss";
 
-/* =========================
-   THEME TOKENS
-========================= */
 @theme {
-  --font-outfit: "Outfit", sans-serif;
+  /* High-End Archive Palette */
+  --color-wikicrimson: #8B0000;
+  --color-wikicrimson-hover: #700000;
+  --color-canvas: #FAF9F6; /* Premium Off-White */
+  --color-glass-white: rgba(255, 255, 255, 0.4);
 
-  --color-dr-blue: #0038A8;
-  --color-dr-red: #CE1126;
-
-  --color-ui-depth: #F2F7FF;
-  --color-text-main: #001642;
-
-  /* extras para fidelidad visual */
-  --color-soft-bg: #FBFBFD;
+  /* Pair a Sharp Serif with a Geometric Sans */
+  --font-serif: "Instrument Serif", serif;
+  --font-outfit: var(--font-outfit), ui-sans-serif, system-ui;
 }
 
-/* =========================
-   BASE STYLES
-========================= */
-body {
-  font-family: var(--font-outfit);
-  background-color: var(--color-soft-bg);
-  color: var(--color-text-main);
-  min-height: 100vh;
+@layer base {
+  body {
+    @apply bg-canvas text-[#1d1d1f] antialiased;
+  }
 
-  /* suavizado visual */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* =========================
-   GLASS EFFECT (reusable)
-========================= */
-.glass {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-}
-
-/* =========================
-   PREMIUM SHADOWS
-========================= */
-.shadow-soft {
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06);
-}
-
-.shadow-soft-lg {
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.08);
-}
-
-/* =========================
-   TEXT BALANCE (hero)
-========================= */
-h1, h2, h3 {
-  text-wrap: balance;
-}
-
-/* =========================
-   SELECTION STYLE
-========================= */
-::selection {
-  background-color: rgba(206, 17, 38, 0.1);
-}
-
-/* =========================
-   SMOOTH TRANSITIONS
-========================= */
-* {
-  transition: all 0.25s ease;
+  h1, h2, h3 {
+    @apply font-serif italic;
+  }
 }
