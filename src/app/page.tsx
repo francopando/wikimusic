@@ -1,26 +1,50 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import { supabase } from '@/utils/supabase';
 import Image from 'next/image';
 import Link from 'next/link';
 
 const STORAGE_URL = "https://srulenjahemkuxtkfmzt.supabase.co/storage/v1/object/public/artist-images/";
 
-export default async function Home() {
-  // Fetch artists from your 'artists' table
-  const { data: artists, error } = await supabase
-    .from('artists')
-    .select('*')
-    .order('name', { ascending: true });
+export default function Home() {
+  const [artists, setArtists] = useState<any[] | null>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  if (error) console.error('Error loading artists:', error);
+  useEffect(() => {
+    async function fetchData() {
+      const { data, error } = await supabase
+        .from('artists')
+        .select('*')
+        .order('name', { ascending: true });
+      
+      if (error) console.error('Error loading artists:', error);
+      else setArtists(data);
+    }
+    fetchData();
 
-  // Use the first artist for the featured bento card
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const featured = artists?.[0];
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 py-8 px-10 md:px-20 flex items-center justify-between pointer-events-none">
+      {/* FIXED SIZE HEADER: Padding stays py-8 in both states */}
+      <header 
+        className={`fixed top-0 left-0 right-0 z-100 px-10 md:px-20 py-8 flex items-center justify-between transition-colors duration-700 ease-in-out ${
+          isScrolled 
+            ? 'bg-black/80 backdrop-blur-xl border-b border-white/10' 
+            : 'bg-transparent border-b border-transparent'
+        }`}
+      >
         <Link href="/" className="font-serif italic text-2xl text-wikicrimson pointer-events-auto">
-          WikiMusic.do
+          DMDB.do
         </Link>
         <div className="text-[10px] font-bold uppercase tracking-[0.3em] opacity-40">
           Dominican Music Database v1.0
@@ -30,26 +54,24 @@ export default async function Home() {
       <main className="pt-40 pb-24 px-8 max-w-6xl mx-auto font-outfit">
         {/* Bento Grid Section */}
         <div className="grid md:grid-cols-3 gap-6 mb-32">
-          {/* Main Discovery Card */}
           <Link 
             href={featured ? `/artists/${featured.id}` : '#'} 
             className="md:col-span-2 bg-white/50 backdrop-blur-3xl rounded-[48px] p-12 border border-white/60 relative overflow-hidden group transition-all hover:bg-white/80"
           >
             <div className="relative z-10 flex flex-col justify-between h-full">
-              <span className="text-[10px] font-bold uppercase tracking-[0.3em] opacity-40 mb-20 block">Featured Artist</span>
+              <span className="text-[10px] font-bold uppercase tracking-[0.3em] opacity-40 mb-20 block text-black">Featured Artist</span>
               <div>
-                <h2 className="text-6xl md:text-8xl italic mb-4 transition-colors group-hover:text-wikicrimson">
+                <h2 className="text-6xl md:text-8xl italic mb-4 transition-colors group-hover:text-wikicrimson text-black">
                   {featured?.name || "The Archive"}
                 </h2>
-                <p className="text-lg opacity-60 max-w-sm">
+                <p className="text-lg opacity-60 max-w-sm text-black">
                   {featured?.bio || "Mapping the history of Dominican sound."}
                 </p>
               </div>
             </div>
           </Link>
 
-          {/* Region Stats Card */}
-          <div className="bg-wikicrimson rounded-[48px] p-12 text-canvas flex flex-col justify-between shadow-xl">
+          <div className="bg-wikicrimson rounded-[48px] p-12 text-white flex flex-col justify-between shadow-xl">
              <span className="text-[10px] font-bold uppercase tracking-[0.3em] opacity-60">Primary Origin</span>
              <div className="text-4xl font-serif">
                {featured?.origin_region || "Multiple Regions"}
@@ -57,13 +79,11 @@ export default async function Home() {
           </div>
         </div>
 
-        {/* The Full Index List */}
         <section className="pt-20 border-t border-black/5">
           <h3 className="text-[11px] font-bold uppercase tracking-[0.4em] text-wikicrimson mb-16">The Archive Index</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-20">
             {artists?.map((artist, index) => (
               <Link href={`/artists/${artist.id}`} key={artist.id} className="group block">
-                {/* Image Placeholder with Editorial Filter */}
                 <div className="relative w-full aspect-4/5 rounded-[40px] overflow-hidden mb-8 bg-black/5 shadow-sm transition-all duration-500 group-hover:shadow-xl">
                   {artist.image_url ? (
                     <Image 
@@ -94,7 +114,7 @@ export default async function Home() {
         </section>
       </main>
 
-      <footer className="p-05 text-center border-t border-black/5">
+      <footer className="p-2 text-center border-t border-black/5">
         <p className="text-sm opacity-50">© 2026 WikiMusic.do All rights reserved.</p>
       </footer>
     </>
