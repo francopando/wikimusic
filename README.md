@@ -6,13 +6,6 @@ This project is designed with a clean UI, fast performance, and a scalable archi
 
 ---
 
-## 🌐 Live Demo
-
-🚀 Deployed on: :contentReference[oaicite:0]{index=0}  
-👉 Add your live link here once deployed
-
----
-
 ## 📖 About the Project
 
 The **Dominican Music Database** is a digital platform dedicated to cataloging and presenting Dominican music in an accessible and modern way.
@@ -29,21 +22,21 @@ The goal is to:
 
 This project is built using modern web technologies:
 
-- ⚛️ :contentReference[oaicite:1]{index=1} – Full-stack React framework  
-- 🎨 :contentReference[oaicite:2]{index=2} – Utility-first styling system  
-- 🧩 :contentReference[oaicite:3]{index=3} – Modern UI components  
-- ⚡ React – Component-based architecture  
-- 🚀 Vercel – Deployment and hosting platform  
+- **Next.js 16** – Full-stack React framework with App Router  
+- **React 19** – Component-based architecture  
+- **TypeScript** – Type-safe development  
+- **Tailwind CSS 4** – Utility-first styling system  
+- **Supabase** – Backend-as-a-Service (PostgreSQL + Auth)  
+- **Lucide React** – Modern icon library  
 
 ---
 
 ## ✨ Features
 
-- 🔎 Fast search for artists and music  
+- 🔎 Fast search and browsing of artists and music  
 - 🎧 Clean and modern UI design  
 - 📱 Fully responsive (mobile + desktop)  
 - 🧱 Modular and reusable components  
-- 🌙 Modern styling with Tailwind CSS  
 - ⚡ Optimized performance with Next.js  
 
 ---
@@ -54,4 +47,55 @@ Follow these steps to run the project locally:
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/francopando/wikimusic.git
+git clone https://github.com/francopando/domidb.git
+cd domidb
+```
+
+### 2. Install dependencies
+```bash
+npm install
+```
+
+### 3. Set up environment variables
+
+Create a `.env.local` file in the root directory with the following variables:
+
+#### Frontend (Public)
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
+
+#### Backend/Seeding (Private)
+```env
+SUPABASE_URL=your_supabase_project_url
+SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key
+```
+
+You can obtain these values from your Supabase project dashboard:
+- Go to **Settings > API** in your Supabase project
+- Find your project URL and API keys (Anon Key and Service Role Key)
+
+### 4. Seed the database (optional)
+```bash
+npm run seed
+```
+
+This will populate the database with initial artist data.
+
+### 5. Run the development server
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+---
+
+## 📦 Build and Deploy
+
+### Build for production
+```bash
+npm run build
+npm start
+```

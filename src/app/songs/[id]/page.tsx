@@ -1,4 +1,4 @@
-import { supabase } from '@/utils/supabase';
+import { supabase } from '@/lib/supabase';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -9,18 +9,19 @@ const STORAGE_URL = "https://srulenjahemkuxtkfmzt.supabase.co/storage/v1/object/
 export default async function SongPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
 
+  // Updated: songs → songs_old
+  // Updated: artists → artists_old
   const { data: song, error } = await supabase
-    .from('songs')
+    .from('songs_old')
     .select(`
       *,
-      artists (*)
+      artists_old (*)
     `)
     .eq('id', id)
     .single();
 
   if (error || !song) return notFound();
 
-  // Handle JSONB metadata safely
   const metadata = (song.metadata as { 
     trivia?: string[], 
     composer?: string, 
@@ -29,11 +30,10 @@ export default async function SongPage({ params }: { params: Promise<{ id: strin
 
   return (
     <div className="min-h-screen bg-black text-white font-outfit overflow-hidden">
-      {/* Background: Added priority and sizes for performance */}
       <div className="fixed inset-0 z-0">
-        {song.artists?.image_url && (
+        {song.artists_old?.image_url && (
           <Image 
-            src={`${STORAGE_URL}${encodeURIComponent(song.artists.image_url)}`}
+            src={`${STORAGE_URL}${encodeURIComponent(song.artists_old.image_url)}`}
             alt=""
             fill
             priority
@@ -44,14 +44,13 @@ export default async function SongPage({ params }: { params: Promise<{ id: strin
         <div className="absolute inset-0 bg-linear-to-b from-black/60 via-black/80 to-black" />
       </div>
 
-      {/* Header Navigation */}
       <header className="relative z-50 p-8 flex justify-between items-center">
         <Link href={`/artists/${song.artist_id}`} className="group flex items-center gap-4">
           <div className="w-10 h-10 rounded-full overflow-hidden relative border border-white/20">
-            {song.artists?.image_url && (
+            {song.artists_old?.image_url && (
               <Image 
-                src={`${STORAGE_URL}${encodeURIComponent(song.artists.image_url)}`}
-                alt={song.artists.name}
+                src={`${STORAGE_URL}${encodeURIComponent(song.artists_old.image_url)}`}
+                alt={song.artists_old.name}
                 fill
                 sizes="40px"
                 className="object-cover"
@@ -59,15 +58,14 @@ export default async function SongPage({ params }: { params: Promise<{ id: strin
             )}
           </div>
           <span className="text-[10px] font-bold uppercase tracking-[0.3em] opacity-60 group-hover:opacity-100 transition-opacity">
-            Return to {song.artists.name}
+            Return to {song.artists_old.name}
           </span>
         </Link>
-        <div className="text-wikicrimson font-serif italic text-xl">Wikimusic</div>
+        <div className="text-wikicrimson font-serif italic text-xl">domidb</div>
       </header>
 
       <main className="relative z-10 max-w-5xl mx-auto px-8 pt-12 pb-40 grid md:grid-cols-2 gap-20 items-start">
         
-        {/* Left Column: Media & Discovery */}
         <div className="sticky top-12 space-y-12">
           <section>
             <span className="text-wikicrimson text-[11px] font-bold uppercase tracking-[0.5em] block mb-4">
@@ -83,7 +81,6 @@ export default async function SongPage({ params }: { params: Promise<{ id: strin
             </div>
           </section>
 
-          {/* Interactive Player */}
           {song.youtube_id ? (
             <MusicPlayer videoId={song.youtube_id} />
           ) : (
@@ -92,7 +89,6 @@ export default async function SongPage({ params }: { params: Promise<{ id: strin
             </div>
           )}
 
-          {/* Archive Discovery (Fun Facts & Credits) */}
           {(metadata.trivia || metadata.composer) && (
             <section className="space-y-8 pt-8 animate-in fade-in slide-in-from-bottom-4 duration-1000">
               <div className="h-px bg-linear-to-r from-wikicrimson/50 to-transparent w-full" />
@@ -120,7 +116,6 @@ export default async function SongPage({ params }: { params: Promise<{ id: strin
           )}
         </div>
 
-        {/* Right Column: Lyrics */}
         <section className="md:pt-20">
           <h3 className="text-[11px] font-bold uppercase tracking-[0.3em] opacity-30 mb-12 border-b border-white/10 pb-4">
             Lyrics Archive

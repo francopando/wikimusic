@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { supabase } from '@/utils/supabase';
+import { supabase } from '@/lib/supabase';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -14,7 +14,7 @@ export default function Home() {
   useEffect(() => {
     async function fetchData() {
       const { data, error } = await supabase
-        .from('artists')
+        .from('artists_old')   // ← UPDATED
         .select('*')
         .order('name', { ascending: true });
       
@@ -35,7 +35,7 @@ export default function Home() {
 
   return (
     <>
-      {/* FIXED SIZE HEADER: Padding stays py-8 in both states */}
+      {/* FIXED SIZE HEADER */}
       <header 
         className={`fixed top-0 left-0 right-0 z-100 px-10 md:px-20 py-8 flex items-center justify-between transition-colors duration-700 ease-in-out ${
           isScrolled 
@@ -115,7 +115,7 @@ export default function Home() {
       </main>
 
       <footer className="p-2 text-center border-t border-black/5">
-        <p className="text-sm opacity-50">© 2026 WikiMusic.do All rights reserved.</p>
+        <p className="text-sm opacity-50">© 2026 domidb.do All rights reserved.</p>
       </footer>
     </>
   );

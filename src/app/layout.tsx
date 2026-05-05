@@ -1,43 +1,32 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Outfit, Instrument_Serif } from "next/font/google";
-import Navbar from "@/components/Navbar"; // Make sure you created this file!
+import Navbar from "@/components/Navbar";
 
-const outfit = Outfit({
-  subsets: ["latin"],
-  variable: "--font-outfit",
-});
-
-const instrumentSerif = Instrument_Serif({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-serif",
-});
+const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
+const instrumentSerif = Instrument_Serif({ subsets: ["latin"], weight: "400", variable: "--font-serif" });
 
 export const metadata: Metadata = {
-  title: "Dominican Music Database | Wikimusic",
-  description: "Explore artists and songs with lyrics, translations, and cultural notes.",
+  title: "Dominican Music Database | domidb",
+  description: "Explore artists and songs_old with lyrics, translations, and cultural notes.",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${outfit.variable} ${instrumentSerif.variable}`} suppressHydrationWarning>
-      <body className="min-h-screen relative font-outfit bg-black text-white">
-        {/* Subtle Textured Background */}
-        <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none opacity-40">
-          <div className="absolute top-[-10%] right-[-5%] w-[50%] h-[50%] bg-red-200/20 blur-[140px] rounded-full" />
-          <div className="absolute bottom-[-10%] left-[-5%] w-[40%] h-[40%] bg-slate-200/40 blur-[120px] rounded-full" />
-        </div>
-
-        {/* Persistent Navigation */}
+      <body className="min-h-screen relative font-outfit antialiased">
+        {/* Dominican Flag-Inspired 4-Way Gradient with White Cross */}
+        <div 
+          className="fixed inset-0 -z-10 pointer-events-none"
+          style={{
+            background: 'linear-gradient(90deg, transparent 0%, #FFFFFF 25%, #FFFFFF 75%, transparent 100%), linear-gradient(180deg, transparent 0%, #FFFFFF 25%, #FFFFFF 75%, transparent 100%), radial-gradient(ellipse at 0% 0%, #0052CC 0%, transparent 30%), radial-gradient(ellipse at 100% 0%, #EF4444 0%, transparent 30%), radial-gradient(ellipse at 0% 100%, #EF4444 0%, transparent 30%), radial-gradient(ellipse at 100% 100%, #0052CC 0%, transparent 30%)',
+            backgroundSize: '200% 200%',
+          }}
+        />
+        
         <Navbar />
-
-        {/* Page Content */}
-        {children}
+        
+        <div className="pt-24">{children}</div>
       </body>
     </html>
   );

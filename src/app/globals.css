@@ -1,23 +1,53 @@
 @import "tailwindcss";
 
-@theme {
-  /* High-End Archive Palette */
+/* =========================
+   DESIGN TOKENS
+========================= */
+:root {
+  /* Official Branding */
   --color-wikicrimson: #8B0000;
-  --color-wikicrimson-hover: #700000;
-  --color-canvas: #FAF9F6; /* Premium Off-White */
-  --color-glass-white: rgba(255, 255, 255, 0.4);
+  --color-flagblue: #002D62;
+  --color-canvas: #FAF9F6;
+  --color-ink: #1d1d1f;
 
-  /* Pair a Sharp Serif with a Geometric Sans */
+  /* Typography */
   --font-serif: "Instrument Serif", serif;
   --font-outfit: var(--font-outfit), ui-sans-serif, system-ui;
 }
 
+/* =========================
+   BASE STYLES
+========================= */
 @layer base {
-  body {
-    @apply bg-canvas text-[#1d1d1f] antialiased;
+  html {
+    overflow-y: scroll;
   }
 
-  h1, h2, h3 {
-    @apply font-serif italic;
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* =========================
+   COMPONENTS
+========================= */
+@layer components {
+  .btn-archive {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    font-family: var(--font-outfit);
+    transition: all 0.2s ease;
+  }
+
+  .btn-archive-active {
+    background: var(--color-wikicrimson);
+    color: white;
+    border-color: var(--color-wikicrimson);
+    box-shadow: 0 10px 20px rgba(139, 0, 0, 0.25);
+    font-weight: 700;
   }
 }
