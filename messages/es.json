@@ -42,6 +42,7 @@
     },
     "ui": {
       "placeholder": "Buscar artistas, canciones y álbumes.",
+      "submit": "Buscar",
       "noQuery": "Escribe algo en el cuadro de búsqueda para empezar.",
       "noResults": "No se encontraron resultados.",
       "artistsGroup": "Artistas",
@@ -355,6 +356,20 @@
       "heading": "Letristas Dominicanos",
       "intro": "Explora letristas dominicanos cuyas palabras forman parte del registro musical preservado por Mangulina, la Base de Datos de Música Dominicana."
     },
+    "arrangers": {
+      "heading": "Arreglistas",
+      "intro": "Descubre los arreglistas que transforman ideas musicales en los arreglos instrumentales, vocales y rítmicos presentes en la música dominicana.",
+      "metadataTitle": "Arreglistas",
+      "metadataDescription": "Descubre los arreglistas que transforman ideas musicales en los arreglos instrumentales, vocales y rítmicos presentes en la música dominicana.",
+      "empty": "No se encontraron arreglistas."
+    },
+    "musicalDirectors": {
+      "heading": "Directores Musicales",
+      "intro": "Descubre los directores musicales que dan forma a las interpretaciones, grabaciones, agrupaciones y al sonido de la música dominicana.",
+      "metadataTitle": "Directores Musicales",
+      "metadataDescription": "Descubre los directores musicales que dan forma a las interpretaciones, grabaciones, agrupaciones y al sonido de la música dominicana.",
+      "empty": "No se encontraron directores musicales."
+    },
     "musicians": {
       "heading": "Músicos Dominicanos",
       "intro": "Descubre músicos, instrumentistas e intérpretes dominicanos en Mangulina, la Base de Datos de Música Dominicana."
@@ -430,6 +445,8 @@
       "composers": "Compositores",
       "songwriters": "Autores",
       "lyricists": "Letristas",
+      "arrangers": "Arreglistas",
+      "musicalDirectors": "Directores Musicales",
       "musicians": "Músicos",
       "djs": "DJs",
       "producers": "Productores"
@@ -991,7 +1008,7 @@
       "decadeLinkAria": "Explorar {count, plural, one {# grabación} other {# grabaciones}} de la década de {decadeYear}",
       "links": {
         "singers": "Cantantes", "christianArtists": "Artistas Cristianos", "legends": "Leyendas", "emergingArtists": "Artistas Emergentes", "mostAwarded": "Artistas Más Premiados", "birthdays": "Cumpleaños", "instrumentalClassical": "Instrumental y Clásica",
-        "composers": "Compositores", "songwriters": "Autores de Canciones", "lyricists": "Letristas", "djs": "DJs", "musicians": "Músicos", "producers": "Productores",
+        "composers": "Compositores", "songwriters": "Autores de Canciones", "lyricists": "Letristas", "arrangers": "Arreglistas", "musicalDirectors": "Directores Musicales", "djs": "DJs", "musicians": "Músicos", "producers": "Productores",
         "songs": "Canciones", "releases": "Álbumes", "genres": "Géneros", "home": "Inicio", "about": "Acerca de", "contact": "Contacto", "contributors": "Colaboradores", "privacy": "Política de privacidad", "terms": "Términos de uso", "dmca": "Derechos de Autor y DMCA"
       },
       "genreLabels": {"worship": "Adoración", "merengue": "Merengue", "bachata": "Bachata", "urban": "Urbano", "salsa": "Salsa", "ballads": "Baladas", "pop": "Pop", "rock": "Rock", "reggae": "Reggae", "jazz": "Jazz", "electronic": "Electrónica", "instrumental": "Instrumental", "folklore": "Folclore", "fusion": "Fusión"}

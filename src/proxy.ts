@@ -49,6 +49,10 @@ function isSpanishPath(pathname: string) {
   return pathname === "/es" || pathname.startsWith("/es/");
 }
 
+function isEnglishPath(pathname: string) {
+  return pathname === "/en" || pathname.startsWith("/en/");
+}
+
 function setLocaleCookie(res: NextResponse, locale: AppLocale) {
   res.cookies.set(LOCALE_COOKIE_NAME, locale, PUBLIC_COOKIE_OPTIONS);
 }
@@ -58,6 +62,16 @@ function redirectToSpanish(req: NextRequest) {
   url.pathname = req.nextUrl.pathname === "/" ? "/es" : `/es${req.nextUrl.pathname}`;
   const res = NextResponse.redirect(url);
   setLocaleCookie(res, "es");
+  return res;
+}
+
+function redirectToEnglishCanonical(req: NextRequest) {
+  const url = req.nextUrl.clone();
+  url.pathname = req.nextUrl.pathname === "/en"
+    ? "/"
+    : req.nextUrl.pathname.replace(/^\/en(?=\/)/, "");
+  const res = NextResponse.redirect(url);
+  setLocaleCookie(res, "en");
   return res;
 }
 
@@ -195,6 +209,10 @@ export async function proxy(req: NextRequest) {
   // Everything else is a public, localized page. next-intl resolves the locale
   // from the URL (/es prefix → Spanish, otherwise English) and rewrites to the
   // [locale] segment internally.
+  if (isEnglishPath(pathname)) {
+    return redirectToEnglishCanonical(req);
+  }
+
   const localeCookie = getValidLocaleCookie(req);
   const browserLocale = localeCookie ?? getLocaleFromAcceptLanguage(req);
   const hasSpanishPrefix = isSpanishPath(pathname);

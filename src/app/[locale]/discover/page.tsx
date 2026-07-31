@@ -30,7 +30,7 @@ const ARTIST_LINKS = [
 ];
 
 const CREATOR_LINKS = [
-  { key: "composers", href: "/composers" }, { key: "songwriters", href: "/songwriters" }, { key: "lyricists", href: "/lyricists" }, { key: "djs", href: "/djs" }, { key: "musicians", href: "/musicians" }, { key: "producers", href: "/producers" },
+  { key: "composers", href: "/composers" }, { key: "songwriters", href: "/songwriters" }, { key: "lyricists", href: "/lyricists" }, { key: "arrangers", href: "/arrangers" }, { key: "musicalDirectors", href: "/musical-directors" }, { key: "producers", href: "/producers" }, { key: "musicians", href: "/musicians" }, { key: "djs", href: "/djs" },
 ];
 
 const MUSIC_LINKS = [

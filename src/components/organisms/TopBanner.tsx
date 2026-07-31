@@ -68,14 +68,13 @@ export default function TopBanner() {
           <form
             ref={searchFormRef}
             onSubmit={handleSearch}
-            className="relative flex flex-1 justify-end"
+            className="relative flex flex-1 items-stretch rounded-full border border-[#8B0000]/15 bg-white shadow-[0_0_8px_rgba(139,0,0,0.08)] transition-all focus-within:border-[#8B0000]/30 focus-within:shadow-[0_0_12px_rgba(139,0,0,0.15)]"
             role="search"
           >
             <label
               htmlFor="site-search"
-              className="flex w-full items-center gap-2 rounded-full border border-[#8B0000]/15 bg-white px-3 py-1.5 shadow-[0_0_8px_rgba(139,0,0,0.08)] transition-all focus-within:border-[#8B0000]/30 focus-within:shadow-[0_0_12px_rgba(139,0,0,0.15)]"
+              className="flex min-w-0 flex-1 items-center rounded-l-full py-1.5 pl-3 pr-2"
             >
-              <Search className="h-4 w-4 shrink-0 text-[#8B0000]/50" />
               <input
                 id="site-search"
                 ref={searchInputRef}
@@ -93,6 +92,13 @@ export default function TopBanner() {
                 autoComplete="off"
               />
             </label>
+            <button
+              type="submit"
+              aria-label={t("ui.submit")}
+              className="flex shrink-0 cursor-pointer items-center justify-center rounded-r-full border-l border-[#8B0000]/10 px-3 text-[#8B0000]/50 transition-colors hover:bg-[#8B0000]/5 hover:text-[#8B0000]/70 active:bg-[#8B0000]/10 focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#8B0000]/60"
+            >
+              <Search className="h-4 w-4" aria-hidden="true" />
+            </button>
             <SearchSuggestions
               ref={suggestionsRef}
               searchTerm={searchTerm}

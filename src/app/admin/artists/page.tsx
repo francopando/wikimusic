@@ -306,6 +306,7 @@ const primaryRoleOptions = [
   { value: "producer", label: "Producer" },
   { value: "arranger", label: "Arranger" },
   { value: "bandleader", label: "Bandleader" },
+  { value: "musical_director", label: "Musical Director" },
   { value: "orchestra", label: "Orchestra" },
   { value: "dj", label: "DJ" },
   { value: "rapper", label: "Rapper" },

@@ -42,6 +42,7 @@
     },
     "ui": {
       "placeholder": "Search artists, songs, and albums.",
+      "submit": "Search",
       "noQuery": "Type something in the search box to begin.",
       "noResults": "No results found.",
       "artistsGroup": "Artists",
@@ -344,6 +345,20 @@
       "heading": "Dominican Lyricists",
       "intro": "Browse Dominican lyricists whose words form part of the musical record preserved by Mangulina, the Dominican Music Database."
     },
+    "arrangers": {
+      "heading": "Arrangers",
+      "intro": "Discover the arrangers who transform musical ideas into the instrumental, vocal, and rhythmic arrangements heard across Dominican music.",
+      "metadataTitle": "Arrangers",
+      "metadataDescription": "Discover the arrangers who transform musical ideas into the instrumental, vocal, and rhythmic arrangements heard across Dominican music.",
+      "empty": "No arrangers found."
+    },
+    "musicalDirectors": {
+      "heading": "Musical Directors",
+      "intro": "Explore the musical directors who shape performances, recordings, ensembles, and the sound of Dominican music.",
+      "metadataTitle": "Musical Directors",
+      "metadataDescription": "Explore the musical directors who shape performances, recordings, ensembles, and the sound of Dominican music.",
+      "empty": "No musical directors found."
+    },
     "musicians": {
       "heading": "Dominican Musicians",
       "intro": "Discover Dominican musicians, instrumentalists and performers in Mangulina, the Dominican Music Database."
@@ -419,6 +434,8 @@
       "composers": "Composers",
       "songwriters": "Songwriters",
       "lyricists": "Lyricists",
+      "arrangers": "Arrangers",
+      "musicalDirectors": "Musical Directors",
       "musicians": "Musicians",
       "djs": "DJs",
       "producers": "Producers"
@@ -978,7 +995,7 @@
       "decadeLinkAria": "Browse {count, plural, one {# recording} other {# recordings}} from the {decade}",
       "links": {
         "singers": "Singers", "christianArtists": "Christian Artists", "legends": "Legends", "emergingArtists": "Emerging Artists", "mostAwarded": "Most Awarded Artists", "birthdays": "Artist Birthdays", "instrumentalClassical": "Instrumental & Classical",
-        "composers": "Composers", "songwriters": "Songwriters", "lyricists": "Lyricists", "djs": "DJs", "musicians": "Musicians", "producers": "Producers",
+        "composers": "Composers", "songwriters": "Songwriters", "lyricists": "Lyricists", "arrangers": "Arrangers", "musicalDirectors": "Musical Directors", "djs": "DJs", "musicians": "Musicians", "producers": "Producers",
         "songs": "Songs", "releases": "Releases", "genres": "Genres", "home": "Home", "about": "About", "contact": "Contact", "contributors": "Contributors", "privacy": "Privacy Policy", "terms": "Terms of Use", "dmca": "Copyrights & DMCA"
       },
       "genreLabels": {"worship": "Worship", "merengue": "Merengue", "bachata": "Bachata", "urban": "Urban", "salsa": "Salsa", "ballads": "Ballads", "pop": "Pop", "rock": "Rock", "reggae": "Reggae", "jazz": "Jazz", "electronic": "Electronic", "instrumental": "Instrumental", "folklore": "Folklore", "fusion": "Fusion"}

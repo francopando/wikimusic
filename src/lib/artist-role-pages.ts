@@ -8,6 +8,8 @@ export type ArtistRolePageKey =
   | "composers"
   | "songwriters"
   | "lyricists"
+  | "arrangers"
+  | "musicalDirectors"
   | "musicians"
   | "djs"
   | "producers";
@@ -87,6 +89,32 @@ export const ARTIST_ROLE_PAGES: Record<ArtistRolePageKey, ArtistRolePageConfig> 
     hideGenreFilter: true,
     hideProvinceSelector: true,
     rolePageOptions: WRITING_ROLE_PAGES,
+  },
+  arrangers: {
+    path: "/arrangers",
+    i18nKey: "arrangers",
+    role: "arranger",
+    roleLabel: "Arrangers",
+    heading: "Arrangers",
+    description:
+      "Discover the arrangers who transform musical ideas into the instrumental, vocal, and rhythmic arrangements heard across Dominican music.",
+    intro:
+      "Discover the arrangers who transform musical ideas into the instrumental, vocal, and rhythmic arrangements heard across Dominican music.",
+    hideGenreFilter: true,
+    hideProvinceSelector: true,
+  },
+  musicalDirectors: {
+    path: "/musical-directors",
+    i18nKey: "musicalDirectors",
+    role: "musical_director",
+    roleLabel: "Musical Directors",
+    heading: "Musical Directors",
+    description:
+      "Explore the musical directors who shape performances, recordings, ensembles, and the sound of Dominican music.",
+    intro:
+      "Explore the musical directors who shape performances, recordings, ensembles, and the sound of Dominican music.",
+    hideGenreFilter: true,
+    hideProvinceSelector: true,
   },
   musicians: {
     path: "/musicians",

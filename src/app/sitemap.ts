@@ -149,6 +149,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     entry("/composers", 0.8),
     entry("/songwriters", 0.8),
     entry("/lyricists", 0.8),
+    entry("/arrangers", 0.8),
+    entry("/musical-directors", 0.8),
     entry("/musicians", 0.8),
     entry("/djs", 0.8),
     entry("/producers", 0.8),

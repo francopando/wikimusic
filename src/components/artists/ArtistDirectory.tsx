@@ -28,6 +28,8 @@ export type ArtistBrowseRole =
   | "composer"
   | "songwriter"
   | "lyricist"
+  | "arranger"
+  | "musical_director"
   | "musician"
   | "dj"
   | "producer"
@@ -76,6 +78,8 @@ const ROLE_LABEL_KEYS: Record<ArtistBrowseRole, string> = {
   composer: "composers",
   songwriter: "songwriters",
   lyricist: "lyricists",
+  arranger: "arrangers",
+  musical_director: "musicalDirectors",
   musician: "musicians",
   dj: "djs",
   producer: "producers",
@@ -722,6 +726,8 @@ function ArtistsContent({
     ].join("::");
 
     if (initialData?.cacheKey === requestKey) {
+      // Hydrate the client view from the server-filtered page payload.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setArtists(initialData.artists);
       setTotalCount(initialData.totalCount);
       setLoadError(null);
@@ -1021,7 +1027,7 @@ function ArtistsContent({
         data={[
           collectionPageSchema({ name: displayHeading, description: displayIntro, path: basePath }),
           breadcrumbSchema([
-            { name: "Home", path: "/" },
+            { name: t("navigation.home"), path: "/" },
             { name: displayHeading, path: basePath },
           ]),
         ]}
@@ -1484,7 +1490,7 @@ function ArtistsContent({
           </div>
         ) : (
           <div className="flex min-h-60 items-center justify-center text-center">
-            <NoArtistsMessage />
+            <NoArtistsMessage i18nKey={i18nKey} />
           </div>
         )}
 
@@ -1510,9 +1516,13 @@ function ArtistsContent({
   );
 }
 
-function NoArtistsMessage() {
-  const t = useTranslations("components");
-  return <p className="text-sm text-gray-500">{t("noArtistsFound")}</p>;
+function NoArtistsMessage({ i18nKey }: { i18nKey?: string }) {
+  const t = useTranslations();
+  const roleEmptyKey = i18nKey ? `artistDirectory.${i18nKey}.empty` : "";
+  const message = roleEmptyKey && t.has(roleEmptyKey)
+    ? t(roleEmptyKey)
+    : t("components.noArtistsFound");
+  return <p className="text-sm text-gray-500">{message}</p>;
 }
 
 export default function ArtistDirectory(props: ArtistDirectoryProps) {
