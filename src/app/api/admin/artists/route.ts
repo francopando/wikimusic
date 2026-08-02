@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { requireAdminApiRole } from "@/lib/adminApiAuth";
 import { getSupabaseClient } from "@/lib/supabase";
 import { revalidateArtistProfilePaths } from "@/lib/revalidateArtistProfile";
+import { revalidateAllHomepageData } from "@/lib/homepageCache";
 
 export async function GET(request: Request) {
   const auth = await requireAdminApiRole();
@@ -117,6 +118,7 @@ export async function POST(request: Request) {
     revalidateArtistProfilePaths(response.data.slug);
   }
 
+  revalidateAllHomepageData();
   return NextResponse.json({ ok: true, id: response.data.id });
 }
 
@@ -181,6 +183,7 @@ export async function DELETE(request: Request) {
     revalidateArtistProfilePaths(artist.slug);
   }
 
+  revalidateAllHomepageData();
   return NextResponse.json({
     ok: true,
     id: artistId,

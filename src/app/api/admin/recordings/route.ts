@@ -14,6 +14,10 @@ import {
   recordingContextValues,
   slugify,
 } from "@/lib/adminCatalog";
+import {
+  revalidateHomepageArchiveCounts,
+  revalidateHomepageData,
+} from "@/lib/homepageCache";
 
 type RecordingPayload = Record<string, unknown>;
 
@@ -254,6 +258,8 @@ export async function POST(request: Request) {
     }
   }
 
+  revalidateHomepageData();
+  revalidateHomepageArchiveCounts();
   return NextResponse.json({ ok: true, id: finalRecordingId });
 }
 
@@ -307,5 +313,7 @@ export async function DELETE(request: Request) {
 
   const { error } = await getSupabaseClient().from("recordings").delete().eq("id", recordingId);
   if (error) return jsonError(error.message, 500);
+  revalidateHomepageData();
+  revalidateHomepageArchiveCounts();
   return NextResponse.json({ ok: true, id: recordingId });
 }

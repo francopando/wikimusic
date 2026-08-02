@@ -1,6 +1,11 @@
 // src/lib/getSongsByYear.ts
+import { unstable_cache } from "next/cache";
 import { supabase } from "@/lib/supabase";
 import type { ArchiveSongRow } from "@/app/[locale]/archive/SongsByYearList";
+import {
+  HOMEPAGE_ARCHIVE_CACHE_TAG,
+  HOMEPAGE_CACHE_SECONDS,
+} from "@/lib/homepageCache";
 
 type RecordingArchiveRow = ArchiveSongRow & {
   release_year_actual: number | null;
@@ -247,9 +252,14 @@ export async function getArchiveCountsForYearRange(
   );
 }
 
-export async function getArchiveCounts(): Promise<ArchiveCounts> {
-  return getArchiveCountsForYearRange();
-}
+export const getArchiveCounts = unstable_cache(
+  async (): Promise<ArchiveCounts> => getArchiveCountsForYearRange(),
+  ["homepage-archive-counts-v1"],
+  {
+    revalidate: HOMEPAGE_CACHE_SECONDS,
+    tags: [HOMEPAGE_ARCHIVE_CACHE_TAG],
+  },
+);
 
 export async function getArchiveDecadeCounts() {
   const { decadeCounts } = await getArchiveCounts();

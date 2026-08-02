@@ -12,6 +12,10 @@ import {
   nullableUuid,
   slugify,
 } from "@/lib/adminCatalog";
+import {
+  revalidateHomepageArchiveCounts,
+  revalidateHomepageData,
+} from "@/lib/homepageCache";
 
 type ReleasePayload = Record<string, unknown>;
 
@@ -235,6 +239,8 @@ export async function POST(request: Request) {
     }
   }
 
+  revalidateHomepageData();
+  revalidateHomepageArchiveCounts();
   return NextResponse.json({ ok: true, id: finalReleaseId, reassignment });
 }
 
@@ -269,5 +275,7 @@ export async function DELETE(request: Request) {
 
   const { error } = await getSupabaseClient().from("releases").delete().eq("id", releaseId);
   if (error) return jsonError(error.message, 500);
+  revalidateHomepageData();
+  revalidateHomepageArchiveCounts();
   return NextResponse.json({ ok: true, id: releaseId });
 }

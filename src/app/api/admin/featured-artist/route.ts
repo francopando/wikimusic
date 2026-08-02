@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { getSupabaseClient } from "@/lib/supabase";
+import { revalidateHomepageData } from "@/lib/homepageCache";
 
 export async function POST(request: Request) {
   const { artistId } = await request.json();
@@ -32,5 +33,6 @@ export async function POST(request: Request) {
     );
   }
 
+  revalidateHomepageData();
   return NextResponse.json({ ok: true, artistId: data.artist_id });
 }

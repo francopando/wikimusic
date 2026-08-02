@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { requireAdminApiRole } from "@/lib/adminApiAuth";
 import { getSupabaseClient } from "@/lib/supabase";
 import { revalidateArtistProfilePaths } from "@/lib/revalidateArtistProfile";
+import { revalidateHomepageData } from "@/lib/homepageCache";
 
 // Artist image metadata must be written server-side: the browser Supabase
 // client is blocked by RLS on the artists table (the update matches zero
@@ -50,6 +51,7 @@ export async function POST(request: Request) {
     revalidateArtistProfilePaths(updatedArtist.slug);
   }
 
+  revalidateHomepageData();
   return NextResponse.json({
     ok: true,
     has_image: updatedArtist.has_image,

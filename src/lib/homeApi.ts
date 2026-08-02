@@ -1,4 +1,5 @@
 // homeApi.ts  (API)
+import { unstable_cache } from "next/cache";
 import { getSupabaseClient } from "@/lib/supabase";
 import type {
   TrendingSong,
@@ -9,6 +10,10 @@ import type {
 import type { Artist } from "@/types/music";
 import { getRecordingViews7d, getArtistViews7d } from "@/lib/analyticsRollups";
 import { HOME_ARTIST_CARD_LIMIT, HOME_SONG_CARD_LIMIT } from "@/lib/homepageLimits";
+import {
+  HOMEPAGE_CACHE_SECONDS,
+  HOMEPAGE_DATA_CACHE_TAG,
+} from "@/lib/homepageCache";
 
 type HomepageMostAwardedArtistRow = {
   id: string;
@@ -40,7 +45,7 @@ function startRequest<T>(request: PromiseLike<T>): Promise<T> {
   return Promise.resolve(request);
 }
 
-export async function getHomeData() {
+async function loadHomeData() {
   const supabase = getSupabaseClient();
 
   if (!supabase) {
@@ -504,3 +509,12 @@ export async function getHomeData() {
     legendsArtists,
   };
 }
+
+export const getHomeData = unstable_cache(
+  loadHomeData,
+  ["homepage-data-v1"],
+  {
+    revalidate: HOMEPAGE_CACHE_SECONDS,
+    tags: [HOMEPAGE_DATA_CACHE_TAG],
+  },
+);
