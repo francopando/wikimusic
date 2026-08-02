@@ -17,12 +17,14 @@ const finlandica = Finlandica({
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  preload: false,
 });
 
 const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-serif",
+  preload: false,
 });
 
 export const metadata: Metadata = {
