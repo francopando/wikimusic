@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { requireAdminApiRole } from "@/lib/adminApiAuth";
 import { getSupabaseClient } from "@/lib/supabase";
+import { invalidateArtistPortfolioCache } from "@/lib/artistPortfolioCache";
 
 const WORK_FIELDS = "id,title,performer_artist_id,performer_text,release_title,release_year,created_at,updated_at";
 const WORK_ROLES = new Set(["composer", "lyricist", "writer", "songwriter", "orchestrator", "arranger", "co-composer", "co-writer"]);
@@ -103,6 +104,7 @@ export async function POST(request: Request) {
   if (remove.length) { const result = await supabase.from("credited_work_credits").delete().in("id", remove); if (result.error) return NextResponse.json({ ok: false, error: result.error.message }, { status: 500 }); }
   const additions = credits.filter((credit) => !have.has(`${credit.artist_id}:${credit.role}`)).map((credit) => ({ credited_work_id: workId, ...credit }));
   if (additions.length) { const result = await supabase.from("credited_work_credits").insert(additions); if (result.error) return NextResponse.json({ ok: false, error: result.error.code === "23505" ? "duplicateCredit" : result.error.message }, { status: 409 }); }
+  invalidateArtistPortfolioCache();
   return NextResponse.json({ ok: true, id: workId });
 }
 
@@ -111,8 +113,9 @@ export async function DELETE(request: Request) {
   const body = await request.json(); const workId = text(body.workId); const artistId = text(body.artistId);
   if (!workId) return NextResponse.json({ ok: false, error: "workRequired" }, { status: 400 });
   const supabase = getSupabaseClient();
-  if (artistId && !body.deleteEntireWork) { const result = await supabase.from("credited_work_credits").delete().eq("credited_work_id", workId).eq("artist_id", artistId); if (result.error) return NextResponse.json({ ok: false, error: result.error.message }, { status: 500 }); return NextResponse.json({ ok: true }); }
+  if (artistId && !body.deleteEntireWork) { const result = await supabase.from("credited_work_credits").delete().eq("credited_work_id", workId).eq("artist_id", artistId); if (result.error) return NextResponse.json({ ok: false, error: result.error.message }, { status: 500 }); invalidateArtistPortfolioCache(); return NextResponse.json({ ok: true }); }
   if (body.confirmTitle !== body.title) return NextResponse.json({ ok: false, error: "confirmationMismatch" }, { status: 400 });
   const result = await supabase.from("credited_works").delete().eq("id", workId); if (result.error) return NextResponse.json({ ok: false, error: result.error.message }, { status: 500 });
+  invalidateArtistPortfolioCache();
   return NextResponse.json({ ok: true });
 }

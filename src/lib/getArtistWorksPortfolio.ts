@@ -1,4 +1,6 @@
+import { unstable_cache } from "next/cache";
 import { supabase } from "@/lib/supabase";
+import { ARTIST_PORTFOLIO_CACHE_TAG } from "@/lib/artistPortfolioCache";
 import {
   ARTIST_WORK_CREDIT_ROLES,
   RECORDING_PERFORMER_ROLES,
@@ -269,7 +271,7 @@ async function getEditorialPortfolio(artistId: string): Promise<PortfolioWork[]>
   }));
 }
 
-export async function getArtistWorksPortfolio(artistId: string): Promise<PortfolioWork[]> {
+async function loadArtistWorksPortfolio(artistId: string): Promise<PortfolioWork[]> {
   try {
     const [recordingWorks, editorialWorks] = await Promise.all([
       getRecordingPortfolio(artistId),
@@ -293,6 +295,15 @@ export async function getArtistWorksPortfolio(artistId: string): Promise<Portfol
     return [];
   }
 }
+
+export const getArtistWorksPortfolio = unstable_cache(
+  loadArtistWorksPortfolio,
+  ["artist-works-portfolio-v1"],
+  {
+    revalidate: 600,
+    tags: [ARTIST_PORTFOLIO_CACHE_TAG],
+  },
+);
 
 export function summarizePortfolioRoles(works: PortfolioWork[]): RoleSummary[] {
   const counts = new Map<string, number>();

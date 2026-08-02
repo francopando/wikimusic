@@ -1,5 +1,6 @@
 import { revalidatePath } from "next/cache";
 import { routing } from "@/i18n/routing";
+import { invalidateArtistPortfolioCache } from "@/lib/artistPortfolioCache";
 
 export function getArtistProfileRevalidationPaths(slug: string) {
   const normalizedSlug = slug.trim();
@@ -23,6 +24,8 @@ export function getArtistProfileRevalidationPaths(slug: string) {
 }
 
 export function revalidateArtistProfilePaths(slug: string) {
+  invalidateArtistPortfolioCache();
+
   for (const path of getArtistProfileRevalidationPaths(slug)) {
     revalidatePath(path, "page");
   }

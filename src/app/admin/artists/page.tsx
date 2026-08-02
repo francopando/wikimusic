@@ -2432,8 +2432,7 @@ export default function AdminDashboard() {
                 />
               </Field>
 
-              {form.primary_role.trim().toLowerCase() === "musician" && (
-                <Field label={t("admin.labels.instruments")}>
+              <Field label={t("admin.labels.instruments")}>
                   <div className="grid grid-cols-2 gap-2 rounded-lg border border-gray-200 bg-white p-3 md:grid-cols-4">
                     {instrumentOptions.map((instrument) => {
                       const selected = parseCsv(form.instruments).some(
@@ -2461,8 +2460,7 @@ export default function AdminDashboard() {
                       );
                     })}
                   </div>
-                </Field>
-              )}
+              </Field>
 
               <Field label={t("admin.labels.musicalGenres")}>
                 <div className="grid grid-cols-2 gap-2 rounded-lg border border-gray-200 bg-white p-3 md:grid-cols-4">
