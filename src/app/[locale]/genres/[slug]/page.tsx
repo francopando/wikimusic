@@ -173,8 +173,13 @@ export default async function GenrePage({ params, searchParams }: PageProps) {
             <GenreSubgenreSongs
               key={selectedSubgenre?.slug ?? "all"}
               genreId={genre.catalogId}
-              genreName={genre.title}
               subgenre={selectedSubgenre}
+              labels={{
+                loadError: t("loadError"),
+                heading: t("subgenreSongs", { name: activeGenreName }),
+                sortAria: t("sortAria"),
+                empty: t("noSongsAssigned", { name: activeGenreName }),
+              }}
             />
           )}
 

@@ -19,12 +19,17 @@ type SongSort = "title" | "views";
 
 export default function GenreSubgenreSongs({
   genreId,
-  genreName,
   subgenre,
+  labels,
 }: {
   genreId: number;
-  genreName: string;
   subgenre: GenreSubgenre | null;
+  labels: {
+    loadError: string;
+    heading: string;
+    sortAria: string;
+    empty: string;
+  };
 }) {
   const t = useTranslations();
   const [sortBy, setSortBy] = useState<SongSort>("views");
@@ -33,8 +38,6 @@ export default function GenreSubgenreSongs({
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const activeName = subgenre?.name ?? genreName;
-
   const buildUrl = (offset: number) => {
     const params = new URLSearchParams({
       genreId: String(genreId),
@@ -66,7 +69,7 @@ export default function GenreSubgenreSongs({
       })
       .catch((fetchError: unknown) => {
         if (fetchError instanceof DOMException && fetchError.name === "AbortError") return;
-        setError(fetchError instanceof Error ? fetchError.message : t("pages.genreDetail.loadError"));
+        setError(fetchError instanceof Error ? fetchError.message : labels.loadError);
       })
       .finally(() => {
         if (!controller.signal.aborted) setLoading(false);
@@ -87,7 +90,7 @@ export default function GenreSubgenreSongs({
     <section id="genre-songs" className="scroll-mt-20" aria-live="polite">
       <div className="mb-4 flex items-center justify-between gap-3 px-1">
         <h2 className="!mb-0 text-xl font-semibold normal-case tracking-normal text-[#002D62]">
-          {t("pages.genreDetail.subgenreSongs", { name: activeName })}
+          {labels.heading}
           {!loading && !error ? ` (${total.toLocaleString()})` : ""}
         </h2>
         <select
@@ -97,7 +100,7 @@ export default function GenreSubgenreSongs({
             setSortBy(event.target.value as SongSort);
           }}
           className="h-8 shrink-0 rounded-lg border border-[#B0C4DE] bg-white px-3 font-sans text-xs font-medium tracking-normal text-[#002D62] outline-none transition hover:border-[#002D62]"
-          aria-label={t("pages.genreDetail.sortAria")}
+          aria-label={labels.sortAria}
         >
           <option value="title">{t("archive.ui.sortByTitle")}</option>
           <option value="views">{t("archive.ui.sortByViews")}</option>
@@ -125,7 +128,7 @@ export default function GenreSubgenreSongs({
       )}
       {!loading && !error && songs.length === 0 && (
         <div className="rounded-xl border border-black/5 bg-white/70 px-5 py-10 text-center text-gray-500">
-          {t("pages.genreDetail.noSongsAssigned", { name: activeName })}
+          {labels.empty}
         </div>
       )}
     </section>

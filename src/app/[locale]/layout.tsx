@@ -69,6 +69,7 @@ export default async function LocaleLayout({
   delete clientMessages.admin;
   delete clientMessages.auth;
   delete clientMessages.legal;
+  delete clientMessages.pages;
 
   return (
     <NextIntlClientProvider locale={locale} messages={clientMessages}>
