@@ -18,21 +18,33 @@ export default function LanguageSelectionModal() {
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
+    function navigateToPreference(locale: AppLocale) {
+      if (locale === currentLocale) return;
+
+      const params = new URLSearchParams(window.location.search);
+      const query = Object.fromEntries(params.entries());
+      router.replace(
+        Object.keys(query).length > 0 ? { pathname, query } : pathname,
+        { locale },
+      );
+    }
+
     const savedLocale = getSavedLocalePreference();
     if (savedLocale) {
-      setShowModal(false);
+      navigateToPreference(savedLocale);
       return;
     }
 
     const browserLocale = getBrowserLocalePreference();
     if (browserLocale) {
       saveLocalePreference(browserLocale);
-      setShowModal(false);
+      navigateToPreference(browserLocale);
       return;
     }
 
-    setShowModal(true);
-  }, []);
+    const showModalTimer = window.setTimeout(() => setShowModal(true), 0);
+    return () => window.clearTimeout(showModalTimer);
+  }, [currentLocale, pathname, router]);
 
   const handleLanguageSelect = (locale: AppLocale) => {
     // Remember the choice so the modal does not reappear.
