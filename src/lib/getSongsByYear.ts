@@ -159,7 +159,7 @@ export async function getSongsByYear(year: number, options: SongsByYearOptions =
   return getSongsByYearRange(year, year, options);
 }
 
-export async function getTopSongsByViews(limit = 100) {
+async function loadTopSongsByViews(limit = 100) {
   const { data, error } = await supabase
     .from("recordings_with_release_info")
     .select("*")
@@ -176,6 +176,15 @@ export async function getTopSongsByViews(limit = 100) {
 
   return addReleaseCoverAvailability(await addRecordingSlugs(visibleRows));
 }
+
+export const getTopSongsByViews = unstable_cache(
+  loadTopSongsByViews,
+  ["archive-top-songs-v1"],
+  {
+    revalidate: HOMEPAGE_CACHE_SECONDS,
+    tags: [HOMEPAGE_ARCHIVE_CACHE_TAG],
+  },
+);
 
 export async function getArchiveCountsForYearRange(
   startYear?: number,

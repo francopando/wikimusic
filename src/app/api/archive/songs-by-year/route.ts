@@ -2,6 +2,10 @@ import { NextResponse } from "next/server";
 
 import { getSongsByYear, getSongsByYearRange, getTopSongsByViews } from "@/lib/getSongsByYear";
 
+const CACHE_HEADERS = {
+  "Cache-Control": "public, s-maxage=600, stale-while-revalidate=3600",
+};
+
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const yearParam = searchParams.get("year");
@@ -21,7 +25,10 @@ export async function GET(request: Request) {
 
   if (!yearParam && (!startYearParam || !endYearParam)) {
     const songs = await getTopSongsByViews(limit);
-    return NextResponse.json({ ok: true, songs, total: songs.length, hasMore: false });
+    return NextResponse.json(
+      { ok: true, songs, total: songs.length, hasMore: false },
+      { headers: CACHE_HEADERS },
+    );
   }
 
   const year = yearParam ? Number(yearParam) : NaN;
@@ -53,5 +60,5 @@ export async function GET(request: Request) {
     ? await getSongsByYear(year, options)
     : await getSongsByYearRange(startYear, endYear, options);
 
-  return NextResponse.json({ ok: true, ...result });
+  return NextResponse.json({ ok: true, ...result }, { headers: CACHE_HEADERS });
 }

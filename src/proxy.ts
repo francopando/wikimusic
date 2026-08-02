@@ -6,6 +6,7 @@ import { canManageAdminAccess, hasAdminAccess } from "@/lib/adminAccess";
 import {
   routing,
 } from "@/i18n/routing";
+import { parseArchivePeriod } from "@/lib/archivePeriods";
 
 const intlMiddleware = createMiddleware(routing);
 
@@ -23,6 +24,27 @@ function redirectToEnglishCanonical(req: NextRequest) {
     ? "/"
     : req.nextUrl.pathname.replace(/^\/en(?=\/)/, "");
   return NextResponse.redirect(url);
+}
+
+function redirectLegacyArchiveQuery(req: NextRequest) {
+  const pathname = req.nextUrl.pathname;
+  const archivePath = isSpanishPath(pathname) ? "/es/archive" : "/archive";
+  if (pathname !== archivePath) return null;
+
+  const year = req.nextUrl.searchParams.get("year");
+  const decade = req.nextUrl.searchParams.get("decade");
+  const value = year ?? decade;
+  const period = value ? parseArchivePeriod(value) : null;
+
+  if (!period || (year && period.type !== "year") || (decade && period.type !== "decade")) {
+    return null;
+  }
+
+  const url = req.nextUrl.clone();
+  url.pathname = `${archivePath}/${period.slug}`;
+  url.searchParams.delete("year");
+  url.searchParams.delete("decade");
+  return NextResponse.redirect(url, 308);
 }
 
 function getRequiredSupabaseConfig() {
@@ -162,6 +184,9 @@ export async function proxy(req: NextRequest) {
   if (isEnglishPath(pathname)) {
     return redirectToEnglishCanonical(req);
   }
+
+  const legacyArchiveRedirect = redirectLegacyArchiveQuery(req);
+  if (legacyArchiveRedirect) return legacyArchiveRedirect;
 
   const response = intlMiddleware(req);
   response.headers.set("Content-Language", isSpanishPath(pathname) ? "es" : "en");
