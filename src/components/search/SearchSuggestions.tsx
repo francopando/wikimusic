@@ -2,8 +2,11 @@
 
 import React, { useEffect, useRef, useState, useCallback, forwardRef, useImperativeHandle } from "react";
 import { Link, usePathname, useRouter } from "@/i18n/navigation";
-import type { SearchResult } from "@/lib/searchApi";
-import { globalSearch, MIN_SEARCH_QUERY_LENGTH } from "@/lib/searchApi";
+import {
+  MIN_SEARCH_QUERY_LENGTH,
+  type GlobalSearchResponse,
+  type SearchResult,
+} from "@/lib/searchTypes";
 
 type SearchSuggestionsProps = {
   searchTerm: string;
@@ -170,7 +173,19 @@ const SearchSuggestions = forwardRef<SearchSuggestionsHandle, SearchSuggestionsP
 
     debounceTimerRef.current = setTimeout(async () => {
       try {
-        const results = await globalSearch(query);
+        const response = await fetch(
+          `/api/search/suggestions?q=${encodeURIComponent(query)}`,
+        );
+        const payload = (await response.json()) as GlobalSearchResponse & {
+          ok?: boolean;
+          error?: string;
+        };
+
+        if (!response.ok || payload.ok === false) {
+          throw new Error(payload.error || "Unable to load search suggestions.");
+        }
+
+        const results = payload;
         if (requestId !== requestIdRef.current) return;
         const all = [
           ...results.artists,

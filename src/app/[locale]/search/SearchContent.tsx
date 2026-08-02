@@ -3,7 +3,7 @@
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import SearchFeedbackCard from "@/components/search/SearchFeedbackCard";
-import type { SearchResult } from "@/lib/searchApi";
+import type { SearchResult } from "@/lib/searchTypes";
 
 type SearchContentProps = {
   query: string;
@@ -135,7 +135,7 @@ export default function SearchContent({
         <p className="mt-2 text-gray-600">
           {query ? (
             <>
-              {t("ui.resultsFor")} <span className="font-bold">"{query}"</span>
+              {t("ui.resultsFor")} <span className="font-bold">&ldquo;{query}&rdquo;</span>
             </>
           ) : (
             t("ui.placeholder")

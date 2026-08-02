@@ -1,27 +1,15 @@
+import "server-only";
+
+import { unstable_cache } from "next/cache";
 import { supabase } from "@/lib/supabase";
 import { getPublicReleaseCoverUrl } from "@/lib/releaseCover";
 import { getArtistImageUrl } from "@/utils/getArtistImageUrl";
 import { normalizeSearchText } from "@/lib/searchRanking";
-
-export type SearchResult = {
-  type: "artist" | "song" | "release";
-  id: string;
-  title: string;
-  slug: string | null;
-  subtitle: string | null;
-  year: number | null;
-  cover_url: string | null;
-  artist_name?: string | null;
-  release_title?: string | null;
-};
-
-export type GlobalSearchResponse = {
-  artists: SearchResult[];
-  songs: SearchResult[];
-  releases: SearchResult[];
-};
-
-export const MIN_SEARCH_QUERY_LENGTH = 2;
+import {
+  MIN_SEARCH_QUERY_LENGTH,
+  type GlobalSearchResponse,
+  type SearchResult,
+} from "@/lib/searchTypes";
 const SEARCH_RESULT_LIMIT = 10;
 
 function limitResults(results: SearchResult[]) {
@@ -230,7 +218,15 @@ export async function globalSearch(query: string): Promise<GlobalSearchResponse>
     console.error("globalSearch artists error:", artistError);
   }
 
-  const fallbackArtists: SearchResult[] = ((fallbackArtistData ?? []) as any[]).map(
+  const fallbackArtists: SearchResult[] = ((fallbackArtistData ?? []) as Array<{
+    id: string;
+    slug: string | null;
+    name: string;
+    province: string | null;
+    birth_year: number | null;
+    has_image: boolean | null;
+    image_updated_at: string | null;
+  }>).map(
     (artist) => ({
       type: "artist",
       id: artist.id,
@@ -278,3 +274,9 @@ export async function globalSearch(query: string): Promise<GlobalSearchResponse>
     releases: await withReleaseSlugs(withCurrentCoverArtUrls(releases)),
   };
 }
+
+export const getCachedGlobalSearch = unstable_cache(
+  globalSearch,
+  ["global-search-v1"],
+  { revalidate: 300 },
+);

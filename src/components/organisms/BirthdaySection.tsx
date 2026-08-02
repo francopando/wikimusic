@@ -6,7 +6,6 @@ import { useTranslations } from "next-intl";
 import SectionCard from "@/components/layout/SectionCard";
 import ArtistCard from "@/components/molecules/ArtistCard";
 import CarouselArrow from "@/components/molecules/CarouselArrow";
-import { getSupabaseClient } from "@/lib/supabase";
 import type { Artist } from "@/types/music";
 import { HOME_ARTIST_CARD_LIMIT } from "@/lib/homepageLimits";
 
@@ -77,7 +76,7 @@ function filterAndSortUpcomingBirthdays(artists: Artist[], today: Date) {
 function getLifeLabel(
   dob: string | null | undefined,
   deathYear: number | null | undefined,
-  t: any,
+  t: ReturnType<typeof useTranslations>,
 ) {
   const birthday = parseBirthday(dob);
   if (!birthday) return null;
@@ -106,18 +105,24 @@ export default function BirthdaySection({ birthdayArtists }: BirthdaySectionProp
   useEffect(() => {
     async function loadLocalBirthdays() {
       const today = new Date();
-      const supabase = getSupabaseClient();
 
-      const { data, error } = await supabase.rpc("get_homepage_birthday_artists", {
-        p_today: formatLocalDate(today),
-        p_limit: HOME_ARTIST_CARD_LIMIT,
-      });
+      try {
+        const response = await fetch(
+          `/api/homepage/birthdays?date=${encodeURIComponent(formatLocalDate(today))}`,
+        );
+        const payload = (await response.json()) as {
+          ok?: boolean;
+          artists?: Artist[];
+        };
 
-      if (error) {
-        console.error("Birthday artists RPC failed:", error);
+        if (!response.ok || !payload.ok) {
+          throw new Error("Unable to load birthday artists.");
+        }
+
+        setLocalBirthdayArtists(payload.artists ?? []);
+      } catch (error) {
+        console.error("Birthday artists request failed:", error);
         setLocalBirthdayArtists(filterAndSortUpcomingBirthdays(birthdayArtists, today));
-      } else {
-        setLocalBirthdayArtists((data ?? []) as Artist[]);
       }
 
       setLoadingLocalBirthdays(false);
