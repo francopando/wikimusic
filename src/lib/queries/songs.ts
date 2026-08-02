@@ -1,4 +1,5 @@
 // src/lib/queries/songs.ts
+import { cache } from "react";
 import { supabase } from "@/lib/supabase";
 
 export type SongRecord = {
@@ -320,7 +321,9 @@ export async function getSongSlang(id: string): Promise<SongSlangRecord[]> {
 // ----------------------
 const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
-export async function getSongBySlug(slug: string): Promise<SongRecord | null> {
+export const getSongBySlug = cache(async function getSongBySlug(
+  slug: string,
+): Promise<SongRecord | null> {
   const clean = decodeURIComponent(slug).trim().replace(/^"|"$/g, "");
 
   // Fast path: look up the recording id by slug, then reuse the existing query.
@@ -340,7 +343,7 @@ export async function getSongBySlug(slug: string): Promise<SongRecord | null> {
   }
 
   return null;
-}
+});
 
 // ----------------------
 // PLATFORM LINKS

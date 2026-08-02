@@ -1,3 +1,4 @@
+import { cache } from "react";
 import { getSupabaseClient } from "@/lib/supabase";
 import { getPublicReleaseCoverUrl } from "@/lib/releaseCover";
 
@@ -83,7 +84,7 @@ export type ArtistProfileData = {
   awards: ArtistAward[];
 };
 
-export async function getArtistProfile(slug: string) {
+export const getArtistProfile = cache(async function getArtistProfile(slug: string) {
   const supabase = getSupabaseClient();
 
   const { data: publishedArtist, error: publishedArtistError } = await supabase
@@ -156,7 +157,7 @@ export async function getArtistProfile(slug: string) {
       publishedArtist.instruments ??
       null,
   };
-}
+});
 
 /* ==========================================================
    DISCOGRAPHY
