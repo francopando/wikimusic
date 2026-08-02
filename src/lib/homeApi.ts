@@ -1,7 +1,6 @@
 // homeApi.ts  (API)
 import { getSupabaseClient } from "@/lib/supabase";
 import type {
-  TopArtist,
   TrendingSong,
   RegionCount,
   ArtistSummary,
@@ -28,6 +27,19 @@ type HomepageRegionCountRow = {
   count: number | string | null;
 };
 
+type HomepageTrendingRow = {
+  recording_id: string;
+  recording_title: string;
+  views: number | string | null;
+  release_id: string | null;
+  artist_id: string | null;
+  artist_name: string | null;
+};
+
+function startRequest<T>(request: PromiseLike<T>): Promise<T> {
+  return Promise.resolve(request);
+}
+
 export async function getHomeData() {
   const supabase = getSupabaseClient();
 
@@ -35,8 +47,10 @@ export async function getHomeData() {
     throw new Error("Supabase not configured");
   }
 
-  // 1. Featured Artist
-  const featured = await supabase
+  // Start every independent homepage request immediately. Keeping these
+  // promises in flight prevents the latency of unrelated sections from being
+  // added together while preserving the existing data shaping and fallbacks.
+  const featuredPromise = startRequest(supabase
     .from("featured_artist")
     .select(`
       artist:artist_id!inner (
@@ -59,9 +73,78 @@ export async function getHomeData() {
     `)
     .eq("id", 1)
     .eq("artist.status", "published")
-    .single();
+    .single());
 
-  const featuredArtist = (featured.data as any)?.artist ?? null;
+  const recordingViews7dPromise = getRecordingViews7d();
+  const artistViews7dPromise = getArtistViews7d();
+  const allTimeTrendingPromise = startRequest(supabase
+    .from("recordings_with_release_info")
+    .select("recording_id, recording_title, views, release_id, artist_id, artist_name")
+    .order("views", { ascending: false, nullsFirst: false })
+    .limit(HOME_SONG_CARD_LIMIT * 5));
+
+  const artistFields = "id, slug, name, province, has_image, image_updated_at, views";
+  const topResponsePromise = startRequest(supabase
+    .from("artists")
+    .select(artistFields)
+    .eq("status", "published")
+    .eq("primary_role", "singer")
+    .order("views", { ascending: false, nullsFirst: false })
+    .limit(HOME_ARTIST_CARD_LIMIT));
+  const regionsResponsePromise = startRequest(supabase.rpc("get_homepage_region_counts"));
+  const composersResponsePromise = startRequest(supabase
+    .from("artists")
+    .select(artistFields)
+    .eq("status", "published")
+    .eq("primary_role", "composer")
+    .order("views", { ascending: false, nullsFirst: false })
+    .limit(HOME_ARTIST_CARD_LIMIT));
+  const djsResponsePromise = startRequest(supabase
+    .from("artists")
+    .select(artistFields)
+    .eq("status", "published")
+    .eq("primary_role", "dj")
+    .order("views", { ascending: false, nullsFirst: false })
+    .limit(HOME_ARTIST_CARD_LIMIT));
+  const christianResponsePromise = startRequest(supabase
+    .from("artists")
+    .select(artistFields)
+    .eq("status", "published")
+    .contains("artist_tags", ["christian"])
+    .order("views", { ascending: false, nullsFirst: false })
+    .limit(HOME_ARTIST_CARD_LIMIT));
+  const mostAwardedResponsePromise = startRequest(supabase.rpc("get_homepage_most_awarded_artists", {
+    p_limit: HOME_ARTIST_CARD_LIMIT,
+  }));
+  const classicalResponsePromise = startRequest(supabase
+    .from("artists")
+    .select(artistFields)
+    .eq("status", "published")
+    .eq("primary_role", "instrumentalist")
+    .order("views", { ascending: false, nullsFirst: false })
+    .limit(HOME_ARTIST_CARD_LIMIT));
+  const risingResponsePromise = startRequest(supabase
+    .from("artists")
+    .select(artistFields)
+    .eq("status", "published")
+    .contains("artist_tags", ["emerging"])
+    .order("views", { ascending: false, nullsFirst: false })
+    .limit(HOME_ARTIST_CARD_LIMIT * 4));
+  const legendsResponsePromise = startRequest(supabase
+    .from("artists")
+    .select(artistFields)
+    .eq("status", "published")
+    .contains("artist_tags", ["legend"])
+    .order("views", { ascending: false, nullsFirst: false })
+    .limit(HOME_ARTIST_CARD_LIMIT));
+
+  // 1. Featured Artist
+  const featured = await featuredPromise;
+
+  const featuredRelation = (featured.data as { artist?: Artist | Artist[] | null } | null)?.artist;
+  const featuredArtist = Array.isArray(featuredRelation)
+    ? featuredRelation[0] ?? null
+    : featuredRelation ?? null;
 
   // 2. Birthday Artists
   // Loaded in BirthdaySection using the visitor's local browser date.
@@ -71,7 +154,7 @@ export async function getHomeData() {
   // not all-time views. Falls back to all-time `views` when the 7-day window is
   // sparse so the section is never empty. The card still displays the all-time
   // view count; only the ordering reflects recent momentum.
-  const recordingViews7d = await getRecordingViews7d();
+  const recordingViews7d = await recordingViews7dPromise;
 
   const top7dRecordingIds = [...recordingViews7d.entries()]
     .sort((a, b) => b[1] - a[1])
@@ -84,19 +167,15 @@ export async function getHomeData() {
           .from("recordings_with_release_info")
           .select("recording_id, recording_title, views, release_id, artist_id, artist_name")
           .in("recording_id", top7dRecordingIds)
-      : Promise.resolve({ data: [] as any[] }),
-    supabase
-      .from("recordings_with_release_info")
-      .select("recording_id, recording_title, views, release_id, artist_id, artist_name")
-      .order("views", { ascending: false, nullsFirst: false })
-      .limit(HOME_SONG_CARD_LIMIT * 5),
+      : Promise.resolve({ data: [] as HomepageTrendingRow[] }),
+    allTimeTrendingPromise,
   ]);
 
   // Merge unique by recording_id, then rank by 7-day views with all-time tiebreak.
-  const trendingPool = new Map<string, any>();
+  const trendingPool = new Map<string, HomepageTrendingRow>();
   for (const r of [
-    ...(((hot7dRes.data as any[]) || [])),
-    ...(((allTimeTrendingRes.data as any[]) || [])),
+    ...(((hot7dRes.data as HomepageTrendingRow[]) || [])),
+    ...(((allTimeTrendingRes.data as HomepageTrendingRow[]) || [])),
   ]) {
     if (r?.recording_id && !trendingPool.has(r.recording_id)) {
       trendingPool.set(r.recording_id, r);
@@ -127,37 +206,48 @@ export async function getHomeData() {
   }
 
   const filteredTrending = rankedTrending
-    .filter((r: any) => !r.artist_id || publishedTrendingArtistIds.has(r.artist_id))
+    .filter((r) => !r.artist_id || publishedTrendingArtistIds.has(r.artist_id))
     .slice(0, HOME_SONG_CARD_LIMIT);
 
   // Fetch slugs for the filtered recording IDs
-  const trendingRecordingIds = filteredTrending.map((r: any) => r.recording_id).filter(Boolean);
+  const trendingRecordingIds = filteredTrending.map((r) => r.recording_id).filter(Boolean);
   const slugMap = new Map<string, string | null>();
   const releaseCoverMap = new Map<string, boolean>();
-  if (trendingRecordingIds.length > 0) {
-    const { data: slugRows } = await supabase
+  const slugRowsPromise = trendingRecordingIds.length > 0
+    ? supabase
       .from("recordings")
       .select("id, slug")
-      .in("id", trendingRecordingIds);
+      .in("id", trendingRecordingIds)
+    : Promise.resolve({ data: [] as Array<{ id: string; slug: string | null }> });
+
+  const trendingReleaseIds = [
+    ...new Set(filteredTrending.map((r) => r.release_id).filter(Boolean)),
+  ];
+  const releaseRowsPromise = trendingReleaseIds.length > 0
+    ? supabase
+      .from("releases")
+      .select("id, has_cover_image")
+      .in("id", trendingReleaseIds)
+    : Promise.resolve({ data: [] as Array<{ id: string; has_cover_image: boolean | null }> });
+
+  const [{ data: slugRows }, { data: releaseRows }] = await Promise.all([
+    slugRowsPromise,
+    releaseRowsPromise,
+  ]);
+
+  if (trendingRecordingIds.length > 0) {
     for (const row of (slugRows || []) as { id: string; slug: string | null }[]) {
       slugMap.set(row.id, row.slug);
     }
   }
 
-  const trendingReleaseIds = [
-    ...new Set(filteredTrending.map((r: any) => r.release_id).filter(Boolean)),
-  ];
   if (trendingReleaseIds.length > 0) {
-    const { data: releaseRows } = await supabase
-      .from("releases")
-      .select("id, has_cover_image")
-      .in("id", trendingReleaseIds);
     for (const row of (releaseRows || []) as { id: string; has_cover_image: boolean | null }[]) {
       releaseCoverMap.set(row.id, row.has_cover_image === true);
     }
   }
 
-  const trendingSongs: TrendingSong[] = filteredTrending.map((r: any) => ({
+  const trendingSongs: TrendingSong[] = filteredTrending.map((r) => ({
     id: r.recording_id,
     slug: slugMap.get(r.recording_id) ?? null,
     title: r.recording_title,
@@ -175,16 +265,7 @@ export async function getHomeData() {
   }));
 
   // 4. Top Artists (Singers)
-  const topResponse = await supabase
-    .from("artists")
-    .select("id, slug, name, province, has_image, image_updated_at, views")
-    .eq("status", "published")
-    .eq("primary_role", "singer")
-    .order("views", {
-      ascending: false,
-      nullsFirst: false,
-    })
-    .limit(HOME_ARTIST_CARD_LIMIT);
+  const topResponse = await topResponsePromise;
 
   const topArtists: ArtistSummary[] =
     ((topResponse.data as ArtistSummary[]) || []).map((a) => ({
@@ -199,7 +280,7 @@ export async function getHomeData() {
 
   // 5. Regions
   let regions: RegionCount[] = [];
-  const regionsResponse = await supabase.rpc("get_homepage_region_counts");
+  const regionsResponse = await regionsResponsePromise;
 
   if (regionsResponse.error) {
     console.error("Unable to load homepage region counts:", regionsResponse.error);
@@ -229,16 +310,7 @@ export async function getHomeData() {
   }
 
   // 6. Prominent Composers (ONLY composers)
-  const composersResponse = await supabase
-    .from("artists")
-    .select("id, slug, name, province, has_image, image_updated_at, views")
-    .eq("status", "published")
-    .eq("primary_role", "composer")
-    .order("views", {
-      ascending: false,
-      nullsFirst: false,
-    })
-    .limit(HOME_ARTIST_CARD_LIMIT);
+  const composersResponse = await composersResponsePromise;
 
   const composers: ArtistSummary[] =
     ((composersResponse.data as ArtistSummary[]) || []).map((a) => ({
@@ -252,16 +324,7 @@ export async function getHomeData() {
     }));
 
   // 7. Top DJs
-  const djsResponse = await supabase
-    .from("artists")
-    .select("id, slug, name, province, has_image, image_updated_at, views")
-    .eq("status", "published")
-    .eq("primary_role", "dj")
-    .order("views", {
-      ascending: false,
-      nullsFirst: false,
-    })
-    .limit(HOME_ARTIST_CARD_LIMIT);
+  const djsResponse = await djsResponsePromise;
 
 
   const djs: ArtistSummary[] =
@@ -276,16 +339,7 @@ export async function getHomeData() {
     }));
 
   // 8. Top Christian Artists
-  const christianResponse = await supabase
-    .from("artists")
-    .select("id, slug, name, province, has_image, image_updated_at, views")
-    .eq("status", "published")
-    .contains("artist_tags", ["christian"])
-    .order("views", {
-      ascending: false,
-      nullsFirst: false,
-    })
-    .limit(HOME_ARTIST_CARD_LIMIT);
+  const christianResponse = await christianResponsePromise;
 
   const christianArtists: ArtistSummary[] =
     ((christianResponse.data as ArtistSummary[]) || []).map((a) => ({
@@ -300,9 +354,7 @@ export async function getHomeData() {
 
   let mostAwardedArtists: MostAwardedArtistSummary[] = [];
 
-  const mostAwardedResponse = await supabase.rpc("get_homepage_most_awarded_artists", {
-    p_limit: HOME_ARTIST_CARD_LIMIT,
-  });
+  const mostAwardedResponse = await mostAwardedResponsePromise;
 
   if (mostAwardedResponse.error) {
     console.error("Unable to load homepage most awarded artists:", mostAwardedResponse.error);
@@ -387,16 +439,7 @@ export async function getHomeData() {
   }
 
   // 10. Classical Artists
-  const classicalResponse = await supabase
-    .from("artists")
-    .select("id, slug, name, province, has_image, image_updated_at, views")
-    .eq("status", "published")
-    .eq("primary_role", "instrumentalist")
-    .order("views", {
-      ascending: false,
-      nullsFirst: false,
-    })
-    .limit(HOME_ARTIST_CARD_LIMIT);
+  const classicalResponse = await classicalResponsePromise;
 
   const classicalArtists: ArtistSummary[] =
     ((classicalResponse.data as ArtistSummary[]) || []).map((a) => ({
@@ -412,18 +455,10 @@ export async function getHomeData() {
   // 11. Rising Stars — emerging-tagged artists ranked by REAL last-7-day views
   // (weekly trending), with all-time `views` as a tiebreak so the section is
   // never empty while the 7-day window is sparse. Card still shows all-time views.
-  const risingResponse = await supabase
-    .from("artists")
-    .select("id, slug, name, province, has_image, image_updated_at, views")
-    .eq("status", "published")
-    .contains("artist_tags", ["emerging"])
-    .order("views", {
-      ascending: false,
-      nullsFirst: false,
-    })
-    .limit(HOME_ARTIST_CARD_LIMIT * 4);
-
-  const artistViews7d = await getArtistViews7d();
+  const [risingResponse, artistViews7d] = await Promise.all([
+    risingResponsePromise,
+    artistViews7dPromise,
+  ]);
 
   const risingStars: ArtistSummary[] =
     ((risingResponse.data as ArtistSummary[]) || [])
@@ -441,13 +476,7 @@ export async function getHomeData() {
       }));
 
   // 12. Top Legends Artists
-  const legendsResponse = await supabase
-    .from("artists")
-    .select("id, slug, name, province, has_image, image_updated_at, views")
-    .eq("status", "published")
-    .contains("artist_tags", ["legend"])
-    .order("views", { ascending: false, nullsFirst: false })
-    .limit(HOME_ARTIST_CARD_LIMIT);
+  const legendsResponse = await legendsResponsePromise;
 
   const legendsArtists: ArtistSummary[] =
     ((legendsResponse.data as ArtistSummary[]) || []).map((artist) => ({
