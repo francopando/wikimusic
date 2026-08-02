@@ -218,6 +218,14 @@
         color: #8B0000;
     }
 
+    /* Skip layout and paint work for the homepage's below-the-fold sections
+       until they approach the viewport. The intrinsic size prevents scroll
+       jumps while the browser is deferring that work. */
+    .homepage-section-titles-red>section {
+        content-visibility: auto;
+        contain-intrinsic-block-size: auto 360px;
+    }
+
     .section-inner {
         @apply px-[7px] py-0 sm:px-6;
     }
