@@ -62,9 +62,16 @@ export default async function LocaleLayout({
 
   setRequestLocale(locale);
   const messages = await getMessages();
+  // These namespaces are rendered exclusively on the server or by the
+  // separate admin provider. Keeping them out of the public provider avoids
+  // serializing tens of kilobytes of unused messages into every page.
+  const clientMessages = { ...messages };
+  delete clientMessages.admin;
+  delete clientMessages.auth;
+  delete clientMessages.legal;
 
   return (
-    <NextIntlClientProvider locale={locale} messages={messages}>
+    <NextIntlClientProvider locale={locale} messages={clientMessages}>
       <HtmlLangSync locale={locale} />
       {children}
       <SiteChrome />
