@@ -5,7 +5,6 @@ import { useTranslations, useLocale } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { type AppLocale } from "@/i18n/pathname";
 import {
-  getBrowserLocalePreference,
   getSavedLocalePreference,
   saveLocalePreference,
 } from "@/i18n/preference";
@@ -18,33 +17,14 @@ export default function LanguageSelectionModal() {
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
-    function navigateToPreference(locale: AppLocale) {
-      if (locale === currentLocale) return;
-
-      const params = new URLSearchParams(window.location.search);
-      const query = Object.fromEntries(params.entries());
-      router.replace(
-        Object.keys(query).length > 0 ? { pathname, query } : pathname,
-        { locale },
-      );
-    }
-
+    // The URL is the locale source of truth. A saved preference suppresses
+    // this first-visit prompt, but must never override an explicit /es URL.
     const savedLocale = getSavedLocalePreference();
-    if (savedLocale) {
-      navigateToPreference(savedLocale);
-      return;
-    }
-
-    const browserLocale = getBrowserLocalePreference();
-    if (browserLocale) {
-      saveLocalePreference(browserLocale);
-      navigateToPreference(browserLocale);
-      return;
-    }
+    if (savedLocale) return;
 
     const showModalTimer = window.setTimeout(() => setShowModal(true), 0);
     return () => window.clearTimeout(showModalTimer);
-  }, [currentLocale, pathname, router]);
+  }, []);
 
   const handleLanguageSelect = (locale: AppLocale) => {
     // Remember the choice so the modal does not reappear.
