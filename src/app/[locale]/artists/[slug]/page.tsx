@@ -2,6 +2,7 @@
 
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { getLocale, getTranslations } from "next-intl/server";
 import AnalyticsPageView from "@/components/analytics/AnalyticsPageView";
 import ArtistImage from "@/components/atoms/ArtistImage";
@@ -179,7 +180,16 @@ export default async function ArtistProfile({ params }: PageProps) {
                   <ArtistDiscographyAccordion releases={discography} />
                 )}
 
-                <ArtistWorksPortfolio artistId={artist.id} />
+                <Suspense
+                  fallback={
+                    <div
+                      className="h-48 animate-pulse rounded-xl border border-gray-100 bg-white shadow-sm"
+                      aria-hidden="true"
+                    />
+                  }
+                >
+                  <ArtistWorksPortfolio artistId={artist.id} />
+                </Suspense>
               </div>
             </div>
           </main>
