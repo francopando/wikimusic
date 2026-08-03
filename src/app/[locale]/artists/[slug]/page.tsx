@@ -166,7 +166,7 @@ export default async function ArtistProfile({ params, searchParams }: PageProps)
             <ArtistAwardsSection awards={artist.awards || []} />
           </aside>
 
-          <main className="w-full min-w-0 space-y-6">
+          <div className="w-full min-w-0 space-y-6">
             <div className="grid min-w-0 items-start gap-6 xl:grid-cols-[minmax(0,0.62fr)_minmax(0,1.38fr)]">
               <div className="min-w-0 space-y-6">
                 {hasBio && (
@@ -202,7 +202,7 @@ export default async function ArtistProfile({ params, searchParams }: PageProps)
                 </Suspense>
               </div>
             </div>
-          </main>
+          </div>
         </div>
       </div>
     </MainWrapper>
