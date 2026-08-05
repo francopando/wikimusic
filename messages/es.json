@@ -309,6 +309,13 @@
       "Compilation": "Recopilaciones",
       "Live": "En Vivo",
       "Other": "Otros"
+    },
+    "discographyTabs": {
+      "label": "Tipos de lanzamientos de la discografía",
+      "albums": "Álbumes",
+      "singles": "Sencillos",
+      "compilations": "Compilaciones",
+      "other": "Otros"
     }
   },
   "releaseType": {

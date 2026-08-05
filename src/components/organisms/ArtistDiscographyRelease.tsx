@@ -107,8 +107,8 @@ export default function ArtistDiscographyRelease({
   };
 
   return (
-    <article className="group rounded-lg border border-gray-100 bg-gray-50 open:bg-white">
-      <div className="px-3 py-1.5 transition-colors hover:bg-white">
+    <article className="group w-full min-w-0 rounded-lg border border-gray-100 bg-gray-50 open:bg-white">
+      <div className="min-w-0 px-3 py-1.5 transition-colors hover:bg-white">
         <div className="flex min-w-0 items-center gap-2.5">
           <div className="relative w-11 h-11 rounded-md overflow-hidden bg-gray-200 shrink-0">
             {release.cover_url ? (
@@ -144,11 +144,11 @@ export default function ArtistDiscographyRelease({
               {t("tracksCount", { count: release.track_count })}
             </p>
             {release.edition_count > 1 && (
-              <details className="relative mt-1 text-xs">
+              <details className="relative min-w-0 text-xs mt-1">
                 <summary className="w-fit cursor-pointer list-none rounded-sm font-medium text-(--color-flagblue) underline-offset-2 hover:text-(--color-wikicrimson) hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--color-flagblue)">
                   {t("editionsCount", { count: release.edition_count })}
                 </summary>
-                <div className="mt-2 space-y-1.5 rounded-md border border-gray-200 bg-white p-2 shadow-sm">
+                <div className="mt-2 min-w-0 space-y-1.5 rounded-md border border-gray-200 bg-white p-2 shadow-sm [overflow-wrap:anywhere]">
                   <p className="font-medium text-gray-500">{t("otherEditions")}</p>
                   {release.editions.map((edition) => {
                     const content = (

@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 import { genreDefinitions } from "@/lib/genres";
-import { buildCanonical, localeAlternates } from "@/lib/seo";
+import { localeAlternates } from "@/lib/seo";
 import { getSupabaseClient } from "@/lib/supabase";
 import { getPublishedProvinces } from "@/lib/provinces";
 import { getArchiveCounts } from "@/lib/getSongsByYear";
@@ -99,14 +99,17 @@ async function getActiveGenreSlugs() {
   return (data ?? []) as GenreSitemapRow[];
 }
 
-function entry(path: string, priority?: number): MetadataRoute.Sitemap[number] {
-  return {
-    url: buildCanonical(path),
+function entries(path: string, priority?: number): MetadataRoute.Sitemap {
+  const languages = localeAlternates(path);
+
+  // Google requires a separate <url> entry for every localized version. Each
+  // entry repeats the same reciprocal hreflang set, including itself.
+  return ([languages.en, languages.es] as const).map((url) => ({
+    url,
     changeFrequency: "weekly",
     priority,
-    // Every public URL declares its English/Spanish equivalents (hreflang).
-    alternates: { languages: localeAlternates(path) },
-  };
+    alternates: { languages },
+  }));
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -139,48 +142,48 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ]);
 
   return [
-    entry("/", 1),
-    entry("/discover", 0.8),
-    entry("/artists", 0.9),
-    entry("/artists/legends", 0.8),
-    entry("/artists/emerging", 0.8),
-    entry("/artists/most-awarded", 0.8),
-    entry("/instrumental-classical", 0.7),
-    entry("/composers", 0.8),
-    entry("/songwriters", 0.8),
-    entry("/lyricists", 0.8),
-    entry("/arrangers", 0.8),
-    entry("/musical-directors", 0.8),
-    entry("/musicians", 0.8),
-    entry("/djs", 0.8),
-    entry("/producers", 0.8),
-    entry("/christian", 0.8),
-    entry("/archive", 0.9),
-    entry("/releases", 0.9),
-    entry("/releases/most-viewed", 0.8),
-    entry("/releases/recent", 0.8),
-    entry("/releases/essential", 0.7),
-    entry("/artists/birthdays", 0.7),
-    entry("/about", 0.6),
-    entry("/contact", 0.5),
-    entry("/contributors", 0.5),
-    entry("/privacy-policy", 0.4),
-    entry("/terms-of-use", 0.4),
-    entry("/dmca", 0.4),
+    ...entries("/", 1),
+    ...entries("/discover", 0.8),
+    ...entries("/artists", 0.9),
+    ...entries("/artists/legends", 0.8),
+    ...entries("/artists/emerging", 0.8),
+    ...entries("/artists/most-awarded", 0.8),
+    ...entries("/instrumental-classical", 0.7),
+    ...entries("/composers", 0.8),
+    ...entries("/songwriters", 0.8),
+    ...entries("/lyricists", 0.8),
+    ...entries("/arrangers", 0.8),
+    ...entries("/musical-directors", 0.8),
+    ...entries("/musicians", 0.8),
+    ...entries("/djs", 0.8),
+    ...entries("/producers", 0.8),
+    ...entries("/christian", 0.8),
+    ...entries("/archive", 0.9),
+    ...entries("/releases", 0.9),
+    ...entries("/releases/most-viewed", 0.8),
+    ...entries("/releases/recent", 0.8),
+    ...entries("/releases/essential", 0.7),
+    ...entries("/artists/birthdays", 0.7),
+    ...entries("/about", 0.6),
+    ...entries("/contact", 0.5),
+    ...entries("/contributors", 0.5),
+    ...entries("/privacy-policy", 0.4),
+    ...entries("/terms-of-use", 0.4),
+    ...entries("/dmca", 0.4),
     ...Object.keys(decadeCounts)
       .filter((decade) => decadeCounts[decade] > 0)
       .sort((a, b) => Number(b.slice(0, 4)) - Number(a.slice(0, 4)))
-      .map((decade) => entry(`/archive/${decade}`, 0.8)),
+      .flatMap((decade) => entries(`/archive/${decade}`, 0.8)),
     ...Object.keys(yearCounts)
       .filter((year) => yearCounts[year] > 0)
       .sort((a, b) => Number(b) - Number(a))
-      .map((year) => entry(`/archive/${year}`, 0.7)),
-    ...releaseTypeCounts.map((type) => entry(`/releases/${type.slug}`, 0.7)),
-    ...releaseDecadeCounts.map((decade) => entry(`/releases/${decade.slug}`, 0.7)),
-    ...provinces.map((province) => entry(`/provinces/${province.slug}`, 0.8)),
-    ...artists.map((artist) => entry(`/artists/${artist.slug}`, 0.8)),
-    ...publicRecordings.map((recording) => entry(`/songs/${recording.slug}`, 0.7)),
-    ...publicReleases.map((release) => entry(`/releases/${release.slug}`, 0.7)),
-    ...[...genreSlugs].map((slug) => entry(`/genres/${slug}`, 0.7)),
+      .flatMap((year) => entries(`/archive/${year}`, 0.7)),
+    ...releaseTypeCounts.flatMap((type) => entries(`/releases/${type.slug}`, 0.7)),
+    ...releaseDecadeCounts.flatMap((decade) => entries(`/releases/${decade.slug}`, 0.7)),
+    ...provinces.flatMap((province) => entries(`/provinces/${province.slug}`, 0.8)),
+    ...artists.flatMap((artist) => entries(`/artists/${artist.slug}`, 0.8)),
+    ...publicRecordings.flatMap((recording) => entries(`/songs/${recording.slug}`, 0.7)),
+    ...publicReleases.flatMap((release) => entries(`/releases/${release.slug}`, 0.7)),
+    ...[...genreSlugs].flatMap((slug) => entries(`/genres/${slug}`, 0.7)),
   ];
 }

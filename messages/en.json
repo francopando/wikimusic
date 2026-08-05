@@ -298,6 +298,13 @@
       "Compilation": "Compilations",
       "Live": "Live",
       "Other": "Other"
+    },
+    "discographyTabs": {
+      "label": "Discography release types",
+      "albums": "Albums",
+      "singles": "Singles",
+      "compilations": "Compilations",
+      "other": "Other"
     }
   },
   "releaseType": {

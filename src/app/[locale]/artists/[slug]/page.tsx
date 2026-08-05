@@ -30,13 +30,7 @@ import { absoluteUrl, breadcrumbSchema } from "@/lib/structuredData";
 
 type PageProps = {
   params: Promise<{ slug: string; locale: string }>;
-  searchParams: Promise<{ releasesPage?: string | string[] }>;
 };
-
-function parseReleasesPage(value: string | string[] | undefined) {
-  const parsed = Number.parseInt(Array.isArray(value) ? value[0] ?? "1" : value ?? "1", 10);
-  return Number.isFinite(parsed) && parsed > 0 ? parsed : 1;
-}
 
 function firstNonEmpty(...values: Array<string | null | undefined>) {
   return values.find((value) => value?.trim()) ?? null;
@@ -74,9 +68,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   });
 }
 
-export default async function ArtistProfile({ params, searchParams }: PageProps) {
+export default async function ArtistProfile({ params }: PageProps) {
   const { slug } = await params;
-  const { releasesPage } = await searchParams;
   const artist = await getArtistProfile(slug);
 
   if (!artist) return notFound();
@@ -167,7 +160,7 @@ export default async function ArtistProfile({ params, searchParams }: PageProps)
           </aside>
 
           <div className="w-full min-w-0 space-y-6">
-            <div className="grid min-w-0 items-start gap-6 xl:grid-cols-[minmax(0,0.62fr)_minmax(0,1.38fr)]">
+            <div className="grid min-w-0 items-start gap-6 xl:grid-cols-[minmax(420px,1fr)_minmax(380px,520px)]">
               <div className="min-w-0 space-y-6">
                 {hasBio && (
                   <section className="min-w-0 rounded-xl border border-gray-100 bg-white p-5 shadow-sm sm:p-6">
@@ -184,10 +177,7 @@ export default async function ArtistProfile({ params, searchParams }: PageProps)
 
               <div className="min-w-0 space-y-6">
                 {discography.length > 0 && (
-                  <ArtistDiscographyAccordion
-                    releases={discography}
-                    requestedPage={parseReleasesPage(releasesPage)}
-                  />
+                  <ArtistDiscographyAccordion releases={discography} />
                 )}
 
                 <Suspense
