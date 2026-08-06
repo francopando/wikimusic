@@ -12,7 +12,7 @@ import ArtistFactsCard from "@/components/organisms/ArtistFactsCard";
 import ArtistDiscographyAccordion from "@/components/organisms/ArtistDiscographyAccordion";
 import ArtistInterviewsCarousel from "@/components/organisms/ArtistInterviewsCarousel";
 import BioText from "@/components/molecules/BioText";
-import type { ArtistProfileData } from "@/lib/artistApi";
+import EditorialDocumentRenderer from "@/components/editorial/EditorialDocumentRenderer";
 import JsonLd from "@/components/seo/JsonLd";
 import {
   getArtistProfile,
@@ -20,6 +20,12 @@ import {
   getArtistMedia,
 } from "@/lib/artistApi";
 import { getArtistRelationships } from "@/lib/artistRelationships";
+import { getPublishedEditorialDocument } from "@/lib/editorial/publicData";
+import {
+  editorialDocumentHasVisibleText,
+  getLegacyArtistBiography,
+  selectCutoverArtistBiography,
+} from "@/lib/editorial/biographyFallback";
 import { getArtistImageUrlIfAvailable } from "@/utils/getArtistImageUrl";
 import ArtistWorksPortfolio from "@/components/organisms/ArtistWorksPortfolio";
 import {
@@ -31,16 +37,6 @@ import { absoluteUrl, breadcrumbSchema } from "@/lib/structuredData";
 type PageProps = {
   params: Promise<{ slug: string; locale: string }>;
 };
-
-function firstNonEmpty(...values: Array<string | null | undefined>) {
-  return values.find((value) => value?.trim()) ?? null;
-}
-
-function getLocalizedArtistBio(artist: ArtistProfileData, locale: string) {
-  return locale === "es"
-    ? firstNonEmpty(artist.bio_es, artist.bio_en)
-    : firstNonEmpty(artist.bio_en);
-}
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug, locale } = await params;
@@ -78,13 +74,32 @@ export default async function ArtistProfile({ params }: PageProps) {
   const t = await getTranslations("artist");
   const tCommon = await getTranslations("common");
   const imageUrl = getArtistImageUrlIfAvailable(artist);
-  const localizedBio = getLocalizedArtistBio(artist, locale);
-  const hasBio = Boolean(localizedBio?.trim());
-  const [discography, interviews, relationships] = await Promise.all([
+  const editorialLocale = locale === "es" ? "es" : "en";
+  const localizedBio = getLegacyArtistBiography(editorialLocale, artist.bio_en, artist.bio_es);
+  const [discography, interviews, relationships, structuredBiography, englishStructuredBiography] = await Promise.all([
     getArtistDiscographySummaries(artist.id),
     getArtistMedia(artist.id),
     getArtistRelationships(artist.id),
+    getPublishedEditorialDocument({
+      documentType: "artist_biography",
+      ownerArtistId: artist.id,
+      locale: editorialLocale,
+    }),
+    editorialLocale === "es" ? getPublishedEditorialDocument({
+      documentType: "artist_biography",
+      ownerArtistId: artist.id,
+      locale: "en",
+    }) : Promise.resolve(null),
   ]);
+  if (structuredBiography && !structuredBiography.ok) {
+    console.error("Artist structured biography integrity failure.", {
+      artistId: artist.id,
+      locale,
+      issueCodes: structuredBiography.issues.map((issue) => issue.code),
+    });
+  }
+  const biography = selectCutoverArtistBiography(structuredBiography, englishStructuredBiography, localizedBio);
+  const hasBio = editorialDocumentHasVisibleText(biography);
   const isSoloArtist = artist.type === "solo_artist" || artist.type === "person";
   const sameAs = [artist.website, artist.youtube, artist.facebook, artist.instagram]
     .filter((value): value is string => Boolean(value && /^https?:\/\//i.test(value)));
@@ -168,7 +183,11 @@ export default async function ArtistProfile({ params }: PageProps) {
                       {t("biography")}
                     </h3>
 
-                    <BioText bio={localizedBio} />
+                    {biography.kind === "structured" ? (
+                      <EditorialDocumentRenderer resolvedDocument={biography.document} />
+                    ) : biography.kind === "legacy" ? (
+                      <BioText bio={biography.text} />
+                    ) : null}
                   </section>
                 )}
 

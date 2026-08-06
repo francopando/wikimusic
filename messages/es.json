@@ -1162,6 +1162,11 @@
         "eyebrow": "Enlaces",
         "description": "Aprueba enlaces de escucha oficiales para Spotify, Apple Music, YouTube, Deezer, TIDAL y más."
       },
+      "editorialIntegrity": {
+        "title": "Integridad Editorial",
+        "eyebrow": "Salud del Ciclo de Vida",
+        "description": "Revisa el esquema, las referencias, el estado de publicación, la compatibilidad y los hallazgos de biografías."
+      },
       "contributors": {
         "title": "Gestor de Colaboradores",
         "eyebrow": "Colaboradores",
@@ -1194,6 +1199,8 @@
       "newArtist": "Nuevo Artista",
       "createNewArtist": "Crear Nuevo Artista",
       "updateArtistProfile": "Actualizar perfil del artista",
+      "editBiography": "Editar biografía",
+      "editArtistFacts": "Editar datos del artista",
       "createArtist": "Crear Artista",
       "processing": "Procesando...",
       "new": "Nuevo",
@@ -1229,6 +1236,8 @@
     },
     "forms": {
       "selectPrimaryGenre": "-- Selecciona Género Principal --",
+      "artistFacts": "Datos del artista",
+      "biography": "Biografía",
       "editArtistProfile": "Editar Perfil del Artista",
       "createNewArtist": "Crear Nuevo Artista",
       "artistProfileEditor": "Editor de Perfil de Artista",
@@ -1335,6 +1344,72 @@
     "navigation": {
       "portal": "Portal de Administración",
       "backToAdmin": "Volver a Admin"
+    },
+    "editorialToolbar": {
+      "toolbarLabel": "Formato de biografía",
+      "blockStylesGroup": "Estilos de bloque",
+      "inlineGroup": "Formato en línea",
+      "structureGroup": "Listas y estructura",
+      "linksGroup": "Enlaces",
+      "historyGroup": "Historial y vista previa",
+      "paragraph": "Párrafo",
+      "heading2": "Encabezado 2",
+      "heading3": "Encabezado 3",
+      "heading4": "Encabezado 4",
+      "bold": "Negrita",
+      "italic": "Cursiva",
+      "bulletList": "Lista con viñetas",
+      "numberedList": "Lista numerada",
+      "decreaseIndent": "Disminuir sangría",
+      "increaseIndent": "Aumentar sangría",
+      "blockquote": "Cita",
+      "horizontalRule": "Línea horizontal",
+      "addEditLink": "Agregar o editar enlace",
+      "removeLink": "Quitar enlace",
+      "artistReference": "Enlazar referencia de artista",
+      "clearFormatting": "Limpiar formato",
+      "undo": "Deshacer",
+      "redo": "Rehacer",
+      "preview": "Alternar vista previa",
+      "linkUrl": "URL del enlace",
+      "applyLink": "Aplicar enlace",
+      "cancel": "Cancelar",
+      "invalidLink": "Ingresa una URL HTTP o HTTPS válida."
+    },
+    "editorialIntegrity": {
+      "title": "Integridad editorial",
+      "description": "Revisa el estado de las biografías estructuradas, las referencias de entidades, los estados de publicación y los datos de compatibilidad.",
+      "backToPortal": "Volver al portal administrativo",
+      "loading": "Generando el informe de integridad editorial…",
+      "errorTitle": "No se pudo cargar el informe de integridad",
+      "errorDescription": "El informe no está disponible temporalmente o tu sesión ya no está autorizada. Inténtalo de nuevo e inicia sesión nuevamente si el problema continúa.",
+      "retry": "Intentar de nuevo",
+      "reportEyebrow": "Informe más reciente",
+      "summaryTitle": "Resumen del informe",
+      "generatedAt": "Generado {value}",
+      "summary": {
+        "documents": "Documentos revisados",
+        "references": "Referencias revisadas",
+        "blocking": "Hallazgos críticos",
+        "warnings": "Advertencias",
+        "informational": "Hallazgos informativos"
+      },
+      "healthyTitle": "La integridad editorial está en buen estado",
+      "healthyDescription": "No se detectaron problemas críticos, advertencias ni hallazgos informativos en los documentos editoriales y sus referencias.",
+      "cleanReport": "Informe completado sin hallazgos",
+      "findingsEyebrow": "Revisión necesaria",
+      "findingsTitle": "Hallazgos de integridad",
+      "severity": {
+        "blocking": "Crítico",
+        "warning": "Advertencia",
+        "informational": "Informativo"
+      },
+      "fields": {
+        "owner": "Artista propietario",
+        "locale": "Idioma",
+        "occurrence": "Referencia"
+      },
+      "detailUnavailable": "No hay detalles adicionales disponibles."
     },
     "contributors": {
       "title": "Gestor de Colaboradores",

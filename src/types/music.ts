@@ -13,7 +13,7 @@ export interface Artist {
   date_of_birth?: string | null; // Needed for BirthdaySection.tsx
   province?: string | null;      // Matches your DB column
   birth_place?: string | null;
-  bio?: string | null;
+  biography?: string | null;
   bio_en?: string | null;
   bio_es?: string | null;
   is_religious?: boolean;        // Used in your Admin form

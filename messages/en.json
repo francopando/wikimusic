@@ -1149,6 +1149,11 @@
         "eyebrow": "Links",
         "description": "Approve official listening links for Spotify, Apple Music, YouTube, Deezer, TIDAL, and more."
       },
+      "editorialIntegrity": {
+        "title": "Editorial Integrity",
+        "eyebrow": "Lifecycle Health",
+        "description": "Review biography schema, references, publication status, compatibility, and lifecycle findings."
+      },
       "contributors": {
         "title": "Contributors Manager",
         "eyebrow": "Contributors",
@@ -1181,6 +1186,8 @@
       "newArtist": "New Artist",
       "createNewArtist": "Create New Artist",
       "updateArtistProfile": "Update Artist Profile",
+      "editBiography": "Edit Biography",
+      "editArtistFacts": "Edit Artist Facts",
       "createArtist": "Create Artist",
       "processing": "Processing...",
       "new": "New",
@@ -1216,6 +1223,8 @@
     },
     "forms": {
       "selectPrimaryGenre": "-- Select Primary Genre --",
+      "artistFacts": "Artist Facts",
+      "biography": "Biography",
       "editArtistProfile": "Edit Artist Profile",
       "createNewArtist": "Create New Artist",
       "artistProfileEditor": "Artist Profile Editor",
@@ -1322,6 +1331,72 @@
     "navigation": {
       "portal": "Admin Portal",
       "backToAdmin": "Back to Admin"
+    },
+    "editorialToolbar": {
+      "toolbarLabel": "Biography formatting",
+      "blockStylesGroup": "Block styles",
+      "inlineGroup": "Inline formatting",
+      "structureGroup": "Lists and structure",
+      "linksGroup": "Links",
+      "historyGroup": "History and preview",
+      "paragraph": "Paragraph",
+      "heading2": "Heading 2",
+      "heading3": "Heading 3",
+      "heading4": "Heading 4",
+      "bold": "Bold",
+      "italic": "Italic",
+      "bulletList": "Bullet list",
+      "numberedList": "Numbered list",
+      "decreaseIndent": "Decrease indent",
+      "increaseIndent": "Increase indent",
+      "blockquote": "Blockquote",
+      "horizontalRule": "Horizontal rule",
+      "addEditLink": "Add or edit link",
+      "removeLink": "Remove link",
+      "artistReference": "Link artist reference",
+      "clearFormatting": "Clear formatting",
+      "undo": "Undo",
+      "redo": "Redo",
+      "preview": "Toggle preview",
+      "linkUrl": "Link URL",
+      "applyLink": "Apply link",
+      "cancel": "Cancel",
+      "invalidLink": "Enter a valid HTTP or HTTPS URL."
+    },
+    "editorialIntegrity": {
+      "title": "Editorial Integrity",
+      "description": "Review the health of structured biographies, entity references, publication states, and legacy compatibility data.",
+      "backToPortal": "Back to Admin Portal",
+      "loading": "Running the editorial integrity report…",
+      "errorTitle": "The integrity report could not be loaded",
+      "errorDescription": "The report is temporarily unavailable or your session is no longer authorized. Try again, and sign in again if the problem continues.",
+      "retry": "Try again",
+      "reportEyebrow": "Latest report",
+      "summaryTitle": "Report summary",
+      "generatedAt": "Generated {value}",
+      "summary": {
+        "documents": "Documents checked",
+        "references": "References checked",
+        "blocking": "Blocking findings",
+        "warnings": "Warnings",
+        "informational": "Informational findings"
+      },
+      "healthyTitle": "Editorial integrity is healthy",
+      "healthyDescription": "No blocking issues, warnings, or informational findings were detected in the current editorial documents and entity references.",
+      "cleanReport": "Report completed with no findings",
+      "findingsEyebrow": "Review needed",
+      "findingsTitle": "Integrity findings",
+      "severity": {
+        "blocking": "Blocking",
+        "warning": "Warning",
+        "informational": "Informational"
+      },
+      "fields": {
+        "owner": "Owner artist",
+        "locale": "Locale",
+        "occurrence": "Reference occurrence"
+      },
+      "detailUnavailable": "No additional details are available."
     },
     "contributors": {
       "title": "Contributors Manager",

@@ -37,6 +37,7 @@ import {
   type SongRecord,
 } from "@/lib/queries/songs";
 import { absoluteUrl, breadcrumbSchema, isoDuration } from "@/lib/structuredData";
+import { getPublishedEditorialPlainText } from "@/lib/editorial/publicData";
 
 type PageProps = {
   params: Promise<{ slug: string; locale: string }>;
@@ -46,7 +47,7 @@ type SongArtistPreview = {
   id: string;
   slug: string;
   name: string;
-  bio: string | null;
+  biography: string | null;
   views: number | null;
 };
 
@@ -178,7 +179,7 @@ export default async function SongProfilePage({ params }: PageProps) {
         ? import("@/lib/supabase").then(({ supabase }) =>
             supabase
               .from("artists")
-              .select("id, slug, name, bio, has_image, image_updated_at, views")
+              .select("id, slug, name, has_image, image_updated_at, views")
               .eq("id", song.artist_id!)
               .single()
               .then(({ data }) => data)
@@ -186,7 +187,9 @@ export default async function SongProfilePage({ params }: PageProps) {
         : Promise.resolve(null),
     ]);
 
-  const artistPreview = artistRow as SongArtistPreview | null;
+  const artistPreview = artistRow
+    ? { ...(artistRow as Omit<SongArtistPreview, "biography">), biography: await getPublishedEditorialPlainText(song.artist_id!, "en") }
+    : null;
   const artistSlug = artistPreview?.slug ?? null;
 
   // Resolve the correctly named view fields with fallbacks for legacy names

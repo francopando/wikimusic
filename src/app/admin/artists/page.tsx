@@ -3,6 +3,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { BookOpenText, UserRound } from "lucide-react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
@@ -19,7 +20,7 @@ import type { Artist } from "@/types/music";
 import { getArtistImageUrlIfAvailable } from "@/utils/getArtistImageUrl";
 import { resizeArtistImage } from "@/utils/resizeArtistImage";
 import { extractYouTubeVideoId } from "@/utils/youtube";
-import BioText from "@/components/molecules/BioText";
+import ArtistBiographyEditor from "@/components/admin/editorial/ArtistBiographyEditor";
 import { normalizeSearchText, rankSearchText } from "@/lib/searchRanking";
 
 type ArtistStatus =
@@ -56,9 +57,6 @@ type AdminArtist = Artist & {
   genres?: string[] | null;
   artist_tags?: string[] | null;
   aliases?: string[] | null;
-  bio?: string | null;
-  bio_en?: string | null;
-  bio_es?: string | null;
   gender?: string | null;
   disambiguation?: string | null;
   ended?: boolean | null;
@@ -96,12 +94,8 @@ type ArtistForm = {
   gender: string;
   disambiguation: string;
   wikidata_id: string;
-  bio_en: string;
-  bio_es: string;
   ended: boolean;
 };
-
-type LocalizedBioField = "bio_en" | "bio_es";
 
 type AdminArtistMedia = {
   id: string;
@@ -368,8 +362,6 @@ const emptyForm: ArtistForm = {
   gender: "",
   disambiguation: "",
   wikidata_id: "",
-  bio_en: "",
-  bio_es: "",
   ended: false,
 };
 
@@ -643,10 +635,8 @@ export default function AdminDashboard() {
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState("");
   const [previewImageUrl, setPreviewImageUrl] = useState<string | null>(null);
-  const bioTextareaRefs = useRef<Record<LocalizedBioField, HTMLTextAreaElement | null>>({
-    bio_en: null,
-    bio_es: null,
-  });
+  const [editorialBiographyDirty, setEditorialBiographyDirty] = useState(false);
+  const [artistWorkspaceTab, setArtistWorkspaceTab] = useState("facts");
   const artistPickerRef = useRef<HTMLDivElement>(null);
   const artistSearchInputRef = useRef<HTMLInputElement>(null);
   const activeArtistOptionRef = useRef<HTMLButtonElement>(null);
@@ -925,6 +915,7 @@ export default function AdminDashboard() {
   }
 
   function resetForm() {
+    setArtistWorkspaceTab("facts");
     setSelectedArtistId("");
     setSearch("");
     closeArtistPicker();
@@ -935,66 +926,29 @@ export default function AdminDashboard() {
     resetMediaForm();
     resetRelationshipForm();
     setStatus("");
+    setEditorialBiographyDirty(false);
   }
 
-  function focusBioSelection(field: LocalizedBioField, start: number, end: number) {
-    window.setTimeout(() => {
-      bioTextareaRefs.current[field]?.focus();
-      bioTextareaRefs.current[field]?.setSelectionRange(start, end);
-    }, 0);
+  function requestResetForm() {
+    if (editorialBiographyDirty && !window.confirm("The structured biography has unsaved changes. Discard them and clear the selected artist?")) return;
+    resetForm();
   }
 
-  function wrapBioSelection(
-    field: LocalizedBioField,
-    prefix: string,
-    suffix = prefix,
-    placeholder = "text"
-  ) {
-    const textarea = bioTextareaRefs.current[field];
-    const value = form[field] ?? "";
-    const start = textarea?.selectionStart ?? value.length;
-    const end = textarea?.selectionEnd ?? value.length;
-    const selectedText = value.slice(start, end) || placeholder;
-    const nextBio = `${value.slice(0, start)}${prefix}${selectedText}${suffix}${value.slice(end)}`;
-    const nextStart = start + prefix.length;
-    const nextEnd = nextStart + selectedText.length;
+  function submitArtistProfileFromHero() {
+    const profileForm = document.getElementById("artist-profile-form");
+    if (!(profileForm instanceof HTMLFormElement)) return;
 
-    updateForm(field, nextBio);
-    focusBioSelection(field, nextStart, nextEnd);
-  }
+    if (!profileForm.checkValidity()) {
+      setArtistWorkspaceTab("facts");
+      window.requestAnimationFrame(() => profileForm.reportValidity());
+      return;
+    }
 
-  function formatBioLines(
-    field: LocalizedBioField,
-    prefix: string,
-    placeholder = "New line"
-  ) {
-    const textarea = bioTextareaRefs.current[field];
-    const value = form[field] ?? "";
-    const start = textarea?.selectionStart ?? value.length;
-    const end = textarea?.selectionEnd ?? value.length;
-    const selectedText = value.slice(start, end) || placeholder;
-    const formattedText = selectedText
-      .split("\n")
-      .map((line) => {
-        const trimmed = line.trim();
-        return trimmed ? `${prefix}${trimmed}` : line;
-      })
-      .join("\n");
-    const nextBio = `${value.slice(0, start)}${formattedText}${value.slice(end)}`;
-
-    updateForm(field, nextBio);
-    focusBioSelection(field, start, start + formattedText.length);
-  }
-
-  function insertBioLink(field: LocalizedBioField) {
-    const href = window.prompt("Paste the full URL for this link:");
-
-    if (!href?.trim()) return;
-
-    wrapBioSelection(field, "[", `](${href.trim()})`, "link text");
+    profileForm.requestSubmit();
   }
 
   function handleSelectArtistForEdit(id: string) {
+    if (id !== selectedArtistId && editorialBiographyDirty && !window.confirm("The structured biography has unsaved changes. Switch artists and discard them?")) return;
     closeArtistPicker();
     const artist = artists.find((item) => item.id === id);
 
@@ -1045,8 +999,6 @@ export default function AdminDashboard() {
       gender: artist.gender ?? "",
       disambiguation: artist.disambiguation ?? "",
       wikidata_id: artist.wikidata_id ?? "",
-      bio_en: artist.bio_en ?? "",
-      bio_es: artist.bio_es ?? "",
       ended: Boolean(artist.ended),
     });
 
@@ -1476,6 +1428,8 @@ export default function AdminDashboard() {
   async function handleSaveArtist(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
+    if (editorialBiographyDirty && !window.confirm("The structured biography has unsaved changes. Save the legacy artist profile and leave those changes unsaved?")) return;
+
     setLoading(true);
     setStatus("");
 
@@ -1519,8 +1473,6 @@ export default function AdminDashboard() {
       disambiguation: nullable(form.disambiguation),
       wikidata_id: nullable(form.wikidata_id),
 
-      bio_en: nullable(form.bio_en),
-      bio_es: nullable(form.bio_es),
       ended: form.ended,
     };
 
@@ -1692,7 +1644,7 @@ export default function AdminDashboard() {
                   <button
                     type="button"
                     onMouseDown={(event) => event.preventDefault()}
-                    onClick={resetForm}
+                    onClick={requestResetForm}
                     className="block w-full border-b border-gray-100 px-3 py-2 text-left text-sm font-medium text-(--color-flagblue) transition hover:bg-(--color-flagblue)/5"
                   >
                     Create New Artist
@@ -2095,16 +2047,16 @@ export default function AdminDashboard() {
                 <div className="flex flex-wrap gap-2 sm:shrink-0 sm:justify-end">
                   <button
                     type="button"
-                    onClick={resetForm}
+                    onClick={requestResetForm}
                     className="rounded-lg border border-(--color-wikicrimson)/25 bg-white px-3 py-2 text-xs font-medium uppercase tracking-[0.14em] text-(--color-wikicrimson) shadow-sm transition hover:border-(--color-wikicrimson) hover:bg-(--color-wikicrimson) hover:text-white sm:px-4"
                   >
                     {t("admin.buttons.newArtist")}
                   </button>
                   <button
-                    type="submit"
-                    form="artist-profile-form"
+                    type="button"
+                    onClick={submitArtistProfileFromHero}
                     disabled={Boolean(loading)}
-                    className="flex-1 rounded-lg bg-(--color-flagblue) px-4 py-2 text-xs font-medium uppercase tracking-[0.14em] text-white shadow-sm transition hover:bg-(--color-flagblue)/90 disabled:cursor-not-allowed disabled:opacity-40 sm:flex-none"
+                    className="flex-1 rounded-lg bg-(--color-flagblue) px-4 py-2 text-xs font-medium uppercase tracking-[0.14em] text-white shadow-sm transition hover:bg-(--color-flagblue)/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--color-flagblue) disabled:cursor-not-allowed disabled:opacity-40 sm:flex-none"
                   >
                     {loading
                       ? t("admin.buttons.processing")
@@ -2112,11 +2064,23 @@ export default function AdminDashboard() {
                         ? t("admin.buttons.updateArtistProfile")
                         : t("admin.buttons.createArtist")}
                   </button>
+                  <button
+                    type="button"
+                    aria-controls={artistWorkspaceTab === "facts" ? "artist-biography-workspace" : "artist-facts-workspace"}
+                    onClick={() => setArtistWorkspaceTab((current) => current === "facts" ? "biography" : "facts")}
+                    disabled={!selectedArtistId || !selectedArtist}
+                    className="inline-flex flex-1 items-center justify-center gap-2 rounded-lg border border-(--color-flagblue)/25 bg-white px-3 py-2 text-xs font-medium uppercase tracking-[0.14em] text-(--color-flagblue) shadow-sm transition hover:border-(--color-flagblue) hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--color-flagblue) disabled:cursor-not-allowed disabled:opacity-40 sm:flex-none sm:px-4"
+                  >
+                    {artistWorkspaceTab === "facts" ? <BookOpenText aria-hidden="true" className="h-4 w-4 shrink-0"/> : <UserRound aria-hidden="true" className="h-4 w-4 shrink-0"/>}
+                    <span>{t(artistWorkspaceTab === "facts" ? "admin.buttons.editBiography" : "admin.buttons.editArtistFacts")}</span>
+                  </button>
                 </div>
               </div>
             </div>
 
-            <form id="artist-profile-form" onSubmit={handleSaveArtist} className="space-y-6">
+              <div id="artist-facts-workspace" hidden={artistWorkspaceTab !== "facts"}>
+                <h2 className="sr-only">{t("admin.forms.artistFacts")}</h2>
+                <form id="artist-profile-form" onSubmit={handleSaveArtist} className="space-y-6">
               <div className="grid gap-4 md:grid-cols-2">
                 <Field label={t("admin.labels.artistName")}>
                   <input
@@ -2612,88 +2576,6 @@ export default function AdminDashboard() {
                 </Field>
               </div>
 
-              {(["bio_en", "bio_es"] as const).map((field) => (
-                <Field
-                  key={field}
-                  label={field === "bio_en" ? "English Bio" : "Spanish Bio"}
-                >
-                  <div className="overflow-hidden rounded-lg border border-gray-200 bg-white focus-within:border-(--color-flagblue)">
-                    <div className="flex flex-wrap gap-2 border-b border-gray-100 bg-gray-50 px-3 py-2">
-                      <button
-                        type="button"
-                        onClick={() => wrapBioSelection(field, "**", "**", "bold text")}
-                        className={toolbarButtonClass}
-                      >
-                        B
-                      </button>
-
-                      <button
-                        type="button"
-                        onClick={() => wrapBioSelection(field, "*", "*", "italic text")}
-                        className={`${toolbarButtonClass} italic`}
-                      >
-                        I
-                      </button>
-
-                      <button
-                        type="button"
-                        onClick={() => formatBioLines(field, "## ", "Section title")}
-                        className={toolbarButtonClass}
-                      >
-                        H
-                      </button>
-
-                      <button
-                        type="button"
-                        onClick={() => formatBioLines(field, "- ", "List item")}
-                        className={toolbarButtonClass}
-                      >
-                        List
-                      </button>
-
-                      <button
-                        type="button"
-                        onClick={() => formatBioLines(field, "> ", "Quoted text")}
-                        className={toolbarButtonClass}
-                      >
-                        Quote
-                      </button>
-
-                      <button
-                        type="button"
-                        onClick={() => insertBioLink(field)}
-                        className={toolbarButtonClass}
-                      >
-                        Link
-                      </button>
-                    </div>
-
-                    <textarea
-                      ref={(element) => {
-                        bioTextareaRefs.current[field] = element;
-                      }}
-                      value={form[field] ?? ""}
-                      onChange={(event) => updateForm(field, event.target.value)}
-                      className="min-h-55 w-full resize-y bg-white px-3 py-3 text-sm font-normal leading-relaxed text-gray-800 outline-none"
-                    />
-                  </div>
-
-                  <div className="mt-3 rounded-lg border border-gray-100 bg-gray-50 px-4 py-3">
-                    <p className="mb-2 text-[10px] font-normal uppercase tracking-[0.18em] text-gray-400">
-                      Preview
-                    </p>
-
-                    {form[field].trim() ? (
-                      <BioText bio={form[field]} />
-                    ) : (
-                      <p className="text-sm text-gray-400">
-                        Biography preview will appear here.
-                      </p>
-                    )}
-                  </div>
-                </Field>
-              ))}
-
               <button
                 type="submit"
                 disabled={Boolean(loading)}
@@ -2705,7 +2587,15 @@ export default function AdminDashboard() {
                     ? t("admin.buttons.updateArtistProfile")
                     : t("admin.buttons.createArtist")}
               </button>
-            </form>
+                </form>
+              </div>
+
+              <div id="artist-biography-workspace" hidden={artistWorkspaceTab !== "biography"}>
+                <h2 className="sr-only">{t("admin.forms.biography")}</h2>
+                {selectedArtistId && selectedArtist && (
+                  <ArtistBiographyEditor artistId={selectedArtistId} artistName={selectedArtist.name ?? "Selected artist"} onDirtyChange={setEditorialBiographyDirty} />
+                )}
+              </div>
 
             {selectedArtistId && selectedArtist && (
               <div className="mt-5 rounded-xl border border-red-100 bg-red-50/70 p-4">
@@ -3010,6 +2900,3 @@ function Field({
 
 const inputClass =
   "w-full rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-normal text-gray-800 outline-none transition focus:border-(--color-flagblue)";
-
-const toolbarButtonClass =
-  "rounded-md border border-gray-200 bg-white px-2.5 py-1 text-xs font-normal text-gray-700 transition hover:border-(--color-flagblue) hover:text-(--color-flagblue)";

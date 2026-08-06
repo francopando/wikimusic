@@ -59,6 +59,11 @@ const ADMIN_TOOLS_CONFIG: Omit<AdminTool, "title" | "eyebrow" | "description">[]
     icon: "platformLinks",
   },
   {
+    href: "/admin/editorial-integrity",
+    status: "available",
+    icon: "reviews",
+  },
+  {
     href: "/admin/contributors",
     status: "available",
     icon: "contributors",

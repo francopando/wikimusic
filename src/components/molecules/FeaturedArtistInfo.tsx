@@ -25,7 +25,7 @@ export default function FeaturedArtistInfo({
   featuredArtist,
 }: FeaturedArtistInfoProps) {
   const t = useTranslations("components");
-  const bioExcerpt = getBioExcerpt(featuredArtist?.bio);
+  const bioExcerpt = getBioExcerpt(featuredArtist?.biography);
 
   return (
     <div className="flex-1">

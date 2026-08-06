@@ -65,7 +65,6 @@ async function loadHomeData() {
         stage_name,
         province,
         birth_place,
-        bio,
         facebook,
         instagram,
         genres,
@@ -147,9 +146,12 @@ async function loadHomeData() {
   const featured = await featuredPromise;
 
   const featuredRelation = (featured.data as { artist?: Artist | Artist[] | null } | null)?.artist;
-  const featuredArtist = Array.isArray(featuredRelation)
+  const featuredArtistBase = Array.isArray(featuredRelation)
     ? featuredRelation[0] ?? null
     : featuredRelation ?? null;
+  const featuredArtist = featuredArtistBase
+    ? { ...featuredArtistBase, biography: await (await import("@/lib/editorial/publicData")).getPublishedEditorialPlainText(featuredArtistBase.id, "en") }
+    : null;
 
   // 2. Birthday Artists
   // Loaded in BirthdaySection using the visitor's local browser date.

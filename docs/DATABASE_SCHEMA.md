@@ -34,7 +34,6 @@ This is the authoritative technical reference for the Mangulina database schema.
 | id | uuid | NO | Primary key |
 | name | text | NO | Canonical artist name |
 | slug | text | NO | URL-safe identifier |
-| bio | text | YES | Artist biography |
 | bio_es | text | YES | Spanish biography |
 | birth_date | date | YES | Birth date |
 | status | text | NO | published, draft, inactive |
@@ -53,7 +52,7 @@ This is the authoritative technical reference for the Mangulina database schema.
 
 **Notes:**
 - `slug` must be unique and URL-safe
-- `bio` and `bio_es` support full biography content
+- `bio_en` and `bio_es` are frozen compatibility snapshots; structured editorial documents are authoritative.
 - Status controls publication/visibility
 
 ---
@@ -553,3 +552,14 @@ See [ARCHITECTURAL_DECISIONS.md](ARCHITECTURAL_DECISIONS.md) for rationale.
 **Last Updated:** 2026-07-03  
 **Authority:** Database Architecture Team  
 **Next Review:** As needed or after major migrations
+# Editorial document engine (Phase 1)
+
+The additive `editorial_documents` table stores versioned Tiptap/ProseMirror-compatible JSON. Phase 1 supports only one `artist_biography` per artist and locale (`en` or `es`), with `draft`/`published` status and optimistic `revision`. Owning artist deletion cascades.
+
+Phase 4 migrated 564 English and 17 genuine Spanish biographies as published revision-1 documents. `artists.bio` was consolidated into empty `bio_en` values where necessary (zero production rows required copying), audited for 12 differing non-authoritative variants, and removed by `20260805010000_consolidate_and_drop_artists_bio.sql`. `bio_en` and `bio_es` remain read-only compatibility snapshots. Normal biography edits flow only through `editorial_documents.document`.
+
+The canonical empty JSON document is `{"type":"doc","content":[{"type":"paragraph"}]}`, matching Tiptap's standard `block+` root rule. Zero-block documents are rejected before persistence. A future editor must register the documented custom inline atomic `artistReference` extension; Phase 1 does not implement that editor.
+
+`editorial_entity_references` contains one derived row per `artistReference` occurrence. It references the document with `ON DELETE CASCADE` and the target artist UUID with `ON DELETE RESTRICT`; it never stores slugs or independently authoritative visible wording.
+
+Both tables have RLS enabled and are service-role-only in Phase 1. Writes use the service-role-only `upsert_editorial_document(text, uuid, text, integer, text, jsonb, integer)` transaction. Public and ordinary authenticated roles have no direct read or write grants. See [Editorial Document Engine](architecture/editorial-document-engine.md).

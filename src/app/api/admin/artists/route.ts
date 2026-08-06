@@ -2,7 +2,11 @@ import { NextResponse } from "next/server";
 import { requireAdminApiRole } from "@/lib/adminApiAuth";
 import { getSupabaseClient } from "@/lib/supabase";
 import { revalidateArtistProfilePaths } from "@/lib/revalidateArtistProfile";
-import { revalidateAllHomepageData } from "@/lib/homepageCache";
+import { revalidateHomepageData } from "@/lib/homepageCache";
+import { revalidateEditorialDocumentsReferencingArtist } from "@/lib/editorial/revalidation";
+import { hasForbiddenArtistBiographyFields } from "@/lib/editorial/migration";
+import { getArtistBiographyReferences } from "@/lib/editorial/serverLifecycle";
+import { summarizeBiographyReferencesForDelete } from "@/lib/editorial/lifecycle";
 
 export async function GET(request: Request) {
   const auth = await requireAdminApiRole();
@@ -10,17 +14,20 @@ export async function GET(request: Request) {
 
   const { searchParams } = new URL(request.url);
   const id = searchParams.get("id");
+  const ids = (searchParams.get("ids") ?? "").split(",").filter(Boolean).slice(0, 50);
   const q = searchParams.get("q")?.trim() ?? "";
   const limit = Math.min(Number(searchParams.get("limit") ?? "25"), 50);
 
   let query = getSupabaseClient()
     .from("artists")
-    .select("id,name,slug,stage_name,sort_name,status,primary_role,primary_genre,province,aliases")
+    .select("id,name,slug,stage_name,sort_name,status,type,primary_role,primary_genre,province,aliases")
     .order("name", { ascending: true })
     .limit(limit);
 
   if (id) {
     query = query.eq("id", id).limit(1);
+  } else if (ids.length) {
+    query = query.in("id", ids).limit(ids.length);
   } else if (q) {
     const pattern = `%${q.replace(/[%_]/g, "")}%`;
     query = query.or(
@@ -43,7 +50,7 @@ export async function GET(request: Request) {
   if (!id && q) {
     const { data: aliasRows } = await getSupabaseClient()
       .from("artists")
-      .select("id,name,slug,stage_name,sort_name,status,primary_role,primary_genre,province,aliases")
+      .select("id,name,slug,stage_name,sort_name,status,type,primary_role,primary_genre,province,aliases")
       .contains("aliases", [q])
       .limit(limit);
     const byId = new Map(rows.map((artist) => [artist.id, artist]));
@@ -62,12 +69,22 @@ export async function GET(request: Request) {
 }
 
 export async function POST(request: Request) {
+  const auth = await requireAdminApiRole();
+  if (auth.response) return auth.response;
   const { artistId, artistData } = await request.json();
 
   if (!artistData?.name) {
     return NextResponse.json(
       { ok: false, error: "Artist name is required." },
       { status: 400 }
+    );
+  }
+
+  const forbiddenBiographyFields = hasForbiddenArtistBiographyFields(artistData);
+  if (forbiddenBiographyFields.length) {
+    return NextResponse.json(
+      { ok: false, error: `Biography fields are read-only compatibility data. Use the structured biography endpoint. Rejected: ${forbiddenBiographyFields.join(", ")}.` },
+      { status: 400 },
     );
   }
 
@@ -118,11 +135,15 @@ export async function POST(request: Request) {
     revalidateArtistProfilePaths(response.data.slug);
   }
 
-  revalidateAllHomepageData();
+  await revalidateEditorialDocumentsReferencingArtist(response.data.id);
+
+  revalidateHomepageData();
   return NextResponse.json({ ok: true, id: response.data.id });
 }
 
 export async function DELETE(request: Request) {
+  const auth = await requireAdminApiRole("admin");
+  if (auth.response) return auth.response;
   const { artistId } = await request.json();
 
   if (!artistId) {
@@ -151,6 +172,16 @@ export async function DELETE(request: Request) {
       { ok: false, error: "Artist not found." },
       { status: 404 },
     );
+  }
+
+  const biographyReferences = await getArtistBiographyReferences(artistId);
+  if (biographyReferences.length) {
+    const biographies = summarizeBiographyReferencesForDelete(biographyReferences);
+    return NextResponse.json({
+      ok: false,
+      error: `This artist is referenced by ${biographies.length} ${biographies.length === 1 ? "biography" : "biographies"}. Reassign or remove those references before deletion.`,
+      biographies,
+    }, { status: 409 });
   }
 
   const { error: imageError } = await supabase.storage
@@ -183,7 +214,7 @@ export async function DELETE(request: Request) {
     revalidateArtistProfilePaths(artist.slug);
   }
 
-  revalidateAllHomepageData();
+  revalidateHomepageData();
   return NextResponse.json({
     ok: true,
     id: artistId,

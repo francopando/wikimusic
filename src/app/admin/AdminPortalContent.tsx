@@ -207,6 +207,7 @@ function getToolKey(href: string): string {
     discography: "discography",
     awards: "awards",
     "platform-links": "platformLinks",
+    "editorial-integrity": "editorialIntegrity",
     "creative-works": "creativeWorks",
     "works-credits": "creativeWorks",
     contributors: "contributors",

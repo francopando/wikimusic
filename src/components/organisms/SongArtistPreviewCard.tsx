@@ -10,7 +10,7 @@ type SongArtistPreviewCardProps = {
     id: string;
     slug: string;
     name: string;
-    bio?: string | null;
+    biography?: string | null;
     has_image?: boolean | null;
     image_updated_at?: string | null;
     views?: number | null;
@@ -60,7 +60,7 @@ export default function SongArtistPreviewCard({ artist }: SongArtistPreviewCardP
           </div>
 
           <p className="mt-2 text-sm leading-relaxed text-gray-600">
-            {getExcerpt(artist.bio, t("song.hero.artistFallback"))}
+            {getExcerpt(artist.biography, t("song.hero.artistFallback"))}
           </p>
         </div>
       </div>

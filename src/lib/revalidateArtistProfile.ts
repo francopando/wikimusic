@@ -4,7 +4,7 @@ import { invalidateArtistPortfolioCache } from "@/lib/artistPortfolioCache";
 
 export function getArtistProfileRevalidationPaths(slug: string) {
   const normalizedSlug = slug.trim();
-  const paths = new Set(["/", "/en", "/es"]);
+  const paths = new Set<string>();
 
   if (!normalizedSlug) return paths;
 
