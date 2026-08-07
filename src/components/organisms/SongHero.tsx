@@ -88,6 +88,8 @@ export default function SongHero({
         <div className="flex flex-col items-start gap-6 md:flex-row">
           <div className="group relative aspect-square w-full shrink-0 overflow-hidden rounded-lg border border-black/5 bg-gray-100 sm:w-56 lg:w-64">
             {coverImageUrl ? (
+              // Song pages select the stored 300px WebP variant. Optimizing it
+              // would only upscale/re-encode that fixed source; see the image architecture.
               <Image
                 src={coverImageUrl}
                 alt={title}
@@ -95,6 +97,7 @@ export default function SongHero({
                 className="object-cover transition-all duration-300 group-hover:scale-105 group-hover:brightness-110"
                 priority
                 sizes="(max-width: 640px) calc(100vw - 56px), 256px"
+                unoptimized
               />
             ) : (
               <div className="flex h-full w-full items-center justify-center bg-gray-100 text-xs italic text-gray-400">

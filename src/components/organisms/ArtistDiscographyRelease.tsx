@@ -112,12 +112,15 @@ export default function ArtistDiscographyRelease({
         <div className="flex min-w-0 items-center gap-2.5">
           <div className="relative w-11 h-11 rounded-md overflow-hidden bg-gray-200 shrink-0">
             {release.cover_url ? (
+              // The API selects a 150px WebP for this invariant 44px frame.
+              // It covers up to 3x DPR without a Vercel transformation.
               <Image
                 src={release.cover_url}
                 alt={release.release_title}
                 fill
                 sizes="44px"
                 className="object-cover"
+                unoptimized
               />
             ) : (
               <div className="w-full h-full bg-gray-300" />
