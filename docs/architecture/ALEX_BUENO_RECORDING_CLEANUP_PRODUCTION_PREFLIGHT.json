@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-08-13T14:41:11.058Z",
+  "passed": true,
+  "manifest_sha256": "67FA41DE1F2EE290EF087BDA22788291AD7721975133DC7FA7CC24C7E18B81DA",
+  "approved_families": 4,
+  "redundant_recordings": 4,
+  "distinct_survivors": 4,
+  "global_counts": {
+    "recordings": 17051,
+    "tracks": 22716,
+    "releases": 3165,
+    "release_groups": 2813
+  },
+  "alex_bueno_counts": {
+    "recordings": 638,
+    "tracks": 839,
+    "releases": 84,
+    "release_groups": 61
+  },
+  "failures": []
+}

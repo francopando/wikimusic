@@ -14,7 +14,6 @@ export const ARTIST_LIST_SELECT = [
   "date_of_birth",
   "province",
   "birth_place",
-  "bio",
   "facebook",
   "instagram",
   "genres",

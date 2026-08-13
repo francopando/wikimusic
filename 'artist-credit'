@@ -1,0 +1,3229 @@
+---
+[
+  {
+    "id": "c0290989-e64f-4933-9f4a-c62e8a21f865",
+    "title": "¿Adónde va el amor?",
+    "artist_id": "84aba9ce-ba69-4caa-b71b-2bedb2f848fc",
+    "duration": 250358,
+    "disambiguation": "pop version",
+    "isrcs": [
+      "USJ3V0900014"
+    ],
+    "mbid": "efcaa8f6-8703-40e7-8832-cea1a25f73bd",
+    "metadata": {
+      "id": "efcaa8f6-8703-40e7-8832-cea1a25f73bd",
+      "isrcs": [
+        "USJ3V0900014"
+      ],
+      "title": "¿Adónde va el amor?",
+      "video": false,
+      "length": 250358,
+      "artist-credit": [
+        {
+          "name": "Daniel Santacruz",
+          "artist": {
+            "id": "b8d11256-309c-47d6-9062-db39e99428ee",
+            "name": "Daniel Santacruz",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Santacruz, Daniel",
+            "disambiguation": ""
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "pop version",
+      "first-release-date": "2008-09-12"
+    }
+  },
+  {
+    "id": "9ce2cbf7-ee26-47d0-893a-e4d18f26e10f",
+    "title": "7 locas",
+    "artist_id": "6321da6c-e2d5-490a-a4e8-416bbee81edf",
+    "duration": 196080,
+    "disambiguation": "dembow version",
+    "isrcs": [],
+    "mbid": "72b81b58-4b2c-432f-b3c1-b260f35f4e84",
+    "metadata": {
+      "id": "72b81b58-4b2c-432f-b3c1-b260f35f4e84",
+      "isrcs": [],
+      "title": "7 locas",
+      "video": false,
+      "length": 196080,
+      "artist-credit": [
+        {
+          "name": "Don Miguelo",
+          "artist": {
+            "id": "21deeceb-351f-4bac-bb17-55fb2e252a75",
+            "name": "Don Miguelo",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Don Miguelo",
+            "disambiguation": ""
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "dembow version",
+      "first-release-date": "2011-10-28"
+    }
+  },
+  {
+    "id": "1221ba15-7e15-41b0-b2f0-b7e0551ffa5e",
+    "title": "7 locas",
+    "artist_id": "6321da6c-e2d5-490a-a4e8-416bbee81edf",
+    "duration": 319573,
+    "disambiguation": "merengue urbano version",
+    "isrcs": [],
+    "mbid": "9b814666-c1b7-4fe6-9e75-3c7e55956101",
+    "metadata": {
+      "id": "9b814666-c1b7-4fe6-9e75-3c7e55956101",
+      "isrcs": [],
+      "title": "7 locas",
+      "video": false,
+      "length": 319573,
+      "artist-credit": [
+        {
+          "name": "Don Miguelo",
+          "artist": {
+            "id": "21deeceb-351f-4bac-bb17-55fb2e252a75",
+            "name": "Don Miguelo",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Don Miguelo",
+            "disambiguation": ""
+          },
+          "joinphrase": " & "
+        },
+        {
+          "name": "Anthony Santos",
+          "artist": {
+            "id": "fef0e932-c8bc-4ba9-8a37-52aed5b0a633",
+            "name": "Antony Santos",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Santos, Antony",
+            "disambiguation": "aka Anthony \"El Mayimbe\" Santos or Anthony Santos"
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "merengue urbano version",
+      "first-release-date": "2011-10-28"
+    }
+  },
+  {
+    "id": "8b24ab68-217f-4a5d-95e6-63056ea4dd06",
+    "title": "Amor de conuco",
+    "artist_id": "10034596-47cb-46ba-9e80-9ea319a2c0df",
+    "duration": 189000,
+    "disambiguation": "pop version",
+    "isrcs": [
+      "QMDA72594679",
+      "USJ3V1861928",
+      "USJ3V1862556",
+      "USKP10500025"
+    ],
+    "mbid": "81b33d43-8726-4736-aaff-027aba767934",
+    "metadata": {
+      "id": "81b33d43-8726-4736-aaff-027aba767934",
+      "isrcs": [
+        "QMDA72594679",
+        "USJ3V1861928",
+        "USJ3V1862556",
+        "USKP10500025"
+      ],
+      "title": "Amor de conuco",
+      "video": false,
+      "length": 189000,
+      "artist-credit": [
+        {
+          "name": "Juan Luis Guerra 440",
+          "artist": {
+            "id": "1659a41f-27d3-4823-8a15-bf7cd295cf59",
+            "name": "Juan Luis Guerra 4.40",
+            "type": "Group",
+            "country": "DO",
+            "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+            "sort-name": "Guerra, Juan Luis 4.40",
+            "disambiguation": ""
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "pop version",
+      "first-release-date": "1998-01-01"
+    }
+  },
+  {
+    "id": "5390e346-cb17-42bb-9c45-5baae95c8b69",
+    "title": "Bailando contigo",
+    "artist_id": "84aba9ce-ba69-4caa-b71b-2bedb2f848fc",
+    "duration": 226773,
+    "disambiguation": "romance version",
+    "isrcs": [
+      "USJ3V0900006"
+    ],
+    "mbid": "d0e869a2-89ae-4611-8c7d-02b1424b61ee",
+    "metadata": {
+      "id": "d0e869a2-89ae-4611-8c7d-02b1424b61ee",
+      "isrcs": [
+        "USJ3V0900006"
+      ],
+      "title": "Bailando contigo",
+      "video": false,
+      "length": 226773,
+      "artist-credit": [
+        {
+          "name": "Daniel Santacruz",
+          "artist": {
+            "id": "b8d11256-309c-47d6-9062-db39e99428ee",
+            "name": "Daniel Santacruz",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Santacruz, Daniel",
+            "disambiguation": ""
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "romance version",
+      "first-release-date": "2008-09-12"
+    }
+  },
+  {
+    "id": "35a5a173-6a06-4295-97a3-0561510e1804",
+    "title": "Bala perdida",
+    "artist_id": "059a9e99-5d11-433e-97b9-9c35e57908f1",
+    "duration": 254000,
+    "disambiguation": "bachata version",
+    "isrcs": [
+      "QZ3ET2400047"
+    ],
+    "mbid": "e04dbea6-058b-4915-bb3b-3a6d8afc9868",
+    "metadata": {
+      "id": "e04dbea6-058b-4915-bb3b-3a6d8afc9868",
+      "isrcs": [
+        "QZ3ET2400047"
+      ],
+      "title": "Bala perdida",
+      "video": false,
+      "length": 254000,
+      "artist-credit": [
+        {
+          "name": "Sergio Vargas",
+          "artist": {
+            "id": "04fc84a1-5efa-4ae3-b763-a0aeaab9f65c",
+            "name": "Sergio Vargas",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Vargas, Sergio",
+            "disambiguation": "Dominican merengue singer"
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "bachata version",
+      "first-release-date": "2004-06-29"
+    }
+  },
+  {
+    "id": "989f916a-fcc1-415f-a6af-ccce1d5c8257",
+    "title": "Beat It With Your Rhythm Stick",
+    "artist_id": "1cd11a22-573a-43b4-8f54-fbd08329a4e2",
+    "duration": 185000,
+    "disambiguation": "radio edit version",
+    "isrcs": [],
+    "mbid": "c2455899-0309-47aa-953c-ae5ea0ba4845",
+    "metadata": {
+      "id": "c2455899-0309-47aa-953c-ae5ea0ba4845",
+      "isrcs": [],
+      "title": "Beat It With Your Rhythm Stick",
+      "video": false,
+      "length": 185000,
+      "artist-credit": [
+        {
+          "name": "Ilegales",
+          "artist": {
+            "id": "42b39a3b-e829-4cd4-a775-7070c74f0b3e",
+            "name": "Ilegales",
+            "type": "Group",
+            "country": "DO",
+            "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+            "sort-name": "Ilegales",
+            "disambiguation": "merengue/hip hop/house group"
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "radio edit version",
+      "first-release-date": "2004-08-26"
+    }
+  },
+  {
+    "id": "9c1d1161-ab2b-419f-8d6f-b4193e866431",
+    "title": "Bésame siempre",
+    "artist_id": "84aba9ce-ba69-4caa-b71b-2bedb2f848fc",
+    "duration": 176119,
+    "disambiguation": "bachata version",
+    "isrcs": [
+      "TCAFX2112970"
+    ],
+    "mbid": "72bd060d-7a81-485b-b384-698e62bf8650",
+    "metadata": {
+      "id": "72bd060d-7a81-485b-b384-698e62bf8650",
+      "isrcs": [
+        "TCAFX2112970"
+      ],
+      "title": "Bésame siempre",
+      "video": false,
+      "length": 176119,
+      "artist-credit": [
+        {
+          "name": "Daniel Santacruz",
+          "artist": {
+            "id": "b8d11256-309c-47d6-9062-db39e99428ee",
+            "name": "Daniel Santacruz",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Santacruz, Daniel",
+            "disambiguation": ""
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "bachata version",
+      "first-release-date": "2021-11-23"
+    }
+  },
+  {
+    "id": "acb5f653-9b09-4b07-9900-394b1c407ba1",
+    "title": "Chambonea",
+    "artist_id": "6159dc70-bd8f-439d-bf17-5d690262e5cb",
+    "duration": 390000,
+    "disambiguation": "live version",
+    "isrcs": [],
+    "mbid": "3a4b02d8-6c8c-47a0-85f6-09394dc42ccb",
+    "metadata": {
+      "id": "3a4b02d8-6c8c-47a0-85f6-09394dc42ccb",
+      "isrcs": [],
+      "title": "Chambonea",
+      "video": false,
+      "length": 390000,
+      "artist-credit": [
+        {
+          "name": "Omega",
+          "artist": {
+            "id": "376f53bf-2dc4-4da7-bb12-6869a1f8b28a",
+            "name": "Omega",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Omega",
+            "disambiguation": "merengue mambo singer, aka “El Fuerte”"
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "live version",
+      "first-release-date": "2009-08-04"
+    }
+  },
+  {
+    "id": "6e825473-f0d2-4300-a39b-18db2f690283",
+    "title": "Chambonea",
+    "artist_id": "6159dc70-bd8f-439d-bf17-5d690262e5cb",
+    "duration": 260000,
+    "disambiguation": "studio version",
+    "isrcs": [],
+    "mbid": "1cd3f6d5-951b-4b55-ba46-fc59827bbee3",
+    "metadata": {
+      "id": "1cd3f6d5-951b-4b55-ba46-fc59827bbee3",
+      "isrcs": [],
+      "title": "Chambonea",
+      "video": false,
+      "length": 260000,
+      "artist-credit": [
+        {
+          "name": "Omega",
+          "artist": {
+            "id": "376f53bf-2dc4-4da7-bb12-6869a1f8b28a",
+            "name": "Omega",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Omega",
+            "disambiguation": "merengue mambo singer, aka “El Fuerte”"
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "studio version",
+      "first-release-date": "2009-08-04"
+    }
+  },
+  {
+    "id": "19b6c0d2-0173-4683-a7b1-9b11f54acea0",
+    "title": "Check It Out",
+    "artist_id": "0337dec9-fe9d-485f-be56-a9120b92fbe8",
+    "duration": 287409,
+    "disambiguation": "pop version",
+    "isrcs": [],
+    "mbid": "48b95bdb-8eae-4284-a6a0-3bb567a11f39",
+    "metadata": {
+      "id": "48b95bdb-8eae-4284-a6a0-3bb567a11f39",
+      "isrcs": [],
+      "title": "Check It Out",
+      "video": false,
+      "length": 287409,
+      "artist-credit": [
+        {
+          "name": "Chichi Peralta",
+          "artist": {
+            "id": "e2052f3c-3ecc-4bc5-8718-d97326852527",
+            "name": "Chichi Peralta",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Peralta, Chichi",
+            "disambiguation": "Pedro René Peralta Soto, Dominican musician, songwriter, composer and producer"
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "pop version",
+      "first-release-date": "2009-11-24"
+    }
+  },
+  {
+    "id": "635d122f-f2c4-4e8b-bc28-cf99e75ed911",
+    "title": "Check It Out",
+    "artist_id": "0337dec9-fe9d-485f-be56-a9120b92fbe8",
+    "duration": 285000,
+    "disambiguation": "merengue version",
+    "isrcs": [],
+    "mbid": "caafac35-254f-4fdc-98d6-ad73c1c0f98b",
+    "metadata": {
+      "id": "caafac35-254f-4fdc-98d6-ad73c1c0f98b",
+      "isrcs": [],
+      "title": "Check It Out",
+      "video": false,
+      "length": 285000,
+      "artist-credit": [
+        {
+          "name": "Chichi Peralta",
+          "artist": {
+            "id": "e2052f3c-3ecc-4bc5-8718-d97326852527",
+            "name": "Chichi Peralta",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Peralta, Chichi",
+            "disambiguation": "Pedro René Peralta Soto, Dominican musician, songwriter, composer and producer"
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "merengue version",
+      "first-release-date": "2005-09-27"
+    }
+  },
+  {
+    "id": "ed8a0861-8328-488f-bfd5-652a69f148d9",
+    "title": "Colegiala",
+    "artist_id": "6c3e0d74-23b7-4d80-969f-9d5319ee5127",
+    "duration": 298360,
+    "disambiguation": "version merengue",
+    "isrcs": [
+      "US3Z40407609",
+      "US3Z41500153"
+    ],
+    "mbid": "d3c22f2c-5967-49b2-9250-abb42dfc9866",
+    "metadata": {
+      "id": "d3c22f2c-5967-49b2-9250-abb42dfc9866",
+      "isrcs": [
+        "US3Z40407609",
+        "US3Z41500153"
+      ],
+      "title": "Colegiala",
+      "video": false,
+      "length": 298360,
+      "artist-credit": [
+        {
+          "name": "Alex Bueno",
+          "artist": {
+            "id": "e7f63397-83ae-4506-b015-4b604ac38b01",
+            "name": "Alex Bueno",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Bueno, Alex",
+            "disambiguation": ""
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "version merengue",
+      "first-release-date": "2004-06-01"
+    }
+  },
+  {
+    "id": "0fea06fb-180e-404b-a6cd-aa8351ae188d",
+    "title": "Colegiala",
+    "artist_id": "6c3e0d74-23b7-4d80-969f-9d5319ee5127",
+    "duration": 260360,
+    "disambiguation": "version bachata",
+    "isrcs": [
+      "USJ3V1498092"
+    ],
+    "mbid": "20588205-9470-45f4-9a25-afa9d418e7db",
+    "metadata": {
+      "id": "20588205-9470-45f4-9a25-afa9d418e7db",
+      "isrcs": [
+        "USJ3V1498092"
+      ],
+      "title": "Colegiala",
+      "video": false,
+      "length": 260360,
+      "artist-credit": [
+        {
+          "name": "Alex Bueno",
+          "artist": {
+            "id": "e7f63397-83ae-4506-b015-4b604ac38b01",
+            "name": "Alex Bueno",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Bueno, Alex",
+            "disambiguation": ""
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "version bachata",
+      "first-release-date": "2001-01-01"
+    }
+  },
+  {
+    "id": "0d40bfdf-92d4-438f-b26e-c79b1c5b3184",
+    "title": "Como yo le doy",
+    "artist_id": "6321da6c-e2d5-490a-a4e8-416bbee81edf",
+    "duration": 262707,
+    "disambiguation": "Spanglish version",
+    "isrcs": [
+      "ITF251400144",
+      "USNPW1400156"
+    ],
+    "mbid": "04f43a0c-822f-4440-8076-9923d3135e08",
+    "metadata": {
+      "id": "04f43a0c-822f-4440-8076-9923d3135e08",
+      "isrcs": [
+        "ITF251400144",
+        "USNPW1400156"
+      ],
+      "title": "Como yo le doy",
+      "video": false,
+      "length": 262707,
+      "artist-credit": [
+        {
+          "name": "Pitbull",
+          "artist": {
+            "id": "d262ea27-3ffe-40f7-b922-85c42d625e67",
+            "name": "Pitbull",
+            "type": "Person",
+            "country": "US",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Pitbull",
+            "disambiguation": "American rapper"
+          },
+          "joinphrase": " featuring "
+        },
+        {
+          "name": "Don Miguelo",
+          "artist": {
+            "id": "21deeceb-351f-4bac-bb17-55fb2e252a75",
+            "name": "Don Miguelo",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Don Miguelo",
+            "disambiguation": ""
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "Spanglish version",
+      "first-release-date": "2014-07-08"
+    }
+  },
+  {
+    "id": "f810fb19-53ce-4230-8a32-25e9591870eb",
+    "title": "Dame d'eso",
+    "artist_id": "1cd11a22-573a-43b4-8f54-fbd08329a4e2",
+    "duration": 175000,
+    "disambiguation": "edited version",
+    "isrcs": [],
+    "mbid": "0941f8bb-c8b3-4233-a1df-dce2e2c12181",
+    "metadata": {
+      "id": "0941f8bb-c8b3-4233-a1df-dce2e2c12181",
+      "isrcs": [],
+      "title": "Dame d'eso",
+      "video": false,
+      "length": 175000,
+      "artist-credit": [
+        {
+          "name": "Ilegales",
+          "artist": {
+            "id": "42b39a3b-e829-4cd4-a775-7070c74f0b3e",
+            "name": "Ilegales",
+            "type": "Group",
+            "country": "DO",
+            "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+            "sort-name": "Ilegales",
+            "disambiguation": "merengue/hip hop/house group"
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "edited version",
+      "first-release-date": "2004-08-26"
+    }
+  },
+  {
+    "id": "e1d36863-daed-4dda-952b-7ebba2e9bd83",
+    "title": "De ti me enamoré",
+    "artist_id": "5ce0aa05-7d1a-4750-8cd2-dab62b06a244",
+    "duration": 275000,
+    "disambiguation": "salsa version",
+    "isrcs": [],
+    "mbid": "bb226729-bc5a-4361-9f6d-1a2690f8f43d",
+    "metadata": {
+      "id": "bb226729-bc5a-4361-9f6d-1a2690f8f43d",
+      "isrcs": [],
+      "title": "De ti me enamoré",
+      "video": false,
+      "length": 275000,
+      "artist-credit": [
+        {
+          "name": "Grupo Extra",
+          "artist": {
+            "id": "980422f0-0974-4516-908e-73ab42108a9c",
+            "name": "Grupo Extra",
+            "type": "Group",
+            "country": "DO",
+            "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+            "sort-name": "Grupo Extra",
+            "disambiguation": ""
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "salsa version",
+      "first-release-date": "2011-07-26"
+    }
+  },
+  {
+    "id": "64249058-25cd-4d59-b233-5695a1d844e3",
+    "title": "Dile",
+    "artist_id": "059a9e99-5d11-433e-97b9-9c35e57908f1",
+    "duration": 287000,
+    "disambiguation": "bachata version",
+    "isrcs": [
+      "QZ3ET2400043"
+    ],
+    "mbid": "6240f1f6-bb39-417d-a8fa-cecd3d6a4031",
+    "metadata": {
+      "id": "6240f1f6-bb39-417d-a8fa-cecd3d6a4031",
+      "isrcs": [
+        "QZ3ET2400043"
+      ],
+      "title": "Dile",
+      "video": false,
+      "length": 287000,
+      "artist-credit": [
+        {
+          "name": "Sergio Vargas",
+          "artist": {
+            "id": "04fc84a1-5efa-4ae3-b763-a0aeaab9f65c",
+            "name": "Sergio Vargas",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Vargas, Sergio",
+            "disambiguation": "Dominican merengue singer"
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "bachata version",
+      "first-release-date": "2004-06-29"
+    }
+  },
+  {
+    "id": "b2f7a68f-c268-4711-b595-028602391ad9",
+    "title": "El cariño es como una flor",
+    "artist_id": "14777546-5b72-4dcf-b18a-15320124a0ee",
+    "duration": 200000,
+    "disambiguation": "bachata version",
+    "isrcs": [
+      "ITF251200080"
+    ],
+    "mbid": "8a3abf66-2d4d-4b45-87c5-751712c13072",
+    "metadata": {
+      "id": "8a3abf66-2d4d-4b45-87c5-751712c13072",
+      "isrcs": [
+        "ITF251200080"
+      ],
+      "title": "El cariño es como una flor",
+      "video": false,
+      "length": 200000,
+      "artist-credit": [
+        {
+          "name": "Andy Andy",
+          "artist": {
+            "id": "572d6bb7-58cc-4a96-8e5c-58eae4739190",
+            "name": "Andy Andy",
+            "type": "Person",
+            "country": null,
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Andy Andy",
+            "disambiguation": ""
+          },
+          "joinphrase": " ft. "
+        },
+        {
+          "name": "Alex Matos",
+          "artist": {
+            "id": "151a0036-b8b1-400f-94a2-aa7e49a065f8",
+            "name": "Alex Matos",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Matos, Alex",
+            "disambiguation": ""
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "bachata version",
+      "first-release-date": "2012-07-16"
+    }
+  },
+  {
+    "id": "fb42c988-a128-4f0c-a80d-f5638dfeecf3",
+    "title": "Guayo",
+    "artist_id": "1cd11a22-573a-43b4-8f54-fbd08329a4e2",
+    "duration": 204000,
+    "disambiguation": "merengue version",
+    "isrcs": [],
+    "mbid": "5b1e66f8-ba60-4a01-8be0-7ab3d597e06d",
+    "metadata": {
+      "id": "5b1e66f8-ba60-4a01-8be0-7ab3d597e06d",
+      "isrcs": [],
+      "title": "Guayo",
+      "video": false,
+      "length": 204000,
+      "artist-credit": [
+        {
+          "name": "Elvis Crespo",
+          "artist": {
+            "id": "776b2c10-31fe-4c4b-9982-f408279b80a9",
+            "name": "Elvis Crespo",
+            "type": "Person",
+            "country": "PR",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Crespo, Elvis",
+            "disambiguation": ""
+          },
+          "joinphrase": " feat. "
+        },
+        {
+          "name": "Ilegales",
+          "artist": {
+            "id": "42b39a3b-e829-4cd4-a775-7070c74f0b3e",
+            "name": "Ilegales",
+            "type": "Group",
+            "country": "DO",
+            "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+            "sort-name": "Ilegales",
+            "disambiguation": "merengue/hip hop/house group"
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "merengue version",
+      "first-release-date": "2017-06-07"
+    }
+  },
+  {
+    "id": "d485179b-885a-4b1b-bf67-4f9a6e6476d3",
+    "title": "I Just Called",
+    "artist_id": "9c78ca86-12dd-4d96-ad24-adcdf7a0761b",
+    "duration": 224000,
+    "disambiguation": "English version",
+    "isrcs": [
+      "USDY42213524"
+    ],
+    "mbid": "613ffeb8-d204-427c-8248-21c5b1f8fceb",
+    "metadata": {
+      "id": "613ffeb8-d204-427c-8248-21c5b1f8fceb",
+      "isrcs": [
+        "USDY42213524"
+      ],
+      "title": "I Just Called",
+      "video": false,
+      "length": 224000,
+      "artist-credit": [
+        {
+          "name": "Grupo Rush",
+          "artist": {
+            "id": "605c575b-0c4a-42b4-81b5-3bd1a8c79910",
+            "name": "Grupo Rush",
+            "type": "Group",
+            "country": "DO",
+            "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+            "sort-name": "Grupo Rush",
+            "disambiguation": ""
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "English version",
+      "first-release-date": "2012-12-25"
+    }
+  },
+  {
+    "id": "8bdd0bdb-bc92-4a0f-8cda-bcd5c55d4464",
+    "title": "I Just Called",
+    "artist_id": "9c78ca86-12dd-4d96-ad24-adcdf7a0761b",
+    "duration": 224000,
+    "disambiguation": "Spanish version",
+    "isrcs": [
+      "USDY42213518"
+    ],
+    "mbid": "35762797-7cc4-42b0-886b-5c6b6c0f58b8",
+    "metadata": {
+      "id": "35762797-7cc4-42b0-886b-5c6b6c0f58b8",
+      "isrcs": [
+        "USDY42213518"
+      ],
+      "title": "I Just Called",
+      "video": false,
+      "length": 224000,
+      "artist-credit": [
+        {
+          "name": "Grupo Rush",
+          "artist": {
+            "id": "605c575b-0c4a-42b4-81b5-3bd1a8c79910",
+            "name": "Grupo Rush",
+            "type": "Group",
+            "country": "DO",
+            "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+            "sort-name": "Grupo Rush",
+            "disambiguation": ""
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "Spanish version",
+      "first-release-date": "2012-12-25"
+    }
+  },
+  {
+    "id": "dbb897b5-aacd-421f-9b60-0a14f93cfe34",
+    "title": "I'll Be There (Allí estaré)",
+    "artist_id": "63d21eeb-86d7-447b-9ddc-b764046880dc",
+    "duration": 212000,
+    "disambiguation": "Spanglish version",
+    "isrcs": [
+      "USUM71305891"
+    ],
+    "mbid": "086f49f4-4634-4bbb-9ec8-2a8772bb6d73",
+    "metadata": {
+      "id": "086f49f4-4634-4bbb-9ec8-2a8772bb6d73",
+      "isrcs": [
+        "USUM71305891"
+      ],
+      "title": "I'll Be There (Allí estaré)",
+      "video": false,
+      "length": 212000,
+      "artist-credit": [
+        {
+          "name": "Arthur Hanlon",
+          "artist": {
+            "id": "00285681-fd3a-4d44-b46f-8664dc5a03b2",
+            "name": "Arthur Hanlon",
+            "type": "Person",
+            "country": "US",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Hanlon, Arthur",
+            "disambiguation": ""
+          },
+          "joinphrase": " feat. "
+        },
+        {
+          "name": "Karlos Rosé",
+          "artist": {
+            "id": "58697d64-7cc1-49f2-9221-7a3a5858fdf6",
+            "name": "Karlos Rosé",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Rosé, Karlos",
+            "disambiguation": ""
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "Spanglish version",
+      "first-release-date": "2013-05-28"
+    }
+  },
+  {
+    "id": "8162e702-5e01-434c-9d2f-eee8ce43926e",
+    "title": "If I Give You My Love",
+    "artist_id": "84aba9ce-ba69-4caa-b71b-2bedb2f848fc",
+    "duration": 219157,
+    "disambiguation": "pop version",
+    "isrcs": [
+      "USJ3V0900015"
+    ],
+    "mbid": "a5324aec-788e-4ff9-af01-113a751d27f1",
+    "metadata": {
+      "id": "a5324aec-788e-4ff9-af01-113a751d27f1",
+      "isrcs": [
+        "USJ3V0900015"
+      ],
+      "title": "If I Give You My Love",
+      "video": false,
+      "length": 219157,
+      "artist-credit": [
+        {
+          "name": "Daniel Santacruz",
+          "artist": {
+            "id": "b8d11256-309c-47d6-9062-db39e99428ee",
+            "name": "Daniel Santacruz",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Santacruz, Daniel",
+            "disambiguation": ""
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "pop version",
+      "first-release-date": "2008-09-12"
+    }
+  },
+  {
+    "id": "7fd2769d-cca7-4422-8e6b-651ee7cd5462",
+    "title": "Jardín prohibido",
+    "artist_id": "6c3e0d74-23b7-4d80-969f-9d5319ee5127",
+    "duration": 325906,
+    "disambiguation": "version merengue",
+    "isrcs": [],
+    "mbid": "a0b5bd8f-7f5a-4661-afe8-89614af08ef7",
+    "metadata": {
+      "id": "a0b5bd8f-7f5a-4661-afe8-89614af08ef7",
+      "isrcs": [],
+      "title": "Jardín prohibido",
+      "video": false,
+      "length": 325906,
+      "artist-credit": [
+        {
+          "name": "Alex Bueno",
+          "artist": {
+            "id": "e7f63397-83ae-4506-b015-4b604ac38b01",
+            "name": "Alex Bueno",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Bueno, Alex",
+            "disambiguation": ""
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "version merengue",
+      "first-release-date": "2005-07-12"
+    }
+  },
+  {
+    "id": "90aada1f-2a4c-4840-890f-f8074e2a7e45",
+    "title": "La carta",
+    "artist_id": "059a9e99-5d11-433e-97b9-9c35e57908f1",
+    "duration": 258000,
+    "disambiguation": "bachata version",
+    "isrcs": [
+      "QZ3ET2400051"
+    ],
+    "mbid": "2b19d2c9-1198-42ea-8492-45ea502bfd33",
+    "metadata": {
+      "id": "2b19d2c9-1198-42ea-8492-45ea502bfd33",
+      "isrcs": [
+        "QZ3ET2400051"
+      ],
+      "title": "La carta",
+      "video": false,
+      "length": 258000,
+      "artist-credit": [
+        {
+          "name": "Sergio Vargas",
+          "artist": {
+            "id": "04fc84a1-5efa-4ae3-b763-a0aeaab9f65c",
+            "name": "Sergio Vargas",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Vargas, Sergio",
+            "disambiguation": "Dominican merengue singer"
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "bachata version",
+      "first-release-date": "2004-06-29"
+    }
+  },
+  {
+    "id": "bfe72788-b550-4a91-ba8a-a4533f3d3511",
+    "title": "La llave de mi corazón",
+    "artist_id": "10034596-47cb-46ba-9e80-9ea319a2c0df",
+    "duration": 196000,
+    "disambiguation": "Portuguese version",
+    "isrcs": [
+      "USEL10700182"
+    ],
+    "mbid": "d89d18b8-aea0-4a0b-90ff-d5d80a87b2e6",
+    "metadata": {
+      "id": "d89d18b8-aea0-4a0b-90ff-d5d80a87b2e6",
+      "isrcs": [
+        "USEL10700182"
+      ],
+      "title": "La llave de mi corazón",
+      "video": false,
+      "length": 196000,
+      "artist-credit": [
+        {
+          "name": "Juan Luis Guerra 440",
+          "artist": {
+            "id": "1659a41f-27d3-4823-8a15-bf7cd295cf59",
+            "name": "Juan Luis Guerra 4.40",
+            "type": "Group",
+            "country": "DO",
+            "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+            "sort-name": "Guerra, Juan Luis 4.40",
+            "disambiguation": ""
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "Portuguese version",
+      "first-release-date": "2007-01-01"
+    }
+  },
+  {
+    "id": "43854ca5-4ff9-4904-87fa-d9ec0ba9a25e",
+    "title": "La quiero a morir",
+    "artist_id": "059a9e99-5d11-433e-97b9-9c35e57908f1",
+    "duration": 278000,
+    "disambiguation": "bachata version",
+    "isrcs": [
+      "QZ3ET1800016"
+    ],
+    "mbid": "fe3f8833-33d6-45b8-bae5-54bdbf3a1612",
+    "metadata": {
+      "id": "fe3f8833-33d6-45b8-bae5-54bdbf3a1612",
+      "isrcs": [
+        "QZ3ET1800016"
+      ],
+      "title": "La quiero a morir",
+      "video": false,
+      "length": 278000,
+      "artist-credit": [
+        {
+          "name": "Sergio Vargas",
+          "artist": {
+            "id": "04fc84a1-5efa-4ae3-b763-a0aeaab9f65c",
+            "name": "Sergio Vargas",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Vargas, Sergio",
+            "disambiguation": "Dominican merengue singer"
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "bachata version",
+      "first-release-date": "2004-06-29"
+    }
+  },
+  {
+    "id": "9c2631f2-d6b8-4a02-9fc4-98ed743487b7",
+    "title": "La quiero a morir",
+    "artist_id": "6c3e0d74-23b7-4d80-969f-9d5319ee5127",
+    "duration": 291587,
+    "disambiguation": "bachata version",
+    "isrcs": [],
+    "mbid": "83de2e9a-d8e4-44aa-8f96-093e7f1ea2c7",
+    "metadata": {
+      "id": "83de2e9a-d8e4-44aa-8f96-093e7f1ea2c7",
+      "isrcs": [],
+      "title": "La quiero a morir",
+      "video": false,
+      "length": 291587,
+      "artist-credit": [
+        {
+          "name": "Sergio Vargas",
+          "artist": {
+            "id": "04fc84a1-5efa-4ae3-b763-a0aeaab9f65c",
+            "name": "Sergio Vargas",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Vargas, Sergio",
+            "disambiguation": "Dominican merengue singer"
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "bachata version",
+      "first-release-date": "2001"
+    }
+  },
+  {
+    "id": "22996daf-1c36-4307-8fad-11a179f6a684",
+    "title": "Lástima de tanto amor",
+    "artist_id": "059a9e99-5d11-433e-97b9-9c35e57908f1",
+    "duration": 269813,
+    "disambiguation": "bachata version",
+    "isrcs": [
+      "QZ3ET1800005"
+    ],
+    "mbid": "97e19d8a-f4c3-4ec3-9f87-8a5ce592c97b",
+    "metadata": {
+      "id": "97e19d8a-f4c3-4ec3-9f87-8a5ce592c97b",
+      "isrcs": [
+        "QZ3ET1800005"
+      ],
+      "title": "Lástima de tanto amor",
+      "video": false,
+      "length": 269813,
+      "artist-credit": [
+        {
+          "name": "Sergio Vargas",
+          "artist": {
+            "id": "04fc84a1-5efa-4ae3-b763-a0aeaab9f65c",
+            "name": "Sergio Vargas",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Vargas, Sergio",
+            "disambiguation": "Dominican merengue singer"
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "bachata version",
+      "first-release-date": "2004-06-29"
+    }
+  },
+  {
+    "id": "15746f4b-c2e9-40f4-ad44-f2d96f1b0011",
+    "title": "Madre mía",
+    "artist_id": "059a9e99-5d11-433e-97b9-9c35e57908f1",
+    "duration": 235000,
+    "disambiguation": "bachata version",
+    "isrcs": [
+      "QZ3ET2400046"
+    ],
+    "mbid": "65658de6-10eb-4721-bb2f-f7e44a4d7463",
+    "metadata": {
+      "id": "65658de6-10eb-4721-bb2f-f7e44a4d7463",
+      "isrcs": [
+        "QZ3ET2400046"
+      ],
+      "title": "Madre mía",
+      "video": false,
+      "length": 235000,
+      "artist-credit": [
+        {
+          "name": "Sergio Vargas",
+          "artist": {
+            "id": "04fc84a1-5efa-4ae3-b763-a0aeaab9f65c",
+            "name": "Sergio Vargas",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Vargas, Sergio",
+            "disambiguation": "Dominican merengue singer"
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "bachata version",
+      "first-release-date": "2004-06-29"
+    }
+  },
+  {
+    "id": "a49a52c9-416c-4e89-99e2-2b95d5bc5c43",
+    "title": "Mala memoria",
+    "artist_id": "059a9e99-5d11-433e-97b9-9c35e57908f1",
+    "duration": 235000,
+    "disambiguation": "bachata version",
+    "isrcs": [
+      "QZ3ET2400049"
+    ],
+    "mbid": "d7927107-98cd-41f6-abd8-d4c56e2b55d7",
+    "metadata": {
+      "id": "d7927107-98cd-41f6-abd8-d4c56e2b55d7",
+      "isrcs": [
+        "QZ3ET2400049"
+      ],
+      "title": "Mala memoria",
+      "video": false,
+      "length": 235000,
+      "artist-credit": [
+        {
+          "name": "Sergio Vargas",
+          "artist": {
+            "id": "04fc84a1-5efa-4ae3-b763-a0aeaab9f65c",
+            "name": "Sergio Vargas",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Vargas, Sergio",
+            "disambiguation": "Dominican merengue singer"
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "bachata version",
+      "first-release-date": "2004-06-29"
+    }
+  },
+  {
+    "id": "0e530682-96b1-41e1-ac10-2702a07a9dc2",
+    "title": "Me va, me va",
+    "artist_id": "6c3e0d74-23b7-4d80-969f-9d5319ee5127",
+    "duration": 200293,
+    "disambiguation": "version bachata",
+    "isrcs": [],
+    "mbid": "bd1ad08a-49ad-447b-abf1-e465976d1dea",
+    "metadata": {
+      "id": "bd1ad08a-49ad-447b-abf1-e465976d1dea",
+      "isrcs": [],
+      "title": "Me va, me va",
+      "video": false,
+      "length": 200293,
+      "artist-credit": [
+        {
+          "name": "Alex Bueno",
+          "artist": {
+            "id": "e7f63397-83ae-4506-b015-4b604ac38b01",
+            "name": "Alex Bueno",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Bueno, Alex",
+            "disambiguation": ""
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "version bachata",
+      "first-release-date": "2005-07-12"
+    }
+  },
+  {
+    "id": "85ced496-d35f-43ef-9de3-9dc601ed61a5",
+    "title": "Me va, me va",
+    "artist_id": "6c3e0d74-23b7-4d80-969f-9d5319ee5127",
+    "duration": 323800,
+    "disambiguation": "version merengue",
+    "isrcs": [],
+    "mbid": "cfc848ef-60f6-4663-94b8-a98e1984a1ec",
+    "metadata": {
+      "id": "cfc848ef-60f6-4663-94b8-a98e1984a1ec",
+      "isrcs": [],
+      "title": "Me va, me va",
+      "video": false,
+      "length": 323800,
+      "artist-credit": [
+        {
+          "name": "Alex Bueno",
+          "artist": {
+            "id": "e7f63397-83ae-4506-b015-4b604ac38b01",
+            "name": "Alex Bueno",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Bueno, Alex",
+            "disambiguation": ""
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "version merengue",
+      "first-release-date": "2005-07-12"
+    }
+  },
+  {
+    "id": "e703a9c5-68a4-4b72-bfca-1c591d74b830",
+    "title": "Medicine for My Soul",
+    "artist_id": "10034596-47cb-46ba-9e80-9ea319a2c0df",
+    "duration": 196280,
+    "disambiguation": "duet version",
+    "isrcs": [
+      "USEL10700181"
+    ],
+    "mbid": "0160cd96-acc3-49ef-bb73-1299d8d4e675",
+    "metadata": {
+      "id": "0160cd96-acc3-49ef-bb73-1299d8d4e675",
+      "isrcs": [
+        "USEL10700181"
+      ],
+      "title": "Medicine for My Soul",
+      "video": false,
+      "length": 196280,
+      "artist-credit": [
+        {
+          "name": "Juan Luis Guerra 440",
+          "artist": {
+            "id": "1659a41f-27d3-4823-8a15-bf7cd295cf59",
+            "name": "Juan Luis Guerra 4.40",
+            "type": "Group",
+            "country": "DO",
+            "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+            "sort-name": "Guerra, Juan Luis 4.40",
+            "disambiguation": ""
+          },
+          "joinphrase": " feat. "
+        },
+        {
+          "name": "Taboo of the Black Eyes Peas",
+          "artist": {
+            "id": "a813f779-77e2-42a8-a34a-cbd581fc0313",
+            "name": "Taboo",
+            "type": "Person",
+            "country": "US",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Taboo",
+            "disambiguation": "member of Black Eyed Peas"
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "duet version",
+      "first-release-date": "2007-01-01"
+    }
+  },
+  {
+    "id": "bc0831da-10a2-49f0-9838-24f687928d1e",
+    "title": "Mi niña",
+    "artist_id": "73032c71-e46c-45b1-b02c-8f4de18426ad",
+    "duration": 239000,
+    "disambiguation": "bachata version",
+    "isrcs": [],
+    "mbid": "cc00e88b-bdd1-4e6e-b4e0-df87397d0cfc",
+    "metadata": {
+      "id": "cc00e88b-bdd1-4e6e-b4e0-df87397d0cfc",
+      "isrcs": [],
+      "title": "Mi niña",
+      "video": false,
+      "length": 239000,
+      "artist-credit": [
+        {
+          "name": "Los Toros Band",
+          "artist": {
+            "id": "d9bb9aa4-b8a8-4bb8-b886-c99f2f7d54eb",
+            "name": "Los Toros Band",
+            "type": "Group",
+            "country": "DO",
+            "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+            "sort-name": "Toros Band, Los",
+            "disambiguation": "Dominican merengue group"
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "bachata version",
+      "first-release-date": "2000-05-16"
+    }
+  },
+  {
+    "id": "4c3215c9-8cac-42d6-bd25-39c887a5a9e7",
+    "title": "Mi niña",
+    "artist_id": "73032c71-e46c-45b1-b02c-8f4de18426ad",
+    "duration": 252320,
+    "disambiguation": "merengue version",
+    "isrcs": [],
+    "mbid": "169ed74a-d88a-463e-bc38-195774b70606",
+    "metadata": {
+      "id": "169ed74a-d88a-463e-bc38-195774b70606",
+      "isrcs": [],
+      "title": "Mi niña",
+      "video": false,
+      "length": 252320,
+      "artist-credit": [
+        {
+          "name": "Los Toros Band",
+          "artist": {
+            "id": "d9bb9aa4-b8a8-4bb8-b886-c99f2f7d54eb",
+            "name": "Los Toros Band",
+            "type": "Group",
+            "country": "DO",
+            "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+            "sort-name": "Toros Band, Los",
+            "disambiguation": "Dominican merengue group"
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "merengue version",
+      "first-release-date": "2000-05-16"
+    }
+  },
+  {
+    "id": "a468f02e-c909-4a35-a004-221fef8d17f7",
+    "title": "Mi pobre corazón",
+    "artist_id": "6c3e0d74-23b7-4d80-969f-9d5319ee5127",
+    "duration": 242360,
+    "disambiguation": "version merengue",
+    "isrcs": [],
+    "mbid": "494ce4c3-77af-49ad-9698-add66f74b5fc",
+    "metadata": {
+      "id": "494ce4c3-77af-49ad-9698-add66f74b5fc",
+      "isrcs": [],
+      "title": "Mi pobre corazón",
+      "video": false,
+      "length": 242360,
+      "artist-credit": [
+        {
+          "name": "Alex Bueno",
+          "artist": {
+            "id": "e7f63397-83ae-4506-b015-4b604ac38b01",
+            "name": "Alex Bueno",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Bueno, Alex",
+            "disambiguation": ""
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "version merengue",
+      "first-release-date": "2005-07-12"
+    }
+  },
+  {
+    "id": "37a7f69b-4517-42a1-8c68-4f03b8841610",
+    "title": "Mi pobre corazón",
+    "artist_id": "6c3e0d74-23b7-4d80-969f-9d5319ee5127",
+    "duration": 239346,
+    "disambiguation": "version bachata",
+    "isrcs": [],
+    "mbid": "6510eff0-97d5-4f29-b1ed-7924a93144c0",
+    "metadata": {
+      "id": "6510eff0-97d5-4f29-b1ed-7924a93144c0",
+      "isrcs": [],
+      "title": "Mi pobre corazón",
+      "video": false,
+      "length": 239346,
+      "artist-credit": [
+        {
+          "name": "Alex Bueno",
+          "artist": {
+            "id": "e7f63397-83ae-4506-b015-4b604ac38b01",
+            "name": "Alex Bueno",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Bueno, Alex",
+            "disambiguation": ""
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "version bachata",
+      "first-release-date": "2005-07-12"
+    }
+  },
+  {
+    "id": "d827d910-a6b4-455e-b379-8f2621d036f7",
+    "title": "Ni tú ni yo",
+    "artist_id": "059a9e99-5d11-433e-97b9-9c35e57908f1",
+    "duration": 256026,
+    "disambiguation": "bachata version",
+    "isrcs": [
+      "QZ3ET2000019"
+    ],
+    "mbid": "cb430944-faec-42da-bddd-8d20c892337c",
+    "metadata": {
+      "id": "cb430944-faec-42da-bddd-8d20c892337c",
+      "isrcs": [
+        "QZ3ET2000019"
+      ],
+      "title": "Ni tú ni yo",
+      "video": false,
+      "length": 256026,
+      "artist-credit": [
+        {
+          "name": "Sergio Vargas",
+          "artist": {
+            "id": "04fc84a1-5efa-4ae3-b763-a0aeaab9f65c",
+            "name": "Sergio Vargas",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Vargas, Sergio",
+            "disambiguation": "Dominican merengue singer"
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "bachata version",
+      "first-release-date": "2004-06-29"
+    }
+  },
+  {
+    "id": "7253a47f-79c4-4e01-8d03-09b4f62b15cb",
+    "title": "Perdóname",
+    "artist_id": "500a19b6-489a-42f1-9986-f4aa41e07b32",
+    "duration": 194000,
+    "disambiguation": "pop version",
+    "isrcs": [],
+    "mbid": "222c62ad-fb83-4390-8e32-8e48d6b20695",
+    "metadata": {
+      "id": "222c62ad-fb83-4390-8e32-8e48d6b20695",
+      "isrcs": [],
+      "title": "Perdóname",
+      "video": false,
+      "length": 194000,
+      "artist-credit": [
+        {
+          "name": "Voz a Voz",
+          "artist": {
+            "id": "feabb1c6-014f-4f23-a1fa-dbc4352432f4",
+            "name": "Voz a Voz",
+            "type": "Group",
+            "country": "DO",
+            "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+            "sort-name": "Voz a Voz",
+            "disambiguation": ""
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "pop version",
+      "first-release-date": "2007-09-25"
+    }
+  },
+  {
+    "id": "39b09a78-d690-4ff5-9656-bb41320c5dfb",
+    "title": "Perla negra",
+    "artist_id": "059a9e99-5d11-433e-97b9-9c35e57908f1",
+    "duration": 263773,
+    "disambiguation": "bachata version",
+    "isrcs": [
+      "QZ3ET2000229"
+    ],
+    "mbid": "6c8f78ea-1b75-41d8-b000-7f01fe70cd2d",
+    "metadata": {
+      "id": "6c8f78ea-1b75-41d8-b000-7f01fe70cd2d",
+      "isrcs": [
+        "QZ3ET2000229"
+      ],
+      "title": "Perla negra",
+      "video": false,
+      "length": 263773,
+      "artist-credit": [
+        {
+          "name": "Sergio Vargas",
+          "artist": {
+            "id": "04fc84a1-5efa-4ae3-b763-a0aeaab9f65c",
+            "name": "Sergio Vargas",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Vargas, Sergio",
+            "disambiguation": "Dominican merengue singer"
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "bachata version",
+      "first-release-date": "2004-06-29"
+    }
+  },
+  {
+    "id": "9f8aeb45-3d0b-4f95-bdc8-966cccc1baaa",
+    "title": "Por ella",
+    "artist_id": "059a9e99-5d11-433e-97b9-9c35e57908f1",
+    "duration": 262000,
+    "disambiguation": "bachata version",
+    "isrcs": [
+      "QZ3ET2400050"
+    ],
+    "mbid": "f764d612-b1bc-4141-8af3-e5b1a0912489",
+    "metadata": {
+      "id": "f764d612-b1bc-4141-8af3-e5b1a0912489",
+      "isrcs": [
+        "QZ3ET2400050"
+      ],
+      "title": "Por ella",
+      "video": false,
+      "length": 262000,
+      "artist-credit": [
+        {
+          "name": "Sergio Vargas",
+          "artist": {
+            "id": "04fc84a1-5efa-4ae3-b763-a0aeaab9f65c",
+            "name": "Sergio Vargas",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Vargas, Sergio",
+            "disambiguation": "Dominican merengue singer"
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "bachata version",
+      "first-release-date": "2004-06-29"
+    }
+  },
+  {
+    "id": "ecbac6a4-663a-4213-b72d-11accdd9fba8",
+    "title": "Prueba de amor",
+    "artist_id": "864288d0-a26a-4568-914a-d20c3b88ddcb",
+    "duration": 223000,
+    "disambiguation": "salsa version",
+    "isrcs": [],
+    "mbid": "1c77f12e-c6b8-4866-99ab-d2dabc4d3299",
+    "metadata": {
+      "id": "1c77f12e-c6b8-4866-99ab-d2dabc4d3299",
+      "isrcs": [],
+      "title": "Prueba de amor",
+      "video": false,
+      "length": 223000,
+      "artist-credit": [
+        {
+          "name": "Papi Sánchez",
+          "artist": {
+            "id": "639d9e1c-1490-4e8b-996d-0457aedaa96f",
+            "name": "Papi Sánchez",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Sánchez, Papi",
+            "disambiguation": ""
+          },
+          "joinphrase": " feat. "
+        },
+        {
+          "name": "Frankie Negrón",
+          "artist": {
+            "id": "28dbb728-054c-4c78-99c6-d999b6b636be",
+            "name": "Frankie Negrón",
+            "type": "Person",
+            "country": "US",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Negrón, Frankie",
+            "disambiguation": ""
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "salsa version",
+      "first-release-date": "2017-05-12"
+    }
+  },
+  {
+    "id": "063cb222-5470-4cfa-99a5-f011d9d984e4",
+    "title": "Que cara más bonita",
+    "artist_id": "6c3e0d74-23b7-4d80-969f-9d5319ee5127",
+    "duration": 242400,
+    "disambiguation": "version bachata",
+    "isrcs": [],
+    "mbid": "9ab9d496-f353-48f3-9ab9-e089a130fd39",
+    "metadata": {
+      "id": "9ab9d496-f353-48f3-9ab9-e089a130fd39",
+      "isrcs": [],
+      "title": "Que cara más bonita",
+      "video": false,
+      "length": 242400,
+      "artist-credit": [
+        {
+          "name": "Alex Bueno",
+          "artist": {
+            "id": "e7f63397-83ae-4506-b015-4b604ac38b01",
+            "name": "Alex Bueno",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Bueno, Alex",
+            "disambiguation": ""
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "version bachata",
+      "first-release-date": "2005-07-12"
+    }
+  },
+  {
+    "id": "84838427-cc88-4d3b-8705-e3edc474206a",
+    "title": "Qué te has creído",
+    "artist_id": "059a9e99-5d11-433e-97b9-9c35e57908f1",
+    "duration": 251000,
+    "disambiguation": "bachata version",
+    "isrcs": [
+      "QZ3ET2400044"
+    ],
+    "mbid": "90793b90-f535-4de3-81d7-449627caff2e",
+    "metadata": {
+      "id": "90793b90-f535-4de3-81d7-449627caff2e",
+      "isrcs": [
+        "QZ3ET2400044"
+      ],
+      "title": "Qué te has creído",
+      "video": false,
+      "length": 251000,
+      "artist-credit": [
+        {
+          "name": "Sergio Vargas",
+          "artist": {
+            "id": "04fc84a1-5efa-4ae3-b763-a0aeaab9f65c",
+            "name": "Sergio Vargas",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Vargas, Sergio",
+            "disambiguation": "Dominican merengue singer"
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "bachata version",
+      "first-release-date": "2004-06-29"
+    }
+  },
+  {
+    "id": "42087117-6401-45a0-a3ff-f20dcb3cd83e",
+    "title": "Qué tú quieres",
+    "artist_id": "6321da6c-e2d5-490a-a4e8-416bbee81edf",
+    "duration": 217000,
+    "disambiguation": "solo version",
+    "isrcs": [],
+    "mbid": "4150db22-cffd-4cac-b5a4-9772a41613fc",
+    "metadata": {
+      "id": "4150db22-cffd-4cac-b5a4-9772a41613fc",
+      "isrcs": [],
+      "title": "Qué tú quieres",
+      "video": false,
+      "length": 217000,
+      "artist-credit": [
+        {
+          "name": "Don Miguelo",
+          "artist": {
+            "id": "21deeceb-351f-4bac-bb17-55fb2e252a75",
+            "name": "Don Miguelo",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Don Miguelo",
+            "disambiguation": ""
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "solo version",
+      "first-release-date": "2006-06-13"
+    }
+  },
+  {
+    "id": "af56aa11-eedd-47e7-a65e-3173aed7171c",
+    "title": "Querido",
+    "artist_id": "6c3e0d74-23b7-4d80-969f-9d5319ee5127",
+    "duration": 280040,
+    "disambiguation": "version merengue",
+    "isrcs": [],
+    "mbid": "c0821cc8-3ed7-4eff-b910-db537ab68bbf",
+    "metadata": {
+      "id": "c0821cc8-3ed7-4eff-b910-db537ab68bbf",
+      "isrcs": [],
+      "title": "Querido",
+      "video": false,
+      "length": 280040,
+      "artist-credit": [
+        {
+          "name": "Alex Bueno",
+          "artist": {
+            "id": "e7f63397-83ae-4506-b015-4b604ac38b01",
+            "name": "Alex Bueno",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Bueno, Alex",
+            "disambiguation": ""
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "version merengue",
+      "first-release-date": "2005-07-12"
+    }
+  },
+  {
+    "id": "f44dfc1d-a587-4d7b-9ca2-b4fb8a7716ed",
+    "title": "Querido",
+    "artist_id": "6c3e0d74-23b7-4d80-969f-9d5319ee5127",
+    "duration": 219360,
+    "disambiguation": "version bachata",
+    "isrcs": [],
+    "mbid": "5bb76b93-8045-4b32-b57b-22029fa3806b",
+    "metadata": {
+      "id": "5bb76b93-8045-4b32-b57b-22029fa3806b",
+      "isrcs": [],
+      "title": "Querido",
+      "video": false,
+      "length": 219360,
+      "artist-credit": [
+        {
+          "name": "Alex Bueno",
+          "artist": {
+            "id": "e7f63397-83ae-4506-b015-4b604ac38b01",
+            "name": "Alex Bueno",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Bueno, Alex",
+            "disambiguation": ""
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "version bachata",
+      "first-release-date": "2005-07-12"
+    }
+  },
+  {
+    "id": "0b9eaa2a-2286-4e51-a418-4017c4256a64",
+    "title": "Quien te riza el pelo",
+    "artist_id": "6c3e0d74-23b7-4d80-969f-9d5319ee5127",
+    "duration": 280133,
+    "disambiguation": "version merengue",
+    "isrcs": [],
+    "mbid": "66235e42-0f34-4163-a6d8-5e1d328513ca",
+    "metadata": {
+      "id": "66235e42-0f34-4163-a6d8-5e1d328513ca",
+      "isrcs": [],
+      "title": "Quien te riza el pelo",
+      "video": false,
+      "length": 280133,
+      "artist-credit": [
+        {
+          "name": "Alex Bueno",
+          "artist": {
+            "id": "e7f63397-83ae-4506-b015-4b604ac38b01",
+            "name": "Alex Bueno",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Bueno, Alex",
+            "disambiguation": ""
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "version merengue",
+      "first-release-date": "2005-07-12"
+    }
+  },
+  {
+    "id": "92c4387c-ec92-4828-9949-fb0529e63b46",
+    "title": "Quien te riza el pelo",
+    "artist_id": "6c3e0d74-23b7-4d80-969f-9d5319ee5127",
+    "duration": 266453,
+    "disambiguation": "version bachata",
+    "isrcs": [],
+    "mbid": "62cb904a-cd69-4168-8245-e15ca6e9a18f",
+    "metadata": {
+      "id": "62cb904a-cd69-4168-8245-e15ca6e9a18f",
+      "isrcs": [],
+      "title": "Quien te riza el pelo",
+      "video": false,
+      "length": 266453,
+      "artist-credit": [
+        {
+          "name": "Alex Bueno",
+          "artist": {
+            "id": "e7f63397-83ae-4506-b015-4b604ac38b01",
+            "name": "Alex Bueno",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Bueno, Alex",
+            "disambiguation": ""
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "version bachata",
+      "first-release-date": "2005-07-12"
+    }
+  },
+  {
+    "id": "e99f137a-344e-46f2-b0b8-24e56265611b",
+    "title": "Quisiera",
+    "artist_id": "10034596-47cb-46ba-9e80-9ea319a2c0df",
+    "duration": 230333,
+    "disambiguation": "salsa version",
+    "isrcs": [
+      "QMFMG2573025",
+      "USJ3V1861921",
+      "USKP10500023"
+    ],
+    "mbid": "a5d1bc5c-71d1-4197-88c6-1ddb44988690",
+    "metadata": {
+      "id": "a5d1bc5c-71d1-4197-88c6-1ddb44988690",
+      "isrcs": [
+        "QMFMG2573025",
+        "USJ3V1861921",
+        "USKP10500023"
+      ],
+      "title": "Quisiera",
+      "video": false,
+      "length": 230333,
+      "artist-credit": [
+        {
+          "name": "Juan Luis Guerra 440",
+          "artist": {
+            "id": "1659a41f-27d3-4823-8a15-bf7cd295cf59",
+            "name": "Juan Luis Guerra 4.40",
+            "type": "Group",
+            "country": "DO",
+            "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+            "sort-name": "Guerra, Juan Luis 4.40",
+            "disambiguation": ""
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "salsa version",
+      "first-release-date": "1998-01-01"
+    }
+  },
+  {
+    "id": "32b87f30-8aad-42c8-ab5e-f973e2421a8d",
+    "title": "Quisiera",
+    "artist_id": "10034596-47cb-46ba-9e80-9ea319a2c0df",
+    "duration": 241933,
+    "disambiguation": "pop version",
+    "isrcs": [
+      "QMDA72594653",
+      "USJ3V1862555",
+      "USJ3V1862566"
+    ],
+    "mbid": "06049768-af52-498c-850d-abc925034449",
+    "metadata": {
+      "id": "06049768-af52-498c-850d-abc925034449",
+      "isrcs": [
+        "QMDA72594653",
+        "USJ3V1862555",
+        "USJ3V1862566"
+      ],
+      "title": "Quisiera",
+      "video": false,
+      "length": 241933,
+      "artist-credit": [
+        {
+          "name": "Juan Luis Guerra 440",
+          "artist": {
+            "id": "1659a41f-27d3-4823-8a15-bf7cd295cf59",
+            "name": "Juan Luis Guerra 4.40",
+            "type": "Group",
+            "country": "DO",
+            "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+            "sort-name": "Guerra, Juan Luis 4.40",
+            "disambiguation": ""
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "pop version",
+      "first-release-date": "2000-02-06"
+    }
+  },
+  {
+    "id": "6b809706-b7be-43cf-aa73-178b0d841135",
+    "title": "Sé muy bien",
+    "artist_id": "8ef6109a-83a3-4ca8-b170-b6f510e36724",
+    "duration": 235000,
+    "disambiguation": "bachata version",
+    "isrcs": [
+      "QMUCK1550876"
+    ],
+    "mbid": "deb82f41-0afb-4e3f-ad7e-f160f157d949",
+    "metadata": {
+      "id": "deb82f41-0afb-4e3f-ad7e-f160f157d949",
+      "isrcs": [
+        "QMUCK1550876"
+      ],
+      "title": "Sé muy bien",
+      "video": false,
+      "length": 235000,
+      "artist-credit": [
+        {
+          "name": "Marielle",
+          "artist": {
+            "id": "7e533fe7-b29b-47a1-932a-a4df358f3f7e",
+            "name": "Marielle Hazlo",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Hazlo, Marielle",
+            "disambiguation": ""
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "bachata version",
+      "first-release-date": "2015-06-18"
+    }
+  },
+  {
+    "id": "bfdd79ba-736a-4dcc-b8b6-8c21a935c64b",
+    "title": "Sentimientos escondidos",
+    "artist_id": "95e181f1-58e5-4537-a5e8-75a9f60c6aca",
+    "duration": 211889,
+    "disambiguation": "dominican version",
+    "isrcs": [],
+    "mbid": "09ec9e17-8e5e-434e-8459-ee105fd40a84",
+    "metadata": {
+      "id": "09ec9e17-8e5e-434e-8459-ee105fd40a84",
+      "isrcs": [],
+      "title": "Sentimientos escondidos",
+      "video": false,
+      "length": 211889,
+      "artist-credit": [
+        {
+          "name": "J. Álvarez",
+          "artist": {
+            "id": "75b8a771-52a3-49a0-b2b6-993ed1250dfa",
+            "name": "J Álvarez",
+            "type": "Person",
+            "country": "PR",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "J Álvarez",
+            "disambiguation": ""
+          },
+          "joinphrase": " x "
+        },
+        {
+          "name": "Tivi Gunz",
+          "artist": {
+            "id": "10f2e2eb-4d80-4bce-9145-fec714bbc837",
+            "name": "Tivi Gunz",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Gunz, Tivi",
+            "disambiguation": ""
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "dominican version",
+      "first-release-date": "2020-02-07"
+    }
+  },
+  {
+    "id": "7a4e5a55-648c-4068-acb5-775f447c8f45",
+    "title": "Si algún día la ves",
+    "artist_id": "059a9e99-5d11-433e-97b9-9c35e57908f1",
+    "duration": 272346,
+    "disambiguation": "bachata version",
+    "isrcs": [
+      "QZ3ET1800012"
+    ],
+    "mbid": "eaa429fc-c0ec-44a8-9c92-4dbe84ff2881",
+    "metadata": {
+      "id": "eaa429fc-c0ec-44a8-9c92-4dbe84ff2881",
+      "isrcs": [
+        "QZ3ET1800012"
+      ],
+      "title": "Si algún día la ves",
+      "video": false,
+      "length": 272346,
+      "artist-credit": [
+        {
+          "name": "Sergio Vargas",
+          "artist": {
+            "id": "04fc84a1-5efa-4ae3-b763-a0aeaab9f65c",
+            "name": "Sergio Vargas",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Vargas, Sergio",
+            "disambiguation": "Dominican merengue singer"
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "bachata version",
+      "first-release-date": "2004-06-29"
+    }
+  },
+  {
+    "id": "dfc0ac9e-2d0e-49b7-b112-1247c9868f96",
+    "title": "Si te vas / Qué tengo que hacer",
+    "artist_id": "6159dc70-bd8f-439d-bf17-5d690262e5cb",
+    "duration": 213973,
+    "disambiguation": "studio version",
+    "isrcs": [],
+    "mbid": "bda57a8b-4843-472b-8927-380ff72e038b",
+    "metadata": {
+      "id": "bda57a8b-4843-472b-8927-380ff72e038b",
+      "isrcs": [],
+      "title": "Si te vas / Qué tengo que hacer",
+      "video": false,
+      "length": 213973,
+      "artist-credit": [
+        {
+          "name": "Omega",
+          "artist": {
+            "id": "376f53bf-2dc4-4da7-bb12-6869a1f8b28a",
+            "name": "Omega",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Omega",
+            "disambiguation": "merengue mambo singer, aka “El Fuerte”"
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "studio version",
+      "first-release-date": "2009-08-04"
+    }
+  },
+  {
+    "id": "60df7f9e-34d0-4127-ab13-fb58472c645c",
+    "title": "Siempre que pasa el amor",
+    "artist_id": "059a9e99-5d11-433e-97b9-9c35e57908f1",
+    "duration": 240000,
+    "disambiguation": "bachata version",
+    "isrcs": [
+      "QZ3ET2400045"
+    ],
+    "mbid": "11c6d297-b0d4-4540-8486-af69e819e706",
+    "metadata": {
+      "id": "11c6d297-b0d4-4540-8486-af69e819e706",
+      "isrcs": [
+        "QZ3ET2400045"
+      ],
+      "title": "Siempre que pasa el amor",
+      "video": false,
+      "length": 240000,
+      "artist-credit": [
+        {
+          "name": "Sergio Vargas",
+          "artist": {
+            "id": "04fc84a1-5efa-4ae3-b763-a0aeaab9f65c",
+            "name": "Sergio Vargas",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Vargas, Sergio",
+            "disambiguation": "Dominican merengue singer"
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "bachata version",
+      "first-release-date": "2004-06-29"
+    }
+  },
+  {
+    "id": "8b324e58-4ef6-4a7b-873d-30ec44362274",
+    "title": "Sin maquillaje",
+    "artist_id": "5fb12fee-64fe-4887-b87e-28f28a15c4f9",
+    "duration": 191000,
+    "disambiguation": "solo version",
+    "isrcs": [
+      "QMFMG1599362"
+    ],
+    "mbid": "2caa941e-809d-47a6-bc1e-5016806a1f0e",
+    "metadata": {
+      "id": "2caa941e-809d-47a6-bc1e-5016806a1f0e",
+      "isrcs": [
+        "QMFMG1599362"
+      ],
+      "title": "Sin maquillaje",
+      "video": false,
+      "length": 191000,
+      "artist-credit": [
+        {
+          "name": "Amenazzy",
+          "artist": {
+            "id": "ce52a82d-219f-42b6-88b3-b69244c4752e",
+            "name": "Amenazzy",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Amenazzy",
+            "disambiguation": "José Daniel Betances, aka \"El Nene la Amenaza\""
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "solo version",
+      "first-release-date": "2017-05-20"
+    }
+  },
+  {
+    "id": "1ba2d251-7576-451b-8597-f1d34457b844",
+    "title": "Sofía",
+    "artist_id": "1cd11a22-573a-43b4-8f54-fbd08329a4e2",
+    "duration": 258000,
+    "disambiguation": "boogaloo version",
+    "isrcs": [],
+    "mbid": "2516c5da-613d-49e8-beab-d1236356d580",
+    "metadata": {
+      "id": "2516c5da-613d-49e8-beab-d1236356d580",
+      "isrcs": [],
+      "title": "Sofía",
+      "video": false,
+      "length": 258000,
+      "artist-credit": [
+        {
+          "name": "Son by Four",
+          "artist": {
+            "id": "3fbb49b1-a888-42af-b2d5-c6f00ad87e73",
+            "name": "Son by Four",
+            "type": "Group",
+            "country": "PR",
+            "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+            "sort-name": "Son by Four",
+            "disambiguation": ""
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "boogaloo version",
+      "first-release-date": "2001-05-09"
+    }
+  },
+  {
+    "id": "78e2014b-12a0-4697-8cb2-48a435be2369",
+    "title": "Solo el amor",
+    "artist_id": "bd3ad92b-1a26-48dd-a667-8a0debeaf5a3",
+    "duration": 226000,
+    "disambiguation": "bachata version",
+    "isrcs": [],
+    "mbid": "0f1af19a-71ee-48d2-8da6-7c6ace4af2a7",
+    "metadata": {
+      "id": "0f1af19a-71ee-48d2-8da6-7c6ace4af2a7",
+      "isrcs": [],
+      "title": "Solo el amor",
+      "video": false,
+      "length": 226000,
+      "artist-credit": [
+        {
+          "name": "Jandy",
+          "artist": {
+            "id": "bfdba61b-c195-4732-8463-982bf6735a1a",
+            "name": "Jandy Feliz",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Feliz, Jandy",
+            "disambiguation": ""
+          },
+          "joinphrase": " feat. "
+        },
+        {
+          "name": "Alexandra",
+          "artist": {
+            "id": "718dbe5f-1a8d-48f4-a8f3-a86c6560d41d",
+            "name": "Alexandra Queen",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Queen, Alexandra",
+            "disambiguation": "Dominican bachata singer, member of duo Monchy & Alexandra"
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "bachata version",
+      "first-release-date": "2010-08-30"
+    }
+  },
+  {
+    "id": "7dc5c4a2-23b3-4381-856d-0664c1e3715f",
+    "title": "Solo el amor",
+    "artist_id": "bd3ad92b-1a26-48dd-a667-8a0debeaf5a3",
+    "duration": 212000,
+    "disambiguation": "pop version",
+    "isrcs": [],
+    "mbid": "b811af7d-9a59-4f00-90a5-88796bb2836c",
+    "metadata": {
+      "id": "b811af7d-9a59-4f00-90a5-88796bb2836c",
+      "isrcs": [],
+      "title": "Solo el amor",
+      "video": false,
+      "length": 212000,
+      "artist-credit": [
+        {
+          "name": "Jandy",
+          "artist": {
+            "id": "bfdba61b-c195-4732-8463-982bf6735a1a",
+            "name": "Jandy Feliz",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Feliz, Jandy",
+            "disambiguation": ""
+          },
+          "joinphrase": " feat. "
+        },
+        {
+          "name": "Alexandra",
+          "artist": {
+            "id": "718dbe5f-1a8d-48f4-a8f3-a86c6560d41d",
+            "name": "Alexandra Queen",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Queen, Alexandra",
+            "disambiguation": "Dominican bachata singer, member of duo Monchy & Alexandra"
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "pop version",
+      "first-release-date": "2010-07-26"
+    }
+  },
+  {
+    "id": "f43fc6a3-8a27-4888-9dd6-73fd90167eb4",
+    "title": "Sueño contigo",
+    "artist_id": "1cd11a22-573a-43b4-8f54-fbd08329a4e2",
+    "duration": 203000,
+    "disambiguation": "edited version",
+    "isrcs": [],
+    "mbid": "38fc5298-1a67-46c6-a39d-2bd0903ca926",
+    "metadata": {
+      "id": "38fc5298-1a67-46c6-a39d-2bd0903ca926",
+      "isrcs": [],
+      "title": "Sueño contigo",
+      "video": false,
+      "length": 203000,
+      "artist-credit": [
+        {
+          "name": "Ilegales",
+          "artist": {
+            "id": "42b39a3b-e829-4cd4-a775-7070c74f0b3e",
+            "name": "Ilegales",
+            "type": "Group",
+            "country": "DO",
+            "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+            "sort-name": "Ilegales",
+            "disambiguation": "merengue/hip hop/house group"
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "edited version",
+      "first-release-date": "2004-08-26"
+    }
+  },
+  {
+    "id": "20c282c1-5370-46b2-8edd-a58c79883b8f",
+    "title": "Sueño contigo (Dreaming of You)",
+    "artist_id": "1cd11a22-573a-43b4-8f54-fbd08329a4e2",
+    "duration": 275000,
+    "disambiguation": "bilingual version",
+    "isrcs": [
+      "USBL10000711"
+    ],
+    "mbid": "167d45ff-88cd-4b5a-b481-0c5c15d4f083",
+    "metadata": {
+      "id": "167d45ff-88cd-4b5a-b481-0c5c15d4f083",
+      "isrcs": [
+        "USBL10000711"
+      ],
+      "title": "Sueño contigo (Dreaming of You)",
+      "video": false,
+      "length": 275000,
+      "artist-credit": [
+        {
+          "name": "Ilegales",
+          "artist": {
+            "id": "42b39a3b-e829-4cd4-a775-7070c74f0b3e",
+            "name": "Ilegales",
+            "type": "Group",
+            "country": "DO",
+            "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+            "sort-name": "Ilegales",
+            "disambiguation": "merengue/hip hop/house group"
+          },
+          "joinphrase": " featuring "
+        },
+        {
+          "name": "Two in a Room",
+          "artist": {
+            "id": "98a62678-8db1-4bd5-add8-f24b198cdba8",
+            "name": "2 in a Room",
+            "type": "Group",
+            "country": "US",
+            "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+            "sort-name": "2 in a Room",
+            "disambiguation": ""
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "bilingual version",
+      "first-release-date": "1997-05-20"
+    }
+  },
+  {
+    "id": "b0949833-9ae7-4c9a-9b9b-2552c9d525f1",
+    "title": "Te di",
+    "artist_id": "8dcfc4e1-9af4-4378-9e19-52573af429a7",
+    "duration": 263586,
+    "disambiguation": "bachata version",
+    "isrcs": [
+      "QMDA72191131"
+    ],
+    "mbid": "e784d8e5-8f7b-47b4-9d95-d33d7d3d8f7c",
+    "metadata": {
+      "id": "e784d8e5-8f7b-47b4-9d95-d33d7d3d8f7c",
+      "isrcs": [
+        "QMDA72191131"
+      ],
+      "title": "Te di",
+      "video": false,
+      "length": 263586,
+      "artist-credit": [
+        {
+          "name": "Henry Santos",
+          "artist": {
+            "id": "51a73bea-f7de-40cc-ad69-de48317ed638",
+            "name": "Henry Santos",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Santos, Henry",
+            "disambiguation": ""
+          },
+          "joinphrase": " & "
+        },
+        {
+          "name": "Pavel Nuñez",
+          "artist": {
+            "id": "80b07206-21b6-417e-a6cd-c9e1a9ca4cf1",
+            "name": "Pavel Núñez",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Núñez, Pavel",
+            "disambiguation": ""
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "bachata version",
+      "first-release-date": "2022-02-04"
+    }
+  },
+  {
+    "id": "abade598-bc0a-4841-8064-124830e5569e",
+    "title": "Todo aquello que escribí",
+    "artist_id": "059a9e99-5d11-433e-97b9-9c35e57908f1",
+    "duration": 265000,
+    "disambiguation": "bachata version",
+    "isrcs": [
+      "QZ3ET2400048"
+    ],
+    "mbid": "5c22cd33-03b5-4cc6-be40-71734eb67f37",
+    "metadata": {
+      "id": "5c22cd33-03b5-4cc6-be40-71734eb67f37",
+      "isrcs": [
+        "QZ3ET2400048"
+      ],
+      "title": "Todo aquello que escribí",
+      "video": false,
+      "length": 265000,
+      "artist-credit": [
+        {
+          "name": "Sergio Vargas",
+          "artist": {
+            "id": "04fc84a1-5efa-4ae3-b763-a0aeaab9f65c",
+            "name": "Sergio Vargas",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Vargas, Sergio",
+            "disambiguation": "Dominican merengue singer"
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "bachata version",
+      "first-release-date": "2004-06-29"
+    }
+  },
+  {
+    "id": "82205d3f-b1d0-46e7-b1a2-2da64fed05d1",
+    "title": "Tú",
+    "artist_id": "10034596-47cb-46ba-9e80-9ea319a2c0df",
+    "duration": 291560,
+    "disambiguation": "ballad version",
+    "isrcs": [
+      "USJ3V1862552",
+      "USJ3V1862563",
+      "USKP10500020"
+    ],
+    "mbid": "b77dc444-8c8b-404d-9396-d9ab24f5765c",
+    "metadata": {
+      "id": "b77dc444-8c8b-404d-9396-d9ab24f5765c",
+      "isrcs": [
+        "USJ3V1862552",
+        "USJ3V1862563",
+        "USKP10500020"
+      ],
+      "title": "Tú",
+      "video": false,
+      "length": 291560,
+      "artist-credit": [
+        {
+          "name": "Juan Luis Guerra y 4.40",
+          "artist": {
+            "id": "1659a41f-27d3-4823-8a15-bf7cd295cf59",
+            "name": "Juan Luis Guerra 4.40",
+            "type": "Group",
+            "country": "DO",
+            "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+            "sort-name": "Guerra, Juan Luis 4.40",
+            "disambiguation": ""
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "ballad version",
+      "first-release-date": "2000-02-06"
+    }
+  },
+  {
+    "id": "f0491fa4-53f5-4d5e-8cb9-9789a50c6e6f",
+    "title": "Tú",
+    "artist_id": "10034596-47cb-46ba-9e80-9ea319a2c0df",
+    "duration": 235173,
+    "disambiguation": "merengue version",
+    "isrcs": [
+      "QMDA72594676",
+      "USJ3V1861903"
+    ],
+    "mbid": "826a496b-ad6e-4eb9-94d4-3d20845d7299",
+    "metadata": {
+      "id": "826a496b-ad6e-4eb9-94d4-3d20845d7299",
+      "isrcs": [
+        "QMDA72594676",
+        "USJ3V1861903"
+      ],
+      "title": "Tú",
+      "video": false,
+      "length": 235173,
+      "artist-credit": [
+        {
+          "name": "Juan Luis Guerra y 4.40",
+          "artist": {
+            "id": "1659a41f-27d3-4823-8a15-bf7cd295cf59",
+            "name": "Juan Luis Guerra 4.40",
+            "type": "Group",
+            "country": "DO",
+            "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+            "sort-name": "Guerra, Juan Luis 4.40",
+            "disambiguation": ""
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "merengue version",
+      "first-release-date": "1986-01-01"
+    }
+  },
+  {
+    "id": "b3ffb8f2-b174-4b8e-8d87-630cae068e28",
+    "title": "Tu recuerdo",
+    "artist_id": "1cd11a22-573a-43b4-8f54-fbd08329a4e2",
+    "duration": 244574,
+    "disambiguation": "salsa version",
+    "isrcs": [
+      "USBL10002442"
+    ],
+    "mbid": "515d4799-26bb-48a0-b1f8-1092adbc15dc",
+    "metadata": {
+      "id": "515d4799-26bb-48a0-b1f8-1092adbc15dc",
+      "isrcs": [
+        "USBL10002442"
+      ],
+      "title": "Tu recuerdo",
+      "video": false,
+      "length": 244574,
+      "artist-credit": [
+        {
+          "name": "Ilegales",
+          "artist": {
+            "id": "42b39a3b-e829-4cd4-a775-7070c74f0b3e",
+            "name": "Ilegales",
+            "type": "Group",
+            "country": "DO",
+            "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+            "sort-name": "Ilegales",
+            "disambiguation": "merengue/hip hop/house group"
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "salsa version",
+      "first-release-date": "2001-01-22"
+    }
+  },
+  {
+    "id": "ce8cb560-fe8b-471f-b457-d128d7b1c0d8",
+    "title": "Tu recuerdo",
+    "artist_id": "1cd11a22-573a-43b4-8f54-fbd08329a4e2",
+    "duration": 217000,
+    "disambiguation": "original version",
+    "isrcs": [
+      "USBL10002441"
+    ],
+    "mbid": "0f83fec5-eec3-482a-bd0b-e5b284cc9d10",
+    "metadata": {
+      "id": "0f83fec5-eec3-482a-bd0b-e5b284cc9d10",
+      "isrcs": [
+        "USBL10002441"
+      ],
+      "title": "Tu recuerdo",
+      "video": false,
+      "length": 217000,
+      "artist-credit": [
+        {
+          "name": "Ilegales",
+          "artist": {
+            "id": "42b39a3b-e829-4cd4-a775-7070c74f0b3e",
+            "name": "Ilegales",
+            "type": "Group",
+            "country": "DO",
+            "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+            "sort-name": "Ilegales",
+            "disambiguation": "merengue/hip hop/house group"
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "original version",
+      "first-release-date": "2001-01-22"
+    }
+  },
+  {
+    "id": "2312abab-6816-4bc4-9d67-5665ce55b5b9",
+    "title": "Vida de mis vidas",
+    "artist_id": "4968d375-0833-49e2-8442-633cbaa39404",
+    "duration": 210000,
+    "disambiguation": "duet version",
+    "isrcs": [
+      "COSO11800118"
+    ],
+    "mbid": "d01d09a1-387d-450f-82fc-20c9f5e776f5",
+    "metadata": {
+      "id": "d01d09a1-387d-450f-82fc-20c9f5e776f5",
+      "isrcs": [
+        "COSO11800118"
+      ],
+      "title": "Vida de mis vidas",
+      "video": false,
+      "length": 210000,
+      "artist-credit": [
+        {
+          "name": "Santiago Cruz",
+          "artist": {
+            "id": "e0a428d4-8ef7-4dbb-b112-40da0c5ebee1",
+            "name": "Santiago Cruz",
+            "type": "Person",
+            "country": "CO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Cruz, Santiago",
+            "disambiguation": ""
+          },
+          "joinphrase": " & "
+        },
+        {
+          "name": "Vicente García",
+          "artist": {
+            "id": "2f1507e5-6e8b-4a67-828e-5ce3f75c1281",
+            "name": "Vicente García",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "García, Vicente",
+            "disambiguation": ""
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "duet version",
+      "first-release-date": "2018-09-28"
+    }
+  },
+  {
+    "id": "76c115ed-8860-4a84-9d00-f8b54500c9d5",
+    "title": "YA NO TE EXTRAÑO",
+    "artist_id": "af726afa-c7a0-47da-99bb-a4c7669a8785",
+    "duration": 191917,
+    "disambiguation": "cumbia version",
+    "isrcs": [
+      "USB272300120"
+    ],
+    "mbid": "94c36459-a625-4b6c-9065-6038af0b1b2b",
+    "metadata": {
+      "id": "94c36459-a625-4b6c-9065-6038af0b1b2b",
+      "isrcs": [
+        "USB272300120"
+      ],
+      "title": "YA NO TE EXTRAÑO",
+      "video": false,
+      "length": 191917,
+      "artist-credit": [
+        {
+          "name": "Natti Natasha",
+          "artist": {
+            "id": "25be91ac-7d7c-441f-a7d2-98e35d642e4c",
+            "name": "Natti Natasha",
+            "type": "Person",
+            "country": "DO",
+            "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+            "sort-name": "Natti Natasha",
+            "disambiguation": "Natalia Alexandra Gutiérrez Batista"
+          },
+          "joinphrase": ""
+        }
+      ],
+      "disambiguation": "cumbia version",
+      "first-release-date": "2023-12-08"
+    }
+  }
+]
+---
+[
+  {
+    "id": "f518f60e-a1b8-449c-80a0-ab51973308dc",
+    "title": "Burbujas de amor",
+    "artist_id": "10034596-47cb-46ba-9e80-9ea319a2c0df",
+    "duration": 250333,
+    "disambiguation": null,
+    "isrcs": [
+      "GBKPL2155243",
+      "QMDA72594637",
+      "USJ3V1861776",
+      "USJ3V1862529",
+      "USJ3V1862560"
+    ],
+    "mbid": "1f55c7ae-83f9-4a06-a44e-d9cdb1e5a1a4",
+    "releases": 34,
+    "earliest": 1990,
+    "latest": 2025
+  },
+  {
+    "id": "91e6d835-c2e2-47e0-a901-4163d5585aea",
+    "title": "Como abeja al panal",
+    "artist_id": "10034596-47cb-46ba-9e80-9ea319a2c0df",
+    "duration": 246693,
+    "disambiguation": null,
+    "isrcs": [
+      "GBKPL2155238",
+      "QMDA72594644",
+      "USJ3V1861771",
+      "USJ3V1862533",
+      "USJ3V1862559"
+    ],
+    "mbid": "bee7b1f1-1fad-42bf-ae0b-c8d60a653c3e",
+    "releases": 32,
+    "earliest": 1990,
+    "latest": 2025
+  },
+  {
+    "id": "fd627df2-acfb-4eae-9258-69a23dcb1ff4",
+    "title": "Bachata rosa",
+    "artist_id": "10034596-47cb-46ba-9e80-9ea319a2c0df",
+    "duration": 257946,
+    "disambiguation": null,
+    "isrcs": [
+      "GBKPL2155244",
+      "QMDA72594636",
+      "USJ3V1861777",
+      "USJ3V1862537",
+      "USJ3V1862542"
+    ],
+    "mbid": "6fa12ee4-19c3-4d5d-8b4b-de9f1c79f5ea",
+    "releases": 31,
+    "earliest": 1990,
+    "latest": 2025
+  },
+  {
+    "id": "a6527c5d-dad3-4ba8-9cf4-db1f6f828982",
+    "title": "A pedir su mano",
+    "artist_id": "10034596-47cb-46ba-9e80-9ea319a2c0df",
+    "duration": 296400,
+    "disambiguation": null,
+    "isrcs": [
+      "GBKPL2155241",
+      "QMDA72594668",
+      "USJ3V1861774",
+      "USJ3V1862534"
+    ],
+    "mbid": "11d42718-3380-4df2-8c69-5d87adbbed9d",
+    "releases": 29,
+    "earliest": 1990,
+    "latest": 2025
+  },
+  {
+    "id": "8a12d6eb-3b6f-4696-a18d-1563f5266e94",
+    "title": "Carta de amor",
+    "artist_id": "10034596-47cb-46ba-9e80-9ea319a2c0df",
+    "duration": 281666,
+    "disambiguation": null,
+    "isrcs": [
+      "GBKPL2155239",
+      "USJ3V1861772",
+      "USJ3V1862536",
+      "USKP10500017"
+    ],
+    "mbid": "646c0edd-0291-4322-a0f9-371734d6983f",
+    "releases": 26,
+    "earliest": 1990,
+    "latest": 2010
+  },
+  {
+    "id": "2c20f83b-9569-4313-b5b6-9dfeffda6553",
+    "title": "La bilirrubina",
+    "artist_id": "10034596-47cb-46ba-9e80-9ea319a2c0df",
+    "duration": 245133,
+    "disambiguation": null,
+    "isrcs": [
+      "GBKPL2155235",
+      "QMDA72594646",
+      "USJ3V1861775",
+      "USJ3V1862535"
+    ],
+    "mbid": "f6776146-3a62-4087-b232-c6c8a917672a",
+    "releases": 26,
+    "earliest": 1990,
+    "latest": 2025
+  },
+  {
+    "id": "93d477a6-f3b8-4da9-97ff-d89bd26fa518",
+    "title": "Rosalía",
+    "artist_id": "10034596-47cb-46ba-9e80-9ea319a2c0df",
+    "duration": 206546,
+    "disambiguation": null,
+    "isrcs": [
+      "QMDA72594634",
+      "USJ3V1861770",
+      "USJ3V1862526"
+    ],
+    "mbid": "23beeb78-37a0-420c-b619-03a54c7ece32",
+    "releases": 25,
+    "earliest": 1990,
+    "latest": 2025
+  },
+  {
+    "id": "c876180c-1079-47ee-ae2d-b8cd525b5eb8",
+    "title": "Ojalá que llueva café",
+    "artist_id": "10034596-47cb-46ba-9e80-9ea319a2c0df",
+    "duration": 252973,
+    "disambiguation": null,
+    "isrcs": [
+      "QMDA72594641",
+      "USJ3V1861930",
+      "USJ3V1862530"
+    ],
+    "mbid": "23537b75-fbd9-4224-b6f1-c41d37d2a830",
+    "releases": 24,
+    "earliest": 1989,
+    "latest": 2025
+  },
+  {
+    "id": "4fc9d66f-caf3-40f6-a25e-6cc25539560c",
+    "title": "Woman del Callao",
+    "artist_id": "10034596-47cb-46ba-9e80-9ea319a2c0df",
+    "duration": 262240,
+    "disambiguation": null,
+    "isrcs": [
+      "QMDA72594657",
+      "USJ3V1861934",
+      "USJ3V1862527"
+    ],
+    "mbid": "179bb9dd-2936-4024-8684-ef802c0e78ce",
+    "releases": 24,
+    "earliest": 1989,
+    "latest": 2025
+  },
+  {
+    "id": "6a6a683e-22be-4cdc-9a4e-6180c7eb60da",
+    "title": "Me enamoro de ella",
+    "artist_id": "10034596-47cb-46ba-9e80-9ea319a2c0df",
+    "duration": 257000,
+    "disambiguation": null,
+    "isrcs": [
+      "QMDA72594642",
+      "USJ3V1861906",
+      "USJ3V1862531"
+    ],
+    "mbid": "1a8fdbfd-a485-4572-bc55-6fd1deaed2c5",
+    "releases": 23,
+    "earliest": 1986,
+    "latest": 2025
+  },
+  {
+    "id": "8fb3095a-b5fc-455a-bf82-cb6e95c14356",
+    "title": "Guavaberry",
+    "artist_id": "10034596-47cb-46ba-9e80-9ea319a2c0df",
+    "duration": 260626,
+    "disambiguation": null,
+    "isrcs": [
+      "QMDA72594639",
+      "USJ3V1861902",
+      "USJ3V1862538"
+    ],
+    "mbid": "93208005-bfdd-480c-8769-2e0308b48ee9",
+    "releases": 22,
+    "earliest": 1986,
+    "latest": 2025
+  },
+  {
+    "id": "a68d97b9-df0a-4a3a-8453-a2d7b07a34d7",
+    "title": "Visa para un sueño",
+    "artist_id": "10034596-47cb-46ba-9e80-9ea319a2c0df",
+    "duration": 209000,
+    "disambiguation": null,
+    "isrcs": [
+      "QMDA72594669",
+      "USJ3V1861929",
+      "USJ3V1862528"
+    ],
+    "mbid": "5d3b922f-b2ce-404c-8a05-7b6c3e74728f",
+    "releases": 22,
+    "earliest": 1989,
+    "latest": 2025
+  },
+  {
+    "id": "1c1db7c0-56ae-4efe-bbae-8168c9e8be2e",
+    "title": "Estrellitas y duendes",
+    "artist_id": "10034596-47cb-46ba-9e80-9ea319a2c0df",
+    "duration": 264275,
+    "disambiguation": null,
+    "isrcs": [
+      "GBKPL2155240",
+      "QMDA72594638",
+      "USJ3V1861773",
+      "USJ3V1862544"
+    ],
+    "mbid": "577c53a6-4495-4656-b840-4983a622e3a7",
+    "releases": 21,
+    "earliest": 1990,
+    "latest": 2025
+  },
+  {
+    "id": "d32d2277-6d90-4ff7-b614-a252e98d11e8",
+    "title": "El costo de la vida",
+    "artist_id": "10034596-47cb-46ba-9e80-9ea319a2c0df",
+    "duration": 252066,
+    "disambiguation": null,
+    "isrcs": [
+      "QMDA72594652",
+      "USJ3V1861759",
+      "USJ3V1862525",
+      "USKP10500013"
+    ],
+    "mbid": "7f6b763d-47cb-4d15-b464-f0cce81556cc",
+    "releases": 20,
+    "earliest": 1992,
+    "latest": 2025
+  },
+  {
+    "id": "36b13fcd-36e5-4e3c-9567-e1d97911544b",
+    "title": "Si tú te vas",
+    "artist_id": "10034596-47cb-46ba-9e80-9ea319a2c0df",
+    "duration": 232080,
+    "disambiguation": null,
+    "isrcs": [
+      "QMDA72594662",
+      "USJ3V1861914",
+      "USJ3V1862540"
+    ],
+    "mbid": "162c0481-df21-40dc-84ad-9156d5a6edb5",
+    "releases": 20,
+    "earliest": 1985,
+    "latest": 2025
+  },
+  {
+    "id": "24e8cbfc-cb66-4481-a2db-fe653e7b79fc",
+    "title": "La cosquillita",
+    "artist_id": "10034596-47cb-46ba-9e80-9ea319a2c0df",
+    "duration": 223348,
+    "disambiguation": null,
+    "isrcs": [
+      "QMDA72594672",
+      "USJ3V1861901",
+      "USJ3V1862539",
+      "USKP10500019"
+    ],
+    "mbid": "c7db1846-6979-4b12-ba8c-53f24264eb2e",
+    "releases": 18,
+    "earliest": 1994,
+    "latest": 2025
+  },
+  {
+    "id": "d6e45a6f-b0f9-4055-b884-5d91ea194bc7",
+    "title": "Frío, frío",
+    "artist_id": "10034596-47cb-46ba-9e80-9ea319a2c0df",
+    "duration": 249000,
+    "disambiguation": null,
+    "isrcs": [
+      "USJ3V1861762",
+      "USJ3V1862532"
+    ],
+    "mbid": "336587c0-6442-477f-a344-a6691a6539d6",
+    "releases": 17,
+    "earliest": 1992,
+    "latest": 2012
+  },
+  {
+    "id": "2a15ddda-8ae3-4fdb-b034-13dccfb7da56",
+    "title": "Amigos",
+    "artist_id": "10034596-47cb-46ba-9e80-9ea319a2c0df",
+    "duration": 278361,
+    "disambiguation": null,
+    "isrcs": [
+      "QMDA72594680",
+      "USJ3V1861908",
+      "USJ3V1862557",
+      "USKP10500022"
+    ],
+    "mbid": "8063da5e-ca02-44e8-a17d-005d323b2229",
+    "releases": 16,
+    "earliest": 1985,
+    "latest": 2025
+  },
+  {
+    "id": "94e6b280-a522-4fd7-82e5-e920583b8668",
+    "title": "La hormiguita",
+    "artist_id": "10034596-47cb-46ba-9e80-9ea319a2c0df",
+    "duration": 184547,
+    "disambiguation": null,
+    "isrcs": [
+      "QMDA72594650",
+      "USJ3V1861920",
+      "USJ3V1862545",
+      "USKP10500014"
+    ],
+    "mbid": "61f3b992-567a-4108-a0ff-2e4eec5bc531",
+    "releases": 15,
+    "earliest": 1998,
+    "latest": 2025
+  },
+  {
+    "id": "fd8be647-bc76-495c-b4f4-5b6d2d608b31",
+    "title": "Palomita blanca",
+    "artist_id": "10034596-47cb-46ba-9e80-9ea319a2c0df",
+    "duration": 224000,
+    "disambiguation": null,
+    "isrcs": [
+      "QMDA72594663",
+      "USJ3V1861923",
+      "USJ3V1862547",
+      "USKP10500018"
+    ],
+    "mbid": "7c502ca8-b4bf-41ee-b506-6d5443a0d5d1",
+    "releases": 15,
+    "earliest": 1998,
+    "latest": 2025
+  },
+  {
+    "id": "8b24ab68-217f-4a5d-95e6-63056ea4dd06",
+    "title": "Amor de conuco",
+    "artist_id": "10034596-47cb-46ba-9e80-9ea319a2c0df",
+    "duration": 189000,
+    "disambiguation": "pop version",
+    "isrcs": [
+      "QMDA72594679",
+      "USJ3V1861928",
+      "USJ3V1862556",
+      "USKP10500025"
+    ],
+    "mbid": "81b33d43-8726-4736-aaff-027aba767934",
+    "releases": 14,
+    "earliest": 1998,
+    "latest": 2025
+  },
+  {
+    "id": "4c5aa142-f663-4a97-90cc-714de1333096",
+    "title": "Cuando te beso",
+    "artist_id": "10034596-47cb-46ba-9e80-9ea319a2c0df",
+    "duration": 208333,
+    "disambiguation": null,
+    "isrcs": [
+      "QMDA72594654",
+      "USJ3V1861767",
+      "USJ3V1862543",
+      "USKP10500012"
+    ],
+    "mbid": "cee86d4f-7289-41dd-a83e-5030cce87792",
+    "releases": 14,
+    "earliest": 1992,
+    "latest": 2025
+  },
+  {
+    "id": "e26a731e-ab4f-4b05-b941-82bc07d85651",
+    "title": "La morena",
+    "artist_id": "1cd11a22-573a-43b4-8f54-fbd08329a4e2",
+    "duration": 263533,
+    "disambiguation": null,
+    "isrcs": [
+      "USBL10000163"
+    ],
+    "mbid": "5cd088a9-de86-489e-8819-e1e33f5c8026",
+    "releases": 14,
+    "earliest": 1995,
+    "latest": 2015
+  },
+  {
+    "id": "1ba17dad-ae76-429f-9ef9-6c28583e2613",
+    "title": "Amapola",
+    "artist_id": "10034596-47cb-46ba-9e80-9ea319a2c0df",
+    "duration": 185066,
+    "disambiguation": null,
+    "isrcs": [
+      "QMDA72594674",
+      "USJ3V1861925",
+      "USJ3V1862548",
+      "USKP10500021"
+    ],
+    "mbid": "24cf5ad0-2237-4205-932e-1ce79c9639e7",
+    "releases": 13,
+    "earliest": 1998,
+    "latest": 2025
+  },
+  {
+    "id": "b7a36d5a-1a71-4e9c-8f13-5779ab085ecd",
+    "title": "Enamorao",
+    "artist_id": "1cd11a22-573a-43b4-8f54-fbd08329a4e2",
+    "duration": 251053,
+    "disambiguation": null,
+    "isrcs": [
+      "USBL10000094"
+    ],
+    "mbid": "576073b2-8831-44a8-93f4-fd158d796f85",
+    "releases": 13,
+    "earliest": 1998,
+    "latest": 2015
+  },
+  {
+    "id": "6d521046-3af9-45be-abc2-fe621321a8b6",
+    "title": "Señorita",
+    "artist_id": "10034596-47cb-46ba-9e80-9ea319a2c0df",
+    "duration": 250706,
+    "disambiguation": null,
+    "isrcs": [
+      "QMDA72594656",
+      "USJ3V1862541",
+      "USJ3V1862562",
+      "USKP10500026"
+    ],
+    "mbid": "b2c819f9-98af-4aeb-984f-7be1a43d2bf0",
+    "releases": 13,
+    "earliest": 1995,
+    "latest": 2025
+  },
+  {
+    "id": "e0f73996-a0ef-4566-a34a-9d8e1ca4350f",
+    "title": "Viviré",
+    "artist_id": "10034596-47cb-46ba-9e80-9ea319a2c0df",
+    "duration": 240440,
+    "disambiguation": null,
+    "isrcs": [
+      "QMDA72594645",
+      "USJ3V1861893",
+      "USJ3V1862546",
+      "USKP10500016"
+    ],
+    "mbid": "0db1b1d3-080a-4108-9565-ab49889cbeca",
+    "releases": 13,
+    "earliest": 1994,
+    "latest": 2025
+  },
+  {
+    "id": "525a92c8-bae7-4c89-8e84-532e7ed5be2f",
+    "title": "Coronita de flores",
+    "artist_id": "10034596-47cb-46ba-9e80-9ea319a2c0df",
+    "duration": 257000,
+    "disambiguation": null,
+    "isrcs": [
+      "QMDA72594648",
+      "USJ3V1861766",
+      "USJ3V1862549"
+    ],
+    "mbid": "093fa860-7df7-440d-ba61-7d8559db1bd0",
+    "releases": 12,
+    "earliest": 1992,
+    "latest": 2025
+  },
+  {
+    "id": "a9cc928b-4d6c-47fd-9870-6ca12fc13388",
+    "title": "Reina mía",
+    "artist_id": "10034596-47cb-46ba-9e80-9ea319a2c0df",
+    "duration": 244093,
+    "disambiguation": null,
+    "isrcs": [
+      "QMDA72594660",
+      "USJ3V1861935"
+    ],
+    "mbid": "6020ed87-a7fa-4bb3-9359-bd868e390953",
+    "releases": 12,
+    "earliest": 1989,
+    "latest": 2025
+  },
+  {
+    "id": "0f600a5e-7ae9-4db9-a4b8-8f27aef8177d",
+    "title": "Señales de humo",
+    "artist_id": "10034596-47cb-46ba-9e80-9ea319a2c0df",
+    "duration": 332000,
+    "disambiguation": null,
+    "isrcs": [
+      "QMDA72594675",
+      "USJ3V1861760",
+      "USJ3V1862550"
+    ],
+    "mbid": "c4620c97-dbc5-4118-97d0-9e21067ab6de",
+    "releases": 12,
+    "earliest": 1992,
+    "latest": 2025
+  }
+]

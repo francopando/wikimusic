@@ -1,9 +1,12 @@
 import { NextResponse } from "next/server";
-import { getSupabaseClient } from "@/lib/supabase";
+import { requireAdminApiRole } from "@/lib/adminApiAuth";
+import { createServiceRoleClient } from "@/lib/supabaseService";
 
 export async function GET(request: Request) {
+  const auth = await requireAdminApiRole("editor");
+  if (auth.response) return auth.response;
   const includeHierarchy = new URL(request.url).searchParams.get("hierarchy") === "1";
-  const supabase = getSupabaseClient();
+  const supabase = createServiceRoleClient();
   let query = supabase
     .from("genres")
     .select("id,parent_id,level,name,description,history_en,history_es,slug,display_order,is_home_featured,sort_order")
@@ -29,6 +32,8 @@ export async function GET(request: Request) {
 }
 
 export async function POST(request: Request) {
+  const auth = await requireAdminApiRole("editor");
+  if (auth.response) return auth.response;
   const body = (await request.json()) as {
     genreId?: string | number | null;
     genreData?: {
@@ -50,7 +55,7 @@ export async function POST(request: Request) {
     );
   }
 
-  const supabase = getSupabaseClient();
+  const supabase = createServiceRoleClient();
   const payload = {
     name: genreData.name.trim(),
     slug: genreData.slug?.trim() || null,

@@ -1,0 +1,12 @@
+BEGIN;
+DROP TRIGGER IF EXISTS recordings_governed_work_link ON public.recordings; DROP TRIGGER IF EXISTS work_credits_governed_writes ON public.work_credits;
+DROP FUNCTION IF EXISTS public.enforce_governed_work_link(); DROP FUNCTION IF EXISTS public.enforce_governed_work_credit();
+DROP FUNCTION IF EXISTS public.verify_editorial_work_credit(uuid,uuid,uuid,text); DROP FUNCTION IF EXISTS public.create_editorial_work_credit(uuid,uuid,uuid,uuid,uuid,text,text,integer,uuid[],text); DROP FUNCTION IF EXISTS public.select_recording_work_assertion(uuid,uuid,uuid,text); DROP FUNCTION IF EXISTS public.create_recording_work_assertion(uuid,uuid,uuid,uuid,uuid[],text); DROP FUNCTION IF EXISTS public.create_editorial_work(uuid,uuid,text,text,integer,integer,uuid[],text); DROP FUNCTION IF EXISTS public.create_editorial_source(uuid,uuid,text,text,text,text,text,text,text,text); DROP FUNCTION IF EXISTS public.editorial_idempotent_result(uuid,text,uuid); DROP FUNCTION IF EXISTS public.require_editorial_capability(uuid,text); DROP FUNCTION IF EXISTS public.user_has_editorial_capability(uuid,text);
+DROP TABLE IF EXISTS public.editorial_idempotency_keys;
+ALTER TABLE public.credited_works DROP CONSTRAINT IF EXISTS credited_works_authoritative_target_exclusive; ALTER TABLE public.credited_works DROP COLUMN IF EXISTS work_id,DROP COLUMN IF EXISTS recording_id;
+ALTER TABLE public.credited_work_credits DROP COLUMN IF EXISTS role_id; ALTER TABLE public.recording_credits DROP COLUMN IF EXISTS role_id; ALTER TABLE public.work_credits DROP COLUMN IF EXISTS role_id;
+DROP TABLE IF EXISTS public.credit_role_aliases,public.credit_role_scopes,public.credit_roles;
+DELETE FROM public.editorial_role_capabilities WHERE role='editor' AND capability='work.link_recording'; UPDATE public.editorial_capabilities SET high_impact=true WHERE capability='work.link_recording';
+CREATE POLICY work_credit_sources_public_select ON public.work_credit_sources FOR SELECT TO anon,authenticated USING(EXISTS(SELECT 1 FROM public.work_credits wc JOIN public.works w ON w.id=wc.work_id WHERE wc.id=work_credit_id AND w.status='published'));
+CREATE POLICY recording_isrc_sources_public_select ON public.recording_isrc_sources FOR SELECT TO anon,authenticated USING(true); GRANT SELECT ON public.work_credit_sources,public.recording_isrc_sources TO anon,authenticated;
+NOTIFY pgrst,'reload schema'; COMMIT;

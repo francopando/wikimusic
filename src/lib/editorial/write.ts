@@ -1,4 +1,4 @@
-import { getSupabaseServiceClient } from "@/lib/adminAccess";
+import { createServiceRoleClient } from "@/lib/supabaseService";
 import { collectEditorialReferences } from "@/lib/editorial/references";
 import { validateEditorialDocument } from "@/lib/editorial/validate";
 import { routing } from "@/i18n/routing";
@@ -30,7 +30,7 @@ export async function upsertEditorialDocument(input: UpsertEditorialDocumentInpu
   }
   const references = collectEditorialReferences(input.schemaVersion, validation.document);
 
-  const supabase = getSupabaseServiceClient();
+  const supabase = createServiceRoleClient();
   if (input.status === "published" && references.length) {
     const targetIds = [...new Set(references.map((reference) => reference.targetArtistId))];
     const { data: targets, error: targetError } = await supabase.from("artists").select("id").in("id", targetIds);

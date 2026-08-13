@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
-import { getSupabaseClient } from "@/lib/supabase";
+import { requireAdminApiRole } from "@/lib/adminApiAuth";
+import { createServiceRoleClient } from "@/lib/supabaseService";
 
 // ---------------------------------------------------------------------------
 // GET /api/admin/platform-links
@@ -8,13 +9,15 @@ import { getSupabaseClient } from "@/lib/supabase";
 // Returns merged rows with recording title + resolved artist name.
 // ---------------------------------------------------------------------------
 export async function GET(request: Request) {
+  const auth = await requireAdminApiRole("editor");
+  if (auth.response) return auth.response;
   const { searchParams } = new URL(request.url);
   const platform      = searchParams.get("platform")      ?? "deezer";
   const status        = searchParams.get("status")        ?? "needs_review";
   const minConfidence = searchParams.get("minConfidence") ?? "";
   const limit         = Math.min(Number(searchParams.get("limit") ?? "50"), 200);
 
-  const supabase = getSupabaseClient();
+  const supabase = createServiceRoleClient();
 
   // ── 1. Fetch platform link rows ──────────────────────────────────────────
   let query = supabase
@@ -166,6 +169,8 @@ export async function GET(request: Request) {
 // Body: { id: string, updates: Partial<PlatformLinkRow> }
 // ---------------------------------------------------------------------------
 export async function PATCH(request: Request) {
+  const auth = await requireAdminApiRole("editor");
+  if (auth.response) return auth.response;
   let body: { id?: string; updates?: Record<string, unknown> };
   try {
     body = await request.json();
@@ -184,7 +189,7 @@ export async function PATCH(request: Request) {
   // Always stamp updated_at
   const safeUpdates = { ...updates, updated_at: new Date().toISOString() };
 
-  const supabase = getSupabaseClient();
+  const supabase = createServiceRoleClient();
   const { error } = await supabase
     .from("recording_platform_links")
     .update(safeUpdates)
@@ -203,6 +208,8 @@ export async function PATCH(request: Request) {
 // Body: manual link insert payload
 // ---------------------------------------------------------------------------
 export async function POST(request: Request) {
+  const auth = await requireAdminApiRole("editor");
+  if (auth.response) return auth.response;
   let body: Record<string, unknown>;
   try {
     body = await request.json();
@@ -217,7 +224,7 @@ export async function POST(request: Request) {
     );
   }
 
-  const supabase = getSupabaseClient();
+  const supabase = createServiceRoleClient();
   const { data, error } = await supabase
     .from("recording_platform_links")
     .insert([{ ...body, source: "manual_admin", checked_at: new Date().toISOString() }])

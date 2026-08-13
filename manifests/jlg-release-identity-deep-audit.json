@@ -1,0 +1,2366 @@
+{
+  "schema_version": 1,
+  "audit_type": "read_only_release_identity",
+  "artist_scope": {
+    "artist_ids": [
+      "10034596-47cb-46ba-9e80-9ea319a2c0df",
+      "9761143c-4e04-4590-8fa7-fe82674a6cf7"
+    ]
+  },
+  "generated_on": "2026-08-12",
+  "summary": {
+    "releases_reviewed": 146,
+    "release_groups_reviewed": 75,
+    "independently_supported_real_world_editions": 138,
+    "unique_canonical_release_rows": 56,
+    "legitimate_distinct_edition_rows": 82,
+    "probable_duplicate_families": 4,
+    "probable_redundant_rows": 4,
+    "uncertain_families": 3,
+    "release_group_modeling_issues": 0,
+    "worldwide_releases_reviewed": 53,
+    "worldwide_legitimate": 51,
+    "worldwide_probable_duplicates": 2,
+    "worldwide_uncertain": 0,
+    "legacy_release_pointers_on_redundant_rows": 0
+  },
+  "probable_duplicate_families": [
+    {
+      "candidate_family_id": "grandes-exitos-es-1995-upc-743213012827",
+      "release_group_id": "7e51f3b7-871a-4cc8-957b-a68bc0299496",
+      "survivor_candidate": "77bb8012-308b-4c94-8937-df022a431b05",
+      "redundant_candidates": [
+        "6a571c33-ab65-469d-b7df-76fdadbb674b"
+      ],
+      "dependency_counts": {
+        "tracks": 18,
+        "release_artists": 1,
+        "cover_logs": 1,
+        "legacy_recording_pointers": 0
+      },
+      "track_program_fingerprint": "same 18 Recording UUIDs/order; punctuation noise; final length differs 800 ms",
+      "external_product_identity": {
+        "upc": "743213012827",
+        "territory": "ES",
+        "year": 1995,
+        "format": "Jewel Case"
+      },
+      "cleanup_complexity": "medium"
+    },
+    {
+      "candidate_family_id": "frio-frio-worldwide-2013-single",
+      "release_group_id": "89b98244-cf46-47e8-bd82-469a45edd299",
+      "survivor_candidate": "2489f428-4ce1-46c7-90cd-70775fe85a4c",
+      "redundant_candidates": [
+        "bd2e1cd2-6ce5-4758-a3d6-cabc5a5ab054"
+      ],
+      "dependency_counts": {
+        "tracks": 1,
+        "release_artists": 1,
+        "cover_logs": 1,
+        "legacy_recording_pointers": 0
+      },
+      "track_program_fingerprint": "one-track full audio versus shortened audiovisual/store manifestation",
+      "external_product_identity": {
+        "upc": "05099993462358",
+        "label": "EMI Latin",
+        "date": "2013-03-08"
+      },
+      "cleanup_complexity": "medium; preserve both Recording versions"
+    },
+    {
+      "candidate_family_id": "todo-tiene-su-hora-cd-ean-602547037565",
+      "release_group_id": "35cd952d-ff98-4bdc-b629-5999db3b4af4",
+      "survivor_candidate": "d3dea072-244e-47cf-9bec-89a2e497c7b0",
+      "redundant_candidates": [
+        "acf06f18-115f-4560-88fe-da942df81a8c"
+      ],
+      "dependency_counts": {
+        "tracks": 10,
+        "release_artists": 1,
+        "cover_logs": 1,
+        "legacy_recording_pointers": 0
+      },
+      "track_program_fingerprint": "exact same ten Recording UUIDs, order, titles, lengths and ISRCs",
+      "external_product_identity": {
+        "ean_normalized": "602547037565",
+        "year": 2014,
+        "format": "CD"
+      },
+      "cleanup_complexity": "low"
+    },
+    {
+      "candidate_family_id": "literal-worldwide-digital-2019",
+      "release_group_id": "43a44ba3-acf4-4deb-ba81-a67c91863ff4",
+      "survivor_candidate": "baf380be-1374-4a0d-afb4-bc895e1425ec",
+      "redundant_candidates": [
+        "0b1683cc-6f6c-4885-8036-e926df045b82"
+      ],
+      "dependency_counts": {
+        "tracks": 11,
+        "release_artists": 1,
+        "cover_logs": 1,
+        "legacy_recording_pointers": 0
+      },
+      "track_program_fingerprint": "same eleven canonical Recording UUIDs and order; only small delivery-length/title-spacing noise",
+      "external_product_identity": {
+        "upc": "602577649394",
+        "date": "2019-05-31",
+        "format": "digital"
+      },
+      "cleanup_complexity": "low"
+    }
+  ],
+  "releases": [
+    {
+      "release_id": "adcd918c-aee9-45d0-9297-21c35fbf7fc2",
+      "release_group_id": "7aa0f1b7-5320-43af-ac72-57da38a973e1",
+      "title": "18 éxitos",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "7aa0f1b7-5320-43af-ac72-57da38a973e1",
+      "verified_edition_identity": "18 éxitos | date unknown | territory unknown | format unknown | barcode unknown | 18 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "07f0777c07299c31b72935db81289731"
+    },
+    {
+      "release_id": "3e3efa44-d48f-4e21-bab0-dde15e206508",
+      "release_group_id": "06996991-8aee-432d-9f73-8c1131652187",
+      "title": "32 serie",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "06996991-8aee-432d-9f73-8c1131652187",
+      "verified_edition_identity": "32 serie | date unknown | territory unknown | format unknown | barcode unknown | 24 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "6892673de07516d14e13b225097a41d1"
+    },
+    {
+      "release_id": "dc847fdc-7fc9-4339-8bd8-d5cfdf3ce3a8",
+      "release_group_id": "c73c5d52-7160-498c-b673-c8f8b1df8548",
+      "title": "Asondeguerra",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "c73c5d52-7160-498c-b673-c8f8b1df8548",
+      "verified_edition_identity": "A son de Guerra | 2010-01-01 | territory unknown | None | 05099909493056 | 11 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "c71f04935ec5d5fe4f487fc3de16902f"
+    },
+    {
+      "release_id": "1227c4c2-fdd2-4b86-a764-e909b94c146f",
+      "release_group_id": "c73c5d52-7160-498c-b673-c8f8b1df8548",
+      "title": "A son de Guerra",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "c73c5d52-7160-498c-b673-c8f8b1df8548",
+      "verified_edition_identity": "A son de Guerra | 2010-06-08 | US | Jewel Case | 5099924248327 | 11 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "7c8588840f2b5515a80241e77011cf36"
+    },
+    {
+      "release_id": "7764c263-64ec-490f-970c-7ace93c28d93",
+      "release_group_id": "c73c5d52-7160-498c-b673-c8f8b1df8548",
+      "title": "A son de Guerra",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "c73c5d52-7160-498c-b673-c8f8b1df8548",
+      "verified_edition_identity": "A son de Guerra | 2012-06-08 | US | None | barcode unknown | 16 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "5318acd1b93a8dd9bb6b9f652b5d1a8c"
+    },
+    {
+      "release_id": "6af8d1ca-327a-40c1-b356-dd7f85969058",
+      "release_group_id": "41e9eb8b-ad30-4df3-96a6-c7fc9b972067",
+      "title": "A son de Guerra tour",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "41e9eb8b-ad30-4df3-96a6-c7fc9b972067",
+      "verified_edition_identity": "A son de Guerra tour | 2013 | MX | Jewel Case | 5099968235222 | 33 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "151a88eaf5773a47f7ce6b07bfe506ec"
+    },
+    {
+      "release_id": "df79c642-5162-48f0-af69-1ac385bdadd9",
+      "release_group_id": "41e9eb8b-ad30-4df3-96a6-c7fc9b972067",
+      "title": "Asondeguerra Tour: En Vivo Estadio Olímpico De República Dominicana/2012",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "41e9eb8b-ad30-4df3-96a6-c7fc9b972067",
+      "verified_edition_identity": "A son de Guerra tour | 2013-01-01 | territory unknown | None | 5099901505252 | 14 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "7414af27626ea5113d3b6661dd521096"
+    },
+    {
+      "release_id": "25e2766f-3fa9-4d9f-9102-b1f2c1d2ad70",
+      "release_group_id": "41e9eb8b-ad30-4df3-96a6-c7fc9b972067",
+      "title": "ASonDeGuerra Tour",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "41e9eb8b-ad30-4df3-96a6-c7fc9b972067",
+      "verified_edition_identity": "A son de Guerra tour | 2013-05-14 | US | None | barcode unknown | 32 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "fdd1bebea01027e6a38871d99e2e8c2e"
+    },
+    {
+      "release_id": "328390ed-a66d-4290-b4ea-32e38da19480",
+      "release_group_id": "41e9eb8b-ad30-4df3-96a6-c7fc9b972067",
+      "title": "A son de Guerra tour",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "41e9eb8b-ad30-4df3-96a6-c7fc9b972067",
+      "verified_edition_identity": "A son de Guerra tour | 2013-05-14 | US | Jewel Case | 5099901505221 | 14 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "d86577e10ce1fe7db70a9f4e0beb3b3c"
+    },
+    {
+      "release_id": "e1e3c513-234b-435c-81cd-15cac613d76e",
+      "release_group_id": "128d8df8-c98b-401b-abbf-f9afa4f0d787",
+      "title": "Antología",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "128d8df8-c98b-401b-abbf-f9afa4f0d787",
+      "verified_edition_identity": "Antología | date unknown | territory unknown | format unknown | barcode unknown | 20 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "965c615929f622b3031cce7b03c26e86"
+    },
+    {
+      "release_id": "d8ebc8d0-97bc-469c-a157-fdb5f6bfbae0",
+      "release_group_id": "60f3f3b2-6523-4aa8-a22e-413b351a7524",
+      "title": "Aquí estoy yo",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "60f3f3b2-6523-4aa8-a22e-413b351a7524",
+      "verified_edition_identity": "Aquí estoy yo | 2011-08-23 | US | Digipak | 827865416322 | 11 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "95e36806dfe555a88fff37e1c8961739"
+    },
+    {
+      "release_id": "b515362a-92d2-4668-a9cb-29ae5b066ff1",
+      "release_group_id": "1c514236-ce00-4f94-bc1e-cf3c254a431b",
+      "title": "Archivo digital 4.4",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "1c514236-ce00-4f94-bc1e-cf3c254a431b",
+      "verified_edition_identity": "Archivo digital 4.4 | 2007-11-06 | US | Jewel Case | 827865352422 | 18 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "fe3a867a64db95415d012d50acef57a2"
+    },
+    {
+      "release_id": "aa60f0e6-aac8-445d-953a-bfb7ec571a44",
+      "release_group_id": "1c514236-ce00-4f94-bc1e-cf3c254a431b",
+      "title": "Archivo digital 4.4",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "1c514236-ce00-4f94-bc1e-cf3c254a431b",
+      "verified_edition_identity": "Archivo digital 4.4 | 2007-11-06 | XW | None | 710793029521 | 18 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "f0c28741f4dd3f99f0c15f8117878cb7"
+    },
+    {
+      "release_id": "f0c9e326-c344-4225-a5d2-659cce56f333",
+      "release_group_id": "97fc2679-6811-41ba-8105-95fe40d016bb",
+      "title": "Areíto",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "97fc2679-6811-41ba-8105-95fe40d016bb",
+      "verified_edition_identity": "Areíto | 1992 | CA | Jewel Case | 710793014626 | 12 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "7bb5b9be910673499724d73cf3e7b59f"
+    },
+    {
+      "release_id": "177594ff-849e-400e-b315-36f9982461e0",
+      "release_group_id": "97fc2679-6811-41ba-8105-95fe40d016bb",
+      "title": "Areíto",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "97fc2679-6811-41ba-8105-95fe40d016bb",
+      "verified_edition_identity": "Areíto | 1992 | ES | format unknown | 743211289726 | 12 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "2eb1df5bb9e508d0ad23cdf51e19768b"
+    },
+    {
+      "release_id": "b0d4155a-45fe-4c56-8d0d-73c35c2c26a7",
+      "release_group_id": "97fc2679-6811-41ba-8105-95fe40d016bb",
+      "title": "Areíto",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "97fc2679-6811-41ba-8105-95fe40d016bb",
+      "verified_edition_identity": "Areíto | 1992-01-01 | XW | None | 886296758890 | 12 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "13459072dad966cb41bef422fbb45d66"
+    },
+    {
+      "release_id": "ab0000c8-f863-4888-9722-f9c8171c9a0f",
+      "release_group_id": "854d4a3b-0822-4272-abdd-0006843221f2",
+      "title": "Así bonito",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "854d4a3b-0822-4272-abdd-0006843221f2",
+      "verified_edition_identity": "Así bonito | 2025-05-30 | XW | format unknown | 199350777233 | 1 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "d197973a81a0f42839eb6d09ad5e174c"
+    },
+    {
+      "release_id": "afc2f8b9-697b-4245-b38a-d2a2a0306899",
+      "release_group_id": "1bce177e-bcfd-4fee-8a34-5333b1ef1edb",
+      "title": "Bachata en Fukuoka",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "1bce177e-bcfd-4fee-8a34-5333b1ef1edb",
+      "verified_edition_identity": "Bachata en Fukuoka | 2010-03-16 | XW | None | 5099963118056 | 1 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "08c13bc96821eaefa04af53ec7caa9ac"
+    },
+    {
+      "release_id": "0e0ca481-da5c-47f3-9224-973bf7f076b5",
+      "release_group_id": "cb846547-8fd7-4945-88e3-1ca1a2db3804",
+      "title": "Bachata rosa",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "cb846547-8fd7-4945-88e3-1ca1a2db3804",
+      "verified_edition_identity": "Bachata rosa | 1990 | DO | format unknown | 078635323023 | 10 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "b0fa589a3a4711116cfedce95acc21b7"
+    },
+    {
+      "release_id": "aa7f45b1-f76d-4625-a275-d223be88fcc3",
+      "release_group_id": "cb846547-8fd7-4945-88e3-1ca1a2db3804",
+      "title": "Bachata rosa",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "cb846547-8fd7-4945-88e3-1ca1a2db3804",
+      "verified_edition_identity": "Bachata rosa | 1990 | MX | Jewel Case |  | 10 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "b0fa589a3a4711116cfedce95acc21b7"
+    },
+    {
+      "release_id": "2f016380-906b-469d-a7e4-a880e2c303d6",
+      "release_group_id": "cb846547-8fd7-4945-88e3-1ca1a2db3804",
+      "title": "Bachata rosa",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "cb846547-8fd7-4945-88e3-1ca1a2db3804",
+      "verified_edition_identity": "Bachata rosa | 1990 | US | Jewel Case | 078635323023 | 10 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "b0fa589a3a4711116cfedce95acc21b7"
+    },
+    {
+      "release_id": "82dfdae7-029c-4576-8cdd-c0c060f32c18",
+      "release_group_id": "cb846547-8fd7-4945-88e3-1ca1a2db3804",
+      "title": "Bachata rosa",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "cb846547-8fd7-4945-88e3-1ca1a2db3804",
+      "verified_edition_identity": "Bachata rosa | 1990 | US | Jewel Case | 710793013629 | 10 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "b0fa589a3a4711116cfedce95acc21b7"
+    },
+    {
+      "release_id": "2f7ae708-3a1c-48fb-98d1-6a4c146f68cb",
+      "release_group_id": "cb846547-8fd7-4945-88e3-1ca1a2db3804",
+      "title": "Bachata rosa",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "cb846547-8fd7-4945-88e3-1ca1a2db3804",
+      "verified_edition_identity": "Bachata rosa | 1990 | XE | Jewel Case | 4007192617081 | 10 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "b0fa589a3a4711116cfedce95acc21b7"
+    },
+    {
+      "release_id": "be8f97ac-ac59-4154-ad17-bcf450a4439e",
+      "release_group_id": "cb846547-8fd7-4945-88e3-1ca1a2db3804",
+      "title": "Bachata rosa",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "cb846547-8fd7-4945-88e3-1ca1a2db3804",
+      "verified_edition_identity": "Bachata rosa | 1990-01-01 | XW | None | 886296758906 | 10 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "b0fa589a3a4711116cfedce95acc21b7"
+    },
+    {
+      "release_id": "38abc5b6-0c81-41c3-b8c5-4a313de61645",
+      "release_group_id": "cb846547-8fd7-4945-88e3-1ca1a2db3804",
+      "title": "Bachata rosa",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "cb846547-8fd7-4945-88e3-1ca1a2db3804",
+      "verified_edition_identity": "Bachata rosa | 1990-08-21 | JP | format unknown | 4988017028100 | 10 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "b0fa589a3a4711116cfedce95acc21b7"
+    },
+    {
+      "release_id": "a38a345f-26c1-450b-8504-11c21390fa08",
+      "release_group_id": "cb846547-8fd7-4945-88e3-1ca1a2db3804",
+      "title": "Bachata rosa",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "cb846547-8fd7-4945-88e3-1ca1a2db3804",
+      "verified_edition_identity": "Bachata rosa | 1990-12-11 | ES | Cardboard/Paper Sleeve | 097527513618 | 10 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "b0fa589a3a4711116cfedce95acc21b7"
+    },
+    {
+      "release_id": "03881911-7c01-46f3-aa78-8ad7a86324fc",
+      "release_group_id": "cb846547-8fd7-4945-88e3-1ca1a2db3804",
+      "title": "Bachata rosa",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "cb846547-8fd7-4945-88e3-1ca1a2db3804",
+      "verified_edition_identity": "Bachata rosa | 1995 | US | Jewel Case | 248559070000 | 10 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "b0fa589a3a4711116cfedce95acc21b7"
+    },
+    {
+      "release_id": "4fdd105f-8ef0-41e7-8d47-2665917e3186",
+      "release_group_id": "0437b80b-c1cc-44d4-8706-adbd5ea0ff48",
+      "title": "Bonus Tracks",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "0437b80b-c1cc-44d4-8706-adbd5ea0ff48",
+      "verified_edition_identity": "Bonus Tracks | 2010-01-01 | XW | None | 886296761401 | 13 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "561a5fd49c46d8d687c7248fadbc7845"
+    },
+    {
+      "release_id": "6d110462-d9ab-45b4-8622-6f283e1dde3d",
+      "release_group_id": "1800463c-1be1-4b1e-a428-7d9f221f1fc9",
+      "title": "Burbujas de amor",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "1800463c-1be1-4b1e-a428-7d9f221f1fc9",
+      "verified_edition_identity": "Burbujas de amor | 1990 | DE | format unknown | 4007196645592 | 3 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "f2c91e7b181704e37842c6c2eda571d9"
+    },
+    {
+      "release_id": "c9503a7b-d576-4b14-acc4-83649a32cf60",
+      "release_group_id": "1800463c-1be1-4b1e-a428-7d9f221f1fc9",
+      "title": "Burbujas de amor",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "1800463c-1be1-4b1e-a428-7d9f221f1fc9",
+      "verified_edition_identity": "Burbujas de amor | 1990 | DE | format unknown | 4007191143550 | 2 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "418d9c784b37677d4a90d214449ae81f"
+    },
+    {
+      "release_id": "84301baa-c052-48e6-a65d-4e00dfab733d",
+      "release_group_id": "1800463c-1be1-4b1e-a428-7d9f221f1fc9",
+      "title": "Burbujas de amor",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "1800463c-1be1-4b1e-a428-7d9f221f1fc9",
+      "verified_edition_identity": "Burbujas de amor | 1990 | NL | format unknown | 4007191643555 | 2 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "418d9c784b37677d4a90d214449ae81f"
+    },
+    {
+      "release_id": "2d176d87-bd5e-4b36-a8d0-2f7de7b7be07",
+      "release_group_id": "89413361-384a-42de-9346-71c7a9b9acda",
+      "title": "Burbujas de amor",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "89413361-384a-42de-9346-71c7a9b9acda",
+      "verified_edition_identity": "Burbujas de amor | 2010 | US | format unknown | barcode unknown | 30 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "79e28284975cb9fdfd6fd6b825fc27c5"
+    },
+    {
+      "release_id": "563d198b-99f1-47fa-8f90-dffce097cced",
+      "release_group_id": "7fd70631-181e-46f2-bb5e-6bdcc6aa1a3b",
+      "title": "Buscando el mar",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "7fd70631-181e-46f2-bb5e-6bdcc6aa1a3b",
+      "verified_edition_identity": "Buscando el mar | 2026-04-21 | XW | None | 196874269466 | 1 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "688bd9a0c245b715c06493736eb56656"
+    },
+    {
+      "release_id": "cbcd5288-084b-40f9-8a07-5944ed9d1c5d",
+      "release_group_id": "2761a1f9-e209-4fa6-91b0-ab79a498094f",
+      "title": "Cantando bachata",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "2761a1f9-e209-4fa6-91b0-ab79a498094f",
+      "verified_edition_identity": "Cantando bachata | 2021-04-16 | XW | format unknown | 192650567122 | 1 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "9f56a74598d849d2494e9784598582da"
+    },
+    {
+      "release_id": "981583bf-6f25-417f-9a9e-aa9d0bb49ad7",
+      "release_group_id": "74c7eac2-0631-4383-ae26-f316edd1cb6b",
+      "title": "Canto a la patria",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "74c7eac2-0631-4383-ae26-f316edd1cb6b",
+      "verified_edition_identity": "Canto a la patria | 2024-02-27 | XW | None | 198342233542 | 1 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "923068bae112e92a921b25b08b2ef805"
+    },
+    {
+      "release_id": "2d001f19-47b9-4286-858f-be81047f4ce9",
+      "release_group_id": "5090ee15-a879-4a7b-8e2e-cff378c027df",
+      "title": "Capitán Avispa",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "5090ee15-a879-4a7b-8e2e-cff378c027df",
+      "verified_edition_identity": "Capitán Avispa | 2024-04-05 | XW | None | 198342429129 | 41 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "d88f7a09f0a32f20078ee347f87b07c3"
+    },
+    {
+      "release_id": "8e810e04-f532-4449-91ce-d36ed08ca35e",
+      "release_group_id": "adffb1d2-13c3-4fe2-961f-a4ba1c1abc4a",
+      "title": "Cecilia",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "adffb1d2-13c3-4fe2-961f-a4ba1c1abc4a",
+      "verified_edition_identity": "Cecilia | 2023-05-18 | territory unknown | None | 00602455594303 | 1 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "5c00c45e164dfa2cb4b60c10eb1b47fb"
+    },
+    {
+      "release_id": "f7f2b4e7-4601-4ab6-b2cd-504d924cab2d",
+      "release_group_id": "ef0c8d4e-9bcf-4bca-bade-c2277e670ba2",
+      "title": "Colección cristiana",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "ef0c8d4e-9bcf-4bca-bade-c2277e670ba2",
+      "verified_edition_identity": "Colección cristiana | 2012 | XE | Jewel Case | 5099932753325 | 11 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "f9e7c12e64cc83c81116e80e84586c0f"
+    },
+    {
+      "release_id": "26acd2b0-389b-465f-b013-9d3a24108776",
+      "release_group_id": "ef0c8d4e-9bcf-4bca-bade-c2277e670ba2",
+      "title": "Colección cristiana",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "ef0c8d4e-9bcf-4bca-bade-c2277e670ba2",
+      "verified_edition_identity": "Colección cristiana | 2012-01-01 | territory unknown | None | 602508061240 | 11 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "f9e7c12e64cc83c81116e80e84586c0f"
+    },
+    {
+      "release_id": "ee905080-1376-4a75-9f15-4e601cb17a10",
+      "release_group_id": "ef0c8d4e-9bcf-4bca-bade-c2277e670ba2",
+      "title": "Colección cristiana",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "ef0c8d4e-9bcf-4bca-bade-c2277e670ba2",
+      "verified_edition_identity": "Colección cristiana | 2012-02-28 | CO | Jewel Case | 5099972967829 | 11 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "f9e7c12e64cc83c81116e80e84586c0f"
+    },
+    {
+      "release_id": "3a67dfcb-76ae-40d8-a9d0-70bfe1427896",
+      "release_group_id": "ef0c8d4e-9bcf-4bca-bade-c2277e670ba2",
+      "title": "Colección cristiana",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "ef0c8d4e-9bcf-4bca-bade-c2277e670ba2",
+      "verified_edition_identity": "Colección cristiana | 2012-02-28 | US | Jewel Case | 5099972967829 | 11 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "f9e7c12e64cc83c81116e80e84586c0f"
+    },
+    {
+      "release_id": "dcb731cb-0a81-4e48-a49b-b57692542f58",
+      "release_group_id": "6b30104c-0b09-4efd-a668-76661d79f735",
+      "title": "Colección romántica",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "6b30104c-0b09-4efd-a668-76661d79f735",
+      "verified_edition_identity": "Colección romántica | 2000 | ES | Digipak | 710793023727 | 20 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "c7d74b06dae5a75f164d570146e19ce1"
+    },
+    {
+      "release_id": "ceb71407-4008-4027-81ac-8a737c162fb1",
+      "release_group_id": "6b30104c-0b09-4efd-a668-76661d79f735",
+      "title": "Colección romántica",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "6b30104c-0b09-4efd-a668-76661d79f735",
+      "verified_edition_identity": "Colección romántica | 2000-02-06 | US | Jewel Case | 710793023727 | 20 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "6fbab69de5b9495135efca4cec6dcd45"
+    },
+    {
+      "release_id": "6f5c7905-4f62-42c7-bf3c-f156a635f87a",
+      "release_group_id": "6b30104c-0b09-4efd-a668-76661d79f735",
+      "title": "Colección romántica, vol. 2",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "6b30104c-0b09-4efd-a668-76661d79f735",
+      "verified_edition_identity": "Colección romántica | 2001-01-01 | XW | None | 886296761388 | 10 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "7e6067e7913ce171ced51a8b8b907322"
+    },
+    {
+      "release_id": "e219efbb-5689-4196-ae15-79ccc93726e1",
+      "release_group_id": "6b30104c-0b09-4efd-a668-76661d79f735",
+      "title": "Colección romántica, vol. 1",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "6b30104c-0b09-4efd-a668-76661d79f735",
+      "verified_edition_identity": "Colección romántica | 2001-01-01 | XW | None | 886296761395 | 10 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "2a4fddc12e19b25ac259c13bab57d9d8"
+    },
+    {
+      "release_id": "bcaa250c-31ae-44b9-9132-32b6b5871d36",
+      "release_group_id": "6b30104c-0b09-4efd-a668-76661d79f735",
+      "title": "Colección romántica",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "6b30104c-0b09-4efd-a668-76661d79f735",
+      "verified_edition_identity": "Colección romántica | 2001-02-06 | US | None |  | 20 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "85f3cfda56df5306b3e3c079a7af1310"
+    },
+    {
+      "release_id": "6b7aa257-811d-44f7-8e78-c6488e9bd676",
+      "release_group_id": "6b30104c-0b09-4efd-a668-76661d79f735",
+      "title": "Colección romántica",
+      "classification": "E — UNCERTAIN",
+      "candidate_family_id": "6b30104c-0b09-4efd-a668-76661d79f735",
+      "verified_edition_identity": "Colección romántica | date unknown | territory unknown | format unknown | barcode unknown | 10 tracks",
+      "meaningful_distinction": "Insufficient edition metadata",
+      "evidence": [
+        "Production metadata incomplete",
+        "No independently decisive product identity located"
+      ],
+      "confidence": "low",
+      "track_program_fingerprint": "1c53d41873215e60cdf9046168aca879"
+    },
+    {
+      "release_id": "94741c34-8a89-49a1-99cb-0aa6169399e6",
+      "release_group_id": "d25497bd-4f83-4fac-a989-22d19b6c03e4",
+      "title": "Como abeja al panal",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "d25497bd-4f83-4fac-a989-22d19b6c03e4",
+      "verified_edition_identity": "Como abeja al panal | 1990 | territory unknown | format unknown | barcode unknown | 2 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "f444f146d4969a71f9abda28bc02022f"
+    },
+    {
+      "release_id": "cd46b453-20ad-4df2-8009-d2529012e686",
+      "release_group_id": "b2608dee-8508-46bc-ab6d-421d13a0445b",
+      "title": "Como abeja al panal",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "b2608dee-8508-46bc-ab6d-421d13a0445b",
+      "verified_edition_identity": "Como abeja al panal | 2025-10-31 | XW | format unknown | 199806261446 | 1 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "4c81c0fbbaa6db2c6732a9af779db0b8"
+    },
+    {
+      "release_id": "7d9c558c-bdbc-477c-91c6-e6297bff99ed",
+      "release_group_id": "8712cd55-2c7f-49b8-8277-f0d71faaed0a",
+      "title": "Como abeja al panal / De tu boca",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "8712cd55-2c7f-49b8-8277-f0d71faaed0a",
+      "verified_edition_identity": "Como abeja al panal / De tu boca | 1990 | DO | format unknown | barcode unknown | 2 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "d8b7bc8891dfc8f1b9b0b2f951587394"
+    },
+    {
+      "release_id": "bf46ec31-e5eb-4c00-8c15-256dd3bbef22",
+      "release_group_id": "44e76b23-7143-4094-bb62-2a7854e7a10e",
+      "title": "Concierto aniversario",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "44e76b23-7143-4094-bb62-2a7854e7a10e",
+      "verified_edition_identity": "Concierto aniversario | 2023-09-01 | XW | format unknown | 197189595011 | 15 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "be8ca714d07ee0a3f1a4aa021b055561"
+    },
+    {
+      "release_id": "251daafd-188d-4c07-bb96-0a66b11a4020",
+      "release_group_id": "e6cf63f9-8007-46cd-9a4e-936f303f2ea8",
+      "title": "Corazón enamorado",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "e6cf63f9-8007-46cd-9a4e-936f303f2ea8",
+      "verified_edition_identity": "Corazón enamorado | 2019-04-26 | XW | None | barcode unknown | 1 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "5ce75bc6aae0fa4adc06bc252d855c5f"
+    },
+    {
+      "release_id": "8ce74d15-5f56-4763-bfc4-5b667f1e33de",
+      "release_group_id": "0aaac37a-fe8f-40b3-924e-b1b7567237e0",
+      "title": "Dance with Me (Si tú no bailas conmigo)",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "0aaac37a-fe8f-40b3-924e-b1b7567237e0",
+      "verified_edition_identity": "Dance with Me (Si tú no bailas conmigo) | 2020-05-29 | XW | None | 068944815159 | 1 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "456d9da1fe3803e22bb7516a4a9dc0ee"
+    },
+    {
+      "release_id": "71f50b28-d42f-49bf-a763-a0c391441cb6",
+      "release_group_id": "b1dc6e22-4ccc-4680-a7e3-447482c68180",
+      "title": "Dios así lo quiso",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "b1dc6e22-4ccc-4680-a7e3-447482c68180",
+      "verified_edition_identity": "Dios así lo quiso | 2021-04-09 | XW | None | 196006391256 | 1 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "02526fb033d49c2050b6b7e29d469fd1"
+    },
+    {
+      "release_id": "49452aad-55b3-44b4-b671-870ed446a519",
+      "release_group_id": "9a2cf29d-1d5e-4793-8dfe-a715e731e5e0",
+      "title": "Duets: Greatest Hits",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "9a2cf29d-1d5e-4793-8dfe-a715e731e5e0",
+      "verified_edition_identity": "Duets: Greatest Hits | 2020-05-01 | XW | None | 195081486994 | 12 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "dd194f6feef6f055695280c0194a512b"
+    },
+    {
+      "release_id": "ce3994de-9025-4cd8-b6bd-ab5afbdbdab4",
+      "release_group_id": "da061cf6-ad52-46af-a5d4-5f3e044b18be",
+      "title": "El Niágara en bicicleta",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "da061cf6-ad52-46af-a5d4-5f3e044b18be",
+      "verified_edition_identity": "El Niágara en bicicleta | 2025-09-26 | XW | format unknown | 199538906813 | 1 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "bd36add6612d29434c21b76924283fad"
+    },
+    {
+      "release_id": "9377dfe3-7011-47d7-964d-98b628918559",
+      "release_group_id": "5ab79b2d-70b6-4d2c-822f-b2f873b5be67",
+      "title": "Encuentro",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "5ab79b2d-70b6-4d2c-822f-b2f873b5be67",
+      "verified_edition_identity": "Encuentro | 2002-12 | PR | Jewel Case | 604731200779 | 17 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "4dbf52ccfca7e7b1b5ad65593e742af5"
+    },
+    {
+      "release_id": "8562d880-e42d-4c4d-8c55-d9101fdf3d22",
+      "release_group_id": "83f49ca3-2c89-4b53-bf0b-799f86eaa546",
+      "title": "Entre mar y palmeras",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "83f49ca3-2c89-4b53-bf0b-799f86eaa546",
+      "verified_edition_identity": "Entre mar y palmeras | 2021-08-16 | XW | format unknown | 196006692858 | 16 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "3692f7f122e7877ac933832141ed362f"
+    },
+    {
+      "release_id": "e0ed4d63-785e-41ac-881f-1a0dfee6f545",
+      "release_group_id": "83f49ca3-2c89-4b53-bf0b-799f86eaa546",
+      "title": "Entre mar y palmeras",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "83f49ca3-2c89-4b53-bf0b-799f86eaa546",
+      "verified_edition_identity": "Entre mar y palmeras | 2021-09-10 | PR | format unknown | 196006926281 | 16 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "a8838688dff323470a9930ed50961927"
+    },
+    {
+      "release_id": "b6fff6ed-ed73-43fb-af16-931765ecaadf",
+      "release_group_id": "985a6a93-298c-4c5f-8ebc-04c8bad96edb",
+      "title": "Esto es vida",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "985a6a93-298c-4c5f-8ebc-04c8bad96edb",
+      "verified_edition_identity": "Esto es vida | 2023-10-17 | XW | None | 196871387903 | 1 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "cc496fcc38b61e0d29e84484cb66dbbd"
+    },
+    {
+      "release_id": "b1b17a51-566e-4c55-b065-6bbcf62278c0",
+      "release_group_id": "0eec90cf-0e39-442e-bcec-b1ca8aad5ff5",
+      "title": "Esto es vida (bachata remix)",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "0eec90cf-0e39-442e-bcec-b1ca8aad5ff5",
+      "verified_edition_identity": "Esto es vida (bachata remix) | 2013-09-30 | XW | None |  | 1 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "e5e92442a81078c4f470a4daf5303252"
+    },
+    {
+      "release_id": "5d4e125e-ca2d-4391-8b36-ee3223a90ea9",
+      "release_group_id": "3612d839-24bd-4514-bc7f-39efdf64651e",
+      "title": "Estrellitas y duendes",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "3612d839-24bd-4514-bc7f-39efdf64651e",
+      "verified_edition_identity": "Estrellitas y duendes | 2025-11-06 | XW | format unknown | 199538436273 | 1 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "140429c82071f10ddc1f942bdbf9db36"
+    },
+    {
+      "release_id": "e8f8b2ba-8856-42c4-9280-184f529f951f",
+      "release_group_id": "495ca7ed-23f9-4f26-a7fd-365ceee9a5a0",
+      "title": "Fogaraté",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "495ca7ed-23f9-4f26-a7fd-365ceee9a5a0",
+      "verified_edition_identity": "Fogaraté! | 1994-01-01 | XW | None | 886296759231 | 12 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "b12bfdc479035df70b065f079767627a"
+    },
+    {
+      "release_id": "d2d6198d-f801-4d07-a415-3852ea4128e0",
+      "release_group_id": "495ca7ed-23f9-4f26-a7fd-365ceee9a5a0",
+      "title": "Fogaraté!",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "495ca7ed-23f9-4f26-a7fd-365ceee9a5a0",
+      "verified_edition_identity": "Fogaraté! | 1994-02-25 | US | Jewel Case | 743212111026 | 12 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "b12bfdc479035df70b065f079767627a"
+    },
+    {
+      "release_id": "2489f428-4ce1-46c7-90cd-70775fe85a4c",
+      "release_group_id": "89b98244-cf46-47e8-bd82-469a45edd299",
+      "title": "Frío, frío",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "89b98244-cf46-47e8-bd82-469a45edd299",
+      "verified_edition_identity": "Frío, frío | 2013 | XW | None | 5099993462358 | 1 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "39d99b71ec57eee2f67892a50620bc83"
+    },
+    {
+      "release_id": "bd2e1cd2-6ce5-4758-a3d6-cabc5a5ab054",
+      "release_group_id": "89b98244-cf46-47e8-bd82-469a45edd299",
+      "title": "Frío, frío",
+      "classification": "C — PROBABLE DUPLICATE RELEASE",
+      "candidate_family_id": "89b98244-cf46-47e8-bd82-469a45edd299",
+      "verified_edition_identity": "Frío, frío | 2013-03-08 | XW | None | barcode unknown | 1 tracks",
+      "meaningful_distinction": "None independently supported; same product as 2489f428-4ce1-46c7-90cd-70775fe85a4c",
+      "evidence": [
+        "Universal/EMI Latin UPC 05099993462358",
+        "Apple collection 715572858",
+        "Prior targeted Frío review"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "40790bb4146badcdfb42f1027fea0d23"
+    },
+    {
+      "release_id": "a2dea77c-93a9-4d69-bdba-930276d872b2",
+      "release_group_id": "a5b0f061-92b4-4f50-afaa-c9e5cf88d850",
+      "title": "Gracias",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "a5b0f061-92b4-4f50-afaa-c9e5cf88d850",
+      "verified_edition_identity": "Gracias | 2020-04-10 | XW | format unknown | 195039338986 | 1 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "de96156174094a2aaffa79aff1036506"
+    },
+    {
+      "release_id": "624e0caf-4412-4b27-abfb-7aea518a5b8d",
+      "release_group_id": "4f8c1ff7-217f-4fb0-a834-53ed27566bb0",
+      "title": "Gracias a la vida",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "4f8c1ff7-217f-4fb0-a834-53ed27566bb0",
+      "verified_edition_identity": "Gracias a la vida | 2010-05-04 | MX | None | barcode unknown | 1 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "cfaf32c73d0332f698883213b9d70be5"
+    },
+    {
+      "release_id": "6a571c33-ab65-469d-b7df-76fdadbb674b",
+      "release_group_id": "7e51f3b7-871a-4cc8-957b-a68bc0299496",
+      "title": "Grandes éxitos",
+      "classification": "C — PROBABLE DUPLICATE RELEASE",
+      "candidate_family_id": "7e51f3b7-871a-4cc8-957b-a68bc0299496",
+      "verified_edition_identity": "Grandes éxitos | 1995 | ES | Jewel Case | 743213012827 | 18 tracks",
+      "meaningful_distinction": "None independently supported; same product as 77bb8012-308b-4c94-8937-df022a431b05",
+      "evidence": [
+        "Same ES date, territory, packaging and UPC as survivor",
+        "Same 18 Recordings in order",
+        "Only punctuation and 0.8-second terminal timing noise"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "959dbde779f7746b6a0f183928f459f2"
+    },
+    {
+      "release_id": "77bb8012-308b-4c94-8937-df022a431b05",
+      "release_group_id": "7e51f3b7-871a-4cc8-957b-a68bc0299496",
+      "title": "Grandes éxitos de Juan Luis Guerra 4 40",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "7e51f3b7-871a-4cc8-957b-a68bc0299496",
+      "verified_edition_identity": "Grandes éxitos | 1995 | ES | Jewel Case | 743213012827 | 18 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "2ecf1c40da9d156ae5062b122384d8c4"
+    },
+    {
+      "release_id": "502264af-3841-4b82-8a5d-a511b152e29f",
+      "release_group_id": "7e51f3b7-871a-4cc8-957b-a68bc0299496",
+      "title": "Grandes éxitos",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "7e51f3b7-871a-4cc8-957b-a68bc0299496",
+      "verified_edition_identity": "Grandes éxitos | 1995 | MX | Jewel Case | 710793017726 | 17 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "1b9ea36c9dfdb466b6c3006ccfecae51"
+    },
+    {
+      "release_id": "b483896d-cf09-46d4-ae1c-bc7ac8bbf980",
+      "release_group_id": "7e51f3b7-871a-4cc8-957b-a68bc0299496",
+      "title": "Grandes éxitos",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "7e51f3b7-871a-4cc8-957b-a68bc0299496",
+      "verified_edition_identity": "Grandes éxitos | 1995-01-01 | XW | None | 198391976674 | 17 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "1b9ea36c9dfdb466b6c3006ccfecae51"
+    },
+    {
+      "release_id": "c19d7a5f-1cc5-429c-bdf6-a497da15a684",
+      "release_group_id": "7e51f3b7-871a-4cc8-957b-a68bc0299496",
+      "title": "Grandes éxitos",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "7e51f3b7-871a-4cc8-957b-a68bc0299496",
+      "verified_edition_identity": "Grandes éxitos | 1995 | territory unknown | format unknown | 743212941821 | 15 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "4f08bd3176890471f46b70a08e09b15e"
+    },
+    {
+      "release_id": "1eb18bee-1f7d-41fb-9ba2-6614b62103d7",
+      "release_group_id": "7e51f3b7-871a-4cc8-957b-a68bc0299496",
+      "title": "Grandes éxitos de Juan Luis Guerra 4 40",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "7e51f3b7-871a-4cc8-957b-a68bc0299496",
+      "verified_edition_identity": "Grandes éxitos | 1996 | ES | Jewel Case | 710793017726 | 17 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "1b9ea36c9dfdb466b6c3006ccfecae51"
+    },
+    {
+      "release_id": "6e9a90f0-b789-4640-9c3c-4569522a8d9f",
+      "release_group_id": "7e51f3b7-871a-4cc8-957b-a68bc0299496",
+      "title": "Grandes éxitos de Juan Luis Guerra 4 40",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "7e51f3b7-871a-4cc8-957b-a68bc0299496",
+      "verified_edition_identity": "Grandes éxitos | 1996 | US | Jewel Case | 248526070000 | 17 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "1b9ea36c9dfdb466b6c3006ccfecae51"
+    },
+    {
+      "release_id": "c3411cf6-b563-4601-bffd-8af42aa3f2d5",
+      "release_group_id": "7e51f3b7-871a-4cc8-957b-a68bc0299496",
+      "title": "Grandes éxitos de Juan Luis Guerra 4 40",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "7e51f3b7-871a-4cc8-957b-a68bc0299496",
+      "verified_edition_identity": "Grandes éxitos | 2004 | AR | Digipak | 724386409720 | 16 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "e37e5ee869a9e22e13e1f09b3934f7da"
+    },
+    {
+      "release_id": "089ca320-b5cf-48b8-8c97-148b6bc92875",
+      "release_group_id": "7e51f3b7-871a-4cc8-957b-a68bc0299496",
+      "title": "Grandes éxitos",
+      "classification": "E — UNCERTAIN",
+      "candidate_family_id": "7e51f3b7-871a-4cc8-957b-a68bc0299496",
+      "verified_edition_identity": "Grandes éxitos | date unknown | territory unknown | format unknown | barcode unknown | 15 tracks",
+      "meaningful_distinction": "Insufficient edition metadata",
+      "evidence": [
+        "Production metadata incomplete",
+        "No independently decisive product identity located"
+      ],
+      "confidence": "low",
+      "track_program_fingerprint": "6505822efe54cdc916d833d6e4ac983c"
+    },
+    {
+      "release_id": "0f3b7ada-04b3-479c-8491-4edeb79f9c2f",
+      "release_group_id": "7e51f3b7-871a-4cc8-957b-a68bc0299496",
+      "title": "Grandes éxitos",
+      "classification": "E — UNCERTAIN",
+      "candidate_family_id": "7e51f3b7-871a-4cc8-957b-a68bc0299496",
+      "verified_edition_identity": "Grandes éxitos | date unknown | territory unknown | format unknown | barcode unknown | 16 tracks",
+      "meaningful_distinction": "Insufficient edition metadata",
+      "evidence": [
+        "Production metadata incomplete",
+        "No independently decisive product identity located"
+      ],
+      "confidence": "low",
+      "track_program_fingerprint": "0662aac4c2f4b4308b4c9c69b73e8030"
+    },
+    {
+      "release_id": "6f8d7fc9-c1e6-4f72-a139-159215c2ddbe",
+      "release_group_id": "7e51f3b7-871a-4cc8-957b-a68bc0299496",
+      "title": "Grandes Éxitos",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "7e51f3b7-871a-4cc8-957b-a68bc0299496",
+      "verified_edition_identity": "Grandes éxitos | date unknown | territory unknown | format unknown | 0886296761371 | 17 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "1b9ea36c9dfdb466b6c3006ccfecae51"
+    },
+    {
+      "release_id": "5c6eb8c4-ca5b-4bee-ba94-847750832d6b",
+      "release_group_id": "716a77c2-46b7-4a9f-929d-4a878a3f1ec5",
+      "title": "Grandes Éxitos",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "716a77c2-46b7-4a9f-929d-4a878a3f1ec5",
+      "verified_edition_identity": "Grandes Éxitos | 2025-09-19 | XW | format unknown | 199538570199 | 50 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "76e300c58a50e101d8bf74e9e4c41c50"
+    },
+    {
+      "release_id": "18fb43f1-efe7-44f9-a2e7-ff27a013404b",
+      "release_group_id": "75798414-4412-4324-9ed0-bd935b245a9d",
+      "title": "I Love You More",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "75798414-4412-4324-9ed0-bd935b245a9d",
+      "verified_edition_identity": "I Love You More | 2019-05-10 | XW | None | barcode unknown | 1 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "c64d3c9e0dbd7790f35eda95f6b0ad57"
+    },
+    {
+      "release_id": "31716781-efd7-4485-a446-c4d6a8ec7cf3",
+      "release_group_id": "db0d5fdc-446d-4e3d-8882-a8b31a215ad4",
+      "title": "Kitipun",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "db0d5fdc-446d-4e3d-8882-a8b31a215ad4",
+      "verified_edition_identity": "Kitipun | 2019-04-05 | XW | None | barcode unknown | 1 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "c5381e9777ab32c1d0da7ee229c737fb"
+    },
+    {
+      "release_id": "e2f34b09-65b5-49c3-8f24-f0e8d0cbab21",
+      "release_group_id": "d4ca4dc3-2eb4-4483-912c-d0ac4dfb0a5d",
+      "title": "La llave de mi corazón",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "d4ca4dc3-2eb4-4483-912c-d0ac4dfb0a5d",
+      "verified_edition_identity": "La llave de mi corazón | 2007 | CO | Jewel Case | 5099950710522 | 22 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "e536daaa99397bb1d5dad6e1aaa748cf"
+    },
+    {
+      "release_id": "77d5e7a6-a6b8-454e-b004-84f69b76a0a1",
+      "release_group_id": "d4ca4dc3-2eb4-4483-912c-d0ac4dfb0a5d",
+      "title": "La llave de mi corazón",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "d4ca4dc3-2eb4-4483-912c-d0ac4dfb0a5d",
+      "verified_edition_identity": "La llave de mi corazón | 2007-01-01 | XW | format unknown | 05099950959259 | 17 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "d39d21a5db071f4a6a17488a80ee9312"
+    },
+    {
+      "release_id": "7f7690b2-570e-4537-a5fa-bfb38c575e07",
+      "release_group_id": "d4ca4dc3-2eb4-4483-912c-d0ac4dfb0a5d",
+      "title": "La llave de mi corazón",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "d4ca4dc3-2eb4-4483-912c-d0ac4dfb0a5d",
+      "verified_edition_identity": "La llave de mi corazón | 2007 | XW | format unknown | barcode unknown | 13 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "d1a50d1030f7387a0a0ef2c0aff9d81b"
+    },
+    {
+      "release_id": "7fe16589-8481-471d-89e0-0a9cc005060e",
+      "release_group_id": "932fdbbe-a7cf-4c66-9418-69cce41fd8b5",
+      "title": "La llave de mi corazon",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "932fdbbe-a7cf-4c66-9418-69cce41fd8b5",
+      "verified_edition_identity": "La llave de mi corazón | 2007-01-01 | territory unknown | None | 5099950710553 | 2 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "3f14c6f35027478e9a2db58709bc90fa"
+    },
+    {
+      "release_id": "fbdd457b-6e8f-4b38-a597-0571c97d2e5e",
+      "release_group_id": "932fdbbe-a7cf-4c66-9418-69cce41fd8b5",
+      "title": "La llave de mi corazón",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "932fdbbe-a7cf-4c66-9418-69cce41fd8b5",
+      "verified_edition_identity": "La llave de mi corazón | 2007-02-20 | US | None |  | 1 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "f99190e8ebd4244f4291fe42b3a6baf2"
+    },
+    {
+      "release_id": "e555950e-03ca-4aad-9b52-96175cc0fab1",
+      "release_group_id": "d4ca4dc3-2eb4-4483-912c-d0ac4dfb0a5d",
+      "title": "La llave de mi corazón",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "d4ca4dc3-2eb4-4483-912c-d0ac4dfb0a5d",
+      "verified_edition_identity": "La llave de mi corazón | 2007-03-20 | DO | format unknown | barcode unknown | 13 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "b667a491af37895dc6539eb4d4771cb9"
+    },
+    {
+      "release_id": "15771474-476f-41d8-b9f4-0d93c6396977",
+      "release_group_id": "d4ca4dc3-2eb4-4483-912c-d0ac4dfb0a5d",
+      "title": "La llave de mi corazón",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "d4ca4dc3-2eb4-4483-912c-d0ac4dfb0a5d",
+      "verified_edition_identity": "La llave de mi corazón | 2007-03-20 | US | None |  | 14 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "cf5603fb77e279a836c589cc32658083"
+    },
+    {
+      "release_id": "e80f3334-4397-4f98-8624-28e011771bc4",
+      "release_group_id": "932fdbbe-a7cf-4c66-9418-69cce41fd8b5",
+      "title": "La llave de mi corazón (edición especial)",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "932fdbbe-a7cf-4c66-9418-69cce41fd8b5",
+      "verified_edition_identity": "La llave de mi corazón | 2007-10-02 | XW | None |  | 2 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "3f14c6f35027478e9a2db58709bc90fa"
+    },
+    {
+      "release_id": "fb279b45-8b9d-4dd2-b800-12ca0dbefdfc",
+      "release_group_id": "9bb69ace-af9c-4f2f-80d7-8c8ef42812d9",
+      "title": "Las de Juan Luis",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "9bb69ace-af9c-4f2f-80d7-8c8ef42812d9",
+      "verified_edition_identity": "Las de Juan Luis | 2022-12-11 | XW | None | 197077958232 | 1 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "7354c2cb7a224f3fef7a04aaf4313a3d"
+    },
+    {
+      "release_id": "b5e676d3-553d-4508-a511-dec6e5cf558c",
+      "release_group_id": "43a44ba3-acf4-4deb-ba81-a67c91863ff4",
+      "title": "Literal",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "43a44ba3-acf4-4deb-ba81-a67c91863ff4",
+      "verified_edition_identity": "Literal | 2019-05-31 | US | Jewel Case | 602577650277 | 11 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "3b3db33656e4fe29c01961eb1d395059"
+    },
+    {
+      "release_id": "0b1683cc-6f6c-4885-8036-e926df045b82",
+      "release_group_id": "43a44ba3-acf4-4deb-ba81-a67c91863ff4",
+      "title": "Literal",
+      "classification": "C — PROBABLE DUPLICATE RELEASE",
+      "candidate_family_id": "43a44ba3-acf4-4deb-ba81-a67c91863ff4",
+      "verified_edition_identity": "Literal | 2019-05-31 | XW | format unknown | barcode unknown | 11 tracks",
+      "meaningful_distinction": "None independently supported; same product as baf380be-1374-4a0d-afb4-bc895e1425ec",
+      "evidence": [
+        "Same date and exact 11-Recording program as survivor",
+        "Survivor carries digital UPC 602577649394",
+        "Prior album audit found one commercial master set"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "3b3db33656e4fe29c01961eb1d395059"
+    },
+    {
+      "release_id": "baf380be-1374-4a0d-afb4-bc895e1425ec",
+      "release_group_id": "43a44ba3-acf4-4deb-ba81-a67c91863ff4",
+      "title": "Literal",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "43a44ba3-acf4-4deb-ba81-a67c91863ff4",
+      "verified_edition_identity": "Literal | 2019-05-31 | territory unknown | format unknown | 602577649394 | 11 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "a61ffd581ae68accafce1726a0dbdb16"
+    },
+    {
+      "release_id": "582c5388-9323-425d-9604-ad38b4f8b6d1",
+      "release_group_id": "b242cc1f-2fcf-4495-9efd-6078dd763f6e",
+      "title": "Live in Love",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "b242cc1f-2fcf-4495-9efd-6078dd763f6e",
+      "verified_edition_identity": "Live in Love | 2021-05-28 | XW | None | 196006428730 | 1 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "664e09678ccebc788b02c32cdc72cb9e"
+    },
+    {
+      "release_id": "0953019a-225f-4a85-83ba-edbfed6354e6",
+      "release_group_id": "e77d0fce-21c3-4656-bb94-521a207062c0",
+      "title": "Los grandes éxitos de Juan Luis Guerra y 440",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "e77d0fce-21c3-4656-bb94-521a207062c0",
+      "verified_edition_identity": "Los grandes éxitos de Juan Luis Guerra y 440 | 2007-01-30 | DO | format unknown | barcode unknown | 12 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "058bf885b1ab947cc8ce31b74bced302"
+    },
+    {
+      "release_id": "df25b67f-f908-4a44-bd52-0f707d92f192",
+      "release_group_id": "fc1a39bd-29d2-4a87-afa3-c5027967c8e3",
+      "title": "MAMBO 23",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "fc1a39bd-29d2-4a87-afa3-c5027967c8e3",
+      "verified_edition_identity": "MAMBO 23 | 2023-09-22 | XW | format unknown | 197189561276 | 1 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "53a38a870f29c1859b5a9d990ae50da2"
+    },
+    {
+      "release_id": "a6bfae78-28b0-4afa-8342-c4c2814b5e2c",
+      "release_group_id": "59665279-9794-483a-9fc6-f406ff171311",
+      "title": "Medicine for My Soul",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "59665279-9794-483a-9fc6-f406ff171311",
+      "verified_edition_identity": "Medicine for My Soul | 2007-02-27 | US | None |  | 1 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "6393069efed6daf804f9ade52ebafcbf"
+    },
+    {
+      "release_id": "692a78fa-3dee-496e-9898-740e9f9ce8ed",
+      "release_group_id": "f182f2c8-067c-41fb-ab2a-b3a639e74593",
+      "title": "Mi amor (from “Capitán Avispa”)",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "f182f2c8-067c-41fb-ab2a-b3a639e74593",
+      "verified_edition_identity": "Mi amor (from “Capitán Avispa”) | 2024-03-15 | XW | None | 198342555286 | 1 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "5aff65fe0a7c0c97c51b83b03dd0db7f"
+    },
+    {
+      "release_id": "f30dd357-4186-40d8-8cb9-205b43748de0",
+      "release_group_id": "25ede52b-34ac-43db-9651-f8908b8823ed",
+      "title": "Mi guitarra",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "25ede52b-34ac-43db-9651-f8908b8823ed",
+      "verified_edition_identity": "Mi guitarra | 2021-01-14 | territory unknown | None | 602435648712 | 1 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "01df4d86090f1fcee9e51742e76df4f5"
+    },
+    {
+      "release_id": "4477d996-ed02-45b9-9baa-8b54f94fcf8f",
+      "release_group_id": "7ad09674-02e6-47d7-b12f-8a257cdd0f83",
+      "title": "Mientras más lo pienso… tú",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "7ad09674-02e6-47d7-b12f-8a257cdd0f83",
+      "verified_edition_identity": "Mientras más lo pienso .......tú | 1986-01-01 | XW | None | 198391255724 | 8 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "3a05e19f40e0aeb4a8d089f8f079a1a4"
+    },
+    {
+      "release_id": "75f3269e-2036-4dd4-9dcc-ae9d9c833a1c",
+      "release_group_id": "7ad09674-02e6-47d7-b12f-8a257cdd0f83",
+      "title": "Mientras más lo pienso .......tú",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "7ad09674-02e6-47d7-b12f-8a257cdd0f83",
+      "verified_edition_identity": "Mientras más lo pienso .......tú | 1987 | DO | format unknown | barcode unknown | 8 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "2981076a6fdd3a32b49cf513b654de0b"
+    },
+    {
+      "release_id": "3ae69ae8-b3f3-4693-8c52-c6439e901b7a",
+      "release_group_id": "7ad09674-02e6-47d7-b12f-8a257cdd0f83",
+      "title": "Mientras más lo pienso .......tú",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "7ad09674-02e6-47d7-b12f-8a257cdd0f83",
+      "verified_edition_identity": "Mientras más lo pienso .......tú | 1995-01-01 | US | None | barcode unknown | 7 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "49ab58479ddbec3e5353f49bc5bbed7d"
+    },
+    {
+      "release_id": "f9d31503-5eb5-4f50-a13f-e1f759031c94",
+      "release_group_id": "7ad09674-02e6-47d7-b12f-8a257cdd0f83",
+      "title": "Mientras más lo pienso .......tú",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "7ad09674-02e6-47d7-b12f-8a257cdd0f83",
+      "verified_edition_identity": "Mientras más lo pienso .......tú | 1995 | territory unknown | format unknown | barcode unknown | 8 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "2981076a6fdd3a32b49cf513b654de0b"
+    },
+    {
+      "release_id": "d50289ab-5e15-49dd-9d81-35a6fe9a61d8",
+      "release_group_id": "2895407b-912c-4820-b04a-5130538d8256",
+      "title": "Mudanza y acarreo",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "2895407b-912c-4820-b04a-5130538d8256",
+      "verified_edition_identity": "Mudanza y acarreo | 1985 | VE | Cardboard/Paper Sleeve |  | 8 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "1c9c27d306685bb282cd0f4d29ac7521"
+    },
+    {
+      "release_id": "23d9596d-10b6-4deb-9d0c-48de00846db1",
+      "release_group_id": "2895407b-912c-4820-b04a-5130538d8256",
+      "title": "Mudanza y acarreo",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "2895407b-912c-4820-b04a-5130538d8256",
+      "verified_edition_identity": "Mudanza y acarreo | 1985-01-01 | XW | None | 198391592850 | 8 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "d4be4dde29aa93bf916b83770d99cffa"
+    },
+    {
+      "release_id": "8eff6b05-921a-44bd-bc3b-ad819af3b394",
+      "release_group_id": "2895407b-912c-4820-b04a-5130538d8256",
+      "title": "Mudanza y acarreo",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "2895407b-912c-4820-b04a-5130538d8256",
+      "verified_edition_identity": "Mudanza y acarreo | 1990-12-31 | US | None |  | 8 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "47c845cc8c7f1d7862d95cf17c88e119"
+    },
+    {
+      "release_id": "cdce6631-0f78-4cef-95a8-a45ed56a554d",
+      "release_group_id": "2895407b-912c-4820-b04a-5130538d8256",
+      "title": "Mudanza y acarreo",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "2895407b-912c-4820-b04a-5130538d8256",
+      "verified_edition_identity": "Mudanza y acarreo | 1991 | ES | format unknown | barcode unknown | 8 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "c406ff66e8365bf56cc9af4e263785d4"
+    },
+    {
+      "release_id": "3010adab-4416-4f1f-a068-42b095f3a723",
+      "release_group_id": "2895407b-912c-4820-b04a-5130538d8256",
+      "title": "Mudanza y acarreo",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "2895407b-912c-4820-b04a-5130538d8256",
+      "verified_edition_identity": "Mudanza y acarreo | 1995 | US | Jewel Case | 710793009127 | 8 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "fa5b881419dced9f933c8819c5e1ea1b"
+    },
+    {
+      "release_id": "4d273516-02fd-4b43-bc06-b87bbe05a0ad",
+      "release_group_id": "71fbedac-d8ff-429f-acf1-8fa87a8a4156",
+      "title": "Não tenho lágrimas",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "71fbedac-d8ff-429f-acf1-8fa87a8a4156",
+      "verified_edition_identity": "Não tenho lágrimas | 2007 | BR | None | 5099952092251 | 1 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "0f8f05b132d4d3cc53dda04ca7a8635b"
+    },
+    {
+      "release_id": "ca4645a6-c0e8-4d01-a029-cfd2419d9473",
+      "release_group_id": "db9135d0-0dc7-4a79-9fa5-b9dfe90bd9e7",
+      "title": "Ni es lo mismo ni es igual",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "db9135d0-0dc7-4a79-9fa5-b9dfe90bd9e7",
+      "verified_edition_identity": "Ni es lo mismo ni es igual | 1998 | ES | Jewel Case | 710793021624 | 11 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "36e9461533cb0265c44312a5cb095860"
+    },
+    {
+      "release_id": "fcd5cf4d-a9a2-406a-aa33-6854491fa15f",
+      "release_group_id": "db9135d0-0dc7-4a79-9fa5-b9dfe90bd9e7",
+      "title": "Ni es lo mismo ni es igual",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "db9135d0-0dc7-4a79-9fa5-b9dfe90bd9e7",
+      "verified_edition_identity": "Ni es lo mismo ni es igual | 1998 | US | Jewel Case | 269464070000 | 11 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "36e9461533cb0265c44312a5cb095860"
+    },
+    {
+      "release_id": "747e6079-40f1-47f5-af1b-394f8511387d",
+      "release_group_id": "db9135d0-0dc7-4a79-9fa5-b9dfe90bd9e7",
+      "title": "Ni es lo mismo ni es igual",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "db9135d0-0dc7-4a79-9fa5-b9dfe90bd9e7",
+      "verified_edition_identity": "Ni es lo mismo ni es igual | 1998-01-01 | XW | None | 886296759262 | 11 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "36e9461533cb0265c44312a5cb095860"
+    },
+    {
+      "release_id": "f19ef3dc-6084-4db4-a39d-34f047f960a3",
+      "release_group_id": "db9135d0-0dc7-4a79-9fa5-b9dfe90bd9e7",
+      "title": "Ni es lo mismo ni es igual",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "db9135d0-0dc7-4a79-9fa5-b9dfe90bd9e7",
+      "verified_edition_identity": "Ni es lo mismo ni es igual | 1998-11-01 | US | None |  | 10 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "d70d9f5e63d4cdcb075d660de025bbca"
+    },
+    {
+      "release_id": "8e140f27-3f4f-445f-9f62-f3db2f10c20a",
+      "release_group_id": "a21d3e4f-71a4-4ed4-9c7a-2839a20a7aeb",
+      "title": "Ojalá que llueva café",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "a21d3e4f-71a4-4ed4-9c7a-2839a20a7aeb",
+      "verified_edition_identity": "Ojalá que llueva café | 1989-01-01 | XW | None | 886296759279 | 8 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "d1c7977a86406e24c2464031496bbb0c"
+    },
+    {
+      "release_id": "15141961-b981-4d5e-a3ce-4a3717407c34",
+      "release_group_id": "a21d3e4f-71a4-4ed4-9c7a-2839a20a7aeb",
+      "title": "Ojalá que llueva café",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "a21d3e4f-71a4-4ed4-9c7a-2839a20a7aeb",
+      "verified_edition_identity": "Ojalá que llueva café | 1990 | DO | format unknown | barcode unknown | 8 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "d1c7977a86406e24c2464031496bbb0c"
+    },
+    {
+      "release_id": "368e9cd1-4f12-4d92-b5d1-5bfcd83d6823",
+      "release_group_id": "a21d3e4f-71a4-4ed4-9c7a-2839a20a7aeb",
+      "title": "Ojalá que llueva café",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "a21d3e4f-71a4-4ed4-9c7a-2839a20a7aeb",
+      "verified_edition_identity": "Ojalá que llueva café | 1990 | ES | Jewel Case |  | 8 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "4f06b8494b4144ef06b1d1a1d0cd8cef"
+    },
+    {
+      "release_id": "6943bbde-4db0-4567-82c7-2ab1f0c6fb7b",
+      "release_group_id": "a21d3e4f-71a4-4ed4-9c7a-2839a20a7aeb",
+      "title": "Ojalá que llueva café",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "a21d3e4f-71a4-4ed4-9c7a-2839a20a7aeb",
+      "verified_edition_identity": "Ojalá que llueva café | 1990 | XE | Jewel Case | 4007192621002 | 8 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "4f06b8494b4144ef06b1d1a1d0cd8cef"
+    },
+    {
+      "release_id": "2161b53d-88b0-4c25-8683-cc835b642fb7",
+      "release_group_id": "a21d3e4f-71a4-4ed4-9c7a-2839a20a7aeb",
+      "title": "Ojalá que llueva café",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "a21d3e4f-71a4-4ed4-9c7a-2839a20a7aeb",
+      "verified_edition_identity": "Ojalá que llueva café | 1995 | US | Jewel Case | 710793012622 | 8 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "d1c7977a86406e24c2464031496bbb0c"
+    },
+    {
+      "release_id": "7890306e-4917-440a-9b8f-748cfd993ef1",
+      "release_group_id": "a21d3e4f-71a4-4ed4-9c7a-2839a20a7aeb",
+      "title": "Ojalá que llueva café",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "a21d3e4f-71a4-4ed4-9c7a-2839a20a7aeb",
+      "verified_edition_identity": "Ojalá que llueva café | 1995 | US | Jewel Case | 248567070000 | 8 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "d1c7977a86406e24c2464031496bbb0c"
+    },
+    {
+      "release_id": "2b3f7491-54d8-4ae6-bc2a-403e7d3b741c",
+      "release_group_id": "a21d3e4f-71a4-4ed4-9c7a-2839a20a7aeb",
+      "title": "Ojalá que llueva café",
+      "classification": "E — UNCERTAIN",
+      "candidate_family_id": "a21d3e4f-71a4-4ed4-9c7a-2839a20a7aeb",
+      "verified_edition_identity": "Ojalá que llueva café |  | US | format unknown | barcode unknown | 7 tracks",
+      "meaningful_distinction": "Insufficient edition metadata",
+      "evidence": [
+        "Production metadata incomplete",
+        "No independently decisive product identity located"
+      ],
+      "confidence": "low",
+      "track_program_fingerprint": "37fd99b34adb75b107cc9be409872ef0"
+    },
+    {
+      "release_id": "2a760f77-e6d0-4292-b49d-e17e79771ad0",
+      "release_group_id": "964c3c9d-33d3-45c9-badf-23dd961f07a8",
+      "title": "Para ti",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "964c3c9d-33d3-45c9-badf-23dd961f07a8",
+      "verified_edition_identity": "Para ti | 2004 | ES | Jewel Case | 0827865100023 | 11 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "b86edff6e5b4b70da6fe5ffd7357608f"
+    },
+    {
+      "release_id": "7f654c36-ed16-461a-b619-726af34bd819",
+      "release_group_id": "964c3c9d-33d3-45c9-badf-23dd961f07a8",
+      "title": "Para ti",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "964c3c9d-33d3-45c9-badf-23dd961f07a8",
+      "verified_edition_identity": "Para ti | 2004-01-01 | territory unknown | None | 602508061264 | 11 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "b86edff6e5b4b70da6fe5ffd7357608f"
+    },
+    {
+      "release_id": "4afb2859-1850-4643-8b61-f231c8b920a5",
+      "release_group_id": "1ba64bf2-2e92-4ee4-a5c7-0586690efc49",
+      "title": "Privé",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "1ba64bf2-2e92-4ee4-a5c7-0586690efc49",
+      "verified_edition_identity": "Privé | 2020-12-25 | XW | format unknown | barcode unknown | 5 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "9428a5efa2877bbed7028312487b2df1"
+    },
+    {
+      "release_id": "d05b98f4-672a-4a8e-ae04-d47cf9a9d89a",
+      "release_group_id": "c9cbd215-d811-4634-beb4-a9b8cbc265b2",
+      "title": "Quisiera",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "c9cbd215-d811-4634-beb4-a9b8cbc265b2",
+      "verified_edition_identity": "Quisiera | 2025-12-12 | XW | format unknown | 199806495674 | 1 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "15cb784f36e16848ce1ac6086afbd19c"
+    },
+    {
+      "release_id": "940e31c9-31a5-4ee5-a7c4-1c2a08319a81",
+      "release_group_id": "b8517941-cc0a-4ab0-83e0-1400b9d44e4e",
+      "title": "Quisiera ser un pez... Los grandes éxitos",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "b8517941-cc0a-4ab0-83e0-1400b9d44e4e",
+      "verified_edition_identity": "Quisiera ser un pez... Los grandes éxitos | 2012-09-21 | ES | Jewel Case | 5099923264625 | 30 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "5b93b293546ae694f4fcc30e2bb0cec5"
+    },
+    {
+      "release_id": "2413677d-8837-432f-ae60-98e6996a5d09",
+      "release_group_id": "11b2a86f-580d-4df9-af7f-d6b709e9a4f9",
+      "title": "Radio Güira",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "11b2a86f-580d-4df9-af7f-d6b709e9a4f9",
+      "verified_edition_identity": "Radio Güira | 2023-11-03 | XW | format unknown | barcode unknown | 6 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "77f2ba10d1ded3218c561f5c10b30426"
+    },
+    {
+      "release_id": "81602ec5-4534-4d99-9687-d5bb591d7f73",
+      "release_group_id": "6faf6865-09fc-4e94-b9a2-e694a9641cd0",
+      "title": "Romance rosa",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "6faf6865-09fc-4e94-b9a2-e694a9641cd0",
+      "verified_edition_identity": "Romance rosa | 1992-01-01 | XW | None | 5056495341765 | 11 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "17a40eb6c294cca49e73569b079ad316"
+    },
+    {
+      "release_id": "a64170c9-9466-46f7-961e-98d2b3a9ae32",
+      "release_group_id": "6faf6865-09fc-4e94-b9a2-e694a9641cd0",
+      "title": "Romance rosa",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "6faf6865-09fc-4e94-b9a2-e694a9641cd0",
+      "verified_edition_identity": "Romance rosa | 1995-11-07 | US | Jewel Case | 710793017429 | 12 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "d9377b674f858ca16b3466ed119a2222"
+    },
+    {
+      "release_id": "9e3860d0-b028-456f-95c4-0dc9ac40226c",
+      "release_group_id": "5a97484c-4339-44ae-8aa0-76fc01cab0f1",
+      "title": "Rosalía",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "5a97484c-4339-44ae-8aa0-76fc01cab0f1",
+      "verified_edition_identity": "Rosalía | 2021-05-28 | XW | format unknown | 196006666613 | 1 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "ef07a259957d4ee8a84f3e0da2488578"
+    },
+    {
+      "release_id": "4e2f963e-40d3-427b-a591-8d9f9f981fe7",
+      "release_group_id": "1a7913c8-0c9a-4cc1-b8cf-22e067812dfd",
+      "title": "Si no te hubieras ido",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "1a7913c8-0c9a-4cc1-b8cf-22e067812dfd",
+      "verified_edition_identity": "Si no te hubieras ido | 2017-10-06 | XW | None | 602557768558 | 1 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "365dfb43b4eb77e29129a7ca0a555936"
+    },
+    {
+      "release_id": "7193b0da-6978-40e4-8967-2b4f9f67087f",
+      "release_group_id": "d20bca93-cf4c-408f-ba0b-05662128c4b6",
+      "title": "Si tú me quieres",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "d20bca93-cf4c-408f-ba0b-05662128c4b6",
+      "verified_edition_identity": "Si tú me quieres | 2023-04-20 | US | None | 196871024952 | 1 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "2ecf17355a2a1111541669f39c8032d9"
+    },
+    {
+      "release_id": "d9b20a7f-324c-4f86-a6db-c37a95e07c4b",
+      "release_group_id": "b4b25ad0-1acc-4c9a-9ec5-15311477bb96",
+      "title": "Siempre queda el amor",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "b4b25ad0-1acc-4c9a-9ec5-15311477bb96",
+      "verified_edition_identity": "Siempre queda el amor | 2024-11-22 | XW | None | 8447053247655 | 1 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "6d13fbeef6f99b51b4285ff9ab58d495"
+    },
+    {
+      "release_id": "751bb106-c80b-4562-86f0-0bd2a7260147",
+      "release_group_id": "0a50131d-a954-46a5-a73b-3a4ee240bd92",
+      "title": "Soplando",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "0a50131d-a954-46a5-a73b-3a4ee240bd92",
+      "verified_edition_identity": "Soplando | 1984 | DO | format unknown | barcode unknown | 8 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "275b75b7d9e869ac8cc71769db101e45"
+    },
+    {
+      "release_id": "286fc30a-3b20-4538-9f8e-c8dfe09d31c3",
+      "release_group_id": "0a50131d-a954-46a5-a73b-3a4ee240bd92",
+      "title": "El Original 4.40",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "0a50131d-a954-46a5-a73b-3a4ee240bd92",
+      "verified_edition_identity": "Soplando | 1991 | XW | format unknown | barcode unknown | 8 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "275b75b7d9e869ac8cc71769db101e45"
+    },
+    {
+      "release_id": "41c9b094-0d77-4681-a03f-fa5ef3ed1613",
+      "release_group_id": "0a50131d-a954-46a5-a73b-3a4ee240bd92",
+      "title": "El original 4: 40",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "0a50131d-a954-46a5-a73b-3a4ee240bd92",
+      "verified_edition_identity": "Soplando | 2016-06-28 | XW | None | 640014454224 | 8 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "1c7ce075985ce7f7cdbe01b670c91735"
+    },
+    {
+      "release_id": "934a0ee2-6022-4df6-8016-069c8ccdb5f5",
+      "release_group_id": "9d26bdeb-93b9-4a73-9c7a-1bd1923073dc",
+      "title": "The Collection",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "9d26bdeb-93b9-4a73-9c7a-1bd1923073dc",
+      "verified_edition_identity": "The Collection | 2000 | CO | Fatbox | 710793029422 | 35 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "8f0cbf37e86e55607cf78720bf7f8e33"
+    },
+    {
+      "release_id": "acf06f18-115f-4560-88fe-da942df81a8c",
+      "release_group_id": "35cd952d-ff98-4bdc-b629-5999db3b4af4",
+      "title": "Todo Tiene Su Hora",
+      "classification": "C — PROBABLE DUPLICATE RELEASE",
+      "candidate_family_id": "35cd952d-ff98-4bdc-b629-5999db3b4af4",
+      "verified_edition_identity": "Todo tiene su hora | 2014 | ES | format unknown | 0602547037565 | 10 tracks",
+      "meaningful_distinction": "None independently supported; same product as d3dea072-244e-47cf-9bec-89a2e497c7b0",
+      "evidence": [
+        "Same normalized EAN as survivor",
+        "Same ten Recording UUIDs in order",
+        "Same date family and physical program"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "5459339027d9d6f82c567195cb823e09"
+    },
+    {
+      "release_id": "42048620-9ff2-4de4-9696-6723d5d31a6e",
+      "release_group_id": "35cd952d-ff98-4bdc-b629-5999db3b4af4",
+      "title": "Todo tiene su hora",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "35cd952d-ff98-4bdc-b629-5999db3b4af4",
+      "verified_edition_identity": "Todo tiene su hora | 2014-11-10 | US | None |  | 10 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "5459339027d9d6f82c567195cb823e09"
+    },
+    {
+      "release_id": "d3dea072-244e-47cf-9bec-89a2e497c7b0",
+      "release_group_id": "35cd952d-ff98-4bdc-b629-5999db3b4af4",
+      "title": "Todo tiene su hora",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "35cd952d-ff98-4bdc-b629-5999db3b4af4",
+      "verified_edition_identity": "Todo tiene su hora | 2014-11-10 | US | Jewel Case | 602547037565 | 10 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "5459339027d9d6f82c567195cb823e09"
+    },
+    {
+      "release_id": "bf5e9766-226a-4827-95e0-fd334861750d",
+      "release_group_id": "35cd952d-ff98-4bdc-b629-5999db3b4af4",
+      "title": "Todo tiene su hora",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "35cd952d-ff98-4bdc-b629-5999db3b4af4",
+      "verified_edition_identity": "Todo tiene su hora | 2014-11-10 | territory unknown | None | 602547037572 | 10 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "5ef370a1c04ab2ede9e34bc1dc51ecfd"
+    },
+    {
+      "release_id": "ca551d4c-d6a3-4456-b1d2-3bc94ffc993c",
+      "release_group_id": "35cd952d-ff98-4bdc-b629-5999db3b4af4",
+      "title": "Todo tiene su hora",
+      "classification": "B — LEGITIMATE DISTINCT EDITION",
+      "candidate_family_id": "35cd952d-ff98-4bdc-b629-5999db3b4af4",
+      "verified_edition_identity": "Todo tiene su hora | 2015 | CO | Cardboard/Paper Sleeve | 602547390646 | 10 tracks",
+      "meaningful_distinction": "Date, territory, format, barcode and/or Track program",
+      "evidence": [
+        "Edition-specific date/territory/format/barcode or materially different program",
+        "Independent album-family evidence cited in human report"
+      ],
+      "confidence": "medium",
+      "track_program_fingerprint": "5459339027d9d6f82c567195cb823e09"
+    },
+    {
+      "release_id": "1821e7a1-9d15-4409-881f-a084e669fb3d",
+      "release_group_id": "9dc1c97d-e9a7-45d5-b111-7f7be6f0042c",
+      "title": "Toma mi vida",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "9dc1c97d-e9a7-45d5-b111-7f7be6f0042c",
+      "verified_edition_identity": "Toma mi vida | 2011-07-12 | XW | None | barcode unknown | 1 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "dfdfe2412b4b39d0a730a6c540b09e6c"
+    },
+    {
+      "release_id": "bdefe242-1095-44db-8dfe-3c7976eb002a",
+      "release_group_id": "9882f04c-1a6c-4f10-83c4-f2e067552cfa",
+      "title": "Tus besos",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "9882f04c-1a6c-4f10-83c4-f2e067552cfa",
+      "verified_edition_identity": "Tus besos | 2014-08-19 | ES | None |  | 1 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "f6c30a7c873f844160dde673a7828696"
+    },
+    {
+      "release_id": "cc6c9bea-265a-461b-a5ff-4034cb3f6732",
+      "release_group_id": "98737a86-7926-4f78-8513-08fc65807cb9",
+      "title": "Universo latino 1",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "98737a86-7926-4f78-8513-08fc65807cb9",
+      "verified_edition_identity": "Universo latino 1 | 2001 | ES | Jewel Case | 8431588903223 | 10 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "3ae516a2082a04289f080129558461b0"
+    },
+    {
+      "release_id": "f9c82df3-6ddc-41ad-aef5-b4c8983b8b02",
+      "release_group_id": "5e9df5e3-155e-47db-a068-e1236de17b4b",
+      "title": "Woman del Callao",
+      "classification": "A — UNIQUE CANONICAL RELEASE",
+      "candidate_family_id": "5e9df5e3-155e-47db-a068-e1236de17b4b",
+      "verified_edition_identity": "Woman del Callao | 1990 | ES | Jewel Case | 710793010529 | 8 tracks",
+      "meaningful_distinction": "No competing canonical row",
+      "evidence": [
+        "Production relationship inventory",
+        "Complete ordered Track program",
+        "Edition metadata"
+      ],
+      "confidence": "high",
+      "track_program_fingerprint": "f4c142344f0c08b621ead5913600dd3f"
+    }
+  ]
+}

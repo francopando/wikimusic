@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
-import { getSupabaseClient } from "@/lib/supabase";
+import { requireAdminApiRole } from "@/lib/adminApiAuth";
+import { createServiceRoleClient } from "@/lib/supabaseService";
 
 type SubgenrePayload = {
   genre_id?: string | number;
@@ -20,6 +21,8 @@ function slugify(value: string) {
 }
 
 export async function GET(request: Request) {
+  const auth = await requireAdminApiRole("editor");
+  if (auth.response) return auth.response;
   const { searchParams } = new URL(request.url);
   const genreId = searchParams.get("genreId");
   const includeAll = searchParams.get("all") === "1";
@@ -28,7 +31,7 @@ export async function GET(request: Request) {
     return NextResponse.json({ ok: true, subgenres: [] });
   }
 
-  const supabase = getSupabaseClient();
+  const supabase = createServiceRoleClient();
   let query = supabase
     .from("genres")
     .select("id,parent_id,name,description,history_en,history_es,sort_order")
@@ -64,6 +67,8 @@ export async function GET(request: Request) {
 }
 
 export async function POST(request: Request) {
+  const auth = await requireAdminApiRole("editor");
+  if (auth.response) return auth.response;
   const body = (await request.json()) as {
     subgenreId?: string | number | null;
     subgenreData?: SubgenrePayload;
@@ -84,7 +89,7 @@ export async function POST(request: Request) {
     );
   }
 
-  const supabase = getSupabaseClient();
+  const supabase = createServiceRoleClient();
   const existingResponse = subgenreId
     ? await supabase
         .from("genres")

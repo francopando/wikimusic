@@ -241,22 +241,25 @@ export async function getSongById(id: string): Promise<SongRecord | null> {
 // ----------------------
 export type RawCredit = {
   role: string | null;
-  artist:
-    | { id: string; slug: string | null; name: string | null; status?: string | null }
-    | { id: string; slug: string | null; name: string | null; status?: string | null }[]
-    | null;
+  identity_type: "artist" | "external_contributor";
+  identity_id: string;
+  display_name: string;
+  artist_slug: string | null;
+  country: string | null;
 };
 
 export async function getSongCredits(id: string): Promise<RawCredit[]> {
   const cleanId = decodeURIComponent(id).trim().replace(/^"|"$/g, "");
 
-  const { data, error } = await supabase
-    .from("recording_credits")
-    .select("role, artist:artists!inner(id, slug, name, status)")
-    .eq("artist.status", "published")
-    .eq("recording_id", cleanId);
+  const { data, error } = await supabase.rpc("get_public_recording_credits", {
+    recording_uuid: cleanId,
+  });
 
-  return error ? [] : (data as RawCredit[]);
+  if (error) {
+    console.error("getSongCredits error:", error);
+    return [];
+  }
+  return (data ?? []) as RawCredit[];
 }
 
 // ----------------------

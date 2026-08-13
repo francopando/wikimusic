@@ -1,8 +1,11 @@
 import { NextResponse } from "next/server";
-import { getSupabaseClient } from "@/lib/supabase";
+import { requireAdminApiRole } from "@/lib/adminApiAuth";
+import { createServiceRoleClient } from "@/lib/supabaseService";
 import { revalidateHomepageData } from "@/lib/homepageCache";
 
 export async function POST(request: Request) {
+  const auth = await requireAdminApiRole("editor");
+  if (auth.response) return auth.response;
   const { artistId } = await request.json();
 
   if (!artistId) {
@@ -12,7 +15,7 @@ export async function POST(request: Request) {
     );
   }
 
-  const supabase = getSupabaseClient();
+  const supabase = createServiceRoleClient();
   const { data, error } = await supabase
     .from("featured_artist")
     .upsert({ id: 1, artist_id: artistId })

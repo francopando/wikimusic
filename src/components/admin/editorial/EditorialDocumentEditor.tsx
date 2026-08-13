@@ -117,7 +117,8 @@ export default function EditorialDocumentEditor({ ownerArtistId, locale, initial
       const { response, result } = await saveAdminEditorialDocument({ documentType: "artist_biography", ownerArtistId, locale, schemaVersion: 1, status: nextStatus, document, expectedRevision: revision });
       const outcome = classifyEditorialSaveResponse(response.status, response.ok && result.ok);
       if (outcome === "stale") { setStale(true); setMessage("A newer saved version exists. Your unsaved biography is preserved."); return; }
-      if (outcome === "error") { setMessage(result.error ?? "Save failed."); return; }
+      if (outcome === "error") { setMessage(!result.ok ? result.error : "Save failed."); return; }
+      if (!result.ok) { setMessage(result.error); return; }
       setDocumentId(result.document.id); setRevision(result.document.revision); setStatus(result.document.status);
       editor.commands.setContent(document, { emitUpdate: false });
       setDirty(false); onDirtyChange(false); setMessage(nextStatus === "published" ? "Biography published." : "Draft saved.");

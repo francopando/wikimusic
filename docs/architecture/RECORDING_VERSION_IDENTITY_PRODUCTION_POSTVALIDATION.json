@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-08-13T01:39:51.346Z",
+  "objects": {
+    "profile": "recording_version_profiles",
+    "summary": "recording_identity_summary"
+  },
+  "counts": {
+    "recordings": 17051,
+    "tracks": 22756,
+    "releases": 3169,
+    "profiles": 0,
+    "relationships": 0,
+    "summary_rows": 17051
+  },
+  "jlg": {
+    "recordings": 327,
+    "tracks": 1452
+  },
+  "disambiguation": {
+    "total": 17051,
+    "populated": 641
+  },
+  "permission": {
+    "anon_insert": false,
+    "authenticated_update": false,
+    "anon_summary_read": true
+  },
+  "capability": {
+    "assignments": 3
+  },
+  "arrangementTables": {
+    "n": 0
+  },
+  "passed": true
+}

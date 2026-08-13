@@ -5,8 +5,8 @@ import { useMemo, useState } from "react";
 import type { FormEvent, ReactNode } from "react";
 import { useTranslations } from "next-intl";
 import ContributorImage from "@/components/atoms/ContributorImage";
-import { getSupabaseClient } from "@/lib/supabase";
 import type { Contributor } from "@/types/contributor";
+import { readApiJson } from "@/lib/clientApiResponse";
 
 type ContributorForm = {
   name: string;
@@ -254,30 +254,22 @@ export default function ContributorsAdminClient({
       return;
     }
 
-    const isWebp = file.type === "image/webp" || file.name.toLowerCase().endsWith(".webp");
-    if (!isWebp) {
-      showMessage(t("admin.contributors.webpRequired"), "error");
-      return;
-    }
-
     setLoading(true);
     showMessage(t("admin.status.uploadingImage").replace("{id}", selectedId), "info");
 
-    const filePath = `${selectedId}.webp`;
-    const webpFile = new File([file], filePath, { type: "image/webp" });
-    const { error } = await getSupabaseClient().storage
-      .from("contributors-images")
-      .upload(filePath, webpFile, {
-        upsert: true,
-        contentType: "image/webp",
-        cacheControl: "3600",
-      });
-
-    if (error) {
-      showMessage(`${t("admin.errors.uploadingImage").replace("{error}", error.message)}`, "error");
-    } else {
+    try {
+      const formData = new FormData();
+      formData.set("target", "contributor");
+      formData.set("entityId", selectedId);
+      formData.set("file", file);
+      const response = await fetch("/api/admin/image-upload", { method: "POST", body: formData });
+      const result = await readApiJson<{ ok: boolean; error?: string }>(response, "Image upload endpoint");
+      if (!response.ok || !result.ok) throw new Error(result.error || response.statusText);
       setImageCacheKeys((current) => ({ ...current, [selectedId]: Date.now() }));
       showMessage(t("admin.status.imageUploaded"), "success");
+    } catch (error) {
+      const message = error instanceof Error ? error.message : "Unknown error";
+      showMessage(`${t("admin.errors.uploadingImage").replace("{error}", message)}`, "error");
     }
     setLoading(false);
   }
@@ -341,7 +333,7 @@ export default function ContributorsAdminClient({
                 <ContributorImage contributorId={selectedContributor.id} alt={selectedContributor.name} cacheKey={imageCacheKeys[selectedContributor.id]} className="aspect-square w-32 rounded-xl object-cover" />
                 <label className="block flex-1">
                   <span className="mb-2 block text-[10px] font-medium uppercase tracking-[0.18em] text-gray-400">{t("admin.contributors.replaceImage")}</span>
-                  <input type="file" accept=".webp,image/webp" disabled={loading} onChange={(event) => { const file = event.target.files?.[0]; if (file) void uploadImage(file); event.target.value = ""; }} className="block w-full text-sm text-gray-600 file:mr-4 file:rounded-lg file:border-0 file:bg-[#002D62] file:px-4 file:py-2 file:text-sm file:text-white disabled:opacity-50" />
+                  <input type="file" accept=".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp" disabled={loading} onChange={(event) => { const file = event.target.files?.[0]; if (file) void uploadImage(file); event.target.value = ""; }} className="block w-full text-sm text-gray-600 file:mr-4 file:rounded-lg file:border-0 file:bg-[#002D62] file:px-4 file:py-2 file:text-sm file:text-white disabled:opacity-50" />
                   <span className="mt-2 block text-xs text-gray-500">{t("admin.contributors.webpOnlyHint").replace("{id}", selectedContributor.id)}</span>
                 </label>
               </div>

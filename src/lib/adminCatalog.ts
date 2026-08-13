@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getSupabaseClient } from "@/lib/supabase";
+import { createServiceRoleClient } from "@/lib/supabaseService";
 
 export const recordingContextValues = [
   "secular",
@@ -81,7 +81,7 @@ export async function getArtistNames(ids: Array<string | null | undefined>) {
   const artistMap = new Map<string, string>();
   if (uniqueIds.length === 0) return artistMap;
 
-  const { data } = await getSupabaseClient()
+  const { data } = await createServiceRoleClient()
     .from("artists")
     .select("id,name")
     .in("id", uniqueIds);
@@ -98,7 +98,7 @@ export async function getReleaseTitles(ids: Array<string | null | undefined>) {
   const releaseMap = new Map<string, string>();
   if (uniqueIds.length === 0) return releaseMap;
 
-  const { data } = await getSupabaseClient()
+  const { data } = await createServiceRoleClient()
     .from("releases")
     .select("id,title")
     .in("id", uniqueIds);
@@ -111,7 +111,7 @@ export async function getReleaseTitles(ids: Array<string | null | undefined>) {
 }
 
 export async function countRows(table: string, column: string, value: string) {
-  const { count, error } = await getSupabaseClient()
+  const { count, error } = await createServiceRoleClient()
     .from(table)
     .select("id", { count: "exact", head: true })
     .eq(column, value);

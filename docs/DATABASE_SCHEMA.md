@@ -562,4 +562,4 @@ The canonical empty JSON document is `{"type":"doc","content":[{"type":"paragrap
 
 `editorial_entity_references` contains one derived row per `artistReference` occurrence. It references the document with `ON DELETE CASCADE` and the target artist UUID with `ON DELETE RESTRICT`; it never stores slugs or independently authoritative visible wording.
 
-Both tables have RLS enabled and are service-role-only in Phase 1. Writes use the service-role-only `upsert_editorial_document(text, uuid, text, integer, text, jsonb, integer)` transaction. Public and ordinary authenticated roles have no direct read or write grants. See [Editorial Document Engine](architecture/editorial-document-engine.md).
+Both tables have RLS enabled and are service-role-only in Phase 1. Writes use the service-role-only `upsert_editorial_document(text, uuid, text, integer, text, jsonb, integer)` transaction. Public and ordinary authenticated roles have no direct read or write grants. See [Editorial Engine](architecture/EDITORIAL_ENGINE.md).

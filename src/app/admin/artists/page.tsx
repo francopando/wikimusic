@@ -18,10 +18,11 @@ import {
 } from "@/lib/artistRelationships";
 import type { Artist } from "@/types/music";
 import { getArtistImageUrlIfAvailable } from "@/utils/getArtistImageUrl";
-import { resizeArtistImage } from "@/utils/resizeArtistImage";
 import { extractYouTubeVideoId } from "@/utils/youtube";
 import ArtistBiographyEditor from "@/components/admin/editorial/ArtistBiographyEditor";
+import ArtistFamilyRelationshipsManager from "@/components/admin/ArtistFamilyRelationshipsManager";
 import { normalizeSearchText, rankSearchText } from "@/lib/searchRanking";
+import { readApiJson } from "@/lib/clientApiResponse";
 
 type ArtistStatus =
   | "draft"
@@ -757,7 +758,7 @@ export default function AdminDashboard() {
       const response = await fetch(
         `/api/admin/artist-media?artistId=${encodeURIComponent(artistId)}`
       );
-      const result = (await response.json()) as ArtistMediaListResponse;
+      const result = await readApiJson<ArtistMediaListResponse>(response, "Artist media endpoint");
 
       if (!response.ok || !result.ok) {
         setStatus(`Error loading artist media: ${result.error || response.statusText}`);
@@ -775,7 +776,7 @@ export default function AdminDashboard() {
       const response = await fetch(
         `/api/admin/artist-relationships?artistId=${encodeURIComponent(artistId)}`
       );
-      const result = (await response.json()) as ArtistRelationshipListResponse;
+      const result = await readApiJson<ArtistRelationshipListResponse>(response, "Artist relationships endpoint");
 
       if (!response.ok || !result.ok) {
         setStatus(`Error loading artist relationships: ${result.error || response.statusText}`);
@@ -1012,57 +1013,18 @@ export default function AdminDashboard() {
     }
 
     setLoading(true);
-    setStatus("Processing image (300x300 WebP)...");
-
-    // Never upload the original file: resize + re-encode to WebP first.
-    let processedFile: File;
-
-    try {
-      processedFile = await resizeArtistImage(file);
-    } catch (error) {
-      console.error("Image processing error:", error);
-      setStatus(
-        `Error processing image: ${error instanceof Error ? error.message : "Unknown error"}`
-      );
-      setLoading(false);
-      return;
-    }
-
-    setStatus(`Uploading image as ${selectedArtistId}.webp...`);
-
+    setStatus("Uploading and securely processing image (300x300 WebP)...");
     const filePath = `${selectedArtistId}.webp`;
-
-    const { error } = await supabase.storage
-      .from("artists-images")
-      .upload(filePath, processedFile, {
-        upsert: true,
-        contentType: "image/webp",
-        cacheControl: "0",
-      });
-
-    if (error) {
-      console.error("Image upload error:", error);
-
-      setStatus(
-        `Error uploading image: ${error.message}. Path attempted: artists-images/${filePath}`
-      );
-
-      setLoading(false);
-      return;
-    }
-
-    // The metadata update runs server-side: the browser client's artists
-    // update is silently filtered to zero rows by RLS. The endpoint also
-    // revalidates the public profile paths.
     let imageUpdatedAt: string;
 
     try {
-      const response = await fetch("/api/admin/artist-image", {
+      const formData = new FormData();
+      formData.set("target", "artist");
+      formData.set("entityId", selectedArtistId);
+      formData.set("file", file);
+      const response = await fetch("/api/admin/image-upload", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ artistId: selectedArtistId }),
+        body: formData,
       });
 
       const contentType = response.headers.get("content-type");
@@ -1074,19 +1036,18 @@ export default function AdminDashboard() {
       }
 
       const result = (await response.json()) as AdminWriteResponse & {
-        has_image?: boolean;
-        image_updated_at?: string;
+        imageUpdatedAt?: string;
       };
 
-      if (!response.ok || !result.ok || result.has_image !== true || !result.image_updated_at) {
-        throw new Error(result.error || "Artist image metadata update failed.");
+      if (!response.ok || !result.ok || !result.imageUpdatedAt) {
+        throw new Error(result.error || "Artist image upload failed.");
       }
 
-      imageUpdatedAt = result.image_updated_at;
+      imageUpdatedAt = result.imageUpdatedAt;
     } catch (error) {
-      console.error("Artist image metadata update failed:", error);
+      console.error("Artist image upload failed:", error);
       setStatus(
-        `Artist image uploaded as ${filePath}, but the metadata update failed: ${error instanceof Error ? error.message : "Unknown error"}`
+        `Error uploading image: ${error instanceof Error ? error.message : "Unknown error"}`
       );
       setLoading(false);
       return;
@@ -1110,7 +1071,7 @@ export default function AdminDashboard() {
         URL.revokeObjectURL(currentUrl);
       }
 
-      return URL.createObjectURL(processedFile);
+      return URL.createObjectURL(file);
     });
     await fetchData();
 
@@ -1277,7 +1238,7 @@ export default function AdminDashboard() {
         mediaData: payload,
       }),
     });
-    const result = (await response.json()) as AdminWriteResponse;
+    const result = await readApiJson<AdminWriteResponse>(response, "Artist media endpoint");
 
     if (!response.ok || !result.ok) {
       setStatus(`Error saving artist media: ${result.error || response.statusText}`);
@@ -1309,7 +1270,7 @@ export default function AdminDashboard() {
         artistId: selectedArtistId,
       }),
     });
-    const result = (await response.json()) as AdminWriteResponse;
+    const result = await readApiJson<AdminWriteResponse>(response, "Artist media endpoint");
 
     if (!response.ok || !result.ok) {
       setStatus(`Error deleting artist media: ${result.error || response.statusText}`);
@@ -1379,7 +1340,7 @@ export default function AdminDashboard() {
         relationshipData: payload,
       }),
     });
-    const result = (await response.json()) as AdminWriteResponse;
+    const result = await readApiJson<AdminWriteResponse>(response, "Artist relationships endpoint");
 
     if (!response.ok || !result.ok) {
       setStatus(`Error saving artist relationship: ${result.error || response.statusText}`);
@@ -1412,7 +1373,7 @@ export default function AdminDashboard() {
         artistId: selectedArtistId,
       }),
     });
-    const result = (await response.json()) as AdminWriteResponse;
+    const result = await readApiJson<AdminWriteResponse>(response, "Artist relationships endpoint");
 
     if (!response.ok || !result.ok) {
       setStatus(`Error deleting artist relationship: ${result.error || response.statusText}`);
@@ -2617,6 +2578,8 @@ export default function AdminDashboard() {
               </div>
             )}
           </section>
+
+          {selectedArtistId && <ArtistFamilyRelationshipsManager artistId={selectedArtistId} />}
 
           <details className="rounded-xl border border-gray-100 bg-white p-5 shadow-sm" open>
             <summary className="cursor-pointer text-xs font-normal uppercase tracking-[0.2em] text-(--color-wikicrimson)">

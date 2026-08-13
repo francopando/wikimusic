@@ -1,11 +1,12 @@
 import { NextResponse } from "next/server";
 
+import { requireAdminApiRole } from "@/lib/adminApiAuth";
 import {
   isArtistRelationshipType,
   getArtistRelationships,
   type ArtistRelationshipType,
 } from "@/lib/artistRelationships";
-import { getSupabaseClient } from "@/lib/supabase";
+import { createServiceRoleClient } from "@/lib/supabaseService";
 
 type ArtistRelationshipPayload = {
   source_artist_id?: string;
@@ -48,7 +49,7 @@ function isIndividualArtistType(value: string | null | undefined) {
 }
 
 async function canonicalizeRelationshipPayload(
-  supabase: ReturnType<typeof getSupabaseClient>,
+  supabase: ReturnType<typeof createServiceRoleClient>,
   payload: Required<Pick<ArtistRelationshipPayload, "source_artist_id" | "target_artist_id" | "relationship_type">> &
     Pick<ArtistRelationshipPayload, "start_year" | "end_year" | "notes">
 ) {
@@ -82,6 +83,8 @@ async function canonicalizeRelationshipPayload(
 }
 
 export async function GET(request: Request) {
+  const auth = await requireAdminApiRole("editor");
+  if (auth.response) return auth.response;
   const { searchParams } = new URL(request.url);
   const artistId = searchParams.get("artistId");
 
@@ -98,6 +101,8 @@ export async function GET(request: Request) {
 }
 
 export async function POST(request: Request) {
+  const auth = await requireAdminApiRole("editor");
+  if (auth.response) return auth.response;
   const { relationshipId, relationshipData } = await request.json();
   const payload = relationshipData as ArtistRelationshipPayload | undefined;
   const validationError = validatePayload(payload);
@@ -109,7 +114,7 @@ export async function POST(request: Request) {
     );
   }
 
-  const supabase = getSupabaseClient();
+  const supabase = createServiceRoleClient();
   const validPayload = payload as ArtistRelationshipPayload & {
     source_artist_id: string;
     target_artist_id: string;
@@ -172,6 +177,8 @@ export async function POST(request: Request) {
 }
 
 export async function DELETE(request: Request) {
+  const auth = await requireAdminApiRole("admin");
+  if (auth.response) return auth.response;
   const { relationshipId, artistId } = await request.json();
 
   if (!relationshipId || !artistId) {
@@ -181,7 +188,7 @@ export async function DELETE(request: Request) {
     );
   }
 
-  const supabase = getSupabaseClient();
+  const supabase = createServiceRoleClient();
   const { error } = await supabase
     .from("artist_relationships")
     .delete()

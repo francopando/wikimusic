@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-08-13T13:13:00Z",
+  "passed": true,
+  "manifest_sha256": "9D6EB5E22EC49399C08C7102A48D1DA8039A0A069D4E102BEB5F225D76D5D13A",
+  "backup_sha256": "446195BC97E5910688C699B216B9205006300410C561FD7DB5D2CC2F5E6E7226",
+  "environment": {
+    "postgresql": "17.10",
+    "database": "jlg_rehearsal",
+    "transport": "workspace-local Unix-domain socket on Windows; TCP disabled",
+    "socket_path": "C:\\Mangulina\\.tmp\\jlg-pg-socket",
+    "initial_failure_cause": "The Codex-launched process token was denied permission to create TCP listeners. Ports 55432 and 55433 were neither occupied nor in Windows excluded ranges, and the data-directory ACL was valid.",
+    "restore_note": "Production-only pg_cron, hypopg, index_advisor and supabase_vault extension objects were omitted. Five expected cron/vault extension-owned data/sequence warnings did not affect catalog tables."
+  },
+  "runs": 2,
+  "deterministic": true,
+  "before": {"releases":3169,"tracks":22756,"release_artists":3169,"cover_ingest_rows":3035,"release_view_events":22,"recordings":17051,"jlg_recordings":327,"version_profiles":53,"recording_relationships":8},
+  "after": {"releases":3165,"tracks":22716,"release_artists":3165,"cover_ingest_rows":3031,"release_view_events":21,"recordings":17051,"jlg_recordings":327,"version_profiles":53,"recording_relationships":8},
+  "deleted": {"releases":4,"tracks":40,"release_artists":4,"cover_ingest_rows":4,"release_view_events":1,"recordings":0},
+  "protected_recordings_present": 41,
+  "frio_recordings_present": 2,
+  "fogarate_editions_present": 2,
+  "unresolved_releases_present": 4
+}

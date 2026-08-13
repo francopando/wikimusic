@@ -1,0 +1,105 @@
+---
+[
+  {
+    "source": "credited_work_credits",
+    "role": "arranger",
+    "rows": 1,
+    "artists": 1
+  },
+  {
+    "source": "credited_work_credits",
+    "role": "Arranger",
+    "rows": 9,
+    "artists": 2
+  },
+  {
+    "source": "credited_work_credits",
+    "role": "Beat Programmer",
+    "rows": 2,
+    "artists": 1
+  },
+  {
+    "source": "credited_work_credits",
+    "role": "Co-Producer",
+    "rows": 1,
+    "artists": 1
+  },
+  {
+    "source": "credited_work_credits",
+    "role": "composer",
+    "rows": 1,
+    "artists": 1
+  },
+  {
+    "source": "credited_work_credits",
+    "role": "Composer",
+    "rows": 73,
+    "artists": 2
+  },
+  {
+    "source": "credited_work_credits",
+    "role": "Executive Producer",
+    "rows": 24,
+    "artists": 1
+  },
+  {
+    "source": "credited_work_credits",
+    "role": "Lyricist",
+    "rows": 30,
+    "artists": 1
+  },
+  {
+    "source": "credited_work_credits",
+    "role": "Mastering Engineer",
+    "rows": 1,
+    "artists": 1
+  },
+  {
+    "source": "credited_work_credits",
+    "role": "Mix Engineer",
+    "rows": 5,
+    "artists": 1
+  },
+  {
+    "source": "credited_work_credits",
+    "role": "Performer",
+    "rows": 1,
+    "artists": 1
+  },
+  {
+    "source": "credited_work_credits",
+    "role": "Producer",
+    "rows": 231,
+    "artists": 1
+  },
+  {
+    "source": "recording_credits",
+    "role": "composer",
+    "rows": 3,
+    "artists": 3
+  },
+  {
+    "source": "recording_credits",
+    "role": "lead_performer",
+    "rows": 34,
+    "artists": 11
+  },
+  {
+    "source": "recording_credits",
+    "role": "performer",
+    "rows": 13,
+    "artists": 1
+  },
+  {
+    "source": "recording_credits",
+    "role": "piano",
+    "rows": 1,
+    "artists": 1
+  },
+  {
+    "source": "recording_credits",
+    "role": "producer",
+    "rows": 1,
+    "artists": 1
+  }
+]

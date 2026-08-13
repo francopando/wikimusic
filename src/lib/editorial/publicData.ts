@@ -1,7 +1,7 @@
 import "server-only";
 
 import { cache } from "react";
-import { getSupabaseServiceClient } from "@/lib/adminAccess";
+import { createServiceRoleClient } from "@/lib/supabaseService";
 import { loadPublishedEditorialDocument } from "@/lib/editorial/publicDataCore";
 import { editorialDocumentToPlainText } from "@/lib/editorial/plainText";
 import type { PublicEditorialDataSource } from "@/lib/editorial/publicDataCore";
@@ -14,7 +14,7 @@ import type {
 
 const supabaseSource: PublicEditorialDataSource = {
   async findPublishedDocument(input) {
-    const { data, error } = await getSupabaseServiceClient()
+    const { data, error } = await createServiceRoleClient()
       .from("editorial_documents")
       .select("id,document_type,owner_artist_id,locale,schema_version,document,revision")
       .eq("document_type", input.documentType)
@@ -26,7 +26,7 @@ const supabaseSource: PublicEditorialDataSource = {
     return data as PublicEditorialDocumentRow | null;
   },
   async findRelations(documentId) {
-    const { data, error } = await getSupabaseServiceClient()
+    const { data, error } = await createServiceRoleClient()
       .from("editorial_entity_references")
       .select("occurrence_id,entity_type,target_artist_id")
       .eq("editorial_document_id", documentId);
@@ -34,7 +34,7 @@ const supabaseSource: PublicEditorialDataSource = {
     return (data ?? []) as PublicEditorialRelationRow[];
   },
   async findArtists(artistIds) {
-    const { data, error } = await getSupabaseServiceClient()
+    const { data, error } = await createServiceRoleClient()
       .from("artists")
       .select("id,slug,status")
       .in("id", artistIds);

@@ -1,4 +1,4 @@
-import { getSupabaseServiceClient } from "@/lib/adminAccess";
+import { createServiceRoleClient } from "@/lib/supabaseService";
 import { chronologicalTrendRows } from "@/lib/analyticsPresentation";
 
 /**
@@ -14,7 +14,7 @@ import { chronologicalTrendRows } from "@/lib/analyticsPresentation";
  * @returns Array of artist view counts with 7d and 30d metrics, sorted by 7d popularity
  */
 export async function fetchTopArtistViews(limit: number = 20) {
-  const supabase = getSupabaseServiceClient();
+  const supabase = createServiceRoleClient();
 
   const { data, error } = await supabase
     .from("artist_views_comparison")
@@ -30,7 +30,7 @@ export async function fetchTopArtistViews(limit: number = 20) {
  * Fetches top recordings with both 7-day and 30-day view metrics
  */
 export async function fetchTopRecordingViews(limit: number = 20) {
-  const supabase = getSupabaseServiceClient();
+  const supabase = createServiceRoleClient();
 
   const { data, error } = await supabase
     .from("recording_views_comparison")
@@ -46,7 +46,7 @@ export async function fetchTopRecordingViews(limit: number = 20) {
  * Fetches top genres with both 7-day and 30-day view metrics
  */
 export async function fetchTopGenreViews(limit: number = 15) {
-  const supabase = getSupabaseServiceClient();
+  const supabase = createServiceRoleClient();
 
   const { data, error } = await supabase
     .from("genre_views_comparison")
@@ -73,7 +73,7 @@ export async function fetchTopGenreViews(limit: number = 15) {
  * @returns Array of search queries with zero matches, sorted by frequency
  */
 export async function fetchSearchesWithNoResults(limit: number = 30) {
-  const supabase = getSupabaseServiceClient();
+  const supabase = createServiceRoleClient();
 
   const { data, error } = await supabase
     .from("searches_with_no_results")
@@ -90,7 +90,7 @@ export async function fetchSearchesWithNoResults(limit: number = 30) {
  * Fetches platform clicks from the last 30 days
  */
 export async function fetchPlatformClicks() {
-  const supabase = getSupabaseServiceClient();
+  const supabase = createServiceRoleClient();
 
   const { data, error } = await supabase
     .from("platform_clicks_last_30_days")
@@ -105,7 +105,7 @@ export async function fetchPlatformClicks() {
  * Fetches daily artist view trends for the past N days
  */
 export async function fetchArtistViewTrends(daysBack: number = 30) {
-  const supabase = getSupabaseServiceClient();
+  const supabase = createServiceRoleClient();
 
   const { data, error } = await supabase
     .from("artist_views_by_day_last_30_days")
@@ -124,7 +124,7 @@ export async function fetchArtistViewTrends(daysBack: number = 30) {
  * Fetches daily recording view trends for the past N days
  */
 export async function fetchRecordingViewTrends(daysBack: number = 30) {
-  const supabase = getSupabaseServiceClient();
+  const supabase = createServiceRoleClient();
 
   const { data, error } = await supabase
     .from("recording_views_by_day_last_30_days")
@@ -143,7 +143,7 @@ export async function fetchRecordingViewTrends(daysBack: number = 30) {
  * Fetches daily search trends for the past N days
  */
 export async function fetchSearchTrends(daysBack: number = 30) {
-  const supabase = getSupabaseServiceClient();
+  const supabase = createServiceRoleClient();
 
   const { data, error } = await supabase
     .from("search_events_by_day_last_30_days")
@@ -165,7 +165,7 @@ export async function fetchSearchTrends(daysBack: number = 30) {
 export async function fetchArtistsByIds(artistIds: string[]) {
   if (artistIds.length === 0) return [];
 
-  const supabase = getSupabaseServiceClient();
+  const supabase = createServiceRoleClient();
   const { data, error } = await supabase
     .from("artists")
     .select("id,name,slug")
@@ -181,7 +181,7 @@ export async function fetchArtistsByIds(artistIds: string[]) {
 export async function fetchRecordingsByIds(recordingIds: string[]) {
   if (recordingIds.length === 0) return [];
 
-  const supabase = getSupabaseServiceClient();
+  const supabase = createServiceRoleClient();
   const { data, error } = await supabase
     .from("recordings")
     .select("id,title,slug")

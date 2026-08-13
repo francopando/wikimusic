@@ -1,0 +1,3439 @@
+{
+  "schema_version": 1,
+  "audit_type": "alex_bueno_release_identity_read_only",
+  "generated_at": "2026-08-13T13:59:11.170Z",
+  "artist_scope": {
+    "canonical_artist_id": "6c3e0d74-23b7-4d80-969f-9d5319ee5127"
+  },
+  "summary": {
+    "releases_reviewed": 84,
+    "release_groups_reviewed": 61,
+    "classification_counts": {
+      "UNIQUE_CANONICAL_RELEASE": 39,
+      "LEGITIMATE_DISTINCT_EDITION": 45
+    },
+    "multi_release_groups": 22,
+    "groups_ge_4": 0,
+    "probable_duplicate_release_families": 0,
+    "probable_redundant_release_rows": 0
+  },
+  "sources": [
+    {
+      "id": "dominican-discography",
+      "url": "https://www.conectate.com.do/articulo/alex-bueno-biografia/",
+      "use": "Dominican chronology and career-era context"
+    },
+    {
+      "id": "allmusic-timeline",
+      "url": "https://www.allmusic.com/album/alex-y-la-orquesta-liberacion-mw0000919812",
+      "use": "Album chronology, physical Karen issue and discography timeline"
+    },
+    {
+      "id": "buenamusica-discography",
+      "url": "https://www.buenamusica.com/alex-bueno/discografia",
+      "use": "Independent separation of studio, single, special and compilation releases"
+    },
+    {
+      "id": "apple-artist",
+      "url": "https://music.apple.com/us/artist/alex-bueno/303351",
+      "use": "Official commercial artist/release context"
+    },
+    {
+      "id": "spotify-20-years",
+      "url": "https://open.spotify.com/intl-es/album/2foqoAmVTn3w2Z22sJJkDp",
+      "use": "Official 2004 20 años después program, durations and J&N phonogram line"
+    },
+    {
+      "id": "allmusic-20-years-vol2",
+      "url": "https://www.allmusic.com/album/20-anos-despues-vol-2-mw0000460416",
+      "use": "Volume 2 program, 2004 Sony/J&N physical context and credits"
+    },
+    {
+      "id": "qobuz-4x4-salsa",
+      "url": "https://www.qobuz.com/ar-es/album/4x4-en-salsa-vol-1-varios-artistas/rq3bbgb91vfka",
+      "use": "2019 J&N salsa compilation, track performers and production metadata"
+    },
+    {
+      "id": "youtube-colegiala-sinfonico",
+      "url": "https://www.youtube.com/watch?v=S8q1-qWnpxs",
+      "use": "Official 2024 orchestral Colegiala issue and producer credit"
+    },
+    {
+      "id": "jn-history",
+      "url": "https://picoteandoelespectaculo.blogspot.com/2016/12/disquero-de-j-records-nelson-estevez.html",
+      "use": "J&N label-era album history and 20 años projects"
+    }
+  ],
+  "ranked_release_groups": [
+    {
+      "release_group_id": "4dc82373-62d2-43d5-b6de-c0a7c5003afd",
+      "title": "Alex & Orquesta Liberación",
+      "release_count": 3,
+      "release_ids": [
+        "43e55067-631b-4457-8951-66c981e91e93",
+        "b8d7126a-6277-4b5c-939e-8398bc51460f",
+        "e78f16ed-683b-499f-8621-bf740d87f4f1"
+      ]
+    },
+    {
+      "release_group_id": "d9814db7-5abd-455a-926a-2f1d5773e6dd",
+      "title": "1",
+      "release_count": 2,
+      "release_ids": [
+        "8b1a5769-bbcb-400e-b8b3-bf19da0282af",
+        "ea5d3f79-7bcc-4ab8-af1f-6a23ee67981d"
+      ]
+    },
+    {
+      "release_group_id": "8568cd3d-dee7-4b02-9191-2f1b337d0eb8",
+      "title": "20 años después",
+      "release_count": 2,
+      "release_ids": [
+        "8052223f-40fe-405f-b056-8defcdf1aba5",
+        "a39d205e-a38f-41d0-8a0b-dcb69002b060"
+      ]
+    },
+    {
+      "release_group_id": "dc99b5bb-4e28-47b1-a316-662e2be97a4c",
+      "title": "20 años después, vol. 2",
+      "release_count": 2,
+      "release_ids": [
+        "6837ea25-c526-421a-af78-cf198e172bcf",
+        "a7ec8abf-34b0-4acc-97e9-3edef4d4348d"
+      ]
+    },
+    {
+      "release_group_id": "a8559a7e-c1bb-4313-ba22-5cedb927a86c",
+      "title": "Alex",
+      "release_count": 2,
+      "release_ids": [
+        "0e9518fd-0e42-432d-8367-eaaa9e901e21",
+        "c14ac8f9-1ac8-4221-a5f8-52534e0798af"
+      ]
+    },
+    {
+      "release_group_id": "09f1a2b2-6665-45e7-a987-302c9d1cfbf3",
+      "title": "Alex Bueno",
+      "release_count": 2,
+      "release_ids": [
+        "40486b5c-4822-4c00-aca9-129479395845",
+        "d9bacf66-91d6-4a1b-bcb4-e1eb8aacca15"
+      ]
+    },
+    {
+      "release_group_id": "39bdfc07-6f07-4ca2-b713-14ae2b294ccd",
+      "title": "Amores que matan",
+      "release_count": 2,
+      "release_ids": [
+        "b6a25f5c-babc-4770-8fbb-32dbad97cd48",
+        "ef9f6148-d940-48eb-bd32-be47e6a9c501"
+      ]
+    },
+    {
+      "release_group_id": "41203856-7f24-42b4-a3cd-207b70f6505b",
+      "title": "Bachata a su tiempo",
+      "release_count": 2,
+      "release_ids": [
+        "1de7fb6d-28d7-4d7a-965e-2f41fa64176f",
+        "271eb377-327b-4871-ad59-0a74efb644d9"
+      ]
+    },
+    {
+      "release_group_id": "a3a345c0-b647-44f3-94f5-52426accc201",
+      "title": "Bachatas en ternuras",
+      "release_count": 2,
+      "release_ids": [
+        "cecb0d10-75d6-4b12-8540-68ff082b7359",
+        "fe881636-d5d6-4432-8b03-209d1900a61b"
+      ]
+    },
+    {
+      "release_group_id": "ddca8c8a-af8f-4dc4-89e8-768b05651e0a",
+      "title": "Como quisiera",
+      "release_count": 2,
+      "release_ids": [
+        "3c02cc68-0231-4b75-9506-27f913643765",
+        "975b0558-9f39-46e2-b86e-ab543e90d8f9"
+      ]
+    },
+    {
+      "release_group_id": "a5b7f77a-5bbb-4033-bf70-48b28cc28609",
+      "title": "Corazón duro",
+      "release_count": 2,
+      "release_ids": [
+        "89dd88d2-a23f-4897-a5d1-632fd1aecebf",
+        "f504e757-6168-4043-bcd3-d70f2cf04b0e"
+      ]
+    },
+    {
+      "release_group_id": "7416fbe6-301d-4581-b781-0564d020eba9",
+      "title": "Grandes éxitos de Alex Bueno en bachata",
+      "release_count": 2,
+      "release_ids": [
+        "a4ac23d7-8616-4582-ac18-e999ddb9d42f",
+        "f3917b09-b792-415b-a60d-0ee1c0d149cb"
+      ]
+    },
+    {
+      "release_group_id": "34d6c8eb-ee69-4d44-94f1-b7efc2ead905",
+      "title": "Los años dorados",
+      "release_count": 2,
+      "release_ids": [
+        "55d2f4ff-9822-4c52-bf0c-cce57d75fadd",
+        "cf626bd2-7dde-440a-8357-474c5b02fc86"
+      ]
+    },
+    {
+      "release_group_id": "de9c3891-4b8c-4cd7-89ed-c3f18cebdcf4",
+      "title": "Los grandes de Alex Bueno",
+      "release_count": 2,
+      "release_ids": [
+        "2d04d4df-cbfa-4d5f-a1ad-7b557ac54892",
+        "9e517a94-9040-4b22-825a-fc1f4c53bde3"
+      ]
+    },
+    {
+      "release_group_id": "665b0ce0-a258-405c-a738-816176c74d0d",
+      "title": "Más ternura",
+      "release_count": 2,
+      "release_ids": [
+        "ce4ec670-e908-4516-8d4b-f6835031fa90",
+        "e2fde67b-9bf5-4c0a-9340-806e853aad10"
+      ]
+    },
+    {
+      "release_group_id": "86562da5-8b1b-4f10-a357-ba1063fdf2be",
+      "title": "Me equivoqué",
+      "release_count": 2,
+      "release_ids": [
+        "8e236e0c-6f33-4cf9-a01c-973e83154f01",
+        "c1193206-ae8e-463c-9c71-210c3eca958b"
+      ]
+    },
+    {
+      "release_group_id": "8c084ef1-d3e4-48d0-a4d6-2fa13cf57730",
+      "title": "Mensajes",
+      "release_count": 2,
+      "release_ids": [
+        "4e75d493-14ce-4498-ba61-fe53e7658ac8",
+        "cbd56a5c-5d6c-4aae-acf0-6a87c4b0c69e"
+      ]
+    },
+    {
+      "release_group_id": "2f2c5a66-f504-4813-86be-43280687592a",
+      "title": "Pídeme",
+      "release_count": 2,
+      "release_ids": [
+        "a0373a42-a281-4fa5-b033-8793e5aa8f32",
+        "ab0ae2bd-5366-465d-8070-c2cf15244e83"
+      ]
+    },
+    {
+      "release_group_id": "4387db3e-4d15-4cf3-a96c-ede84f704c8f",
+      "title": "Queda algo",
+      "release_count": 2,
+      "release_ids": [
+        "26810ba4-75d2-4a8b-8477-2c8a628d4b86",
+        "6718831a-3248-4188-848c-1251218347a5"
+      ]
+    },
+    {
+      "release_group_id": "3ab88511-d3b4-4a47-ad5c-dae239de4dcb",
+      "title": "Solo merengue",
+      "release_count": 2,
+      "release_ids": [
+        "68edfc14-cff1-43c7-a42e-168af593ba43",
+        "fdc8fa6f-fc72-4c3b-9a13-c46dddc0bea7"
+      ]
+    },
+    {
+      "release_group_id": "1cc50777-94ba-49b5-82ff-0e7b9624531b",
+      "title": "Ternuras",
+      "release_count": 2,
+      "release_ids": [
+        "eeb316ea-319c-42e4-9b9a-1d8f78d8c2a1",
+        "eec426dd-4313-4c4b-88a6-9cd39021893e"
+      ]
+    },
+    {
+      "release_group_id": "22eda3c9-3bfc-4faf-a245-99d533a2fb4c",
+      "title": "Únicamente tú",
+      "release_count": 2,
+      "release_ids": [
+        "31cb01b8-5934-49b6-9226-96811382a11f",
+        "c15689a9-608d-4327-9f28-6ccd5af38b13"
+      ]
+    },
+    {
+      "release_group_id": "ad734714-794c-4725-9b87-b252ba2254aa",
+      "title": "¡Como nadie!",
+      "release_count": 1,
+      "release_ids": [
+        "fe24a1d5-864e-4a16-8def-efce9e545124"
+      ]
+    },
+    {
+      "release_group_id": "02fbbf62-7a94-4f03-ac3d-1d49055d55a3",
+      "title": "20 Exitos: Alex Bueno, Vol. 1 & 2",
+      "release_count": 1,
+      "release_ids": [
+        "2cdb56b5-7211-4951-b17a-658d9a616bd3"
+      ]
+    },
+    {
+      "release_group_id": "184aa102-2167-44b3-b5c4-ae3dee902b48",
+      "title": "40 años de éxitos",
+      "release_count": 1,
+      "release_ids": [
+        "b71a6146-568e-404f-af9a-9f84597fbaf9"
+      ]
+    },
+    {
+      "release_group_id": "806cb9c3-ddc9-4535-a19c-176b20052935",
+      "title": "4x4 en salsa, vol. 1",
+      "release_count": 1,
+      "release_ids": [
+        "b566ca2b-9ed5-4482-93e1-c8b6d850ea87"
+      ]
+    },
+    {
+      "release_group_id": "d51f3c3f-92ae-4dd8-96ad-12a588a29c6f",
+      "title": "Bachata a su tiempo (Pistas originales)",
+      "release_count": 1,
+      "release_ids": [
+        "cc359dc1-b5f2-472d-aae4-daf130d8f3a8"
+      ]
+    },
+    {
+      "release_group_id": "a3c4941a-6cad-49b0-9c21-a3d89b1e4de2",
+      "title": "Caminito de Guarenas",
+      "release_count": 1,
+      "release_ids": [
+        "e235b1a2-23ec-4a4a-9912-b8ed0ba2c09e"
+      ]
+    },
+    {
+      "release_group_id": "817746ff-2904-4af8-ae59-64a5ae9776bc",
+      "title": "Colegiala (sinfónico)",
+      "release_count": 1,
+      "release_ids": [
+        "9357f764-efea-4e34-9a0e-9b7e226e85cf"
+      ]
+    },
+    {
+      "release_group_id": "8680c3bb-7fe2-4caa-ab23-834e897b6f2b",
+      "title": "Con el alma desnuda",
+      "release_count": 1,
+      "release_ids": [
+        "d06edac3-680d-44b6-b5a1-f55d7beb7dce"
+      ]
+    },
+    {
+      "release_group_id": "6fbb64c3-d461-48d0-b541-f39a9ad9b562",
+      "title": "Con fe y sentimiento",
+      "release_count": 1,
+      "release_ids": [
+        "8b48db9f-9d0d-4aeb-adda-fe7aa96d4e1b"
+      ]
+    },
+    {
+      "release_group_id": "489b71b8-b9af-4d83-a30b-2c59b549e6c7",
+      "title": "Confesión",
+      "release_count": 1,
+      "release_ids": [
+        "9133a6ea-88a3-4bd0-9a91-dd7aafc7447c"
+      ]
+    },
+    {
+      "release_group_id": "729d4ba8-c01d-4540-abcd-3b9a0d381ba3",
+      "title": "Corazón duro (Pistas originales)",
+      "release_count": 1,
+      "release_ids": [
+        "60243d87-f283-4cc7-9c12-c767e963e06c"
+      ]
+    },
+    {
+      "release_group_id": "63822c07-752e-469d-b3cf-7dc976d230b5",
+      "title": "DE NADA VALE",
+      "release_count": 1,
+      "release_ids": [
+        "b53ed30b-e2f5-4b1d-ae5c-61a2845c4cd8"
+      ]
+    },
+    {
+      "release_group_id": "01941d5b-36ea-4614-9e10-166ccefced43",
+      "title": "Déjame vivir",
+      "release_count": 1,
+      "release_ids": [
+        "15cb3286-6105-4f9a-851f-ea9eb851e736"
+      ]
+    },
+    {
+      "release_group_id": "752c2040-3be5-422e-9bd4-9fb8ac5c4177",
+      "title": "Diferente",
+      "release_count": 1,
+      "release_ids": [
+        "67b71b2b-665b-476c-bc2e-bc66f0df5528"
+      ]
+    },
+    {
+      "release_group_id": "9207d1ca-7d5c-4f4e-9fe0-9b0a071b7a16",
+      "title": "Dos x uno",
+      "release_count": 1,
+      "release_ids": [
+        "0eaab814-f296-4e76-b062-6781f343f4aa"
+      ]
+    },
+    {
+      "release_group_id": "cb1a80f7-abe0-468a-908b-a25f56770a4c",
+      "title": "El más completo",
+      "release_count": 1,
+      "release_ids": [
+        "56cd7ac7-ecd4-4a70-917a-37f3bd2738cc"
+      ]
+    },
+    {
+      "release_group_id": "4edc95bb-207c-44fa-8b8e-ee05ee4687a2",
+      "title": "Elizabeth (remix)",
+      "release_count": 1,
+      "release_ids": [
+        "20520ad2-c191-453a-8758-e84391c48744"
+      ]
+    },
+    {
+      "release_group_id": "5be1eb4b-1d6c-4a51-90fb-da4d32f5f7b2",
+      "title": "En esta Navidad",
+      "release_count": 1,
+      "release_ids": [
+        "d3834878-7045-4c57-be34-5def7d4b52e6"
+      ]
+    },
+    {
+      "release_group_id": "67c22dd4-ff9d-43a7-9c05-12e1ae1c01a8",
+      "title": "Entre bachata y merengue",
+      "release_count": 1,
+      "release_ids": [
+        "992c2454-ba50-4c41-8289-2ff07d6c64fb"
+      ]
+    },
+    {
+      "release_group_id": "c6f8793c-fc91-43db-aec6-41c273a39b76",
+      "title": "Éxitos de Alex Bueno",
+      "release_count": 1,
+      "release_ids": [
+        "deedd72c-5615-496f-bfd7-d9168d3f7334"
+      ]
+    },
+    {
+      "release_group_id": "a5b957c5-36f9-4e44-968c-fccaed397982",
+      "title": "Gozar la vida",
+      "release_count": 1,
+      "release_ids": [
+        "10b16823-488e-42f9-a529-7565f54041b5"
+      ]
+    },
+    {
+      "release_group_id": "af01603b-1a15-4850-bef8-1ed8ea717abd",
+      "title": "Grandes éxitos",
+      "release_count": 1,
+      "release_ids": [
+        "4459a086-59f1-4e42-9fbf-f537f1c2d736"
+      ]
+    },
+    {
+      "release_group_id": "e322cb82-d991-48f3-9318-06675231ecd0",
+      "title": "Hipócrita",
+      "release_count": 1,
+      "release_ids": [
+        "0d75a572-c19b-4bae-b5c0-44e1f0da729d"
+      ]
+    },
+    {
+      "release_group_id": "7347574f-0dc8-4ed3-a01a-cdfec867855c",
+      "title": "Lluvia y samba",
+      "release_count": 1,
+      "release_ids": [
+        "2ad6208f-0cb4-421c-973b-950a8e2f1e70"
+      ]
+    },
+    {
+      "release_group_id": "f9bf109e-179b-4ea6-bfb4-e29882067a5e",
+      "title": "Los rostros de la bachata",
+      "release_count": 1,
+      "release_ids": [
+        "e75c82ab-829c-473a-95bb-d542a42a9fb1"
+      ]
+    },
+    {
+      "release_group_id": "f373d106-5dc8-4060-bbd0-06c39002d8a0",
+      "title": "Los rostros del merengue",
+      "release_count": 1,
+      "release_ids": [
+        "4f9b3680-e07d-4117-ae38-3da7d0d68348"
+      ]
+    },
+    {
+      "release_group_id": "88d6e51d-744b-40f8-9946-504c6dfc5987",
+      "title": "Mega MixHits",
+      "release_count": 1,
+      "release_ids": [
+        "79f72689-e115-48d0-90f6-41c7d6c136d3"
+      ]
+    },
+    {
+      "release_group_id": "e43882ac-375c-499f-abac-bbf459a3f663",
+      "title": "Merengue y más",
+      "release_count": 1,
+      "release_ids": [
+        "b02a5fe2-f672-4296-892f-a181da87e25b"
+      ]
+    },
+    {
+      "release_group_id": "150a8446-1799-4dde-a828-0f50b293ca8c",
+      "title": "No te olvidaré",
+      "release_count": 1,
+      "release_ids": [
+        "ed174960-b567-4741-8199-ffd82cf72ec8"
+      ]
+    },
+    {
+      "release_group_id": "069570ec-9366-4a28-a928-01f17b5a1721",
+      "title": "Nuestro amor",
+      "release_count": 1,
+      "release_ids": [
+        "b3925e4b-1c14-4c4d-9eb2-cc4baec170eb"
+      ]
+    },
+    {
+      "release_group_id": "9c9319a9-6c42-4364-b318-50a069123979",
+      "title": "Popurrí de bachatas",
+      "release_count": 1,
+      "release_ids": [
+        "83a600e5-5ce3-4fcc-bbe1-0863e977f471"
+      ]
+    },
+    {
+      "release_group_id": "f85a0a91-c78f-41b6-8d78-a2906d92759f",
+      "title": "Que vuelva",
+      "release_count": 1,
+      "release_ids": [
+        "48d088c8-a069-4e08-a0e9-62217deec840"
+      ]
+    },
+    {
+      "release_group_id": "dd4d1a2d-b113-40f0-beba-523a335f381b",
+      "title": "Que vuelva",
+      "release_count": 1,
+      "release_ids": [
+        "71f88c33-2876-4224-98c1-297cc5daa954"
+      ]
+    },
+    {
+      "release_group_id": "ba464993-c61d-46de-a55d-5f422e1981ca",
+      "title": "Regresar al amor",
+      "release_count": 1,
+      "release_ids": [
+        "cf50e095-c759-40c2-a5be-eb2c9f975dbb"
+      ]
+    },
+    {
+      "release_group_id": "6b3db8b2-5e75-474e-8d27-defb9c30d6d8",
+      "title": "Solo merengue (Pistas originales)",
+      "release_count": 1,
+      "release_ids": [
+        "e5e723c0-854d-47f8-9051-2d49ee9087c7"
+      ]
+    },
+    {
+      "release_group_id": "c04e4994-9c1e-456c-8cac-b3526f9837c0",
+      "title": "Tiemblas",
+      "release_count": 1,
+      "release_ids": [
+        "08053dae-d3fe-4cbd-a0e3-f0e79efb355d"
+      ]
+    },
+    {
+      "release_group_id": "fd8bf81d-2665-4240-a8e9-d2f5435b1e6f",
+      "title": "Toqué fondo",
+      "release_count": 1,
+      "release_ids": [
+        "1df8e3c0-bc80-4a56-9278-d5380420f94f"
+      ]
+    },
+    {
+      "release_group_id": "6d5dd977-87d2-4a6d-8cc7-879232d5b80f",
+      "title": "Tranquilo y tropical",
+      "release_count": 1,
+      "release_ids": [
+        "f48e850d-ff6c-499c-a503-6073b2ec47e6"
+      ]
+    },
+    {
+      "release_group_id": "45a1aec8-f335-49ab-9d03-6ccb35a25c71",
+      "title": "Uniquehits",
+      "release_count": 1,
+      "release_ids": [
+        "ac614b3d-e5cf-4bb0-a85d-2bd05ca19c26"
+      ]
+    }
+  ],
+  "duplicate_release_families": [],
+  "releases": [
+    {
+      "release_id": "08053dae-d3fe-4cbd-a0e3-f0e79efb355d",
+      "release_group_id": "c04e4994-9c1e-456c-8cac-b3526f9837c0",
+      "title": "Tiemblas",
+      "classification": "UNIQUE_CANONICAL_RELEASE",
+      "verified_edition_identity": "Tiemblas | 2023-07-20T04:00:00.000Z | XW | None | 739645228028 | 1 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "No competing Release row",
+      "track_program_fingerprint": "cb89bd9c0b1c266b54bb25d7b74a4c9035eb0501ed77c65f9c2935b8b21ff9d1",
+      "product_evidence": {
+        "barcode": "739645228028",
+        "catalog_number": null,
+        "date": "2023-07-20T04:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "75871b72-9f4f-4b22-bdfd-4b7f8737cd3a"
+      },
+      "dependencies": {
+        "tracks": 1,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 1
+      },
+      "confidence": "high",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "0d75a572-c19b-4bae-b5c0-44e1f0da729d",
+      "release_group_id": "e322cb82-d991-48f3-9318-06675231ecd0",
+      "title": "Hipócrita",
+      "classification": "UNIQUE_CANONICAL_RELEASE",
+      "verified_edition_identity": "Hipócrita | 2023-07-20T04:00:00.000Z | XW | None | 739645228820 | 1 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "No competing Release row",
+      "track_program_fingerprint": "24db213c8f0f94786eb6d3479bc9ed58fa40944d46f51b80d5afa7c4ef4a5379",
+      "product_evidence": {
+        "barcode": "739645228820",
+        "catalog_number": null,
+        "date": "2023-07-20T04:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "ccf575db-ae35-4d07-bdf0-e8d88a6fae27"
+      },
+      "dependencies": {
+        "tracks": 1,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 0
+      },
+      "confidence": "high",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "0e9518fd-0e42-432d-8367-eaaa9e901e21",
+      "release_group_id": "a8559a7e-c1bb-4313-ba22-5cedb927a86c",
+      "title": "Alex",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "Alex | 1986-01-01T05:00:00.000Z | XW | None | 886296710959 | 10 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "52e6acac4a8f88af8f16a7cd22cedb1f57fd7e97476bb28f4cde0ceb5244526e",
+      "product_evidence": {
+        "barcode": "886296710959",
+        "catalog_number": null,
+        "date": "1986-01-01T05:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "eebd26a1-2d62-4c58-a72d-a6557dbb5c81"
+      },
+      "dependencies": {
+        "tracks": 10,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 1,
+        "legacy_recording_pointers": 10
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "c14ac8f9-1ac8-4221-a5f8-52534e0798af",
+      "release_group_id": "a8559a7e-c1bb-4313-ba22-5cedb927a86c",
+      "title": "Alex",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "Alex | 1985-01-01T05:00:00.000Z | DO | format unknown | barcode unknown | 10 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "ae3bb8c34b06d54e6fc5a01a3f48de3de2dbbe5402de203cc8fa86e5e4367033",
+      "product_evidence": {
+        "barcode": null,
+        "catalog_number": null,
+        "date": "1985-01-01T05:00:00.000Z",
+        "country": "DO",
+        "packaging": null,
+        "label": null,
+        "provider_mbid": "eae88656-af58-4338-80a5-fe2a4cdf3c66"
+      },
+      "dependencies": {
+        "tracks": 10,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 7
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "0eaab814-f296-4e76-b062-6781f343f4aa",
+      "release_group_id": "9207d1ca-7d5c-4f4e-9fe0-9b0a071b7a16",
+      "title": "Dos x uno",
+      "classification": "UNIQUE_CANONICAL_RELEASE",
+      "verified_edition_identity": "Dos x uno | 2017-03-21T04:00:00.000Z | XW | None | 739645086222 | 2 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "No competing Release row",
+      "track_program_fingerprint": "ca236511f688d36763c8b25948bbec0553ee8d1341122ef0fcdc1ed998e4301d",
+      "product_evidence": {
+        "barcode": "739645086222",
+        "catalog_number": null,
+        "date": "2017-03-21T04:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "676d8e2c-5c6f-48bb-98e0-99bac1e0c3ec"
+      },
+      "dependencies": {
+        "tracks": 2,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 0
+      },
+      "confidence": "high",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "10b16823-488e-42f9-a529-7565f54041b5",
+      "release_group_id": "a5b957c5-36f9-4e44-968c-fccaed397982",
+      "title": "Gozar la vida",
+      "classification": "UNIQUE_CANONICAL_RELEASE",
+      "verified_edition_identity": "Gozar la vida | 2020-10-16T04:00:00.000Z | XW | None | 739645146629 | 1 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "No competing Release row",
+      "track_program_fingerprint": "f6158992d03e40ebd54b9b742d5006b29dba624a99722c9617910a6a4c572bcd",
+      "product_evidence": {
+        "barcode": "739645146629",
+        "catalog_number": null,
+        "date": "2020-10-16T04:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "2a60300f-f2b8-438a-88f2-feed633ebde8"
+      },
+      "dependencies": {
+        "tracks": 1,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 1
+      },
+      "confidence": "high",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "15cb3286-6105-4f9a-851f-ea9eb851e736",
+      "release_group_id": "01941d5b-36ea-4614-9e10-166ccefced43",
+      "title": "Déjame vivir",
+      "classification": "UNIQUE_CANONICAL_RELEASE",
+      "verified_edition_identity": "Déjame vivir | 2023-01-27T05:00:00.000Z | XW | None | 815431022237 | 1 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "No competing Release row",
+      "track_program_fingerprint": "1465bb870fcce62bf3faac8f200482ba9f65045d332ca0e06144480d6ce30b5d",
+      "product_evidence": {
+        "barcode": "815431022237",
+        "catalog_number": null,
+        "date": "2023-01-27T05:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "f37f0324-6853-44c1-9884-ffbfbd694c8b"
+      },
+      "dependencies": {
+        "tracks": 1,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 1
+      },
+      "confidence": "high",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "1de7fb6d-28d7-4d7a-965e-2f41fa64176f",
+      "release_group_id": "41203856-7f24-42b4-a3cd-207b70f6505b",
+      "title": "Bachata a su tiempo",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "Bachata a su tiempo | 1998-10-27T05:00:00.000Z | US | Jewel Case | 37628275626 | 11 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "fe8384e7015e7ceffbf5c41fe8768af706d1ba047df41d49d792a8b500edd0e5",
+      "product_evidence": {
+        "barcode": "37628275626",
+        "catalog_number": null,
+        "date": "1998-10-27T05:00:00.000Z",
+        "country": "US",
+        "packaging": "Jewel Case",
+        "label": null,
+        "provider_mbid": "9d5362d3-18cb-4479-9b16-f83ce8d91647"
+      },
+      "dependencies": {
+        "tracks": 11,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 8
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "271eb377-327b-4871-ad59-0a74efb644d9",
+      "release_group_id": "41203856-7f24-42b4-a3cd-207b70f6505b",
+      "title": "Bachata a su tiempo",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "Bachata a su tiempo | 1998-10-27T05:00:00.000Z | XW | None | 37629547227 | 11 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "617b19c2be50cda3ba67468aadca61fa9c6d7a6424adc28167369cc064811a9e",
+      "product_evidence": {
+        "barcode": "37629547227",
+        "catalog_number": null,
+        "date": "1998-10-27T05:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "e4e87f9d-c62a-4ab0-900b-ad88f1332c8c"
+      },
+      "dependencies": {
+        "tracks": 11,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 9
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "1df8e3c0-bc80-4a56-9278-d5380420f94f",
+      "release_group_id": "fd8bf81d-2665-4240-a8e9-d2f5435b1e6f",
+      "title": "Toqué fondo",
+      "classification": "UNIQUE_CANONICAL_RELEASE",
+      "verified_edition_identity": "Toqué fondo | 2024-01-12T05:00:00.000Z | XW | None | 815431022671 | 1 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "No competing Release row",
+      "track_program_fingerprint": "fadefe83c0896783510d817487896a91dc5c7236cb088bdb2f2a8fad6fe0622a",
+      "product_evidence": {
+        "barcode": "815431022671",
+        "catalog_number": null,
+        "date": "2024-01-12T05:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "8762c739-ef06-4e66-8c13-f999bb3513fe"
+      },
+      "dependencies": {
+        "tracks": 1,
+        "release_artists": 1,
+        "cover_rows": 0,
+        "view_events": 0,
+        "legacy_recording_pointers": 0
+      },
+      "confidence": "high",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "20520ad2-c191-453a-8758-e84391c48744",
+      "release_group_id": "4edc95bb-207c-44fa-8b8e-ee05ee4687a2",
+      "title": "Elizabeth (remix)",
+      "classification": "UNIQUE_CANONICAL_RELEASE",
+      "verified_edition_identity": "Elizabeth (remix) | 2019-05-10T04:00:00.000Z | XW | None | 735119096414 | 1 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "No competing Release row",
+      "track_program_fingerprint": "d01af0f2622e498c5c269dc5a7dcf6d15b891c9fbd978f0452b10e839d6a401e",
+      "product_evidence": {
+        "barcode": "735119096414",
+        "catalog_number": null,
+        "date": "2019-05-10T04:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "7ef3a554-4d53-4d29-8819-9abc399dd080"
+      },
+      "dependencies": {
+        "tracks": 1,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 1
+      },
+      "confidence": "high",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "26810ba4-75d2-4a8b-8477-2c8a628d4b86",
+      "release_group_id": "4387db3e-4d15-4cf3-a96c-ede84f704c8f",
+      "title": "Queda algo",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "Queda algo | 2007-05-01T04:00:00.000Z | US | format unknown | barcode unknown | 11 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "7d51ea623169eb0ab7e71db13016c1974665024b0ff1f9568e0726d3d105d27e",
+      "product_evidence": {
+        "barcode": null,
+        "catalog_number": null,
+        "date": "2007-05-01T04:00:00.000Z",
+        "country": "US",
+        "packaging": null,
+        "label": null,
+        "provider_mbid": "4ebc9197-3370-4c03-8336-55bbfac17c78"
+      },
+      "dependencies": {
+        "tracks": 11,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 10
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "6718831a-3248-4188-848c-1251218347a5",
+      "release_group_id": "4387db3e-4d15-4cf3-a96c-ede84f704c8f",
+      "title": "Queda algo",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "Queda algo | 2007-01-01T05:00:00.000Z | XW | None | 739645048923 | 11 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "b81eb5ef8f3a493dc56120d44937ac4aa03dc11af3ae8b6e43ca07f34aba5729",
+      "product_evidence": {
+        "barcode": "739645048923",
+        "catalog_number": null,
+        "date": "2007-01-01T05:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "c8e7c8b3-42de-47d9-b2b8-f33b76659bc6"
+      },
+      "dependencies": {
+        "tracks": 11,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 9
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "2ad6208f-0cb4-421c-973b-950a8e2f1e70",
+      "release_group_id": "7347574f-0dc8-4ed3-a01a-cdfec867855c",
+      "title": "Lluvia y samba",
+      "classification": "UNIQUE_CANONICAL_RELEASE",
+      "verified_edition_identity": "Lluvia y samba | 2021-11-03T04:00:00.000Z | XW | None | 196292601732 | 1 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "No competing Release row",
+      "track_program_fingerprint": "49457ab4d22592b920f7eed8fc8e81f7d4de259ba15797e09c7f44644dc013b8",
+      "product_evidence": {
+        "barcode": "196292601732",
+        "catalog_number": null,
+        "date": "2021-11-03T04:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "ea959ec8-baff-479e-92f2-ba668223d7f1"
+      },
+      "dependencies": {
+        "tracks": 1,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 1
+      },
+      "confidence": "high",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "2cdb56b5-7211-4951-b17a-658d9a616bd3",
+      "release_group_id": "02fbbf62-7a94-4f03-ac3d-1d49055d55a3",
+      "title": "20 Exitos: Alex Bueno, Vol. 1 & 2",
+      "classification": "UNIQUE_CANONICAL_RELEASE",
+      "verified_edition_identity": "20 Exitos: Alex Bueno, Vol. 1 & 2 | 2002-07-23T04:00:00.000Z | XW | None | barcode unknown | 20 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "No competing Release row",
+      "track_program_fingerprint": "a0d3956d890d879756f5cce412569bc605c9eb92342b196c46636d426d8033ca",
+      "product_evidence": {
+        "barcode": null,
+        "catalog_number": null,
+        "date": "2002-07-23T04:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "90b82830-ee81-436b-bb0e-4f56650e35c1"
+      },
+      "dependencies": {
+        "tracks": 20,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 20
+      },
+      "confidence": "high",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "2d04d4df-cbfa-4d5f-a1ad-7b557ac54892",
+      "release_group_id": "de9c3891-4b8c-4cd7-89ed-c3f18cebdcf4",
+      "title": "Los grandes de Alex Bueno",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "Los grandes de Alex Bueno | 1992-01-01T05:00:00.000Z | XW | None | 886296603268 | 13 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "d3add7dd7a17f329b7f880656a48b9fed6a8a77bec7921c5044f627e608a002d",
+      "product_evidence": {
+        "barcode": "886296603268",
+        "catalog_number": null,
+        "date": "1992-01-01T05:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "61473656-d812-4cab-885d-f413280a02bd"
+      },
+      "dependencies": {
+        "tracks": 13,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 10
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "9e517a94-9040-4b22-825a-fc1f4c53bde3",
+      "release_group_id": "de9c3891-4b8c-4cd7-89ed-c3f18cebdcf4",
+      "title": "Los grandes de Alex Bueno",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "Los grandes de Alex Bueno | 1985-01-01T05:00:00.000Z | territory unknown | format unknown | barcode unknown | 13 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "6eba4c10fead0b4d3db4dc44fa99a73f9244940d1b230ad22ff44fd0f0ee2067",
+      "product_evidence": {
+        "barcode": null,
+        "catalog_number": null,
+        "date": "1985-01-01T05:00:00.000Z",
+        "country": null,
+        "packaging": null,
+        "label": null,
+        "provider_mbid": "1cf452eb-89ab-430f-9ad4-d80d9c57e4f0"
+      },
+      "dependencies": {
+        "tracks": 13,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 1,
+        "legacy_recording_pointers": 13
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "31cb01b8-5934-49b6-9226-96811382a11f",
+      "release_group_id": "22eda3c9-3bfc-4faf-a245-99d533a2fb4c",
+      "title": "Únicamente tú",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "Únicamente tú | 2001-01-01T05:00:00.000Z | XW | None | 37628443124 | 11 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "14a802538a612843429517dd2ec95c635668961241b43f01845ded1afaddd5a3",
+      "product_evidence": {
+        "barcode": "37628443124",
+        "catalog_number": null,
+        "date": "2001-01-01T05:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "fa95dfc6-f9fb-4f32-8f29-622fcb605424"
+      },
+      "dependencies": {
+        "tracks": 11,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 10
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "c15689a9-608d-4327-9f28-6ccd5af38b13",
+      "release_group_id": "22eda3c9-3bfc-4faf-a245-99d533a2fb4c",
+      "title": "Únicamente tú",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "Únicamente tú | 2001-01-01T05:00:00.000Z | CO | Digipak | 770306392764 | 11 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "942eb856501caf080af0450e0a4223745947fb16817fa84d2b43674b0ded6f2a",
+      "product_evidence": {
+        "barcode": "770306392764",
+        "catalog_number": null,
+        "date": "2001-01-01T05:00:00.000Z",
+        "country": "CO",
+        "packaging": "Digipak",
+        "label": null,
+        "provider_mbid": "73925ad6-8670-472b-bbb1-72d1c2d429f0"
+      },
+      "dependencies": {
+        "tracks": 11,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 9
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "3c02cc68-0231-4b75-9506-27f913643765",
+      "release_group_id": "ddca8c8a-af8f-4dc4-89e8-768b05651e0a",
+      "title": "Como quisiera",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "Como quisiera | 1983-01-01T05:00:00.000Z | DO | format unknown | barcode unknown | 8 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "cc48105840f29f875f2c5771077eceabe669b0bf15a92d02a7f0b521fedd6718",
+      "product_evidence": {
+        "barcode": null,
+        "catalog_number": null,
+        "date": "1983-01-01T05:00:00.000Z",
+        "country": "DO",
+        "packaging": null,
+        "label": null,
+        "provider_mbid": "41d7169d-64cc-4c41-825b-0dff791f552b"
+      },
+      "dependencies": {
+        "tracks": 8,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 6
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "975b0558-9f39-46e2-b86e-ab543e90d8f9",
+      "release_group_id": "ddca8c8a-af8f-4dc4-89e8-768b05651e0a",
+      "title": "Cómo quisiera",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "Cómo quisiera | 1983-01-01T05:00:00.000Z | XW | None | 886296710935 | 8 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "0ad774bb389e5991452594960bce35d503f794664f4407dd6aad87a6037b462f",
+      "product_evidence": {
+        "barcode": "886296710935",
+        "catalog_number": null,
+        "date": "1983-01-01T05:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "c4eb2c62-7529-4804-839f-85b6d58e6515"
+      },
+      "dependencies": {
+        "tracks": 8,
+        "release_artists": 1,
+        "cover_rows": 0,
+        "view_events": 1,
+        "legacy_recording_pointers": 8
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "40486b5c-4822-4c00-aca9-129479395845",
+      "release_group_id": "09f1a2b2-6665-45e7-a987-302c9d1cfbf3",
+      "title": "Alex Bueno",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "Alex Bueno | 1990-01-01T05:00:00.000Z | XW | None | 886296603282 | 10 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "2f720f457193a2557f32709dd3065bc9c930db682e40a7f7d5c90d5e5b373be1",
+      "product_evidence": {
+        "barcode": "886296603282",
+        "catalog_number": null,
+        "date": "1990-01-01T05:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "0e54194d-5a3d-466f-94de-59cf0848beea"
+      },
+      "dependencies": {
+        "tracks": 10,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 7
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "d9bacf66-91d6-4a1b-bcb4-e1eb8aacca15",
+      "release_group_id": "09f1a2b2-6665-45e7-a987-302c9d1cfbf3",
+      "title": "Alex Bueno",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "Alex Bueno | 1990-01-01T05:00:00.000Z | DO | format unknown | barcode unknown | 10 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "a429a5093d71e822a71c04c35795c58c0edabff6d69e68190c46088c16dac598",
+      "product_evidence": {
+        "barcode": null,
+        "catalog_number": null,
+        "date": "1990-01-01T05:00:00.000Z",
+        "country": "DO",
+        "packaging": null,
+        "label": null,
+        "provider_mbid": "66d0100d-1790-409c-b58f-59df0a5021cf"
+      },
+      "dependencies": {
+        "tracks": 10,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 10
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "43e55067-631b-4457-8951-66c981e91e93",
+      "release_group_id": "4dc82373-62d2-43d5-b6de-c0a7c5003afd",
+      "title": "Alex & Orquesta Liberación",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "Alex & Orquesta Liberación | 1985-01-01T05:00:00.000Z | XW | None | 886296710973 | 10 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "4e919bbc6a97c0f48e66597eb7d74c5f10fd69d953b16d595950e6c5c46518ef",
+      "product_evidence": {
+        "barcode": "886296710973",
+        "catalog_number": null,
+        "date": "1985-01-01T05:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "e97c195d-4974-4ed4-977d-dfc46e197f79"
+      },
+      "dependencies": {
+        "tracks": 10,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 8
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "b8d7126a-6277-4b5c-939e-8398bc51460f",
+      "release_group_id": "4dc82373-62d2-43d5-b6de-c0a7c5003afd",
+      "title": "Alex & Orquesta Liberación",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "Alex & Orquesta Liberación | 1985-01-01T05:00:00.000Z | DO | format unknown | barcode unknown | 10 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "04b2c1293c4c8db06262bae85643c28616b92bf0cee17247caaa6ade62eb5774",
+      "product_evidence": {
+        "barcode": null,
+        "catalog_number": null,
+        "date": "1985-01-01T05:00:00.000Z",
+        "country": "DO",
+        "packaging": null,
+        "label": null,
+        "provider_mbid": "0e9281c7-6513-42b9-a8f5-475cfdab6fd5"
+      },
+      "dependencies": {
+        "tracks": 10,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 0
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "e78f16ed-683b-499f-8621-bf740d87f4f1",
+      "release_group_id": "4dc82373-62d2-43d5-b6de-c0a7c5003afd",
+      "title": "Alex & Orquesta Liberación",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "Alex & Orquesta Liberación | 1984-01-01T05:00:00.000Z | DO | format unknown | barcode unknown | 10 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "5949f74e5a8c5bc4cd0c52dd6a34c16f8af849e70f424116ef1f2478154b7c61",
+      "product_evidence": {
+        "barcode": null,
+        "catalog_number": null,
+        "date": "1984-01-01T05:00:00.000Z",
+        "country": "DO",
+        "packaging": null,
+        "label": null,
+        "provider_mbid": "fb21d9ef-1320-426f-81d4-205601c44ebd"
+      },
+      "dependencies": {
+        "tracks": 10,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 2
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "4459a086-59f1-4e42-9fbf-f537f1c2d736",
+      "release_group_id": "af01603b-1a15-4850-bef8-1ed8ea717abd",
+      "title": "Grandes éxitos",
+      "classification": "UNIQUE_CANONICAL_RELEASE",
+      "verified_edition_identity": "Grandes éxitos | 2022-04-22T04:00:00.000Z | XW | None | 5056495121022 | 30 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "No competing Release row",
+      "track_program_fingerprint": "84790fdcc21244a2ee5255492fb017180f18351d7990545c879b41f265465cd1",
+      "product_evidence": {
+        "barcode": "5056495121022",
+        "catalog_number": null,
+        "date": "2022-04-22T04:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "e38996c4-7a64-48fa-bf99-f7c93fd16619"
+      },
+      "dependencies": {
+        "tracks": 30,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 25
+      },
+      "confidence": "high",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "48d088c8-a069-4e08-a0e9-62217deec840",
+      "release_group_id": "f85a0a91-c78f-41b6-8d78-a2906d92759f",
+      "title": "Que vuelva",
+      "classification": "UNIQUE_CANONICAL_RELEASE",
+      "verified_edition_identity": "Que vuelva | 2002-01-01T05:00:00.000Z | territory unknown | format unknown | barcode unknown | 16 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "No competing Release row",
+      "track_program_fingerprint": "e6b8576e1c452f7e51daf9362e3b659fca9cb076d8544d1eb136f8809bfe468d",
+      "product_evidence": {
+        "barcode": null,
+        "catalog_number": null,
+        "date": "2002-01-01T05:00:00.000Z",
+        "country": null,
+        "packaging": null,
+        "label": null,
+        "provider_mbid": "d11bee47-29dd-40a4-b34b-378fdbc946af"
+      },
+      "dependencies": {
+        "tracks": 16,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 12
+      },
+      "confidence": "high",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "4e75d493-14ce-4498-ba61-fe53e7658ac8",
+      "release_group_id": "8c084ef1-d3e4-48d0-a4d6-2fa13cf57730",
+      "title": "Mensajes",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "Mensajes | 2008-07-29T04:00:00.000Z | XW | None | 739645026822 | 10 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "56f9b7b51f7d07a59fe54f44ce3cc6d564646bc33fb301c738f14b23134f190a",
+      "product_evidence": {
+        "barcode": "739645026822",
+        "catalog_number": null,
+        "date": "2008-07-29T04:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "c642a9e8-71e7-4650-9a44-a728fec8ce4a"
+      },
+      "dependencies": {
+        "tracks": 10,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 9
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "cbd56a5c-5d6c-4aae-acf0-6a87c4b0c69e",
+      "release_group_id": "8c084ef1-d3e4-48d0-a4d6-2fa13cf57730",
+      "title": "Mensajes",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "Mensajes | 2008-06-17T04:00:00.000Z | US | Jewel Case | 739645026822 | 10 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "3aac60e36121df64b0dd09461f61d2e37100669b9f4e28d2a0f08c1313506c85",
+      "product_evidence": {
+        "barcode": "739645026822",
+        "catalog_number": null,
+        "date": "2008-06-17T04:00:00.000Z",
+        "country": "US",
+        "packaging": "Jewel Case",
+        "label": null,
+        "provider_mbid": "0c70d8e1-b8dd-452a-8d52-07665c2de0bc"
+      },
+      "dependencies": {
+        "tracks": 10,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 5
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "4f9b3680-e07d-4117-ae38-3da7d0d68348",
+      "release_group_id": "f373d106-5dc8-4060-bbd0-06c39002d8a0",
+      "title": "Los rostros del merengue",
+      "classification": "UNIQUE_CANONICAL_RELEASE",
+      "verified_edition_identity": "Los rostros del merengue | 2019-08-02T04:00:00.000Z | XW | None | 739645131922 | 21 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "No competing Release row",
+      "track_program_fingerprint": "8aa8521e9272c7834d954453b7ef33dac06a702a6fe981f4065b0289f41adc64",
+      "product_evidence": {
+        "barcode": "739645131922",
+        "catalog_number": null,
+        "date": "2019-08-02T04:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "1395d53e-2dc8-40ce-b9a1-53b18ddc761c"
+      },
+      "dependencies": {
+        "tracks": 21,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 14
+      },
+      "confidence": "high",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "55d2f4ff-9822-4c52-bf0c-cce57d75fadd",
+      "release_group_id": "34d6c8eb-ee69-4d44-94f1-b7efc2ead905",
+      "title": "Los años dorados",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "Los años dorados | 1993-01-01T05:00:00.000Z | XW | None | 886296603251 | 12 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "dc6688ab74edaa976bffefd48eb0baa1dc0bb6407bc96b9c097abe37bf20fef5",
+      "product_evidence": {
+        "barcode": "886296603251",
+        "catalog_number": null,
+        "date": "1993-01-01T05:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "f9f42440-698e-46c7-8d14-7af8b35b7d4a"
+      },
+      "dependencies": {
+        "tracks": 12,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 8
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "cf626bd2-7dde-440a-8357-474c5b02fc86",
+      "release_group_id": "34d6c8eb-ee69-4d44-94f1-b7efc2ead905",
+      "title": "Los años dorados",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "Los años dorados | 1999-05-04T04:00:00.000Z | DO | format unknown | barcode unknown | 12 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "8da562fb7e0c60f4c3b18b1da6f835e2029c7eb147be7014123d14b8d0cfcdf6",
+      "product_evidence": {
+        "barcode": null,
+        "catalog_number": null,
+        "date": "1999-05-04T04:00:00.000Z",
+        "country": "DO",
+        "packaging": null,
+        "label": null,
+        "provider_mbid": "be870980-b8a6-4850-a4f3-67d275c1caec"
+      },
+      "dependencies": {
+        "tracks": 12,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 1,
+        "legacy_recording_pointers": 7
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "56cd7ac7-ecd4-4a70-917a-37f3bd2738cc",
+      "release_group_id": "cb1a80f7-abe0-468a-908b-a25f56770a4c",
+      "title": "El más completo",
+      "classification": "UNIQUE_CANONICAL_RELEASE",
+      "verified_edition_identity": "El más completo | 2025-04-04T04:00:00.000Z | XW | None | 815431023180 | 15 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "No competing Release row",
+      "track_program_fingerprint": "c0f142122940a6d507c904243ab944b960fea2b02347788a69273b34e3b08b1e",
+      "product_evidence": {
+        "barcode": "815431023180",
+        "catalog_number": null,
+        "date": "2025-04-04T04:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "7b3733e4-f6f8-43c9-9d68-bcb1b6566a6e"
+      },
+      "dependencies": {
+        "tracks": 15,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 15
+      },
+      "confidence": "high",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "60243d87-f283-4cc7-9c12-c767e963e06c",
+      "release_group_id": "729d4ba8-c01d-4540-abcd-3b9a0d381ba3",
+      "title": "Corazón duro (Pistas originales)",
+      "classification": "UNIQUE_CANONICAL_RELEASE",
+      "verified_edition_identity": "Corazón duro (Pistas originales) | 2000-01-25T05:00:00.000Z | XW | None | 37629547326 | 11 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "No competing Release row",
+      "track_program_fingerprint": "895982dffa72ba155d7b50c457750af01026216dd58a1fc5b3dc1bf6183a9b63",
+      "product_evidence": {
+        "barcode": "37629547326",
+        "catalog_number": null,
+        "date": "2000-01-25T05:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "4df3b0c8-556e-4d5a-b4cb-6627c1d1cf01"
+      },
+      "dependencies": {
+        "tracks": 11,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 11
+      },
+      "confidence": "high",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "67b71b2b-665b-476c-bc2e-bc66f0df5528",
+      "release_group_id": "752c2040-3be5-422e-9bd4-9fb8ac5c4177",
+      "title": "Diferente",
+      "classification": "UNIQUE_CANONICAL_RELEASE",
+      "verified_edition_identity": "Diferente | 2017-01-04T05:00:00.000Z | XW | None | 859719312702 | 9 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "No competing Release row",
+      "track_program_fingerprint": "4b383d5da19da8408457f67e014a5cc75370126ccd4395d8326e3a43b33513bb",
+      "product_evidence": {
+        "barcode": "859719312702",
+        "catalog_number": null,
+        "date": "2017-01-04T05:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "523484a9-14f4-4345-b5c6-a765b4e04ad4"
+      },
+      "dependencies": {
+        "tracks": 9,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 9
+      },
+      "confidence": "high",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "6837ea25-c526-421a-af78-cf198e172bcf",
+      "release_group_id": "dc99b5bb-4e28-47b1-a316-662e2be97a4c",
+      "title": "20 años después, vol. 2",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "20 años después, vol. 2 | 2004-06-01T04:00:00.000Z | XW | None | 37629342525 | 11 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "16a903f3d79b37c4f39bdd8303829533a11bf972d823586e46e99cc07870b394",
+      "product_evidence": {
+        "barcode": "37629342525",
+        "catalog_number": null,
+        "date": "2004-06-01T04:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "d1674566-c7e5-4a85-ac4a-8b9033b7d9c4"
+      },
+      "dependencies": {
+        "tracks": 11,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 8
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "a7ec8abf-34b0-4acc-97e9-3edef4d4348d",
+      "release_group_id": "dc99b5bb-4e28-47b1-a316-662e2be97a4c",
+      "title": "20 años después, vol. 2",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "20 años después, vol. 2 | 2004-06-01T04:00:00.000Z | US | format unknown | 37629342525 | 11 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "5c752e53b0f230f664389c2e101da25fea896c14dfd7d33f28992e6f10d7ef9b",
+      "product_evidence": {
+        "barcode": "37629342525",
+        "catalog_number": null,
+        "date": "2004-06-01T04:00:00.000Z",
+        "country": "US",
+        "packaging": null,
+        "label": null,
+        "provider_mbid": "0739ea66-f452-44f3-ab7a-8ba20a620f38"
+      },
+      "dependencies": {
+        "tracks": 11,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 3
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "68edfc14-cff1-43c7-a42e-168af593ba43",
+      "release_group_id": "3ab88511-d3b4-4a47-ad5c-dae239de4dcb",
+      "title": "Solo merengue",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "Solo merengue | 2002-02-12T05:00:00.000Z | XW | None | 37628480822 | 9 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "7596448485f6b0bc72dc9857846077476e05278ee52dff332ed75915101b2e0e",
+      "product_evidence": {
+        "barcode": "37628480822",
+        "catalog_number": null,
+        "date": "2002-02-12T05:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "3fd07a76-abe7-4c98-ac4a-307045803009"
+      },
+      "dependencies": {
+        "tracks": 9,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 8
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "fdc8fa6f-fc72-4c3b-9a13-c46dddc0bea7",
+      "release_group_id": "3ab88511-d3b4-4a47-ad5c-dae239de4dcb",
+      "title": "Solo merengue",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "Solo merengue | 2002-02-19T05:00:00.000Z | US | format unknown | 37628480822 | 9 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "ae2adb9b87d364def4edc690dc34a176a3213ad24ffc6ca5380613fbe0c6ecad",
+      "product_evidence": {
+        "barcode": "37628480822",
+        "catalog_number": null,
+        "date": "2002-02-19T05:00:00.000Z",
+        "country": "US",
+        "packaging": null,
+        "label": null,
+        "provider_mbid": "815fdaac-395d-43ad-931f-d92b64865adc"
+      },
+      "dependencies": {
+        "tracks": 9,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 6
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "71f88c33-2876-4224-98c1-297cc5daa954",
+      "release_group_id": "dd4d1a2d-b113-40f0-beba-523a335f381b",
+      "title": "Que vuelva",
+      "classification": "UNIQUE_CANONICAL_RELEASE",
+      "verified_edition_identity": "Que vuelva | 2022-12-09T05:00:00.000Z | XW | None | 815431022213 | 1 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "No competing Release row",
+      "track_program_fingerprint": "2b98a78c3be2b81f70d538c6683129f7121ed3b95c74b83695474a6cd2e12963",
+      "product_evidence": {
+        "barcode": "815431022213",
+        "catalog_number": null,
+        "date": "2022-12-09T05:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "e023e13a-ed95-4587-95dd-5b57eb9404be"
+      },
+      "dependencies": {
+        "tracks": 1,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 1
+      },
+      "confidence": "high",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "79f72689-e115-48d0-90f6-41c7d6c136d3",
+      "release_group_id": "88d6e51d-744b-40f8-9946-504c6dfc5987",
+      "title": "Mega MixHits",
+      "classification": "UNIQUE_CANONICAL_RELEASE",
+      "verified_edition_identity": "Mega MixHits | 2012-05-02T04:00:00.000Z | XW | None | 739645044123 | 18 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "No competing Release row",
+      "track_program_fingerprint": "83eaf9ff61024b87bfbe4c82c9250be60f5992aff417b533ef3dc995592a7bbb",
+      "product_evidence": {
+        "barcode": "739645044123",
+        "catalog_number": null,
+        "date": "2012-05-02T04:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "a9882bca-eb81-4be3-b3e7-3f5a533e3f9b"
+      },
+      "dependencies": {
+        "tracks": 18,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 18
+      },
+      "confidence": "high",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "8052223f-40fe-405f-b056-8defcdf1aba5",
+      "release_group_id": "8568cd3d-dee7-4b02-9191-2f1b337d0eb8",
+      "title": "20 años después",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "20 años después | 2004-03-30T05:00:00.000Z | territory unknown | format unknown | 37629337026 | 11 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "ab208559637f5ec1aede9570b7bc1ab0b4eb90777373dadfed63e166cdf27a35",
+      "product_evidence": {
+        "barcode": "37629337026",
+        "catalog_number": null,
+        "date": "2004-03-30T05:00:00.000Z",
+        "country": null,
+        "packaging": null,
+        "label": null,
+        "provider_mbid": "0fffdfd2-2e16-4d34-8e80-364d1d146f45"
+      },
+      "dependencies": {
+        "tracks": 11,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 3
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "a39d205e-a38f-41d0-8a0b-dcb69002b060",
+      "release_group_id": "8568cd3d-dee7-4b02-9191-2f1b337d0eb8",
+      "title": "20 años después",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "20 años después | 2004-03-30T05:00:00.000Z | XW | None | 37629337026 | 11 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "2463e2875696c47c95f263f2c1fa62fcbfe24c351918b3aaf1c723702f7aee1b",
+      "product_evidence": {
+        "barcode": "37629337026",
+        "catalog_number": null,
+        "date": "2004-03-30T05:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "46b8f438-4235-4daa-bb16-f28d628cdba2"
+      },
+      "dependencies": {
+        "tracks": 11,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 9
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "83a600e5-5ce3-4fcc-bbe1-0863e977f471",
+      "release_group_id": "9c9319a9-6c42-4364-b318-50a069123979",
+      "title": "Popurrí de bachatas",
+      "classification": "UNIQUE_CANONICAL_RELEASE",
+      "verified_edition_identity": "Popurrí de bachatas | 2024-04-19T04:00:00.000Z | XW | None | 815431022763 | 1 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "No competing Release row",
+      "track_program_fingerprint": "84877eafc4a4477c861c9db20e244f5154ff26e27a42927fece8920d3eebf2fd",
+      "product_evidence": {
+        "barcode": "815431022763",
+        "catalog_number": null,
+        "date": "2024-04-19T04:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "f84c721c-5fa0-45e9-9fcd-686c0ca06038"
+      },
+      "dependencies": {
+        "tracks": 1,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 0
+      },
+      "confidence": "high",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "89dd88d2-a23f-4897-a5d1-632fd1aecebf",
+      "release_group_id": "a5b7f77a-5bbb-4033-bf70-48b28cc28609",
+      "title": "Corazón duro",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "Corazón duro | 2000-01-25T05:00:00.000Z | XW | Jewel Case | 37628369028 | 11 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "53ce2e20bb3df3921391afdf76803eb53ba26185997f5bddcf194d78e05c7548",
+      "product_evidence": {
+        "barcode": "37628369028",
+        "catalog_number": null,
+        "date": "2000-01-25T05:00:00.000Z",
+        "country": "XW",
+        "packaging": "Jewel Case",
+        "label": null,
+        "provider_mbid": "dd7f5c5b-dd07-4761-80ae-784ad30e21d8"
+      },
+      "dependencies": {
+        "tracks": 11,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 6
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "f504e757-6168-4043-bcd3-d70f2cf04b0e",
+      "release_group_id": "a5b7f77a-5bbb-4033-bf70-48b28cc28609",
+      "title": "Corazón duro",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "Corazón duro | 2000-01-25T05:00:00.000Z | XW | None | 37628369028 | 11 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "31c7f419085be61a7044a107699758526a6006c1b453cfdbe3b6a5f03613fcc9",
+      "product_evidence": {
+        "barcode": "37628369028",
+        "catalog_number": null,
+        "date": "2000-01-25T05:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "196f0619-748d-42e7-b3a2-ccd025eae963"
+      },
+      "dependencies": {
+        "tracks": 11,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 8
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "8b1a5769-bbcb-400e-b8b3-bf19da0282af",
+      "release_group_id": "d9814db7-5abd-455a-926a-2f1d5773e6dd",
+      "title": "1",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "1 | 2015-02-27T05:00:00.000Z | territory unknown | format unknown | 739645057925 | 20 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "1cef8d00ebc6a94ac1adb55ab54af0c09e983b6dffe9d10585bf2642619ad665",
+      "product_evidence": {
+        "barcode": "739645057925",
+        "catalog_number": null,
+        "date": "2015-02-27T05:00:00.000Z",
+        "country": null,
+        "packaging": null,
+        "label": null,
+        "provider_mbid": "195c65b2-6450-4b7f-868f-88e535f78026"
+      },
+      "dependencies": {
+        "tracks": 20,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 0
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "ea5d3f79-7bcc-4ab8-af1f-6a23ee67981d",
+      "release_group_id": "d9814db7-5abd-455a-926a-2f1d5773e6dd",
+      "title": "1",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "1 | 2015-02-27T05:00:00.000Z | XW | None | 739645057925 | 20 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "b90017b02ef4420155a7b7258191217a480532f846f94ecdfde94b61dd950584",
+      "product_evidence": {
+        "barcode": "739645057925",
+        "catalog_number": null,
+        "date": "2015-02-27T05:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "4da0096c-ff95-4723-9cbe-be441bdd96a7"
+      },
+      "dependencies": {
+        "tracks": 20,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 18
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "8b48db9f-9d0d-4aeb-adda-fe7aa96d4e1b",
+      "release_group_id": "6fbb64c3-d461-48d0-b541-f39a9ad9b562",
+      "title": "Con fe y sentimiento",
+      "classification": "UNIQUE_CANONICAL_RELEASE",
+      "verified_edition_identity": "Con fe y sentimiento | 1988-01-01T05:00:00.000Z | VE | format unknown | barcode unknown | 8 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "No competing Release row",
+      "track_program_fingerprint": "632daf6f5f18ffae22eedca80ea5d02944c17a8b29b5afd9abff296968e2e179",
+      "product_evidence": {
+        "barcode": null,
+        "catalog_number": null,
+        "date": "1988-01-01T05:00:00.000Z",
+        "country": "VE",
+        "packaging": null,
+        "label": null,
+        "provider_mbid": "45c7c71c-d5c9-4632-ae75-0f684936cfe3"
+      },
+      "dependencies": {
+        "tracks": 8,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 8
+      },
+      "confidence": "high",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "8e236e0c-6f33-4cf9-a01c-973e83154f01",
+      "release_group_id": "86562da5-8b1b-4f10-a357-ba1063fdf2be",
+      "title": "Me equivoqué",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "Me equivoqué | 1996-04-02T05:00:00.000Z | XW | None | 37628325321 | 10 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "b6afb1ae75b829853d9c316761c60defe1568088cf64f54f7523f8ea712c0ad2",
+      "product_evidence": {
+        "barcode": "37628325321",
+        "catalog_number": null,
+        "date": "1996-04-02T05:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "05740d7c-5f35-4698-98e8-51153153d01c"
+      },
+      "dependencies": {
+        "tracks": 10,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 9
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "c1193206-ae8e-463c-9c71-210c3eca958b",
+      "release_group_id": "86562da5-8b1b-4f10-a357-ba1063fdf2be",
+      "title": "Me equivoqué",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "Me equivoqué | 1996-04-02T05:00:00.000Z | XW | format unknown | barcode unknown | 10 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "776cccc851a0d29d1f09a77e6d59a3cab6d6c1eb852a9cbd2ebb592fa8986c92",
+      "product_evidence": {
+        "barcode": null,
+        "catalog_number": null,
+        "date": "1996-04-02T05:00:00.000Z",
+        "country": "XW",
+        "packaging": null,
+        "label": null,
+        "provider_mbid": "2ba4dea9-8e14-4181-b53a-d9dd5e234c6a"
+      },
+      "dependencies": {
+        "tracks": 10,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 10
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "9133a6ea-88a3-4bd0-9a91-dd7aafc7447c",
+      "release_group_id": "489b71b8-b9af-4d83-a30b-2c59b549e6c7",
+      "title": "Confesión",
+      "classification": "UNIQUE_CANONICAL_RELEASE",
+      "verified_edition_identity": "Confesión | 2022-12-09T05:00:00.000Z | XW | None | 815431022190 | 1 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "No competing Release row",
+      "track_program_fingerprint": "16f54408abb5bd5f39d8fa29cbf99d1b19a59785192a83b4e413d6a043e683b7",
+      "product_evidence": {
+        "barcode": "815431022190",
+        "catalog_number": null,
+        "date": "2022-12-09T05:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "c283de4f-4171-4841-b945-717e08b70810"
+      },
+      "dependencies": {
+        "tracks": 1,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 1
+      },
+      "confidence": "high",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "9357f764-efea-4e34-9a0e-9b7e226e85cf",
+      "release_group_id": "817746ff-2904-4af8-ae59-64a5ae9776bc",
+      "title": "Colegiala (sinfónico)",
+      "classification": "UNIQUE_CANONICAL_RELEASE",
+      "verified_edition_identity": "Colegiala (sinfónico) | 2024-11-22T05:00:00.000Z | XW | None | 739645253921 | 1 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "No competing Release row",
+      "track_program_fingerprint": "91b883bebbd69e87317d245bfe25f8bbc9dcdd75cba927a92cc202feeb75ef5b",
+      "product_evidence": {
+        "barcode": "739645253921",
+        "catalog_number": null,
+        "date": "2024-11-22T05:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "5a02e4d6-c094-45a1-b1c5-bb89c8a1cf44"
+      },
+      "dependencies": {
+        "tracks": 1,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 1
+      },
+      "confidence": "high",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "992c2454-ba50-4c41-8289-2ff07d6c64fb",
+      "release_group_id": "67c22dd4-ff9d-43a7-9c05-12e1ae1c01a8",
+      "title": "Entre bachata y merengue",
+      "classification": "UNIQUE_CANONICAL_RELEASE",
+      "verified_edition_identity": "Entre bachata y merengue | 2005-07-12T04:00:00.000Z | US | Jewel Case | 827865301420 | 13 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "No competing Release row",
+      "track_program_fingerprint": "cf1e7be8214864c8c0130d438125364503b5c0002e34ce1b817399595f2549d5",
+      "product_evidence": {
+        "barcode": "827865301420",
+        "catalog_number": null,
+        "date": "2005-07-12T04:00:00.000Z",
+        "country": "US",
+        "packaging": "Jewel Case",
+        "label": null,
+        "provider_mbid": "61576468-d59a-47bf-8909-b2a2dda67bfb"
+      },
+      "dependencies": {
+        "tracks": 13,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 11
+      },
+      "confidence": "high",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "a0373a42-a281-4fa5-b033-8793e5aa8f32",
+      "release_group_id": "2f2c5a66-f504-4813-86be-43280687592a",
+      "title": "Pídeme",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "Pídeme | 2002-11-05T05:00:00.000Z | XW | None | 37628754824 | 11 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "6409039deaad42cb6d17019cb72f6739aa97d5217b0ff59d2d5a8d5e1d956566",
+      "product_evidence": {
+        "barcode": "37628754824",
+        "catalog_number": null,
+        "date": "2002-11-05T05:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "7d8b0f54-0ff3-4c0b-85b8-6fa025f6a324"
+      },
+      "dependencies": {
+        "tracks": 11,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 10
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "ab0ae2bd-5366-465d-8070-c2cf15244e83",
+      "release_group_id": "2f2c5a66-f504-4813-86be-43280687592a",
+      "title": "Pídeme",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "Pídeme | 2002-11-12T05:00:00.000Z | US | format unknown | barcode unknown | 11 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "8e957430c9c3052b430a6cb12a21f6c947485b797afcc6fa3c0daa144fde7d66",
+      "product_evidence": {
+        "barcode": null,
+        "catalog_number": null,
+        "date": "2002-11-12T05:00:00.000Z",
+        "country": "US",
+        "packaging": null,
+        "label": null,
+        "provider_mbid": "d083c96a-5447-41a9-b348-013953a62665"
+      },
+      "dependencies": {
+        "tracks": 11,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 7
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "a4ac23d7-8616-4582-ac18-e999ddb9d42f",
+      "release_group_id": "7416fbe6-301d-4581-b781-0564d020eba9",
+      "title": "Grandes éxitos de Alex Bueno en bachata",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "Grandes éxitos de Alex Bueno en bachata | 2001-01-01T05:00:00.000Z | ES | Jewel Case | 710793025226 | 12 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "81aa04bbf0536d9322ffb6c989a855b6f63284a34a4fa7b3a9a1f4a65b854ad7",
+      "product_evidence": {
+        "barcode": "710793025226",
+        "catalog_number": null,
+        "date": "2001-01-01T05:00:00.000Z",
+        "country": "ES",
+        "packaging": "Jewel Case",
+        "label": null,
+        "provider_mbid": "9c00b169-a8c5-4cff-b583-7e31da8b00b6"
+      },
+      "dependencies": {
+        "tracks": 12,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 9
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "f3917b09-b792-415b-a60d-0ee1c0d149cb",
+      "release_group_id": "7416fbe6-301d-4581-b781-0564d020eba9",
+      "title": "Grandes éxitos de Alex Bueno en bachata",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "Grandes éxitos de Alex Bueno en bachata | 2001-01-01T05:00:00.000Z | XW | None | 886296603275 | 12 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "99b1915b71a35b2447407f3221f9d4431b1c7c3dbaa63de96f06fb5c764abcea",
+      "product_evidence": {
+        "barcode": "886296603275",
+        "catalog_number": null,
+        "date": "2001-01-01T05:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "0f466fbe-50d0-40c2-a5f2-922def07242d"
+      },
+      "dependencies": {
+        "tracks": 12,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 11
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "ac614b3d-e5cf-4bb0-a85d-2bd05ca19c26",
+      "release_group_id": "45a1aec8-f335-49ab-9d03-6ccb35a25c71",
+      "title": "Uniquehits",
+      "classification": "UNIQUE_CANONICAL_RELEASE",
+      "verified_edition_identity": "Uniquehits | 2014-12-10T05:00:00.000Z | XW | None | 739645053521 | 10 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "No competing Release row",
+      "track_program_fingerprint": "0dbb9986126102469d6e7b262909261f0e487f196acc10d224f7140432f1aaf7",
+      "product_evidence": {
+        "barcode": "739645053521",
+        "catalog_number": null,
+        "date": "2014-12-10T05:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "376a29c7-3775-4dc0-8132-132260ccc37a"
+      },
+      "dependencies": {
+        "tracks": 10,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 7
+      },
+      "confidence": "high",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "b02a5fe2-f672-4296-892f-a181da87e25b",
+      "release_group_id": "e43882ac-375c-499f-abac-bbf459a3f663",
+      "title": "Merengue y más",
+      "classification": "UNIQUE_CANONICAL_RELEASE",
+      "verified_edition_identity": "Merengue y más | 1998-06-16T04:00:00.000Z | XW | None | 37628278429 | 11 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "No competing Release row",
+      "track_program_fingerprint": "8195cd961e47539de6afcca249f6416fbf2e03d6d2fcc74f76489ac3f47c11cd",
+      "product_evidence": {
+        "barcode": "37628278429",
+        "catalog_number": null,
+        "date": "1998-06-16T04:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "0371d33e-fd43-41f7-9514-37eaf48ff5e8"
+      },
+      "dependencies": {
+        "tracks": 11,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 8
+      },
+      "confidence": "high",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "b3925e4b-1c14-4c4d-9eb2-cc4baec170eb",
+      "release_group_id": "069570ec-9366-4a28-a928-01f17b5a1721",
+      "title": "Nuestro amor",
+      "classification": "UNIQUE_CANONICAL_RELEASE",
+      "verified_edition_identity": "Nuestro amor | 2020-07-22T04:00:00.000Z | XW | None | 815431021605 | 1 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "No competing Release row",
+      "track_program_fingerprint": "5dee908b990f92c6b7909ae8b8091155e438187ed822edb3d6404ae009ef5d04",
+      "product_evidence": {
+        "barcode": "815431021605",
+        "catalog_number": null,
+        "date": "2020-07-22T04:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "453e3036-bbe1-4189-af3a-945e86b66d95"
+      },
+      "dependencies": {
+        "tracks": 1,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 1
+      },
+      "confidence": "high",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "b53ed30b-e2f5-4b1d-ae5c-61a2845c4cd8",
+      "release_group_id": "63822c07-752e-469d-b3cf-7dc976d230b5",
+      "title": "DE NADA VALE",
+      "classification": "UNIQUE_CANONICAL_RELEASE",
+      "verified_edition_identity": "DE NADA VALE | 2024-01-17T05:00:00.000Z | XW | None | 5054197956409 | 1 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "No competing Release row",
+      "track_program_fingerprint": "5b0652453cc126d877ce98b29cf8bdb327a6ec6a1370171dd9d8fd6db63bd72f",
+      "product_evidence": {
+        "barcode": "5054197956409",
+        "catalog_number": null,
+        "date": "2024-01-17T05:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "86819550-b2a9-4d75-a03e-e3db9cad4444"
+      },
+      "dependencies": {
+        "tracks": 1,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 1
+      },
+      "confidence": "high",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "b566ca2b-9ed5-4482-93e1-c8b6d850ea87",
+      "release_group_id": "806cb9c3-ddc9-4535-a19c-176b20052935",
+      "title": "4x4 en salsa, vol. 1",
+      "classification": "UNIQUE_CANONICAL_RELEASE",
+      "verified_edition_identity": "4x4 en salsa, vol. 1 | 2019-01-25T05:00:00.000Z | XW | None | 739645123323 | 16 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "No competing Release row",
+      "track_program_fingerprint": "7ab55a1f74775193f9c717e62f42fa7914c2e3b1141ea59b86985ce048646c5c",
+      "product_evidence": {
+        "barcode": "739645123323",
+        "catalog_number": null,
+        "date": "2019-01-25T05:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "8c95bebe-ef2d-4a56-a98a-084adff9f951"
+      },
+      "dependencies": {
+        "tracks": 16,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 15
+      },
+      "confidence": "high",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "b6a25f5c-babc-4770-8fbb-32dbad97cd48",
+      "release_group_id": "39bdfc07-6f07-4ca2-b713-14ae2b294ccd",
+      "title": "Amores que matan",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "Amores que matan | 1994-01-01T05:00:00.000Z | DO | format unknown | barcode unknown | 10 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "67d29c2ff2e3012e826716cf0b1f6f9d6210729e1ac28681f30e4fae1ab8d767",
+      "product_evidence": {
+        "barcode": null,
+        "catalog_number": null,
+        "date": "1994-01-01T05:00:00.000Z",
+        "country": "DO",
+        "packaging": null,
+        "label": null,
+        "provider_mbid": "edf6c96d-db01-43e8-8ae7-5f53fb2f9d2a"
+      },
+      "dependencies": {
+        "tracks": 10,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 5
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "ef9f6148-d940-48eb-bd32-be47e6a9c501",
+      "release_group_id": "39bdfc07-6f07-4ca2-b713-14ae2b294ccd",
+      "title": "Amores que matan",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "Amores que matan | 1994-01-01T05:00:00.000Z | XW | None | 37628325123 | 10 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "24e8e656395e6e8f1d1b886642c938a04db6bb9e3b6e8bb854fdc7879e30065c",
+      "product_evidence": {
+        "barcode": "37628325123",
+        "catalog_number": null,
+        "date": "1994-01-01T05:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "d55c1891-f2e5-4c40-8438-1cfadbd2bbae"
+      },
+      "dependencies": {
+        "tracks": 10,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 9
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "b71a6146-568e-404f-af9a-9f84597fbaf9",
+      "release_group_id": "184aa102-2167-44b3-b5c4-ae3dee902b48",
+      "title": "40 años de éxitos",
+      "classification": "UNIQUE_CANONICAL_RELEASE",
+      "verified_edition_identity": "40 años de éxitos | 2023-07-27T04:00:00.000Z | XW | None | 739645230328 | 25 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "No competing Release row",
+      "track_program_fingerprint": "d017c9d2b952990e0cfa0f9a3eba905259a72027fa8ed50a3005416cf366f4cd",
+      "product_evidence": {
+        "barcode": "739645230328",
+        "catalog_number": null,
+        "date": "2023-07-27T04:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "67824928-a968-4b9e-9e56-7efc0acf0b65"
+      },
+      "dependencies": {
+        "tracks": 25,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 24
+      },
+      "confidence": "high",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "cc359dc1-b5f2-472d-aae4-daf130d8f3a8",
+      "release_group_id": "d51f3c3f-92ae-4dd8-96ad-12a588a29c6f",
+      "title": "Bachata a su tiempo (Pistas originales)",
+      "classification": "UNIQUE_CANONICAL_RELEASE",
+      "verified_edition_identity": "Bachata a su tiempo (Pistas originales) | 1998-08-11T04:00:00.000Z | XW | None | 739645121923 | 11 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "No competing Release row",
+      "track_program_fingerprint": "15661e56ba7872aa497c4941e967b02c8c3418834a0de6b915608757a2795fa8",
+      "product_evidence": {
+        "barcode": "739645121923",
+        "catalog_number": null,
+        "date": "1998-08-11T04:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "d2b9d643-e13b-4cb2-a7ff-3ff9ce1dd0f5"
+      },
+      "dependencies": {
+        "tracks": 11,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 11
+      },
+      "confidence": "high",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "ce4ec670-e908-4516-8d4b-f6835031fa90",
+      "release_group_id": "665b0ce0-a258-405c-a738-816176c74d0d",
+      "title": "Más ternura",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "Más ternura | 1997-01-01T05:00:00.000Z | DO | format unknown | barcode unknown | 10 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "a5a453c98fafcc7dc6fe8b840f510b7a182e05e2063ced1c67aa39c87e68488c",
+      "product_evidence": {
+        "barcode": null,
+        "catalog_number": null,
+        "date": "1997-01-01T05:00:00.000Z",
+        "country": "DO",
+        "packaging": null,
+        "label": null,
+        "provider_mbid": "416fd36a-f90c-404c-a34f-427a95b683f5"
+      },
+      "dependencies": {
+        "tracks": 10,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 10
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "e2fde67b-9bf5-4c0a-9340-806e853aad10",
+      "release_group_id": "665b0ce0-a258-405c-a738-816176c74d0d",
+      "title": "Más ternura",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "Más ternura | 1997-02-25T05:00:00.000Z | XW | None | 37628225423 | 10 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "c7bf54b7991d404f65535d0d99b17a9b790dc5f9e868e8a4be744eb5f99a08f6",
+      "product_evidence": {
+        "barcode": "37628225423",
+        "catalog_number": null,
+        "date": "1997-02-25T05:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "bbf96a07-7141-44ea-b39f-d1681f175717"
+      },
+      "dependencies": {
+        "tracks": 10,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 5
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "cecb0d10-75d6-4b12-8540-68ff082b7359",
+      "release_group_id": "a3a345c0-b647-44f3-94f5-52426accc201",
+      "title": "Bachatas en ternuras",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "Bachatas en ternuras | 2009-03-10T04:00:00.000Z | XW | None | 739645034223 | 10 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "01a4a8307a4be53df30032b03c1f91019590327214aae3adf8707b7036f0fb67",
+      "product_evidence": {
+        "barcode": "739645034223",
+        "catalog_number": null,
+        "date": "2009-03-10T04:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "3b4c1e11-93c5-4ac1-8339-5d568fbf277c"
+      },
+      "dependencies": {
+        "tracks": 10,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 5
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "fe881636-d5d6-4432-8b03-209d1900a61b",
+      "release_group_id": "a3a345c0-b647-44f3-94f5-52426accc201",
+      "title": "Bachatas en ternuras",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "Bachatas en ternuras | 2009-02-10T05:00:00.000Z | US | Jewel Case | barcode unknown | 10 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "ec7438890a89eb8e506f2f70d00a7f83ba11811bc7c48eff89081bc4cee58e94",
+      "product_evidence": {
+        "barcode": null,
+        "catalog_number": null,
+        "date": "2009-02-10T05:00:00.000Z",
+        "country": "US",
+        "packaging": "Jewel Case",
+        "label": null,
+        "provider_mbid": "c6fecc98-7af9-4816-86de-848d85d05c31"
+      },
+      "dependencies": {
+        "tracks": 10,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 2
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "cf50e095-c759-40c2-a5be-eb2c9f975dbb",
+      "release_group_id": "ba464993-c61d-46de-a55d-5f422e1981ca",
+      "title": "Regresar al amor",
+      "classification": "UNIQUE_CANONICAL_RELEASE",
+      "verified_edition_identity": "Regresar al amor | 1996-01-01T05:00:00.000Z | XW | None | 886296603244 | 14 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "No competing Release row",
+      "track_program_fingerprint": "9ececad9ada9067d127ac811b1f5611decc8cf5af530a2b5d18733c29559edd8",
+      "product_evidence": {
+        "barcode": "886296603244",
+        "catalog_number": null,
+        "date": "1996-01-01T05:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "eaa3cd8a-ab2e-4cfc-97c0-f995cb11e3ec"
+      },
+      "dependencies": {
+        "tracks": 14,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 13
+      },
+      "confidence": "high",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "d06edac3-680d-44b6-b5a1-f55d7beb7dce",
+      "release_group_id": "8680c3bb-7fe2-4caa-ab23-834e897b6f2b",
+      "title": "Con el alma desnuda",
+      "classification": "UNIQUE_CANONICAL_RELEASE",
+      "verified_edition_identity": "Con el alma desnuda | 2022-12-09T05:00:00.000Z | XW | None | 815431022206 | 1 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "No competing Release row",
+      "track_program_fingerprint": "fa1fd32aeb9895be327104d9ca2dd64534e4b28f96f84977113e60298a5f1533",
+      "product_evidence": {
+        "barcode": "815431022206",
+        "catalog_number": null,
+        "date": "2022-12-09T05:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "741643aa-db37-4e98-b2c7-1a99ca7b252e"
+      },
+      "dependencies": {
+        "tracks": 1,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 1
+      },
+      "confidence": "high",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "d3834878-7045-4c57-be34-5def7d4b52e6",
+      "release_group_id": "5be1eb4b-1d6c-4a51-90fb-da4d32f5f7b2",
+      "title": "En esta Navidad",
+      "classification": "UNIQUE_CANONICAL_RELEASE",
+      "verified_edition_identity": "En esta Navidad | 2021-11-30T05:00:00.000Z | XW | None | 739645202325 | 1 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "No competing Release row",
+      "track_program_fingerprint": "be3a3dc3f7d2d414dce0266892c9cc1659cc75430c30accd56873be1071fea99",
+      "product_evidence": {
+        "barcode": "739645202325",
+        "catalog_number": null,
+        "date": "2021-11-30T05:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "bf095424-6d64-4e02-8528-a2f02942518e"
+      },
+      "dependencies": {
+        "tracks": 1,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 1
+      },
+      "confidence": "high",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "deedd72c-5615-496f-bfd7-d9168d3f7334",
+      "release_group_id": "c6f8793c-fc91-43db-aec6-41c273a39b76",
+      "title": "Éxitos de Alex Bueno",
+      "classification": "UNIQUE_CANONICAL_RELEASE",
+      "verified_edition_identity": "Éxitos de Alex Bueno | 2006-06-27T04:00:00.000Z | US | Jewel Case | 739645009221 | 12 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "No competing Release row",
+      "track_program_fingerprint": "d7ca0573620304f31ce3f8c9caaea48a38a7bae357e8eebbab37f0ac5053ca2f",
+      "product_evidence": {
+        "barcode": "739645009221",
+        "catalog_number": null,
+        "date": "2006-06-27T04:00:00.000Z",
+        "country": "US",
+        "packaging": "Jewel Case",
+        "label": null,
+        "provider_mbid": "d388f315-0572-483b-97b0-ba19dcd3fe83"
+      },
+      "dependencies": {
+        "tracks": 12,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 7
+      },
+      "confidence": "high",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "e235b1a2-23ec-4a4a-9912-b8ed0ba2c09e",
+      "release_group_id": "a3c4941a-6cad-49b0-9c21-a3d89b1e4de2",
+      "title": "Caminito de Guarenas",
+      "classification": "UNIQUE_CANONICAL_RELEASE",
+      "verified_edition_identity": "Caminito de Guarenas | 2020-11-10T05:00:00.000Z | XW | None | 739645148425 | 1 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "No competing Release row",
+      "track_program_fingerprint": "9b624290afdf46b6f9a05cf58ef615e00260146cc724c3ef63892878ba569b58",
+      "product_evidence": {
+        "barcode": "739645148425",
+        "catalog_number": null,
+        "date": "2020-11-10T05:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "4022c744-aaa2-4939-9a45-910de41219ed"
+      },
+      "dependencies": {
+        "tracks": 1,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 1
+      },
+      "confidence": "high",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "e5e723c0-854d-47f8-9051-2d49ee9087c7",
+      "release_group_id": "6b3db8b2-5e75-474e-8d27-defb9c30d6d8",
+      "title": "Solo merengue (Pistas originales)",
+      "classification": "UNIQUE_CANONICAL_RELEASE",
+      "verified_edition_identity": "Solo merengue (Pistas originales) | 2002-01-01T05:00:00.000Z | XW | None | 739645039723 | 9 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "No competing Release row",
+      "track_program_fingerprint": "c16d4a0d635c0a5d0fe99310995234b31c37732b94afbdbddb43ce7660f849eb",
+      "product_evidence": {
+        "barcode": "739645039723",
+        "catalog_number": null,
+        "date": "2002-01-01T05:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "5c6a5d00-6c70-4e1e-a204-312271b0b95f"
+      },
+      "dependencies": {
+        "tracks": 9,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 9
+      },
+      "confidence": "high",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "e75c82ab-829c-473a-95bb-d542a42a9fb1",
+      "release_group_id": "f9bf109e-179b-4ea6-bfb4-e29882067a5e",
+      "title": "Los rostros de la bachata",
+      "classification": "UNIQUE_CANONICAL_RELEASE",
+      "verified_edition_identity": "Los rostros de la bachata | 2017-12-01T05:00:00.000Z | XW | None | 739645094029 | 35 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "No competing Release row",
+      "track_program_fingerprint": "c2fcce1871fa2e038e80f610dc9b6840b05b076e3fa919df68fc0db714486248",
+      "product_evidence": {
+        "barcode": "739645094029",
+        "catalog_number": null,
+        "date": "2017-12-01T05:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "0f354be6-24fc-4f3e-9a5d-7c0b6a849818"
+      },
+      "dependencies": {
+        "tracks": 35,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 35
+      },
+      "confidence": "high",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "ed174960-b567-4741-8199-ffd82cf72ec8",
+      "release_group_id": "150a8446-1799-4dde-a828-0f50b293ca8c",
+      "title": "No te olvidaré",
+      "classification": "UNIQUE_CANONICAL_RELEASE",
+      "verified_edition_identity": "No te olvidaré | 2022-12-09T05:00:00.000Z | XW | None | 815431022183 | 1 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "No competing Release row",
+      "track_program_fingerprint": "e3124885b07d5f259497cbf533f491fc1a632f5874b4d15104eb1c93bbe77220",
+      "product_evidence": {
+        "barcode": "815431022183",
+        "catalog_number": null,
+        "date": "2022-12-09T05:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "89df27c5-6d00-4c3d-b436-6fb2da523889"
+      },
+      "dependencies": {
+        "tracks": 1,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 0
+      },
+      "confidence": "high",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "eeb316ea-319c-42e4-9b9a-1d8f78d8c2a1",
+      "release_group_id": "1cc50777-94ba-49b5-82ff-0e7b9624531b",
+      "title": "Ternuras",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "Ternuras | 1992-10-27T05:00:00.000Z | US | format unknown | barcode unknown | 10 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "c4590619883494fc617ef9c71f09eae24403814ec2c27bd00479f10542b734ab",
+      "product_evidence": {
+        "barcode": null,
+        "catalog_number": null,
+        "date": "1992-10-27T05:00:00.000Z",
+        "country": "US",
+        "packaging": null,
+        "label": null,
+        "provider_mbid": "6cff6044-7956-445c-8f26-545d8ce50dc3"
+      },
+      "dependencies": {
+        "tracks": 10,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 6
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "eec426dd-4313-4c4b-88a6-9cd39021893e",
+      "release_group_id": "1cc50777-94ba-49b5-82ff-0e7b9624531b",
+      "title": "Ternuras",
+      "classification": "LEGITIMATE_DISTINCT_EDITION",
+      "verified_edition_identity": "Ternuras | 1992-10-22T04:00:00.000Z | XW | None | 37628089926 | 10 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "Date, territory, packaging, barcode or program context",
+      "track_program_fingerprint": "ba2b3d1d1e9c911a1f888c58828fc46e2c555213b88719ff8e82fdde0b432751",
+      "product_evidence": {
+        "barcode": "37628089926",
+        "catalog_number": null,
+        "date": "1992-10-22T04:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "e0719e7e-715a-4d9f-90fb-9ded111ecf57"
+      },
+      "dependencies": {
+        "tracks": 10,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 5
+      },
+      "confidence": "medium",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "f48e850d-ff6c-499c-a503-6073b2ec47e6",
+      "release_group_id": "6d5dd977-87d2-4a6d-8cc7-879232d5b80f",
+      "title": "Tranquilo y tropical",
+      "classification": "UNIQUE_CANONICAL_RELEASE",
+      "verified_edition_identity": "Tranquilo y tropical | 2015-01-30T05:00:00.000Z | XW | None | 739645054726 | 16 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "No competing Release row",
+      "track_program_fingerprint": "67bd7825941e6be4a54531c7a355d0c30972dd55f988c3782d1c4a2e055fae74",
+      "product_evidence": {
+        "barcode": "739645054726",
+        "catalog_number": null,
+        "date": "2015-01-30T05:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "f4b1e4a0-7ee2-45b9-b4a1-5b0cbdb31114"
+      },
+      "dependencies": {
+        "tracks": 16,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 11
+      },
+      "confidence": "high",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    },
+    {
+      "release_id": "fe24a1d5-864e-4a16-8def-efce9e545124",
+      "release_group_id": "ad734714-794c-4725-9b87-b252ba2254aa",
+      "title": "¡Como nadie!",
+      "classification": "UNIQUE_CANONICAL_RELEASE",
+      "verified_edition_identity": "¡Como nadie! | 1992-09-01T04:00:00.000Z | XW | None | 37628325222 | 8 tracks",
+      "survivor_candidate": null,
+      "redundant_candidate": false,
+      "meaningful_distinction": "No competing Release row",
+      "track_program_fingerprint": "156c6d3bb7ae11fdd34d4546a5411be4c321b3c2fcd25765c25a5a23bda6fc95",
+      "product_evidence": {
+        "barcode": "37628325222",
+        "catalog_number": null,
+        "date": "1992-09-01T04:00:00.000Z",
+        "country": "XW",
+        "packaging": "None",
+        "label": null,
+        "provider_mbid": "88c0dc01-a777-4b5b-a7f5-83f6713bc6c0"
+      },
+      "dependencies": {
+        "tracks": 8,
+        "release_artists": 1,
+        "cover_rows": 1,
+        "view_events": 0,
+        "legacy_recording_pointers": 5
+      },
+      "confidence": "high",
+      "evidence": [
+        "Complete ordered Track program",
+        "Normalized product metadata",
+        "Independent discography/physical/commercial sources cited in human report",
+        "MusicBrainz identifier retained as provenance only"
+      ]
+    }
+  ]
+}

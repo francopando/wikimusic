@@ -1,14 +1,16 @@
-import { createClient } from "@supabase/supabase-js";
+import type { SupabaseClient } from "@supabase/supabase-js";
+import { requireAdminApiRole } from "@/lib/adminApiAuth";
+import { createServiceRoleClient } from "@/lib/supabaseService";
 
 export async function GET(req: Request) {
+  const auth = await requireAdminApiRole("editor");
+  if (auth.response) return auth.response;
+
   try {
     const { searchParams } = new URL(req.url);
     const offset = Number(searchParams.get("offset") ?? 0);
 
-    const sb = createClient(
-      process.env.SUPABASE_URL!,
-      process.env.SUPABASE_SERVICE_ROLE_KEY!
-    );
+    const sb = createServiceRoleClient();
 
     // Fetch 100 Apple Music links
     const { data: rows, error } = await sb
@@ -32,8 +34,8 @@ export async function GET(req: Request) {
         const odesli = await fetchOdesli(row.url);
         if (!odesli) continue;
         await insertMissingPlatforms(sb, row.recording_id, odesli);
-      } catch (err: any) {
-        console.log("Error:", err.message);
+      } catch (error: unknown) {
+        console.log("Error:", error instanceof Error ? error.message : "Unknown Odesli error");
       }
     }
 
@@ -47,9 +49,12 @@ export async function GET(req: Request) {
       .eq("id", 1);
 
     return Response.json({ nextOffset: offset + 100 });
-  } catch (err: any) {
+  } catch (error: unknown) {
     return Response.json(
-      { error: "Unhandled exception", message: err.message, stack: err.stack },
+      {
+        error: "Unhandled exception",
+        message: error instanceof Error ? error.message : "Unknown error",
+      },
       { status: 500 }
     );
   }
@@ -69,7 +74,11 @@ async function fetchOdesli(appleUrl: string) {
 }
 
 // --- Insert missing platforms ---
-async function insertMissingPlatforms(sb: any, recording_id: string, odesli: any) {
+async function insertMissingPlatforms(
+  sb: SupabaseClient,
+  recording_id: string,
+  odesli: { linksByPlatform?: Record<string, { url?: string }> },
+) {
   const PLATFORM_MAP: Record<string, { platform: string; label: string; display_order: number }> = {
     youtube: { platform: "youtube", label: "YouTube", display_order: 1 },
     spotify: { platform: "spotify", label: "Spotify", display_order: 2 },
@@ -86,7 +95,7 @@ async function insertMissingPlatforms(sb: any, recording_id: string, odesli: any
     .select("platform")
     .eq("recording_id", recording_id);
 
-  const existingSet = new Set(existing?.map((e: any) => e.platform) ?? []);
+  const existingSet = new Set(existing?.map((entry) => entry.platform) ?? []);
 
   for (const [key, config] of Object.entries(PLATFORM_MAP)) {
     const link = odesli.linksByPlatform?.[key];

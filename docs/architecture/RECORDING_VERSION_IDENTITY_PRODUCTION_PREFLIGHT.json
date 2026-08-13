@@ -1,0 +1,70 @@
+{
+  "timestamp": "2026-08-13T01:23:07.906Z",
+  "recordings_columns": [
+    {
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO",
+      "column_default": "gen_random_uuid()"
+    },
+    {
+      "column_name": "work_id",
+      "data_type": "uuid",
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "release_id",
+      "data_type": "uuid",
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "recording_year",
+      "data_type": "integer",
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "disambiguation",
+      "data_type": "text",
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "recording_context",
+      "data_type": "text",
+      "is_nullable": "NO",
+      "column_default": "'secular'::text"
+    }
+  ],
+  "recording_relationships_exists": "recording_relationships",
+  "recording_relationships_count": 0,
+  "version_profiles_exists": null,
+  "disambiguation": {
+    "total": 17051,
+    "populated": 641
+  },
+  "governance_tables": 10,
+  "governance_functions": [
+    {
+      "proname": "audit_canonical_mutation"
+    },
+    {
+      "proname": "editorial_idempotent_result"
+    },
+    {
+      "proname": "require_editorial_capability"
+    }
+  ],
+  "jlg": {
+    "recordings": 327,
+    "tracks": 1452
+  },
+  "global": {
+    "recordings": 17051,
+    "tracks": 22756,
+    "releases": 3169
+  },
+  "passed": true
+}

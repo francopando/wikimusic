@@ -1,5 +1,6 @@
 import type { JSONContent } from "@tiptap/core";
 import { mapEditorialInlineNodes } from "@/lib/editorial/documentTree";
+import { createClientUuid } from "@/lib/clientUuid";
 import type { ArtistReferenceNode, EditorialDocumentV1 } from "@/types/editorialDocument";
 
 export type ArtistReferenceAttrs = ArtistReferenceNode["attrs"];
@@ -7,14 +8,14 @@ export type ArtistReferenceAttrs = ArtistReferenceNode["attrs"];
 export function createArtistReferenceAttrs(
   artistId: string,
   displayText: string,
-  occurrenceId = crypto.randomUUID(),
+  occurrenceId = createClientUuid(),
 ): ArtistReferenceAttrs {
   return { occurrenceId, artistId, displayText };
 }
 
 export function repairDuplicateOccurrenceIds(
   document: EditorialDocumentV1,
-  generateUuid: () => string = () => crypto.randomUUID(),
+  generateUuid: () => string = createClientUuid,
 ): EditorialDocumentV1 {
   const seen = new Set<string>();
   return mapEditorialInlineNodes(structuredClone(document), (node) => {

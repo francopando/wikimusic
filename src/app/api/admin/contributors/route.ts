@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { requireAdminApiRole } from "@/lib/adminApiAuth";
-import { getSupabaseClient } from "@/lib/supabase";
+import { createServiceRoleClient } from "@/lib/supabaseService";
 
 type ContributorPayload = {
   name: string;
@@ -53,7 +53,7 @@ export async function GET() {
   const auth = await requireAdminApiRole();
   if (auth.response) return auth.response;
 
-  const { data, error } = await getSupabaseClient()
+  const { data, error } = await createServiceRoleClient()
     .from("contributors")
     .select(selectFields)
     .order("display_order", { ascending: true })
@@ -96,7 +96,7 @@ export async function POST(request: Request) {
     slug: contributorData.slug.trim(),
     role: contributorData.role.trim(),
   };
-  const supabase = getSupabaseClient();
+  const supabase = createServiceRoleClient();
   const response = body.contributorId
     ? await supabase
         .from("contributors")
@@ -135,7 +135,7 @@ export async function PATCH(request: Request) {
     );
   }
 
-  const { data, error } = await getSupabaseClient()
+  const { data, error } = await createServiceRoleClient()
     .from("contributors")
     .update({ active: body.active })
     .eq("id", body.contributorId)

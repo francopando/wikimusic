@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { requireAdminApiRole } from "@/lib/adminApiAuth";
-import { getSupabaseClient } from "@/lib/supabase";
+import { createServiceRoleClient } from "@/lib/supabaseService";
 import {
   getArtistNames,
   getReleaseTitles,
@@ -22,7 +22,7 @@ async function hydrateTracks(rows: TrackPayload[]) {
   const artistIds: Array<string | null> = [];
 
   if (recordingIds.length > 0) {
-    const { data } = await getSupabaseClient()
+    const { data } = await createServiceRoleClient()
       .from("recordings")
       .select("id,title,artist_id")
       .in("id", recordingIds);
@@ -59,7 +59,7 @@ export async function GET(request: Request) {
   const releaseId = searchParams.get("releaseId");
   const recordingId = searchParams.get("recordingId");
 
-  let query = getSupabaseClient().from("tracks").select(TRACK_FIELDS);
+  let query = createServiceRoleClient().from("tracks").select(TRACK_FIELDS);
 
   if (id) query = query.eq("id", id);
   if (releaseId) query = query.eq("release_id", releaseId);
@@ -122,7 +122,7 @@ export async function POST(request: Request) {
     updated_at: new Date().toISOString(),
   };
 
-  const supabase = getSupabaseClient();
+  const supabase = createServiceRoleClient();
   const response = trackId
     ? await supabase.from("tracks").update(payload).eq("id", trackId).select("id").maybeSingle()
     : await supabase.from("tracks").insert(payload).select("id").maybeSingle();
@@ -134,14 +134,13 @@ export async function POST(request: Request) {
 }
 
 export async function DELETE(request: Request) {
-  const auth = await requireAdminApiRole();
+  const auth = await requireAdminApiRole("admin");
   if (auth.response) return auth.response;
 
   const { trackId } = (await request.json()) as { trackId?: string };
   if (!trackId) return jsonError("Track id is required.");
 
-  const { error } = await getSupabaseClient().from("tracks").delete().eq("id", trackId);
+  const { error } = await createServiceRoleClient().from("tracks").delete().eq("id", trackId);
   if (error) return jsonError(error.message, 500);
   return NextResponse.json({ ok: true, id: trackId });
 }
-

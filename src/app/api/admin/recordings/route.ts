@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { requireAdminApiRole } from "@/lib/adminApiAuth";
-import { getSupabaseClient } from "@/lib/supabase";
+import { createServiceRoleClient } from "@/lib/supabaseService";
 import {
   countRows,
   getArtistNames,
@@ -24,13 +24,6 @@ type RecordingPayload = Record<string, unknown>;
 const RECORDING_FIELDS =
   "id,title,work_id,youtube_id,duration,metadata,release_id,recording_year,artist_id,views,mbid,disambiguation,isrcs,updated_at,genre_id,subgenre_id,ai_confidence,ai_reason,classified_at,recording_context,slug";
 
-function normalizeIsrcs(value: unknown) {
-  if (!Array.isArray(value)) return [];
-  return value
-    .map((item) => String(item).trim().toUpperCase())
-    .filter(Boolean);
-}
-
 function extractYouTubeId(value: unknown) {
   const raw = nullableString(value);
   if (!raw) return null;
@@ -52,6 +45,21 @@ function extractYouTubeId(value: unknown) {
 async function hydrateRecordings(rows: RecordingPayload[]) {
   const artistMap = await getArtistNames(rows.map((row) => row.artist_id as string | null));
   const releaseMap = await getReleaseTitles(rows.map((row) => row.release_id as string | null));
+  const ids = rows.map((row) => row.id as string).filter(Boolean);
+  const firstAppearance = new Map<string, { year: number | null; title: string | null }>();
+  if (ids.length) {
+    const db = createServiceRoleClient();
+    const { data: tracks } = await db.from("tracks").select("recording_id,release_id").in("recording_id", ids);
+    const releaseIds = [...new Set((tracks ?? []).map((track) => track.release_id).filter((id): id is string => Boolean(id)))];
+    const { data: releases } = releaseIds.length ? await db.from("releases").select("id,title,release_year,year,date").in("id", releaseIds) : { data: [] };
+    const releasesById = new Map((releases ?? []).map((release) => [release.id, release]));
+    for (const track of tracks ?? []) {
+      const release = track.release_id ? releasesById.get(track.release_id) : null;
+      const year = release?.release_year ?? release?.year ?? (release?.date ? new Date(release.date).getUTCFullYear() : null);
+      const current = firstAppearance.get(track.recording_id);
+      if (!current || (year != null && (current.year == null || year < current.year))) firstAppearance.set(track.recording_id, { year, title: release?.title ?? null });
+    }
+  }
 
   return rows.map((row) => ({
     ...row,
@@ -59,9 +67,10 @@ async function hydrateRecordings(rows: RecordingPayload[]) {
     release_title: row.release_id ? releaseMap.get(row.release_id as string) ?? null : null,
     subtitle: [
       row.artist_id ? artistMap.get(row.artist_id as string) ?? "Unknown artist" : "No artist",
-      row.recording_year,
-      row.release_id ? releaseMap.get(row.release_id as string) ?? "Unknown release" : null,
-      row.youtube_id,
+      row.disambiguation,
+      row.recording_year ? `recorded ${row.recording_year}` : "recording year unknown",
+      row.duration ? `${row.duration} ms` : null,
+      firstAppearance.get(row.id as string)?.year ? `first-known release ${firstAppearance.get(row.id as string)?.year}` : null,
     ]
       .filter(Boolean)
       .join(" · "),
@@ -69,8 +78,8 @@ async function hydrateRecordings(rows: RecordingPayload[]) {
 }
 
 async function getRecordingDetails(recordingId: string) {
-  const supabase = getSupabaseClient();
-  const [linksResponse, tracksResponse] = await Promise.all([
+  const supabase = createServiceRoleClient();
+  const [linksResponse, tracksResponse, isrcResponse, recordingResponse] = await Promise.all([
     supabase
       .from("recording_platform_links")
       .select("id,platform,label,url,status,confidence,source,checked_at")
@@ -82,18 +91,38 @@ async function getRecordingDetails(recordingId: string) {
       .eq("recording_id", recordingId)
       .order("disc_number", { ascending: true, nullsFirst: false })
       .order("track_number", { ascending: true, nullsFirst: false }),
+    supabase.from("recording_isrcs").select("id,isrc,verification_status,recording_isrc_sources(count)").eq("recording_id", recordingId).order("isrc"),
+    supabase.from("recordings").select("work_id,work:works(id,preferred_title,status)").eq("id", recordingId).maybeSingle(),
   ]);
 
   const trackRows = (tracksResponse.data ?? []) as Array<{ release_id: string | null }>;
-  const releaseMap = await getReleaseTitles(trackRows.map((track) => track.release_id));
+  const releaseIds = [...new Set(trackRows.map((track) => track.release_id).filter((id): id is string => Boolean(id)))];
+  const { data: releases } = releaseIds.length ? await supabase.from("releases").select("id,title,release_year,year,date,type,country,packaging,disambiguation,release_group_id,release_group:release_groups(id,title)").in("id", releaseIds) : { data: [] };
+  const releaseMap = new Map((releases ?? []).map((release) => [release.id, release]));
   const track_usage = trackRows.map((track) => ({
     ...track,
-    release_title: track.release_id ? releaseMap.get(track.release_id) ?? null : null,
+    ...(track.release_id ? releaseMap.get(track.release_id) ?? {} : {}),
+    release_title: track.release_id ? releaseMap.get(track.release_id)?.title ?? null : null,
   }));
+  const isrcValues = (isrcResponse.data ?? []).map((row) => row.isrc);
+  const { data: conflicts } = isrcValues.length ? await supabase.from("recording_isrc_conflicts").select("isrc,recording_count").in("isrc", isrcValues) : { data: [] };
+  const conflictSet = new Set((conflicts ?? []).map((row) => row.isrc));
+  const workValue = recordingResponse.error ? null : recordingResponse.data?.work ?? null;
+  const work = Array.isArray(workValue) ? workValue[0] ?? null : workValue;
+  const { data: compositionCredits } = work?.id
+    ? await supabase
+        .from("work_credits")
+        .select("id,role,credited_as,verification_status,artist:artists(id,name),external_contributor:external_contributors(id,preferred_name),role_definition:credit_roles(id,code,display_name_en,role_family)")
+        .eq("work_id", work.id)
+        .order("sequence", { ascending: true, nullsFirst: false })
+    : { data: [] };
 
   return {
     platform_links: linksResponse.error ? [] : linksResponse.data ?? [],
     track_usage: tracksResponse.error ? [] : track_usage,
+    normalized_isrcs: isrcResponse.error ? [] : (isrcResponse.data ?? []).map((row) => ({ ...row, conflict: conflictSet.has(row.isrc) })),
+    canonical_work: work,
+    composition_credits: compositionCredits ?? [],
   };
 }
 
@@ -106,7 +135,7 @@ export async function GET(request: Request) {
   const artistId = searchParams.get("artistId");
   const q = searchParams.get("q")?.trim() ?? "";
   const limit = Math.min(Number(searchParams.get("limit") ?? "25"), 50);
-  const supabase = getSupabaseClient();
+  const supabase = createServiceRoleClient();
 
   let rows: RecordingPayload[] = [];
 
@@ -175,8 +204,6 @@ export async function POST(request: Request) {
   if (artist.error) return jsonError(artist.error);
   const release = nullableUuid(recordingData.release_id, "Release id");
   if (release.error) return jsonError(release.error);
-  const work = nullableUuid(recordingData.work_id, "Work id");
-  if (work.error) return jsonError(work.error);
   const mbid = nullableUuid(recordingData.mbid, "MBID");
   if (mbid.error) return jsonError(mbid.error);
   const year = nullableInteger(recordingData.recording_year, "Recording year", 0);
@@ -210,15 +237,13 @@ export async function POST(request: Request) {
     recording_context: context,
     genre_id: genre.value,
     subgenre_id: subgenre.value,
-    isrcs: normalizeIsrcs(recordingData.isrcs),
     disambiguation: nullableString(recordingData.disambiguation),
     metadata: metadata.value,
-    work_id: work.value,
     mbid: mbid.value,
     updated_at: new Date().toISOString(),
   };
 
-  const supabase = getSupabaseClient();
+  const supabase = createServiceRoleClient();
   const response = recordingId
     ? await supabase.from("recordings").update(payload).eq("id", recordingId).select("id").maybeSingle()
     : await supabase.from("recordings").insert(payload).select("id").maybeSingle();
@@ -228,43 +253,13 @@ export async function POST(request: Request) {
 
   const finalRecordingId = response.data.id;
 
-  // Phase 3C-B: Also write to recording_credits table if artist_id is set
-  // This synchronizes the new recording_credits table with the legacy recordings.artist_id field
-  if (artist.value) {
-    const recordingCreditsPayload = {
-      recording_id: finalRecordingId,
-      artist_id: artist.value,
-      role: "lead_performer",
-      display_order: 0,
-    };
-
-    // Check if entry already exists
-    const existingCheck = await supabase
-      .from("recording_credits")
-      .select("id")
-      .eq("recording_id", finalRecordingId)
-      .eq("role", "lead_performer")
-      .maybeSingle();
-
-    if (existingCheck.data?.id) {
-      // Update existing
-      await supabase
-        .from("recording_credits")
-        .update(recordingCreditsPayload)
-        .eq("id", existingCheck.data.id);
-    } else {
-      // Insert new
-      await supabase.from("recording_credits").insert(recordingCreditsPayload);
-    }
-  }
-
   revalidateHomepageData();
   revalidateHomepageArchiveCounts();
   return NextResponse.json({ ok: true, id: finalRecordingId });
 }
 
 export async function DELETE(request: Request) {
-  const auth = await requireAdminApiRole();
+  const auth = await requireAdminApiRole("admin");
   if (auth.response) return auth.response;
 
   const { recordingId } = (await request.json()) as { recordingId?: string };
@@ -311,7 +306,7 @@ export async function DELETE(request: Request) {
     return jsonError(`Recording cannot be deleted while linked rows exist. ${blockers.join("; ")}`, 409);
   }
 
-  const { error } = await getSupabaseClient().from("recordings").delete().eq("id", recordingId);
+  const { error } = await createServiceRoleClient().from("recordings").delete().eq("id", recordingId);
   if (error) return jsonError(error.message, 500);
   revalidateHomepageData();
   revalidateHomepageArchiveCounts();

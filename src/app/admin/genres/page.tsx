@@ -6,6 +6,7 @@ import type { FormEvent } from "react";
 import { useTranslations } from "next-intl";
 import BioText from "@/components/molecules/BioText";
 import GenreMediaManager from "@/components/admin/GenreMediaManager";
+import { readApiJson } from "@/lib/clientApiResponse";
 
 type GenreRow = {
   id: string | number;
@@ -149,7 +150,7 @@ export default function AdminGenresPage() {
     setStatus(t("admin.status.loadingGenres"));
 
     const response = await fetch("/api/admin/genres");
-    const result = (await response.json()) as AdminGenresResponse;
+    const result = await readApiJson<AdminGenresResponse>(response, "Genres endpoint");
 
     if (!response.ok || !result.ok) {
       setStatus(t("admin.errors.loadingGenres", { error: result.error || response.statusText }));
@@ -285,7 +286,7 @@ export default function AdminGenresPage() {
         genreData: payload,
       }),
     });
-    const result = (await response.json()) as AdminWriteResponse;
+    const result = await readApiJson<AdminWriteResponse>(response, "Genres endpoint");
 
     if (!response.ok || !result.ok) {
       setStatus(t("admin.errors.savingGenre", { error: result.error || response.statusText }));

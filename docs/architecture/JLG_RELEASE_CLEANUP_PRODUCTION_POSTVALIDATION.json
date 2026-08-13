@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-08-13T13:16:31.666Z",
+  "counts": {
+    "releases": 3165,
+    "tracks": 22716,
+    "release_artists": 3165,
+    "cover_ingest_rows": 3031,
+    "release_view_events": 21,
+    "recordings": 17051,
+    "jlg_recordings": 327,
+    "version_profiles": 53,
+    "recording_relationships": 8,
+    "alex_recordings": 638,
+    "alex_tracks": 839
+  },
+  "jlg_represented_releases": 142,
+  "redundant_releases_remaining": 0,
+  "survivors_present": 4,
+  "protected_recordings_present": 41,
+  "frio_recordings_present": 2,
+  "unresolved_releases_present": 4,
+  "fogarate_editions_present": 2,
+  "target_child_residue": {
+    "tracks": 0,
+    "release_artists": 0,
+    "cover_ingest_rows": 0,
+    "release_view_events": 0
+  },
+  "unvalidated_foreign_keys": 0,
+  "passed": true
+}

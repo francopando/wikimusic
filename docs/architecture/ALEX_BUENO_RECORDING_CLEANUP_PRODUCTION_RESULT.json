@@ -1,0 +1,164 @@
+{
+  "executed_at": "2026-08-13T14:43:24.558Z",
+  "manifest_sha256": "67FA41DE1F2EE290EF087BDA22788291AD7721975133DC7FA7CC24C7E18B81DA",
+  "authorized_families": [
+    {
+      "family_id": "alex-recording-duplicate-004",
+      "title": "querida",
+      "survivor": "e2d5035c-c7b2-4232-9d7f-eea89dc65d15",
+      "redundant": "98422853-88e0-45c5-b3d2-1c57e083a1c0"
+    },
+    {
+      "family_id": "alex-recording-duplicate-006",
+      "title": "que cara mas bonita",
+      "survivor": "2259621d-d22e-4154-a4a6-0045766e8f96",
+      "redundant": "14ae9bfc-acf4-4481-815b-ce0d2955138f"
+    },
+    {
+      "family_id": "alex-recording-duplicate-017",
+      "title": "la radio",
+      "survivor": "6c519ada-7ab7-41da-a8a7-f914116193cf",
+      "redundant": "78cbe934-84fe-44d6-8868-28c1987620fb"
+    },
+    {
+      "family_id": "alex-recording-duplicate-046",
+      "title": "las hojas verdes de verano",
+      "survivor": "1f337f6c-153a-4d8d-866b-969f11793e68",
+      "redundant": "f73a7575-b9a8-41cb-ac5e-1f46eafd36ea"
+    }
+  ],
+  "before": {
+    "recordings": 17051,
+    "tracks": 22716,
+    "releases": 3165,
+    "release_groups": 2813,
+    "platform_links": 82198,
+    "isrcs": 4917,
+    "isrc_sources": 4918,
+    "profiles": 53,
+    "relationships": 8,
+    "alex_recordings": 638,
+    "alex_tracks": 839,
+    "alex_releases": 84,
+    "alex_release_groups": 61
+  },
+  "after": {
+    "recordings": 17047,
+    "tracks": 22716,
+    "releases": 3165,
+    "release_groups": 2813,
+    "platform_links": 82169,
+    "isrcs": 4913,
+    "isrc_sources": 4918,
+    "profiles": 53,
+    "relationships": 8,
+    "alex_recordings": 634,
+    "alex_tracks": 839,
+    "alex_releases": 84,
+    "alex_release_groups": 61
+  },
+  "metrics": {
+    "tracks_repointed": 4,
+    "platform_rows_deleted": 29,
+    "platform_rows_moved": 0,
+    "isrc_rows_collapsed": 4,
+    "isrc_rows_moved": 0,
+    "isrc_provenance_repointed": 4,
+    "importer_rows_deleted": 0,
+    "recordings_deleted": 4
+  },
+  "protected_counts": {
+    "deferred": 52,
+    "legitimate": 18,
+    "holds": 111,
+    "redundant": 0,
+    "survivors": 4
+  },
+  "track_placement_unchanged": true,
+  "affected_tracks_before": [
+    {
+      "id": "0cbe8b6b-ecfb-41b3-b9dd-bfd0d97276d4",
+      "recording_id": "f73a7575-b9a8-41cb-ac5e-1f46eafd36ea",
+      "release_id": "b6a25f5c-babc-4770-8fbb-32dbad97cd48",
+      "disc_number": 1,
+      "position": 7,
+      "track_number": 7,
+      "title_override": null,
+      "length": 263000
+    },
+    {
+      "id": "ca2b1393-8b3f-43b5-b0b4-c9762c79f6bf",
+      "recording_id": "78cbe934-84fe-44d6-8868-28c1987620fb",
+      "release_id": "4459a086-59f1-4e42-9fbf-f537f1c2d736",
+      "disc_number": 1,
+      "position": 18,
+      "track_number": 18,
+      "title_override": null,
+      "length": 251037
+    },
+    {
+      "id": "ce8cf038-d2d4-4ae6-8439-a1befbe1cb26",
+      "recording_id": "98422853-88e0-45c5-b3d2-1c57e083a1c0",
+      "release_id": "ac614b3d-e5cf-4bb0-a85d-2bd05ca19c26",
+      "disc_number": 1,
+      "position": 5,
+      "track_number": 5,
+      "title_override": null,
+      "length": 281960
+    },
+    {
+      "id": "e2aa35cc-ecee-4087-ae44-96e96edd429d",
+      "recording_id": "14ae9bfc-acf4-4481-815b-ce0d2955138f",
+      "release_id": "b71a6146-568e-404f-af9a-9f84597fbaf9",
+      "disc_number": 1,
+      "position": 9,
+      "track_number": 9,
+      "title_override": null,
+      "length": 250000
+    }
+  ],
+  "affected_tracks_after": [
+    {
+      "id": "0cbe8b6b-ecfb-41b3-b9dd-bfd0d97276d4",
+      "recording_id": "1f337f6c-153a-4d8d-866b-969f11793e68",
+      "release_id": "b6a25f5c-babc-4770-8fbb-32dbad97cd48",
+      "disc_number": 1,
+      "position": 7,
+      "track_number": 7,
+      "title_override": null,
+      "length": 263000
+    },
+    {
+      "id": "ca2b1393-8b3f-43b5-b0b4-c9762c79f6bf",
+      "recording_id": "6c519ada-7ab7-41da-a8a7-f914116193cf",
+      "release_id": "4459a086-59f1-4e42-9fbf-f537f1c2d736",
+      "disc_number": 1,
+      "position": 18,
+      "track_number": 18,
+      "title_override": null,
+      "length": 251037
+    },
+    {
+      "id": "ce8cf038-d2d4-4ae6-8439-a1befbe1cb26",
+      "recording_id": "e2d5035c-c7b2-4232-9d7f-eea89dc65d15",
+      "release_id": "ac614b3d-e5cf-4bb0-a85d-2bd05ca19c26",
+      "disc_number": 1,
+      "position": 5,
+      "track_number": 5,
+      "title_override": null,
+      "length": 281960
+    },
+    {
+      "id": "e2aa35cc-ecee-4087-ae44-96e96edd429d",
+      "recording_id": "2259621d-d22e-4154-a4a6-0045766e8f96",
+      "release_id": "b71a6146-568e-404f-af9a-9f84597fbaf9",
+      "disc_number": 1,
+      "position": 9,
+      "track_number": 9,
+      "title_override": null,
+      "length": 250000
+    }
+  ],
+  "dynamic_fk_check": "passed",
+  "passed": true
+}

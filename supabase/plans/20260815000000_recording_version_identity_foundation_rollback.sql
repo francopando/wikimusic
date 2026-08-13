@@ -1,0 +1,12 @@
+BEGIN;
+DROP VIEW IF EXISTS public.recording_identity_summary;
+DROP FUNCTION IF EXISTS public.clear_recording_version_profile(uuid,uuid,uuid,uuid[],text);
+DROP FUNCTION IF EXISTS public.save_recording_version_profile(uuid,uuid,uuid,text,text,text,date,text,text,uuid[],text);
+DROP INDEX IF EXISTS public.recording_relationships_semantic_uidx;
+ALTER TABLE public.recording_relationships DROP CONSTRAINT IF EXISTS recording_relationships_type_valid;
+DELETE FROM public.editorial_role_capabilities WHERE capability='recording.version_manage';
+DELETE FROM public.editorial_capabilities WHERE capability='recording.version_manage';
+DROP TABLE IF EXISTS public.recording_version_profiles;
+DROP FUNCTION IF EXISTS public.enforce_governed_recording_version_profile();
+NOTIFY pgrst,'reload schema';
+COMMIT;

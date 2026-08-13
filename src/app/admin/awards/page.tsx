@@ -115,6 +115,24 @@ function firstRelation<T>(value: T | T[] | null | undefined) {
   return value ?? null;
 }
 
+async function saveAwardResource(
+  resource: "award" | "category" | "artistAward",
+  id: string,
+  data: Record<string, unknown>,
+) {
+  const response = await fetch("/api/admin/awards", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ resource, id: id || null, data }),
+  });
+  const result = await response.json() as { ok?: boolean; id?: string; error?: string };
+
+  return {
+    data: result.ok ? { id: result.id ?? null } : null,
+    error: response.ok && result.ok ? null : { message: result.error ?? "Award request failed." },
+  };
+}
+
 export default function AdminAwardsPage() {
   const t = useTranslations();
   const supabase = getSupabaseClient();
@@ -298,16 +316,19 @@ export default function AdminAwardsPage() {
   );
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     void loadAwards();
     void loadAllCategories();
     void loadArtists();
   }, [loadAllCategories, loadArtists, loadAwards]);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     void loadCategoriesForAward(selectedCategoryAwardId);
   }, [loadCategoriesForAward, selectedCategoryAwardId]);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     void loadArtistAwards(selectedArtistId);
   }, [loadArtistAwards, selectedArtistId]);
 
@@ -346,14 +367,7 @@ export default function AdminAwardsPage() {
       description: nullable(awardForm.description),
     };
 
-    const response = selectedAwardId
-      ? await supabase
-          .from("awards")
-          .update(payload)
-          .eq("id", selectedAwardId)
-          .select("id")
-          .maybeSingle()
-      : await supabase.from("awards").insert([payload]).select("id").maybeSingle();
+    const response = await saveAwardResource("award", selectedAwardId, payload);
 
     if (response.error) {
       setStatus(`${t("admin.errors.savingAward").replace("{error}", response.error.message)}`);
@@ -409,18 +423,7 @@ export default function AdminAwardsPage() {
       description: nullable(categoryForm.description),
     };
 
-    const response = selectedCategoryId
-      ? await supabase
-          .from("award_categories")
-          .update(payload)
-          .eq("id", selectedCategoryId)
-          .select("id")
-          .maybeSingle()
-      : await supabase
-          .from("award_categories")
-          .insert([payload])
-          .select("id")
-          .maybeSingle();
+    const response = await saveAwardResource("category", selectedCategoryId, payload);
 
     if (response.error) {
       setStatus(`${t("admin.errors.savingCategory").replace("{error}", response.error.message)}`);
@@ -496,18 +499,7 @@ export default function AdminAwardsPage() {
       source: nullable(artistAwardForm.source),
     };
 
-    const response = selectedArtistAwardId
-      ? await supabase
-          .from("artist_awards")
-          .update(payload)
-          .eq("id", selectedArtistAwardId)
-          .select("id")
-          .maybeSingle()
-      : await supabase
-          .from("artist_awards")
-          .insert([payload])
-          .select("id")
-          .maybeSingle();
+    const response = await saveAwardResource("artistAward", selectedArtistAwardId, payload);
 
     if (response.error) {
       setStatus(`${t("admin.errors.savingArtistAward").replace("{error}", response.error.message)}`);

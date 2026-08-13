@@ -235,6 +235,13 @@
     "performedBy": "Performed by",
     "release": "Release",
     "worksCreditsRelease": "Release",
+    "knownFrom": "Known from",
+    "recorded": "Recorded",
+    "duration": "Duration",
+    "releaseGroup": "Release group",
+    "openSong": "Open Song",
+    "countryDominicanRepublic": "Dominican Republic",
+    "countryWorldwide": "Worldwide",
     "workRoles": {
       "composer": "Composer", "songwriter": "Songwriter", "lyricist": "Lyricist", "writer": "Writer", "producer": "Producer", "co_producer": "Co-producer", "executive_producer": "Executive producer", "arranger": "Arranger", "orchestrator": "Orchestrator", "conductor": "Conductor", "musician": "Musician", "session_musician": "Session musician", "instrumentalist": "Instrumentalist", "engineer": "Engineer", "recording_engineer": "Recording engineer", "mixing_engineer": "Mixing engineer", "mix_engineer": "Mix engineer", "mixing": "Mixing", "mastering_engineer": "Mastering engineer", "mastering": "Mastering", "beat_programmer": "Beat programmer", "remixer": "Remixer"
     },
@@ -1061,6 +1068,36 @@
     "releaseTypeCounts": "Release type counts are not available yet.",
     "decadeCounts": "Decade counts are not available yet."
   },
+  "family": {
+    "title": "Family",
+    "relationships": "Family Relationships",
+    "addRelationship": "Add Relationship",
+    "editRelationship": "Edit Relationship",
+    "searchArtist": "Search Mangulina artists...",
+    "changeArtist": "Change",
+    "chooseArtist": "Choose a related artist.",
+    "add": "Add Relationship",
+    "update": "Update Relationship",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "empty": "No family relationships saved for this artist.",
+    "confirmDelete": "Delete the family relationship with {name}?",
+    "added": "Family relationship added.",
+    "updated": "Family relationship updated.",
+    "loadError": "Family relationships could not be loaded.",
+    "saveError": "Family relationship could not be saved.",
+    "deleteError": "Family relationship could not be deleted.",
+    "search": { "dialog": "Select an artist", "label": "Search artists", "placeholder": "Name, stage name, or alias", "searching": "Searching…", "error": "Artist search failed. Try again.", "empty": "No artists found.", "cancel": "Cancel" },
+    "labels": {
+      "father": "Father", "mother": "Mother", "parent": "Parent", "son": "Son", "daughter": "Daughter", "child": "Child",
+      "brother": "Brother", "sister": "Sister", "sibling": "Sibling", "cousin": "Cousin",
+      "husband": "Husband", "wife": "Wife", "spouse": "Spouse", "ex_husband": "Ex-husband", "ex_wife": "Ex-wife", "ex_spouse": "Ex-spouse", "widow_of": "Widow of", "widower_of": "Widower of", "late_husband": "Late husband", "late_wife": "Late wife",
+      "grandfather": "Grandfather", "grandmother": "Grandmother", "grandparent": "Grandparent", "grandson": "Grandson", "granddaughter": "Granddaughter", "grandchild": "Grandchild",
+      "uncle": "Uncle", "aunt": "Aunt", "nephew": "Nephew", "niece": "Niece",
+      "great_uncle": "Great-uncle", "great_aunt": "Great-aunt", "great_nephew": "Great-nephew", "great_niece": "Great-niece", "great_uncle_aunt": "Great-uncle/aunt", "great_nibling": "Great-nephew/niece"
+    }
+  },
   "admin": {
     "recordingCredits": {
       "title": "Credits",
@@ -1118,6 +1155,16 @@
         "title": "Recordings / Songs Admin",
         "eyebrow": "Catalog",
         "description": "Create and edit songs, artists, YouTube IDs, genres, context, ISRCs, duration, and release links."
+      },
+      "works": {
+        "title": "Works",
+        "eyebrow": "Music Knowledge",
+        "description": "Manage musical works, composition credits, evidence, and recording relationships."
+      },
+      "recordingReview": {
+        "title": "Recording Identity Review",
+        "eyebrow": "Editorial Review",
+        "description": "Investigate Recording identity candidates, compare evidence, and record non-mutating editorial decisions."
       },
       "songs": {
         "title": "Songs / Recordings Editor",
@@ -1179,6 +1226,16 @@
       "goToTool": "Go to tool",
       "branding": "Mangulina Admin",
       "adminAccess": "Admin Access"
+    },
+    "workWorkspace": {
+      "title": "Works",
+      "description": "Manage musical works, composition credits, evidence, and recording relationships.",
+      "backToPortal": "Back to Admin Portal"
+    },
+    "recordingReview": {
+      "title": "Recording Identity Review",
+      "description": "Investigate Recording identity questions before Work linking and large-scale credit population.",
+      "backToPortal": "Back to Admin Portal"
     },
     "buttons": {
       "exitToHome": "Exit to Homepage",

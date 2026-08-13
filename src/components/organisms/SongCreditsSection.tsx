@@ -1,12 +1,15 @@
-// components/organisms/SongCreditsSection.tsx
+"use client";
 // Groups credits by role for a liner-notes style display.
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
+import { useEffect, useState } from "react";
 
 export type CreditItem = {
   role: string;
   name: string;
   slug?: string | null;
+  externalContributorId?: string | null;
+  country?: string | null;
 };
 
 type SongCreditsSectionProps = {
@@ -87,7 +90,7 @@ function titleCase(value: string) {
     .replace(/\b\w/g, (letter) => letter.toUpperCase());
 }
 
-function normalizeRole(role: string, t: any) {
+function normalizeRole(role: string, t: (key: string) => string) {
   const normalized = role.trim().toLowerCase();
   const key = ROLE_LABELS_KEYS[normalized];
   return key ? t(key) : titleCase(role);
@@ -100,6 +103,15 @@ export default function SongCreditsSection({
 }: SongCreditsSectionProps) {
   const t = useTranslations("creditRoles");
   const tSong = useTranslations("song");
+  const [openExternal, setOpenExternal] = useState<CreditItem | null>(null);
+  useEffect(() => {
+    if (!openExternal) return;
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpenExternal(null);
+    };
+    document.addEventListener("keydown", closeOnEscape);
+    return () => document.removeEventListener("keydown", closeOnEscape);
+  }, [openExternal]);
   const hasCredits = credits.length > 0;
   const hasExtra = Boolean(labelName || releaseInfo);
   if (!hasCredits && !hasExtra) return null;
@@ -109,7 +121,7 @@ export default function SongCreditsSection({
     const role = normalizeRole(c.role || "Credit", t);
     if (!grouped.has(role)) grouped.set(role, []);
     const names = grouped.get(role)!;
-    if (!names.some((item) => item.name === c.name && item.slug === c.slug)) {
+    if (!names.some((item) => item.name === c.name && item.slug === c.slug && item.externalContributorId === c.externalContributorId)) {
       names.push(c);
     }
   }
@@ -162,6 +174,8 @@ export default function SongCreditsSection({
                           >
                             {credit.name}
                           </Link>
+                        ) : credit.externalContributorId ? (
+                          <button type="button" onClick={() => setOpenExternal(credit)} className="font-medium text-[#002D62] underline decoration-dotted underline-offset-2 hover:text-[#CE1126]">{credit.name}</button>
                         ) : (
                           <span>{credit.name}</span>
                         )}
@@ -175,6 +189,7 @@ export default function SongCreditsSection({
           })}
         </dl>
       )}
+      {openExternal && <div role="dialog" aria-modal="true" aria-labelledby="external-contributor-name" className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4" onClick={() => setOpenExternal(null)}><div className="w-full max-w-sm rounded-xl bg-white p-5 shadow-xl" onClick={(event) => event.stopPropagation()}><h3 id="external-contributor-name" className="text-lg font-bold text-[#002D62]">{openExternal.name}</h3><p className="mt-2 text-sm text-gray-600">{openExternal.country ?? "Country not documented"}</p><button type="button" autoFocus onClick={() => setOpenExternal(null)} className="mt-5 rounded-lg border px-4 py-2 text-sm">Close</button></div></div>}
     </section>
   );
 }

@@ -1,66 +1,56 @@
 import { NextResponse } from "next/server";
 import { requireAdminApiRole } from "@/lib/adminApiAuth";
-import { getSupabaseClient } from "@/lib/supabase";
+import { createServiceRoleClient } from "@/lib/supabaseService";
 
-const ROLES = new Set(["lead_performer","featured_performer","guest_performer","instrumentalist","vocalist","choir","orchestra","guitar","drums","piano","bass","trumpet","saxophone","trombone","strings","horns","percussion","conductor","producer","engineer","recording_engineer","mixing_engineer","mixing","mastering_engineer","mastering","session_musician","arranger","composer"]);
 const clean = (value: unknown) => typeof value === "string" ? value.trim() : "";
+const ids = (value: unknown) => Array.isArray(value) ? value.filter((item): item is string => typeof item === "string" && Boolean(item)) : [];
 const integer = (value: unknown) => Number.isInteger(Number(value)) && Number(value) >= 0 ? Number(value) : null;
-
-async function entityExists(table: "recordings" | "artists", id: string) {
-  const { data, error } = await getSupabaseClient().from(table).select("id").eq("id", id).maybeSingle();
-  return !error && Boolean(data);
-}
 
 export async function GET(request: Request) {
   const auth = await requireAdminApiRole(); if (auth.response) return auth.response;
   const recordingId = new URL(request.url).searchParams.get("recordingId") ?? "";
   if (!recordingId) return NextResponse.json({ ok: false, error: "recordingRequired" }, { status: 400 });
-  const { data, error } = await getSupabaseClient().from("recording_credits")
-    .select("id,recording_id,artist_id,role,position,credited_as,display_order,metadata,created_at,artists(id,name,slug,type,primary_role)")
-    .eq("recording_id", recordingId).order("display_order", { ascending: true, nullsFirst: false }).order("created_at", { ascending: true }).order("id", { ascending: true });
-  if (error) return NextResponse.json({ ok: false, error: "loadFailed" }, { status: 500 });
-  return NextResponse.json({ ok: true, credits: data ?? [] });
+  const db = createServiceRoleClient();
+  const [creditResult, roleResult, instrumentResult, sourceResult] = await Promise.all([
+    db.from("recording_credits").select("id,recording_id,artist_id,external_contributor_id,role,role_id,position,credited_as,display_order,metadata,created_at,artist:artists(id,name,slug,type,primary_role),external_contributor:external_contributors(id,preferred_name,country,country_code,status),role_definition:credit_roles(id,code,display_name_en,role_family,normal_scope),recording_credit_instruments(instrument_id,sequence,instrument:instruments(id,code,display_name_en))").eq("recording_id", recordingId).order("display_order", { ascending: true, nullsFirst: false }).order("created_at", { ascending: true }).order("id", { ascending: true }),
+    db.from("credit_roles").select("id,code,display_name_en,display_name_es,role_family,normal_scope,credit_role_scopes!inner(scope)").eq("status", "active").eq("credit_role_scopes.scope", "recording").order("display_order"),
+    db.from("instruments").select("id,code,display_name_en,display_name_es").eq("status", "active").order("display_name_en"),
+    db.from("editorial_sources").select("id,title,source_type,visibility").order("created_at", { ascending: false }).limit(30),
+  ]);
+  if (creditResult.error) return NextResponse.json({ ok: false, error: creditResult.error.message }, { status: 500 });
+  return NextResponse.json({ ok: true, credits: creditResult.data ?? [], roles: roleResult.data ?? [], instruments: instrumentResult.data ?? [], sources: sourceResult.data ?? [] });
 }
 
 export async function POST(request: Request) {
-  const auth = await requireAdminApiRole(); if (auth.response) return auth.response;
-  const body = await request.json(); const recordingId = clean(body.recordingId); const creditId = clean(body.creditId); const artistId = clean(body.artistId); const role = clean(body.role).toLowerCase(); const order = integer(body.displayOrder);
-  if (!recordingId || !(await entityExists("recordings", recordingId))) return NextResponse.json({ ok:false,error:"recordingInvalid"},{status:400});
-  if (!artistId || !(await entityExists("artists", artistId))) return NextResponse.json({ ok:false,error:"artistInvalid"},{status:400});
-  if (!ROLES.has(role)) return NextResponse.json({ ok:false,error:"roleInvalid"},{status:400});
-  if (order == null) return NextResponse.json({ ok:false,error:"orderInvalid"},{status:400});
-  const creditedAs = clean(body.creditedAs); const joinPhrase = clean(body.joinPhrase);
-  if (creditedAs.length > 200 || joinPhrase.length > 40) return NextResponse.json({ ok:false,error:"textTooLong"},{status:400});
-  let metadata: Record<string, unknown> = {};
-  if (creditId) {
-    const { data: current, error: currentError } = await getSupabaseClient().from("recording_credits").select("metadata").eq("id",creditId).eq("recording_id",recordingId).maybeSingle();
-    if (currentError || !current) return NextResponse.json({ok:false,error:"creditInvalid"},{status:400});
-    if (current.metadata && typeof current.metadata === "object" && !Array.isArray(current.metadata)) metadata = { ...current.metadata as Record<string, unknown> };
-  }
-  if (joinPhrase) metadata.join_phrase = joinPhrase; else delete metadata.join_phrase;
-  let duplicate = getSupabaseClient().from("recording_credits").select("id").eq("recording_id",recordingId).eq("artist_id",artistId).ilike("role",role);
-  if (creditId) duplicate = duplicate.neq("id",creditId); const existing = await duplicate.maybeSingle();
-  if (existing.data) return NextResponse.json({ok:false,error:"duplicateCredit"},{status:409});
-  const payload = { recording_id:recordingId,artist_id:artistId,role,credited_as:creditedAs||null,display_order:order,position:order,metadata };
-  const response = creditId ? await getSupabaseClient().from("recording_credits").update(payload).eq("id",creditId).eq("recording_id",recordingId).select("id").maybeSingle() : await getSupabaseClient().from("recording_credits").insert(payload).select("id").maybeSingle();
-  if (response.error || !response.data) return NextResponse.json({ok:false,error:"saveFailed"},{status:500});
-  return NextResponse.json({ok:true,id:response.data.id});
+  const auth = await requireAdminApiRole(); if (auth.response || !auth.user) return auth.response ?? NextResponse.json({ ok: false, error: "Unauthorized" }, { status: 401 });
+  const body = await request.json(); const recordingId = clean(body.recordingId); const order = integer(body.displayOrder);
+  if (!recordingId || !clean(body.roleId) || order == null) return NextResponse.json({ ok: false, error: "invalidCredit" }, { status: 400 });
+  const result = await createServiceRoleClient().rpc("save_editorial_recording_credit", {
+    actor: auth.user.id, key: clean(body.idempotencyKey) || crypto.randomUUID(), recording_uuid: recordingId,
+    credit_uuid: clean(body.creditId) || null, artist_uuid: clean(body.artistId) || null,
+    external_uuid: clean(body.externalContributorId) || null, role_uuid: clean(body.roleId),
+    credited_as_value: clean(body.creditedAs) || null, detail_value: clean(body.creditDetail) || null,
+    display_order_value: order, instrument_ids: ids(body.instrumentIds), source_ids: ids(body.sourceIds),
+    internal_notes_value: clean(body.internalNotes) || null,
+  });
+  if (result.error) return NextResponse.json({ ok: false, error: result.error.message }, { status: result.error.code === "42501" ? 403 : 400 });
+  return NextResponse.json({ ok: true, result: result.data, id: result.data?.recording_credit_id });
 }
 
 export async function PATCH(request: Request) {
   const auth = await requireAdminApiRole(); if (auth.response) return auth.response;
-  const body = await request.json(); const recordingId=clean(body.recordingId); const ids=Array.isArray(body.creditIds)?body.creditIds.map(clean).filter(Boolean):[];
-  if (!recordingId || !ids.length) return NextResponse.json({ok:false,error:"reorderInvalid"},{status:400});
-  const { data } = await getSupabaseClient().from("recording_credits").select("id").eq("recording_id",recordingId).in("id",ids);
-  if ((data??[]).length!==ids.length) return NextResponse.json({ok:false,error:"reorderInvalid"},{status:400});
-  for (let index=0;index<ids.length;index+=1) { const { error }=await getSupabaseClient().from("recording_credits").update({display_order:index,position:index}).eq("id",ids[index]).eq("recording_id",recordingId); if(error)return NextResponse.json({ok:false,error:"reorderFailed"},{status:500}); }
-  return NextResponse.json({ok:true});
+  const body = await request.json(); const recordingId = clean(body.recordingId); const creditIds = ids(body.creditIds);
+  if (!recordingId || !creditIds.length) return NextResponse.json({ ok: false, error: "reorderInvalid" }, { status: 400 });
+  const db = createServiceRoleClient(); const { data } = await db.from("recording_credits").select("id").eq("recording_id", recordingId).in("id", creditIds);
+  if ((data ?? []).length !== creditIds.length) return NextResponse.json({ ok: false, error: "reorderInvalid" }, { status: 400 });
+  for (let index = 0; index < creditIds.length; index += 1) { const { error } = await db.from("recording_credits").update({ display_order: index, position: index }).eq("id", creditIds[index]).eq("recording_id", recordingId); if (error) return NextResponse.json({ ok: false, error: "reorderFailed" }, { status: 500 }); }
+  return NextResponse.json({ ok: true });
 }
 
 export async function DELETE(request: Request) {
-  const auth = await requireAdminApiRole(); if (auth.response) return auth.response;
-  const body=await request.json(); const recordingId=clean(body.recordingId); const creditId=clean(body.creditId);
-  if(!recordingId||!creditId)return NextResponse.json({ok:false,error:"creditRequired"},{status:400});
-  const {error}=await getSupabaseClient().from("recording_credits").delete().eq("id",creditId).eq("recording_id",recordingId);
-  if(error)return NextResponse.json({ok:false,error:"removeFailed"},{status:500}); return NextResponse.json({ok:true});
+  const auth = await requireAdminApiRole("admin"); if (auth.response) return auth.response;
+  const body = await request.json(); const recordingId = clean(body.recordingId); const creditId = clean(body.creditId);
+  if (!recordingId || !creditId) return NextResponse.json({ ok: false, error: "creditRequired" }, { status: 400 });
+  const { error } = await createServiceRoleClient().from("recording_credits").delete().eq("id", creditId).eq("recording_id", recordingId);
+  if (error) return NextResponse.json({ ok: false, error: "removeFailed" }, { status: 500 }); return NextResponse.json({ ok: true });
 }

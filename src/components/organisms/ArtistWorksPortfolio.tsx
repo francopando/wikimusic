@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import { getArtistWorksPortfolio, summarizePortfolioRoles, type PortfolioWork } from "@/lib/getArtistWorksPortfolio";
 import { formatRoleName } from "@/lib/roleNameFormatter";
 import { normalizeArtistWorkCreditRole } from "@/lib/artistWorkCreditRoles";
+import { formatPortfolioDuration } from "@/lib/artistPortfolioPresentation";
 import { Link } from "@/i18n/navigation";
 
 type Translator = Awaited<ReturnType<typeof import("next-intl/server").getTranslations>>;
@@ -10,6 +11,12 @@ function roleLabel(role: string, t: Translator) {
   const normalized = normalizeArtistWorkCreditRole(role);
   const key = `workRoles.${normalized}` as const;
   return t.has(key) ? t(key) : formatRoleName(role);
+}
+
+function countryLabel(code: string, t: Translator) {
+  if (code === "DO") return t("countryDominicanRepublic");
+  if (code === "XW") return t("countryWorldwide");
+  return code;
 }
 
 function PerformerList({ work }: { work: PortfolioWork }) {
@@ -44,11 +51,6 @@ export default async function ArtistWorksPortfolio({ artistId }: { artistId: str
   if (!works.length) return null;
 
   const roleStats = summarizePortfolioRoles(works);
-  const yearGroups = new Map<number | null, PortfolioWork[]>();
-  for (const work of works) {
-    yearGroups.set(work.releaseYear, [...(yearGroups.get(work.releaseYear) ?? []), work]);
-  }
-
   return (
     <section className="min-w-0 rounded-xl border border-gray-100 bg-white p-5 shadow-sm sm:p-6">
       <div className="mb-6">
@@ -71,10 +73,10 @@ export default async function ArtistWorksPortfolio({ artistId }: { artistId: str
       </div>
 
       <div className="space-y-2">
-        {[...yearGroups].flatMap(([, groupWorks]) => groupWorks.map((work) => (
-          <article key={work.id} className="grid grid-cols-1 gap-x-6 gap-y-1 border-b border-gray-100 pb-2 last:border-b-0 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]">
+        {works.map((work) => (
+          <article key={work.id} className="grid grid-cols-1 gap-x-6 gap-y-2 border-b border-gray-100 py-4 first:pt-0 last:border-b-0 last:pb-0 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]">
             <div className="min-w-0">
-              <h5 className="mb-1 text-sm font-semibold text-(--color-flagblue)">
+              <div className="mb-2 flex flex-wrap items-center gap-2"><h5 className="text-base font-semibold text-(--color-flagblue)">
                 {work.recordingSlug ? (
                   <Link
                     href={`/songs/${work.recordingSlug}`}
@@ -84,7 +86,7 @@ export default async function ArtistWorksPortfolio({ artistId }: { artistId: str
                     {work.title}
                   </Link>
                 ) : work.title}
-              </h5>
+              </h5>{work.disambiguation && <span className="rounded-full bg-(--color-flagblue)/10 px-2 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-(--color-flagblue)">{work.disambiguation}</span>}</div>
 
               {work.performers.length > 0 && (
                 <div className="mb-1 text-sm text-gray-500">
@@ -92,12 +94,16 @@ export default async function ArtistWorksPortfolio({ artistId }: { artistId: str
                   <PerformerList work={work} />
                 </div>
               )}
+              <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-gray-500">
+                {work.recordingYear != null && <p><span className="text-gray-400">{t("recorded")}:</span> {work.recordingYear}</p>}
+                {work.duration != null && <p><span className="text-gray-400">{t("duration")}:</span> {formatPortfolioDuration(work.duration)}</p>}
+              </div>
             </div>
 
             <div className="min-w-0">
               {(work.releaseTitle || work.releaseYear) && (
                 <div className="mb-1 text-sm text-gray-500">
-                  <span className="text-gray-400">{t("worksCreditsRelease")}: </span>
+                  <span className="text-gray-400">{t("knownFrom")}: </span>
                   {work.releaseTitle && work.releaseSlug ? (
                     <Link
                       href={`/releases/${work.releaseSlug}`}
@@ -107,8 +113,9 @@ export default async function ArtistWorksPortfolio({ artistId }: { artistId: str
                       {work.releaseTitle}
                     </Link>
                   ) : work.releaseTitle}
-                  {work.releaseTitle && work.releaseYear ? " • " : ""}
-                  {work.releaseYear}
+                  {work.releaseTitle && (work.releaseYear || work.releaseType || work.releaseCountry) ? " • " : ""}
+                  {[work.releaseYear, work.releaseType, work.releaseCountry ? countryLabel(work.releaseCountry, t) : null].filter(Boolean).join(" • ")}
+                  {work.releaseGroupTitle && work.releaseGroupTitle !== work.releaseTitle && <span className="block text-xs text-gray-400">{t("releaseGroup")}: {work.releaseGroupTitle}</span>}
                 </div>
               )}
 
@@ -118,9 +125,10 @@ export default async function ArtistWorksPortfolio({ artistId }: { artistId: str
                   <span className="font-medium">{work.roles.map((role) => roleLabel(role, t)).join(" • ")}</span>
                 </div>
               )}
+              {work.recordingSlug && <Link href={`/songs/${work.recordingSlug}`} prefetch={false} className="mt-2 inline-flex text-xs font-medium text-(--color-flagblue) underline-offset-2 hover:underline">{t("openSong")} →</Link>}
             </div>
           </article>
-        )))}
+        ))}
       </div>
     </section>
   );

@@ -110,16 +110,14 @@ function mergePlatformLinks(
 }
 
 function normalizeCredits(credits: RawCredit[]) {
-  return credits.map((credit) => {
-    const artist = Array.isArray(credit.artist)
-      ? credit.artist[0] ?? null
-      : credit.artist;
-    return {
-      role: credit.role ?? "Credit",
-      name: artist?.name ?? "Unknown",
-      slug: artist?.slug ?? null,
-    };
-  });
+  return credits.map((credit) => ({
+    role: credit.role ?? "Credit",
+    name: credit.display_name || "Unknown",
+    slug: credit.identity_type === "artist" ? credit.artist_slug : null,
+    externalContributorId:
+      credit.identity_type === "external_contributor" ? credit.identity_id : null,
+    country: credit.identity_type === "external_contributor" ? credit.country : null,
+  }));
 }
 
 // ── Metadata ──────────────────────────────────────────────────────────────────

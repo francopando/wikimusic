@@ -1,0 +1,13 @@
+BEGIN;
+DROP TABLE IF EXISTS public.recording_redirects,public.work_redirects,public.artist_redirects,public.editorial_isrc_findings,public.editorial_case_isrcs,public.editorial_case_assertions,public.editorial_case_works,public.editorial_case_recordings,public.editorial_cases,public.editorial_role_capabilities,public.editorial_capabilities,public.editorial_decision_assertions,public.editorial_audit_events,public.editorial_decisions,public.editorial_assertion_evidence,public.editorial_assertion_recording_work_targets,public.editorial_assertion_isrcs,public.editorial_assertion_recording_credits,public.editorial_assertion_work_credits,public.editorial_assertion_recordings,public.editorial_assertion_works,public.editorial_assertions CASCADE;
+ALTER TABLE public.work_credit_sources DROP COLUMN IF EXISTS source_id;
+ALTER TABLE public.recording_isrc_sources DROP COLUMN IF EXISTS source_id;
+DROP TABLE IF EXISTS public.editorial_sources CASCADE;
+DROP FUNCTION IF EXISTS public.has_editorial_capability(text);
+DROP FUNCTION IF EXISTS public.prevent_identity_redirect_cycle();
+DROP FUNCTION IF EXISTS public.protect_append_only_governance();
+DROP FUNCTION IF EXISTS public.validate_assertion_subject();
+DROP FUNCTION IF EXISTS public.approve_editorial_decision(uuid);
+DROP FUNCTION IF EXISTS public.audit_canonical_mutation();
+NOTIFY pgrst, 'reload schema';
+COMMIT;

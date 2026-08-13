@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { requireAdminApiRole } from "@/lib/adminApiAuth";
-import { getSupabaseClient } from "@/lib/supabase";
+import { createServiceRoleClient } from "@/lib/supabaseService";
 import { invalidateArtistPortfolioCache } from "@/lib/artistPortfolioCache";
 
 const WORK_FIELDS = "id,title,performer_artist_id,performer_text,release_title,release_year,created_at,updated_at";
@@ -40,7 +40,7 @@ export async function GET(request: Request) {
   const filterYear = Number(params.get("year"));
   const sort = params.get("sort") ?? "year";
   const ascending = params.get("direction") === "asc";
-  const supabase = getSupabaseClient();
+  const supabase = createServiceRoleClient();
   let query = supabase.from("credited_works").select(`${WORK_FIELDS},performer_artist:artists!credited_works_performer_artist_id_fkey(id,name,slug),credited_work_credits!inner(id,artist_id,role,artists(id,name,primary_role))`, { count: "exact" });
   if (artist) query = query.eq("credited_work_credits.artist_id", artist);
   if (role) query = query.eq("credited_work_credits.role", role);
@@ -74,7 +74,7 @@ export async function POST(request: Request) {
   if (!performer_text) return NextResponse.json({ ok: false, error: "performerRequired" }, { status: 400 });
   if (Number.isNaN(release_year)) return NextResponse.json({ ok: false, error: "yearInvalid" }, { status: 400 });
   if (!credits.length) return NextResponse.json({ ok: false, error: "creditRequired" }, { status: 400 });
-  const supabase = getSupabaseClient();
+  const supabase = createServiceRoleClient();
   if (performer_artist_id) {
     const performer = await supabase.from("artists").select("id").eq("id", performer_artist_id).maybeSingle();
     if (performer.error || !performer.data) return NextResponse.json({ ok: false, error: "performerArtistInvalid" }, { status: 400 });
@@ -112,7 +112,7 @@ export async function DELETE(request: Request) {
   const auth = await requireAdminApiRole("admin"); if (auth.response) return auth.response;
   const body = await request.json(); const workId = text(body.workId); const artistId = text(body.artistId);
   if (!workId) return NextResponse.json({ ok: false, error: "workRequired" }, { status: 400 });
-  const supabase = getSupabaseClient();
+  const supabase = createServiceRoleClient();
   if (artistId && !body.deleteEntireWork) { const result = await supabase.from("credited_work_credits").delete().eq("credited_work_id", workId).eq("artist_id", artistId); if (result.error) return NextResponse.json({ ok: false, error: result.error.message }, { status: 500 }); invalidateArtistPortfolioCache(); return NextResponse.json({ ok: true }); }
   if (body.confirmTitle !== body.title) return NextResponse.json({ ok: false, error: "confirmationMismatch" }, { status: 400 });
   const result = await supabase.from("credited_works").delete().eq("id", workId); if (result.error) return NextResponse.json({ ok: false, error: result.error.message }, { status: 500 });

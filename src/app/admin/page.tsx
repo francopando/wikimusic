@@ -39,6 +39,16 @@ const ADMIN_TOOLS_CONFIG: Omit<AdminTool, "title" | "eyebrow" | "description">[]
     icon: "recordings",
   },
   {
+    href: "/admin/authoritative-works",
+    status: "available",
+    icon: "works",
+  },
+  {
+    href: "/admin/recording-review",
+    status: "available",
+    icon: "recordingReview",
+  },
+  {
     href: "/admin/genres",
     status: "available",
     icon: "genres",

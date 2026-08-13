@@ -1,0 +1,116 @@
+{
+  "timestamp": "2026-08-13T14:47:25.826Z",
+  "deployment": "https://mangulina.vercel.app",
+  "checks": {
+    "artist_profile": {
+      "url": "https://mangulina.vercel.app/en/artists/alex-bueno",
+      "final_url": "https://mangulina.vercel.app/artists/alex-bueno",
+      "status": 200,
+      "loaded": true,
+      "content_present": true
+    },
+    "song_querida": {
+      "url": "https://mangulina.vercel.app/en/songs/querida-alex-bueno-12",
+      "final_url": "https://mangulina.vercel.app/songs/querida-alex-bueno-12",
+      "status": 200,
+      "loaded": true,
+      "content_present": true
+    },
+    "song_que_cara": {
+      "url": "https://mangulina.vercel.app/en/songs/que-cara-mas-bonita-alex-bueno-4",
+      "final_url": "https://mangulina.vercel.app/songs/que-cara-mas-bonita-alex-bueno-4",
+      "status": 200,
+      "loaded": true,
+      "content_present": true
+    },
+    "song_la_radio": {
+      "url": "https://mangulina.vercel.app/en/songs/la-radio-alex-bueno-2",
+      "final_url": "https://mangulina.vercel.app/songs/la-radio-alex-bueno-2",
+      "status": 200,
+      "loaded": true,
+      "content_present": true
+    },
+    "song_hojas": {
+      "url": "https://mangulina.vercel.app/en/songs/las-hojas-verdes-de-verano-alex-bueno",
+      "final_url": "https://mangulina.vercel.app/songs/las-hojas-verdes-de-verano-alex-bueno",
+      "status": 200,
+      "loaded": true,
+      "content_present": true
+    },
+    "release_uniquehits": {
+      "url": "https://mangulina.vercel.app/en/releases/uniquehits-alex-bueno",
+      "final_url": "https://mangulina.vercel.app/releases/uniquehits-alex-bueno",
+      "status": 200,
+      "loaded": true,
+      "content_present": true
+    },
+    "release_40_anos": {
+      "url": "https://mangulina.vercel.app/en/releases/40-anos-de-exitos-alex-bueno",
+      "final_url": "https://mangulina.vercel.app/releases/40-anos-de-exitos-alex-bueno",
+      "status": 200,
+      "loaded": true,
+      "content_present": true
+    },
+    "release_grandes": {
+      "url": "https://mangulina.vercel.app/en/releases/grandes-exitos-alex-bueno",
+      "final_url": "https://mangulina.vercel.app/releases/grandes-exitos-alex-bueno",
+      "status": 200,
+      "loaded": true,
+      "content_present": true
+    },
+    "release_amores": {
+      "url": "https://mangulina.vercel.app/en/releases/amores-que-matan-alex-bueno",
+      "final_url": "https://mangulina.vercel.app/releases/amores-que-matan-alex-bueno",
+      "status": 200,
+      "loaded": true,
+      "content_present": true
+    },
+    "public_search": {
+      "url": "https://mangulina.vercel.app/en/search?q=Alex%20Bueno",
+      "final_url": "https://mangulina.vercel.app/search?q=Alex+Bueno",
+      "status": 200,
+      "loaded": true,
+      "content_present": true
+    },
+    "admin_recording_search": {
+      "url": "https://mangulina.vercel.app/admin/catalog/recordings",
+      "status": 307,
+      "available": true,
+      "redirect": "/admin/login?next=%2Fadmin%2Fcatalog%2Frecordings"
+    },
+    "recording_workspace": {
+      "url": "https://mangulina.vercel.app/admin/recording-review",
+      "status": 307,
+      "available": true,
+      "redirect": "/admin/login?next=%2Fadmin%2Frecording-review"
+    },
+    "redundant_querida": {
+      "url": "https://mangulina.vercel.app/en/songs/querida-alex-bueno-8",
+      "final_url": "https://mangulina.vercel.app/songs/querida-alex-bueno-8",
+      "status": 404,
+      "not_addressable": true
+    },
+    "redundant_que_cara": {
+      "url": "https://mangulina.vercel.app/en/songs/que-cara-mas-bonita-alex-bueno-3",
+      "final_url": "https://mangulina.vercel.app/songs/que-cara-mas-bonita-alex-bueno-3",
+      "status": 404,
+      "not_addressable": true
+    },
+    "redundant_la_radio": {
+      "url": "https://mangulina.vercel.app/en/songs/la-radio-alex-bueno-4",
+      "final_url": "https://mangulina.vercel.app/songs/la-radio-alex-bueno-4",
+      "status": 404,
+      "not_addressable": true
+    },
+    "redundant_hojas": {
+      "url": "https://mangulina.vercel.app/en/songs/las-hojas-verdes-de-verano-alex-bueno-2",
+      "final_url": "https://mangulina.vercel.app/songs/las-hojas-verdes-de-verano-alex-bueno-2",
+      "status": 404,
+      "not_addressable": true
+    }
+  },
+  "public_pages_passed": true,
+  "admin_routes_available": true,
+  "redundant_pages_not_addressable": true,
+  "passed": true
+}

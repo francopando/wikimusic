@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import type { SupabaseClient } from "@supabase/supabase-js";
-import { getSupabaseServiceClient } from "@/lib/adminAccess";
+import { createServiceRoleClient } from "@/lib/supabaseService";
 import {
   EVENT_TYPES,
   textValue,
@@ -202,7 +202,7 @@ export async function handleTrackRequest(
 
 export async function POST(request: Request) {
   return handleTrackRequest(request, {
-    getClient: getSupabaseServiceClient,
+    getClient: createServiceRoleClient,
     rateLimitStore: getRateLimitStore(),
   });
 }

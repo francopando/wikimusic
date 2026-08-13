@@ -1,0 +1,1 @@
+BEGIN; DROP FUNCTION IF EXISTS public.attach_editorial_evidence(uuid,uuid,uuid,uuid,text,text); DROP FUNCTION IF EXISTS public.request_recording_work_unlink(uuid,uuid,uuid,text); DROP FUNCTION IF EXISTS public.resolve_recording_work_decision(uuid,uuid,uuid,text,text); NOTIFY pgrst,'reload schema'; COMMIT;

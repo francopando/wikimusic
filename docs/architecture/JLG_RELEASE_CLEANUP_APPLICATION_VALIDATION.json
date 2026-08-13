@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-08-13T13:18:00Z",
+  "deployment": "https://mangulina.vercel.app",
+  "artist_profile_loaded": true,
+  "edition_counts": {"Grandes éxitos":10,"Todo tiene su hora":4,"Literal":2,"Fogaraté!":2},
+  "release_pages": {"Grandes éxitos":true,"Todo tiene su hora":true,"Literal":true,"Fogaraté!":true,"Frío, frío":true},
+  "track_counts": {"Todo tiene su hora":10,"Literal":11,"Fogaraté!":12,"Frío, frío":1},
+  "frio_false_two_track_release": false,
+  "console_errors": 0,
+  "passed": true
+}

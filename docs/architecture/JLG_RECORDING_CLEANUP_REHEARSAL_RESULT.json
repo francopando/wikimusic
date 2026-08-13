@@ -1,0 +1,25 @@
+{
+  "before": {
+    "recordings": 370,
+    "tracks": 1452,
+    "releases": 146,
+    "all_recordings": 17094,
+    "all_tracks": 22756
+  },
+  "after": {
+    "recordings": 327,
+    "tracks": 1452,
+    "releases": 146,
+    "all_recordings": 17051,
+    "all_tracks": 22756
+  },
+  "recordings_deleted": 43,
+  "track_delta": 0,
+  "all_recording_delta": -43,
+  "all_track_delta": 0,
+  "release_tracklists_stable": true,
+  "deleted_still_present": 0,
+  "survivor_missing": 0,
+  "unvalidated_foreign_keys": 0,
+  "passed": true
+}

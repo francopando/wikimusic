@@ -8,7 +8,7 @@
 // so nothing is exposed to the browser. Every reader fails soft: if the
 // materialized view is missing or errors, it returns an empty map and callers
 // fall back to all-time `views`, so the homepage never renders empty.
-import { getSupabaseServiceClient } from "@/lib/adminAccess";
+import { createServiceRoleClient } from "@/lib/supabaseService";
 
 async function readViewCounts(
   table: string,
@@ -16,7 +16,7 @@ async function readViewCounts(
   countColumn: string,
 ): Promise<Map<string, number>> {
   try {
-    const supabase = getSupabaseServiceClient();
+    const supabase = createServiceRoleClient();
     const { data, error } = await supabase.from(table).select(`${idColumn}, ${countColumn}`);
     if (error || !data) return new Map();
 
@@ -50,7 +50,7 @@ export function getArtistViews7d(): Promise<Map<string, number>> {
  */
 export async function getRollupLastRefreshed(): Promise<string | null> {
   try {
-    const supabase = getSupabaseServiceClient();
+    const supabase = createServiceRoleClient();
     const { data, error } = await supabase
       .from("analytics_rollup_status")
       .select("refreshed_at")

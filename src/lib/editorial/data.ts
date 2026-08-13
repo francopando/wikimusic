@@ -1,4 +1,4 @@
-import { getSupabaseServiceClient } from "@/lib/adminAccess";
+import { createServiceRoleClient } from "@/lib/supabaseService";
 import { collectEditorialReferences } from "@/lib/editorial/references";
 import { validateEditorialDocument } from "@/lib/editorial/validate";
 import type { EditorialLocale, SupportedEditorialDocumentType } from "@/types/editorialDocument";
@@ -8,7 +8,7 @@ export async function loadEditorialDocument(
   ownerArtistId: string,
   locale: EditorialLocale,
 ) {
-  const { data, error } = await getSupabaseServiceClient()
+  const { data, error } = await createServiceRoleClient()
     .from("editorial_documents")
     .select("id,document_type,owner_artist_id,locale,schema_version,document,status,revision,created_at,updated_at")
     .eq("document_type", documentType)
@@ -23,7 +23,7 @@ export async function loadEditorialDocument(
 }
 
 export async function loadEditorialDocumentReferences(editorialDocumentId: string) {
-  const { data, error } = await getSupabaseServiceClient()
+  const { data, error } = await createServiceRoleClient()
     .from("editorial_entity_references")
     .select("id,editorial_document_id,occurrence_id,entity_type,target_artist_id,created_at,updated_at")
     .eq("editorial_document_id", editorialDocumentId)
@@ -33,7 +33,7 @@ export async function loadEditorialDocumentReferences(editorialDocumentId: strin
 }
 
 export async function loadReverseArtistReferences(targetArtistId: string) {
-  const { data, error } = await getSupabaseServiceClient()
+  const { data, error } = await createServiceRoleClient()
     .from("editorial_entity_references")
     .select("id,editorial_document_id,occurrence_id,entity_type,target_artist_id,editorial_document:editorial_documents!inner(id,document_type,owner_artist_id,locale,status,revision)")
     .eq("target_artist_id", targetArtistId);
@@ -42,7 +42,7 @@ export async function loadReverseArtistReferences(targetArtistId: string) {
 }
 
 export async function verifyEditorialDocumentIntegrity(editorialDocumentId: string) {
-  const supabase = getSupabaseServiceClient();
+  const supabase = createServiceRoleClient();
   const [{ data: document, error: documentError }, { data: relations, error: relationError }] = await Promise.all([
     supabase.from("editorial_documents").select("id,schema_version,document").eq("id", editorialDocumentId).maybeSingle(),
     supabase.from("editorial_entity_references").select("occurrence_id,entity_type,target_artist_id").eq("editorial_document_id", editorialDocumentId),

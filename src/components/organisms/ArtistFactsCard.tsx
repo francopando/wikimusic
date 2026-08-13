@@ -9,6 +9,7 @@ import type { IconType } from "react-icons";
 
 import type { ArtistProfileData } from "@/lib/artistApi";
 import type { ArtistRelationshipItem } from "@/lib/artistRelationships";
+import type { FamilyRelationshipItem } from "@/lib/artistFamilyRelationships";
 
 type Props = {
   artist: ArtistProfileData;
@@ -18,6 +19,7 @@ type Props = {
   members?: ArtistRelationshipItem[];
   founders?: ArtistRelationshipItem[];
   leaders?: ArtistRelationshipItem[];
+  familyRelationships?: FamilyRelationshipItem[];
 };
 
 function formatDate(date: string | null, locale: string) {
@@ -429,6 +431,7 @@ export default function ArtistFactsCard({
   members = [],
   founders = [],
   leaders = [],
+  familyRelationships = [],
 }: Props) {
   const t = useTranslations();
   const locale = useLocale();
@@ -502,7 +505,22 @@ export default function ArtistFactsCard({
           </Field>
         )}
 
-        {!!artist.aliases?.length && <SectionDivider />}
+        {familyRelationships.length > 0 && (
+          <Field label={t("family.title")}>
+            <div className="space-y-2">
+              {familyRelationships.map((relationship) => (
+                <div key={relationship.id}>
+                  <Link href={`/artists/${relationship.relatedArtist.slug}`} className="w-fit underline-offset-4 hover:text-(--color-wikicrimson) hover:underline">
+                    {relationship.relatedArtist.name}
+                  </Link>
+                  <span className="block text-xs text-gray-500">{t(`family.labels.${relationship.labelKey}`)}</span>
+                </div>
+              ))}
+            </div>
+          </Field>
+        )}
+
+        {(!!artist.aliases?.length || familyRelationships.length > 0) && <SectionDivider />}
 
         <Field label={t("artist.artistType")}>
           {translateArtistType(artist.type, t) ?? "—"}

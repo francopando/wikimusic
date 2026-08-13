@@ -1,10 +1,14 @@
 import { createHash, randomBytes } from "crypto";
-import { createClient } from "@supabase/supabase-js";
 import type { User } from "@supabase/supabase-js";
-import { getAdminEmailAllowlist } from "@/lib/auth";
-import { getSupabasePublicConfig } from "@/lib/supabaseConfig";
+import { createServiceRoleClient } from "@/lib/supabaseService";
+import {
+  resolveAdminAccessProfile,
+  type AdminAccessProfile,
+  type AdminRole,
+} from "@/lib/adminAuthorization";
 
-export type AdminRole = "owner" | "admin" | "editor";
+export { resolveAdminAccessProfile } from "@/lib/adminAuthorization";
+export type { AdminAccessProfile, AdminRole } from "@/lib/adminAuthorization";
 
 export type AdminMember = {
   id: string;
@@ -13,12 +17,6 @@ export type AdminMember = {
   role: AdminRole;
   status: "active" | "disabled";
   created_at: string;
-};
-
-export type AdminAccessProfile = {
-  email: string;
-  role: AdminRole;
-  source: "bootstrap" | "member";
 };
 
 export type AdminInvite = {
@@ -30,20 +28,16 @@ export type AdminInvite = {
   created_at: string;
 };
 
-export function getSupabaseServiceClient() {
-  const { supabaseUrl } = getSupabasePublicConfig();
-  const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
-
-  if (!serviceRoleKey) {
-    throw new Error("Missing SUPABASE_SERVICE_ROLE_KEY for admin operations.");
-  }
-
-  return createClient(supabaseUrl, serviceRoleKey, {
-    auth: {
-      autoRefreshToken: false,
-      persistSession: false,
-    },
-  });
+export function getAdminEmailAllowlist() {
+  return (
+    process.env.MANGULINA_ADMIN_EMAILS ||
+    process.env.ADMIN_EMAILS ||
+    process.env.NEXT_PUBLIC_ADMIN_EMAILS ||
+    ""
+  )
+    .split(",")
+    .map((item) => item.trim().toLowerCase())
+    .filter(Boolean);
 }
 
 export function normalizeAdminEmail(email: unknown) {
@@ -75,15 +69,14 @@ export function isBootstrapAdminEmail(email: string | undefined) {
   );
 }
 
-export async function getAdminMemberByEmail(email: string) {
-  const normalizedEmail = normalizeAdminEmail(email);
-  if (!normalizedEmail) return null;
+export async function getAdminMemberByUserId(userId: string) {
+  if (!userId) return null;
 
-  const supabase = getSupabaseServiceClient();
+  const supabase = createServiceRoleClient();
   const { data, error } = await supabase
     .from("admin_members")
     .select("id,user_id,email,role,status,created_at")
-    .ilike("email", normalizedEmail)
+    .eq("user_id", userId)
     .eq("status", "active")
     .maybeSingle();
 
@@ -106,30 +99,20 @@ export async function getAdminAccessProfile(
   if (!user?.email) return null;
 
   const email = normalizeAdminEmail(user.email);
+  const bootstrap = isBootstrapAdminEmail(email);
 
-  if (isBootstrapAdminEmail(email)) {
-    return {
-      email,
-      role: "owner",
-      source: "bootstrap",
-    };
-  }
+  if (bootstrap) return resolveAdminAccessProfile(user, null, true);
 
-  const member = await getAdminMemberByEmail(email);
-  if (!member) return null;
-
-  return {
-    email: member.email,
-    role: member.role,
-    source: "member",
-  };
+  const member = await getAdminMemberByUserId(user.id);
+  return resolveAdminAccessProfile(user, member, false);
 }
+
 
 export async function ensureAdminMemberForBootstrapUser(user: User) {
   if (!isBootstrapAdminEmail(user.email)) return null;
 
   const email = normalizeAdminEmail(user.email);
-  const supabase = getSupabaseServiceClient();
+  const supabase = createServiceRoleClient();
   const { data, error } = await supabase
     .from("admin_members")
     .upsert(

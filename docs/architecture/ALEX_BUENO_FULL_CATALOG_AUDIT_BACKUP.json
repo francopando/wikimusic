@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-08-13T09:48:39.8952904-04:00",
+  "path": "C:\\Mangulina\\backups\\alex-bueno-full-audit\\mangulina-production-pre-alex-bueno-audit-20260813T094805-0400.dump",
+  "size_bytes": 20802879,
+  "sha256": "4EDF160F4D6E67143FF518459B35CD15E1E1B973DC4FF13672FDEC1B312352CA",
+  "source_postgresql": "17.6",
+  "archive_validation": "passed",
+  "toc_entries": 1454,
+  "toc_path": "C:\\Mangulina\\backups\\alex-bueno-full-audit\\mangulina-production-pre-alex-bueno-audit-20260813T094805-0400.dump.toc.txt"
+}

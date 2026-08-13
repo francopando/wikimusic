@@ -1,0 +1,5770 @@
+{
+  "schema_version": 1,
+  "audit_type": "alex_bueno_recording_version_review_read_only",
+  "generated_at": "2026-08-13T13:59:11.170Z",
+  "artist_id": "6c3e0d74-23b7-4d80-969f-9d5319ee5127",
+  "summary": {
+    "UNRESOLVED": 256,
+    "PROFILE_READY": 32,
+    "RELATIONSHIP_READY": 27,
+    "ARRANGEMENT_HOLD": 111,
+    "CREDIT_FOLLOWUP": 9
+  },
+  "sources": [
+    {
+      "id": "dominican-discography",
+      "url": "https://www.conectate.com.do/articulo/alex-bueno-biografia/",
+      "use": "Dominican chronology and career-era context"
+    },
+    {
+      "id": "allmusic-timeline",
+      "url": "https://www.allmusic.com/album/alex-y-la-orquesta-liberacion-mw0000919812",
+      "use": "Album chronology, physical Karen issue and discography timeline"
+    },
+    {
+      "id": "buenamusica-discography",
+      "url": "https://www.buenamusica.com/alex-bueno/discografia",
+      "use": "Independent separation of studio, single, special and compilation releases"
+    },
+    {
+      "id": "apple-artist",
+      "url": "https://music.apple.com/us/artist/alex-bueno/303351",
+      "use": "Official commercial artist/release context"
+    },
+    {
+      "id": "spotify-20-years",
+      "url": "https://open.spotify.com/intl-es/album/2foqoAmVTn3w2Z22sJJkDp",
+      "use": "Official 2004 20 años después program, durations and J&N phonogram line"
+    },
+    {
+      "id": "allmusic-20-years-vol2",
+      "url": "https://www.allmusic.com/album/20-anos-despues-vol-2-mw0000460416",
+      "use": "Volume 2 program, 2004 Sony/J&N physical context and credits"
+    },
+    {
+      "id": "qobuz-4x4-salsa",
+      "url": "https://www.qobuz.com/ar-es/album/4x4-en-salsa-vol-1-varios-artistas/rq3bbgb91vfka",
+      "use": "2019 J&N salsa compilation, track performers and production metadata"
+    },
+    {
+      "id": "youtube-colegiala-sinfonico",
+      "url": "https://www.youtube.com/watch?v=S8q1-qWnpxs",
+      "use": "Official 2024 orchestral Colegiala issue and producer credit"
+    },
+    {
+      "id": "jn-history",
+      "url": "https://picoteandoelespectaculo.blogspot.com/2016/12/disquero-de-j-records-nelson-estevez.html",
+      "use": "J&N label-era album history and 20 años projects"
+    }
+  ],
+  "findings": [
+    {
+      "recording_id": "026a12f1-35d6-44ca-a4c6-9600ceb377a7",
+      "title": "Y qué culpa tengo yo",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "0313725a-59d3-4829-9e70-40b1caed3efe",
+      "title": "Soy rebelde",
+      "category": "PROFILE_READY",
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "performance_context": "20 años después, vol. 2"
+      },
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "8147d0e2-a2c3-4892-8cb9-4758c930b3fb"
+      },
+      "arrangement_description": null,
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "0313725a-59d3-4829-9e70-40b1caed3efe",
+      "title": "Soy rebelde",
+      "category": "RELATIONSHIP_READY",
+      "proposed_profile": null,
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "8147d0e2-a2c3-4892-8cb9-4758c930b3fb"
+      },
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "039a8aab-9322-4faa-9dfc-d1cf925b9213",
+      "title": "Me va, me va",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Grandes éxitos de Alex Bueno en bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "05668e89-c1e2-4d90-ad40-3105dc8c3c8c",
+      "title": "Pena de hombre",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "056b4314-c17f-4052-9638-a8cea02d4f4e",
+      "title": "La prisa",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "063cb222-5470-4cfa-99a5-f011d9d984e4",
+      "title": "Que cara más bonita",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Entre bachata y merengue",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "06bf4d01-db70-4535-9aa9-30d6a85cc5c4",
+      "title": "La distancia",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "075dc6f0-319b-4a59-a8d5-71cf3107195a",
+      "title": "Y cómo es él",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "08660ee6-7063-4c5c-a320-3a38227db93e",
+      "title": "Por que solo a tu lado",
+      "category": "CREDIT_FOLLOWUP",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "Imported collaboration wording lacks normalized Recording credit"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "09ccad0f-7f18-42d1-9caf-87eaef20bac1",
+      "title": "Qué voy hacer amor",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Los rostros de la bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "0a6c5ccd-eb28-4222-99e1-05ca6ac74a0c",
+      "title": "Olvídame tú (bachata)",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Queda algo",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "0b05d1a2-00b1-45fb-b949-8a30c44ca652",
+      "title": "Solo me importas tú",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Solo merengue",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "0b9eaa2a-2286-4e51-a418-4017c4256a64",
+      "title": "Quien te riza el pelo",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Entre bachata y merengue",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "0d431a86-642b-4aff-a0dd-17566371bae7",
+      "title": "Mi pobre corazón",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "0ddf1965-cdc3-4740-9a65-8b81a7598c62",
+      "title": "Quiero conocerte",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "0e530682-96b1-41e1-ac10-2702a07a9dc2",
+      "title": "Me va, me va",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Entre bachata y merengue",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "0e5fca2b-66d4-47ee-9f4e-b6c65b0a9f5f",
+      "title": "Unicamente tú",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "0fcab76f-2346-4565-81fa-76f5fddbe338",
+      "title": "Un mechón de tu cabello",
+      "category": "PROFILE_READY",
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "performance_context": "20 años después"
+      },
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "c45c2145-f4a3-497b-b25c-2443c4aea7a2"
+      },
+      "arrangement_description": null,
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "0fcab76f-2346-4565-81fa-76f5fddbe338",
+      "title": "Un mechón de tu cabello",
+      "category": "RELATIONSHIP_READY",
+      "proposed_profile": null,
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "c45c2145-f4a3-497b-b25c-2443c4aea7a2"
+      },
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "0fea06fb-180e-404b-a6cd-aa8351ae188d",
+      "title": "Colegiala",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Entre bachata y merengue | Grandes éxitos de Alex Bueno en bachata | Grandes éxitos de Alex Bueno en bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "107b346e-6eb7-4df4-99a9-4391071ab94a",
+      "title": "Qué cara más bonita",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Alex & Orquesta Liberación | Los años dorados | Alex & Orquesta Liberación | Entre bachata y merengue | Los grandes de Alex Bueno",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "1237cc30-911e-4c3a-9234-3f062db4a602",
+      "title": "Los caminos de la vida",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "1341c58e-db0e-40c4-96ff-037c4f880ab4",
+      "title": "Un nuevo amor",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "13781476-430a-4c6b-b5b7-8c4805f40520",
+      "title": "Soy un hombre callejero",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "13cf0439-0aa3-4943-bbbd-e32bce9ed1aa",
+      "title": "La prisa",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "15159799-fbe0-419a-95e9-0e7b66ccd2f6",
+      "title": "Amores que matan",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "1575217e-b708-4017-b312-8f09a8c2e9d9",
+      "title": "El hijo de Yemayá",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "168d19c0-ae87-41c5-818c-95c13ccf7e3c",
+      "title": "Qué daría yo",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Los rostros del merengue",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "17c5ac46-f6a1-4461-bc52-eb473d6cf603",
+      "title": "Mi pobre corazón",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Grandes éxitos de Alex Bueno en bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "188458b2-c54b-43c5-8c60-8d2c0f5a8c79",
+      "title": "Con el alma desnuda",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "191a372c-0726-45d8-80c4-25f47cb948bf",
+      "title": "Vuela mariposa",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "198668f2-bbb4-4d2e-90ff-66daa4c17097",
+      "title": "Una paloma blanca",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "1a10b720-ae6c-4458-a34f-9badc25a4bd0",
+      "title": "Ninguno de los dos",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "1a248ada-3ab0-4752-a1b3-503df402c7a5",
+      "title": "Ese hombre soy yo",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "1 | 1 | Bachata a su tiempo",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "1a4b2b2b-b196-4b4b-9d39-60742ac1edfc",
+      "title": "Si vos te vas",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "1a5f0edc-5403-43dc-81bb-c6cccd56c5e9",
+      "title": "Quién te riza el pelo",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Grandes éxitos de Alex Bueno en bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "1a95cb53-4a25-47fc-b64b-7de343e40946",
+      "title": "Quítame la vida",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "1b193625-7daa-42ea-8373-2cd8df135688",
+      "title": "Un mechón de tu cabello",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "1c4bd605-9970-418f-a7a3-d30b41f5930a",
+      "title": "El jardín prohibido",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "1e5b346c-7621-4870-b0fe-599775065fb3",
+      "title": "Me muero por ella",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "1edf06fb-2878-407c-8fdd-a0443e6e91e5",
+      "title": "Tengo miedo",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "1f79cb72-427f-44ea-a63f-203217e3d416",
+      "title": "Me va, me va",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Grandes éxitos de Alex Bueno en bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "1ff0c72f-fb2a-460a-bb7e-8a40b116f8a5",
+      "title": "Me equivoqué",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "201cd51f-5c44-4702-b82f-9b6db149ee6d",
+      "title": "Tengo miedo",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "20a7797d-f128-4524-8e8f-a7f967708300",
+      "title": "Después de la caída",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "212209cc-d2b5-40c2-996f-a8e1389ab82c",
+      "title": "Esa triste guitarra",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "21586e8e-f579-4904-b413-848de1060c27",
+      "title": "Una paloma blanca",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "21b2af3f-92b7-4070-a04e-bbbf1de87526",
+      "title": "Si la ves",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Los rostros de la bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "21d1da5a-3952-490d-a870-b2d16208359d",
+      "title": "Gigante",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "21f5d098-bcc2-49f9-ab7e-ff53579d6901",
+      "title": "Pasa cantando",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "2259621d-d22e-4154-a4a6-0045766e8f96",
+      "title": "Que cara más bonita",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Los rostros del merengue",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "2382f9ae-2d28-41ff-ac09-2ac72b4c6e3f",
+      "title": "Quiero abrazarte tanto",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Grandes éxitos de Alex Bueno en bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "244b257c-d974-4ebc-975d-784493c91a23",
+      "title": "Corazón de madera",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Grandes éxitos de Alex Bueno en bachata | Grandes éxitos de Alex Bueno en bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "24c137ba-1904-4e8f-9678-03dd548b9e67",
+      "title": "Quién te riza el pelo",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "2549d7cd-a062-40d1-a62a-1eebab31221a",
+      "title": "Número cero",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "4x4 en salsa, vol. 1",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "2564826b-724c-40fd-8260-f500ee9e95a3",
+      "title": "Corazón de madera",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "2666e982-3b6f-4593-8ea2-b95bc890f57a",
+      "title": "Lo que yo siento por ti",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Bachata a su tiempo",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "26d7e89d-22bc-4fa2-b087-9052b520397c",
+      "title": "Soy rebelde",
+      "category": "PROFILE_READY",
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "performance_context": "20 años después, vol. 2"
+      },
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "8147d0e2-a2c3-4892-8cb9-4758c930b3fb"
+      },
+      "arrangement_description": null,
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "26d7e89d-22bc-4fa2-b087-9052b520397c",
+      "title": "Soy rebelde",
+      "category": "RELATIONSHIP_READY",
+      "proposed_profile": null,
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "8147d0e2-a2c3-4892-8cb9-4758c930b3fb"
+      },
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "27a33e11-9d4e-40d7-b917-9ce995145125",
+      "title": "Un mechón de tu cabello",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Grandes éxitos de Alex Bueno en bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "28bd3ddc-e5a2-44b0-aa90-b3dff57d7e17",
+      "title": "María del mar",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "28cd22f5-0fd2-4ccc-95ba-db6ddfdadd7b",
+      "title": "Te sigo amando",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "2925c8b2-dd11-46fc-a685-a43862f84e9d",
+      "title": "Mi pobre corazón",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "29326ab6-1d84-4c3d-a175-4a7e50c8e247",
+      "title": "He vuelto a nacer",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Merengue y más | Amores que matan | Amores que matan",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "295e8464-8e1e-470b-be2d-65c819bed0ca",
+      "title": "Yo me iré",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "2aef4f56-c214-4ca2-bb4f-4ad195dd7ab7",
+      "title": "Quiéreme",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "2bc9328f-856f-4626-ada7-3921f35d24a2",
+      "title": "Si la ves",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "2c04dd34-e638-463e-92d5-60a315a699bf",
+      "title": "Te Extrano",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "2c36bd20-77b4-4bca-a2f0-b67c51f3297c",
+      "title": "He Vuelto a Nacer",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "2c979e53-1c1a-4d8c-9e96-d6d822ec17c4",
+      "title": "Querida",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Grandes éxitos de Alex Bueno en bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "2d0f90d7-bb38-4efd-b7d6-acbaf2f195d7",
+      "title": "Gotas de pena",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Bachata a su tiempo",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "2d7dfc6d-5e58-421c-9fc4-1ee1d072c9ee",
+      "title": "Sigue tu vida",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "2dbc2cf6-31b7-490f-9367-224bebaf283d",
+      "title": "Me va, me va",
+      "category": "PROFILE_READY",
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "performance_context": "20 años después"
+      },
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "fe05a5de-fdca-407a-a8d1-28fce2d5cd5b"
+      },
+      "arrangement_description": null,
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "2dbc2cf6-31b7-490f-9367-224bebaf283d",
+      "title": "Me va, me va",
+      "category": "RELATIONSHIP_READY",
+      "proposed_profile": null,
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "fe05a5de-fdca-407a-a8d1-28fce2d5cd5b"
+      },
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "2dc8567e-6649-4529-b2aa-364476fc048c",
+      "title": "He sabido que te amaba",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "2ec8aaa4-8f79-490a-a988-fbed2f7ed202",
+      "title": "Gotas de pena",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Bachata a su tiempo",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "2ed88aec-acb9-4de4-833e-e2c5cc5e98c0",
+      "title": "Un poco de ti",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Bachata a su tiempo",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "2ef29590-d4dd-4fe3-aa50-5d80be397224",
+      "title": "Amor divino",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "3086d71d-fafa-4cc7-9b8d-10b00391ae99",
+      "title": "Pasa cantando",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "32165e39-cc25-45a9-898e-f3589f2f9ceb",
+      "title": "Samaritana",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Los rostros de la bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "32477dde-5550-49fc-b53e-b482081a28d2",
+      "title": "Jardin prohibido",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Diferente",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "32bd8af5-dc01-4e64-a2e0-0d3ef5d0e0bd",
+      "title": "Oh, mi Yemayá",
+      "category": "PROFILE_READY",
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "performance_context": "20 años después, vol. 2"
+      },
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "32e86cb9-a0d0-4e6c-a5c8-77c53cd556d5",
+      "title": "Me duele",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "332b9ca4-1567-48f8-8628-672cdf88b996",
+      "title": "Adorada ilusión",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "33a87e05-f6c7-453f-9e7b-a094b99e92d6",
+      "title": "Por ella",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "33c72d3e-e27a-4c34-9b38-76351ccbfb0a",
+      "title": "Pídeme",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Los rostros de la bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "3499a5de-9e7b-4cec-b9d6-6662f76b1de1",
+      "title": "Qué daría yo",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Solo merengue",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "34bd6c3b-a1d0-4b12-850e-a922a5c08d21",
+      "title": "La ruleta",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "35001d4e-19ec-440a-933e-ae03f01899d9",
+      "title": "La distancia",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "358ebdef-bf61-4472-bb2c-8a7a41a95ea9",
+      "title": "Mátame la pena",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Solo merengue",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "361e8790-cdec-4aea-81c3-46684dc17de3",
+      "title": "Has tenido mil amores",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "370f4b71-8d93-4631-b323-0f3e756b8439",
+      "title": "Mi pobre corazon",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Grandes éxitos de Alex Bueno en bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "37a7f69b-4517-42a1-8c68-4f03b8841610",
+      "title": "Mi pobre corazón",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Entre bachata y merengue",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "37f08a08-0116-488d-a84e-b2072c2c3737",
+      "title": "Gotas de pena",
+      "category": "PROFILE_READY",
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "performance_context": "20 años después"
+      },
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "2d0f90d7-bb38-4efd-b7d6-acbaf2f195d7"
+      },
+      "arrangement_description": null,
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "37f08a08-0116-488d-a84e-b2072c2c3737",
+      "title": "Gotas de pena",
+      "category": "RELATIONSHIP_READY",
+      "proposed_profile": null,
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "2d0f90d7-bb38-4efd-b7d6-acbaf2f195d7"
+      },
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "38295135-2db3-4433-8ecd-f899d155d4f3",
+      "title": "A Quién",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "39273cc3-c3f6-4aa3-b04a-67a117927b18",
+      "title": "Si yo pudiera",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "3977e3cf-6900-4ac3-9918-f6efc6a7c693",
+      "title": "Si vinieras hoy",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Bachata a su tiempo",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "3a621f78-d3e9-4c4d-8776-a46f2637dd6f",
+      "title": "Te sigo amando",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Merengue y más",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "3a9ddf68-efc7-46fa-915d-0ed1a17fedac",
+      "title": "Me muero por ella",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "3d8410d8-ca61-4006-9fb7-0e4f68b55bb5",
+      "title": "Amarte así me hace mal",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "3daa9bac-913f-4eb3-9218-5334ea7ba3be",
+      "title": "Mojado por ti",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "3e192c7b-0eaa-436b-ac06-03f5e77adac4",
+      "title": "Nuestro amor",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "3e897e76-4e84-400b-866e-2924544b3b34",
+      "title": "Me duele",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Los rostros de la bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "4072eef2-734a-46c1-a5b8-ed3aa72fe151",
+      "title": "Otro weekend sin ti",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Los rostros del merengue",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "40e06758-6572-452e-9dc4-f98713acde63",
+      "title": "No soy nada sin ti",
+      "category": "PROFILE_READY",
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "performance_context": "20 años después, vol. 2"
+      },
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "40e5e8a1-5b65-4a47-ac36-f0bf578a0c21",
+      "title": "La radio",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Grandes éxitos de Alex Bueno en bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "42382a8a-ccd9-462f-b626-d0e6c64454bc",
+      "title": "Perdóname",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "424d4b59-8ae6-478b-b39c-a40f55be03df",
+      "title": "Solo sé que te quiero",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Los rostros de la bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "4426d440-8ae8-44c7-bdb6-3f0196f18110",
+      "title": "Querida",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Grandes éxitos de Alex Bueno en bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "44c36374-ab49-4d42-a4e0-c2cf1441c87e",
+      "title": "Que nadie opine nada",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "450cac4a-624c-4eea-9b12-e51e5af39c69",
+      "title": "Tengo pero me faltas tú",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Bachata a su tiempo",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "456220e2-7d65-46b6-bd95-041e39bb4e5a",
+      "title": "Noche de fantasía",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "46138a1b-c734-4ecf-96d5-1574caad594d",
+      "title": "Un imposible amor",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "464c534c-1665-41ff-bd40-f92dcf67ff46",
+      "title": "Pídeme",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "46f36a32-286b-4859-aa9d-112ae3ef40f1",
+      "title": "Acúsame",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "47e11c6a-6549-48d5-b22c-85a6b4009b2f",
+      "title": "He sabido que te amaba",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "48b8dd87-821b-42fb-bbc6-72bc5f02de47",
+      "title": "Unicamente Tu",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "4912bd45-4d4c-4126-bca3-61dd82ff0acf",
+      "title": "Me muero por ella",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "4b4ffa98-1020-4ec9-bfff-7c454e868785",
+      "title": "Entrega",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "4b624ff6-5592-4968-9fa9-3bc3dfd8e920",
+      "title": "Perdóname",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "4bbd7342-97fc-4ab9-b57a-edc100cab922",
+      "title": "Busca un confidente",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Dos x uno | Bachata a su tiempo | 1 | Bachata a su tiempo | Tranquilo y tropical | Los rostros de la bachata | 40 años de éxitos | 1",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "4bc6b88f-8e8e-4fe9-9ac4-a3474635ab6a",
+      "title": "Quiero que elijas el lugar",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "4c17a3ef-fbac-4c9e-804b-01b7a0fc0873",
+      "title": "Dónde están los amigos",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "4c3e31ee-edbc-4002-9204-e452ab549af1",
+      "title": "Indiferencia",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "4d535d8a-43a9-426b-a078-c7cc17c4554d",
+      "title": "Irresistible",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "4e4d33fd-53a2-494a-a80a-16b2d597434b",
+      "title": "Dos te quiero",
+      "category": "CREDIT_FOLLOWUP",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "Imported collaboration wording lacks normalized Recording credit"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "4fab28b2-061e-4047-9c39-412ce2819856",
+      "title": "Por ella",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "50c00070-fec2-4fc2-a62c-48a4fcf9ba19",
+      "title": "Quién lo haría por ti",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Los rostros de la bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "51c4916f-525b-4f29-9e77-342d594d4b77",
+      "title": "Pasa cantando",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "52faea69-91fb-4117-9843-f93942ec0d20",
+      "title": "Si la ves",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "55c032e4-ab84-455a-89aa-a73fcd341e2e",
+      "title": "Esta es tu canción (Alguien cantó)",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "56c2fb5b-e4cd-4c64-b668-648f88c5b653",
+      "title": "Lo que yo siento por tí",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Los rostros de la bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "56cabe97-6b0b-4f53-9fec-dc3ffdac1ecd",
+      "title": "La pretendida",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "56ddb9e1-c69d-4621-be86-87772c450b59",
+      "title": "Ese hombre soy yo",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "589cd3ea-2a1d-4e0d-be4f-93cb6e08a220",
+      "title": "Si la ves",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "58eb175a-7a98-46a6-86d6-b3e37b2dc508",
+      "title": "Si vos te vas",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "595319c4-542a-4b1a-98d1-98805d6b1ad3",
+      "title": "Que Vuelva",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "597005de-b407-4484-bba4-0ddc08654bf9",
+      "title": "Paloma blanca",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "5a0e032f-7c0b-4db2-9eaf-6abef6e225c0",
+      "title": "Esta es tu canción (Alguien cantó)",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "5a8e817d-8d30-482d-9f10-0bc9228ecc49",
+      "title": "Si yo pudiera",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "5b67a494-062a-4390-afbf-ed25df1b9fc4",
+      "title": "Perdóname",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Bachata a su tiempo",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "5b6e8a8f-6ea7-40e5-86a5-21eac5215f74",
+      "title": "No te descuidé",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "5b82c997-9d90-442f-8dd2-58c7ce46e795",
+      "title": "Quién soy yo sin ella",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "5bd1ad9c-d3b0-497f-8d90-8c017ba04d67",
+      "title": "Corona de Oro",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "5ccd028f-a61c-4b3f-98e9-f3da780988f9",
+      "title": "Quiéreme",
+      "category": "PROFILE_READY",
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "performance_context": "20 años después"
+      },
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "e438f6c3-263a-4ef6-9dfc-b548162c14a9"
+      },
+      "arrangement_description": null,
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "5ccd028f-a61c-4b3f-98e9-f3da780988f9",
+      "title": "Quiéreme",
+      "category": "RELATIONSHIP_READY",
+      "proposed_profile": null,
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "e438f6c3-263a-4ef6-9dfc-b548162c14a9"
+      },
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "5d18f432-00d6-41a3-b55c-b121a4422ba8",
+      "title": "Mi pobre corazón",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "5d3a421b-da1f-4c80-a37d-7fbd276d7e15",
+      "title": "Querida",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "5d6adcf9-cc39-4e1e-9e18-1c68833626d7",
+      "title": "Te Sigo Amando",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "5d7ecafe-c513-4eef-9ca7-0482df531066",
+      "title": "A buscar qué",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Los rostros de la bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "5d948085-a8f6-4850-ac7b-f6e491e3d068",
+      "title": "Me va, me va",
+      "category": "PROFILE_READY",
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "performance_context": "20 años después"
+      },
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "fe05a5de-fdca-407a-a8d1-28fce2d5cd5b"
+      },
+      "arrangement_description": null,
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "5d948085-a8f6-4850-ac7b-f6e491e3d068",
+      "title": "Me va, me va",
+      "category": "RELATIONSHIP_READY",
+      "proposed_profile": null,
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "fe05a5de-fdca-407a-a8d1-28fce2d5cd5b"
+      },
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "5decf471-ff9b-4343-86a7-9a178d523ccd",
+      "title": "Quíen te ríza el pelo",
+      "category": "PROFILE_READY",
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "performance_context": "20 años después, vol. 2"
+      },
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "de6b942d-44b4-4888-8753-60c51faefabd"
+      },
+      "arrangement_description": null,
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "5decf471-ff9b-4343-86a7-9a178d523ccd",
+      "title": "Quíen te ríza el pelo",
+      "category": "RELATIONSHIP_READY",
+      "proposed_profile": null,
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "de6b942d-44b4-4888-8753-60c51faefabd"
+      },
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "5df1aed1-4814-488b-982e-4c05d4c23166",
+      "title": "Si la ves",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "601c05ac-3500-4278-8415-032b7bab5daa",
+      "title": "Esa pared",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "619d622c-a554-4330-b8a2-ac441b9f125e",
+      "title": "Quiéreme",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "61c3f239-47f9-4f39-af2d-d3d18649dfc2",
+      "title": "Un Poco de Ti",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "6291322f-8e6e-454b-8181-d964f2023c49",
+      "title": "Perdóname",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Bachata a su tiempo",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "6295821b-35ee-4cf2-9288-7ae1e3e6b9dd",
+      "title": "La Prisa",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "640d5d8f-3f7a-4f2b-a11c-3d84dc30cb9f",
+      "title": "Solo se que te quiero",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "64437606-7070-443c-95bd-b8caf53909c6",
+      "title": "Vuela mariposa",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "6466484d-1e91-4d17-9feb-9ba7bbd30221",
+      "title": "Corazón de madera",
+      "category": "PROFILE_READY",
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "performance_context": "20 años después"
+      },
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "81071532-ac99-4880-ac96-f6ec834de723"
+      },
+      "arrangement_description": null,
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "6466484d-1e91-4d17-9feb-9ba7bbd30221",
+      "title": "Corazón de madera",
+      "category": "RELATIONSHIP_READY",
+      "proposed_profile": null,
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "81071532-ac99-4880-ac96-f6ec834de723"
+      },
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "648fde16-1796-41d5-a505-bfb1a9bf1524",
+      "title": "Quién soy yo sin ella",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "66ecbaf0-ed39-4fee-aed1-cbcdb71c1155",
+      "title": "Quiero abrazarte tanto",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Grandes éxitos de Alex Bueno en bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "67f83c1a-9426-40bd-927d-26ae8e2f7d8b",
+      "title": "El jardín prohibido",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "69624e69-1dd9-44e3-ae3a-dc322e17d263",
+      "title": "Que vuelva",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "698e33d6-115d-4801-8acf-73376269492f",
+      "title": "Colegiala",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Grandes éxitos | Entre bachata y merengue | Los años dorados | Los grandes de Alex Bueno",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "699311cc-a042-4e91-9543-f4e43c4d6bf5",
+      "title": "Sublime mujer",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Los rostros de la bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "6b757d65-a0b9-4080-bf4d-7ad41cd73e17",
+      "title": "Corona de oro",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "6c33e3f4-ed25-4ca6-967f-d4dc8691c446",
+      "title": "Una paloma blanca",
+      "category": "PROFILE_READY",
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "performance_context": "20 años después, vol. 2"
+      },
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "21586e8e-f579-4904-b413-848de1060c27"
+      },
+      "arrangement_description": null,
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "6c33e3f4-ed25-4ca6-967f-d4dc8691c446",
+      "title": "Una paloma blanca",
+      "category": "RELATIONSHIP_READY",
+      "proposed_profile": null,
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "21586e8e-f579-4904-b413-848de1060c27"
+      },
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "6e4c5585-d82d-4f49-8046-344f77af54e4",
+      "title": "Quién lo haría por ti",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "6f1a1f27-fca5-4ed3-a404-049b6f5e476c",
+      "title": "En bandolera",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "6ff66257-b346-4809-b664-6544325e9b05",
+      "title": "Ven sálvame",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "7090ac12-57a6-4d97-a52a-53dc9e51197d",
+      "title": "Qué cara más bonita",
+      "category": "PROFILE_READY",
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "performance_context": "20 años después"
+      },
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "107b346e-6eb7-4df4-99a9-4391071ab94a"
+      },
+      "arrangement_description": null,
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "7090ac12-57a6-4d97-a52a-53dc9e51197d",
+      "title": "Qué cara más bonita",
+      "category": "RELATIONSHIP_READY",
+      "proposed_profile": null,
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "107b346e-6eb7-4df4-99a9-4391071ab94a"
+      },
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "70c3c4a7-258a-4129-9067-282fd36acb07",
+      "title": "La ruleta",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "70fb6cde-90d4-4f2c-9e62-cccf49c33a3d",
+      "title": "Querida",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "71ae36a3-54de-413a-9bf4-6b2d0946f801",
+      "title": "A buscar qué",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "7222082f-ce3b-468e-a551-a94340d0f246",
+      "title": "Vuela mariposa",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "7256eea9-1e61-4fcd-b8ce-d861d31eb44f",
+      "title": "Ven sálvame",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "734b1367-ef6b-4e6c-8cc2-7ee7db479af4",
+      "title": "Quiero abrazarte tanto",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "73929b2a-7c9e-4479-8b31-53808aaf55da",
+      "title": "Un imposible amor",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "74296a6a-5bee-4c61-a3ba-dc23c12ed88b",
+      "title": "Solo sé que te quiero",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "7439ffb9-18c6-4c20-8e9c-28ca2723f647",
+      "title": "Quien te riza el pelo",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Los rostros del merengue",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "748aef2c-2f07-48ff-a306-f4b6754e5146",
+      "title": "Por ella",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "749d20c1-4ecf-480d-aeab-a45e42d83cd2",
+      "title": "Las locas",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "74f7dbf3-ce3e-4abe-b922-fce46e7ef968",
+      "title": "Mátame la pena",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Los rostros del merengue",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "75d8e41d-797b-4d21-95b8-e652cba79ad7",
+      "title": "La radio",
+      "category": "PROFILE_READY",
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "performance_context": "20 años después"
+      },
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "d8c13b96-777b-4acc-b63d-f5580b8ee5ab"
+      },
+      "arrangement_description": null,
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "75d8e41d-797b-4d21-95b8-e652cba79ad7",
+      "title": "La radio",
+      "category": "RELATIONSHIP_READY",
+      "proposed_profile": null,
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "d8c13b96-777b-4acc-b63d-f5580b8ee5ab"
+      },
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "777e93ca-ebce-430b-951a-b7d1d4f828de",
+      "title": "Solo el amor",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "77b2c58a-396c-4f79-afd4-74429fe7e6ef",
+      "title": "El sacrificio",
+      "category": "CREDIT_FOLLOWUP",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "Imported collaboration wording lacks normalized Recording credit"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "77c22c5d-daac-4e59-bf48-77008b2a73e0",
+      "title": "Que vuelva",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "77dfa01c-ffb0-4c20-84e2-37bebee13b6a",
+      "title": "Que vuelva",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "788bf584-9da1-4351-a753-0d494f457174",
+      "title": "Un minuto de ti",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "78e4b433-6e40-402a-9067-9103ca6c2bd2",
+      "title": "Veneno con miel",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "7956885e-e6f3-4ad4-a980-b3c2e196a5ad",
+      "title": "Te extraño",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "7971b44a-5192-4c7d-bcf8-4fffb8ae69c0",
+      "title": "La radio",
+      "category": "PROFILE_READY",
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "performance_context": "20 años después"
+      },
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "d8c13b96-777b-4acc-b63d-f5580b8ee5ab"
+      },
+      "arrangement_description": null,
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "7971b44a-5192-4c7d-bcf8-4fffb8ae69c0",
+      "title": "La radio",
+      "category": "RELATIONSHIP_READY",
+      "proposed_profile": null,
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "d8c13b96-777b-4acc-b63d-f5580b8ee5ab"
+      },
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "7adaf6d8-0991-474b-91f2-d59c0f0ed2bf",
+      "title": "Samaritana",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "7b5b7b08-56e7-45d5-8bea-86f3a98e518a",
+      "title": "Ese hombre soy yo",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "7d4c296e-1a09-48c1-9c41-6734ec747240",
+      "title": "Me duele",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Bachata a su tiempo",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "7df9073c-c3aa-46fc-9a52-947943aa2ae5",
+      "title": "No soy nada sin ti",
+      "category": "PROFILE_READY",
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "performance_context": "20 años después, vol. 2"
+      },
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "7e7eeaab-1eb1-48ec-bb52-3943794e3fe1",
+      "title": "Querida",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "7f393a17-efcd-45ed-8d86-7a601e3acbae",
+      "title": "Que vuelva",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "7fd2769d-cca7-4422-8e6b-651ee7cd5462",
+      "title": "Jardín prohibido",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Entre bachata y merengue",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "7fdcc88b-0660-4b76-9d09-1901f853e452",
+      "title": "Un nuevo amor",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "8043ea78-4529-4660-bc48-e2c3e2462c8b",
+      "title": "Lluvia",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Solo merengue",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "805488c2-0ad2-4308-b8b2-dc60407de019",
+      "title": "Oh, mi Yemayá",
+      "category": "PROFILE_READY",
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "performance_context": "20 años después, vol. 2"
+      },
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "80992ca1-8c05-448a-809f-811cdaf119aa",
+      "title": "Paso a paso",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Bachata a su tiempo",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "80bfaa41-f8f6-4036-b3c7-a48e34c0558b",
+      "title": "No te descuides",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "81071532-ac99-4880-ac96-f6ec834de723",
+      "title": "Corazón de madera",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "8147d0e2-a2c3-4892-8cb9-4758c930b3fb",
+      "title": "Soy rebelde",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "82de501c-9829-4120-bcfc-a65f8a5942ba",
+      "title": "El hijo de Yemayá",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "83a04565-a1b6-4c2f-8843-637691b8b3bc",
+      "title": "La prisa",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "4x4 en salsa, vol. 1",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "84962bda-70b3-45a1-818a-180eb744d2db",
+      "title": "Paloma blanca",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "851ba7ca-8ec1-4d00-b3ad-53a5d2f2326b",
+      "title": "Adorada ilusión",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "8564b67d-9359-4a7b-8c6c-97443366cef9",
+      "title": "Me muero por ella",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Los rostros del merengue",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "85ced496-d35f-43ef-9de3-9dc601ed61a5",
+      "title": "Me va, me va",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Entre bachata y merengue",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "86692f43-c275-499a-b1fe-37deff1531e8",
+      "title": "Yo me iré",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "86c19653-d957-4df6-9ba3-3a039e45070a",
+      "title": "En bandolera",
+      "category": "PROFILE_READY",
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "performance_context": "20 años después, vol. 2"
+      },
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "6f1a1f27-fca5-4ed3-a404-049b6f5e476c"
+      },
+      "arrangement_description": null,
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "86c19653-d957-4df6-9ba3-3a039e45070a",
+      "title": "En bandolera",
+      "category": "RELATIONSHIP_READY",
+      "proposed_profile": null,
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "6f1a1f27-fca5-4ed3-a404-049b6f5e476c"
+      },
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "8788179e-bf79-4ada-8e15-b51716e16679",
+      "title": "Una mañana",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "880282a4-f885-4742-b7b9-0f22e324dbfc",
+      "title": "Si te vas",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "891cc11f-e82f-4fd2-9716-b96b0ec49dae",
+      "title": "Acúsame",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "89a8463f-e631-4cf4-9043-d58d73d97a70",
+      "title": "Los caminos de la vida",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Los rostros del merengue",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "8a6b0fb8-fff1-48fd-bc65-a0832910dedd",
+      "title": "Un mechon de tu cabello",
+      "category": "PROFILE_READY",
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "performance_context": "20 años después"
+      },
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "c45c2145-f4a3-497b-b25c-2443c4aea7a2"
+      },
+      "arrangement_description": null,
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "8a6b0fb8-fff1-48fd-bc65-a0832910dedd",
+      "title": "Un mechon de tu cabello",
+      "category": "RELATIONSHIP_READY",
+      "proposed_profile": null,
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "c45c2145-f4a3-497b-b25c-2443c4aea7a2"
+      },
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "8b239061-b0f9-4bf6-b7fa-6bd32f8523a8",
+      "title": "Olvídame tú (bachata)",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Los rostros de la bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "8c448c9c-01a2-441d-8ad9-646273185638",
+      "title": "Tengo pero me faltas tú",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Bachata a su tiempo",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "8cb31855-af77-4608-b0c6-d1cf88fe95c4",
+      "title": "Y cómo es él",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "8d25cfbd-876b-4d2f-99b7-26f47f21d3cc",
+      "title": "Lo que yo siento por ti",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "8ec14c95-5df0-4dd9-880b-160a68817485",
+      "title": "Un poco de ti",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "8f31f3fb-54d2-4b5f-a1d0-a554c1703a02",
+      "title": "Quiéreme",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Los rostros de la bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "9126e74f-52ea-4f8a-a281-3af5ad58b1af",
+      "title": "Querida",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "92142596-26b8-47ed-9b1c-e06226c2ffec",
+      "title": "Me Equivoqué",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "92c4387c-ec92-4828-9949-fb0529e63b46",
+      "title": "Quien te riza el pelo",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Entre bachata y merengue",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "931a92f4-ce7d-4686-824d-836f55df44f1",
+      "title": "Un poco de ti",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "931dde87-c0f2-437a-9840-00dbb23bda4b",
+      "title": "Nuestro amor",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "960b0156-5553-494e-bfa4-f9fe1acc8efe",
+      "title": "Me muero por ella",
+      "category": "PROFILE_READY",
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "performance_context": "20 años después"
+      },
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "3a9ddf68-efc7-46fa-915d-0ed1a17fedac"
+      },
+      "arrangement_description": null,
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "960b0156-5553-494e-bfa4-f9fe1acc8efe",
+      "title": "Me muero por ella",
+      "category": "RELATIONSHIP_READY",
+      "proposed_profile": null,
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "3a9ddf68-efc7-46fa-915d-0ed1a17fedac"
+      },
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "96b1e4c9-f06e-4343-a5e3-4a3b16543256",
+      "title": "Corazón de madera",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "97385acf-be36-4857-8644-cb84f67b1ea1",
+      "title": "En bandolera",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Grandes éxitos de Alex Bueno en bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "986a0065-04c0-4881-9875-a54eeb67abf6",
+      "title": "Querida",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "995fed2b-07f5-4c6f-9cb0-c886f88d9ff1",
+      "title": "El eco de mi canto",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "99bfc286-960a-4536-86a6-1c965695e4f3",
+      "title": "Únicamente tú",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "99c27bef-4430-49a8-9d16-9d9b3239fa6d",
+      "title": "Amor divino",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "9a59cd23-d46c-4cda-bf2c-5b22198a452c",
+      "title": "Gotas de pena",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "9a90c4cb-d5d1-4c9d-a2f9-ef4e5ed36b92",
+      "title": "Lluvia",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Los rostros del merengue",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "9b069df9-eb4b-425c-b76b-2c630c1d4dce",
+      "title": "Paso a paso",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Los rostros de la bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "9c2631f2-d6b8-4a02-9fc4-98ed743487b7",
+      "title": "La quiero a morir",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Grandes éxitos de Alex Bueno en bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "9c5c6ab3-f03c-416b-9447-0cb48dcbdfa9",
+      "title": "Después de la caída",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "9ca8accf-47a4-418a-8dc6-48dc66143164",
+      "title": "Que vuelva",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Los rostros de la bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "9ce10453-0472-4a33-b541-3db182a1a068",
+      "title": "Si estuvieras",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "9d1936f7-cdf0-41bc-9805-29de419ddec6",
+      "title": "Quién te riza el pelo",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Grandes éxitos de Alex Bueno en bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "9de0532e-1a02-4ba3-b519-f70efc0c0629",
+      "title": "A buscar qué",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "9f737ba2-b4b6-49d9-b527-f774c4a2c52e",
+      "title": "Quiéreme",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "9fba2fe3-1166-4f87-a963-337bfa192f75",
+      "title": "Otro weekend sin ti",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Merengue y más",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "a104a632-31fe-47cf-addd-ff9875314899",
+      "title": "Vuela mariposa",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "a17824bc-979b-4c68-b24e-291c7f59ca72",
+      "title": "Me equivoqué",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Los rostros del merengue",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "a2267b74-7ed9-4d78-af37-d21ca1ca9a8e",
+      "title": "Ese hombre soy yo",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "a313df5d-479b-4f7e-b980-87d5d6abfedd",
+      "title": "Colegiala",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "a31f2dd0-612b-4b1c-959a-4e0aabeabb25",
+      "title": "No te descuide",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "a40ba5e9-f62b-49a0-a85a-93114ba484de",
+      "title": "Porque te quiero",
+      "category": "CREDIT_FOLLOWUP",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "Imported collaboration wording lacks normalized Recording credit"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "a468f02e-c909-4a35-a004-221fef8d17f7",
+      "title": "Mi pobre corazón",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Entre bachata y merengue",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "a4932fce-7851-492d-825d-cecbc16ac6d5",
+      "title": "Donde están los amigos",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "a4a96fb2-362b-44bb-8831-0d41951e67d4",
+      "title": "Qué cosas te hice yo",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "a4b09bdb-0c76-4a52-b45b-956411873673",
+      "title": "Te sigo amando",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "a4f6fa97-82af-4202-9f5a-6704f55a0555",
+      "title": "Solo en el amor",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Los rostros del merengue",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "a610b631-63dc-492c-babc-009a8da01fab",
+      "title": "La más querida",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "a699b8d1-c933-415d-8bb3-d097d3855505",
+      "title": "Te extraño",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "a6f47fcd-8333-4df6-acd5-433e9a83a067",
+      "title": "Solo el Amor",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "a73eaf0f-d25d-406f-99a4-fdc35e6a7444",
+      "title": "Pena de hombre",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "a7ad3a0e-780a-460a-ab12-d2517cd9b4fa",
+      "title": "Numero Cero",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "a7bee489-e03e-45e7-b22f-89279850ab95",
+      "title": "Quiereme",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "a823b723-f09a-402a-91c4-6a077e1b5b99",
+      "title": "Mi pobre corazón",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "a97aa6b0-8d4f-49d4-9eb3-d7f774135412",
+      "title": "La distancia",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Los rostros de la bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "a9c31ad3-d95c-4e05-8a2d-cfc27ff38f8f",
+      "title": "Y yo en mi rincón",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "ad24b9c2-3e68-441d-906b-b19c190aae7a",
+      "title": "Esa mujer",
+      "category": "CREDIT_FOLLOWUP",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "Imported collaboration wording lacks normalized Recording credit"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "adbe7d9b-00a0-46d7-b1d3-e2e403fa3396",
+      "title": "A quién",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "4x4 en salsa, vol. 1 | Amores que matan | Amores que matan",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "ae7037b1-91c5-49e2-93c7-bbe403597923",
+      "title": "Perdóname",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Los rostros de la bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "af56aa11-eedd-47e7-a65e-3173aed7171c",
+      "title": "Querido",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Entre bachata y merengue",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "af98c152-b59c-42f7-a2f5-69b914cb8950",
+      "title": "Samaritana",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "b0052fbd-1019-4b8b-afa5-9295a4732964",
+      "title": "Elizabeth (remix)",
+      "category": "PROFILE_READY",
+      "proposed_profile": {
+        "derivation_kind": "remix"
+      },
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "Explicit release/title remix designation"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "b0eb6f72-6c89-4f21-a94f-54ecef4865a1",
+      "title": "Amor divino",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "b136a91d-6dec-4f17-b388-fb58f61d710c",
+      "title": "Una mañana",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "b182ad36-506a-4cd8-affb-8e8a1909e78c",
+      "title": "He sabido que te amaba",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "b2907d1d-4ad7-4626-b90c-3391bed32924",
+      "title": "Un minuto de ti",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "b3c2f579-c7d1-4d2a-8d29-95fbaf4e512e",
+      "title": "Que vuelva",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "b4a29e93-7248-47a5-814c-dfd4baa4d2b8",
+      "title": "Nuestro amor",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "b56f8e3e-51c0-440e-8fe0-9e886cd1152b",
+      "title": "Esa triste guitarra",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "b57389d5-4c0a-4aef-960a-0b5ff954cd4e",
+      "title": "Que vuelva",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "b6367666-3386-4e10-a100-dd3f6bf78e54",
+      "title": "Qué voy hacer amor",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "b69ab15c-7c6e-4cb7-9abb-85b3a6b32ed8",
+      "title": "No te descuides",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "b77c2682-897a-46b6-a95d-80fa4d5b8629",
+      "title": "Lluvia",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Solo merengue",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "b8c5b9c7-f1a2-4a1a-a1c9-2cc94d45cef4",
+      "title": "Dime",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Bachatas en ternuras | Bachatas en ternuras | Los rostros de la bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "b8cac66c-ba2d-4608-ba8b-f6d8fa4bd34e",
+      "title": "Querida",
+      "category": "PROFILE_READY",
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "performance_context": "20 años después"
+      },
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "7e7eeaab-1eb1-48ec-bb52-3943794e3fe1"
+      },
+      "arrangement_description": null,
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "b8cac66c-ba2d-4608-ba8b-f6d8fa4bd34e",
+      "title": "Querida",
+      "category": "RELATIONSHIP_READY",
+      "proposed_profile": null,
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "7e7eeaab-1eb1-48ec-bb52-3943794e3fe1"
+      },
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "b93bc09c-6aef-4f51-beae-8195f61a9c68",
+      "title": "Quiéreme",
+      "category": "PROFILE_READY",
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "performance_context": "20 años después"
+      },
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "e438f6c3-263a-4ef6-9dfc-b548162c14a9"
+      },
+      "arrangement_description": null,
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "b93bc09c-6aef-4f51-beae-8195f61a9c68",
+      "title": "Quiéreme",
+      "category": "RELATIONSHIP_READY",
+      "proposed_profile": null,
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "e438f6c3-263a-4ef6-9dfc-b548162c14a9"
+      },
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "b9ba6b9d-2aa4-4aae-b99d-8cc458147251",
+      "title": "Quien te riza el pelo",
+      "category": "PROFILE_READY",
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "performance_context": "20 años después, vol. 2"
+      },
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "de6b942d-44b4-4888-8753-60c51faefabd"
+      },
+      "arrangement_description": null,
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "b9ba6b9d-2aa4-4aae-b99d-8cc458147251",
+      "title": "Quien te riza el pelo",
+      "category": "RELATIONSHIP_READY",
+      "proposed_profile": null,
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "de6b942d-44b4-4888-8753-60c51faefabd"
+      },
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "b9d4ffbc-04d6-4c94-9e40-7bd3b1c3096d",
+      "title": "Solo me importas tú",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Solo merengue",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "babd8b62-736e-40ec-8f6f-eceed7b741ed",
+      "title": "Amores Que Matan",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "bae1c7d7-ef6d-4767-93b3-ba10179c3f52",
+      "title": "Quiero abrazarte tanto",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "bb2ecc6a-e88a-4fd2-aa72-205119032c0a",
+      "title": "Como quisiera",
+      "category": "CREDIT_FOLLOWUP",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "Imported collaboration wording lacks normalized Recording credit"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "bbe35a55-701d-44f3-a468-47ff3e660149",
+      "title": "Soy un hombre callejero",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "bd04a980-57a7-4384-828e-a791dac2af85",
+      "title": "Por que te quiero",
+      "category": "CREDIT_FOLLOWUP",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "Imported collaboration wording lacks normalized Recording credit"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "bd1048dc-c10f-4914-97cc-2e4b5969cd16",
+      "title": "Ese hombre soy yo",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Bachata a su tiempo",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "be1cc5cd-53c7-4a73-ab1d-7afe96afa37c",
+      "title": "El Hijo Mio",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "be70524d-998e-438c-9cda-67133a0a2509",
+      "title": "Yo me iré",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Los rostros de la bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "bea8b6fa-88d4-4b70-9377-a3c0e08ec528",
+      "title": "Quiero conocerte",
+      "category": "PROFILE_READY",
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "performance_context": "20 años después, vol. 2"
+      },
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "0ddf1965-cdc3-4740-9a65-8b81a7598c62"
+      },
+      "arrangement_description": null,
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "bea8b6fa-88d4-4b70-9377-a3c0e08ec528",
+      "title": "Quiero conocerte",
+      "category": "RELATIONSHIP_READY",
+      "proposed_profile": null,
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "0ddf1965-cdc3-4740-9a65-8b81a7598c62"
+      },
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "beaf6dfe-f22a-4f22-a0a6-631dd2d974bd",
+      "title": "Ese hombre soy yo",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "bedee2a4-aa6f-412b-bb6c-4cf412729373",
+      "title": "Veneno con miel",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "befdec9e-580d-4f83-9cc5-6f7c5c89d5e5",
+      "title": "Con el alma desnuda",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "bf0018af-e18c-430e-8458-25338b7c5469",
+      "title": "Gotas de pena",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Los rostros de la bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "bf2faa9d-64e7-48a1-9dec-f6fb39c8b5fd",
+      "title": "Ese hombre soy yo",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "bf98efad-d847-45d5-bff7-35705eaa9a52",
+      "title": "Quiero abrazarte tanto",
+      "category": "PROFILE_READY",
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "performance_context": "20 años después, vol. 2"
+      },
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "734b1367-ef6b-4e6c-8cc2-7ee7db479af4"
+      },
+      "arrangement_description": null,
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "bf98efad-d847-45d5-bff7-35705eaa9a52",
+      "title": "Quiero abrazarte tanto",
+      "category": "RELATIONSHIP_READY",
+      "proposed_profile": null,
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "734b1367-ef6b-4e6c-8cc2-7ee7db479af4"
+      },
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "c00b9abc-3d43-449d-b7c8-eadc3572a55c",
+      "title": "Entrega",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "c1b54304-23c4-46ca-a095-fb5bed23398f",
+      "title": "Y cómo es él",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "c25c9746-eca7-4b06-a0db-05d054cebe5d",
+      "title": "Vuelve",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "c28e04c1-5df5-43d4-9e4d-55c4fbcf716f",
+      "title": "Si volvieras",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "c2eae021-5fff-4a19-90c5-d5f8e32780b7",
+      "title": "Corazón enamorado",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "c3134ff0-0d13-4cad-855d-085973d499dc",
+      "title": "Gotas de pena",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "c39a3260-938a-47ea-bff2-46a5f034e900",
+      "title": "Paso a paso",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Bachata a su tiempo",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "c41bcaad-ed1b-4ae3-99e3-6c9086835986",
+      "title": "Y yo en mi rincón",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "c45c2145-f4a3-497b-b25c-2443c4aea7a2",
+      "title": "Un mechón de tu cabello",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "c49a20fa-b1bc-4118-bb83-841bb1a92056",
+      "title": "Nuestro juramento",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "c4a604e7-65c0-4a02-b22f-9b16277509b3",
+      "title": "Quítame la vida",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Los rostros de la bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "c4e1c52c-f12a-4a64-871d-d914b709e74f",
+      "title": "La prisa",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Merengue y más",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "c5672df2-743d-434b-aeda-641541b28228",
+      "title": "Una lágrima por tu amor",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Los rostros del merengue",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "c65faf17-18c7-42b9-af66-969fa155c011",
+      "title": "Tengo pero me faltas tú",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Los rostros de la bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "c6653c37-cfcb-48f2-9e3a-fa725ff1b7af",
+      "title": "Vuelve",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "c7a1487a-0864-49e2-9004-4e303b5e9143",
+      "title": "Pídeme",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "c9dd0f74-5977-4deb-8791-3cdc1c1ae9e8",
+      "title": "Qué cara más bonita",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Grandes éxitos de Alex Bueno en bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "cbaca0f5-d579-438e-b692-bacda14e2d5c",
+      "title": "Yo me iré",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "cbcd399c-ebf2-49ee-90b3-1d1d41b32040",
+      "title": "Tres noches",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "cc397553-3cca-43fa-ac39-70a32bb85b98",
+      "title": "La prisa",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "cc9744c2-0d87-4e44-b0fa-9c1141b5be3a",
+      "title": "Queda algo",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Los rostros de la bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "cd5a15f1-145e-4b8b-a86a-51a448c74758",
+      "title": "En bandolera",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Grandes éxitos de Alex Bueno en bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "d05ec8d4-30a0-4160-9d20-ba37ea539553",
+      "title": "Busca un Confidente",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "d144d302-6e64-470b-9ac8-922e509c649d",
+      "title": "Me muero por ella",
+      "category": "PROFILE_READY",
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "performance_context": "20 años después"
+      },
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "3a9ddf68-efc7-46fa-915d-0ed1a17fedac"
+      },
+      "arrangement_description": null,
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "d144d302-6e64-470b-9ac8-922e509c649d",
+      "title": "Me muero por ella",
+      "category": "RELATIONSHIP_READY",
+      "proposed_profile": null,
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "3a9ddf68-efc7-46fa-915d-0ed1a17fedac"
+      },
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "d202da9e-9264-4f91-abad-5fd13cc3ee0a",
+      "title": "Quiero abrazarte tanto",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "d3d08bf8-74d1-4fa3-ad16-264dec4f3bf8",
+      "title": "Un imposible amor",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "d3fd1b8e-9b85-4575-a220-50763d3d2405",
+      "title": "Quién lo haría por ti",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "d67cae65-4e26-445a-81a1-28fa032d27c8",
+      "title": "A buscar qué",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "d7305852-5aeb-4fe9-976a-1ebb11ccf5f8",
+      "title": "Ese hombre soy yo",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Los rostros de la bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "d85ebc6a-d2a9-4687-bd66-9fd16205cbd5",
+      "title": "Quién te riza el pelo",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "d8685306-f3e2-4eee-8990-d266627ea0a2",
+      "title": "Quiéreme",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Merengue y más",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "d87604f6-6bbd-436d-acf1-96bffe6bad5e",
+      "title": "El chofer",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "d8c13b96-777b-4acc-b63d-f5580b8ee5ab",
+      "title": "La radio",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "d9a167d8-24c7-4ce7-b4a4-104f7282ce12",
+      "title": "Tengo pero me faltas tú",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "d9c269bd-db55-4863-bd21-bb95d917ca39",
+      "title": "Dime",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "d9ec1b10-90d8-4df0-afc8-422229925a0f",
+      "title": "Otro weekend sin ti",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "da72f848-5a48-4373-8c0f-de5f9915bbbf",
+      "title": "Ese Hombre Soy Yo",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "dac37263-44b6-4d48-baa7-71e74f175ab6",
+      "title": "Nuestro juramento",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "dbf51075-cdd6-4a09-8c49-06e731e78aec",
+      "title": "No me hables",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Solo merengue",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "dc1ff249-40c1-4b6a-8f92-4a168a4707b3",
+      "title": "Querida",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "dcae84c1-fc57-4b58-9502-46d5cd6b8980",
+      "title": "Quiero abrazarte tanto",
+      "category": "PROFILE_READY",
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "performance_context": "20 años después, vol. 2"
+      },
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "734b1367-ef6b-4e6c-8cc2-7ee7db479af4"
+      },
+      "arrangement_description": null,
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "dcae84c1-fc57-4b58-9502-46d5cd6b8980",
+      "title": "Quiero abrazarte tanto",
+      "category": "RELATIONSHIP_READY",
+      "proposed_profile": null,
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "734b1367-ef6b-4e6c-8cc2-7ee7db479af4"
+      },
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "dcfb7cd5-5d54-4681-a72c-c53d5bc28121",
+      "title": "El eco de mi canto",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "dd4348e1-e447-493a-9599-d569692510a7",
+      "title": "Qué cosas te hice yo",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "ddff16fb-8b73-4c6d-a948-f25d5dc3a312",
+      "title": "Se busca",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "de13a94b-da59-44f3-a92e-2f0eeb216a1b",
+      "title": "Lo que yo siento por ti",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Bachata a su tiempo",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "de34fcd8-bb74-419a-999a-c9410be99e1f",
+      "title": "Olvídame tú (bachata)",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Queda algo",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "de6b942d-44b4-4888-8753-60c51faefabd",
+      "title": "Quien te riza el pelo",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "df523bcf-0f2e-4d48-9bfc-7643ecb903d5",
+      "title": "Qué cara más bonita",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "e056bd22-4106-4ff6-917a-f23fac0a25c3",
+      "title": "Mojado por ti",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "e07be82e-290a-45aa-b4b3-9bd34e1a4f12",
+      "title": "No te descuides",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Los rostros de la bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "e0878a8c-6d2f-4174-bfaf-5690165fb3d3",
+      "title": "Qué voy hacer amor",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "e0e5c064-938f-4267-8717-631a98e1a620",
+      "title": "Los Caminos de la Vida",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "e1250db7-3344-4eb7-9dce-a04591988b68",
+      "title": "Sublime mujer",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "e12554fd-f50f-4ece-b996-2506e163d400",
+      "title": "Vuelve",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "e13a6b45-37f5-4c11-a1a8-d42a31501f16",
+      "title": "Queda algo",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "e1680c7b-85c4-4db6-9cfb-5c11c6e0f203",
+      "title": "Sublime mujer",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "e228da6e-1bc6-47f6-8ea3-4c7e3cbe3ead",
+      "title": "La pretendida",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Los rostros de la bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "e258f947-bac1-4db1-8c43-749f56475ea9",
+      "title": "Y qué culpa tengo yo",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "e29c4331-7656-4f63-8bef-330fc8bcbc73",
+      "title": "Amarrao con fe",
+      "category": "CREDIT_FOLLOWUP",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "Imported collaboration wording lacks normalized Recording credit"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "e2d5035c-c7b2-4232-9d7f-eea89dc65d15",
+      "title": "Querida",
+      "category": "PROFILE_READY",
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "performance_context": "20 años después"
+      },
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "7e7eeaab-1eb1-48ec-bb52-3943794e3fe1"
+      },
+      "arrangement_description": null,
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "e2d5035c-c7b2-4232-9d7f-eea89dc65d15",
+      "title": "Querida",
+      "category": "RELATIONSHIP_READY",
+      "proposed_profile": null,
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "7e7eeaab-1eb1-48ec-bb52-3943794e3fe1"
+      },
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "e3511167-611a-4a4f-b666-f4fe5242c4a0",
+      "title": "Si te vas",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "e3580b08-5101-45a1-8285-fb4c3d35b761",
+      "title": "Quiero abrazarte tanto",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "e475daf8-6a52-4035-a4c7-3d0136c599a9",
+      "title": "No me hables",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Solo merengue",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "e53bf5f1-6ce0-49f3-8629-c6fabc35c24f",
+      "title": "La quiero a morir",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Grandes éxitos de Alex Bueno en bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "e53e3e4f-f41f-4ec1-bfd7-e3616189e0ef",
+      "title": "Que nadie opine nada",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "e5f11cfa-eb08-44aa-bb03-477c51adedc8",
+      "title": "Mátame la pena",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Solo merengue",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "e6220967-6b30-4f07-b54a-e0abfe36e87b",
+      "title": "Pídeme",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "e65ab3ec-1b80-4197-8004-08052ad6dc00",
+      "title": "Un poco de ti",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Bachata a su tiempo",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "e66c16af-7451-4ada-8faf-65786007d4fc",
+      "title": "Un mechón de tu cabello",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "e68d5b8d-36ca-4519-924a-225311f1e7ea",
+      "title": "Si estuvieras",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "e70e9b0d-2a00-4b42-8145-456d973fd31e",
+      "title": "Porque solo a tu lado",
+      "category": "CREDIT_FOLLOWUP",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "Imported collaboration wording lacks normalized Recording credit"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "e791d18f-3dc9-4b10-b24a-d51ec5d4df3a",
+      "title": "Me duele",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Bachata a su tiempo",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "e81bfb18-f534-469a-881a-83eabe69003f",
+      "title": "Y cómo es él",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "e89938f0-cec1-4551-95c6-b5070541a66e",
+      "title": "Sigue tu vida",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "e8f48c41-e647-4f45-94ad-762e36f800e2",
+      "title": "Acúsame",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Los rostros de la bachata",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "e9dd0805-702f-420b-b24f-ce806567cf0a",
+      "title": "Se busca",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "eca0512a-0077-4ec2-8dbb-7970968701d5",
+      "title": "La pretendida",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "ed530821-624d-4e88-be6f-0823a69dcdbc",
+      "title": "Querida",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "ed7be401-7dba-4f0b-b207-273ad313f052",
+      "title": "Irresistible",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "ed8a0861-8328-488f-bfd5-652a69f148d9",
+      "title": "Colegiala",
+      "category": "PROFILE_READY",
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "performance_context": "20 años después, vol. 2"
+      },
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "a313df5d-479b-4f7e-b980-87d5d6abfedd"
+      },
+      "arrangement_description": null,
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "ed8a0861-8328-488f-bfd5-652a69f148d9",
+      "title": "Colegiala",
+      "category": "RELATIONSHIP_READY",
+      "proposed_profile": null,
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "a313df5d-479b-4f7e-b980-87d5d6abfedd"
+      },
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "edcf5f33-0c2f-4fe9-90de-a17e033a00cb",
+      "title": "Ven sálvame",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "ef099f46-4f54-4497-9981-606c2640f1df",
+      "title": "Qué cara más bonita",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "ef2d6ad7-63a0-42bc-bcc2-4d71b2942d45",
+      "title": "Yo Me Ire",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "f08a9ecf-44b5-4b81-8ab0-a4e0fe7f76ad",
+      "title": "Te extraño",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Merengue y más",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "f0e464ac-993d-49f0-acb7-b84d051ba21d",
+      "title": "Qué daría yo",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Solo merengue",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "f22051e0-5f56-4d11-889c-39092c6dba21",
+      "title": "Otro weekend sin ti",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "f2441271-7052-438d-9dc9-6ba889492546",
+      "title": "Corazón enamorado",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "f2a667ec-8d19-4b38-9a37-01cb3d246947",
+      "title": "La distancia",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "f30cc0e9-51b9-458c-b2ee-28f286cdf783",
+      "title": "La radio",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "f402fbda-bfcb-445f-ab3a-6f4f08e7b056",
+      "title": "Si vinieras hoy",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Bachata a su tiempo",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "f44dfc1d-a587-4d7b-9ca2-b4fb8a7716ed",
+      "title": "Querido",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Entre bachata y merengue",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "f62b411c-da3d-4ad1-8679-69cafb91c0f8",
+      "title": "Soy rebelde",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Merengue y más",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "f693f654-3c95-4155-82b8-b22be3e8bff0",
+      "title": "Las locas",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "f7d20eb4-c8c3-4baa-b372-f76ae5e91069",
+      "title": "Una paloma blanca",
+      "category": "PROFILE_READY",
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "performance_context": "20 años después, vol. 2"
+      },
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "21586e8e-f579-4904-b413-848de1060c27"
+      },
+      "arrangement_description": null,
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "f7d20eb4-c8c3-4baa-b372-f76ae5e91069",
+      "title": "Una paloma blanca",
+      "category": "RELATIONSHIP_READY",
+      "proposed_profile": null,
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "21586e8e-f579-4904-b413-848de1060c27"
+      },
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "f96d4e7f-ec5e-4c73-b149-e9a043a1fb4e",
+      "title": "Queda algo",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "f9b8f892-0671-424d-ac3a-8b92bfe1ca09",
+      "title": "El hijo mío",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "fa7db1aa-f143-4044-9ba1-b57a9f43bb70",
+      "title": "Indiferencia",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "fb526981-0637-4851-b20f-54677dd60764",
+      "title": "La pretendida",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "fcf1835e-8b7e-4adf-8f2a-9cd0b2ffa93d",
+      "title": "Gotas de Pena",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "fdc54afd-77c2-4179-8224-ed140a5686fb",
+      "title": "Con el alma desnuda",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "fdf4d4df-4b0a-491d-8196-cebf2ba1ad9f",
+      "title": "Los caminos de la vida",
+      "category": "ARRANGEMENT_HOLD",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": "Merengue y más",
+      "evidence": [
+        "Material style/treatment wording",
+        "Arrangement/Expression architecture pending"
+      ],
+      "confidence": "high"
+    },
+    {
+      "recording_id": "fe05a5de-fdca-407a-a8d1-28fce2d5cd5b",
+      "title": "Me va, me va",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "ff7668ab-fc6a-439e-9232-94ba61094be2",
+      "title": "Quiero que elijas el lugar",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "ff77cfb0-5160-4299-8ea2-d94022a89ee5",
+      "title": "Amarte así me hace mal",
+      "category": "UNRESOLVED",
+      "proposed_profile": null,
+      "proposed_relationship": null,
+      "arrangement_description": null,
+      "evidence": [
+        "complete production appearance inventory"
+      ],
+      "confidence": "low"
+    },
+    {
+      "recording_id": "ffd783e8-6cde-4f3b-b638-fa9a0ac44a06",
+      "title": "Gotas de pena",
+      "category": "PROFILE_READY",
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "performance_context": "20 años después"
+      },
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "2d0f90d7-bb38-4efd-b7d6-acbaf2f195d7"
+      },
+      "arrangement_description": null,
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "recording_id": "ffd783e8-6cde-4f3b-b638-fa9a0ac44a06",
+      "title": "Gotas de pena",
+      "category": "RELATIONSHIP_READY",
+      "proposed_profile": null,
+      "proposed_relationship": {
+        "relationship_type": "rerecording_of",
+        "target_recording_id": "2d0f90d7-bb38-4efd-b7d6-acbaf2f195d7"
+      },
+      "evidence": [
+        "2004 J&N project context",
+        "Same earlier composition/title",
+        "Official commercial track program"
+      ],
+      "confidence": "medium"
+    }
+  ]
+}

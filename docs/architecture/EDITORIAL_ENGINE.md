@@ -1,4 +1,4 @@
-# Editorial Document Engine
+# Editorial Engine
 
 ## Purpose and boundary
 

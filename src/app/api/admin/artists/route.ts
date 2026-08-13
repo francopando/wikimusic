@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { requireAdminApiRole } from "@/lib/adminApiAuth";
-import { getSupabaseClient } from "@/lib/supabase";
+import { createServiceRoleClient } from "@/lib/supabaseService";
 import { revalidateArtistProfilePaths } from "@/lib/revalidateArtistProfile";
 import { revalidateHomepageData } from "@/lib/homepageCache";
 import { revalidateEditorialDocumentsReferencingArtist } from "@/lib/editorial/revalidation";
@@ -18,7 +18,7 @@ export async function GET(request: Request) {
   const q = searchParams.get("q")?.trim() ?? "";
   const limit = Math.min(Number(searchParams.get("limit") ?? "25"), 50);
 
-  let query = getSupabaseClient()
+  let query = createServiceRoleClient()
     .from("artists")
     .select("id,name,slug,stage_name,sort_name,status,type,primary_role,primary_genre,province,aliases")
     .order("name", { ascending: true })
@@ -48,7 +48,7 @@ export async function GET(request: Request) {
   let rows = data ?? [];
 
   if (!id && q) {
-    const { data: aliasRows } = await getSupabaseClient()
+    const { data: aliasRows } = await createServiceRoleClient()
       .from("artists")
       .select("id,name,slug,stage_name,sort_name,status,type,primary_role,primary_genre,province,aliases")
       .contains("aliases", [q])
@@ -96,7 +96,7 @@ export async function POST(request: Request) {
         : artistData.image_updated_at,
   };
 
-  const supabase = getSupabaseClient();
+  const supabase = createServiceRoleClient();
   const previousSlugResponse = artistId
     ? await supabase
         .from("artists")
@@ -153,7 +153,7 @@ export async function DELETE(request: Request) {
     );
   }
 
-  const supabase = getSupabaseClient();
+  const supabase = createServiceRoleClient();
   const { data: artist, error: artistError } = await supabase
     .from("artists")
     .select("id,slug")

@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
-import { createClient } from "@supabase/supabase-js";
+import { requireAdminApiRole } from "@/lib/adminApiAuth";
+import { createServiceRoleClient } from "@/lib/supabaseService";
 
 type ClassifyRecordingBody = {
   recording_id?: unknown;
@@ -24,6 +25,9 @@ function normalizeIdValue(value: string | number) {
 }
 
 export async function POST(req: Request) {
+  const auth = await requireAdminApiRole("editor");
+  if (auth.response) return auth.response;
+
   let body: ClassifyRecordingBody;
 
   try {
@@ -59,20 +63,7 @@ export async function POST(req: Request) {
       ? body.recording_context
       : null;
 
-  const supabaseUrl = process.env.SUPABASE_URL ?? process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
-
-  if (!supabaseUrl || !serviceRoleKey) {
-    return NextResponse.json(
-      { ok: false, error: "Supabase service credentials are not configured" },
-      { status: 500 }
-    );
-  }
-
-  const supabase = createClient(
-    supabaseUrl,
-    serviceRoleKey
-  );
+  const supabase = createServiceRoleClient();
 
   const { data, error } = await supabase.rpc("ai_update_recording_genre", {
     p_recording_id: recordingId,

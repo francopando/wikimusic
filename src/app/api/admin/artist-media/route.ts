@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 
-import { getSupabaseClient } from "@/lib/supabase";
+import { requireAdminApiRole } from "@/lib/adminApiAuth";
+import { createServiceRoleClient } from "@/lib/supabaseService";
 
 type ArtistMediaPayload = {
   artist_id?: string;
@@ -26,6 +27,8 @@ const SELECT_FIELDS =
   "id, artist_id, media_type, title, url, platform, external_id, thumbnail_url, published_date, youtube_channel_id, youtube_channel_name, youtube_channel_url, youtube_channel_avatar_url, youtube_metadata_fetched_at, is_official, is_featured, display_order, notes";
 
 export async function GET(request: Request) {
+  const auth = await requireAdminApiRole("editor");
+  if (auth.response) return auth.response;
   const { searchParams } = new URL(request.url);
   const artistId = searchParams.get("artistId");
 
@@ -36,7 +39,7 @@ export async function GET(request: Request) {
     );
   }
 
-  const supabase = getSupabaseClient();
+  const supabase = createServiceRoleClient();
   const { data, error } = await supabase
     .from("artist_media")
     .select(SELECT_FIELDS)
@@ -55,6 +58,8 @@ export async function GET(request: Request) {
 }
 
 export async function POST(request: Request) {
+  const auth = await requireAdminApiRole("editor");
+  if (auth.response) return auth.response;
   const { mediaId, mediaData } = await request.json();
   const payload = mediaData as ArtistMediaPayload | undefined;
 
@@ -72,7 +77,7 @@ export async function POST(request: Request) {
     );
   }
 
-  const supabase = getSupabaseClient();
+  const supabase = createServiceRoleClient();
   const writePayload = {
     ...payload,
     title: payload.title.trim(),
@@ -112,6 +117,8 @@ export async function POST(request: Request) {
 }
 
 export async function DELETE(request: Request) {
+  const auth = await requireAdminApiRole("admin");
+  if (auth.response) return auth.response;
   const { mediaId, artistId } = await request.json();
 
   if (!mediaId || !artistId) {
@@ -121,7 +128,7 @@ export async function DELETE(request: Request) {
     );
   }
 
-  const supabase = getSupabaseClient();
+  const supabase = createServiceRoleClient();
   const { error } = await supabase
     .from("artist_media")
     .delete()

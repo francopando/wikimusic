@@ -61,7 +61,7 @@ type AdminSearchPickerProps = {
   placeholder: string;
   endpoint: string;
   extraParams?: Record<string, string>;
-  resultKey: "artists" | "releases" | "recordings";
+  resultKey: "artists" | "releases" | "recordings" | "works" | "external_contributors";
   onSelect: (option: PickerOption) => void;
   onClear: () => void;
 };
@@ -80,10 +80,12 @@ export function AdminSearchPicker({
   const [query, setQuery] = useState(displayValue);
   const [options, setOptions] = useState<PickerOption[]>([]);
   const [open, setOpen] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(-1);
   const extraParamsKey = JSON.stringify(extraParams ?? {});
 
   useEffect(() => {
-    setQuery(displayValue);
+    const timer = window.setTimeout(() => setQuery(displayValue), 0);
+    return () => window.clearTimeout(timer);
   }, [displayValue]);
 
   useEffect(() => {
@@ -106,6 +108,7 @@ export function AdminSearchPicker({
         .then((result) => {
           if (!controller.signal.aborted) {
             setOptions((result?.[resultKey] ?? []) as PickerOption[]);
+            setActiveIndex(-1);
           }
         })
         .catch((error) => {
@@ -135,6 +138,14 @@ export function AdminSearchPicker({
             if (value) onClear();
           }}
           onFocus={() => setOpen(true)}
+          onKeyDown={(event) => {
+            if (event.key === "Escape") { setOpen(false); return; }
+            if (event.key === "ArrowDown") { event.preventDefault(); setOpen(true); setActiveIndex((current) => Math.min(current + 1, options.length - 1)); return; }
+            if (event.key === "ArrowUp") { event.preventDefault(); setActiveIndex((current) => Math.max(current - 1, 0)); return; }
+            if (event.key === "Enter" && open && activeIndex >= 0 && options[activeIndex]) {
+              event.preventDefault(); const option=options[activeIndex]; const title=option.name??option.title??"Untitled"; setQuery(title); onSelect(option); setOpen(false);
+            }
+          }}
           onBlur={() => window.setTimeout(() => setOpen(false), 130)}
           placeholder={placeholder}
           className={adminInputClass}
@@ -156,7 +167,7 @@ export function AdminSearchPicker({
         {open && (
           <div className="absolute left-0 right-0 top-[calc(100%+0.35rem)] z-30 max-h-64 overflow-y-auto rounded-lg border border-gray-200 bg-white shadow-lg">
             {options.length ? (
-              options.map((option) => {
+              options.map((option,index) => {
                 const title = option.name ?? option.title ?? "Untitled";
                 return (
                   <button
@@ -168,7 +179,7 @@ export function AdminSearchPicker({
                       onSelect(option);
                       setOpen(false);
                     }}
-                    className="block w-full border-b border-gray-100 px-3 py-2 text-left text-sm text-gray-700 transition last:border-none hover:bg-(--color-flagblue)/5"
+                    className={`block w-full border-b border-gray-100 px-3 py-2 text-left text-sm text-gray-700 transition last:border-none hover:bg-(--color-flagblue)/5 ${index===activeIndex?"bg-(--color-flagblue)/5":""}`}
                   >
                     <span className="block truncate font-medium">{title}</span>
                     {option.subtitle && (

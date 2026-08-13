@@ -1,0 +1,1 @@
+{"timestamp":"2026-08-13T03:56:30Z","passed":false,"cleanup_executed":false,"production_mutations":0,"blocker":"The existing isolated PostgreSQL 17 rehearsal cluster could not bind localhost ports 55432 or 55433 in the current execution environment (Permission denied).","stop_condition_applied":true}

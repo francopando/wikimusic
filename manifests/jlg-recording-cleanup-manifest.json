@@ -1,0 +1,3735 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-12T23:53:52.607Z",
+  "authoritative_source": "docs/architecture/JLG_MANUAL_VERIFICATION_FINAL.md",
+  "pair_count": 43,
+  "pairs": [
+    {
+      "song": "Por eso ahora",
+      "canonical_survivor_uuid": "805979cc-2add-4919-8b64-1615b2328dbf",
+      "redundant_recording_uuid": "8075a099-6ee3-4508-a800-5f835311de82",
+      "duplicate_type": "reissue duplicate",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_02",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "0756e11b-a512-43db-acd0-925bc14cdfc5",
+          "release_id": "cdce6631-0f78-4cef-95a8-a45ed56a554d",
+          "release_title": "Mudanza y acarreo",
+          "disc_number": 1,
+          "position": 1,
+          "track_number": 1
+        }
+      ],
+      "tracks_to_repoint": [
+        "0756e11b-a512-43db-acd0-925bc14cdfc5"
+      ],
+      "platform_links": [
+        {
+          "id": "5cd38e81-4147-4e4c-9d5b-97c09b896576",
+          "platform": "amazon_music",
+          "url": "https://music.amazon.com/albums/B08FC2WTG1?trackAsin=B08FBZLNNG",
+          "external_id": "B08FBZLNNG",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "e1028cb0-a4fb-4ff9-acc1-63fa99a0b28a",
+          "platform": "apple_music",
+          "url": "https://music.apple.com/us/album/por-eso-ahora/1737300892?i=1737300907&uo=4",
+          "external_id": "1737300907",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "577ac560-8150-4435-869d-c006327818b8",
+          "platform": "pandora",
+          "url": "https://www.pandora.com/TR:119822673",
+          "external_id": "TR:119822673",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "8ff7d374-78cd-4a36-adb1-0065d4ae429f",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/3jUmqxEy3YGD74iGDq3url",
+          "external_id": "3jUmqxEy3YGD74iGDq3url",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "a8baea93-faa3-4c59-afa1-a043db2c7976",
+          "platform": "tidal",
+          "url": "https://listen.tidal.com/track/353037296",
+          "external_id": "353037296",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        }
+      ],
+      "isrc_rows": [],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "recording_platform_links": 5,
+        "tracks": 1
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "Ella dice",
+      "canonical_survivor_uuid": "ac93f31e-6376-4777-9c4e-50b2950a4f8c",
+      "redundant_recording_uuid": "e18e01ed-01c0-4d8a-82b7-f5d2c8ffdeda",
+      "duplicate_type": "reissue duplicate",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_02",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "c098156c-7bf2-4441-ae0d-39a3f841a965",
+          "release_id": "cdce6631-0f78-4cef-95a8-a45ed56a554d",
+          "release_title": "Mudanza y acarreo",
+          "disc_number": 1,
+          "position": 2,
+          "track_number": 2
+        }
+      ],
+      "tracks_to_repoint": [
+        "c098156c-7bf2-4441-ae0d-39a3f841a965"
+      ],
+      "platform_links": [
+        {
+          "id": "a4b4ecf5-a72a-4425-9c37-793f27579b4f",
+          "platform": "amazon_music",
+          "url": "https://music.amazon.com/albums/B08FC2WTG1?trackAsin=B08FC1C8MS",
+          "external_id": "B08FC1C8MS",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        },
+        {
+          "id": "677d01cd-4cd2-45e8-a505-4c4c3722ab05",
+          "platform": "apple_music",
+          "url": "https://music.apple.com/us/album/ella-dice/1737300892?i=1737301162&uo=4",
+          "external_id": "1737301162",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "4e74b392-0344-4921-beac-648a989fc0d7",
+          "platform": "boomplay",
+          "url": "https://www.boomplay.com/songs/42220938",
+          "external_id": "42220938",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        },
+        {
+          "id": "80a0f220-2898-43ce-ae47-c0e745d9f08c",
+          "platform": "pandora",
+          "url": "https://www.pandora.com/TR:119822674",
+          "external_id": "TR:119822674",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        },
+        {
+          "id": "ba50e558-7a46-4379-a16b-23b92fc9ebcd",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/2lc5ySwC26sqIqU12kFLZO",
+          "external_id": "2lc5ySwC26sqIqU12kFLZO",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "3370536b-b5b5-4e23-829f-08e5f275aa24",
+          "platform": "tidal",
+          "url": "https://listen.tidal.com/track/353037297",
+          "external_id": "353037297",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        },
+        {
+          "id": "7beaeecd-2a24-4d64-acce-9322da2a16ed",
+          "platform": "youtube",
+          "url": "https://www.youtube.com/watch?v=Njr_tFpBqy4",
+          "external_id": "Njr_tFpBqy4",
+          "status": "needs_review",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        }
+      ],
+      "isrc_rows": [],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "recording_platform_links": 7,
+        "tracks": 1
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "Yo vivo enamorao",
+      "canonical_survivor_uuid": "9fb197bd-5d96-408f-a978-86e6fabc3f7b",
+      "redundant_recording_uuid": "006d391c-9947-4283-b31d-7034ea704857",
+      "duplicate_type": "reissue duplicate",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_02",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "dd071526-0e93-41eb-ba3c-7594a22158ed",
+          "release_id": "cdce6631-0f78-4cef-95a8-a45ed56a554d",
+          "release_title": "Mudanza y acarreo",
+          "disc_number": 1,
+          "position": 3,
+          "track_number": 3
+        }
+      ],
+      "tracks_to_repoint": [
+        "dd071526-0e93-41eb-ba3c-7594a22158ed"
+      ],
+      "platform_links": [
+        {
+          "id": "d2b0d31c-8c7b-41e1-b7fe-82016db5279f",
+          "platform": "amazon_music",
+          "url": "https://music.amazon.com/albums/B08FC2WTG1?trackAsin=B08FBZLCKR",
+          "external_id": "B08FBZLCKR",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        },
+        {
+          "id": "428a3105-e7a1-472d-8ead-534485cd8bba",
+          "platform": "apple_music",
+          "url": "https://music.apple.com/us/album/yo-vivo-enamorao/1737300892?i=1737301164&uo=4",
+          "external_id": "1737301164",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "ea07f1e7-5fe2-44e0-8478-4c6d22d1ae08",
+          "platform": "deezer",
+          "url": "https://www.deezer.com/track/2715967672",
+          "external_id": "2715967672",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        },
+        {
+          "id": "fb07b960-1100-40b6-9655-13d386485f24",
+          "platform": "pandora",
+          "url": "https://www.pandora.com/TR:119822675",
+          "external_id": "TR:119822675",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        },
+        {
+          "id": "e6a75928-5ffe-4a61-9ff8-29a95c494fdf",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/6OulEGjjSIWkvXelw3RgN7",
+          "external_id": "6OulEGjjSIWkvXelw3RgN7",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "4e5d2549-f899-47d5-b296-3d3f0120351d",
+          "platform": "tidal",
+          "url": "https://listen.tidal.com/track/353037298",
+          "external_id": "353037298",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        },
+        {
+          "id": "8e00ed95-cc5e-4d24-a7f1-2bb0d188baa1",
+          "platform": "youtube",
+          "url": "https://www.youtube.com/watch?v=wqAzpgViVoA",
+          "external_id": "wqAzpgViVoA",
+          "status": "needs_review",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        }
+      ],
+      "isrc_rows": [],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "recording_platform_links": 7,
+        "tracks": 1
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "Requiem sobre el Jaragua",
+      "canonical_survivor_uuid": "d9545d58-5dae-408a-b2e6-10320d810453",
+      "redundant_recording_uuid": "85cace99-7bb7-4964-ab1e-5fe738598da3",
+      "duplicate_type": "reissue duplicate",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_02",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "c44a815e-6b4f-4c3b-8bae-35fc1ac9a3b9",
+          "release_id": "cdce6631-0f78-4cef-95a8-a45ed56a554d",
+          "release_title": "Mudanza y acarreo",
+          "disc_number": 1,
+          "position": 4,
+          "track_number": 4
+        }
+      ],
+      "tracks_to_repoint": [
+        "c44a815e-6b4f-4c3b-8bae-35fc1ac9a3b9"
+      ],
+      "platform_links": [],
+      "isrc_rows": [],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "tracks": 1
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "Elena",
+      "canonical_survivor_uuid": "1df2c683-442d-479b-936c-0f5d68bd1bb4",
+      "redundant_recording_uuid": "4bd236be-5cfd-481e-9143-c8fb6c021a20",
+      "duplicate_type": "reissue duplicate",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_02",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "98bb9c53-55bc-4dcd-9f54-6bdb623df5bd",
+          "release_id": "cdce6631-0f78-4cef-95a8-a45ed56a554d",
+          "release_title": "Mudanza y acarreo",
+          "disc_number": 1,
+          "position": 6,
+          "track_number": 6
+        }
+      ],
+      "tracks_to_repoint": [
+        "98bb9c53-55bc-4dcd-9f54-6bdb623df5bd"
+      ],
+      "platform_links": [
+        {
+          "id": "6856b39e-918b-4aa4-b01a-9fa57c76a38b",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/4NRGEY9mDCNo2W2gIQFqcp",
+          "external_id": "4NRGEY9mDCNo2W2gIQFqcp",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "2ba71b94-ac7a-4ec3-ad66-02c6dcfe9dcf",
+          "platform": "youtube",
+          "url": "https://www.youtube.com/watch?v=Km5THowTjzk",
+          "external_id": "Km5THowTjzk",
+          "status": "needs_review",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        }
+      ],
+      "isrc_rows": [],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "recording_platform_links": 2,
+        "tracks": 1
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "Santiago en coche",
+      "canonical_survivor_uuid": "9867f816-d969-4e66-b856-4be6bb26a0cf",
+      "redundant_recording_uuid": "4767d0fa-281d-4d59-b7e8-75f9714bcb60",
+      "duplicate_type": "reissue duplicate",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_02",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "b27ff27c-59bc-4c1b-8f67-00e85b721670",
+          "release_id": "cdce6631-0f78-4cef-95a8-a45ed56a554d",
+          "release_title": "Mudanza y acarreo",
+          "disc_number": 1,
+          "position": 7,
+          "track_number": 7
+        }
+      ],
+      "tracks_to_repoint": [
+        "b27ff27c-59bc-4c1b-8f67-00e85b721670"
+      ],
+      "platform_links": [
+        {
+          "id": "bddc8587-af40-4810-a05b-56d7390915ba",
+          "platform": "amazon_music",
+          "url": "https://music.amazon.com/albums/B08FC2WTG1?trackAsin=B08FC118RJ",
+          "external_id": "B08FC118RJ",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "4f638ef9-1207-498c-8083-ae02308548ee",
+          "platform": "apple_music",
+          "url": "https://music.apple.com/us/album/santiago-en-coche/1737300892?i=1737301183&uo=4",
+          "external_id": "1737301183",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "3227b524-6e01-467d-bc53-8cbca7ed1593",
+          "platform": "pandora",
+          "url": "https://www.pandora.com/TR:119822679",
+          "external_id": "TR:119822679",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "30244755-cfb7-4ad4-9089-1a92f0e493b4",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/0FwAJ5nO6f95K0uXB8UKPY",
+          "external_id": "0FwAJ5nO6f95K0uXB8UKPY",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "8d185e1f-e611-418d-876a-d2467d22dab8",
+          "platform": "tidal",
+          "url": "https://listen.tidal.com/track/353037302",
+          "external_id": "353037302",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        }
+      ],
+      "isrc_rows": [],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "recording_platform_links": 5,
+        "tracks": 1
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "Amigos",
+      "canonical_survivor_uuid": "2a15ddda-8ae3-4fdb-b034-13dccfb7da56",
+      "redundant_recording_uuid": "3aa9caf0-f8d2-4631-82f5-e668519b6a74",
+      "duplicate_type": "cross-album/reissue duplicate",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_02/03",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "d7b93219-e9a1-4af4-843b-48e211f71ca1",
+          "release_id": "cdce6631-0f78-4cef-95a8-a45ed56a554d",
+          "release_title": "Mudanza y acarreo",
+          "disc_number": 1,
+          "position": 8,
+          "track_number": 8
+        }
+      ],
+      "tracks_to_repoint": [
+        "d7b93219-e9a1-4af4-843b-48e211f71ca1"
+      ],
+      "platform_links": [
+        {
+          "id": "f7fae9ac-1bda-4df3-8320-0a0b1eeeca7d",
+          "platform": "apple_music",
+          "url": "https://music.apple.com/us/album/amigos/19478648?i=19478618&uo=4",
+          "external_id": "19478618",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "e1dd9b06-5544-4907-9a84-1e7a2dfff965",
+          "platform": "boomplay",
+          "url": "https://www.boomplay.com/songs/42209911",
+          "external_id": "42209911",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "79c30964-8bb5-438d-a44b-b9a8bdfd8f7d",
+          "platform": "deezer",
+          "url": "https://www.deezer.com/track/2022129317",
+          "external_id": "2022129317",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "3589beac-6355-41e5-b6de-beb10f67ba50",
+          "platform": "pandora",
+          "url": "https://www.pandora.com/TR:118804587",
+          "external_id": "TR:118804587",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "d79b16a1-86eb-424c-a123-21fa3dc002f4",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/4L2H9T8JTsADQZI3NBw2Ft",
+          "external_id": "4L2H9T8JTsADQZI3NBw2Ft",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        },
+        {
+          "id": "ff6c52ba-a2e9-439a-a2a1-393a668ea2b1",
+          "platform": "youtube",
+          "url": "https://www.youtube.com/watch?v=tm9JC-hJjA0",
+          "external_id": "tm9JC-hJjA0",
+          "status": "needs_review",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        }
+      ],
+      "isrc_rows": [],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "recording_platform_links": 6,
+        "tracks": 1
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "Amor de conuco",
+      "canonical_survivor_uuid": "aa802e13-5b41-41bc-a30d-4d810b8b0358",
+      "redundant_recording_uuid": "f09046f5-37b9-4ea6-9cb0-49c7ab67157b",
+      "duplicate_type": "edition/import duplicate",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_03",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "0ca73e8c-1025-4ebc-b17f-54b0a1112011",
+          "release_id": "75f3269e-2036-4dd4-9dcc-ae9d9c833a1c",
+          "release_title": "Mientras más lo pienso .......tú",
+          "disc_number": 1,
+          "position": 3,
+          "track_number": 3
+        }
+      ],
+      "tracks_to_repoint": [
+        "0ca73e8c-1025-4ebc-b17f-54b0a1112011"
+      ],
+      "platform_links": [
+        {
+          "id": "66d00a9a-6121-475e-ab62-fe047b9b7cac",
+          "platform": "amazon_music",
+          "url": "https://music.amazon.com/albums/B08FCJWR3M?trackAsin=B08FCHXTBV",
+          "external_id": "B08FCHXTBV",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        },
+        {
+          "id": "e8c844d4-e020-46f8-b160-720d27f85451",
+          "platform": "apple_music",
+          "url": "https://music.apple.com/us/album/amor-de-conuco/1735315654?i=1735316305&uo=4",
+          "external_id": "1735316305",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "015dad14-a204-41ce-bf8e-631b0af0d0b5",
+          "platform": "boomplay",
+          "url": "https://www.boomplay.com/songs/42209577",
+          "external_id": "42209577",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        },
+        {
+          "id": "a0135dc5-7419-4660-ae56-cf301032930c",
+          "platform": "pandora",
+          "url": "https://www.pandora.com/TR:118804583",
+          "external_id": "TR:118804583",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        },
+        {
+          "id": "f1c4a25c-1625-414a-a15d-1908cd3d9e85",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/0Luw5VykqM7exwTor9Evro",
+          "external_id": "0Luw5VykqM7exwTor9Evro",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "b58affa6-b9b3-4f48-b093-7c9a028be9a6",
+          "platform": "tidal",
+          "url": "https://listen.tidal.com/track/350341441",
+          "external_id": "350341441",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        }
+      ],
+      "isrc_rows": [],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "recording_platform_links": 6,
+        "tracks": 1
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "Ojalá que llueva café — 2013 live",
+      "canonical_survivor_uuid": "9c660568-2be6-40a0-85f0-0d01dad2d45b",
+      "redundant_recording_uuid": "046d05d8-136c-4340-ab58-eccd2e50c507",
+      "duplicate_type": "live-performance duplicate",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_04",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "2ac5f437-b7dc-4fa5-9dc4-6f0f2a07fa54",
+          "release_id": "6af8d1ca-327a-40c1-b356-dd7f85969058",
+          "release_title": "A son de Guerra tour",
+          "disc_number": 1,
+          "position": 18,
+          "track_number": 18
+        },
+        {
+          "id": "442580d0-2628-405d-a98e-1c883959b953",
+          "release_id": "25e2766f-3fa9-4d9f-9102-b1f2c1d2ad70",
+          "release_title": "ASonDeGuerra Tour",
+          "disc_number": 19,
+          "position": 1,
+          "track_number": 1
+        }
+      ],
+      "tracks_to_repoint": [
+        "2ac5f437-b7dc-4fa5-9dc4-6f0f2a07fa54",
+        "442580d0-2628-405d-a98e-1c883959b953"
+      ],
+      "platform_links": [
+        {
+          "id": "d1b302c3-eac8-41f8-9466-77cbc7b83b22",
+          "platform": "amazon_music",
+          "url": "https://music.amazon.com/albums/B00CRWEECO?trackAsin=B00CRWEN6Q",
+          "external_id": "B00CRWEN6Q",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "f74790d2-e1f0-496c-8a8a-e7ec56456f73",
+          "platform": "apple_music",
+          "url": "https://music.apple.com/us/album/ojal%C3%A1-que-llueva-caf%C3%A9-live/715953873?i=715954217&uo=4",
+          "external_id": "715954217",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "fbd50cd4-0ad4-472c-bf8b-0692d05e125c",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/3Gtn8BVWQDJnmdA2qv50BK",
+          "external_id": "3Gtn8BVWQDJnmdA2qv50BK",
+          "status": "needs_review",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "b6fc9ccb-9741-4acb-8d3c-e72e1443a036",
+          "platform": "youtube",
+          "url": "https://www.youtube.com/watch?v=TiPRNqJnI_k",
+          "external_id": "TiPRNqJnI_k",
+          "status": "needs_review",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        }
+      ],
+      "isrc_rows": [],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "recording_platform_links": 4,
+        "tracks": 2
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "A pedir su mano",
+      "canonical_survivor_uuid": "a6527c5d-dad3-4ba8-9cf4-db1f6f828982",
+      "redundant_recording_uuid": "786e27b0-8327-4d33-a9be-343f0bce776a",
+      "duplicate_type": "compilation duplicate",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_05",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "38f28ceb-53ab-43f1-93b2-003cf5284bb0",
+          "release_id": "934a0ee2-6022-4df6-8016-069c8ccdb5f5",
+          "release_title": "The Collection",
+          "disc_number": 3,
+          "position": 10,
+          "track_number": 10
+        }
+      ],
+      "tracks_to_repoint": [
+        "38f28ceb-53ab-43f1-93b2-003cf5284bb0"
+      ],
+      "platform_links": [
+        {
+          "id": "d4839a92-7a2a-44d9-8506-4647cf6d0736",
+          "platform": "amazon_music",
+          "url": "https://music.amazon.com/albums/B08FBQZ7TN?trackAsin=B08FBQ6XLB",
+          "external_id": "B08FBQ6XLB",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        },
+        {
+          "id": "70a233bf-d503-4133-b88e-fd2f5d9c75f6",
+          "platform": "apple_music",
+          "url": "https://music.apple.com/us/album/a-pedir-su-mano/1744040537?i=1744044192&uo=4",
+          "external_id": "1744044192",
+          "status": "needs_review",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        },
+        {
+          "id": "e438ce34-6a30-49f7-b7a6-aebca1e64f9e",
+          "platform": "boomplay",
+          "url": "https://www.boomplay.com/songs/42217630",
+          "external_id": "42217630",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        },
+        {
+          "id": "29ad5428-1a5b-4423-ae13-04b63fef2431",
+          "platform": "pandora",
+          "url": "https://www.pandora.com/TR:302399",
+          "external_id": "TR:302399",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        },
+        {
+          "id": "bc57b907-1798-4157-af24-93d30ace378b",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/5q9VC2VFj8Pak4E2jQnp7I",
+          "external_id": "5q9VC2VFj8Pak4E2jQnp7I",
+          "status": "needs_review",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "11553142-e810-4c96-971d-4a6f5f02e458",
+          "platform": "tidal",
+          "url": "https://listen.tidal.com/track/261287431",
+          "external_id": "261287431",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        }
+      ],
+      "isrc_rows": [],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "recording_platform_links": 6,
+        "tracks": 1
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "Estrellitas y duendes — collection live",
+      "canonical_survivor_uuid": "f47427e7-4549-4c7d-8b20-72612cb41ccf",
+      "redundant_recording_uuid": "780af43b-f133-443e-ad6b-76dcfdbc3156",
+      "duplicate_type": "collection/live duplicate",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_05",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "cab6bda7-1f20-4d06-bdd8-1c864b180262",
+          "release_id": "934a0ee2-6022-4df6-8016-069c8ccdb5f5",
+          "release_title": "The Collection",
+          "disc_number": 3,
+          "position": 11,
+          "track_number": 11
+        }
+      ],
+      "tracks_to_repoint": [
+        "cab6bda7-1f20-4d06-bdd8-1c864b180262"
+      ],
+      "platform_links": [
+        {
+          "id": "0555e038-1d13-4419-bdaf-3f49f2ae6256",
+          "platform": "apple_music",
+          "url": "https://music.apple.com/us/album/estrellitas-y-duendes-live/19478648?i=19478620&uo=4",
+          "external_id": "19478620",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "a8646307-b403-4e9c-9e83-65ee8de2edf3",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/2cysPb9DV9Pw4p11I55Uhs",
+          "external_id": "2cysPb9DV9Pw4p11I55Uhs",
+          "status": "needs_review",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        }
+      ],
+      "isrc_rows": [],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "apple_recording_candidates": 1,
+        "recording_platform_links": 2,
+        "tracks": 1
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "La bilirrubina — 2013 live",
+      "canonical_survivor_uuid": "9f56bad5-2bba-4f7e-958a-90a91f57a39b",
+      "redundant_recording_uuid": "8c6b7d7f-721c-47ac-80d8-c0837ddae342",
+      "duplicate_type": "live-performance duplicate",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_05",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "213c864e-73bf-4033-a2f1-4232e0354ae9",
+          "release_id": "6af8d1ca-327a-40c1-b356-dd7f85969058",
+          "release_title": "A son de Guerra tour",
+          "disc_number": 1,
+          "position": 2,
+          "track_number": 2
+        },
+        {
+          "id": "6d7f7d0d-ca89-45f9-b25b-bed3ea833fc2",
+          "release_id": "25e2766f-3fa9-4d9f-9102-b1f2c1d2ad70",
+          "release_title": "ASonDeGuerra Tour",
+          "disc_number": 3,
+          "position": 1,
+          "track_number": 1
+        }
+      ],
+      "tracks_to_repoint": [
+        "213c864e-73bf-4033-a2f1-4232e0354ae9",
+        "6d7f7d0d-ca89-45f9-b25b-bed3ea833fc2"
+      ],
+      "platform_links": [
+        {
+          "id": "ea8b94b8-abe0-4b4d-bbf3-fb74bc36a069",
+          "platform": "amazon_music",
+          "url": "https://music.amazon.com/albums/B0FP3N9H9Q?trackAsin=B0FP42Z28Z",
+          "external_id": "B0FP42Z28Z",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "70328b41-c681-4271-8d3a-50da5908fd59",
+          "platform": "apple_music",
+          "url": "https://music.apple.com/us/album/la-bilirrubina/19468976?i=19468966&uo=4",
+          "external_id": "19468966",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "633154b7-9ddc-4774-8d27-924c6f2f1f2e",
+          "platform": "boomplay",
+          "url": "https://www.boomplay.com/songs/42217631",
+          "external_id": "42217631",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "a5e4a6ff-7f49-4273-9eb0-fdffcca97bf3",
+          "platform": "pandora",
+          "url": "https://www.pandora.com/TR:45873638",
+          "external_id": "TR:45873638",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "c97c7916-b666-4816-a500-65eca84bf99c",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/1GT0Q2ZTeKtIBueYKr4vhr",
+          "external_id": "1GT0Q2ZTeKtIBueYKr4vhr",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "3f605205-3fe7-402b-8989-38ce91850b29",
+          "platform": "tidal",
+          "url": "https://listen.tidal.com/track/261287432",
+          "external_id": "261287432",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "bc708075-1e4b-42f2-ab6b-d00b21e99a32",
+          "platform": "youtube",
+          "url": "https://www.youtube.com/watch?v=K8PpV3yK5iA",
+          "external_id": "K8PpV3yK5iA",
+          "status": "needs_review",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        }
+      ],
+      "isrc_rows": [],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "recording_platform_links": 7,
+        "tracks": 2
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "Burbujas de amor",
+      "canonical_survivor_uuid": "f518f60e-a1b8-449c-80a0-ab51973308dc",
+      "redundant_recording_uuid": "f3dfc294-4e8d-44f4-b4d9-2f197ea92017",
+      "duplicate_type": "collection duplicate",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_05",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "06f77953-1427-4214-b131-3462cfd6c012",
+          "release_id": "934a0ee2-6022-4df6-8016-069c8ccdb5f5",
+          "release_title": "The Collection",
+          "disc_number": 3,
+          "position": 2,
+          "track_number": 2
+        }
+      ],
+      "tracks_to_repoint": [
+        "06f77953-1427-4214-b131-3462cfd6c012"
+      ],
+      "platform_links": [
+        {
+          "id": "64937007-8386-4676-bda8-366cf7fe2ce0",
+          "platform": "amazon_music",
+          "url": "https://music.amazon.com/albums/B08FBQZ7TN?trackAsin=B08FBR11JY",
+          "external_id": "B08FBR11JY",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "0b6a9dec-14ec-4561-b5f5-ef0f9633e0f4",
+          "platform": "apple_music",
+          "url": "https://music.apple.com/us/album/burbujas-de-amor/19468976?i=19468968&uo=4",
+          "external_id": "19468968",
+          "status": "needs_review",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "6494630e-5273-4928-b286-e8593b4028da",
+          "platform": "boomplay",
+          "url": "https://www.boomplay.com/songs/42217605",
+          "external_id": "42217605",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "300a568f-f68f-4273-9d7c-d71e4accd1c0",
+          "platform": "pandora",
+          "url": "https://www.pandora.com/TR:45873633",
+          "external_id": "TR:45873633",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "c1235113-e4d5-4b7b-92f8-5c7ff9bbedfb",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/5E3c4ADYbuWUWT2KpRFFm2",
+          "external_id": "5E3c4ADYbuWUWT2KpRFFm2",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "4331df28-046b-464e-9c52-f4ad2212504e",
+          "platform": "tidal",
+          "url": "https://listen.tidal.com/track/261287433",
+          "external_id": "261287433",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        }
+      ],
+      "isrc_rows": [],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "apple_recording_candidates": 1,
+        "recording_platform_links": 6,
+        "tracks": 1
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "El costo de la vida",
+      "canonical_survivor_uuid": "d32d2277-6d90-4ff7-b614-a252e98d11e8",
+      "redundant_recording_uuid": "2e998583-0f13-40ce-8a3a-a8c4b90ac2f9",
+      "duplicate_type": "collection duplicate",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_06",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "2ae8bfbd-d259-47bb-833e-a8b218e41303",
+          "release_id": "934a0ee2-6022-4df6-8016-069c8ccdb5f5",
+          "release_title": "The Collection",
+          "disc_number": 3,
+          "position": 3,
+          "track_number": 3
+        }
+      ],
+      "tracks_to_repoint": [
+        "2ae8bfbd-d259-47bb-833e-a8b218e41303"
+      ],
+      "platform_links": [
+        {
+          "id": "e39df9d3-5242-4396-90c0-83210027ee55",
+          "platform": "amazon_music",
+          "url": "https://music.amazon.com/albums/B08LK1WQB7?trackAsin=B08LKN5Z12",
+          "external_id": "B08LKN5Z12",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "4ef0b31d-d14a-4de0-858b-8d8df99fca74",
+          "platform": "apple_music",
+          "url": "https://music.apple.com/us/album/el-costo-de-la-vida/167014317?i=167014342&uo=4",
+          "external_id": "167014342",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "9f82a50a-bb8d-4903-882b-140bdfe71fc2",
+          "platform": "boomplay",
+          "url": "https://www.boomplay.com/songs/42209902",
+          "external_id": "42209902",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "0001494f-8322-4e84-abbd-f9235ae8d4ca",
+          "platform": "deezer",
+          "url": "https://www.deezer.com/track/1857119387",
+          "external_id": "1857119387",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        },
+        {
+          "id": "f6203040-728c-4ac4-8ecd-5ec9362e7ac3",
+          "platform": "pandora",
+          "url": "https://www.pandora.com/TR:1066411",
+          "external_id": "TR:1066411",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "922e0a39-e505-4593-92a9-3ca0e169ab91",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/6GLTEoqfb7gLu9pPmD5gLu",
+          "external_id": "6GLTEoqfb7gLu9pPmD5gLu",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        },
+        {
+          "id": "35113bf6-21e8-4d91-bdae-2a83e46c1846",
+          "platform": "tidal",
+          "url": "https://listen.tidal.com/track/241905876",
+          "external_id": "241905876",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "c6cf64f9-fd2c-4e16-83d1-093559daf398",
+          "platform": "youtube",
+          "url": "https://www.youtube.com/watch?v=kZ6tOTQSzv0",
+          "external_id": "kZ6tOTQSzv0",
+          "status": "needs_review",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        }
+      ],
+      "isrc_rows": [],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "recording_platform_links": 8,
+        "tracks": 1
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "Coronita de flores",
+      "canonical_survivor_uuid": "525a92c8-bae7-4c89-8e84-532e7ed5be2f",
+      "redundant_recording_uuid": "135262dd-aa53-40be-a048-cd9b44cafdd0",
+      "duplicate_type": "collection duplicate",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_06",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "b9374c47-9756-45d2-a67d-311cdee894cb",
+          "release_id": "934a0ee2-6022-4df6-8016-069c8ccdb5f5",
+          "release_title": "The Collection",
+          "disc_number": 3,
+          "position": 7,
+          "track_number": 7
+        }
+      ],
+      "tracks_to_repoint": [
+        "b9374c47-9756-45d2-a67d-311cdee894cb"
+      ],
+      "platform_links": [
+        {
+          "id": "e5cd047e-fa7d-4786-a4c6-2732394d52e5",
+          "platform": "amazon_music",
+          "url": "https://music.amazon.com/albums/B0FP3N9H9Q?trackAsin=B0FP3SCGH2",
+          "external_id": "B0FP3SCGH2",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "1bd45ef5-5d23-4cbe-a75a-8e9c7b073205",
+          "platform": "apple_music",
+          "url": "https://music.apple.com/us/album/coronita-de-flores/19478648?i=19478642&uo=4",
+          "external_id": "19478642",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "736a6151-9c34-4665-9f89-b3eab8512020",
+          "platform": "boomplay",
+          "url": "https://www.boomplay.com/songs/42211497",
+          "external_id": "42211497",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "b5563bee-d006-466e-84f5-61b003611403",
+          "platform": "deezer",
+          "url": "https://www.deezer.com/track/1857119457",
+          "external_id": "1857119457",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        },
+        {
+          "id": "f311a046-374f-49a9-a733-06bdf40c5578",
+          "platform": "pandora",
+          "url": "https://www.pandora.com/TR:34647365",
+          "external_id": "TR:34647365",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "5dd98546-2fac-41d9-851a-5d338e08d550",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/6NxN9xMwneL0h8NbaYT1gB",
+          "external_id": "6NxN9xMwneL0h8NbaYT1gB",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "2001e885-f6d0-43bc-b952-660b4253a70e",
+          "platform": "tidal",
+          "url": "https://listen.tidal.com/track/241905883",
+          "external_id": "241905883",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "539bd574-e9ef-49cc-bd8a-25fdd461ab8d",
+          "platform": "youtube",
+          "url": "https://www.youtube.com/watch?v=qlHB3hsM6Fo",
+          "external_id": "qlHB3hsM6Fo",
+          "status": "needs_review",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        }
+      ],
+      "isrc_rows": [],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "recording_platform_links": 8,
+        "tracks": 1
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "Frío, frío — 2013 video edit",
+      "canonical_survivor_uuid": "8b866647-4640-49c2-b711-14a6103b18ed",
+      "redundant_recording_uuid": "eaaf538f-556c-4663-9a25-8b2a7277cb3c",
+      "duplicate_type": "video-edit duplicate",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_06",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "ca148d4e-45c8-4454-92fa-649d4e614bb2",
+          "release_id": "bd2e1cd2-6ce5-4758-a3d6-cabc5a5ab054",
+          "release_title": "Frío, frío",
+          "disc_number": 1,
+          "position": 1,
+          "track_number": 1
+        }
+      ],
+      "tracks_to_repoint": [
+        "ca148d4e-45c8-4454-92fa-649d4e614bb2"
+      ],
+      "platform_links": [
+        {
+          "id": "94beedc3-f6f6-4300-94df-e86e84b38362",
+          "platform": "apple_music",
+          "url": "https://music.apple.com/us/album/fr%C3%ADo-fr%C3%ADo-feat-romeo-santos-live/715572858?i=715574224&uo=4",
+          "external_id": "715574224",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "7c7bb357-547e-42e6-91ec-e446306fa92e",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/1UzxNNiJhUPngbfANRlQqM",
+          "external_id": "1UzxNNiJhUPngbfANRlQqM",
+          "status": "needs_review",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "a002d5d0-6c6f-4afb-bb54-490a010df517",
+          "platform": "youtube",
+          "url": "https://www.youtube.com/watch?v=EzI-Pcajixg",
+          "external_id": "EzI-Pcajixg",
+          "status": "needs_review",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        }
+      ],
+      "isrc_rows": [],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "recording_platform_links": 3,
+        "tracks": 1
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "Viviré",
+      "canonical_survivor_uuid": "e0f73996-a0ef-4566-a34a-9d8e1ca4350f",
+      "redundant_recording_uuid": "0cc04257-7a86-4984-9968-16223af246b6",
+      "duplicate_type": "collection duplicate",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_07",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "e2bac98d-a4aa-433e-aeb0-a2d1c6acae27",
+          "release_id": "934a0ee2-6022-4df6-8016-069c8ccdb5f5",
+          "release_title": "The Collection",
+          "disc_number": 3,
+          "position": 4,
+          "track_number": 4
+        }
+      ],
+      "tracks_to_repoint": [
+        "e2bac98d-a4aa-433e-aeb0-a2d1c6acae27"
+      ],
+      "platform_links": [
+        {
+          "id": "56c64903-12f6-419f-a0ac-e8cbacc79085",
+          "platform": "amazon_music",
+          "url": "https://music.amazon.com/albums/B08FCF3VFG?trackAsin=B08FCH1BRH",
+          "external_id": "B08FCH1BRH",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "0b728e88-f4a5-4d43-8f3b-de6bdfdc9ef6",
+          "platform": "apple_music",
+          "url": "https://music.apple.com/us/album/vivir%C3%A9/19478648?i=19478636&uo=4",
+          "external_id": "19478636",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "2ca0ae08-8ba9-4b9a-b762-2d799a9bf8f3",
+          "platform": "boomplay",
+          "url": "https://www.boomplay.com/songs/42209905",
+          "external_id": "42209905",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "f4debc56-1bba-4689-a40d-92e384294db8",
+          "platform": "deezer",
+          "url": "https://www.deezer.com/track/1857097877",
+          "external_id": "1857097877",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        },
+        {
+          "id": "1164b7a1-2c92-4cd3-a8fc-dfff13ae26a2",
+          "platform": "pandora",
+          "url": "https://www.pandora.com/TR:34647362",
+          "external_id": "TR:34647362",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "e9a75e40-80d6-4cc6-9cdb-f3b94d4a7a70",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/1ApyDf07dGq7yOrDwCMpk6",
+          "external_id": "1ApyDf07dGq7yOrDwCMpk6",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "3a8f4732-03ea-4ab6-9bd0-239bae60e8b3",
+          "platform": "youtube",
+          "url": "https://www.youtube.com/watch?v=W5g4utFAhlU",
+          "external_id": "W5g4utFAhlU",
+          "status": "needs_review",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        }
+      ],
+      "isrc_rows": [],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "apple_recording_candidates": 1,
+        "recording_platform_links": 7,
+        "tracks": 1
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "La cosquillita",
+      "canonical_survivor_uuid": "24e8cbfc-cb66-4481-a2db-fe653e7b79fc",
+      "redundant_recording_uuid": "c22f0093-d574-410a-9979-69c1345efd15",
+      "duplicate_type": "collection duplicate",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_07",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "ff354997-2951-4f9a-8c89-1ae0a84fb2d1",
+          "release_id": "934a0ee2-6022-4df6-8016-069c8ccdb5f5",
+          "release_title": "The Collection",
+          "disc_number": 3,
+          "position": 8,
+          "track_number": 8
+        }
+      ],
+      "tracks_to_repoint": [
+        "ff354997-2951-4f9a-8c89-1ae0a84fb2d1"
+      ],
+      "platform_links": [
+        {
+          "id": "33f6e6a0-a50c-43d2-bc93-cab35047886b",
+          "platform": "amazon_music",
+          "url": "https://music.amazon.com/albums/B08FBLTS51?trackAsin=B08FBNMCKL",
+          "external_id": "B08FBNMCKL",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "4a101997-0cbc-444f-a32f-2b5c86d68aa0",
+          "platform": "apple_music",
+          "url": "https://music.apple.com/us/album/la-cosquillita/167014317?i=167014738&uo=4",
+          "external_id": "167014738",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "a1e18a2f-fdfc-476d-936c-91ade1479894",
+          "platform": "boomplay",
+          "url": "https://www.boomplay.com/songs/42209908",
+          "external_id": "42209908",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "08d083e6-e19d-4673-a17f-d94c5c40311a",
+          "platform": "pandora",
+          "url": "https://www.pandora.com/TR:1066417",
+          "external_id": "TR:1066417",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "ef382d34-0d7a-4a86-9fc2-f6d56148c1ad",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/5S1SN8LIgjULLcB9jKaAVX",
+          "external_id": "5S1SN8LIgjULLcB9jKaAVX",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "9b8ad4c2-1e21-4956-8ca1-ac11502dbb50",
+          "platform": "tidal",
+          "url": "https://listen.tidal.com/track/241906576",
+          "external_id": "241906576",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        }
+      ],
+      "isrc_rows": [],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "recording_platform_links": 6,
+        "tracks": 1
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "Amapola",
+      "canonical_survivor_uuid": "1ba17dad-ae76-429f-9ef9-6c28583e2613",
+      "redundant_recording_uuid": "5867dce2-199e-4aea-8e15-065346f370a6",
+      "duplicate_type": "collection duplicate",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_08",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "607a77da-f00b-4159-845d-732dc8d4ff49",
+          "release_id": "934a0ee2-6022-4df6-8016-069c8ccdb5f5",
+          "release_title": "The Collection",
+          "disc_number": 3,
+          "position": 14,
+          "track_number": 14
+        }
+      ],
+      "tracks_to_repoint": [
+        "607a77da-f00b-4159-845d-732dc8d4ff49"
+      ],
+      "platform_links": [
+        {
+          "id": "ca078e31-3233-499e-b7ac-e0d8fbbac8ee",
+          "platform": "amazon_music",
+          "url": "https://music.amazon.com/albums/B0FP3N9H9Q?trackAsin=B0FP4GPJXK",
+          "external_id": "B0FP4GPJXK",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "2852633f-664f-47ff-8caf-c43454a999f3",
+          "platform": "apple_music",
+          "url": "https://music.apple.com/us/album/amapola/19478648?i=19478640&uo=4",
+          "external_id": "19478640",
+          "status": "needs_review",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "a311408d-371f-4074-9c78-5f58b7538089",
+          "platform": "boomplay",
+          "url": "https://www.boomplay.com/songs/42209910",
+          "external_id": "42209910",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "538cf25e-e8b1-4627-a47e-35c1e1ad501d",
+          "platform": "pandora",
+          "url": "https://www.pandora.com/TR:303350",
+          "external_id": "TR:303350",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "9f6bd4d6-5fb5-44f5-8138-d0425e22f8af",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/0sFneLJWfpUSxFwSYmqjKP",
+          "external_id": "0sFneLJWfpUSxFwSYmqjKP",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        },
+        {
+          "id": "55a4da92-6397-444f-85a2-6465f4c70cfa",
+          "platform": "tidal",
+          "url": "https://listen.tidal.com/track/241906557",
+          "external_id": "241906557",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "303cc3f8-b36e-4598-b2a3-b1058131f7ff",
+          "platform": "youtube",
+          "url": "https://www.youtube.com/watch?v=BM5XcXSwMPg",
+          "external_id": "BM5XcXSwMPg",
+          "status": "needs_review",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        }
+      ],
+      "isrc_rows": [],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "recording_platform_links": 7,
+        "tracks": 1
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "La hormiguita",
+      "canonical_survivor_uuid": "94e6b280-a522-4fd7-82e5-e920583b8668",
+      "redundant_recording_uuid": "253eb278-8822-4ae2-bf84-ea93f3789786",
+      "duplicate_type": "collection duplicate",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_08",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "ce299cc5-1f63-4d54-82dd-d76ef21c72af",
+          "release_id": "934a0ee2-6022-4df6-8016-069c8ccdb5f5",
+          "release_title": "The Collection",
+          "disc_number": 3,
+          "position": 6,
+          "track_number": 6
+        }
+      ],
+      "tracks_to_repoint": [
+        "ce299cc5-1f63-4d54-82dd-d76ef21c72af"
+      ],
+      "platform_links": [
+        {
+          "id": "d37df823-b1c3-456f-ba67-b9e9ee0ef4bd",
+          "platform": "amazon_music",
+          "url": "https://music.amazon.com/albums/B08FC5G6P7?trackAsin=B08FC5DJ3F",
+          "external_id": "B08FC5DJ3F",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "ee707c73-3077-4efe-b369-97fab06bce65",
+          "platform": "apple_music",
+          "url": "https://music.apple.com/us/album/la-hormiguita/19469236?i=19469218&uo=4",
+          "external_id": "19469218",
+          "status": "needs_review",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "e35fe4ce-d89d-4fa7-9cad-8f4c99c5f516",
+          "platform": "boomplay",
+          "url": "https://www.boomplay.com/songs/42209903",
+          "external_id": "42209903",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "58e1e7f0-d90c-42cb-9168-a343cca3c5b0",
+          "platform": "pandora",
+          "url": "https://www.pandora.com/TR:1066412",
+          "external_id": "TR:1066412",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "0aa319a1-4316-4d5f-a9d4-20475a85ef53",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/6ZWGaFrtZ49uEO0kA0Lwae",
+          "external_id": "6ZWGaFrtZ49uEO0kA0Lwae",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        },
+        {
+          "id": "b75570dc-1721-41cf-b90c-497e0cc20a59",
+          "platform": "tidal",
+          "url": "https://listen.tidal.com/track/241906552",
+          "external_id": "241906552",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "bb320052-3ee4-488a-87db-6d0374eb51f8",
+          "platform": "youtube",
+          "url": "https://www.youtube.com/watch?v=ddmUyNokvg4",
+          "external_id": "ddmUyNokvg4",
+          "status": "needs_review",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        }
+      ],
+      "isrc_rows": [],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "recording_platform_links": 7,
+        "tracks": 1
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "Palomita blanca",
+      "canonical_survivor_uuid": "fd8be647-bc76-495c-b4f4-5b6d2d608b31",
+      "redundant_recording_uuid": "e7a3dc3b-ec33-440a-841c-9984947b6818",
+      "duplicate_type": "collection duplicate",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_08",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "52e03edb-2bd4-4726-9abd-3f9485fb1bcf",
+          "release_id": "934a0ee2-6022-4df6-8016-069c8ccdb5f5",
+          "release_title": "The Collection",
+          "disc_number": 3,
+          "position": 9,
+          "track_number": 9
+        }
+      ],
+      "tracks_to_repoint": [
+        "52e03edb-2bd4-4726-9abd-3f9485fb1bcf"
+      ],
+      "platform_links": [
+        {
+          "id": "eeb34dcf-c45b-4a36-82bf-452d65865ab9",
+          "platform": "amazon_music",
+          "url": "https://music.amazon.com/albums/B0FP3N9H9Q?trackAsin=B0FP3LBQ9S",
+          "external_id": "B0FP3LBQ9S",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "01b8bd25-7028-42f7-8c6f-23edefa8e0ee",
+          "platform": "apple_music",
+          "url": "https://music.apple.com/us/album/palomita-blanca/19469236?i=19469224&uo=4",
+          "external_id": "19469224",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "ff8f1033-e435-478c-877f-10b08b08ded9",
+          "platform": "boomplay",
+          "url": "https://www.boomplay.com/songs/42209907",
+          "external_id": "42209907",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "a9272af3-39ca-4d86-8e11-ea3626189805",
+          "platform": "pandora",
+          "url": "https://www.pandora.com/TR:34647363",
+          "external_id": "TR:34647363",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "dca88adf-3979-47bd-8b80-e0fd1e533850",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/4RbYovkApuN7mBSwlEQvst",
+          "external_id": "4RbYovkApuN7mBSwlEQvst",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        },
+        {
+          "id": "d727d6be-f5ce-4ded-a841-027fd6494c08",
+          "platform": "tidal",
+          "url": "https://listen.tidal.com/track/241906555",
+          "external_id": "241906555",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "0e9efaae-98f0-4511-bc3a-c7d75d6f5b51",
+          "platform": "youtube",
+          "url": "https://www.youtube.com/watch?v=UxMpfyUnqJ8",
+          "external_id": "UxMpfyUnqJ8",
+          "status": "needs_review",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        }
+      ],
+      "isrc_rows": [],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "apple_recording_candidates": 1,
+        "recording_platform_links": 7,
+        "tracks": 1
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "El Niágara en bicicleta",
+      "canonical_survivor_uuid": "2dd6a6a7-81f2-48d1-bd57-bbd75cc36805",
+      "redundant_recording_uuid": "9ab2e548-69e0-4454-8f5e-e8b1e76676be",
+      "duplicate_type": "collection duplicate",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_08",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "d7b2a6c3-91ad-43b7-a155-ca9a7e7554e4",
+          "release_id": "934a0ee2-6022-4df6-8016-069c8ccdb5f5",
+          "release_title": "The Collection",
+          "disc_number": 3,
+          "position": 1,
+          "track_number": 1
+        }
+      ],
+      "tracks_to_repoint": [
+        "d7b2a6c3-91ad-43b7-a155-ca9a7e7554e4"
+      ],
+      "platform_links": [
+        {
+          "id": "4898b032-97d5-42e2-85b1-8f7fc0119011",
+          "platform": "amazon_music",
+          "url": "https://music.amazon.com/albums/B08FC5G6P7?trackAsin=B08FC6B4N6",
+          "external_id": "B08FC6B4N6",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "da69f9e3-8284-4628-b04d-17d132d7a8c5",
+          "platform": "apple_music",
+          "url": "https://music.apple.com/us/album/el-niagara-en-bicicleta/19469236?i=19469222&uo=4",
+          "external_id": "19469222",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "68ac73e8-5bad-4655-91bf-e04d04d55d5d",
+          "platform": "boomplay",
+          "url": "https://www.boomplay.com/songs/42209900",
+          "external_id": "42209900",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "d2e508ad-d30f-4bbe-b63b-a60ea396290b",
+          "platform": "pandora",
+          "url": "https://www.pandora.com/TR:1066409",
+          "external_id": "TR:1066409",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "c6b5bc8d-1500-4ec8-9f6d-4996e360744f",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/7pV8mSDgSPbSMFw9ZP1XXR",
+          "external_id": "7pV8mSDgSPbSMFw9ZP1XXR",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "c7855178-6c79-492c-939b-7120e022a574",
+          "platform": "tidal",
+          "url": "https://listen.tidal.com/track/241906554",
+          "external_id": "241906554",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        }
+      ],
+      "isrc_rows": [],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "recording_platform_links": 6,
+        "tracks": 1
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "Quisiera — pop",
+      "canonical_survivor_uuid": "32b87f30-8aad-42c8-ab5e-f973e2421a8d",
+      "redundant_recording_uuid": "7527fde0-5360-4ffd-b9a9-450a26038cf9",
+      "duplicate_type": "version-row duplicate",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_08",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "a836cfd4-db72-45b6-a50a-9bf2411513f5",
+          "release_id": "934a0ee2-6022-4df6-8016-069c8ccdb5f5",
+          "release_title": "The Collection",
+          "disc_number": 3,
+          "position": 12,
+          "track_number": 12
+        }
+      ],
+      "tracks_to_repoint": [
+        "a836cfd4-db72-45b6-a50a-9bf2411513f5"
+      ],
+      "platform_links": [
+        {
+          "id": "96e7470a-9112-4fb8-adf0-b0a389c6e474",
+          "platform": "amazon_music",
+          "url": "https://music.amazon.com/albums/B0FP3N9H9Q?trackAsin=B0FP476PSJ",
+          "external_id": "B0FP476PSJ",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "425a2b30-0738-4d32-ae65-19d305d2d0a2",
+          "platform": "apple_music",
+          "url": "https://music.apple.com/us/album/quisiera/19478648?i=19478614&uo=4",
+          "external_id": "19478614",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "9c90ff09-b53b-4c7e-8880-887723c0970b",
+          "platform": "boomplay",
+          "url": "https://www.boomplay.com/songs/22766803",
+          "external_id": "22766803",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "9cf09ab2-0291-4401-becd-24d6df42da2c",
+          "platform": "pandora",
+          "url": "https://www.pandora.com/TR:35075405",
+          "external_id": "TR:35075405",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "4d41da20-25a1-424a-afbc-d33680904ae5",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/2nOCIurmZdHviYJlksyCYK",
+          "external_id": "2nOCIurmZdHviYJlksyCYK",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "3895868c-0898-4334-8af9-2700f160776b",
+          "platform": "youtube",
+          "url": "https://www.youtube.com/watch?v=2i2d7RjsEfs",
+          "external_id": "2i2d7RjsEfs",
+          "status": "needs_review",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        }
+      ],
+      "isrc_rows": [],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "recording_platform_links": 6,
+        "tracks": 1
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "El Niágara — 2013 live",
+      "canonical_survivor_uuid": "1fb2a355-75eb-4b56-b1c8-e531a99c1e45",
+      "redundant_recording_uuid": "952aeb58-6ece-4c40-9ffe-abbfa87a876e",
+      "duplicate_type": "live-edition duplicate",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_08",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "d1cfbedc-8a62-49ca-9c18-27b6443ff3bc",
+          "release_id": "6af8d1ca-327a-40c1-b356-dd7f85969058",
+          "release_title": "A son de Guerra tour",
+          "disc_number": 1,
+          "position": 8,
+          "track_number": 8
+        },
+        {
+          "id": "b7d472b6-4ed6-42ee-a4e5-5ec1bff0149b",
+          "release_id": "25e2766f-3fa9-4d9f-9102-b1f2c1d2ad70",
+          "release_title": "ASonDeGuerra Tour",
+          "disc_number": 9,
+          "position": 1,
+          "track_number": 1
+        }
+      ],
+      "tracks_to_repoint": [
+        "d1cfbedc-8a62-49ca-9c18-27b6443ff3bc",
+        "b7d472b6-4ed6-42ee-a4e5-5ec1bff0149b"
+      ],
+      "platform_links": [
+        {
+          "id": "af532f0a-9802-4cdf-b367-cb2a666c5a17",
+          "platform": "amazon_music",
+          "url": "https://music.amazon.com/albums/B08FC5G6P7?trackAsin=B08FC6B4N6",
+          "external_id": "B08FC6B4N6",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "1e440886-3f21-4caa-a75f-5f0312deb98b",
+          "platform": "apple_music",
+          "url": "https://music.apple.com/us/album/el-niagara-en-bicicleta/19469236?i=19469222&uo=4",
+          "external_id": "19469222",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "f4ebd85f-1ff4-42b2-8739-9eb8b5b92d71",
+          "platform": "boomplay",
+          "url": "https://www.boomplay.com/songs/42209900",
+          "external_id": "42209900",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "b71391a2-89c2-43fd-a8a7-deb21654bf43",
+          "platform": "pandora",
+          "url": "https://www.pandora.com/TR:1066409",
+          "external_id": "TR:1066409",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "207ace6f-acb5-4f31-9618-be4fa58bd25e",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/7pV8mSDgSPbSMFw9ZP1XXR",
+          "external_id": "7pV8mSDgSPbSMFw9ZP1XXR",
+          "status": "needs_review",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "0a75a635-5646-447c-91aa-fc28880d6d03",
+          "platform": "tidal",
+          "url": "https://listen.tidal.com/track/241906554",
+          "external_id": "241906554",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        }
+      ],
+      "isrc_rows": [],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "recording_platform_links": 6,
+        "tracks": 2
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "Medicine for My Soul",
+      "canonical_survivor_uuid": "5bd5a921-7b33-40ca-b7ff-c92c4c085432",
+      "redundant_recording_uuid": "3e8ec754-1521-4eb8-8a97-205e53fef109",
+      "duplicate_type": "duplicate import",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_10",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "0193d621-0624-44e5-85ac-d77e906608e6",
+          "release_id": "77d5e7a6-a6b8-454e-b004-84f69b76a0a1",
+          "release_title": "La llave de mi corazón",
+          "disc_number": 1,
+          "position": 14,
+          "track_number": 14
+        }
+      ],
+      "tracks_to_repoint": [
+        "0193d621-0624-44e5-85ac-d77e906608e6"
+      ],
+      "platform_links": [
+        {
+          "id": "7b503890-12fb-491a-8105-aba6874602af",
+          "platform": "apple_music",
+          "url": "https://music.apple.com/us/album/medicine-for-my-soul/714632731?i=714632830&uo=4",
+          "external_id": "714632830",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "085d994b-bef4-474b-9a65-a9d8bcaa9f07",
+          "platform": "boomplay",
+          "url": "https://www.boomplay.com/songs/2320576",
+          "external_id": "2320576",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "dadb8b63-1931-45f5-8797-35def4175856",
+          "platform": "pandora",
+          "url": "https://www.pandora.com/TR:7228565",
+          "external_id": "TR:7228565",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "36f651f0-a2fa-4e64-aaaf-70a4e67342c8",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/08kWZ4nPSOYDtgAy6yqah4",
+          "external_id": "08kWZ4nPSOYDtgAy6yqah4",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "2df9b555-6119-431f-97e3-8bd12d1c1583",
+          "platform": "tidal",
+          "url": "https://listen.tidal.com/track/1349712",
+          "external_id": "1349712",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "32a65745-810b-4b10-aedf-778afbd7136f",
+          "platform": "youtube",
+          "url": "https://www.youtube.com/watch?v=VT428JceD4E",
+          "external_id": "VT428JceD4E",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        }
+      ],
+      "isrc_rows": [
+        {
+          "id": "f89feba6-77e2-4e94-8093-09a73701fc30",
+          "isrc": "USEL10700181",
+          "source_count": 1,
+          "action": "MIGRATE_IF_NOT_ON_SURVIVOR_ELSE_DELETE_REDUNDANT"
+        }
+      ],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "recording_isrcs": 1,
+        "recording_platform_links": 6,
+        "tracks": 1
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "Medicine for My Soul",
+      "canonical_survivor_uuid": "5bd5a921-7b33-40ca-b7ff-c92c4c085432",
+      "redundant_recording_uuid": "dec3b8c6-88dc-41fd-a46a-8a79157cfab7",
+      "duplicate_type": "enhanced-media duplicate",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_10",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "8e08c645-ea23-4526-9f4b-e657b8925c3c",
+          "release_id": "e2f34b09-65b5-49c3-8f24-f0e8d0cbab21",
+          "release_title": "La llave de mi corazón",
+          "disc_number": 2,
+          "position": 1,
+          "track_number": 1
+        }
+      ],
+      "tracks_to_repoint": [
+        "8e08c645-ea23-4526-9f4b-e657b8925c3c"
+      ],
+      "platform_links": [
+        {
+          "id": "5379ee15-db59-495e-b33a-e01536365d17",
+          "platform": "apple_music",
+          "url": "https://music.apple.com/us/album/medicine-for-my-soul/714632731?i=714632830&uo=4",
+          "external_id": "714632830",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "ca24402f-9b77-4085-a4d1-6f281b7c4ef0",
+          "platform": "boomplay",
+          "url": "https://www.boomplay.com/songs/2320576",
+          "external_id": "2320576",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "cf54d146-4f08-42ff-9aa8-c76187abd261",
+          "platform": "pandora",
+          "url": "https://www.pandora.com/TR:7228565",
+          "external_id": "TR:7228565",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "c37c3a16-ac44-41cb-b6d9-58fc357e8886",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/08kWZ4nPSOYDtgAy6yqah4",
+          "external_id": "08kWZ4nPSOYDtgAy6yqah4",
+          "status": "needs_review",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "e3ef86f1-3156-4657-a26a-199031553449",
+          "platform": "tidal",
+          "url": "https://listen.tidal.com/track/1349712",
+          "external_id": "1349712",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "0c2210b1-4cdb-4665-9b9c-120cfdfbb2e2",
+          "platform": "youtube",
+          "url": "https://www.youtube.com/watch?v=AfRLCPHz8V4",
+          "external_id": "AfRLCPHz8V4",
+          "status": "needs_review",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        }
+      ],
+      "isrc_rows": [],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "recording_platform_links": 6,
+        "tracks": 1
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "La travesía",
+      "canonical_survivor_uuid": "f1a4a262-fd61-4af0-8910-652b203b6655",
+      "redundant_recording_uuid": "e61255b3-319b-4a96-832b-3d2c846148eb",
+      "duplicate_type": "duplicate import",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_10",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "2ed9434f-31ec-449e-abb0-f3e5ab9aefde",
+          "release_id": "77d5e7a6-a6b8-454e-b004-84f69b76a0a1",
+          "release_title": "La llave de mi corazón",
+          "disc_number": 1,
+          "position": 17,
+          "track_number": 17
+        }
+      ],
+      "tracks_to_repoint": [
+        "2ed9434f-31ec-449e-abb0-f3e5ab9aefde"
+      ],
+      "platform_links": [
+        {
+          "id": "da189585-c4a2-41c3-a2e8-98806ab00a16",
+          "platform": "amazon_music",
+          "url": "https://music.amazon.com/albums/B000Y03O5O?trackAsin=B000Y03NO6",
+          "external_id": "B000Y03NO6",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "d9436f4f-373b-4a53-955a-5389b9870e70",
+          "platform": "apple_music",
+          "url": "https://music.apple.com/us/album/la-traves%C3%ADa/714621162?i=714621812&uo=4",
+          "external_id": "714621812",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "811e4b9b-c7eb-4dd4-ac1b-e87809546055",
+          "platform": "boomplay",
+          "url": "https://www.boomplay.com/songs/2567551",
+          "external_id": "2567551",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "2c1fbae0-8349-4470-a602-c9734643edb9",
+          "platform": "pandora",
+          "url": "https://www.pandora.com/TR:7228549",
+          "external_id": "TR:7228549",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "0b770c9c-be0f-473c-b5e9-4ab932bde7f9",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/7BL1WTerk9Upwd5Xj4LGLi",
+          "external_id": "7BL1WTerk9Upwd5Xj4LGLi",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "7c863bc1-7eb8-4e13-b541-b462c65f1420",
+          "platform": "tidal",
+          "url": "https://listen.tidal.com/track/19818311",
+          "external_id": "19818311",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "08990703-72fd-409a-bfa9-a4aee435aa5e",
+          "platform": "youtube",
+          "url": "https://www.youtube.com/watch?v=Xl6SZ1T2UFs",
+          "external_id": "Xl6SZ1T2UFs",
+          "status": "needs_review",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        }
+      ],
+      "isrc_rows": [
+        {
+          "id": "34cbf268-023a-44d7-b071-46a4c8f1b79f",
+          "isrc": "USEL10700236",
+          "source_count": 1,
+          "action": "MIGRATE_IF_NOT_ON_SURVIVOR_ELSE_DELETE_REDUNDANT"
+        }
+      ],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "recording_isrcs": 1,
+        "recording_platform_links": 7,
+        "tracks": 1
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "Que me des tu cariño",
+      "canonical_survivor_uuid": "683502f6-1cdd-40cd-90ae-3c262314255d",
+      "redundant_recording_uuid": "3be8cc69-d9a6-4ef1-b0ed-3bf545eee5e5",
+      "duplicate_type": "enhanced-media duplicate",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_10",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "8ca9d7e5-a574-4315-a992-2d0dabd09601",
+          "release_id": "e2f34b09-65b5-49c3-8f24-f0e8d0cbab21",
+          "release_title": "La llave de mi corazón",
+          "disc_number": 2,
+          "position": 3,
+          "track_number": 3
+        }
+      ],
+      "tracks_to_repoint": [
+        "8ca9d7e5-a574-4315-a992-2d0dabd09601"
+      ],
+      "platform_links": [
+        {
+          "id": "7f3c868a-8ba3-48a3-9bae-c83e0d854f2e",
+          "platform": "amazon_music",
+          "url": "https://music.amazon.com/albums/B000Y03O5O?trackAsin=B000Y09AGQ",
+          "external_id": "B000Y09AGQ",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "55f7a600-58ca-4545-827f-69afafcd8b27",
+          "platform": "apple_music",
+          "url": "https://music.apple.com/us/album/que-me-des-tu-cari%C3%B1o/714632731?i=714632844&uo=4",
+          "external_id": "714632844",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "2896623e-536d-4cf2-a559-91f9968a9519",
+          "platform": "boomplay",
+          "url": "https://www.boomplay.com/songs/2894503",
+          "external_id": "2894503",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "ca737cea-6615-41f8-a5f3-fbb18800680b",
+          "platform": "deezer",
+          "url": "https://www.deezer.com/track/3515323",
+          "external_id": "3515323",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        },
+        {
+          "id": "b3e31942-fcc8-43ac-a287-26cdfa4b9a35",
+          "platform": "pandora",
+          "url": "https://www.pandora.com/TR:7228551",
+          "external_id": "TR:7228551",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "6b80a55f-7e77-4460-8d59-72c2657a3312",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/4YRluWE35IfHucz5HJjCOe",
+          "external_id": "4YRluWE35IfHucz5HJjCOe",
+          "status": "needs_review",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "a9b4db01-8fd8-4a25-b850-7ea6083c8832",
+          "platform": "tidal",
+          "url": "https://listen.tidal.com/track/1349715",
+          "external_id": "1349715",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        }
+      ],
+      "isrc_rows": [],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "recording_platform_links": 7,
+        "tracks": 1
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "La llave — Portuguese version",
+      "canonical_survivor_uuid": "bfe72788-b550-4a91-ba8a-a4533f3d3511",
+      "redundant_recording_uuid": "7be71bbd-4445-450c-ba8f-f9779c64f071",
+      "duplicate_type": "language-version duplicate",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_10",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "d2633820-e053-4cf2-9a3d-de27ea4df94b",
+          "release_id": "77d5e7a6-a6b8-454e-b004-84f69b76a0a1",
+          "release_title": "La llave de mi corazón",
+          "disc_number": 1,
+          "position": 15,
+          "track_number": 15
+        }
+      ],
+      "tracks_to_repoint": [
+        "d2633820-e053-4cf2-9a3d-de27ea4df94b"
+      ],
+      "platform_links": [
+        {
+          "id": "6bd4a0bb-0124-42e2-b172-19de6b6fb000",
+          "platform": "amazon_music",
+          "url": "https://music.amazon.com/albums/B000TEMSM0?trackAsin=B000TEGXNK",
+          "external_id": "B000TEGXNK",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "8d0ec091-fe05-4ad9-89b8-a2c039daac7d",
+          "platform": "apple_music",
+          "url": "https://music.apple.com/us/album/la-llave-de-mi-coraz%C3%B3n/714621162?i=714622940&uo=4",
+          "external_id": "714622940",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "34ca06fd-a314-4e07-af6f-2e23832bffb1",
+          "platform": "boomplay",
+          "url": "https://www.boomplay.com/songs/2567561",
+          "external_id": "2567561",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "94a87f8a-2f4f-4ea8-8bde-255efb1c4ecf",
+          "platform": "pandora",
+          "url": "https://www.pandora.com/TR:7228559",
+          "external_id": "TR:7228559",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "224eb477-ae99-41d8-af69-290374c202d6",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/16clFA2Yv3feBd4sK8Y8sp",
+          "external_id": "16clFA2Yv3feBd4sK8Y8sp",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "340b2e74-81f7-4642-84c6-9f9103e3b212",
+          "platform": "tidal",
+          "url": "https://listen.tidal.com/track/1349722",
+          "external_id": "1349722",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        }
+      ],
+      "isrc_rows": [
+        {
+          "id": "9fe27377-769c-403a-bbdb-fb212bee98a2",
+          "isrc": "USEL10700182",
+          "source_count": 1,
+          "action": "MIGRATE_IF_NOT_ON_SURVIVOR_ELSE_DELETE_REDUNDANT"
+        }
+      ],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "recording_isrcs": 1,
+        "recording_platform_links": 6,
+        "tracks": 1
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "La guagua — full live",
+      "canonical_survivor_uuid": "a266c059-fd40-4c0f-a825-b6b70ca30587",
+      "redundant_recording_uuid": "74bdda84-37c7-41f4-8b35-50773cad1e11",
+      "duplicate_type": "enhanced/live duplicate",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_11",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "fd28c0d6-3309-4ad7-9303-73b2fb612b10",
+          "release_id": "7764c263-64ec-490f-970c-7ace93c28d93",
+          "release_title": "A son de Guerra",
+          "disc_number": 2,
+          "position": 4,
+          "track_number": 4
+        }
+      ],
+      "tracks_to_repoint": [
+        "fd28c0d6-3309-4ad7-9303-73b2fb612b10"
+      ],
+      "platform_links": [
+        {
+          "id": "de0d6850-3a46-4bbb-bfbc-b116d5cf0447",
+          "platform": "apple_music",
+          "url": "https://music.apple.com/us/album/la-guagua-live/714948778?i=714948887&uo=4",
+          "external_id": "714948887",
+          "status": "needs_review",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "4ecedf63-04a0-46f1-bb53-aa84b78694cb",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/37tKjEQKSGG2BkuWi9OGRC",
+          "external_id": "37tKjEQKSGG2BkuWi9OGRC",
+          "status": "needs_review",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "4b45d030-4142-48d8-8438-046ed3c89679",
+          "platform": "youtube",
+          "url": "https://www.youtube.com/watch?v=9x_Zmt4S01s",
+          "external_id": "9x_Zmt4S01s",
+          "status": "needs_review",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        }
+      ],
+      "isrc_rows": [],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "recording_platform_links": 3,
+        "tracks": 1
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "La calle — full live",
+      "canonical_survivor_uuid": "8ae9a544-398b-4351-949a-04905d0f15b8",
+      "redundant_recording_uuid": "59260747-c9ea-4075-85a1-808dafc3b350",
+      "duplicate_type": "enhanced/live duplicate",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_11",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "879b39f8-f32b-4632-9631-5b04fc99a26f",
+          "release_id": "7764c263-64ec-490f-970c-7ace93c28d93",
+          "release_title": "A son de Guerra",
+          "disc_number": 2,
+          "position": 3,
+          "track_number": 3
+        }
+      ],
+      "tracks_to_repoint": [
+        "879b39f8-f32b-4632-9631-5b04fc99a26f"
+      ],
+      "platform_links": [
+        {
+          "id": "2568541e-6b91-4c3c-95d4-c2885877090f",
+          "platform": "apple_music",
+          "url": "https://music.apple.com/us/album/la-calle-feat-juanes-live/714948778?i=714948813&uo=4",
+          "external_id": "714948813",
+          "status": "needs_review",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "87411a43-2d89-4478-8a20-849837b1490a",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/09BUxZLKi0CvW5BWzcg4Ql",
+          "external_id": "09BUxZLKi0CvW5BWzcg4Ql",
+          "status": "needs_review",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        }
+      ],
+      "isrc_rows": [],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "recording_platform_links": 2,
+        "tracks": 1
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "Bachata en Fukuoka — full live",
+      "canonical_survivor_uuid": "0672bd04-bf0f-4848-8a31-ace1723c7657",
+      "redundant_recording_uuid": "c431a1cd-6d4c-4eea-bb9c-4966e497c9be",
+      "duplicate_type": "enhanced/live duplicate",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_11",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "d47f89c6-d816-4eaf-a66a-cd488e78c579",
+          "release_id": "7764c263-64ec-490f-970c-7ace93c28d93",
+          "release_title": "A son de Guerra",
+          "disc_number": 2,
+          "position": 1,
+          "track_number": 1
+        }
+      ],
+      "tracks_to_repoint": [
+        "d47f89c6-d816-4eaf-a66a-cd488e78c579"
+      ],
+      "platform_links": [
+        {
+          "id": "794120c4-ab03-41a1-bbcb-ec4d88c397ef",
+          "platform": "apple_music",
+          "url": "https://music.apple.com/us/album/bachata-en-fukuoka-live/715953873?i=715954174&uo=4",
+          "external_id": "715954174",
+          "status": "needs_review",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "06591175-fba5-466e-a713-855e37aaba0e",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/5ff5HIqkclNpSn6tuJmAfd",
+          "external_id": "5ff5HIqkclNpSn6tuJmAfd",
+          "status": "needs_review",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        }
+      ],
+      "isrc_rows": [],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "recording_platform_links": 2,
+        "tracks": 1
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "Kitipun",
+      "canonical_survivor_uuid": "3bccc59f-1abf-43ce-8370-18989a8635fd",
+      "redundant_recording_uuid": "0ca87f5e-8706-4279-b258-480a3ab0f1a5",
+      "duplicate_type": "physical-edition duplicate",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_13",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "6a495bfb-2946-4c97-8ce9-013ece1e11a0",
+          "release_id": "b5e676d3-553d-4508-a511-dec6e5cf558c",
+          "release_title": "Literal",
+          "disc_number": 1,
+          "position": 1,
+          "track_number": 1
+        }
+      ],
+      "tracks_to_repoint": [
+        "6a495bfb-2946-4c97-8ce9-013ece1e11a0"
+      ],
+      "platform_links": [
+        {
+          "id": "256782fa-79a2-46a0-a17c-6fb4bac7510a",
+          "platform": "amazon_music",
+          "url": "https://music.amazon.com/albums/B07Q3CWH7B?trackAsin=B07Q3FWRSF",
+          "external_id": "B07Q3FWRSF",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "a7fdb386-6bd8-492e-8505-da0950e6eaab",
+          "platform": "apple_music",
+          "url": "https://music.apple.com/us/album/kitipun/1457770212?i=1457770528&uo=4",
+          "external_id": "1457770528",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "11a70927-676d-4bc1-808e-2c6496d6a9b4",
+          "platform": "boomplay",
+          "url": "https://www.boomplay.com/songs/5080385",
+          "external_id": "5080385",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "071aa185-e859-44c4-a1dc-f10f29b00c30",
+          "platform": "deezer",
+          "url": "https://www.deezer.com/track/657790492",
+          "external_id": "657790492",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "db778b7f-6182-4c78-96ac-e7f951475a82",
+          "platform": "pandora",
+          "url": "https://www.pandora.com/TR:18668089",
+          "external_id": "TR:18668089",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "ef6f7ca4-fd0f-486b-9216-dbce2708cc3f",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/1fCD8KvWR3y0Y80at1i4Le",
+          "external_id": "1fCD8KvWR3y0Y80at1i4Le",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        },
+        {
+          "id": "feb7679c-1b65-4d00-bdb4-7afe60da4687",
+          "platform": "tidal",
+          "url": "https://listen.tidal.com/track/110138139",
+          "external_id": "110138139",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "38ba6f63-e76a-45a4-b4c1-b685d46f04e2",
+          "platform": "youtube",
+          "url": "https://www.youtube.com/watch?v=jnRGXRbq9gM",
+          "external_id": "jnRGXRbq9gM",
+          "status": "needs_review",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        }
+      ],
+      "isrc_rows": [],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "recording_platform_links": 8,
+        "tracks": 1
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "Lámpara pa’ mis pies",
+      "canonical_survivor_uuid": "8a6801fd-04b8-48d3-843b-2cfcbbdc3529",
+      "redundant_recording_uuid": "5fc83e9c-f274-4422-b78b-8d9cbe4cee2e",
+      "duplicate_type": "physical-edition duplicate",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_13",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "aeb4d972-5923-4dca-9f74-0ac9a6cf6946",
+          "release_id": "b5e676d3-553d-4508-a511-dec6e5cf558c",
+          "release_title": "Literal",
+          "disc_number": 1,
+          "position": 2,
+          "track_number": 2
+        }
+      ],
+      "tracks_to_repoint": [
+        "aeb4d972-5923-4dca-9f74-0ac9a6cf6946"
+      ],
+      "platform_links": [
+        {
+          "id": "938d2842-9e69-4d44-808d-e77b1a7aa17c",
+          "platform": "amazon_music",
+          "url": "https://music.amazon.com/albums/B07QJDYSZQ?trackAsin=B07QH8PRLK",
+          "external_id": "B07QH8PRLK",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "35f2f3dd-f57e-4075-9e0e-e7214194f572",
+          "platform": "apple_music",
+          "url": "https://music.apple.com/us/album/l%C3%A1mpara-pa-mis-pies/1459450401?i=1459450405&uo=4",
+          "external_id": "1459450405",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "9fea1e6e-961a-40fc-a524-a37a23f1fa48",
+          "platform": "pandora",
+          "url": "https://www.pandora.com/TR:18668086",
+          "external_id": "TR:18668086",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "95934b0e-e6ce-4f3c-ae93-cbbab79d1964",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/0UnJphaDGpljP59lXRMaiE",
+          "external_id": "0UnJphaDGpljP59lXRMaiE",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "b2e0e0d8-605a-401a-9447-78c173fd6c0d",
+          "platform": "tidal",
+          "url": "https://listen.tidal.com/track/110138140",
+          "external_id": "110138140",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        }
+      ],
+      "isrc_rows": [],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "recording_platform_links": 5,
+        "tracks": 1
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "Cantando bachata",
+      "canonical_survivor_uuid": "b2a70d7c-1405-4a6c-8f7e-f0a5e828f9ee",
+      "redundant_recording_uuid": "10f7b0dc-929d-4b36-8e97-febe0a64ff24",
+      "duplicate_type": "physical-edition duplicate",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_13",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "2eeaa26f-2790-4cf1-8643-6494e5fe4b27",
+          "release_id": "b5e676d3-553d-4508-a511-dec6e5cf558c",
+          "release_title": "Literal",
+          "disc_number": 1,
+          "position": 3,
+          "track_number": 3
+        }
+      ],
+      "tracks_to_repoint": [
+        "2eeaa26f-2790-4cf1-8643-6494e5fe4b27"
+      ],
+      "platform_links": [
+        {
+          "id": "0303605b-7746-4138-ab8b-3cf186bd2568",
+          "platform": "amazon_music",
+          "url": "https://music.amazon.com/albums/B07QJDYSZQ?trackAsin=B07QKGX8CY",
+          "external_id": "B07QKGX8CY",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        },
+        {
+          "id": "5af8c689-e3e4-4898-965e-f72a2e1fbe83",
+          "platform": "apple_music",
+          "url": "https://music.apple.com/us/album/cantando-bachata/1459450401?i=1459450859&uo=4",
+          "external_id": "1459450859",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "054cffef-389c-4ce2-9370-bb984c213976",
+          "platform": "boomplay",
+          "url": "https://www.boomplay.com/songs/5837617",
+          "external_id": "5837617",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        },
+        {
+          "id": "4f3387a6-2a71-4af3-9e28-94d560eb2699",
+          "platform": "deezer",
+          "url": "https://www.deezer.com/track/685842452",
+          "external_id": "685842452",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        },
+        {
+          "id": "e6a7634d-3fe5-4fe6-9fff-dca343df3d09",
+          "platform": "pandora",
+          "url": "https://www.pandora.com/TR:18668088",
+          "external_id": "TR:18668088",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        },
+        {
+          "id": "28380906-dcbb-41ae-b1de-33966ab0f62f",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/7juQpjuFXQlFIwDiiVXiSh",
+          "external_id": "7juQpjuFXQlFIwDiiVXiSh",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "2b301c80-a0b6-43a8-9838-562b2f3f62d7",
+          "platform": "tidal",
+          "url": "https://listen.tidal.com/track/110138141",
+          "external_id": "110138141",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        }
+      ],
+      "isrc_rows": [],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "recording_platform_links": 7,
+        "tracks": 1
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "Má pa’lante vive gente",
+      "canonical_survivor_uuid": "e0fba189-3cd0-439b-980e-b6f0dc1b07e9",
+      "redundant_recording_uuid": "c963c383-0859-485d-b6e3-e139b56d6131",
+      "duplicate_type": "physical-edition duplicate",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_13",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "c14a3687-162f-4f50-96a6-b81e6dcc9d50",
+          "release_id": "b5e676d3-553d-4508-a511-dec6e5cf558c",
+          "release_title": "Literal",
+          "disc_number": 1,
+          "position": 4,
+          "track_number": 4
+        }
+      ],
+      "tracks_to_repoint": [
+        "c14a3687-162f-4f50-96a6-b81e6dcc9d50"
+      ],
+      "platform_links": [
+        {
+          "id": "070d035e-9b66-4717-b254-dfd000c80b86",
+          "platform": "amazon_music",
+          "url": "https://music.amazon.com/albums/B07QJDYSZQ?trackAsin=B07QKR3ZGC",
+          "external_id": "B07QKR3ZGC",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "d0680bb3-7819-413b-b43a-dbc6ac39d740",
+          "platform": "apple_music",
+          "url": "https://music.apple.com/us/album/m%C3%A1-pa-lante-vive-gente/1459450401?i=1459450861&uo=4",
+          "external_id": "1459450861",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "10c33984-4a86-492e-b468-30b4a317c255",
+          "platform": "boomplay",
+          "url": "https://www.boomplay.com/songs/5837618",
+          "external_id": "5837618",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "4656a6d3-1701-4862-9dba-3ca29289fa84",
+          "platform": "pandora",
+          "url": "https://www.pandora.com/TR:18668090",
+          "external_id": "TR:18668090",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "48c756a5-8a74-4ae8-b13f-cc4dc8347ec2",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/1n8TZuzLCWyTDELCr38TTr",
+          "external_id": "1n8TZuzLCWyTDELCr38TTr",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "be813ef2-833b-435f-9b74-32eed43f977d",
+          "platform": "tidal",
+          "url": "https://listen.tidal.com/track/110138142",
+          "external_id": "110138142",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        }
+      ],
+      "isrc_rows": [],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "recording_platform_links": 6,
+        "tracks": 1
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "I Love You More",
+      "canonical_survivor_uuid": "10f90a51-ba8c-4ca1-a7d0-9ff28f31b368",
+      "redundant_recording_uuid": "ddc15f58-c12a-4300-9489-87c1be88b61e",
+      "duplicate_type": "physical-edition duplicate",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_13",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "1c4a197c-393d-41b6-a8c0-58d43913bebe",
+          "release_id": "b5e676d3-553d-4508-a511-dec6e5cf558c",
+          "release_title": "Literal",
+          "disc_number": 1,
+          "position": 5,
+          "track_number": 5
+        }
+      ],
+      "tracks_to_repoint": [
+        "1c4a197c-393d-41b6-a8c0-58d43913bebe"
+      ],
+      "platform_links": [
+        {
+          "id": "67ff0994-3035-4d97-8351-9d05934bb3c6",
+          "platform": "amazon_music",
+          "url": "https://music.amazon.com/albums/B07QJDYSZQ?trackAsin=B07QKNT6G5",
+          "external_id": "B07QKNT6G5",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "807f6671-8399-48a9-992d-32e22e3421a0",
+          "platform": "apple_music",
+          "url": "https://music.apple.com/us/album/i-love-you-more/1459450401?i=1459450863&uo=4",
+          "external_id": "1459450863",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "b6b9e4a4-8bb8-473c-b60b-f11fae3bd519",
+          "platform": "boomplay",
+          "url": "https://www.boomplay.com/songs/5288785",
+          "external_id": "5288785",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "14a5db40-93d5-42a0-99c6-0f4f1e05b526",
+          "platform": "pandora",
+          "url": "https://www.pandora.com/TR:18668084",
+          "external_id": "TR:18668084",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "95ecacd8-493c-48d3-bffa-c15dd6106499",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/5hdY80BbEclOpXJN1JAp16",
+          "external_id": "5hdY80BbEclOpXJN1JAp16",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "452e7556-e67c-4586-87ab-8c16ebb35263",
+          "platform": "tidal",
+          "url": "https://listen.tidal.com/track/110138143",
+          "external_id": "110138143",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        }
+      ],
+      "isrc_rows": [],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "recording_platform_links": 6,
+        "tracks": 1
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "Corazón enamorado",
+      "canonical_survivor_uuid": "68f0a8b2-bfa4-46f7-908e-42e7e919e6fd",
+      "redundant_recording_uuid": "321d32c8-7bda-4ce9-b305-276034f795fc",
+      "duplicate_type": "physical-edition duplicate",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_13",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "a4b4bc5c-a3ae-43f2-8e93-52abb0e4722a",
+          "release_id": "b5e676d3-553d-4508-a511-dec6e5cf558c",
+          "release_title": "Literal",
+          "disc_number": 1,
+          "position": 6,
+          "track_number": 6
+        }
+      ],
+      "tracks_to_repoint": [
+        "a4b4bc5c-a3ae-43f2-8e93-52abb0e4722a"
+      ],
+      "platform_links": [
+        {
+          "id": "87bf4ec8-f0d3-4460-9cde-128c9a1ad4d7",
+          "platform": "amazon_music",
+          "url": "https://music.amazon.com/albums/B07QJDYSZQ?trackAsin=B07QH8MVPJ",
+          "external_id": "B07QH8MVPJ",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "56c2d8eb-df65-40c4-83ba-3e09556955c7",
+          "platform": "apple_music",
+          "url": "https://music.apple.com/us/album/coraz%C3%B3n-enamorado/1459450401?i=1459450864&uo=4",
+          "external_id": "1459450864",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "2f698a21-1c63-43a9-b536-a838a9e88a90",
+          "platform": "boomplay",
+          "url": "https://www.boomplay.com/songs/5198000",
+          "external_id": "5198000",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "0819e161-91d7-4829-bed9-9509f1c2755a",
+          "platform": "deezer",
+          "url": "https://www.deezer.com/track/685842482",
+          "external_id": "685842482",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        },
+        {
+          "id": "a99d1681-60a4-4cc3-ad5f-8837db7d7b2f",
+          "platform": "pandora",
+          "url": "https://www.pandora.com/TR:18668085",
+          "external_id": "TR:18668085",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "e24806df-21ed-4751-9ad7-e43d76d3edfa",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/0DeMaV8nrFWNYN4w56xm8Y",
+          "external_id": "0DeMaV8nrFWNYN4w56xm8Y",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "0cad953a-6412-4294-a1ae-9ba42e8b9cae",
+          "platform": "tidal",
+          "url": "https://listen.tidal.com/track/110138144",
+          "external_id": "110138144",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        }
+      ],
+      "isrc_rows": [],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "recording_platform_links": 7,
+        "tracks": 1
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "Son a mamá",
+      "canonical_survivor_uuid": "1f921fe1-db15-4ce4-8b26-1a619a49b072",
+      "redundant_recording_uuid": "0c938c4c-74c3-4fb3-9a5a-d011b5b7af3c",
+      "duplicate_type": "physical-edition duplicate",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_13",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "15ec68c7-16dd-4958-a00b-67aa7ce57dac",
+          "release_id": "b5e676d3-553d-4508-a511-dec6e5cf558c",
+          "release_title": "Literal",
+          "disc_number": 1,
+          "position": 7,
+          "track_number": 7
+        }
+      ],
+      "tracks_to_repoint": [
+        "15ec68c7-16dd-4958-a00b-67aa7ce57dac"
+      ],
+      "platform_links": [
+        {
+          "id": "83383aaf-72c7-4ac4-90d7-65234743930f",
+          "platform": "apple_music",
+          "url": "https://music.apple.com/us/album/son-a-mam%C3%A1/1459450401?i=1459450866&uo=4",
+          "external_id": "1459450866",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "6c407a35-39a1-4438-a929-c83eec9a340a",
+          "platform": "pandora",
+          "url": "https://www.pandora.com/TR:18668087",
+          "external_id": "TR:18668087",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "c6fa5037-a626-4a16-b751-d921293722fa",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/0OiOitRZ3nJwYnW6aVzhNb",
+          "external_id": "0OiOitRZ3nJwYnW6aVzhNb",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "8f621fc7-47b1-46cf-851f-203047e77935",
+          "platform": "tidal",
+          "url": "https://listen.tidal.com/track/110138145",
+          "external_id": "110138145",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        }
+      ],
+      "isrc_rows": [],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "recording_platform_links": 4,
+        "tracks": 1
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "No tiene madre",
+      "canonical_survivor_uuid": "1cb6b529-c0f3-4668-b46d-df4f38679b96",
+      "redundant_recording_uuid": "334cb949-21d7-4304-a26b-c133a378bc30",
+      "duplicate_type": "physical-edition duplicate",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_13",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "951adbb2-53c8-41aa-b108-324ed713c3cf",
+          "release_id": "b5e676d3-553d-4508-a511-dec6e5cf558c",
+          "release_title": "Literal",
+          "disc_number": 1,
+          "position": 8,
+          "track_number": 8
+        }
+      ],
+      "tracks_to_repoint": [
+        "951adbb2-53c8-41aa-b108-324ed713c3cf"
+      ],
+      "platform_links": [
+        {
+          "id": "ed20829f-152b-4233-8c4d-74c655122fbe",
+          "platform": "amazon_music",
+          "url": "https://music.amazon.com/albums/B07QJDYSZQ?trackAsin=B07QJDYQYQ",
+          "external_id": "B07QJDYQYQ",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "a173f53b-2437-4dd9-9ba2-f7fdc707b9d0",
+          "platform": "apple_music",
+          "url": "https://music.apple.com/us/album/no-tiene-madre/1459450401?i=1459450867&uo=4",
+          "external_id": "1459450867",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "e616014d-4108-4106-9fe0-0a349ac968d5",
+          "platform": "boomplay",
+          "url": "https://www.boomplay.com/songs/5837622",
+          "external_id": "5837622",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "2391365e-feab-49f9-af7d-5fcc76a02a7b",
+          "platform": "deezer",
+          "url": "https://www.deezer.com/track/685842502",
+          "external_id": "685842502",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "f611f95c-4663-4c4b-b756-7d6ae3f984a7",
+          "platform": "pandora",
+          "url": "https://www.pandora.com/TR:18668091",
+          "external_id": "TR:18668091",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "db52c627-5ccc-41fd-9ff2-c4dc28a90afd",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/5ovKbJJUidkpAa1OxYeqao",
+          "external_id": "5ovKbJJUidkpAa1OxYeqao",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "bd301852-d7f3-424f-aff9-fadfb23dddb4",
+          "platform": "tidal",
+          "url": "https://listen.tidal.com/track/110138146",
+          "external_id": "110138146",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        }
+      ],
+      "isrc_rows": [],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "recording_platform_links": 7,
+        "tracks": 1
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "Me preguntas",
+      "canonical_survivor_uuid": "e9b118be-c9e5-425c-ab94-1801f3c5e59e",
+      "redundant_recording_uuid": "3f742ff6-2ccc-465e-b45e-acc7e8bc7a7d",
+      "duplicate_type": "physical-edition duplicate",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_13",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "bba8e594-8c6b-4b79-9b83-a2d178de4ba5",
+          "release_id": "b5e676d3-553d-4508-a511-dec6e5cf558c",
+          "release_title": "Literal",
+          "disc_number": 1,
+          "position": 9,
+          "track_number": 9
+        }
+      ],
+      "tracks_to_repoint": [
+        "bba8e594-8c6b-4b79-9b83-a2d178de4ba5"
+      ],
+      "platform_links": [
+        {
+          "id": "3bef9f0f-4bcf-4513-8379-4dec9d10fa1a",
+          "platform": "amazon_music",
+          "url": "https://music.amazon.com/albums/B07QJDYSZQ?trackAsin=B07QH8PJP9",
+          "external_id": "B07QH8PJP9",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "eab2f9f3-5e33-4ec9-a7f7-f9fb69f8942b",
+          "platform": "apple_music",
+          "url": "https://music.apple.com/us/album/me-preguntas/1459450401?i=1459450868&uo=4",
+          "external_id": "1459450868",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "7a646cab-9a31-4bc7-9bc2-eed3c392bb14",
+          "platform": "boomplay",
+          "url": "https://www.boomplay.com/songs/5837623",
+          "external_id": "5837623",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "69e41af0-b6d9-4050-8797-c5af5d102436",
+          "platform": "deezer",
+          "url": "https://www.deezer.com/track/685842512",
+          "external_id": "685842512",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        },
+        {
+          "id": "fd97b1d0-e847-4542-b900-a69bd533d2b6",
+          "platform": "pandora",
+          "url": "https://www.pandora.com/TR:18668093",
+          "external_id": "TR:18668093",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "6ffde3e2-a04a-48e8-893d-c77d5af4a20c",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/1U7onzKQl5rTrfjvdjEaV9",
+          "external_id": "1U7onzKQl5rTrfjvdjEaV9",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "087c28d4-af5c-4bae-8331-69cb397c52ad",
+          "platform": "tidal",
+          "url": "https://listen.tidal.com/track/110138149",
+          "external_id": "110138149",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        }
+      ],
+      "isrc_rows": [],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "recording_platform_links": 7,
+        "tracks": 1
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "El primer baile",
+      "canonical_survivor_uuid": "920ec664-b777-46ab-b591-d0f81622dd11",
+      "redundant_recording_uuid": "01c21d55-9369-4e73-988f-8fc98d114ea1",
+      "duplicate_type": "physical-edition duplicate",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_13",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "9d833df5-9977-4ba9-a3a0-c2b0c2ed62dc",
+          "release_id": "b5e676d3-553d-4508-a511-dec6e5cf558c",
+          "release_title": "Literal",
+          "disc_number": 1,
+          "position": 10,
+          "track_number": 10
+        }
+      ],
+      "tracks_to_repoint": [
+        "9d833df5-9977-4ba9-a3a0-c2b0c2ed62dc"
+      ],
+      "platform_links": [
+        {
+          "id": "ab3ed35a-bb01-4800-b55a-99089a7e896e",
+          "platform": "amazon_music",
+          "url": "https://music.amazon.com/albums/B07QJDYSZQ?trackAsin=B07QKNDFYJ",
+          "external_id": "B07QKNDFYJ",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "149ce931-63f0-486c-a961-a9bc8a7b9b83",
+          "platform": "apple_music",
+          "url": "https://music.apple.com/us/album/el-primer-baile/1459450401?i=1459450869&uo=4",
+          "external_id": "1459450869",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "29ed1f7d-7b6c-47e6-9ebe-da9e2fe8d77c",
+          "platform": "boomplay",
+          "url": "https://www.boomplay.com/songs/5837624",
+          "external_id": "5837624",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "11883f61-2918-488f-aaa1-a2fa55f4e185",
+          "platform": "deezer",
+          "url": "https://www.deezer.com/track/685842522",
+          "external_id": "685842522",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_UNVERIFIED_UNIQUE_DUPLICATE_CONTEXT"
+        },
+        {
+          "id": "674ae727-d873-49ab-8a47-031be03a6140",
+          "platform": "pandora",
+          "url": "https://www.pandora.com/TR:18668092",
+          "external_id": "TR:18668092",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "c8669aee-57ea-48b8-b6d7-2995bb512c9a",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/5BPFk54DclePQtaMYHKAKq",
+          "external_id": "5BPFk54DclePQtaMYHKAKq",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "15aa418c-c25a-42e1-98e0-ef3da98a8bc7",
+          "platform": "tidal",
+          "url": "https://listen.tidal.com/track/110138150",
+          "external_id": "110138150",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        }
+      ],
+      "isrc_rows": [],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "recording_platform_links": 7,
+        "tracks": 1
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    },
+    {
+      "song": "Merengue de cuna",
+      "canonical_survivor_uuid": "f8b0c915-501d-4f76-a7a9-a976d3a72152",
+      "redundant_recording_uuid": "e17aec1a-fe36-4d39-bf97-616b729df323",
+      "duplicate_type": "physical-edition duplicate",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_13",
+      "tracks_currently_on_redundant": [
+        {
+          "id": "cf4bd45e-e1df-472a-8017-d133eb8287b7",
+          "release_id": "b5e676d3-553d-4508-a511-dec6e5cf558c",
+          "release_title": "Literal",
+          "disc_number": 1,
+          "position": 11,
+          "track_number": 11
+        }
+      ],
+      "tracks_to_repoint": [
+        "cf4bd45e-e1df-472a-8017-d133eb8287b7"
+      ],
+      "platform_links": [
+        {
+          "id": "48b98b07-378c-4677-9903-22c580b48c07",
+          "platform": "apple_music",
+          "url": "https://music.apple.com/us/album/merengue-de-cuna/1459450401?i=1459450874&uo=4",
+          "external_id": "1459450874",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "8769f6ce-fa59-4882-ae47-3a65743a7af1",
+          "platform": "pandora",
+          "url": "https://www.pandora.com/TR:18668094",
+          "external_id": "TR:18668094",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "6df0ef56-166b-4e69-bc1f-ecf90a4a0fb1",
+          "platform": "spotify",
+          "url": "https://open.spotify.com/track/4agadYyhCHXU3qIhHam7ZI",
+          "external_id": "4agadYyhCHXU3qIhHam7ZI",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        },
+        {
+          "id": "70a32607-14f0-4da9-b919-34d91d88bc13",
+          "platform": "tidal",
+          "url": "https://listen.tidal.com/track/110138151",
+          "external_id": "110138151",
+          "status": "approved_auto",
+          "is_official": true,
+          "action": "DELETE_REDUNDANT"
+        }
+      ],
+      "isrc_rows": [],
+      "credits": [],
+      "work_id": null,
+      "other_dependent_rows": {
+        "recording_platform_links": 4,
+        "tracks": 1
+      },
+      "version_disambiguation_consideration": "Preserve the survivor identity and all legitimate distinct-version rows; this pair only is authorized.",
+      "final_action": [
+        "REPOINT_LEGITIMATE_DEPENDENCIES",
+        "DELETE_REDUNDANT_CHILD_CLUTTER",
+        "DELETE_REDUNDANT_RECORDING"
+      ]
+    }
+  ]
+}

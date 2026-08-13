@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import EditorialDocumentEditor from "@/components/admin/editorial/EditorialDocumentEditor";
 import type { AdminEditorialDocumentState, AdminEditorialLoadResult } from "@/lib/editorial/adminClient";
 import type { EditorialLocale } from "@/types/editorialDocument";
+import { readApiJson } from "@/lib/clientApiResponse";
 
 export default function ArtistBiographyEditor({ artistId, artistName, onDirtyChange }: { artistId: string; artistName: string; onDirtyChange: (dirty: boolean) => void }) {
   const [locale, setLocale] = useState<EditorialLocale>("en");
@@ -16,7 +17,7 @@ export default function ArtistBiographyEditor({ artistId, artistName, onDirtyCha
   const load = useCallback(async (target: EditorialLocale) => {
     setError("");
     const response = await fetch(`/api/admin/editorial-documents?ownerArtistId=${encodeURIComponent(artistId)}&documentType=artist_biography&locale=${target}`);
-    const result = await response.json() as AdminEditorialLoadResult;
+    const result = await readApiJson<AdminEditorialLoadResult>(response, `Editorial document (${target}) endpoint`);
     if (!response.ok || !result.ok) { setError("error" in result ? result.error : "Unable to load structured biography."); return; }
     setDocuments((current) => ({ ...current, [target]: result.exists ? result.document : null }));
     setLoaded((current) => ({ ...current, [target]: true }));

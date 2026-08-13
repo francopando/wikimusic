@@ -135,8 +135,11 @@ async function handleAdmin(req: NextRequest) {
 
   if (isAdminApiPath && !userHasAdminAccess) {
     return NextResponse.json(
-      { ok: false, error: "Authentication required." },
-      { status: 401 },
+      {
+        ok: false,
+        error: user ? "Insufficient admin permissions." : "Authentication required.",
+      },
+      { status: user ? 403 : 401 },
     );
   }
 

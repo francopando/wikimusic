@@ -1,0 +1,38 @@
+{
+  "target": "PRODUCTION",
+  "timestamp": "2026-08-13T02:32:23.545Z",
+  "manifest_sha256": "9D30F1222D94BE09F95AF3842B78D481DECFE543AD87518D5478E0C9854E93B3",
+  "actor": {
+    "user_id": "4d8275ef-f9fe-484a-8b14-2e1dd44e059c",
+    "role": "owner"
+  },
+  "before": {
+    "profiles": 0,
+    "relationships": 0,
+    "recordings": 17051,
+    "tracks": 22756,
+    "releases": 3169
+  },
+  "after": {
+    "profiles": 53,
+    "relationships": 8,
+    "recordings": 17051,
+    "tracks": 22756,
+    "releases": 3169,
+    "jlg_recordings": 327,
+    "jlg_tracks": 1452
+  },
+  "governance": {
+    "assertions": 61,
+    "targets": 61,
+    "evidence": 61,
+    "decisions": 61,
+    "decision_assertions": 61,
+    "audits": 61
+  },
+  "source_count": 9,
+  "profile_count": 53,
+  "relationship_count": 8,
+  "disambiguation_sha256": "2b90eeefe5ccf4e8973ba683c52b8ab4c3f579bf16ca72313005b385feb0634e",
+  "passed": true
+}

@@ -4,7 +4,7 @@
 // RPCs (analytics_health + analytics_event_activity), fetched concurrently.
 // Fails soft: any missing RPC (migration not applied) leaves that slice null
 // and the UI shows "unknown" rather than erroring.
-import { getSupabaseServiceClient } from "@/lib/adminAccess";
+import { createServiceRoleClient } from "@/lib/supabaseService";
 
 // Static config facts live in a client-safe module so client tab components can
 // reuse them without pulling in server-only code. Re-exported for existing imports.
@@ -56,7 +56,7 @@ export async function getAnalyticsHealth(): Promise<AnalyticsHealth> {
   const environment = process.env.VERCEL_ENV ?? process.env.NODE_ENV ?? "unknown";
 
   try {
-    const supabase = getSupabaseServiceClient();
+    const supabase = createServiceRoleClient();
 
     // Independent diagnostics fetched concurrently so the page stays fast.
     const [healthRes, activityRes] = await Promise.all([

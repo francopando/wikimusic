@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-08-13T02:32:06.422Z",
+  "manifest": {
+    "path": "manifests/jlg-recording-version-production-manifest.json",
+    "sha256": "9D30F1222D94BE09F95AF3842B78D481DECFE543AD87518D5478E0C9854E93B3",
+    "profiles": 53,
+    "relationships": 8,
+    "sources": 9
+  },
+  "catalog": {
+    "profiles": 0,
+    "relationships": 0,
+    "recordings": 17051,
+    "tracks": 22756,
+    "releases": 3169,
+    "jlg_recordings": 327,
+    "jlg_tracks": 1452
+  },
+  "approved": {
+    "existing": 53,
+    "scoped": 53,
+    "with_tracks": 53
+  },
+  "existing_approved_profiles": 0,
+  "existing_approved_relationships": 0,
+  "actor": {
+    "user_id": "4d8275ef-f9fe-484a-8b14-2e1dd44e059c",
+    "role": "owner",
+    "version_capability": true,
+    "source_capability": true
+  },
+  "existing_report_sources": [],
+  "disambiguation_sha256": "2b90eeefe5ccf4e8973ba683c52b8ab4c3f579bf16ca72313005b385feb0634e",
+  "passed": true
+}

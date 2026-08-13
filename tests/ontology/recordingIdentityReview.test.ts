@@ -1,0 +1,11 @@
+import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
+import test from "node:test";
+const page=readFileSync("src/app/admin/recording-review/page.tsx","utf8");const api=readFileSync("src/app/api/admin/recording-review/route.ts","utf8");const sql=readFileSync("supabase/migrations/20260814000000_recording_identity_review_workflow.sql","utf8");
+test("review queue is generated from advisory conflict candidates",()=>{assert.match(api,/recording_isrc_conflicts/);assert.match(api,/probable_duplicate_recording/);assert.match(page,/Review queue/)});
+test("candidate comparison exposes identity evidence without mutation controls",()=>{for(const label of ["Performer","Duration","Disambiguation","Recording year","Recording context","MBID","Work link","Existing credits","ISRC assignments","Imported metadata"])assert.match(page,new RegExp(label));assert.doesNotMatch(page,/Merge now|Delete Recording|Change ISRC/)});
+test("Release appearances are grouped into Release Groups and editions",()=>{assert.match(page,/Release Groups and editions/);assert.match(page,/release_group_id/);assert.match(page,/edition/)});
+test("advisory classification is explicit and non-automatic",()=>{for(const label of ["Very likely same Recording","Likely different Recordings","Insufficient evidence","No single external identifier proves two recordings are identical"])assert.match(page+api,new RegExp(label))});
+test("decision recording is non-mutating and governed",()=>{for(const value of ["keep_separate","needs_research","request_merge_review","request_split_review","unable_to_determine"])assert.match(sql,new RegExp(value));assert.match(sql,/non_mutating/);assert.doesNotMatch(sql,/UPDATE public\.recordings|DELETE FROM public\.tracks|UPDATE public\.releases/)});
+test("evidence reuses editorial assertion evidence",()=>{assert.match(sql,/editorial_assertion_evidence/);assert.match(api,/editorial_sources/);assert.match(page,/Supporting evidence/)});
+test("Colegiala validation communicates four distinct and two unresolved",()=>{assert.match(api,/clearlyDistinct:4/);assert.match(api,/unresolved:2/);assert.match(page,/clearlyDistinct\?\?4/);assert.match(page,/unresolved\?\?2/)});

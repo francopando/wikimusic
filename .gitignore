@@ -21,7 +21,9 @@
 /build
 
 #scripts
-/scripts
+/scripts/*
+!/scripts/auditDatabaseHealth.ts
+!/scripts/uploadGeneratedArtistImage.ts
 /ingest
 /backups
 /steps

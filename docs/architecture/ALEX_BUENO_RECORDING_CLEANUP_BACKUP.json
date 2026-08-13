@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-08-13T14:18:07.536Z",
+  "path": "C:\\Mangulina\\backups\\alex-bueno-recording-cleanup\\mangulina-production-pre-alex-bueno-recording-cleanup-20260813T141807Z.dump",
+  "size_bytes": 21137563,
+  "sha256": "3D4BE7C320BB8BA9EEB1358B88F674593F1072DAD3C00C19C715556B68D3D56B",
+  "source_postgresql": "17.6",
+  "archive_validation": "passed",
+  "toc_entries": 1454,
+  "toc_path": "C:\\Mangulina\\backups\\alex-bueno-recording-cleanup\\mangulina-production-pre-alex-bueno-recording-cleanup-20260813T141807Z.dump.toc.txt"
+}

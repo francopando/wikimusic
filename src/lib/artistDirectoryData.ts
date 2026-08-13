@@ -142,7 +142,17 @@ export async function getArtistDirectoryInitialData(
         .range(from, to);
 
   if (response.error) {
-    console.error(response.error);
+    console.error("Unable to load public artist directory data", {
+      code: response.error.code,
+      message: response.error.message,
+      details: response.error.details,
+      hint: response.error.hint,
+      role: options.role ?? null,
+      fixedContext: options.fixedContext ?? null,
+      fixedProvince: options.fixedProvince ?? null,
+      fixedArtistStatus: options.fixedArtistStatus ?? null,
+      page: currentPage,
+    });
     return {
       artists: [],
       totalCount: 0,

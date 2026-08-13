@@ -1,0 +1,116 @@
+{
+  "timestamp": "2026-08-13T14:44:23.143Z",
+  "passed": true,
+  "counts": {
+    "recordings": 17047,
+    "tracks": 22716,
+    "releases": 3165,
+    "release_groups": 2813,
+    "platform_links": 82169,
+    "isrcs": 4913,
+    "isrc_sources": 4918,
+    "profiles": 53,
+    "relationships": 8,
+    "alex_recordings": 634,
+    "alex_tracks": 839,
+    "alex_releases": 84,
+    "alex_release_groups": 61,
+    "jlg_recordings": 327,
+    "jlg_profiles": 53,
+    "jlg_relationships": 8
+  },
+  "protected_counts": {
+    "redundant": 0,
+    "survivors": 4,
+    "deferred": 52,
+    "legitimate": 18,
+    "holds": 111
+  },
+  "orphan_checks": {
+    "isrc_sources": 0,
+    "tracks": 0,
+    "platform_links": 0,
+    "unvalidated_fks": 0
+  },
+  "checks": {
+    "global_counts": true,
+    "alex_counts": true,
+    "dependency_deltas": true,
+    "version_state": true,
+    "authorized_rows": true,
+    "protected_rows": true,
+    "jlg_safety": true,
+    "no_orphans": true,
+    "track_placement": true
+  },
+  "application_entities": [
+    {
+      "id": "6c519ada-7ab7-41da-a8a7-f914116193cf",
+      "title": "La radio",
+      "slug": "la-radio-alex-bueno-2",
+      "appearances": [
+        {
+          "slug": "grandes-exitos-alex-bueno",
+          "title": "Grandes éxitos",
+          "release_id": "4459a086-59f1-4e42-9fbf-f537f1c2d736"
+        },
+        {
+          "slug": "los-anos-dorados-alex-bueno",
+          "title": "Los años dorados",
+          "release_id": "55d2f4ff-9822-4c52-bf0c-cce57d75fadd"
+        }
+      ]
+    },
+    {
+      "id": "1f337f6c-153a-4d8d-866b-969f11793e68",
+      "title": "Las hojas verdes de verano",
+      "slug": "las-hojas-verdes-de-verano-alex-bueno",
+      "appearances": [
+        {
+          "slug": "amores-que-matan-alex-bueno",
+          "title": "Amores que matan",
+          "release_id": "b6a25f5c-babc-4770-8fbb-32dbad97cd48"
+        },
+        {
+          "slug": "amores-que-matan-alex-bueno-2",
+          "title": "Amores que matan",
+          "release_id": "ef9f6148-d940-48eb-bd32-be47e6a9c501"
+        }
+      ]
+    },
+    {
+      "id": "2259621d-d22e-4154-a4a6-0045766e8f96",
+      "title": "Que cara más bonita",
+      "slug": "que-cara-mas-bonita-alex-bueno-4",
+      "appearances": [
+        {
+          "slug": "40-anos-de-exitos-alex-bueno",
+          "title": "40 años de éxitos",
+          "release_id": "b71a6146-568e-404f-af9a-9f84597fbaf9"
+        },
+        {
+          "slug": "los-rostros-del-merengue-alex-bueno",
+          "title": "Los rostros del merengue",
+          "release_id": "4f9b3680-e07d-4117-ae38-3da7d0d68348"
+        }
+      ]
+    },
+    {
+      "id": "e2d5035c-c7b2-4232-9d7f-eea89dc65d15",
+      "title": "Querida",
+      "slug": "querida-alex-bueno-12",
+      "appearances": [
+        {
+          "slug": "20-anos-despues-alex-bueno-2",
+          "title": "20 años después",
+          "release_id": "a39d205e-a38f-41d0-8a0b-dcb69002b060"
+        },
+        {
+          "slug": "uniquehits-alex-bueno",
+          "title": "Uniquehits",
+          "release_id": "ac614b3d-e5cf-4bb0-a85d-2bd05ca19c26"
+        }
+      ]
+    }
+  ]
+}

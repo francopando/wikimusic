@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
-import { createServerSupabaseAuthClient, isAdminEmail } from "@/lib/auth";
+import { createServerSupabaseAuthClient } from "@/lib/auth";
+import { getAdminAccessProfile } from "@/lib/adminAccess";
 
 const emailOtpTypes = new Set([
   "signup",
@@ -55,7 +56,7 @@ export async function GET(request: Request) {
     data: { user },
   } = await supabase.auth.getUser();
 
-  if (isAdminEmail(user?.email)) {
+  if (await getAdminAccessProfile(user)) {
     return NextResponse.redirect(new URL(nextPath, requestUrl.origin));
   }
 

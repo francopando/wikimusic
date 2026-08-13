@@ -5,9 +5,11 @@ import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import SectionCard from "@/components/layout/SectionCard";
 import ArtistCard from "@/components/molecules/ArtistCard";
+import ArtistCarousel from "@/components/molecules/ArtistCarousel";
 import CarouselArrow from "@/components/molecules/CarouselArrow";
 import type { Artist } from "@/types/music";
 import { HOME_ARTIST_CARD_LIMIT } from "@/lib/homepageLimits";
+import { readApiJson } from "@/lib/clientApiResponse";
 
 type BirthdaySectionProps = {
   birthdayArtists: Artist[];
@@ -110,13 +112,14 @@ export default function BirthdaySection({ birthdayArtists }: BirthdaySectionProp
         const response = await fetch(
           `/api/homepage/birthdays?date=${encodeURIComponent(formatLocalDate(today))}`,
         );
-        const payload = (await response.json()) as {
+        const payload = await readApiJson<{
           ok?: boolean;
           artists?: Artist[];
-        };
+          error?: string;
+        }>(response, "Birthday artists endpoint");
 
         if (!response.ok || !payload.ok) {
-          throw new Error("Unable to load birthday artists.");
+          throw new Error(payload.error ?? "Unable to load birthday artists.");
         }
 
         setLocalBirthdayArtists(payload.artists ?? []);
@@ -174,10 +177,7 @@ export default function BirthdaySection({ birthdayArtists }: BirthdaySectionProp
             </p>
           </div>
         ) : (
-          <div
-            ref={scrollRef}
-            className="scrollbar-none flex w-full gap-4 overflow-x-auto pb-2"
-          >
+          <ArtistCarousel ref={scrollRef}>
             {localBirthdayArtists.slice(0, HOME_ARTIST_CARD_LIMIT).map((artist) => (
               <div key={artist.id} className="w-28 shrink-0 sm:w-32 lg:w-36">
                 <div className="group relative">
@@ -190,7 +190,7 @@ export default function BirthdaySection({ birthdayArtists }: BirthdaySectionProp
                 </div>
               </div>
             ))}
-          </div>
+          </ArtistCarousel>
         )}
       </div>
     </SectionCard>

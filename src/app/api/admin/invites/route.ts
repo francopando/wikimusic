@@ -1,12 +1,12 @@
 import { NextResponse } from "next/server";
 import {
   createInviteToken,
-  getSupabaseServiceClient,
   hashInviteToken,
   normalizeAdminEmail,
   normalizeAdminRole,
 } from "@/lib/adminAccess";
 import { requireAccessManagerApi } from "@/lib/adminApiAuth";
+import { createServiceRoleClient } from "@/lib/supabaseService";
 
 function getOrigin(request: Request) {
   return new URL(request.url).origin;
@@ -17,7 +17,7 @@ export async function GET() {
 
   if (response) return response;
 
-  const supabase = getSupabaseServiceClient();
+  const supabase = createServiceRoleClient();
   const [{ data: invites, error: invitesError }, { data: members, error: membersError }] =
     await Promise.all([
       supabase
@@ -76,7 +76,7 @@ export async function POST(request: Request) {
   }
 
   const token = createInviteToken();
-  const supabase = getSupabaseServiceClient();
+  const supabase = createServiceRoleClient();
   const { data, error } = await supabase
     .from("admin_invites")
     .insert({
@@ -140,7 +140,7 @@ export async function DELETE(request: Request) {
     );
   }
 
-  const supabase = getSupabaseServiceClient();
+  const supabase = createServiceRoleClient();
   const { data, error } = await supabase
     .from("admin_invites")
     .delete()

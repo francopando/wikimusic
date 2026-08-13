@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 
-import { getSupabaseClient } from "@/lib/supabase";
+import { requireAdminApiRole } from "@/lib/adminApiAuth";
+import { createServiceRoleClient } from "@/lib/supabaseService";
 
 type ReleasePayload = {
   title?: string;
@@ -21,6 +22,8 @@ const RELEASE_FIELDS =
   "id, title, type, release_year, year, date, status, label, country, barcode, catalog_number, disambiguation, release_artist_id";
 
 export async function GET(request: Request) {
+  const auth = await requireAdminApiRole("editor");
+  if (auth.response) return auth.response;
   const { searchParams } = new URL(request.url);
   const artistId = searchParams.get("artistId");
 
@@ -31,7 +34,7 @@ export async function GET(request: Request) {
     );
   }
 
-  const supabase = getSupabaseClient();
+  const supabase = createServiceRoleClient();
   const { data: releases, error } = await supabase
     .from("releases")
     .select(RELEASE_FIELDS)
@@ -76,6 +79,8 @@ export async function GET(request: Request) {
 }
 
 export async function POST(request: Request) {
+  const auth = await requireAdminApiRole("editor");
+  if (auth.response) return auth.response;
   const { releaseId, releaseData } = await request.json();
   const payload = releaseData as ReleasePayload | undefined;
 
@@ -93,7 +98,7 @@ export async function POST(request: Request) {
     );
   }
 
-  const supabase = getSupabaseClient();
+  const supabase = createServiceRoleClient();
   const writePayload = {
     ...payload,
     title: payload.title.trim(),

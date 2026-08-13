@@ -13,6 +13,7 @@ import {
   LogOut,
   Mic2,
   Music,
+  ShieldAlert,
   Users,
   UserPlus,
 } from "lucide-react";
@@ -46,6 +47,8 @@ const toolIcons: Record<string, ComponentType<{ className?: string; "aria-hidden
   invites: UserPlus,
   reviews: FileClock,
   creativeWorks: Library,
+  works: Library,
+  recordingReview: ShieldAlert,
 };
 
 type AdminPortalContentProps = {
@@ -210,6 +213,8 @@ function getToolKey(href: string): string {
     "editorial-integrity": "editorialIntegrity",
     "creative-works": "creativeWorks",
     "works-credits": "creativeWorks",
+    "authoritative-works": "works",
+    "recording-review": "recordingReview",
     contributors: "contributors",
     invites: "invites",
     reviews: "reviews",

@@ -51,6 +51,8 @@ export default function TopBanner() {
             alt={tFooter("logo")}
             width={47}
             height={47}
+            loading="eager"
+            fetchPriority="high"
             className="h-10 w-10 shrink-0 object-contain"
           />
           <div className="min-w-0 flex flex-col justify-center">

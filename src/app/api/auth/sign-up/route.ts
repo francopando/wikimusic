@@ -1,11 +1,11 @@
 import { NextResponse } from "next/server";
-import { getAdminEmailAllowlist } from "@/lib/auth";
 import {
-  getSupabaseServiceClient,
+  getAdminEmailAllowlist,
   hashInviteToken,
   normalizeAdminEmail,
   normalizeAdminRole,
 } from "@/lib/adminAccess";
+import { createServiceRoleClient } from "@/lib/supabaseService";
 
 function normalizeEmail(value: unknown) {
   return normalizeAdminEmail(value);
@@ -16,7 +16,7 @@ function normalizePassword(value: unknown) {
 }
 
 async function findAuthUserIdByEmail(
-  supabaseAdmin: ReturnType<typeof getSupabaseServiceClient>,
+  supabaseAdmin: ReturnType<typeof createServiceRoleClient>,
   email: string,
 ) {
   const { data, error } = await supabaseAdmin.auth.admin.listUsers({
@@ -65,13 +65,13 @@ export async function POST(request: Request) {
   }
 
   const allowlist = getAdminEmailAllowlist();
-  let supabaseAdmin: ReturnType<typeof getSupabaseServiceClient> | null = null;
+  let supabaseAdmin: ReturnType<typeof createServiceRoleClient> | null = null;
   let invitedBy: string | null = null;
   let role = "owner";
   let inviteId: string | null = null;
 
   if (inviteToken) {
-    supabaseAdmin = getSupabaseServiceClient();
+    supabaseAdmin = createServiceRoleClient();
     const { data: invite, error: inviteError } = await supabaseAdmin
       .from("admin_invites")
       .select("id,email,role,expires_at,accepted_at,created_by")
@@ -118,7 +118,7 @@ export async function POST(request: Request) {
     );
   }
 
-  supabaseAdmin = supabaseAdmin ?? getSupabaseServiceClient();
+  supabaseAdmin = supabaseAdmin ?? createServiceRoleClient();
   const { data, error } = await supabaseAdmin.auth.admin.createUser({
     email,
     password,

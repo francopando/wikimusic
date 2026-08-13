@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-08-13T00:16:55.643Z",
+  "manifest_sha256": "1F85C6C32A33500115718360B12BB9A28C159CDA3C2DDBF41F08B5BFDBD0A64D",
+  "baseline": {
+    "recordings": 370,
+    "tracks": 1452,
+    "releases": 146
+  },
+  "approved_pairs": 43,
+  "unique_redundant": 43,
+  "distinct_survivors": 42,
+  "tracks_to_repoint": 46,
+  "failures": [],
+  "passed": true
+}

@@ -1,0 +1,106 @@
+{
+  "timestamp": "2026-08-13T13:17:12.277Z",
+  "manifest_sha256": "9D30F1222D94BE09F95AF3842B78D481DECFE543AD87518D5478E0C9854E93B3",
+  "exact_profiles_match": true,
+  "exact_relationships_match": true,
+  "counts": {
+    "profiles": 53,
+    "relationships": 8,
+    "recordings": 17051,
+    "tracks": 22716,
+    "releases": 3165,
+    "recording_credits": 58,
+    "jlg_recordings": 327,
+    "jlg_tracks": 1412,
+    "alex_recordings": 638,
+    "alex_tracks": 839
+  },
+  "governance": {
+    "assertions": 61,
+    "evidence": 61,
+    "decisions": 61,
+    "audits": 61,
+    "idempotency": 61,
+    "sources": 9
+  },
+  "unresolved_profiles": 0,
+  "reverse_or_extra_relationships": 0,
+  "disambiguation_sha256": "2b90eeefe5ccf4e8973ba683c52b8ab4c3f579bf16ca72313005b385feb0634e",
+  "arrangement_tables": 0,
+  "arrangement_style_profile_values": 0,
+  "identity_samples": [
+    {
+      "canonical_title": "A bilirrubina",
+      "performance_kind": "studio",
+      "derivation_kind": "rerecording",
+      "language_code": "pt",
+      "performance_date": "1992-01-01",
+      "performance_date_precision": "year",
+      "performance_context": "Romance Rosa"
+    },
+    {
+      "canonical_title": "A pedir su mano (versión Privé)",
+      "performance_kind": "studio",
+      "derivation_kind": "rerecording",
+      "language_code": null,
+      "performance_date": "2020-01-01",
+      "performance_date_precision": "year",
+      "performance_context": "Privé"
+    },
+    {
+      "canonical_title": "El Niágara en bicicleta (remix)",
+      "performance_kind": null,
+      "derivation_kind": "remix",
+      "language_code": null,
+      "performance_date": null,
+      "performance_date_precision": null,
+      "performance_context": null
+    },
+    {
+      "canonical_title": "La llave de mi corazón (dance remix)",
+      "performance_kind": null,
+      "derivation_kind": "remix",
+      "language_code": null,
+      "performance_date": null,
+      "performance_date_precision": null,
+      "performance_context": null
+    },
+    {
+      "canonical_title": "Las avispas",
+      "performance_kind": "live",
+      "derivation_kind": "edit",
+      "language_code": null,
+      "performance_date": null,
+      "performance_date_precision": null,
+      "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+    },
+    {
+      "canonical_title": "Las avispas",
+      "performance_kind": "live",
+      "derivation_kind": null,
+      "language_code": null,
+      "performance_date": null,
+      "performance_date_precision": null,
+      "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+    },
+    {
+      "canonical_title": "Ojalá que llueva café",
+      "performance_kind": "live",
+      "derivation_kind": null,
+      "language_code": null,
+      "performance_date": "2002-01-01",
+      "performance_date_precision": "year",
+      "performance_context": "Encuentro"
+    },
+    {
+      "canonical_title": "Ojalá que llueva café",
+      "performance_kind": "live",
+      "derivation_kind": null,
+      "language_code": null,
+      "performance_date": "2005-01-01",
+      "performance_date_precision": "year",
+      "performance_context": "Estadio Olímpico, Santo Domingo"
+    }
+  ],
+  "passed": true
+}

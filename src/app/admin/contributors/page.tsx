@@ -1,4 +1,5 @@
-import { getSupabaseClient } from "@/lib/supabase";
+import { requireAdminUser } from "@/lib/auth";
+import { createServiceRoleClient } from "@/lib/supabaseService";
 import type { Contributor } from "@/types/contributor";
 import ContributorsAdminClient from "./ContributorsAdminClient";
 
@@ -8,7 +9,8 @@ const selectFields =
   "id, name, slug, role, bio, location, specialty, website, facebook, instagram, youtube, active, display_order, created_at";
 
 export default async function AdminContributorsPage() {
-  const { data, error } = await getSupabaseClient()
+  await requireAdminUser();
+  const { data, error } = await createServiceRoleClient()
     .from("contributors")
     .select(selectFields)
     .order("display_order", { ascending: true })

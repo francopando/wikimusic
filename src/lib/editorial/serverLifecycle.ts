@@ -1,5 +1,5 @@
 import "server-only";
-import { getSupabaseServiceClient } from "@/lib/adminAccess";
+import { createServiceRoleClient } from "@/lib/supabaseService";
 import { buildEditorialIntegrityReport } from "@/lib/editorial/integrity";
 import { reassignArtistReferences } from "@/lib/editorial/lifecycle";
 import { revalidateEditorialDocumentOwner, revalidateEditorialDocumentsReferencingArtist } from "@/lib/editorial/revalidation";
@@ -9,7 +9,7 @@ import { allEditorialInlineNodes } from "@/lib/editorial/documentTree";
 import type { EditorialDocumentV1 } from "@/types/editorialDocument";
 
 export async function getArtistBiographyReferences(artistId: string) {
-  const supabase = getSupabaseServiceClient();
+  const supabase = createServiceRoleClient();
   const { data, error } = await supabase.from("editorial_entity_references")
     .select("occurrence_id,target_artist_id,editorial_document:editorial_documents!inner(id,owner_artist_id,locale,document,status,revision,schema_version)")
     .eq("target_artist_id", artistId);
@@ -33,7 +33,7 @@ export async function getArtistBiographyReferences(artistId: string) {
 }
 
 export async function getEditorialIntegrityReport() {
-  const supabase = getSupabaseServiceClient();
+  const supabase = createServiceRoleClient();
   const [documentsResult, relationsResult, artistsResult] = await Promise.all([
     supabase.from("editorial_documents").select("id,document_type,owner_artist_id,locale,schema_version,document,status"),
     supabase.from("editorial_entity_references").select("editorial_document_id,occurrence_id,entity_type,target_artist_id"),
@@ -47,7 +47,7 @@ export async function mergeArtistBiographyReferences(sourceArtistId: string, tar
   if (!sourceArtistId || !targetArtistId || sourceArtistId === targetArtistId) throw new Error("Distinct source and target artist UUIDs are required.");
   const references = await getArtistBiographyReferences(sourceArtistId);
   const documentIds = [...new Set(references.map((reference) => reference.documentId))];
-  const supabase = getSupabaseServiceClient();
+  const supabase = createServiceRoleClient();
   const { data: documents, error } = documentIds.length ? await supabase.from("editorial_documents").select("id,document_type,owner_artist_id,locale,schema_version,document,status,revision").in("id", documentIds) : { data: [], error: null };
   if (error) throw new Error(error.message);
   for (const row of documents ?? []) {

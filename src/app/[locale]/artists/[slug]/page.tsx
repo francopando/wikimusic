@@ -20,6 +20,7 @@ import {
   getArtistMedia,
 } from "@/lib/artistApi";
 import { getArtistRelationships } from "@/lib/artistRelationships";
+import { getArtistFamilyRelationships } from "@/lib/artistFamilyRelationships";
 import { getPublishedEditorialDocument } from "@/lib/editorial/publicData";
 import {
   editorialDocumentHasVisibleText,
@@ -76,10 +77,11 @@ export default async function ArtistProfile({ params }: PageProps) {
   const imageUrl = getArtistImageUrlIfAvailable(artist);
   const editorialLocale = locale === "es" ? "es" : "en";
   const localizedBio = getLegacyArtistBiography(editorialLocale, artist.bio_en, artist.bio_es);
-  const [discography, interviews, relationships, structuredBiography, englishStructuredBiography] = await Promise.all([
+  const [discography, interviews, relationships, familyRelationships, structuredBiography, englishStructuredBiography] = await Promise.all([
     getArtistDiscographySummaries(artist.id),
     getArtistMedia(artist.id),
     getArtistRelationships(artist.id),
+    getArtistFamilyRelationships(artist.id),
     getPublishedEditorialDocument({
       documentType: "artist_biography",
       ownerArtistId: artist.id,
@@ -169,6 +171,7 @@ export default async function ArtistProfile({ params }: PageProps) {
               members={relationships.members}
               founders={relationships.founders}
               leaders={relationships.leaders}
+              familyRelationships={familyRelationships}
             />
 
             <ArtistAwardsSection awards={artist.awards || []} />

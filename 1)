@@ -1,0 +1,18 @@
+---
+[
+  {
+    "works": 0,
+    "work_credits": 0,
+    "populated_work_ids": 0,
+    "isrc_assignments": 4918,
+    "isrc_sources": 4918,
+    "malformed": 0,
+    "conflicts": 220,
+    "recordings": 17094,
+    "tracks": 22756,
+    "releases": 3169,
+    "recording_credits": 52,
+    "credited_works": 603,
+    "credited_work_credits": 379
+  }
+]

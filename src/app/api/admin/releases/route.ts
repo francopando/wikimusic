@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { requireAdminApiRole } from "@/lib/adminApiAuth";
-import { getSupabaseClient } from "@/lib/supabase";
+import { createServiceRoleClient } from "@/lib/supabaseService";
 import {
   countRows,
   getArtistNames,
@@ -28,7 +28,7 @@ async function hydrateReleases(rows: ReleasePayload[]) {
   const trackCounts = new Map<string, number>();
 
   if (releaseIds.length > 0) {
-    const { data } = await getSupabaseClient()
+    const { data } = await createServiceRoleClient()
       .from("tracks")
       .select("release_id")
       .in("release_id", releaseIds);
@@ -64,7 +64,7 @@ export async function GET(request: Request) {
   const artistId = searchParams.get("artistId");
   const q = searchParams.get("q")?.trim() ?? "";
   const limit = Math.min(Number(searchParams.get("limit") ?? "25"), 50);
-  const supabase = getSupabaseClient();
+  const supabase = createServiceRoleClient();
 
   let query = supabase.from("releases").select(RELEASE_FIELDS);
 
@@ -156,7 +156,7 @@ export async function POST(request: Request) {
     updated_at: new Date().toISOString(),
   };
 
-  const supabase = getSupabaseClient();
+  const supabase = createServiceRoleClient();
 
   // Changing the primary artist of an existing release must move the release,
   // its recordings, and its primary performer credits together. That runs
@@ -195,9 +195,8 @@ export async function POST(request: Request) {
   }
 
   const artistHandledByRpc = reassignment !== null;
-  const updatePayload = artistHandledByRpc
-    ? (({ release_artist_id: _ignored, ...rest }) => rest)(payload)
-    : payload;
+  const updatePayload: Partial<typeof payload> = { ...payload };
+  if (artistHandledByRpc) delete updatePayload.release_artist_id;
 
   const response = releaseId
     ? await supabase.from("releases").update(updatePayload).eq("id", releaseId).select("id").maybeSingle()
@@ -245,7 +244,7 @@ export async function POST(request: Request) {
 }
 
 export async function DELETE(request: Request) {
-  const auth = await requireAdminApiRole();
+  const auth = await requireAdminApiRole("admin");
   if (auth.response) return auth.response;
 
   const { releaseId } = (await request.json()) as { releaseId?: string };
@@ -273,7 +272,7 @@ export async function DELETE(request: Request) {
     return jsonError(`Release cannot be deleted while linked rows exist. ${blockers.join("; ")}`, 409);
   }
 
-  const { error } = await getSupabaseClient().from("releases").delete().eq("id", releaseId);
+  const { error } = await createServiceRoleClient().from("releases").delete().eq("id", releaseId);
   if (error) return jsonError(error.message, 500);
   revalidateHomepageData();
   revalidateHomepageArchiveCounts();

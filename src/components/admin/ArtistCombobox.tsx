@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useId, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 
 export type ArtistComboboxOption = {
   id: string;
@@ -19,11 +20,14 @@ export default function ArtistCombobox({
   onSelect,
   onCancel,
   initialQuery = "",
+  excludedArtistId,
 }: {
   onSelect: (artist: ArtistComboboxOption) => void;
   onCancel: () => void;
   initialQuery?: string;
+  excludedArtistId?: string;
 }) {
+  const t = useTranslations("family.search");
   const [query, setQuery] = useState(initialQuery);
   const [results, setResults] = useState<ArtistComboboxOption[]>([]);
   const [active, setActive] = useState(0);
@@ -40,7 +44,7 @@ export default function ArtistCombobox({
         const response = await fetch(`/api/admin/artists?q=${encodeURIComponent(query)}&limit=20`, { signal: controller.signal });
         const body = await response.json();
         if (!response.ok) throw new Error(body.error ?? "Search failed.");
-        setResults(body.artists ?? []);
+        setResults((body.artists ?? []).filter((artist: ArtistComboboxOption) => artist.id !== excludedArtistId));
         setActive(0);
         setState("idle");
       } catch (error) {
@@ -48,7 +52,7 @@ export default function ArtistCombobox({
       }
     }, 180);
     return () => { window.clearTimeout(timer); controller.abort(); };
-  }, [query]);
+  }, [query, excludedArtistId]);
 
   function choose(index: number) {
     const artist = results[index];
@@ -56,8 +60,8 @@ export default function ArtistCombobox({
   }
 
   return (
-    <div className="rounded-lg border border-gray-200 bg-white p-3 shadow-xl" role="dialog" aria-label="Select an artist">
-      <label className="block text-xs font-medium text-gray-700" htmlFor={`${listId}-input`}>Search artists</label>
+    <div className="rounded-lg border border-gray-200 bg-white p-3 shadow-xl" role="dialog" aria-label={t("dialog")}>
+      <label className="block text-xs font-medium text-gray-700" htmlFor={`${listId}-input`}>{t("label")}</label>
       <input
         ref={inputRef}
         id={`${listId}-input`}
@@ -75,12 +79,12 @@ export default function ArtistCombobox({
           if (event.key === "Escape") { event.preventDefault(); onCancel(); }
         }}
         className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-(--color-flagblue)"
-        placeholder="Name, stage name, or alias"
+        placeholder={t("placeholder")}
       />
       <div id={listId} role="listbox" className="mt-2 max-h-56 overflow-y-auto">
-        {state === "loading" && <p className="px-2 py-3 text-sm text-gray-500">Searching…</p>}
-        {state === "error" && <p role="alert" className="px-2 py-3 text-sm text-red-700">Artist search failed. Try again.</p>}
-        {state === "idle" && !results.length && <p className="px-2 py-3 text-sm text-gray-500">No artists found.</p>}
+        {state === "loading" && <p className="px-2 py-3 text-sm text-gray-500">{t("searching")}</p>}
+        {state === "error" && <p role="alert" className="px-2 py-3 text-sm text-red-700">{t("error")}</p>}
+        {state === "idle" && !results.length && <p className="px-2 py-3 text-sm text-gray-500">{t("empty")}</p>}
         {state === "idle" && results.map((artist, index) => (
           <button
             id={`${listId}-${artist.id}`}
@@ -98,7 +102,7 @@ export default function ArtistCombobox({
           </button>
         ))}
       </div>
-      <button type="button" onClick={onCancel} className="mt-2 rounded px-2 py-1 text-xs text-gray-600 focus-visible:outline-2">Cancel</button>
+      <button type="button" onClick={onCancel} className="mt-2 rounded px-2 py-1 text-xs text-gray-600 focus-visible:outline-2">{t("cancel")}</button>
     </div>
   );
 }

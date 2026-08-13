@@ -1,0 +1,1315 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-08-13T02:27:00.000Z",
+  "approval_token": "APPROVED_53_JLG_PROFILES_8_EDIT_OF_RELATIONSHIPS",
+  "mode": "GOVERNED_PRODUCTION_POPULATION",
+  "approved_review_manifest": {
+    "path": "manifests/jlg-recording-version-review-manifest.json",
+    "sha256": "010CF56852F2ACA98D4AC8A2BB491CB4E429748B4F64446CF52A8BEB2D19D70E"
+  },
+  "counts": {
+    "sources": 9,
+    "profiles": 53,
+    "relationships": 8
+  },
+  "sources": [
+    {
+      "evidence_report": "JLG_MANUAL_VERIFICATION_04_OJALA_QUE_LLUEVA_CAFE.md",
+      "title": "Mangulina JLG manual verification — 04_OJALA_QUE_LLUEVA_CAFE",
+      "source_type": "internal_research_report",
+      "visibility": "internal",
+      "citation_text": "docs/architecture/JLG_MANUAL_VERIFICATION_04_OJALA_QUE_LLUEVA_CAFE.md",
+      "idempotency_key": "192467a8-40f9-40df-8085-7dd6a5bb36e5"
+    },
+    {
+      "evidence_report": "JLG_MANUAL_VERIFICATION_05_BACHATA_ROSA.md",
+      "title": "Mangulina JLG manual verification — 05_BACHATA_ROSA",
+      "source_type": "internal_research_report",
+      "visibility": "internal",
+      "citation_text": "docs/architecture/JLG_MANUAL_VERIFICATION_05_BACHATA_ROSA.md",
+      "idempotency_key": "a90958c8-11c5-40e3-870f-edc27f483eee"
+    },
+    {
+      "evidence_report": "JLG_MANUAL_VERIFICATION_06_AREITO.md",
+      "title": "Mangulina JLG manual verification — 06_AREITO",
+      "source_type": "internal_research_report",
+      "visibility": "internal",
+      "citation_text": "docs/architecture/JLG_MANUAL_VERIFICATION_06_AREITO.md",
+      "idempotency_key": "73f72052-62b8-4b4b-8779-34a943e14f42"
+    },
+    {
+      "evidence_report": "JLG_MANUAL_VERIFICATION_07_FOGARATE.md",
+      "title": "Mangulina JLG manual verification — 07_FOGARATE",
+      "source_type": "internal_research_report",
+      "visibility": "internal",
+      "citation_text": "docs/architecture/JLG_MANUAL_VERIFICATION_07_FOGARATE.md",
+      "idempotency_key": "304da9ee-661f-462e-8a01-72703846cfad"
+    },
+    {
+      "evidence_report": "JLG_MANUAL_VERIFICATION_08_NI_ES_LO_MISMO_NI_ES_IGUAL.md",
+      "title": "Mangulina JLG manual verification — 08_NI_ES_LO_MISMO_NI_ES_IGUAL",
+      "source_type": "internal_research_report",
+      "visibility": "internal",
+      "citation_text": "docs/architecture/JLG_MANUAL_VERIFICATION_08_NI_ES_LO_MISMO_NI_ES_IGUAL.md",
+      "idempotency_key": "6803bde2-2da2-4837-8f27-ae94683436a7"
+    },
+    {
+      "evidence_report": "JLG_MANUAL_VERIFICATION_09_PARA_TI.md",
+      "title": "Mangulina JLG manual verification — 09_PARA_TI",
+      "source_type": "internal_research_report",
+      "visibility": "internal",
+      "citation_text": "docs/architecture/JLG_MANUAL_VERIFICATION_09_PARA_TI.md",
+      "idempotency_key": "52678852-0326-4b87-8039-33c7a7e176ca"
+    },
+    {
+      "evidence_report": "JLG_MANUAL_VERIFICATION_10_LA_LLAVE_DE_MI_CORAZON.md",
+      "title": "Mangulina JLG manual verification — 10_LA_LLAVE_DE_MI_CORAZON",
+      "source_type": "internal_research_report",
+      "visibility": "internal",
+      "citation_text": "docs/architecture/JLG_MANUAL_VERIFICATION_10_LA_LLAVE_DE_MI_CORAZON.md",
+      "idempotency_key": "a0772810-6eb3-4e61-881b-e92087e9e8b6"
+    },
+    {
+      "evidence_report": "JLG_MANUAL_VERIFICATION_11_A_SON_DE_GUERRA.md",
+      "title": "Mangulina JLG manual verification — 11_A_SON_DE_GUERRA",
+      "source_type": "internal_research_report",
+      "visibility": "internal",
+      "citation_text": "docs/architecture/JLG_MANUAL_VERIFICATION_11_A_SON_DE_GUERRA.md",
+      "idempotency_key": "0ebd8907-ee0b-4b10-8c3d-b5e4a997030e"
+    },
+    {
+      "evidence_report": "JLG_MANUAL_VERIFICATION_13_LITERAL.md",
+      "title": "Mangulina JLG manual verification — 13_LITERAL",
+      "source_type": "internal_research_report",
+      "visibility": "internal",
+      "citation_text": "docs/architecture/JLG_MANUAL_VERIFICATION_13_LITERAL.md",
+      "idempotency_key": "543ea906-410d-4cc2-87c4-93b147c0e538"
+    }
+  ],
+  "profiles": [
+    {
+      "recording_id": "0672bd04-bf0f-4848-8a31-ace1723c7657",
+      "canonical_title": "Bachata en Fukuoka",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_11_A_SON_DE_GUERRA.md",
+      "evidence_section_or_reference": "Song: Bachata en Fukuoka",
+      "evidence_summary": "Official Asondeguerra Tour release identifies the full stadium-tour performance; release wording leaves 2012/2013 performance-year precision ambiguous.",
+      "confidence": "high",
+      "source_references": [
+        "Official Asondeguerra Tour live release and event audio"
+      ],
+      "source_idempotency_key": "0ebd8907-ee0b-4b10-8c3d-b5e4a997030e",
+      "idempotency_key": "6a955e83-4ec5-454e-8313-db11f7ee9ca8"
+    },
+    {
+      "recording_id": "07e2bf64-ddc4-49d4-80d9-94d1d78628cc",
+      "canonical_title": "Mi bendición",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": "edit",
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_11_A_SON_DE_GUERRA.md",
+      "evidence_section_or_reference": "Song: Mi bendición",
+      "evidence_summary": "Official release objects establish a shorter edit of the same Asondeguerra Tour performance represented by the full-audio Recording.",
+      "confidence": "high",
+      "source_references": [
+        "Official Asondeguerra Tour release objects"
+      ],
+      "source_idempotency_key": "0ebd8907-ee0b-4b10-8c3d-b5e4a997030e",
+      "idempotency_key": "51ec3772-5311-4559-8bc6-d72b905cf512"
+    },
+    {
+      "recording_id": "0ad921c7-4774-4815-be1d-6a061f710620",
+      "canonical_title": "Kitipun",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2021-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Entre Mar y Palmeras"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_13_LITERAL.md",
+      "evidence_section_or_reference": "Song: Kitipun",
+      "evidence_summary": "Official Entre Mar y Palmeras release and official performance video establish a separate 2021 live performance.",
+      "confidence": "high",
+      "source_references": [
+        "Official Entre Mar y Palmeras release",
+        "Official performance video"
+      ],
+      "source_idempotency_key": "543ea906-410d-4cc2-87c4-93b147c0e538",
+      "idempotency_key": "42ecd87d-ef63-468d-82d2-b9a0ee3b7a4c"
+    },
+    {
+      "recording_id": "0c8dbd99-44cd-45cb-9bc9-e2cd0bc118cd",
+      "canonical_title": "A bilirrubina",
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "language_code": "pt",
+        "performance_date": "1992-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Romance Rosa"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_05_BACHATA_ROSA.md",
+      "evidence_section_or_reference": "Song: La bilirrubina",
+      "evidence_summary": "Independent Romance Rosa repertoire and official language-title evidence establish a Portuguese studio performance.",
+      "confidence": "high",
+      "source_references": [
+        "Independent sources cited in the referenced manual verification section"
+      ],
+      "source_idempotency_key": "a90958c8-11c5-40e3-870f-edc27f483eee",
+      "idempotency_key": "d84099d8-fcae-4636-85a8-c282e96bea7d"
+    },
+    {
+      "recording_id": "0d812f30-ce76-458a-aeae-981d3b1e5bed",
+      "canonical_title": "Las avispas",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2005-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Estadio Olímpico, Santo Domingo"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_09_PARA_TI.md",
+      "evidence_section_or_reference": "Song: Las avispas",
+      "evidence_summary": "Official Concierto Aniversario release, concert ISRC, and event-specific official audio establish a distinct 2005 stadium performance.",
+      "confidence": "high",
+      "source_references": [
+        "Official Concierto Aniversario release",
+        "Official artist-channel concert audio"
+      ],
+      "source_idempotency_key": "52678852-0326-4b87-8039-33c7a7e176ca",
+      "idempotency_key": "f8a76d90-ab9c-458a-8e97-ab87783c0095"
+    },
+    {
+      "recording_id": "1a3faed8-48c4-4b33-aeb2-ad1281014c0a",
+      "canonical_title": "Tan solo he venido",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2005-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Estadio Olímpico, Santo Domingo"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_09_PARA_TI.md",
+      "evidence_section_or_reference": "Song: Tan solo he venido",
+      "evidence_summary": "Official Concierto Aniversario release, concert ISRC, and event-specific official audio establish a distinct 2005 stadium performance.",
+      "confidence": "high",
+      "source_references": [
+        "Official Concierto Aniversario release",
+        "Official artist-channel concert audio"
+      ],
+      "source_idempotency_key": "52678852-0326-4b87-8039-33c7a7e176ca",
+      "idempotency_key": "0cda8dc4-674b-444a-8ff6-53c3d74ee874"
+    },
+    {
+      "recording_id": "1c223bf0-a645-4956-853b-94e14243e2c4",
+      "canonical_title": "La travesía",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": "edit",
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_10_LA_LLAVE_DE_MI_CORAZON.md",
+      "evidence_section_or_reference": "Song: La travesía",
+      "evidence_summary": "Official release objects establish a shorter edit of the same Asondeguerra Tour performance represented by the full-audio Recording.",
+      "confidence": "high",
+      "source_references": [
+        "Official Asondeguerra Tour release objects"
+      ],
+      "source_idempotency_key": "a0772810-6eb3-4e61-881b-e92087e9e8b6",
+      "idempotency_key": "83fed760-d542-429f-8b4f-c1ca56edc826"
+    },
+    {
+      "recording_id": "1fb2a355-75eb-4b56-b1c8-e531a99c1e45",
+      "canonical_title": "El Niágara en bicicleta",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_08_NI_ES_LO_MISMO_NI_ES_IGUAL.md",
+      "evidence_section_or_reference": "Song: El Niágara en bicicleta",
+      "evidence_summary": "Official Asondeguerra Tour release identifies the full stadium-tour performance; release wording leaves 2012/2013 performance-year precision ambiguous.",
+      "confidence": "high",
+      "source_references": [
+        "Official Asondeguerra Tour live release and event audio"
+      ],
+      "source_idempotency_key": "6803bde2-2da2-4837-8f27-ae94683436a7",
+      "idempotency_key": "18d6da0c-1569-4d19-82b1-96b9377cd15f"
+    },
+    {
+      "recording_id": "2219fdb5-f214-4c90-8b0c-c48bc60d3513",
+      "canonical_title": "Vale la pena",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2021-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Entre Mar y Palmeras"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_08_NI_ES_LO_MISMO_NI_ES_IGUAL.md",
+      "evidence_section_or_reference": "Song: Vale la pena",
+      "evidence_summary": "Official Entre Mar y Palmeras release and official performance video establish a separate 2021 live performance.",
+      "confidence": "high",
+      "source_references": [
+        "Official Entre Mar y Palmeras release",
+        "Official performance video"
+      ],
+      "source_idempotency_key": "6803bde2-2da2-4837-8f27-ae94683436a7",
+      "idempotency_key": "2182bdcb-9f5b-4bd4-8c4e-481d49a3c7cd"
+    },
+    {
+      "recording_id": "2303c139-16c1-4d46-9c25-86f91dae4af4",
+      "canonical_title": "La cosquillita",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2005-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Estadio Olímpico, Santo Domingo"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_07_FOGARATE.md",
+      "evidence_section_or_reference": "Song: La cosquillita",
+      "evidence_summary": "Official Concierto Aniversario release, concert ISRC, and event-specific official audio establish a distinct 2005 stadium performance.",
+      "confidence": "high",
+      "source_references": [
+        "Official Concierto Aniversario release",
+        "Official artist-channel concert audio"
+      ],
+      "source_idempotency_key": "304da9ee-661f-462e-8a01-72703846cfad",
+      "idempotency_key": "c8925836-3e77-4c0e-8362-c72b5175ae65"
+    },
+    {
+      "recording_id": "2327c774-04f3-44f9-af03-47b843b07602",
+      "canonical_title": "La llave de mi corazón (dance remix)",
+      "proposed_profile": {
+        "performance_kind": null,
+        "derivation_kind": "remix",
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": null
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_10_LA_LLAVE_DE_MI_CORAZON.md",
+      "evidence_section_or_reference": "La llave de mi corazón ledger",
+      "evidence_summary": "Official dance remix object establishes remixed audio; exact source fixation is not independently proven.",
+      "confidence": "high",
+      "source_references": [
+        "Independent sources cited in the referenced manual verification section"
+      ],
+      "source_idempotency_key": "a0772810-6eb3-4e61-881b-e92087e9e8b6",
+      "idempotency_key": "ece45014-586f-4e3c-87bb-4712b78ff7dc"
+    },
+    {
+      "recording_id": "2f1095cb-a45c-4f55-b0d5-c2d55b1a1576",
+      "canonical_title": "A pedir su mano (versión Privé)",
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "language_code": null,
+        "performance_date": "2020-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Privé"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_05_BACHATA_ROSA.md",
+      "evidence_section_or_reference": "Song: A pedir su mano",
+      "evidence_summary": "Official Privé audio and separately credited intimate ensemble establish a new 2020 studio rerecording.",
+      "confidence": "high",
+      "source_references": [
+        "Official Privé release and credits"
+      ],
+      "source_idempotency_key": "a90958c8-11c5-40e3-870f-edc27f483eee",
+      "idempotency_key": "f8cdbfaa-e3ee-4810-84a8-f636c0e238bb"
+    },
+    {
+      "recording_id": "30d3df34-84f1-42a2-8cda-ba674c90b6a9",
+      "canonical_title": "Para ti",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2021-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Entre Mar y Palmeras"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_09_PARA_TI.md",
+      "evidence_section_or_reference": "Song: Para ti",
+      "evidence_summary": "Official Entre Mar y Palmeras release and official performance video establish a separate 2021 live performance.",
+      "confidence": "high",
+      "source_references": [
+        "Official Entre Mar y Palmeras release",
+        "Official performance video"
+      ],
+      "source_idempotency_key": "52678852-0326-4b87-8039-33c7a7e176ca",
+      "idempotency_key": "e9bdb576-8860-4eb6-8910-3e297c2f5221"
+    },
+    {
+      "recording_id": "334ae297-d150-4a81-9427-a416ecb0aa1d",
+      "canonical_title": "Frío, frío",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_06_AREITO.md",
+      "evidence_section_or_reference": "Song: Frío, frío",
+      "evidence_summary": "Official Asondeguerra Tour release identifies the full stadium-tour performance; release wording leaves 2012/2013 performance-year precision ambiguous.",
+      "confidence": "high",
+      "source_references": [
+        "Official Asondeguerra Tour live release and event audio"
+      ],
+      "source_idempotency_key": "73f72052-62b8-4b4b-8779-34a943e14f42",
+      "idempotency_key": "8b0c708a-8e99-4b81-80af-34ce0bded43d"
+    },
+    {
+      "recording_id": "3a123fc6-c471-49a8-9dba-5a0a80403a8d",
+      "canonical_title": "La llave de mi corazón",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2021-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Entre Mar y Palmeras"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_10_LA_LLAVE_DE_MI_CORAZON.md",
+      "evidence_section_or_reference": "Song: La llave de mi corazón",
+      "evidence_summary": "Official Entre Mar y Palmeras release and official performance video establish a separate 2021 live performance.",
+      "confidence": "high",
+      "source_references": [
+        "Official Entre Mar y Palmeras release",
+        "Official performance video"
+      ],
+      "source_idempotency_key": "a0772810-6eb3-4e61-881b-e92087e9e8b6",
+      "idempotency_key": "27d468c8-df92-42cc-8f75-423d06cad957"
+    },
+    {
+      "recording_id": "3e54974b-5287-4060-ac37-2fe03de0f240",
+      "canonical_title": "Bachata en Fukuoka",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": "edit",
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_11_A_SON_DE_GUERRA.md",
+      "evidence_section_or_reference": "Song: Bachata en Fukuoka",
+      "evidence_summary": "Official release objects establish a shorter edit of the same Asondeguerra Tour performance represented by the full-audio Recording.",
+      "confidence": "high",
+      "source_references": [
+        "Official Asondeguerra Tour release objects"
+      ],
+      "source_idempotency_key": "0ebd8907-ee0b-4b10-8c3d-b5e4a997030e",
+      "idempotency_key": "84857091-1f8f-4056-8881-058e24c88bb4"
+    },
+    {
+      "recording_id": "3f51c25b-8ff1-47b8-91d7-63ba1c0232ba",
+      "canonical_title": "Ojalá que llueva café",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2005-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Estadio Olímpico, Santo Domingo"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_04_OJALA_QUE_LLUEVA_CAFE.md",
+      "evidence_section_or_reference": "Song: Ojalá que llueva café",
+      "evidence_summary": "Official Concierto Aniversario release, concert ISRC, and event-specific official audio establish a distinct 2005 stadium performance.",
+      "confidence": "high",
+      "source_references": [
+        "Official Concierto Aniversario release",
+        "Official artist-channel concert audio"
+      ],
+      "source_idempotency_key": "192467a8-40f9-40df-8085-7dd6a5bb36e5",
+      "idempotency_key": "774f7ecd-5f65-4fb1-8f52-d8304bc4f6cc"
+    },
+    {
+      "recording_id": "44d97abe-f206-4d93-acc9-a7e4d0ed52b5",
+      "canonical_title": "Soldado",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2005-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Estadio Olímpico, Santo Domingo"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_09_PARA_TI.md",
+      "evidence_section_or_reference": "Song: Soldado",
+      "evidence_summary": "Official Concierto Aniversario release, concert ISRC, and event-specific official audio establish a distinct 2005 stadium performance.",
+      "confidence": "high",
+      "source_references": [
+        "Official Concierto Aniversario release",
+        "Official artist-channel concert audio"
+      ],
+      "source_idempotency_key": "52678852-0326-4b87-8039-33c7a7e176ca",
+      "idempotency_key": "b512d9cd-b5bc-4d2a-86ca-4dce8addc374"
+    },
+    {
+      "recording_id": "4c7bda9f-bb21-4c25-8b25-dbb8eb0d5151",
+      "canonical_title": "Las avispas",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": "edit",
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_09_PARA_TI.md",
+      "evidence_section_or_reference": "Song: Las avispas",
+      "evidence_summary": "Official release objects establish a shorter edit of the same Asondeguerra Tour performance represented by the full-audio Recording.",
+      "confidence": "high",
+      "source_references": [
+        "Official Asondeguerra Tour release objects"
+      ],
+      "source_idempotency_key": "52678852-0326-4b87-8039-33c7a7e176ca",
+      "idempotency_key": "6547a21f-f72d-44a0-8c7c-7a363252972d"
+    },
+    {
+      "recording_id": "60e4b7e3-ecfd-4919-9ff3-a940d98b9071",
+      "canonical_title": "A pedir su mano",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_05_BACHATA_ROSA.md",
+      "evidence_section_or_reference": "Song: A pedir su mano",
+      "evidence_summary": "Official Asondeguerra Tour release identifies the full stadium-tour performance; release wording leaves 2012/2013 performance-year precision ambiguous.",
+      "confidence": "high",
+      "source_references": [
+        "Official Asondeguerra Tour live release and event audio"
+      ],
+      "source_idempotency_key": "a90958c8-11c5-40e3-870f-edc27f483eee",
+      "idempotency_key": "8f106c9f-bb64-45c7-8713-3a091e86c3e3"
+    },
+    {
+      "recording_id": "62962b7e-984d-4531-a252-b6656c19ee42",
+      "canonical_title": "La guagua",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": "edit",
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_11_A_SON_DE_GUERRA.md",
+      "evidence_section_or_reference": "Song: La guagua",
+      "evidence_summary": "Official release objects establish a shorter edit of the same Asondeguerra Tour performance represented by the full-audio Recording.",
+      "confidence": "high",
+      "source_references": [
+        "Official Asondeguerra Tour release objects"
+      ],
+      "source_idempotency_key": "0ebd8907-ee0b-4b10-8c3d-b5e4a997030e",
+      "idempotency_key": "3243f4bc-1522-4cea-8beb-0de529d8f5ed"
+    },
+    {
+      "recording_id": "6531c0fc-bd41-4124-9219-bbcef2e6889a",
+      "canonical_title": "Como yo",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2021-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Entre Mar y Palmeras"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_10_LA_LLAVE_DE_MI_CORAZON.md",
+      "evidence_section_or_reference": "Song: Como yo",
+      "evidence_summary": "Official Entre Mar y Palmeras release and official performance video establish a separate 2021 live performance.",
+      "confidence": "high",
+      "source_references": [
+        "Official Entre Mar y Palmeras release",
+        "Official performance video"
+      ],
+      "source_idempotency_key": "a0772810-6eb3-4e61-881b-e92087e9e8b6",
+      "idempotency_key": "c83a806c-e5eb-4b81-839f-1c61111eef39"
+    },
+    {
+      "recording_id": "6ac3e43e-782b-4939-bb7f-e292322eeb4d",
+      "canonical_title": "Bachata rosa",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2002-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Encuentro"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_05_BACHATA_ROSA.md",
+      "evidence_section_or_reference": "Song: Bachata rosa",
+      "evidence_summary": "Independent Encuentro catalogs establish a distinct 2002 live performance.",
+      "confidence": "high",
+      "source_references": [
+        "Independent sources cited in the referenced manual verification section"
+      ],
+      "source_idempotency_key": "a90958c8-11c5-40e3-870f-edc27f483eee",
+      "idempotency_key": "7806c778-d2fa-4508-891e-d73b03242fef"
+    },
+    {
+      "recording_id": "6ea97e60-edf5-4411-9e60-79a0f6654f1c",
+      "canonical_title": "Mi bendición",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_11_A_SON_DE_GUERRA.md",
+      "evidence_section_or_reference": "Song: Mi bendición",
+      "evidence_summary": "Official Asondeguerra Tour release identifies the full stadium-tour performance; release wording leaves 2012/2013 performance-year precision ambiguous.",
+      "confidence": "high",
+      "source_references": [
+        "Official Asondeguerra Tour live release and event audio"
+      ],
+      "source_idempotency_key": "0ebd8907-ee0b-4b10-8c3d-b5e4a997030e",
+      "idempotency_key": "ba99538f-1663-410f-840b-5d56f209f283"
+    },
+    {
+      "recording_id": "73c3e9dd-859c-4009-877a-ca2424dd8541",
+      "canonical_title": "El costo de la vida",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2005-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Estadio Olímpico, Santo Domingo"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_06_AREITO.md",
+      "evidence_section_or_reference": "Song: El costo de la vida",
+      "evidence_summary": "Official Concierto Aniversario release, concert ISRC, and event-specific official audio establish a distinct 2005 stadium performance.",
+      "confidence": "high",
+      "source_references": [
+        "Official Concierto Aniversario release",
+        "Official artist-channel concert audio"
+      ],
+      "source_idempotency_key": "73f72052-62b8-4b4b-8779-34a943e14f42",
+      "idempotency_key": "70349dd1-324f-4bd6-8942-dc8ca1256991"
+    },
+    {
+      "recording_id": "749e731b-9f79-4cfd-b203-d01a8d4c2b45",
+      "canonical_title": "El farolito",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2021-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Entre Mar y Palmeras"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_07_FOGARATE.md",
+      "evidence_section_or_reference": "Song: El farolito",
+      "evidence_summary": "Official Entre Mar y Palmeras release and official performance video establish a separate 2021 live performance.",
+      "confidence": "high",
+      "source_references": [
+        "Official Entre Mar y Palmeras release",
+        "Official performance video"
+      ],
+      "source_idempotency_key": "304da9ee-661f-462e-8a01-72703846cfad",
+      "idempotency_key": "543f1fd2-7203-4e2b-8463-972b0240b4e4"
+    },
+    {
+      "recording_id": "8ae9a544-398b-4351-949a-04905d0f15b8",
+      "canonical_title": "La calle",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_11_A_SON_DE_GUERRA.md",
+      "evidence_section_or_reference": "Song: La calle",
+      "evidence_summary": "Official Asondeguerra Tour release identifies the full stadium-tour performance; release wording leaves 2012/2013 performance-year precision ambiguous.",
+      "confidence": "high",
+      "source_references": [
+        "Official Asondeguerra Tour live release and event audio"
+      ],
+      "source_idempotency_key": "0ebd8907-ee0b-4b10-8c3d-b5e4a997030e",
+      "idempotency_key": "f25cc78c-aee4-4952-826f-d922d4049b66"
+    },
+    {
+      "recording_id": "8b866647-4640-49c2-b711-14a6103b18ed",
+      "canonical_title": "Frío, frío",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": "edit",
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_06_AREITO.md",
+      "evidence_section_or_reference": "Song: Frío, frío",
+      "evidence_summary": "Official release objects establish a shorter edit of the same Asondeguerra Tour performance represented by the full-audio Recording.",
+      "confidence": "high",
+      "source_references": [
+        "Official Asondeguerra Tour release objects"
+      ],
+      "source_idempotency_key": "73f72052-62b8-4b4b-8779-34a943e14f42",
+      "idempotency_key": "a957aad9-c0d7-41b4-8e7b-a5b68d409c5e"
+    },
+    {
+      "recording_id": "8e8a2b7f-dfd0-49eb-9a1e-94a0f4c91091",
+      "canonical_title": "Como abeja al panal",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2005-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Estadio Olímpico, Santo Domingo"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_05_BACHATA_ROSA.md",
+      "evidence_section_or_reference": "Song: Como abeja al panal",
+      "evidence_summary": "Official Concierto Aniversario release, concert ISRC, and event-specific official audio establish a distinct 2005 stadium performance.",
+      "confidence": "high",
+      "source_references": [
+        "Official Concierto Aniversario release",
+        "Official artist-channel concert audio"
+      ],
+      "source_idempotency_key": "a90958c8-11c5-40e3-870f-edc27f483eee",
+      "idempotency_key": "df113984-53eb-4496-8e5c-d6e2724afe00"
+    },
+    {
+      "recording_id": "9623b3d3-3555-49cf-aca2-a3465a6b0728",
+      "canonical_title": "Las avispas",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2021-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Entre Mar y Palmeras"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_09_PARA_TI.md",
+      "evidence_section_or_reference": "Song: Las avispas",
+      "evidence_summary": "Official Entre Mar y Palmeras release and official performance video establish a separate 2021 live performance.",
+      "confidence": "high",
+      "source_references": [
+        "Official Entre Mar y Palmeras release",
+        "Official performance video"
+      ],
+      "source_idempotency_key": "52678852-0326-4b87-8039-33c7a7e176ca",
+      "idempotency_key": "0b1cbba8-9df4-4a1a-8719-dbbb4fac1907"
+    },
+    {
+      "recording_id": "99e8f378-bf0b-4b0d-a177-91894a7eae49",
+      "canonical_title": "Las avispas",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_09_PARA_TI.md",
+      "evidence_section_or_reference": "Song: Las avispas",
+      "evidence_summary": "Official Asondeguerra Tour release identifies the full stadium-tour performance; release wording leaves 2012/2013 performance-year precision ambiguous.",
+      "confidence": "high",
+      "source_references": [
+        "Official Asondeguerra Tour live release and event audio"
+      ],
+      "source_idempotency_key": "52678852-0326-4b87-8039-33c7a7e176ca",
+      "idempotency_key": "e4465310-0b95-4ff8-8e38-9a324d257809"
+    },
+    {
+      "recording_id": "9d67be0e-19cf-4a2e-8af8-39302e0d61dd",
+      "canonical_title": "A pedir su mano",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2005-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Estadio Olímpico, Santo Domingo"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_05_BACHATA_ROSA.md",
+      "evidence_section_or_reference": "Song: A pedir su mano",
+      "evidence_summary": "Official Concierto Aniversario release, concert ISRC, and event-specific official audio establish a distinct 2005 stadium performance.",
+      "confidence": "high",
+      "source_references": [
+        "Official Concierto Aniversario release",
+        "Official artist-channel concert audio"
+      ],
+      "source_idempotency_key": "a90958c8-11c5-40e3-870f-edc27f483eee",
+      "idempotency_key": "b7fb6ce9-b6d4-4a93-8859-d71d6e2b42ca"
+    },
+    {
+      "recording_id": "a242db40-d740-4caa-9cda-119d77cdd79b",
+      "canonical_title": "La llave de mi corazón",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": "edit",
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_10_LA_LLAVE_DE_MI_CORAZON.md",
+      "evidence_section_or_reference": "Song: La llave de mi corazón",
+      "evidence_summary": "Official release objects establish a shorter edit of the same Asondeguerra Tour performance represented by the full-audio Recording.",
+      "confidence": "high",
+      "source_references": [
+        "Official Asondeguerra Tour release objects"
+      ],
+      "source_idempotency_key": "a0772810-6eb3-4e61-881b-e92087e9e8b6",
+      "idempotency_key": "9fba705e-a6af-4c21-8b19-0b79fda6d54f"
+    },
+    {
+      "recording_id": "a266c059-fd40-4c0f-a825-b6b70ca30587",
+      "canonical_title": "La guagua",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_11_A_SON_DE_GUERRA.md",
+      "evidence_section_or_reference": "Song: La guagua",
+      "evidence_summary": "Official Asondeguerra Tour release identifies the full stadium-tour performance; release wording leaves 2012/2013 performance-year precision ambiguous.",
+      "confidence": "high",
+      "source_references": [
+        "Official Asondeguerra Tour live release and event audio"
+      ],
+      "source_idempotency_key": "0ebd8907-ee0b-4b10-8c3d-b5e4a997030e",
+      "idempotency_key": "143245f9-848a-435f-8b1b-d4405c963eb9"
+    },
+    {
+      "recording_id": "a3b5b0e0-6739-474e-9187-83d2bc4ff5cb",
+      "canonical_title": "El Niágara en bicicleta",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2021-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Entre Mar y Palmeras"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_08_NI_ES_LO_MISMO_NI_ES_IGUAL.md",
+      "evidence_section_or_reference": "Song: El Niágara en bicicleta",
+      "evidence_summary": "Official Entre Mar y Palmeras release and official performance video establish a separate 2021 live performance.",
+      "confidence": "high",
+      "source_references": [
+        "Official Entre Mar y Palmeras release",
+        "Official performance video"
+      ],
+      "source_idempotency_key": "6803bde2-2da2-4837-8f27-ae94683436a7",
+      "idempotency_key": "477ebeee-37c8-489a-8454-3838a524320b"
+    },
+    {
+      "recording_id": "a72f9729-df72-4cbd-ba1e-e2d98336580e",
+      "canonical_title": "Visa para un sueño",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_04_OJALA_QUE_LLUEVA_CAFE.md",
+      "evidence_section_or_reference": "Song: Visa para un sueño",
+      "evidence_summary": "Official Asondeguerra Tour release identifies the full stadium-tour performance; release wording leaves 2012/2013 performance-year precision ambiguous.",
+      "confidence": "high",
+      "source_references": [
+        "Official Asondeguerra Tour live release and event audio"
+      ],
+      "source_idempotency_key": "192467a8-40f9-40df-8085-7dd6a5bb36e5",
+      "idempotency_key": "2bfad24b-915b-4692-8079-c38ceb5a6957"
+    },
+    {
+      "recording_id": "a7afc633-6a0c-414a-80c1-9b7ec04196bf",
+      "canonical_title": "La calle",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": "edit",
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_11_A_SON_DE_GUERRA.md",
+      "evidence_section_or_reference": "Song: La calle",
+      "evidence_summary": "Official release objects establish a shorter edit of the same Asondeguerra Tour performance represented by the full-audio Recording.",
+      "confidence": "high",
+      "source_references": [
+        "Official Asondeguerra Tour release objects"
+      ],
+      "source_idempotency_key": "0ebd8907-ee0b-4b10-8c3d-b5e4a997030e",
+      "idempotency_key": "c715a42e-1bb7-4649-8920-598b56d28191"
+    },
+    {
+      "recording_id": "afb28585-a810-47c2-bc3f-6548359618e5",
+      "canonical_title": "La travesía",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2021-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Entre Mar y Palmeras"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_10_LA_LLAVE_DE_MI_CORAZON.md",
+      "evidence_section_or_reference": "Song: La travesía",
+      "evidence_summary": "Official Entre Mar y Palmeras release and official performance video establish a separate 2021 live performance.",
+      "confidence": "high",
+      "source_references": [
+        "Official Entre Mar y Palmeras release",
+        "Official performance video"
+      ],
+      "source_idempotency_key": "a0772810-6eb3-4e61-881b-e92087e9e8b6",
+      "idempotency_key": "a116f543-b5a8-46ea-82f9-c1501e08efc5"
+    },
+    {
+      "recording_id": "ba5bb58b-f603-4a45-bd88-c20970664b84",
+      "canonical_title": "Dance with Me (Si tú no bailas conmigo)",
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "language_code": "en",
+        "performance_date": "2020-01-01",
+        "performance_date_precision": "year",
+        "performance_context": null
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_10_LA_LLAVE_DE_MI_CORAZON.md",
+      "evidence_section_or_reference": "Si tú no bailas conmigo ledger",
+      "evidence_summary": "Official 2020 English collaboration has a separate ISRC and newly recorded studio performance.",
+      "confidence": "high",
+      "source_references": [
+        "Independent sources cited in the referenced manual verification section"
+      ],
+      "source_idempotency_key": "a0772810-6eb3-4e61-881b-e92087e9e8b6",
+      "idempotency_key": "56ad9dca-98eb-4c2e-8de1-4c3372f6de1b"
+    },
+    {
+      "recording_id": "c9049cc0-fc1a-49c3-8ba9-d27ba0820e95",
+      "canonical_title": "La travesía",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_10_LA_LLAVE_DE_MI_CORAZON.md",
+      "evidence_section_or_reference": "Song: La travesía",
+      "evidence_summary": "Official Asondeguerra Tour release identifies the full stadium-tour performance; release wording leaves 2012/2013 performance-year precision ambiguous.",
+      "confidence": "high",
+      "source_references": [
+        "Official Asondeguerra Tour live release and event audio"
+      ],
+      "source_idempotency_key": "a0772810-6eb3-4e61-881b-e92087e9e8b6",
+      "idempotency_key": "24f697e0-f65c-48ae-83b0-b1a154e73f83"
+    },
+    {
+      "recording_id": "d0f3b5c2-e38e-489f-a707-5be5f1a47431",
+      "canonical_title": "Amapola",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2005-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Estadio Olímpico, Santo Domingo"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_08_NI_ES_LO_MISMO_NI_ES_IGUAL.md",
+      "evidence_section_or_reference": "Song: Amapola",
+      "evidence_summary": "Official Concierto Aniversario release, concert ISRC, and event-specific official audio establish a distinct 2005 stadium performance.",
+      "confidence": "high",
+      "source_references": [
+        "Official Concierto Aniversario release",
+        "Official artist-channel concert audio"
+      ],
+      "source_idempotency_key": "6803bde2-2da2-4837-8f27-ae94683436a7",
+      "idempotency_key": "794b63ea-36b7-4950-8ad6-ea0e04b19a93"
+    },
+    {
+      "recording_id": "d1c688c3-b76b-4b11-83a2-49426094922f",
+      "canonical_title": "La bilirrubina",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2005-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Estadio Olímpico, Santo Domingo"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_05_BACHATA_ROSA.md",
+      "evidence_section_or_reference": "Song: La bilirrubina",
+      "evidence_summary": "Official Concierto Aniversario release, concert ISRC, and event-specific official audio establish a distinct 2005 stadium performance.",
+      "confidence": "high",
+      "source_references": [
+        "Official Concierto Aniversario release",
+        "Official artist-channel concert audio"
+      ],
+      "source_idempotency_key": "a90958c8-11c5-40e3-870f-edc27f483eee",
+      "idempotency_key": "c84db90f-6cbf-4e01-81bb-f7fcaaf503c8"
+    },
+    {
+      "recording_id": "d5f7aeb2-6f29-4251-97a9-bb2d480a2efe",
+      "canonical_title": "La llave de mi corazón",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_10_LA_LLAVE_DE_MI_CORAZON.md",
+      "evidence_section_or_reference": "Song: La llave de mi corazón",
+      "evidence_summary": "Official Asondeguerra Tour release identifies the full stadium-tour performance; release wording leaves 2012/2013 performance-year precision ambiguous.",
+      "confidence": "high",
+      "source_references": [
+        "Official Asondeguerra Tour live release and event audio"
+      ],
+      "source_idempotency_key": "a0772810-6eb3-4e61-881b-e92087e9e8b6",
+      "idempotency_key": "dc4a8b4a-9478-4b28-83a6-b3b608893c65"
+    },
+    {
+      "recording_id": "d673e2ea-b217-4243-81d7-a1553a22bf71",
+      "canonical_title": "Que me des tu cariño (Portuguese)",
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "language_code": "pt",
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": null
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_10_LA_LLAVE_DE_MI_CORAZON.md",
+      "evidence_section_or_reference": "Que me des tu cariño ledger",
+      "evidence_summary": "Independent ISRC and official language-specific delivery establish a Portuguese studio performance.",
+      "confidence": "high",
+      "source_references": [
+        "Independent sources cited in the referenced manual verification section"
+      ],
+      "source_idempotency_key": "a0772810-6eb3-4e61-881b-e92087e9e8b6",
+      "idempotency_key": "bb22272d-7967-4a28-829f-18296408c796"
+    },
+    {
+      "recording_id": "dcb1778e-73a2-4753-ab96-afc828116884",
+      "canonical_title": "Para ti",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2005-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Estadio Olímpico, Santo Domingo"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_09_PARA_TI.md",
+      "evidence_section_or_reference": "Song: Para ti",
+      "evidence_summary": "Official Concierto Aniversario release, concert ISRC, and event-specific official audio establish a distinct 2005 stadium performance.",
+      "confidence": "high",
+      "source_references": [
+        "Official Concierto Aniversario release",
+        "Official artist-channel concert audio"
+      ],
+      "source_idempotency_key": "52678852-0326-4b87-8039-33c7a7e176ca",
+      "idempotency_key": "b663b6e1-2bce-4225-8eee-3b4c48e54d7e"
+    },
+    {
+      "recording_id": "de56973b-8847-4117-abbc-1ab25b66da18",
+      "canonical_title": "Ojalá que llueva café",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2002-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Encuentro"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_04_OJALA_QUE_LLUEVA_CAFE.md",
+      "evidence_section_or_reference": "Dedicated Ojalá identity family",
+      "evidence_summary": "Independent physical and album catalogs establish the 2002 Encuentro live project and this distinct event performance.",
+      "confidence": "high",
+      "source_references": [
+        "Independent Encuentro physical catalog",
+        "Independent Encuentro album catalog"
+      ],
+      "source_idempotency_key": "192467a8-40f9-40df-8085-7dd6a5bb36e5",
+      "idempotency_key": "a2075468-a6c7-416e-8534-55ae8d5a940f"
+    },
+    {
+      "recording_id": "e1311fcd-e780-4713-9efe-b39590128ef9",
+      "canonical_title": "Bachata rosa",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_05_BACHATA_ROSA.md",
+      "evidence_section_or_reference": "Song: Bachata rosa",
+      "evidence_summary": "Official Asondeguerra Tour release identifies the full stadium-tour performance; release wording leaves 2012/2013 performance-year precision ambiguous.",
+      "confidence": "high",
+      "source_references": [
+        "Official Asondeguerra Tour live release and event audio"
+      ],
+      "source_idempotency_key": "a90958c8-11c5-40e3-870f-edc27f483eee",
+      "idempotency_key": "248fe5c9-09af-4c20-846e-d3a0031b6b67"
+    },
+    {
+      "recording_id": "e382ea92-7519-406e-869c-7e479e00a70c",
+      "canonical_title": "El Niágara en bicicleta (remix)",
+      "proposed_profile": {
+        "performance_kind": null,
+        "derivation_kind": "remix",
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": null
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_08_NI_ES_LO_MISMO_NI_ES_IGUAL.md",
+      "evidence_section_or_reference": "Song: El Niágara en bicicleta",
+      "evidence_summary": "Official 2025 remix single establishes remixed audio, but the exact source Recording was not independently proven.",
+      "confidence": "high",
+      "source_references": [
+        "Official 2025 remix single"
+      ],
+      "source_idempotency_key": "6803bde2-2da2-4837-8f27-ae94683436a7",
+      "idempotency_key": "e1bd79e6-fd01-4af0-833a-b5201f8aa0fb"
+    },
+    {
+      "recording_id": "e703a9c5-68a4-4b72-bfca-1c591d74b830",
+      "canonical_title": "Medicine for My Soul",
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": null
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_10_LA_LLAVE_DE_MI_CORAZON.md",
+      "evidence_section_or_reference": "Medicine for My Soul ledger",
+      "evidence_summary": "Official fan-edition duet is a newly recorded studio performance; collaborator identity derives from credits.",
+      "confidence": "high",
+      "source_references": [
+        "Independent sources cited in the referenced manual verification section"
+      ],
+      "source_idempotency_key": "a0772810-6eb3-4e61-881b-e92087e9e8b6",
+      "idempotency_key": "1775852c-6200-48e5-86a2-b2e0e113ac45"
+    },
+    {
+      "recording_id": "ee5f3e74-3f8a-462a-8018-c588066d0f33",
+      "canonical_title": "Rosalía",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2005-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Estadio Olímpico, Santo Domingo"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_05_BACHATA_ROSA.md",
+      "evidence_section_or_reference": "Song: Rosalía",
+      "evidence_summary": "Official Concierto Aniversario release, concert ISRC, and event-specific official audio establish a distinct 2005 stadium performance.",
+      "confidence": "high",
+      "source_references": [
+        "Official Concierto Aniversario release",
+        "Official artist-channel concert audio"
+      ],
+      "source_idempotency_key": "a90958c8-11c5-40e3-870f-edc27f483eee",
+      "idempotency_key": "7ca0ee59-f71d-44b1-83c2-b05727f4f5fb"
+    },
+    {
+      "recording_id": "f178eaee-bb21-4f01-b527-4da27126bbbe",
+      "canonical_title": "Vale la pena",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2005-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Estadio Olímpico, Santo Domingo"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_08_NI_ES_LO_MISMO_NI_ES_IGUAL.md",
+      "evidence_section_or_reference": "Song: Vale la pena",
+      "evidence_summary": "Official Concierto Aniversario release, concert ISRC, and event-specific official audio establish a distinct 2005 stadium performance.",
+      "confidence": "high",
+      "source_references": [
+        "Official Concierto Aniversario release",
+        "Official artist-channel concert audio"
+      ],
+      "source_idempotency_key": "6803bde2-2da2-4837-8f27-ae94683436a7",
+      "idempotency_key": "7e685413-d254-4d94-873a-dd42c5630c03"
+    },
+    {
+      "recording_id": "f4216f25-d151-4dd6-b203-3c8d61e5bdb0",
+      "canonical_title": "Amapola",
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2002-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Encuentro"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_08_NI_ES_LO_MISMO_NI_ES_IGUAL.md",
+      "evidence_section_or_reference": "Song: Amapola",
+      "evidence_summary": "Independent Encuentro documentation establishes a 2002 staged live performance.",
+      "confidence": "high",
+      "source_references": [
+        "Independent sources cited in the referenced manual verification section"
+      ],
+      "source_idempotency_key": "6803bde2-2da2-4837-8f27-ae94683436a7",
+      "idempotency_key": "8c68e1ae-7887-4657-83bb-d44d614e92c9"
+    },
+    {
+      "recording_id": "f96218bb-e5c0-4384-9a9d-a948aaa3d6a1",
+      "canonical_title": "Romance rosa",
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "language_code": "pt",
+        "performance_date": "1992-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Romance Rosa"
+      },
+      "evidence_report": "JLG_MANUAL_VERIFICATION_05_BACHATA_ROSA.md",
+      "evidence_section_or_reference": "Song: Bachata rosa",
+      "evidence_summary": "Official Romance Rosa title and release evidence establish the 1992 Portuguese-language studio performance.",
+      "confidence": "high",
+      "source_references": [
+        "Independent sources cited in the referenced manual verification section"
+      ],
+      "source_idempotency_key": "a90958c8-11c5-40e3-870f-edc27f483eee",
+      "idempotency_key": "79eef783-f608-4180-8c50-3689cd5986c8"
+    }
+  ],
+  "relationships": [
+    {
+      "source_recording_id": "07e2bf64-ddc4-49d4-80d9-94d1d78628cc",
+      "relationship_type": "edit_of",
+      "target_recording_id": "6ea97e60-edf5-4411-9e60-79a0f6654f1c",
+      "evidence": "Manual verification aligned official release objects and identified full and shorter presentations of one performance.",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_11_A_SON_DE_GUERRA.md",
+      "evidence_section_or_reference": "Song: Mi bendición",
+      "source_idempotency_key": "0ebd8907-ee0b-4b10-8c3d-b5e4a997030e",
+      "idempotency_key": "4cf7a3d4-5462-49b3-8a37-9ae786cd5e3d"
+    },
+    {
+      "source_recording_id": "1c223bf0-a645-4956-853b-94e14243e2c4",
+      "relationship_type": "edit_of",
+      "target_recording_id": "c9049cc0-fc1a-49c3-8ba9-d27ba0820e95",
+      "evidence": "Manual verification aligned official release objects and identified full and shorter presentations of one performance.",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_10_LA_LLAVE_DE_MI_CORAZON.md",
+      "evidence_section_or_reference": "Song: La travesía",
+      "source_idempotency_key": "a0772810-6eb3-4e61-881b-e92087e9e8b6",
+      "idempotency_key": "795d6b81-f0b1-47dd-89e9-95bdf01d8537"
+    },
+    {
+      "source_recording_id": "3e54974b-5287-4060-ac37-2fe03de0f240",
+      "relationship_type": "edit_of",
+      "target_recording_id": "0672bd04-bf0f-4848-8a31-ace1723c7657",
+      "evidence": "Manual verification aligned official release objects and identified full and shorter presentations of one performance.",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_11_A_SON_DE_GUERRA.md",
+      "evidence_section_or_reference": "Song: Bachata en Fukuoka",
+      "source_idempotency_key": "0ebd8907-ee0b-4b10-8c3d-b5e4a997030e",
+      "idempotency_key": "bab4439f-3268-4d90-85ce-ffde54fc7c89"
+    },
+    {
+      "source_recording_id": "4c7bda9f-bb21-4c25-8b25-dbb8eb0d5151",
+      "relationship_type": "edit_of",
+      "target_recording_id": "99e8f378-bf0b-4b0d-a177-91894a7eae49",
+      "evidence": "Manual verification aligned official release objects and identified full and shorter presentations of one performance.",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_09_PARA_TI.md",
+      "evidence_section_or_reference": "Song: Las avispas",
+      "source_idempotency_key": "52678852-0326-4b87-8039-33c7a7e176ca",
+      "idempotency_key": "eb70760f-f5a7-4da3-839f-070969cdcdaf"
+    },
+    {
+      "source_recording_id": "62962b7e-984d-4531-a252-b6656c19ee42",
+      "relationship_type": "edit_of",
+      "target_recording_id": "a266c059-fd40-4c0f-a825-b6b70ca30587",
+      "evidence": "Manual verification aligned official release objects and identified full and shorter presentations of one performance.",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_11_A_SON_DE_GUERRA.md",
+      "evidence_section_or_reference": "Song: La guagua",
+      "source_idempotency_key": "0ebd8907-ee0b-4b10-8c3d-b5e4a997030e",
+      "idempotency_key": "ca6d165b-f5e8-478c-831d-6c5107b65bc1"
+    },
+    {
+      "source_recording_id": "8b866647-4640-49c2-b711-14a6103b18ed",
+      "relationship_type": "edit_of",
+      "target_recording_id": "334ae297-d150-4a81-9427-a416ecb0aa1d",
+      "evidence": "Manual verification aligned official release objects and identified full and shorter presentations of one performance.",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_06_AREITO.md",
+      "evidence_section_or_reference": "Song: Frío, frío",
+      "source_idempotency_key": "73f72052-62b8-4b4b-8779-34a943e14f42",
+      "idempotency_key": "94492355-aa93-435b-865e-794308307b6d"
+    },
+    {
+      "source_recording_id": "a242db40-d740-4caa-9cda-119d77cdd79b",
+      "relationship_type": "edit_of",
+      "target_recording_id": "d5f7aeb2-6f29-4251-97a9-bb2d480a2efe",
+      "evidence": "Manual verification aligned official release objects and identified full and shorter presentations of one performance.",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_10_LA_LLAVE_DE_MI_CORAZON.md",
+      "evidence_section_or_reference": "Song: La llave de mi corazón",
+      "source_idempotency_key": "a0772810-6eb3-4e61-881b-e92087e9e8b6",
+      "idempotency_key": "a354a3c5-ea1f-4661-8e78-7963617c08e1"
+    },
+    {
+      "source_recording_id": "a7afc633-6a0c-414a-80c1-9b7ec04196bf",
+      "relationship_type": "edit_of",
+      "target_recording_id": "8ae9a544-398b-4351-949a-04905d0f15b8",
+      "evidence": "Manual verification aligned official release objects and identified full and shorter presentations of one performance.",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_11_A_SON_DE_GUERRA.md",
+      "evidence_section_or_reference": "Song: La calle",
+      "source_idempotency_key": "0ebd8907-ee0b-4b10-8c3d-b5e4a997030e",
+      "idempotency_key": "04fe7eb7-1c2e-4256-8ab0-dc4dd65af484"
+    }
+  ],
+  "explicit_exclusions": {
+    "unresolved_findings": 10,
+    "arrangement_holds": 15,
+    "editorial_disambiguation_overrides": 8,
+    "credit_follow_ups": 3
+  }
+}

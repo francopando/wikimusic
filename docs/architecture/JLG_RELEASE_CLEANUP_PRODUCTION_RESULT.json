@@ -1,0 +1,42 @@
+{
+  "timestamp": "2026-08-13T13:15:37.023Z",
+  "mode": "production",
+  "manifest_sha256": "9D6EB5E22EC49399C08C7102A48D1DA8039A0A069D4E102BEB5F225D76D5D13A",
+  "before": {
+    "releases": 3169,
+    "tracks": 22756,
+    "release_artists": 3169,
+    "cover_ingest_rows": 3035,
+    "release_view_events": 22,
+    "recordings": 17051,
+    "jlg_recordings": 327,
+    "version_profiles": 53,
+    "recording_relationships": 8
+  },
+  "after": {
+    "releases": 3165,
+    "tracks": 22716,
+    "release_artists": 3165,
+    "cover_ingest_rows": 3031,
+    "release_view_events": 21,
+    "recordings": 17051,
+    "jlg_recordings": 327,
+    "version_profiles": 53,
+    "recording_relationships": 8
+  },
+  "deleted": {
+    "tracks": 40,
+    "release_artists": 4,
+    "cover_ingest_rows": 4,
+    "release_view_events": 1,
+    "releases": 4
+  },
+  "recording_version_profiles_unchanged": true,
+  "recording_relationships_unchanged": true,
+  "survivors_present": 4,
+  "redundant_present": 0,
+  "unresolved_present": 4,
+  "fogarate_editions_present": 2,
+  "unvalidated_foreign_keys": 0,
+  "passed": true
+}

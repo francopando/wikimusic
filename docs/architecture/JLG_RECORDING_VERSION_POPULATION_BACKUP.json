@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-08-13T02:26:04.546Z",
+  "local_timestamp": "2026-08-12T22:25:25-04:00",
+  "path": "C:\\Mangulina\\backups\\jlg-recording-version-population\\mangulina-production-pre-jlg-version-population-20260812T222525-0400.dump",
+  "size_bytes": 20936018,
+  "sha256": "621CC8EC01A7B19C6A7EC9351F65E9786B058242C6E508206FDB7AAC6300F691",
+  "source_postgresql": "17.6",
+  "archive_validation": "passed",
+  "toc_entries": 1882,
+  "toc_path": "C:\\Mangulina\\backups\\jlg-recording-version-population\\mangulina-production-pre-jlg-version-population-20260812T222525-0400.dump.toc.txt"
+}

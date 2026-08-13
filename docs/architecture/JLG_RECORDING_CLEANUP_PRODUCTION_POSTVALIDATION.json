@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-08-13T00:21:39.149Z",
+  "counts": {
+    "recordings": 327,
+    "tracks": 1452,
+    "releases": 146
+  },
+  "redundant_remaining": 0,
+  "distinct_survivors_remaining": 42,
+  "unresolved_rows_present": 15,
+  "unresolved_rows_checked": 15,
+  "legitimate_version_rows_present": 8,
+  "legitimate_version_rows_checked": 8,
+  "unvalidated_foreign_keys": 0,
+  "orphan_isrc_sources": 0,
+  "orphan_recording_credits": 0,
+  "orphan_recording_work_links": 0,
+  "representative_slugs": [
+    {
+      "id": "3bccc59f-1abf-43ce-8370-18989a8635fd",
+      "title": "Kitipun",
+      "slug": "kitipun-juan-luis-guerra-4-40-3"
+    },
+    {
+      "id": "805979cc-2add-4919-8b64-1615b2328dbf",
+      "title": "Por eso ahora",
+      "slug": "por-eso-ahora-juan-luis-guerra-4-40"
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,3291 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-08-13T01:45:00.000Z",
+  "mode": "NON_MUTATING_REVIEW_ONLY",
+  "authoritative_inputs": [
+    "JLG_MANUAL_VERIFICATION_FINAL.md",
+    "JLG manual verifications 01–13",
+    "JLG_RECORDING_CLEANUP_PRODUCTION_RESULT.md",
+    "RECORDING_VERSION_IDENTITY.md",
+    "RECORDING_VERSION_IDENTITY_IMPLEMENTATION.md"
+  ],
+  "musicbrainz_identity_authority": false,
+  "production_precondition": {
+    "recording_version_profiles": 0,
+    "recording_relationships": 0
+  },
+  "summary": {
+    "verified_findings_reviewed": 67,
+    "unique_surviving_recording_uuids": 67,
+    "profiles_proposed": 55,
+    "profiles_with_performance_kind": 53,
+    "performance_kind": {
+      "studio": 6,
+      "live": 47,
+      "demo": 0,
+      "rehearsal": 0,
+      "other": 0
+    },
+    "profiles_with_derivation_kind": 16,
+    "derivation_kind": {
+      "rerecording": 6,
+      "remix": 2,
+      "edit": 8,
+      "alternate_take": 0,
+      "medley": 0,
+      "other": 0
+    },
+    "profiles_with_language_code": 4,
+    "profiles_with_performance_date": 30,
+    "profiles_with_performance_context": 49,
+    "proven_recording_relationships_proposed": 8,
+    "arrangement_holds": 15,
+    "derived_only_findings": 0,
+    "derived_credit_follow_ups": 3,
+    "editorial_disambiguation_overrides_proposed": 8,
+    "unresolved_no_write_findings": 10,
+    "unresolved_without_any_profile": 8,
+    "findings_remapped_from_deleted_duplicate_uuids": 0,
+    "proposed_action": {
+      "PROFILE": 38,
+      "PROFILE_AND_RELATIONSHIP": 8,
+      "ARRANGEMENT_ONLY_HOLD": 4,
+      "DERIVED_ONLY": 0,
+      "DISAMBIGUATION_OVERRIDE_ONLY": 3,
+      "UNRESOLVED_NO_WRITE": 2,
+      "MIXED": 12
+    }
+  },
+  "entries": [
+    {
+      "recording_id": "0c8dbd99-44cd-45cb-9bc9-e2cd0bc118cd",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_05_BACHATA_ROSA.md",
+      "evidence_section_or_reference": "Song: La bilirrubina",
+      "evidence_summary": "Independent Romance Rosa repertoire and official language-title evidence establish a Portuguese studio performance.",
+      "independent_evidence_sources": [
+        "Independent sources cited in the referenced manual verification section"
+      ],
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "language_code": "pt",
+        "performance_date": "1992-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Romance Rosa"
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": true,
+        "description": "Portuguese-language treatment for future Arrangement review.",
+        "evidence": "Independent Romance Rosa repertoire and official language-title evidence establish a Portuguese studio performance."
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "MIXED",
+      "reasoning": "Independent Romance Rosa repertoire and official language-title evidence establish a Portuguese studio performance.",
+      "original_researched_uuid": "0c8dbd99-44cd-45cb-9bc9-e2cd0bc118cd",
+      "cleanup_survivor_uuid": "0c8dbd99-44cd-45cb-9bc9-e2cd0bc118cd",
+      "cleanup_report_reference": null,
+      "canonical_title": "A bilirrubina",
+      "current_disambiguation": null,
+      "current_identity_summary": {
+        "first_release_id": "81602ec5-4534-4d99-9687-d5bb591d7f73",
+        "first_release_title": "Romance rosa",
+        "first_release_year": 1992,
+        "representative_release_id": "4fdd105f-8ef0-41e7-8d47-2665917e3186",
+        "representative_release_title": "Bonus Tracks",
+        "track_appearance_count": 4,
+        "release_appearance_count": 4,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "EMPTY"
+    },
+    {
+      "recording_id": "60e4b7e3-ecfd-4919-9ff3-a940d98b9071",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_05_BACHATA_ROSA.md",
+      "evidence_section_or_reference": "Song: A pedir su mano",
+      "evidence_summary": "Official Asondeguerra Tour release identifies the full stadium-tour performance; release wording leaves 2012/2013 performance-year precision ambiguous.",
+      "independent_evidence_sources": [
+        "Official Asondeguerra Tour live release and event audio"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE",
+      "reasoning": "Official Asondeguerra Tour release identifies the full stadium-tour performance; release wording leaves 2012/2013 performance-year precision ambiguous.",
+      "original_researched_uuid": "60e4b7e3-ecfd-4919-9ff3-a940d98b9071",
+      "cleanup_survivor_uuid": "60e4b7e3-ecfd-4919-9ff3-a940d98b9071",
+      "cleanup_report_reference": null,
+      "canonical_title": "A pedir su mano",
+      "current_disambiguation": "live",
+      "current_identity_summary": {
+        "first_release_id": "25e2766f-3fa9-4d9f-9102-b1f2c1d2ad70",
+        "first_release_title": "ASonDeGuerra Tour",
+        "first_release_year": 2013,
+        "representative_release_id": "25e2766f-3fa9-4d9f-9102-b1f2c1d2ad70",
+        "representative_release_title": "ASonDeGuerra Tour",
+        "track_appearance_count": 2,
+        "release_appearance_count": 2,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "PARTIALLY_MATCHES"
+    },
+    {
+      "recording_id": "9d67be0e-19cf-4a2e-8af8-39302e0d61dd",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_05_BACHATA_ROSA.md",
+      "evidence_section_or_reference": "Song: A pedir su mano",
+      "evidence_summary": "Official Concierto Aniversario release, concert ISRC, and event-specific official audio establish a distinct 2005 stadium performance.",
+      "independent_evidence_sources": [
+        "Official Concierto Aniversario release",
+        "Official artist-channel concert audio"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2005-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Estadio Olímpico, Santo Domingo"
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE",
+      "reasoning": "Official Concierto Aniversario release, concert ISRC, and event-specific official audio establish a distinct 2005 stadium performance.",
+      "original_researched_uuid": "9d67be0e-19cf-4a2e-8af8-39302e0d61dd",
+      "cleanup_survivor_uuid": "9d67be0e-19cf-4a2e-8af8-39302e0d61dd",
+      "cleanup_report_reference": null,
+      "canonical_title": "A pedir su mano",
+      "current_disambiguation": null,
+      "current_identity_summary": {
+        "first_release_id": "bf46ec31-e5eb-4c00-8c15-256dd3bbef22",
+        "first_release_title": "Concierto aniversario",
+        "first_release_year": 2023,
+        "representative_release_id": "bf46ec31-e5eb-4c00-8c15-256dd3bbef22",
+        "representative_release_title": "Concierto aniversario",
+        "track_appearance_count": 1,
+        "release_appearance_count": 1,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "EMPTY"
+    },
+    {
+      "recording_id": "2f1095cb-a45c-4f55-b0d5-c2d55b1a1576",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_05_BACHATA_ROSA.md",
+      "evidence_section_or_reference": "Song: A pedir su mano",
+      "evidence_summary": "Official Privé audio and separately credited intimate ensemble establish a new 2020 studio rerecording.",
+      "independent_evidence_sources": [
+        "Official Privé release and credits"
+      ],
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "language_code": null,
+        "performance_date": "2020-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Privé"
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": true,
+        "description": "Privé intimate/acoustic treatment for future Arrangement review.",
+        "evidence": "Official Privé audio and separately credited intimate ensemble establish a new 2020 studio rerecording."
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "MIXED",
+      "reasoning": "Official Privé audio and separately credited intimate ensemble establish a new 2020 studio rerecording.",
+      "original_researched_uuid": "2f1095cb-a45c-4f55-b0d5-c2d55b1a1576",
+      "cleanup_survivor_uuid": "2f1095cb-a45c-4f55-b0d5-c2d55b1a1576",
+      "cleanup_report_reference": null,
+      "canonical_title": "A pedir su mano (versión Privé)",
+      "current_disambiguation": null,
+      "current_identity_summary": {
+        "first_release_id": "4afb2859-1850-4643-8b61-f231c8b920a5",
+        "first_release_title": "Privé",
+        "first_release_year": 2020,
+        "representative_release_id": "4afb2859-1850-4643-8b61-f231c8b920a5",
+        "representative_release_title": "Privé",
+        "track_appearance_count": 1,
+        "release_appearance_count": 1,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "EMPTY"
+    },
+    {
+      "recording_id": "d0f3b5c2-e38e-489f-a707-5be5f1a47431",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_08_NI_ES_LO_MISMO_NI_ES_IGUAL.md",
+      "evidence_section_or_reference": "Song: Amapola",
+      "evidence_summary": "Official Concierto Aniversario release, concert ISRC, and event-specific official audio establish a distinct 2005 stadium performance.",
+      "independent_evidence_sources": [
+        "Official Concierto Aniversario release",
+        "Official artist-channel concert audio"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2005-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Estadio Olímpico, Santo Domingo"
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE",
+      "reasoning": "Official Concierto Aniversario release, concert ISRC, and event-specific official audio establish a distinct 2005 stadium performance.",
+      "original_researched_uuid": "d0f3b5c2-e38e-489f-a707-5be5f1a47431",
+      "cleanup_survivor_uuid": "d0f3b5c2-e38e-489f-a707-5be5f1a47431",
+      "cleanup_report_reference": null,
+      "canonical_title": "Amapola",
+      "current_disambiguation": null,
+      "current_identity_summary": {
+        "first_release_id": "bf46ec31-e5eb-4c00-8c15-256dd3bbef22",
+        "first_release_title": "Concierto aniversario",
+        "first_release_year": 2023,
+        "representative_release_id": "bf46ec31-e5eb-4c00-8c15-256dd3bbef22",
+        "representative_release_title": "Concierto aniversario",
+        "track_appearance_count": 1,
+        "release_appearance_count": 1,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "EMPTY"
+    },
+    {
+      "recording_id": "f4216f25-d151-4dd6-b203-3c8d61e5bdb0",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_08_NI_ES_LO_MISMO_NI_ES_IGUAL.md",
+      "evidence_section_or_reference": "Song: Amapola",
+      "evidence_summary": "Independent Encuentro documentation establishes a 2002 staged live performance.",
+      "independent_evidence_sources": [
+        "Independent sources cited in the referenced manual verification section"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2002-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Encuentro"
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [
+        "Guest performers derive from authoritative credits when present"
+      ],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE",
+      "reasoning": "Independent Encuentro documentation establishes a 2002 staged live performance.",
+      "original_researched_uuid": "f4216f25-d151-4dd6-b203-3c8d61e5bdb0",
+      "cleanup_survivor_uuid": "f4216f25-d151-4dd6-b203-3c8d61e5bdb0",
+      "cleanup_report_reference": null,
+      "canonical_title": "Amapola",
+      "current_disambiguation": "live",
+      "current_identity_summary": {
+        "first_release_id": "9377dfe3-7011-47d7-964d-98b628918559",
+        "first_release_title": "Encuentro",
+        "first_release_year": null,
+        "representative_release_id": "9377dfe3-7011-47d7-964d-98b628918559",
+        "representative_release_title": "Encuentro",
+        "track_appearance_count": 1,
+        "release_appearance_count": 1,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": true,
+      "legacy_disambiguation_classification": "PARTIALLY_MATCHES"
+    },
+    {
+      "recording_id": "eae8692e-0aa6-4dc3-90a0-76feb32e4a87",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_03_MIENTRAS_MAS_LO_PIENSO_TU.md",
+      "evidence_section_or_reference": "Song: ¡Ay! Mujer",
+      "evidence_summary": "Independent collection audio establishes a distinct later romantic treatment, but the research does not establish rerecording, exact session, or narrower mechanism.",
+      "independent_evidence_sources": [
+        "Independent sources cited in the referenced manual verification section"
+      ],
+      "proposed_profile": {
+        "performance_kind": null,
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": null
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": true,
+        "description": "Colección romántica treatment; exact arrangement/session mechanism remains unverified.",
+        "evidence": "Independent collection audio establishes a distinct later romantic treatment, but the research does not establish rerecording, exact session, or narrower mechanism."
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": "Colección romántica version",
+      "unresolved": true,
+      "confidence": "medium",
+      "proposed_action": "MIXED",
+      "reasoning": "Independent collection audio establishes a distinct later romantic treatment, but the research does not establish rerecording, exact session, or narrower mechanism.",
+      "original_researched_uuid": "eae8692e-0aa6-4dc3-90a0-76feb32e4a87",
+      "cleanup_survivor_uuid": "eae8692e-0aa6-4dc3-90a0-76feb32e4a87",
+      "cleanup_report_reference": null,
+      "canonical_title": "Ay mujer",
+      "current_disambiguation": null,
+      "current_identity_summary": {
+        "first_release_id": "934a0ee2-6022-4df6-8016-069c8ccdb5f5",
+        "first_release_title": "The Collection",
+        "first_release_year": 2000,
+        "representative_release_id": "4fdd105f-8ef0-41e7-8d47-2665917e3186",
+        "representative_release_title": "Bonus Tracks",
+        "track_appearance_count": 7,
+        "release_appearance_count": 7,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "EMPTY"
+    },
+    {
+      "recording_id": "0672bd04-bf0f-4848-8a31-ace1723c7657",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_11_A_SON_DE_GUERRA.md",
+      "evidence_section_or_reference": "Song: Bachata en Fukuoka",
+      "evidence_summary": "Official Asondeguerra Tour release identifies the full stadium-tour performance; release wording leaves 2012/2013 performance-year precision ambiguous.",
+      "independent_evidence_sources": [
+        "Official Asondeguerra Tour live release and event audio"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE",
+      "reasoning": "Official Asondeguerra Tour release identifies the full stadium-tour performance; release wording leaves 2012/2013 performance-year precision ambiguous.",
+      "original_researched_uuid": "0672bd04-bf0f-4848-8a31-ace1723c7657",
+      "cleanup_survivor_uuid": "0672bd04-bf0f-4848-8a31-ace1723c7657",
+      "cleanup_report_reference": null,
+      "canonical_title": "Bachata en Fukuoka",
+      "current_disambiguation": "live",
+      "current_identity_summary": {
+        "first_release_id": "7764c263-64ec-490f-970c-7ace93c28d93",
+        "first_release_title": "A son de Guerra",
+        "first_release_year": 2012,
+        "representative_release_id": "df79c642-5162-48f0-af69-1ac385bdadd9",
+        "representative_release_title": "Asondeguerra Tour: En Vivo Estadio Olímpico De República Dominicana/2012",
+        "track_appearance_count": 5,
+        "release_appearance_count": 5,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "PARTIALLY_MATCHES"
+    },
+    {
+      "recording_id": "3e54974b-5287-4060-ac37-2fe03de0f240",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_11_A_SON_DE_GUERRA.md",
+      "evidence_section_or_reference": "Song: Bachata en Fukuoka",
+      "evidence_summary": "Official release objects establish a shorter edit of the same Asondeguerra Tour performance represented by the full-audio Recording.",
+      "independent_evidence_sources": [
+        "Official Asondeguerra Tour release objects"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": "edit",
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+      },
+      "proposed_relationships": [
+        {
+          "relationship_type": "edit_of",
+          "target_recording_id": "0672bd04-bf0f-4848-8a31-ace1723c7657",
+          "evidence": "Manual verification aligned official release objects and identified full and shorter presentations of one performance."
+        }
+      ],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE_AND_RELATIONSHIP",
+      "reasoning": "Official release objects establish a shorter edit of the same Asondeguerra Tour performance represented by the full-audio Recording.",
+      "original_researched_uuid": "3e54974b-5287-4060-ac37-2fe03de0f240",
+      "cleanup_survivor_uuid": "3e54974b-5287-4060-ac37-2fe03de0f240",
+      "cleanup_report_reference": null,
+      "canonical_title": "Bachata en Fukuoka",
+      "current_disambiguation": "live",
+      "current_identity_summary": {
+        "first_release_id": "25e2766f-3fa9-4d9f-9102-b1f2c1d2ad70",
+        "first_release_title": "ASonDeGuerra Tour",
+        "first_release_year": 2013,
+        "representative_release_id": "25e2766f-3fa9-4d9f-9102-b1f2c1d2ad70",
+        "representative_release_title": "ASonDeGuerra Tour",
+        "track_appearance_count": 2,
+        "release_appearance_count": 2,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "PARTIALLY_MATCHES"
+    },
+    {
+      "recording_id": "6ac3e43e-782b-4939-bb7f-e292322eeb4d",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_05_BACHATA_ROSA.md",
+      "evidence_section_or_reference": "Song: Bachata rosa",
+      "evidence_summary": "Independent Encuentro catalogs establish a distinct 2002 live performance.",
+      "independent_evidence_sources": [
+        "Independent sources cited in the referenced manual verification section"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2002-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Encuentro"
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE",
+      "reasoning": "Independent Encuentro catalogs establish a distinct 2002 live performance.",
+      "original_researched_uuid": "6ac3e43e-782b-4939-bb7f-e292322eeb4d",
+      "cleanup_survivor_uuid": "6ac3e43e-782b-4939-bb7f-e292322eeb4d",
+      "cleanup_report_reference": null,
+      "canonical_title": "Bachata rosa",
+      "current_disambiguation": "live",
+      "current_identity_summary": {
+        "first_release_id": "9377dfe3-7011-47d7-964d-98b628918559",
+        "first_release_title": "Encuentro",
+        "first_release_year": null,
+        "representative_release_id": "9377dfe3-7011-47d7-964d-98b628918559",
+        "representative_release_title": "Encuentro",
+        "track_appearance_count": 1,
+        "release_appearance_count": 1,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "PARTIALLY_MATCHES"
+    },
+    {
+      "recording_id": "e1311fcd-e780-4713-9efe-b39590128ef9",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_05_BACHATA_ROSA.md",
+      "evidence_section_or_reference": "Song: Bachata rosa",
+      "evidence_summary": "Official Asondeguerra Tour release identifies the full stadium-tour performance; release wording leaves 2012/2013 performance-year precision ambiguous.",
+      "independent_evidence_sources": [
+        "Official Asondeguerra Tour live release and event audio"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE",
+      "reasoning": "Official Asondeguerra Tour release identifies the full stadium-tour performance; release wording leaves 2012/2013 performance-year precision ambiguous.",
+      "original_researched_uuid": "e1311fcd-e780-4713-9efe-b39590128ef9",
+      "cleanup_survivor_uuid": "e1311fcd-e780-4713-9efe-b39590128ef9",
+      "cleanup_report_reference": null,
+      "canonical_title": "Bachata rosa",
+      "current_disambiguation": "live",
+      "current_identity_summary": {
+        "first_release_id": "25e2766f-3fa9-4d9f-9102-b1f2c1d2ad70",
+        "first_release_title": "ASonDeGuerra Tour",
+        "first_release_year": 2013,
+        "representative_release_id": "25e2766f-3fa9-4d9f-9102-b1f2c1d2ad70",
+        "representative_release_title": "ASonDeGuerra Tour",
+        "track_appearance_count": 2,
+        "release_appearance_count": 2,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "PARTIALLY_MATCHES"
+    },
+    {
+      "recording_id": "9f24bf27-cbf1-49ea-9299-751fe316eb70",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_05_BACHATA_ROSA.md",
+      "evidence_section_or_reference": "Song: La bilirrubina",
+      "evidence_summary": "Independent Encuentro catalogs establish a live performance, while its relationship to the short Bonus Tracks presentation remains unresolved.",
+      "independent_evidence_sources": [
+        "Independent sources cited in the referenced manual verification section"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2002-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Encuentro"
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": true,
+      "confidence": "medium",
+      "proposed_action": "PROFILE",
+      "reasoning": "Independent Encuentro catalogs establish a live performance, while its relationship to the short Bonus Tracks presentation remains unresolved.",
+      "original_researched_uuid": "9f24bf27-cbf1-49ea-9299-751fe316eb70",
+      "cleanup_survivor_uuid": "9f24bf27-cbf1-49ea-9299-751fe316eb70",
+      "cleanup_report_reference": null,
+      "canonical_title": "Bilirrubina",
+      "current_disambiguation": "live",
+      "current_identity_summary": {
+        "first_release_id": "9377dfe3-7011-47d7-964d-98b628918559",
+        "first_release_title": "Encuentro",
+        "first_release_year": null,
+        "representative_release_id": "9377dfe3-7011-47d7-964d-98b628918559",
+        "representative_release_title": "Encuentro",
+        "track_appearance_count": 1,
+        "release_appearance_count": 1,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "PARTIALLY_MATCHES"
+    },
+    {
+      "recording_id": "c446ba5a-5c33-41a9-ac35-8809fca6fb63",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_13_LITERAL.md",
+      "evidence_section_or_reference": "Cantando bachata ledger",
+      "evidence_summary": "Separate official objects and ISRC establish the rock Recording; rock is an Arrangement fact and does not fit a version derivation enum.",
+      "independent_evidence_sources": [
+        "Independent sources cited in the referenced manual verification section"
+      ],
+      "proposed_profile": {
+        "performance_kind": null,
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": null
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": true,
+        "description": "Rock arrangement.",
+        "evidence": "Separate official objects and ISRC establish the rock Recording; rock is an Arrangement fact and does not fit a version derivation enum."
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "ARRANGEMENT_ONLY_HOLD",
+      "reasoning": "Separate official objects and ISRC establish the rock Recording; rock is an Arrangement fact and does not fit a version derivation enum.",
+      "original_researched_uuid": "c446ba5a-5c33-41a9-ac35-8809fca6fb63",
+      "cleanup_survivor_uuid": "c446ba5a-5c33-41a9-ac35-8809fca6fb63",
+      "cleanup_report_reference": null,
+      "canonical_title": "Cantando bachata",
+      "current_disambiguation": "versión rock",
+      "current_identity_summary": {
+        "first_release_id": "cbcd5288-084b-40f9-8a07-5944ed9d1c5d",
+        "first_release_title": "Cantando bachata",
+        "first_release_year": 2021,
+        "representative_release_id": "cbcd5288-084b-40f9-8a07-5944ed9d1c5d",
+        "representative_release_title": "Cantando bachata",
+        "track_appearance_count": 1,
+        "release_appearance_count": 1,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "ARRANGEMENT_TEXT"
+    },
+    {
+      "recording_id": "8e8a2b7f-dfd0-49eb-9a1e-94a0f4c91091",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_05_BACHATA_ROSA.md",
+      "evidence_section_or_reference": "Song: Como abeja al panal",
+      "evidence_summary": "Official Concierto Aniversario release, concert ISRC, and event-specific official audio establish a distinct 2005 stadium performance.",
+      "independent_evidence_sources": [
+        "Official Concierto Aniversario release",
+        "Official artist-channel concert audio"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2005-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Estadio Olímpico, Santo Domingo"
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE",
+      "reasoning": "Official Concierto Aniversario release, concert ISRC, and event-specific official audio establish a distinct 2005 stadium performance.",
+      "original_researched_uuid": "8e8a2b7f-dfd0-49eb-9a1e-94a0f4c91091",
+      "cleanup_survivor_uuid": "8e8a2b7f-dfd0-49eb-9a1e-94a0f4c91091",
+      "cleanup_report_reference": null,
+      "canonical_title": "Como abeja al panal",
+      "current_disambiguation": null,
+      "current_identity_summary": {
+        "first_release_id": "bf46ec31-e5eb-4c00-8c15-256dd3bbef22",
+        "first_release_title": "Concierto aniversario",
+        "first_release_year": 2023,
+        "representative_release_id": "bf46ec31-e5eb-4c00-8c15-256dd3bbef22",
+        "representative_release_title": "Concierto aniversario",
+        "track_appearance_count": 1,
+        "release_appearance_count": 1,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "EMPTY"
+    },
+    {
+      "recording_id": "6531c0fc-bd41-4124-9219-bbcef2e6889a",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_10_LA_LLAVE_DE_MI_CORAZON.md",
+      "evidence_section_or_reference": "Song: Como yo",
+      "evidence_summary": "Official Entre Mar y Palmeras release and official performance video establish a separate 2021 live performance.",
+      "independent_evidence_sources": [
+        "Official Entre Mar y Palmeras release",
+        "Official performance video"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2021-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Entre Mar y Palmeras"
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE",
+      "reasoning": "Official Entre Mar y Palmeras release and official performance video establish a separate 2021 live performance.",
+      "original_researched_uuid": "6531c0fc-bd41-4124-9219-bbcef2e6889a",
+      "cleanup_survivor_uuid": "6531c0fc-bd41-4124-9219-bbcef2e6889a",
+      "cleanup_report_reference": null,
+      "canonical_title": "Como yo",
+      "current_disambiguation": "live, 2021",
+      "current_identity_summary": {
+        "first_release_id": "8562d880-e42d-4c4d-8c55-d9101fdf3d22",
+        "first_release_title": "Entre mar y palmeras",
+        "first_release_year": 2021,
+        "representative_release_id": "8562d880-e42d-4c4d-8c55-d9101fdf3d22",
+        "representative_release_title": "Entre mar y palmeras",
+        "track_appearance_count": 2,
+        "release_appearance_count": 2,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "PARTIALLY_MATCHES"
+    },
+    {
+      "recording_id": "d9426939-3487-4a76-b5c9-4a63e0f4a8a9",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_06_AREITO.md",
+      "evidence_section_or_reference": "Song: Cuando te beso",
+      "evidence_summary": "Official album program and different previews establish a bonus/orchestral reprise, which is an Arrangement fact rather than a core version facet.",
+      "independent_evidence_sources": [
+        "Independent sources cited in the referenced manual verification section"
+      ],
+      "proposed_profile": {
+        "performance_kind": null,
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": null
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": true,
+        "description": "Bonus-track orchestral reprise arranged/directed by José Antonio Molina.",
+        "evidence": "Official album program and different previews establish a bonus/orchestral reprise, which is an Arrangement fact rather than a core version facet."
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": "Bonus Track / orchestral reprise",
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "ARRANGEMENT_ONLY_HOLD",
+      "reasoning": "Official album program and different previews establish a bonus/orchestral reprise, which is an Arrangement fact rather than a core version facet.",
+      "original_researched_uuid": "d9426939-3487-4a76-b5c9-4a63e0f4a8a9",
+      "cleanup_survivor_uuid": "d9426939-3487-4a76-b5c9-4a63e0f4a8a9",
+      "cleanup_report_reference": null,
+      "canonical_title": "Cuando te beso II",
+      "current_disambiguation": null,
+      "current_identity_summary": {
+        "first_release_id": "177594ff-849e-400e-b315-36f9982461e0",
+        "first_release_title": "Areíto",
+        "first_release_year": 1992,
+        "representative_release_id": "b0d4155a-45fe-4c56-8d0d-73c35c2c26a7",
+        "representative_release_title": "Areíto",
+        "track_appearance_count": 3,
+        "release_appearance_count": 3,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "EMPTY"
+    },
+    {
+      "recording_id": "ba5bb58b-f603-4a45-bd88-c20970664b84",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_10_LA_LLAVE_DE_MI_CORAZON.md",
+      "evidence_section_or_reference": "Si tú no bailas conmigo ledger",
+      "evidence_summary": "Official 2020 English collaboration has a separate ISRC and newly recorded studio performance.",
+      "independent_evidence_sources": [
+        "Independent sources cited in the referenced manual verification section"
+      ],
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "language_code": "en",
+        "performance_date": "2020-01-01",
+        "performance_date_precision": "year",
+        "performance_context": null
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": true,
+        "description": "English collaboration/dance treatment for future Arrangement review.",
+        "evidence": "Official 2020 English collaboration has a separate ISRC and newly recorded studio performance."
+      },
+      "derived_only_facts": [
+        "Collaborating performer derives from recording credits"
+      ],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "MIXED",
+      "reasoning": "Official 2020 English collaboration has a separate ISRC and newly recorded studio performance.",
+      "original_researched_uuid": "ba5bb58b-f603-4a45-bd88-c20970664b84",
+      "cleanup_survivor_uuid": "ba5bb58b-f603-4a45-bd88-c20970664b84",
+      "cleanup_report_reference": null,
+      "canonical_title": "Dance with Me (Si tú no bailas conmigo)",
+      "current_disambiguation": null,
+      "current_identity_summary": {
+        "first_release_id": "8ce74d15-5f56-4763-bfc4-5b667f1e33de",
+        "first_release_title": "Dance with Me (Si tú no bailas conmigo)",
+        "first_release_year": null,
+        "representative_release_id": "8ce74d15-5f56-4763-bfc4-5b667f1e33de",
+        "representative_release_title": "Dance with Me (Si tú no bailas conmigo)",
+        "track_appearance_count": 1,
+        "release_appearance_count": 1,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": true,
+      "legacy_disambiguation_classification": "EMPTY"
+    },
+    {
+      "recording_id": "73c3e9dd-859c-4009-877a-ca2424dd8541",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_06_AREITO.md",
+      "evidence_section_or_reference": "Song: El costo de la vida",
+      "evidence_summary": "Official Concierto Aniversario release, concert ISRC, and event-specific official audio establish a distinct 2005 stadium performance.",
+      "independent_evidence_sources": [
+        "Official Concierto Aniversario release",
+        "Official artist-channel concert audio"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2005-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Estadio Olímpico, Santo Domingo"
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE",
+      "reasoning": "Official Concierto Aniversario release, concert ISRC, and event-specific official audio establish a distinct 2005 stadium performance.",
+      "original_researched_uuid": "73c3e9dd-859c-4009-877a-ca2424dd8541",
+      "cleanup_survivor_uuid": "73c3e9dd-859c-4009-877a-ca2424dd8541",
+      "cleanup_report_reference": null,
+      "canonical_title": "El costo de la vida",
+      "current_disambiguation": null,
+      "current_identity_summary": {
+        "first_release_id": "bf46ec31-e5eb-4c00-8c15-256dd3bbef22",
+        "first_release_title": "Concierto aniversario",
+        "first_release_year": 2023,
+        "representative_release_id": "bf46ec31-e5eb-4c00-8c15-256dd3bbef22",
+        "representative_release_title": "Concierto aniversario",
+        "track_appearance_count": 1,
+        "release_appearance_count": 1,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "EMPTY"
+    },
+    {
+      "recording_id": "749e731b-9f79-4cfd-b203-d01a8d4c2b45",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_07_FOGARATE.md",
+      "evidence_section_or_reference": "Song: El farolito",
+      "evidence_summary": "Official Entre Mar y Palmeras release and official performance video establish a separate 2021 live performance.",
+      "independent_evidence_sources": [
+        "Official Entre Mar y Palmeras release",
+        "Official performance video"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2021-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Entre Mar y Palmeras"
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE",
+      "reasoning": "Official Entre Mar y Palmeras release and official performance video establish a separate 2021 live performance.",
+      "original_researched_uuid": "749e731b-9f79-4cfd-b203-d01a8d4c2b45",
+      "cleanup_survivor_uuid": "749e731b-9f79-4cfd-b203-d01a8d4c2b45",
+      "cleanup_report_reference": null,
+      "canonical_title": "El farolito",
+      "current_disambiguation": "live, 2021",
+      "current_identity_summary": {
+        "first_release_id": "8562d880-e42d-4c4d-8c55-d9101fdf3d22",
+        "first_release_title": "Entre mar y palmeras",
+        "first_release_year": 2021,
+        "representative_release_id": "8562d880-e42d-4c4d-8c55-d9101fdf3d22",
+        "representative_release_title": "Entre mar y palmeras",
+        "track_appearance_count": 2,
+        "release_appearance_count": 2,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "PARTIALLY_MATCHES"
+    },
+    {
+      "recording_id": "1fb2a355-75eb-4b56-b1c8-e531a99c1e45",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_08_NI_ES_LO_MISMO_NI_ES_IGUAL.md",
+      "evidence_section_or_reference": "Song: El Niágara en bicicleta",
+      "evidence_summary": "Official Asondeguerra Tour release identifies the full stadium-tour performance; release wording leaves 2012/2013 performance-year precision ambiguous.",
+      "independent_evidence_sources": [
+        "Official Asondeguerra Tour live release and event audio"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE",
+      "reasoning": "Official Asondeguerra Tour release identifies the full stadium-tour performance; release wording leaves 2012/2013 performance-year precision ambiguous.",
+      "original_researched_uuid": "1fb2a355-75eb-4b56-b1c8-e531a99c1e45",
+      "cleanup_survivor_uuid": "1fb2a355-75eb-4b56-b1c8-e531a99c1e45",
+      "cleanup_report_reference": null,
+      "canonical_title": "El Niágara en bicicleta",
+      "current_disambiguation": "live",
+      "current_identity_summary": {
+        "first_release_id": "25e2766f-3fa9-4d9f-9102-b1f2c1d2ad70",
+        "first_release_title": "ASonDeGuerra Tour",
+        "first_release_year": 2013,
+        "representative_release_id": "df79c642-5162-48f0-af69-1ac385bdadd9",
+        "representative_release_title": "Asondeguerra Tour: En Vivo Estadio Olímpico De República Dominicana/2012",
+        "track_appearance_count": 6,
+        "release_appearance_count": 4,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "PARTIALLY_MATCHES"
+    },
+    {
+      "recording_id": "a3b5b0e0-6739-474e-9187-83d2bc4ff5cb",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_08_NI_ES_LO_MISMO_NI_ES_IGUAL.md",
+      "evidence_section_or_reference": "Song: El Niágara en bicicleta",
+      "evidence_summary": "Official Entre Mar y Palmeras release and official performance video establish a separate 2021 live performance.",
+      "independent_evidence_sources": [
+        "Official Entre Mar y Palmeras release",
+        "Official performance video"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2021-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Entre Mar y Palmeras"
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE",
+      "reasoning": "Official Entre Mar y Palmeras release and official performance video establish a separate 2021 live performance.",
+      "original_researched_uuid": "a3b5b0e0-6739-474e-9187-83d2bc4ff5cb",
+      "cleanup_survivor_uuid": "a3b5b0e0-6739-474e-9187-83d2bc4ff5cb",
+      "cleanup_report_reference": null,
+      "canonical_title": "El Niágara en bicicleta",
+      "current_disambiguation": "live, 2021",
+      "current_identity_summary": {
+        "first_release_id": "8562d880-e42d-4c4d-8c55-d9101fdf3d22",
+        "first_release_title": "Entre mar y palmeras",
+        "first_release_year": 2021,
+        "representative_release_id": "8562d880-e42d-4c4d-8c55-d9101fdf3d22",
+        "representative_release_title": "Entre mar y palmeras",
+        "track_appearance_count": 2,
+        "release_appearance_count": 2,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "PARTIALLY_MATCHES"
+    },
+    {
+      "recording_id": "e382ea92-7519-406e-869c-7e479e00a70c",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_08_NI_ES_LO_MISMO_NI_ES_IGUAL.md",
+      "evidence_section_or_reference": "Song: El Niágara en bicicleta",
+      "evidence_summary": "Official 2025 remix single establishes remixed audio, but the exact source Recording was not independently proven.",
+      "independent_evidence_sources": [
+        "Official 2025 remix single"
+      ],
+      "proposed_profile": {
+        "performance_kind": null,
+        "derivation_kind": "remix",
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": null
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": true,
+        "description": "2025 remix production for future Arrangement review.",
+        "evidence": "Official 2025 remix single establishes remixed audio, but the exact source Recording was not independently proven."
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "MIXED",
+      "reasoning": "Official 2025 remix single establishes remixed audio, but the exact source Recording was not independently proven.",
+      "original_researched_uuid": "e382ea92-7519-406e-869c-7e479e00a70c",
+      "cleanup_survivor_uuid": "e382ea92-7519-406e-869c-7e479e00a70c",
+      "cleanup_report_reference": null,
+      "canonical_title": "El Niágara en bicicleta (remix)",
+      "current_disambiguation": null,
+      "current_identity_summary": {
+        "first_release_id": "ce3994de-9025-4cd8-b6bd-ab5afbdbdab4",
+        "first_release_title": "El Niágara en bicicleta",
+        "first_release_year": 2025,
+        "representative_release_id": "ce3994de-9025-4cd8-b6bd-ab5afbdbdab4",
+        "representative_release_title": "El Niágara en bicicleta",
+        "track_appearance_count": 1,
+        "release_appearance_count": 1,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "EMPTY"
+    },
+    {
+      "recording_id": "334ae297-d150-4a81-9427-a416ecb0aa1d",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_06_AREITO.md",
+      "evidence_section_or_reference": "Song: Frío, frío",
+      "evidence_summary": "Official Asondeguerra Tour release identifies the full stadium-tour performance; release wording leaves 2012/2013 performance-year precision ambiguous.",
+      "independent_evidence_sources": [
+        "Official Asondeguerra Tour live release and event audio"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE",
+      "reasoning": "Official Asondeguerra Tour release identifies the full stadium-tour performance; release wording leaves 2012/2013 performance-year precision ambiguous.",
+      "original_researched_uuid": "334ae297-d150-4a81-9427-a416ecb0aa1d",
+      "cleanup_survivor_uuid": "334ae297-d150-4a81-9427-a416ecb0aa1d",
+      "cleanup_report_reference": null,
+      "canonical_title": "Frío, frío",
+      "current_disambiguation": "live",
+      "current_identity_summary": {
+        "first_release_id": "2489f428-4ce1-46c7-90cd-70775fe85a4c",
+        "first_release_title": "Frío, frío",
+        "first_release_year": 2013,
+        "representative_release_id": "df79c642-5162-48f0-af69-1ac385bdadd9",
+        "representative_release_title": "Asondeguerra Tour: En Vivo Estadio Olímpico De República Dominicana/2012",
+        "track_appearance_count": 5,
+        "release_appearance_count": 5,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "PARTIALLY_MATCHES"
+    },
+    {
+      "recording_id": "8b866647-4640-49c2-b711-14a6103b18ed",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_06_AREITO.md",
+      "evidence_section_or_reference": "Song: Frío, frío",
+      "evidence_summary": "Official release objects establish a shorter edit of the same Asondeguerra Tour performance represented by the full-audio Recording.",
+      "independent_evidence_sources": [
+        "Official Asondeguerra Tour release objects"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": "edit",
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+      },
+      "proposed_relationships": [
+        {
+          "relationship_type": "edit_of",
+          "target_recording_id": "334ae297-d150-4a81-9427-a416ecb0aa1d",
+          "evidence": "Manual verification aligned official release objects and identified full and shorter presentations of one performance."
+        }
+      ],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE_AND_RELATIONSHIP",
+      "reasoning": "Official release objects establish a shorter edit of the same Asondeguerra Tour performance represented by the full-audio Recording.",
+      "original_researched_uuid": "8b866647-4640-49c2-b711-14a6103b18ed",
+      "cleanup_survivor_uuid": "8b866647-4640-49c2-b711-14a6103b18ed",
+      "cleanup_report_reference": null,
+      "canonical_title": "Frío, frío",
+      "current_disambiguation": "live",
+      "current_identity_summary": {
+        "first_release_id": "25e2766f-3fa9-4d9f-9102-b1f2c1d2ad70",
+        "first_release_title": "ASonDeGuerra Tour",
+        "first_release_year": 2013,
+        "representative_release_id": "25e2766f-3fa9-4d9f-9102-b1f2c1d2ad70",
+        "representative_release_title": "ASonDeGuerra Tour",
+        "track_appearance_count": 3,
+        "release_appearance_count": 3,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "PARTIALLY_MATCHES"
+    },
+    {
+      "recording_id": "99f2bcb6-da07-4143-8649-90229c5a4d2b",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_06_AREITO.md",
+      "evidence_section_or_reference": "Song: Frío, frío",
+      "evidence_summary": "Separate official Colección Romántica audio is verified, but rerecording versus edit cannot be narrowed.",
+      "independent_evidence_sources": [
+        "Independent sources cited in the referenced manual verification section"
+      ],
+      "proposed_profile": {
+        "performance_kind": null,
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": null
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": true,
+        "description": "Colección romántica treatment; exact mechanism unresolved.",
+        "evidence": "Separate official Colección Romántica audio is verified, but rerecording versus edit cannot be narrowed."
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": "Colección romántica version",
+      "unresolved": true,
+      "confidence": "medium",
+      "proposed_action": "MIXED",
+      "reasoning": "Separate official Colección Romántica audio is verified, but rerecording versus edit cannot be narrowed.",
+      "original_researched_uuid": "99f2bcb6-da07-4143-8649-90229c5a4d2b",
+      "cleanup_survivor_uuid": "99f2bcb6-da07-4143-8649-90229c5a4d2b",
+      "cleanup_report_reference": null,
+      "canonical_title": "Frío, frío",
+      "current_disambiguation": null,
+      "current_identity_summary": {
+        "first_release_id": "934a0ee2-6022-4df6-8016-069c8ccdb5f5",
+        "first_release_title": "The Collection",
+        "first_release_year": 2000,
+        "representative_release_id": "dcb731cb-0a81-4e48-a49b-b57692542f58",
+        "representative_release_title": "Colección romántica",
+        "track_appearance_count": 6,
+        "release_appearance_count": 6,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "EMPTY"
+    },
+    {
+      "recording_id": "a6ff5439-c736-4499-83ca-c1989c217607",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_03_MIENTRAS_MAS_LO_PIENSO_TU.md",
+      "evidence_section_or_reference": "Song: Guavaberry",
+      "evidence_summary": "The 1992 Romance Rosa audio is substantially extended and distinct, but preview evidence cannot distinguish new performance, extended mix, or hybrid.",
+      "independent_evidence_sources": [
+        "Independent sources cited in the referenced manual verification section"
+      ],
+      "proposed_profile": {
+        "performance_kind": null,
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": null
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": "1992 Romance Rosa extended version",
+      "unresolved": true,
+      "confidence": "medium",
+      "proposed_action": "DISAMBIGUATION_OVERRIDE_ONLY",
+      "reasoning": "The 1992 Romance Rosa audio is substantially extended and distinct, but preview evidence cannot distinguish new performance, extended mix, or hybrid.",
+      "original_researched_uuid": "a6ff5439-c736-4499-83ca-c1989c217607",
+      "cleanup_survivor_uuid": "a6ff5439-c736-4499-83ca-c1989c217607",
+      "cleanup_report_reference": null,
+      "canonical_title": "Guavaberry",
+      "current_disambiguation": null,
+      "current_identity_summary": {
+        "first_release_id": "81602ec5-4534-4d99-9687-d5bb591d7f73",
+        "first_release_title": "Romance rosa",
+        "first_release_year": 1992,
+        "representative_release_id": "81602ec5-4534-4d99-9687-d5bb591d7f73",
+        "representative_release_title": "Romance rosa",
+        "track_appearance_count": 2,
+        "release_appearance_count": 2,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "EMPTY"
+    },
+    {
+      "recording_id": "0ad921c7-4774-4815-be1d-6a061f710620",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_13_LITERAL.md",
+      "evidence_section_or_reference": "Song: Kitipun",
+      "evidence_summary": "Official Entre Mar y Palmeras release and official performance video establish a separate 2021 live performance.",
+      "independent_evidence_sources": [
+        "Official Entre Mar y Palmeras release",
+        "Official performance video"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2021-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Entre Mar y Palmeras"
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE",
+      "reasoning": "Official Entre Mar y Palmeras release and official performance video establish a separate 2021 live performance.",
+      "original_researched_uuid": "0ad921c7-4774-4815-be1d-6a061f710620",
+      "cleanup_survivor_uuid": "0ad921c7-4774-4815-be1d-6a061f710620",
+      "cleanup_report_reference": null,
+      "canonical_title": "Kitipun",
+      "current_disambiguation": "live, 2021",
+      "current_identity_summary": {
+        "first_release_id": "8562d880-e42d-4c4d-8c55-d9101fdf3d22",
+        "first_release_title": "Entre mar y palmeras",
+        "first_release_year": 2021,
+        "representative_release_id": "8562d880-e42d-4c4d-8c55-d9101fdf3d22",
+        "representative_release_title": "Entre mar y palmeras",
+        "track_appearance_count": 2,
+        "release_appearance_count": 2,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "PARTIALLY_MATCHES"
+    },
+    {
+      "recording_id": "597be780-60e6-4888-8e9d-1ade991b7669",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_05_BACHATA_ROSA.md",
+      "evidence_section_or_reference": "Song: La bilirrubina",
+      "evidence_summary": "Official Bonus Tracks exposes a short non-original presentation, but edit versus distinct performance is unresolved.",
+      "independent_evidence_sources": [
+        "Independent sources cited in the referenced manual verification section"
+      ],
+      "proposed_profile": {
+        "performance_kind": null,
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": null
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": "Short Bonus Tracks version",
+      "unresolved": true,
+      "confidence": "low",
+      "proposed_action": "DISAMBIGUATION_OVERRIDE_ONLY",
+      "reasoning": "Official Bonus Tracks exposes a short non-original presentation, but edit versus distinct performance is unresolved.",
+      "original_researched_uuid": "597be780-60e6-4888-8e9d-1ade991b7669",
+      "cleanup_survivor_uuid": "597be780-60e6-4888-8e9d-1ade991b7669",
+      "cleanup_report_reference": null,
+      "canonical_title": "La bilirrubina",
+      "current_disambiguation": null,
+      "current_identity_summary": {
+        "first_release_id": "4fdd105f-8ef0-41e7-8d47-2665917e3186",
+        "first_release_title": "Bonus Tracks",
+        "first_release_year": 2010,
+        "representative_release_id": "4fdd105f-8ef0-41e7-8d47-2665917e3186",
+        "representative_release_title": "Bonus Tracks",
+        "track_appearance_count": 1,
+        "release_appearance_count": 1,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "EMPTY"
+    },
+    {
+      "recording_id": "d1c688c3-b76b-4b11-83a2-49426094922f",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_05_BACHATA_ROSA.md",
+      "evidence_section_or_reference": "Song: La bilirrubina",
+      "evidence_summary": "Official Concierto Aniversario release, concert ISRC, and event-specific official audio establish a distinct 2005 stadium performance.",
+      "independent_evidence_sources": [
+        "Official Concierto Aniversario release",
+        "Official artist-channel concert audio"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2005-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Estadio Olímpico, Santo Domingo"
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE",
+      "reasoning": "Official Concierto Aniversario release, concert ISRC, and event-specific official audio establish a distinct 2005 stadium performance.",
+      "original_researched_uuid": "d1c688c3-b76b-4b11-83a2-49426094922f",
+      "cleanup_survivor_uuid": "d1c688c3-b76b-4b11-83a2-49426094922f",
+      "cleanup_report_reference": null,
+      "canonical_title": "La bilirrubina",
+      "current_disambiguation": null,
+      "current_identity_summary": {
+        "first_release_id": "bf46ec31-e5eb-4c00-8c15-256dd3bbef22",
+        "first_release_title": "Concierto aniversario",
+        "first_release_year": 2023,
+        "representative_release_id": "bf46ec31-e5eb-4c00-8c15-256dd3bbef22",
+        "representative_release_title": "Concierto aniversario",
+        "track_appearance_count": 1,
+        "release_appearance_count": 1,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "EMPTY"
+    },
+    {
+      "recording_id": "8ae9a544-398b-4351-949a-04905d0f15b8",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_11_A_SON_DE_GUERRA.md",
+      "evidence_section_or_reference": "Song: La calle",
+      "evidence_summary": "Official Asondeguerra Tour release identifies the full stadium-tour performance; release wording leaves 2012/2013 performance-year precision ambiguous.",
+      "independent_evidence_sources": [
+        "Official Asondeguerra Tour live release and event audio"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE",
+      "reasoning": "Official Asondeguerra Tour release identifies the full stadium-tour performance; release wording leaves 2012/2013 performance-year precision ambiguous.",
+      "original_researched_uuid": "8ae9a544-398b-4351-949a-04905d0f15b8",
+      "cleanup_survivor_uuid": "8ae9a544-398b-4351-949a-04905d0f15b8",
+      "cleanup_report_reference": null,
+      "canonical_title": "La calle",
+      "current_disambiguation": "live",
+      "current_identity_summary": {
+        "first_release_id": "7764c263-64ec-490f-970c-7ace93c28d93",
+        "first_release_title": "A son de Guerra",
+        "first_release_year": 2012,
+        "representative_release_id": "df79c642-5162-48f0-af69-1ac385bdadd9",
+        "representative_release_title": "Asondeguerra Tour: En Vivo Estadio Olímpico De República Dominicana/2012",
+        "track_appearance_count": 5,
+        "release_appearance_count": 5,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "PARTIALLY_MATCHES"
+    },
+    {
+      "recording_id": "a7afc633-6a0c-414a-80c1-9b7ec04196bf",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_11_A_SON_DE_GUERRA.md",
+      "evidence_section_or_reference": "Song: La calle",
+      "evidence_summary": "Official release objects establish a shorter edit of the same Asondeguerra Tour performance represented by the full-audio Recording.",
+      "independent_evidence_sources": [
+        "Official Asondeguerra Tour release objects"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": "edit",
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+      },
+      "proposed_relationships": [
+        {
+          "relationship_type": "edit_of",
+          "target_recording_id": "8ae9a544-398b-4351-949a-04905d0f15b8",
+          "evidence": "Manual verification aligned official release objects and identified full and shorter presentations of one performance."
+        }
+      ],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE_AND_RELATIONSHIP",
+      "reasoning": "Official release objects establish a shorter edit of the same Asondeguerra Tour performance represented by the full-audio Recording.",
+      "original_researched_uuid": "a7afc633-6a0c-414a-80c1-9b7ec04196bf",
+      "cleanup_survivor_uuid": "a7afc633-6a0c-414a-80c1-9b7ec04196bf",
+      "cleanup_report_reference": null,
+      "canonical_title": "La calle",
+      "current_disambiguation": "live",
+      "current_identity_summary": {
+        "first_release_id": "25e2766f-3fa9-4d9f-9102-b1f2c1d2ad70",
+        "first_release_title": "ASonDeGuerra Tour",
+        "first_release_year": 2013,
+        "representative_release_id": "25e2766f-3fa9-4d9f-9102-b1f2c1d2ad70",
+        "representative_release_title": "ASonDeGuerra Tour",
+        "track_appearance_count": 2,
+        "release_appearance_count": 2,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "PARTIALLY_MATCHES"
+    },
+    {
+      "recording_id": "2303c139-16c1-4d46-9c25-86f91dae4af4",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_07_FOGARATE.md",
+      "evidence_section_or_reference": "Song: La cosquillita",
+      "evidence_summary": "Official Concierto Aniversario release, concert ISRC, and event-specific official audio establish a distinct 2005 stadium performance.",
+      "independent_evidence_sources": [
+        "Official Concierto Aniversario release",
+        "Official artist-channel concert audio"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2005-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Estadio Olímpico, Santo Domingo"
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE",
+      "reasoning": "Official Concierto Aniversario release, concert ISRC, and event-specific official audio establish a distinct 2005 stadium performance.",
+      "original_researched_uuid": "2303c139-16c1-4d46-9c25-86f91dae4af4",
+      "cleanup_survivor_uuid": "2303c139-16c1-4d46-9c25-86f91dae4af4",
+      "cleanup_report_reference": null,
+      "canonical_title": "La cosquillita",
+      "current_disambiguation": null,
+      "current_identity_summary": {
+        "first_release_id": "bf46ec31-e5eb-4c00-8c15-256dd3bbef22",
+        "first_release_title": "Concierto aniversario",
+        "first_release_year": 2023,
+        "representative_release_id": "bf46ec31-e5eb-4c00-8c15-256dd3bbef22",
+        "representative_release_title": "Concierto aniversario",
+        "track_appearance_count": 1,
+        "release_appearance_count": 1,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "EMPTY"
+    },
+    {
+      "recording_id": "81cb5d7e-6f6e-4453-9514-b97358b5277f",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_04_OJALA_QUE_LLUEVA_CAFE.md",
+      "evidence_section_or_reference": "Song: La gallera",
+      "evidence_summary": "The official Capitán Avispa soundtrack object is distinct from the 1989 audio, but public evidence does not distinguish rerecording from soundtrack reconstruction/mix.",
+      "independent_evidence_sources": [
+        "Independent sources cited in the referenced manual verification section"
+      ],
+      "proposed_profile": {
+        "performance_kind": null,
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": null
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [
+        "Soundtrack Release and year derive from Tracks/Releases"
+      ],
+      "proposed_disambiguation_override": "Capitán Avispa soundtrack version",
+      "unresolved": true,
+      "confidence": "medium",
+      "proposed_action": "DISAMBIGUATION_OVERRIDE_ONLY",
+      "reasoning": "The official Capitán Avispa soundtrack object is distinct from the 1989 audio, but public evidence does not distinguish rerecording from soundtrack reconstruction/mix.",
+      "original_researched_uuid": "81cb5d7e-6f6e-4453-9514-b97358b5277f",
+      "cleanup_survivor_uuid": "81cb5d7e-6f6e-4453-9514-b97358b5277f",
+      "cleanup_report_reference": null,
+      "canonical_title": "La gallera",
+      "current_disambiguation": null,
+      "current_identity_summary": {
+        "first_release_id": "2d001f19-47b9-4286-858f-be81047f4ce9",
+        "first_release_title": "Capitán Avispa",
+        "first_release_year": null,
+        "representative_release_id": "2d001f19-47b9-4286-858f-be81047f4ce9",
+        "representative_release_title": "Capitán Avispa",
+        "track_appearance_count": 1,
+        "release_appearance_count": 1,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "EMPTY"
+    },
+    {
+      "recording_id": "62962b7e-984d-4531-a252-b6656c19ee42",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_11_A_SON_DE_GUERRA.md",
+      "evidence_section_or_reference": "Song: La guagua",
+      "evidence_summary": "Official release objects establish a shorter edit of the same Asondeguerra Tour performance represented by the full-audio Recording.",
+      "independent_evidence_sources": [
+        "Official Asondeguerra Tour release objects"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": "edit",
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+      },
+      "proposed_relationships": [
+        {
+          "relationship_type": "edit_of",
+          "target_recording_id": "a266c059-fd40-4c0f-a825-b6b70ca30587",
+          "evidence": "Manual verification aligned official release objects and identified full and shorter presentations of one performance."
+        }
+      ],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE_AND_RELATIONSHIP",
+      "reasoning": "Official release objects establish a shorter edit of the same Asondeguerra Tour performance represented by the full-audio Recording.",
+      "original_researched_uuid": "62962b7e-984d-4531-a252-b6656c19ee42",
+      "cleanup_survivor_uuid": "62962b7e-984d-4531-a252-b6656c19ee42",
+      "cleanup_report_reference": null,
+      "canonical_title": "La guagua",
+      "current_disambiguation": "live",
+      "current_identity_summary": {
+        "first_release_id": "25e2766f-3fa9-4d9f-9102-b1f2c1d2ad70",
+        "first_release_title": "ASonDeGuerra Tour",
+        "first_release_year": 2013,
+        "representative_release_id": "25e2766f-3fa9-4d9f-9102-b1f2c1d2ad70",
+        "representative_release_title": "ASonDeGuerra Tour",
+        "track_appearance_count": 2,
+        "release_appearance_count": 2,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "PARTIALLY_MATCHES"
+    },
+    {
+      "recording_id": "a266c059-fd40-4c0f-a825-b6b70ca30587",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_11_A_SON_DE_GUERRA.md",
+      "evidence_section_or_reference": "Song: La guagua",
+      "evidence_summary": "Official Asondeguerra Tour release identifies the full stadium-tour performance; release wording leaves 2012/2013 performance-year precision ambiguous.",
+      "independent_evidence_sources": [
+        "Official Asondeguerra Tour live release and event audio"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE",
+      "reasoning": "Official Asondeguerra Tour release identifies the full stadium-tour performance; release wording leaves 2012/2013 performance-year precision ambiguous.",
+      "original_researched_uuid": "a266c059-fd40-4c0f-a825-b6b70ca30587",
+      "cleanup_survivor_uuid": "a266c059-fd40-4c0f-a825-b6b70ca30587",
+      "cleanup_report_reference": null,
+      "canonical_title": "La guagua",
+      "current_disambiguation": "live",
+      "current_identity_summary": {
+        "first_release_id": "7764c263-64ec-490f-970c-7ace93c28d93",
+        "first_release_title": "A son de Guerra",
+        "first_release_year": 2012,
+        "representative_release_id": "df79c642-5162-48f0-af69-1ac385bdadd9",
+        "representative_release_title": "Asondeguerra Tour: En Vivo Estadio Olímpico De República Dominicana/2012",
+        "track_appearance_count": 5,
+        "release_appearance_count": 5,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "PARTIALLY_MATCHES"
+    },
+    {
+      "recording_id": "3a123fc6-c471-49a8-9dba-5a0a80403a8d",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_10_LA_LLAVE_DE_MI_CORAZON.md",
+      "evidence_section_or_reference": "Song: La llave de mi corazón",
+      "evidence_summary": "Official Entre Mar y Palmeras release and official performance video establish a separate 2021 live performance.",
+      "independent_evidence_sources": [
+        "Official Entre Mar y Palmeras release",
+        "Official performance video"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2021-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Entre Mar y Palmeras"
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE",
+      "reasoning": "Official Entre Mar y Palmeras release and official performance video establish a separate 2021 live performance.",
+      "original_researched_uuid": "3a123fc6-c471-49a8-9dba-5a0a80403a8d",
+      "cleanup_survivor_uuid": "3a123fc6-c471-49a8-9dba-5a0a80403a8d",
+      "cleanup_report_reference": null,
+      "canonical_title": "La llave de mi corazón",
+      "current_disambiguation": "live, 2021",
+      "current_identity_summary": {
+        "first_release_id": "8562d880-e42d-4c4d-8c55-d9101fdf3d22",
+        "first_release_title": "Entre mar y palmeras",
+        "first_release_year": 2021,
+        "representative_release_id": "8562d880-e42d-4c4d-8c55-d9101fdf3d22",
+        "representative_release_title": "Entre mar y palmeras",
+        "track_appearance_count": 2,
+        "release_appearance_count": 2,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "PARTIALLY_MATCHES"
+    },
+    {
+      "recording_id": "4ac7943f-62ba-41f2-8c9b-c7f3198699ac",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_10_LA_LLAVE_DE_MI_CORAZON.md",
+      "evidence_section_or_reference": "La llave de mi corazón ledger",
+      "evidence_summary": "Null-duration enhanced-video asset could be an encoding of existing audio or a distinct edit; the DVD stream was not compared.",
+      "independent_evidence_sources": [
+        "Independent sources cited in the referenced manual verification section"
+      ],
+      "proposed_profile": {
+        "performance_kind": null,
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": null
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [
+        "Enhanced-media Release/Track context"
+      ],
+      "proposed_disambiguation_override": null,
+      "unresolved": true,
+      "confidence": "low",
+      "proposed_action": "UNRESOLVED_NO_WRITE",
+      "reasoning": "Null-duration enhanced-video asset could be an encoding of existing audio or a distinct edit; the DVD stream was not compared.",
+      "original_researched_uuid": "4ac7943f-62ba-41f2-8c9b-c7f3198699ac",
+      "cleanup_survivor_uuid": "4ac7943f-62ba-41f2-8c9b-c7f3198699ac",
+      "cleanup_report_reference": null,
+      "canonical_title": "La llave de mi corazón",
+      "current_disambiguation": null,
+      "current_identity_summary": {
+        "first_release_id": "e2f34b09-65b5-49c3-8f24-f0e8d0cbab21",
+        "first_release_title": "La llave de mi corazón",
+        "first_release_year": 2007,
+        "representative_release_id": "e2f34b09-65b5-49c3-8f24-f0e8d0cbab21",
+        "representative_release_title": "La llave de mi corazón",
+        "track_appearance_count": 1,
+        "release_appearance_count": 1,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "EMPTY"
+    },
+    {
+      "recording_id": "a242db40-d740-4caa-9cda-119d77cdd79b",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_10_LA_LLAVE_DE_MI_CORAZON.md",
+      "evidence_section_or_reference": "Song: La llave de mi corazón",
+      "evidence_summary": "Official release objects establish a shorter edit of the same Asondeguerra Tour performance represented by the full-audio Recording.",
+      "independent_evidence_sources": [
+        "Official Asondeguerra Tour release objects"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": "edit",
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+      },
+      "proposed_relationships": [
+        {
+          "relationship_type": "edit_of",
+          "target_recording_id": "d5f7aeb2-6f29-4251-97a9-bb2d480a2efe",
+          "evidence": "Manual verification aligned official release objects and identified full and shorter presentations of one performance."
+        }
+      ],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE_AND_RELATIONSHIP",
+      "reasoning": "Official release objects establish a shorter edit of the same Asondeguerra Tour performance represented by the full-audio Recording.",
+      "original_researched_uuid": "a242db40-d740-4caa-9cda-119d77cdd79b",
+      "cleanup_survivor_uuid": "a242db40-d740-4caa-9cda-119d77cdd79b",
+      "cleanup_report_reference": null,
+      "canonical_title": "La llave de mi corazón",
+      "current_disambiguation": "live",
+      "current_identity_summary": {
+        "first_release_id": "25e2766f-3fa9-4d9f-9102-b1f2c1d2ad70",
+        "first_release_title": "ASonDeGuerra Tour",
+        "first_release_year": 2013,
+        "representative_release_id": "25e2766f-3fa9-4d9f-9102-b1f2c1d2ad70",
+        "representative_release_title": "ASonDeGuerra Tour",
+        "track_appearance_count": 2,
+        "release_appearance_count": 2,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "PARTIALLY_MATCHES"
+    },
+    {
+      "recording_id": "d5f7aeb2-6f29-4251-97a9-bb2d480a2efe",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_10_LA_LLAVE_DE_MI_CORAZON.md",
+      "evidence_section_or_reference": "Song: La llave de mi corazón",
+      "evidence_summary": "Official Asondeguerra Tour release identifies the full stadium-tour performance; release wording leaves 2012/2013 performance-year precision ambiguous.",
+      "independent_evidence_sources": [
+        "Official Asondeguerra Tour live release and event audio"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE",
+      "reasoning": "Official Asondeguerra Tour release identifies the full stadium-tour performance; release wording leaves 2012/2013 performance-year precision ambiguous.",
+      "original_researched_uuid": "d5f7aeb2-6f29-4251-97a9-bb2d480a2efe",
+      "cleanup_survivor_uuid": "d5f7aeb2-6f29-4251-97a9-bb2d480a2efe",
+      "cleanup_report_reference": null,
+      "canonical_title": "La llave de mi corazón",
+      "current_disambiguation": "live",
+      "current_identity_summary": {
+        "first_release_id": "25e2766f-3fa9-4d9f-9102-b1f2c1d2ad70",
+        "first_release_title": "ASonDeGuerra Tour",
+        "first_release_year": 2013,
+        "representative_release_id": "df79c642-5162-48f0-af69-1ac385bdadd9",
+        "representative_release_title": "Asondeguerra Tour: En Vivo Estadio Olímpico De República Dominicana/2012",
+        "track_appearance_count": 4,
+        "release_appearance_count": 4,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "PARTIALLY_MATCHES"
+    },
+    {
+      "recording_id": "2327c774-04f3-44f9-af03-47b843b07602",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_10_LA_LLAVE_DE_MI_CORAZON.md",
+      "evidence_section_or_reference": "La llave de mi corazón ledger",
+      "evidence_summary": "Official dance remix object establishes remixed audio; exact source fixation is not independently proven.",
+      "independent_evidence_sources": [
+        "Independent sources cited in the referenced manual verification section"
+      ],
+      "proposed_profile": {
+        "performance_kind": null,
+        "derivation_kind": "remix",
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": null
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": true,
+        "description": "Dance remix production for future Arrangement review.",
+        "evidence": "Official dance remix object establishes remixed audio; exact source fixation is not independently proven."
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "MIXED",
+      "reasoning": "Official dance remix object establishes remixed audio; exact source fixation is not independently proven.",
+      "original_researched_uuid": "2327c774-04f3-44f9-af03-47b843b07602",
+      "cleanup_survivor_uuid": "2327c774-04f3-44f9-af03-47b843b07602",
+      "cleanup_report_reference": null,
+      "canonical_title": "La llave de mi corazón (dance remix)",
+      "current_disambiguation": null,
+      "current_identity_summary": {
+        "first_release_id": "15771474-476f-41d8-b9f4-0d93c6396977",
+        "first_release_title": "La llave de mi corazón",
+        "first_release_year": 2007,
+        "representative_release_id": "15771474-476f-41d8-b9f4-0d93c6396977",
+        "representative_release_title": "La llave de mi corazón",
+        "track_appearance_count": 1,
+        "release_appearance_count": 1,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "EMPTY"
+    },
+    {
+      "recording_id": "1c223bf0-a645-4956-853b-94e14243e2c4",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_10_LA_LLAVE_DE_MI_CORAZON.md",
+      "evidence_section_or_reference": "Song: La travesía",
+      "evidence_summary": "Official release objects establish a shorter edit of the same Asondeguerra Tour performance represented by the full-audio Recording.",
+      "independent_evidence_sources": [
+        "Official Asondeguerra Tour release objects"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": "edit",
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+      },
+      "proposed_relationships": [
+        {
+          "relationship_type": "edit_of",
+          "target_recording_id": "c9049cc0-fc1a-49c3-8ba9-d27ba0820e95",
+          "evidence": "Manual verification aligned official release objects and identified full and shorter presentations of one performance."
+        }
+      ],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE_AND_RELATIONSHIP",
+      "reasoning": "Official release objects establish a shorter edit of the same Asondeguerra Tour performance represented by the full-audio Recording.",
+      "original_researched_uuid": "1c223bf0-a645-4956-853b-94e14243e2c4",
+      "cleanup_survivor_uuid": "1c223bf0-a645-4956-853b-94e14243e2c4",
+      "cleanup_report_reference": null,
+      "canonical_title": "La travesía",
+      "current_disambiguation": "live",
+      "current_identity_summary": {
+        "first_release_id": "25e2766f-3fa9-4d9f-9102-b1f2c1d2ad70",
+        "first_release_title": "ASonDeGuerra Tour",
+        "first_release_year": 2013,
+        "representative_release_id": "25e2766f-3fa9-4d9f-9102-b1f2c1d2ad70",
+        "representative_release_title": "ASonDeGuerra Tour",
+        "track_appearance_count": 2,
+        "release_appearance_count": 2,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "PARTIALLY_MATCHES"
+    },
+    {
+      "recording_id": "afb28585-a810-47c2-bc3f-6548359618e5",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_10_LA_LLAVE_DE_MI_CORAZON.md",
+      "evidence_section_or_reference": "Song: La travesía",
+      "evidence_summary": "Official Entre Mar y Palmeras release and official performance video establish a separate 2021 live performance.",
+      "independent_evidence_sources": [
+        "Official Entre Mar y Palmeras release",
+        "Official performance video"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2021-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Entre Mar y Palmeras"
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE",
+      "reasoning": "Official Entre Mar y Palmeras release and official performance video establish a separate 2021 live performance.",
+      "original_researched_uuid": "afb28585-a810-47c2-bc3f-6548359618e5",
+      "cleanup_survivor_uuid": "afb28585-a810-47c2-bc3f-6548359618e5",
+      "cleanup_report_reference": null,
+      "canonical_title": "La travesía",
+      "current_disambiguation": "live, 2021",
+      "current_identity_summary": {
+        "first_release_id": "8562d880-e42d-4c4d-8c55-d9101fdf3d22",
+        "first_release_title": "Entre mar y palmeras",
+        "first_release_year": 2021,
+        "representative_release_id": "8562d880-e42d-4c4d-8c55-d9101fdf3d22",
+        "representative_release_title": "Entre mar y palmeras",
+        "track_appearance_count": 2,
+        "release_appearance_count": 2,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "PARTIALLY_MATCHES"
+    },
+    {
+      "recording_id": "c9049cc0-fc1a-49c3-8ba9-d27ba0820e95",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_10_LA_LLAVE_DE_MI_CORAZON.md",
+      "evidence_section_or_reference": "Song: La travesía",
+      "evidence_summary": "Official Asondeguerra Tour release identifies the full stadium-tour performance; release wording leaves 2012/2013 performance-year precision ambiguous.",
+      "independent_evidence_sources": [
+        "Official Asondeguerra Tour live release and event audio"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE",
+      "reasoning": "Official Asondeguerra Tour release identifies the full stadium-tour performance; release wording leaves 2012/2013 performance-year precision ambiguous.",
+      "original_researched_uuid": "c9049cc0-fc1a-49c3-8ba9-d27ba0820e95",
+      "cleanup_survivor_uuid": "c9049cc0-fc1a-49c3-8ba9-d27ba0820e95",
+      "cleanup_report_reference": null,
+      "canonical_title": "La travesía",
+      "current_disambiguation": "live",
+      "current_identity_summary": {
+        "first_release_id": "25e2766f-3fa9-4d9f-9102-b1f2c1d2ad70",
+        "first_release_title": "ASonDeGuerra Tour",
+        "first_release_year": 2013,
+        "representative_release_id": "df79c642-5162-48f0-af69-1ac385bdadd9",
+        "representative_release_title": "Asondeguerra Tour: En Vivo Estadio Olímpico De República Dominicana/2012",
+        "track_appearance_count": 4,
+        "release_appearance_count": 4,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "PARTIALLY_MATCHES"
+    },
+    {
+      "recording_id": "0d812f30-ce76-458a-aeae-981d3b1e5bed",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_09_PARA_TI.md",
+      "evidence_section_or_reference": "Song: Las avispas",
+      "evidence_summary": "Official Concierto Aniversario release, concert ISRC, and event-specific official audio establish a distinct 2005 stadium performance.",
+      "independent_evidence_sources": [
+        "Official Concierto Aniversario release",
+        "Official artist-channel concert audio"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2005-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Estadio Olímpico, Santo Domingo"
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE",
+      "reasoning": "Official Concierto Aniversario release, concert ISRC, and event-specific official audio establish a distinct 2005 stadium performance.",
+      "original_researched_uuid": "0d812f30-ce76-458a-aeae-981d3b1e5bed",
+      "cleanup_survivor_uuid": "0d812f30-ce76-458a-aeae-981d3b1e5bed",
+      "cleanup_report_reference": null,
+      "canonical_title": "Las avispas",
+      "current_disambiguation": null,
+      "current_identity_summary": {
+        "first_release_id": "bf46ec31-e5eb-4c00-8c15-256dd3bbef22",
+        "first_release_title": "Concierto aniversario",
+        "first_release_year": 2023,
+        "representative_release_id": "5c6eb8c4-ca5b-4bee-ba94-847750832d6b",
+        "representative_release_title": "Grandes Éxitos",
+        "track_appearance_count": 2,
+        "release_appearance_count": 2,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "EMPTY"
+    },
+    {
+      "recording_id": "4c7bda9f-bb21-4c25-8b25-dbb8eb0d5151",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_09_PARA_TI.md",
+      "evidence_section_or_reference": "Song: Las avispas",
+      "evidence_summary": "Official release objects establish a shorter edit of the same Asondeguerra Tour performance represented by the full-audio Recording.",
+      "independent_evidence_sources": [
+        "Official Asondeguerra Tour release objects"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": "edit",
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+      },
+      "proposed_relationships": [
+        {
+          "relationship_type": "edit_of",
+          "target_recording_id": "99e8f378-bf0b-4b0d-a177-91894a7eae49",
+          "evidence": "Manual verification aligned official release objects and identified full and shorter presentations of one performance."
+        }
+      ],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE_AND_RELATIONSHIP",
+      "reasoning": "Official release objects establish a shorter edit of the same Asondeguerra Tour performance represented by the full-audio Recording.",
+      "original_researched_uuid": "4c7bda9f-bb21-4c25-8b25-dbb8eb0d5151",
+      "cleanup_survivor_uuid": "4c7bda9f-bb21-4c25-8b25-dbb8eb0d5151",
+      "cleanup_report_reference": null,
+      "canonical_title": "Las avispas",
+      "current_disambiguation": "live",
+      "current_identity_summary": {
+        "first_release_id": "25e2766f-3fa9-4d9f-9102-b1f2c1d2ad70",
+        "first_release_title": "ASonDeGuerra Tour",
+        "first_release_year": 2013,
+        "representative_release_id": "25e2766f-3fa9-4d9f-9102-b1f2c1d2ad70",
+        "representative_release_title": "ASonDeGuerra Tour",
+        "track_appearance_count": 2,
+        "release_appearance_count": 2,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "PARTIALLY_MATCHES"
+    },
+    {
+      "recording_id": "9623b3d3-3555-49cf-aca2-a3465a6b0728",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_09_PARA_TI.md",
+      "evidence_section_or_reference": "Song: Las avispas",
+      "evidence_summary": "Official Entre Mar y Palmeras release and official performance video establish a separate 2021 live performance.",
+      "independent_evidence_sources": [
+        "Official Entre Mar y Palmeras release",
+        "Official performance video"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2021-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Entre Mar y Palmeras"
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE",
+      "reasoning": "Official Entre Mar y Palmeras release and official performance video establish a separate 2021 live performance.",
+      "original_researched_uuid": "9623b3d3-3555-49cf-aca2-a3465a6b0728",
+      "cleanup_survivor_uuid": "9623b3d3-3555-49cf-aca2-a3465a6b0728",
+      "cleanup_report_reference": null,
+      "canonical_title": "Las avispas",
+      "current_disambiguation": "live, 2021",
+      "current_identity_summary": {
+        "first_release_id": "8562d880-e42d-4c4d-8c55-d9101fdf3d22",
+        "first_release_title": "Entre mar y palmeras",
+        "first_release_year": 2021,
+        "representative_release_id": "8562d880-e42d-4c4d-8c55-d9101fdf3d22",
+        "representative_release_title": "Entre mar y palmeras",
+        "track_appearance_count": 2,
+        "release_appearance_count": 2,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "PARTIALLY_MATCHES"
+    },
+    {
+      "recording_id": "99e8f378-bf0b-4b0d-a177-91894a7eae49",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_09_PARA_TI.md",
+      "evidence_section_or_reference": "Song: Las avispas",
+      "evidence_summary": "Official Asondeguerra Tour release identifies the full stadium-tour performance; release wording leaves 2012/2013 performance-year precision ambiguous.",
+      "independent_evidence_sources": [
+        "Official Asondeguerra Tour live release and event audio"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE",
+      "reasoning": "Official Asondeguerra Tour release identifies the full stadium-tour performance; release wording leaves 2012/2013 performance-year precision ambiguous.",
+      "original_researched_uuid": "99e8f378-bf0b-4b0d-a177-91894a7eae49",
+      "cleanup_survivor_uuid": "99e8f378-bf0b-4b0d-a177-91894a7eae49",
+      "cleanup_report_reference": null,
+      "canonical_title": "Las avispas",
+      "current_disambiguation": "live",
+      "current_identity_summary": {
+        "first_release_id": "25e2766f-3fa9-4d9f-9102-b1f2c1d2ad70",
+        "first_release_title": "ASonDeGuerra Tour",
+        "first_release_year": 2013,
+        "representative_release_id": "df79c642-5162-48f0-af69-1ac385bdadd9",
+        "representative_release_title": "Asondeguerra Tour: En Vivo Estadio Olímpico De República Dominicana/2012",
+        "track_appearance_count": 4,
+        "release_appearance_count": 4,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "PARTIALLY_MATCHES"
+    },
+    {
+      "recording_id": "e703a9c5-68a4-4b72-bfca-1c591d74b830",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_10_LA_LLAVE_DE_MI_CORAZON.md",
+      "evidence_section_or_reference": "Medicine for My Soul ledger",
+      "evidence_summary": "Official fan-edition duet is a newly recorded studio performance; collaborator identity derives from credits.",
+      "independent_evidence_sources": [
+        "Independent sources cited in the referenced manual verification section"
+      ],
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": null
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": true,
+        "description": "Duet treatment for future Arrangement review.",
+        "evidence": "Official fan-edition duet is a newly recorded studio performance; collaborator identity derives from credits."
+      },
+      "derived_only_facts": [
+        "Collaborating performer derives from recording credits"
+      ],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "MIXED",
+      "reasoning": "Official fan-edition duet is a newly recorded studio performance; collaborator identity derives from credits.",
+      "original_researched_uuid": "e703a9c5-68a4-4b72-bfca-1c591d74b830",
+      "cleanup_survivor_uuid": "e703a9c5-68a4-4b72-bfca-1c591d74b830",
+      "cleanup_report_reference": null,
+      "canonical_title": "Medicine for My Soul",
+      "current_disambiguation": "duet version",
+      "current_identity_summary": {
+        "first_release_id": "7fe16589-8481-471d-89e0-0a9cc005060e",
+        "first_release_title": "La llave de mi corazon",
+        "first_release_year": 2007,
+        "representative_release_id": "7fe16589-8481-471d-89e0-0a9cc005060e",
+        "representative_release_title": "La llave de mi corazon",
+        "track_appearance_count": 3,
+        "release_appearance_count": 3,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": true,
+      "legacy_disambiguation_classification": "WRONG_OR_MISLEADING"
+    },
+    {
+      "recording_id": "07e2bf64-ddc4-49d4-80d9-94d1d78628cc",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_11_A_SON_DE_GUERRA.md",
+      "evidence_section_or_reference": "Song: Mi bendición",
+      "evidence_summary": "Official release objects establish a shorter edit of the same Asondeguerra Tour performance represented by the full-audio Recording.",
+      "independent_evidence_sources": [
+        "Official Asondeguerra Tour release objects"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": "edit",
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+      },
+      "proposed_relationships": [
+        {
+          "relationship_type": "edit_of",
+          "target_recording_id": "6ea97e60-edf5-4411-9e60-79a0f6654f1c",
+          "evidence": "Manual verification aligned official release objects and identified full and shorter presentations of one performance."
+        }
+      ],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE_AND_RELATIONSHIP",
+      "reasoning": "Official release objects establish a shorter edit of the same Asondeguerra Tour performance represented by the full-audio Recording.",
+      "original_researched_uuid": "07e2bf64-ddc4-49d4-80d9-94d1d78628cc",
+      "cleanup_survivor_uuid": "07e2bf64-ddc4-49d4-80d9-94d1d78628cc",
+      "cleanup_report_reference": null,
+      "canonical_title": "Mi bendición",
+      "current_disambiguation": "live",
+      "current_identity_summary": {
+        "first_release_id": "25e2766f-3fa9-4d9f-9102-b1f2c1d2ad70",
+        "first_release_title": "ASonDeGuerra Tour",
+        "first_release_year": 2013,
+        "representative_release_id": "25e2766f-3fa9-4d9f-9102-b1f2c1d2ad70",
+        "representative_release_title": "ASonDeGuerra Tour",
+        "track_appearance_count": 2,
+        "release_appearance_count": 2,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "PARTIALLY_MATCHES"
+    },
+    {
+      "recording_id": "6ea97e60-edf5-4411-9e60-79a0f6654f1c",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_11_A_SON_DE_GUERRA.md",
+      "evidence_section_or_reference": "Song: Mi bendición",
+      "evidence_summary": "Official Asondeguerra Tour release identifies the full stadium-tour performance; release wording leaves 2012/2013 performance-year precision ambiguous.",
+      "independent_evidence_sources": [
+        "Official Asondeguerra Tour live release and event audio"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE",
+      "reasoning": "Official Asondeguerra Tour release identifies the full stadium-tour performance; release wording leaves 2012/2013 performance-year precision ambiguous.",
+      "original_researched_uuid": "6ea97e60-edf5-4411-9e60-79a0f6654f1c",
+      "cleanup_survivor_uuid": "6ea97e60-edf5-4411-9e60-79a0f6654f1c",
+      "cleanup_report_reference": null,
+      "canonical_title": "Mi bendición",
+      "current_disambiguation": "live",
+      "current_identity_summary": {
+        "first_release_id": "25e2766f-3fa9-4d9f-9102-b1f2c1d2ad70",
+        "first_release_title": "ASonDeGuerra Tour",
+        "first_release_year": 2013,
+        "representative_release_id": "df79c642-5162-48f0-af69-1ac385bdadd9",
+        "representative_release_title": "Asondeguerra Tour: En Vivo Estadio Olímpico De República Dominicana/2012",
+        "track_appearance_count": 4,
+        "release_appearance_count": 4,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "PARTIALLY_MATCHES"
+    },
+    {
+      "recording_id": "3f51c25b-8ff1-47b8-91d7-63ba1c0232ba",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_04_OJALA_QUE_LLUEVA_CAFE.md",
+      "evidence_section_or_reference": "Song: Ojalá que llueva café",
+      "evidence_summary": "Official Concierto Aniversario release, concert ISRC, and event-specific official audio establish a distinct 2005 stadium performance.",
+      "independent_evidence_sources": [
+        "Official Concierto Aniversario release",
+        "Official artist-channel concert audio"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2005-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Estadio Olímpico, Santo Domingo"
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE",
+      "reasoning": "Official Concierto Aniversario release, concert ISRC, and event-specific official audio establish a distinct 2005 stadium performance.",
+      "original_researched_uuid": "3f51c25b-8ff1-47b8-91d7-63ba1c0232ba",
+      "cleanup_survivor_uuid": "3f51c25b-8ff1-47b8-91d7-63ba1c0232ba",
+      "cleanup_report_reference": null,
+      "canonical_title": "Ojalá que llueva café",
+      "current_disambiguation": null,
+      "current_identity_summary": {
+        "first_release_id": "bf46ec31-e5eb-4c00-8c15-256dd3bbef22",
+        "first_release_title": "Concierto aniversario",
+        "first_release_year": 2023,
+        "representative_release_id": "bf46ec31-e5eb-4c00-8c15-256dd3bbef22",
+        "representative_release_title": "Concierto aniversario",
+        "track_appearance_count": 1,
+        "release_appearance_count": 1,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "EMPTY"
+    },
+    {
+      "recording_id": "62c7b849-d0f5-4155-9b95-39a7dc18486e",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_04_OJALA_QUE_LLUEVA_CAFE.md",
+      "evidence_section_or_reference": "Dedicated Ojalá identity family",
+      "evidence_summary": "Official Bonus Tracks objects establish non-studio Directo audio, but its relationship to the Encuentro performance is unresolved.",
+      "independent_evidence_sources": [
+        "Independent sources cited in the referenced manual verification section"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": null
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": "Directo version",
+      "unresolved": true,
+      "confidence": "medium",
+      "proposed_action": "MIXED",
+      "reasoning": "Official Bonus Tracks objects establish non-studio Directo audio, but its relationship to the Encuentro performance is unresolved.",
+      "original_researched_uuid": "62c7b849-d0f5-4155-9b95-39a7dc18486e",
+      "cleanup_survivor_uuid": "62c7b849-d0f5-4155-9b95-39a7dc18486e",
+      "cleanup_report_reference": null,
+      "canonical_title": "Ojalá que llueva café",
+      "current_disambiguation": null,
+      "current_identity_summary": {
+        "first_release_id": "4fdd105f-8ef0-41e7-8d47-2665917e3186",
+        "first_release_title": "Bonus Tracks",
+        "first_release_year": 2010,
+        "representative_release_id": "4fdd105f-8ef0-41e7-8d47-2665917e3186",
+        "representative_release_title": "Bonus Tracks",
+        "track_appearance_count": 1,
+        "release_appearance_count": 1,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "EMPTY"
+    },
+    {
+      "recording_id": "de56973b-8847-4117-abbc-1ab25b66da18",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_04_OJALA_QUE_LLUEVA_CAFE.md",
+      "evidence_section_or_reference": "Dedicated Ojalá identity family",
+      "evidence_summary": "Independent physical and album catalogs establish the 2002 Encuentro live project and this distinct event performance.",
+      "independent_evidence_sources": [
+        "Independent Encuentro physical catalog",
+        "Independent Encuentro album catalog"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2002-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Encuentro"
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE",
+      "reasoning": "Independent physical and album catalogs establish the 2002 Encuentro live project and this distinct event performance.",
+      "original_researched_uuid": "de56973b-8847-4117-abbc-1ab25b66da18",
+      "cleanup_survivor_uuid": "de56973b-8847-4117-abbc-1ab25b66da18",
+      "cleanup_report_reference": null,
+      "canonical_title": "Ojalá que llueva café",
+      "current_disambiguation": "live",
+      "current_identity_summary": {
+        "first_release_id": "9377dfe3-7011-47d7-964d-98b628918559",
+        "first_release_title": "Encuentro",
+        "first_release_year": null,
+        "representative_release_id": "9377dfe3-7011-47d7-964d-98b628918559",
+        "representative_release_title": "Encuentro",
+        "track_appearance_count": 1,
+        "release_appearance_count": 1,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "PARTIALLY_MATCHES"
+    },
+    {
+      "recording_id": "30d3df34-84f1-42a2-8cda-ba674c90b6a9",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_09_PARA_TI.md",
+      "evidence_section_or_reference": "Song: Para ti",
+      "evidence_summary": "Official Entre Mar y Palmeras release and official performance video establish a separate 2021 live performance.",
+      "independent_evidence_sources": [
+        "Official Entre Mar y Palmeras release",
+        "Official performance video"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2021-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Entre Mar y Palmeras"
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE",
+      "reasoning": "Official Entre Mar y Palmeras release and official performance video establish a separate 2021 live performance.",
+      "original_researched_uuid": "30d3df34-84f1-42a2-8cda-ba674c90b6a9",
+      "cleanup_survivor_uuid": "30d3df34-84f1-42a2-8cda-ba674c90b6a9",
+      "cleanup_report_reference": null,
+      "canonical_title": "Para ti",
+      "current_disambiguation": "live, 2021",
+      "current_identity_summary": {
+        "first_release_id": "8562d880-e42d-4c4d-8c55-d9101fdf3d22",
+        "first_release_title": "Entre mar y palmeras",
+        "first_release_year": 2021,
+        "representative_release_id": "8562d880-e42d-4c4d-8c55-d9101fdf3d22",
+        "representative_release_title": "Entre mar y palmeras",
+        "track_appearance_count": 2,
+        "release_appearance_count": 2,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "PARTIALLY_MATCHES"
+    },
+    {
+      "recording_id": "dcb1778e-73a2-4753-ab96-afc828116884",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_09_PARA_TI.md",
+      "evidence_section_or_reference": "Song: Para ti",
+      "evidence_summary": "Official Concierto Aniversario release, concert ISRC, and event-specific official audio establish a distinct 2005 stadium performance.",
+      "independent_evidence_sources": [
+        "Official Concierto Aniversario release",
+        "Official artist-channel concert audio"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2005-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Estadio Olímpico, Santo Domingo"
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE",
+      "reasoning": "Official Concierto Aniversario release, concert ISRC, and event-specific official audio establish a distinct 2005 stadium performance.",
+      "original_researched_uuid": "dcb1778e-73a2-4753-ab96-afc828116884",
+      "cleanup_survivor_uuid": "dcb1778e-73a2-4753-ab96-afc828116884",
+      "cleanup_report_reference": null,
+      "canonical_title": "Para ti",
+      "current_disambiguation": null,
+      "current_identity_summary": {
+        "first_release_id": "bf46ec31-e5eb-4c00-8c15-256dd3bbef22",
+        "first_release_title": "Concierto aniversario",
+        "first_release_year": 2023,
+        "representative_release_id": "5c6eb8c4-ca5b-4bee-ba94-847750832d6b",
+        "representative_release_title": "Grandes Éxitos",
+        "track_appearance_count": 2,
+        "release_appearance_count": 2,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "EMPTY"
+    },
+    {
+      "recording_id": "d673e2ea-b217-4243-81d7-a1553a22bf71",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_10_LA_LLAVE_DE_MI_CORAZON.md",
+      "evidence_section_or_reference": "Que me des tu cariño ledger",
+      "evidence_summary": "Independent ISRC and official language-specific delivery establish a Portuguese studio performance.",
+      "independent_evidence_sources": [
+        "Independent sources cited in the referenced manual verification section"
+      ],
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "language_code": "pt",
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": null
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": true,
+        "description": "Portuguese-language treatment for future Arrangement review.",
+        "evidence": "Independent ISRC and official language-specific delivery establish a Portuguese studio performance."
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "MIXED",
+      "reasoning": "Independent ISRC and official language-specific delivery establish a Portuguese studio performance.",
+      "original_researched_uuid": "d673e2ea-b217-4243-81d7-a1553a22bf71",
+      "cleanup_survivor_uuid": "d673e2ea-b217-4243-81d7-a1553a22bf71",
+      "cleanup_report_reference": null,
+      "canonical_title": "Que me des tu cariño (Portuguese)",
+      "current_disambiguation": null,
+      "current_identity_summary": {
+        "first_release_id": "77d5e7a6-a6b8-454e-b004-84f69b76a0a1",
+        "first_release_title": "La llave de mi corazón",
+        "first_release_year": 2007,
+        "representative_release_id": "77d5e7a6-a6b8-454e-b004-84f69b76a0a1",
+        "representative_release_title": "La llave de mi corazón",
+        "track_appearance_count": 1,
+        "release_appearance_count": 1,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "EMPTY"
+    },
+    {
+      "recording_id": "32b87f30-8aad-42c8-ab5e-f973e2421a8d",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_08_NI_ES_LO_MISMO_NI_ES_IGUAL.md",
+      "evidence_section_or_reference": "Song: Quisiera",
+      "evidence_summary": "Separate official objects establish the later pop Recording; pop is an Arrangement fact, not a derivation kind.",
+      "independent_evidence_sources": [
+        "Independent sources cited in the referenced manual verification section"
+      ],
+      "proposed_profile": {
+        "performance_kind": null,
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": null
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": true,
+        "description": "Pop arrangement distinct from the 1998 salsa treatment.",
+        "evidence": "Separate official objects establish the later pop Recording; pop is an Arrangement fact, not a derivation kind."
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "ARRANGEMENT_ONLY_HOLD",
+      "reasoning": "Separate official objects establish the later pop Recording; pop is an Arrangement fact, not a derivation kind.",
+      "original_researched_uuid": "32b87f30-8aad-42c8-ab5e-f973e2421a8d",
+      "cleanup_survivor_uuid": "32b87f30-8aad-42c8-ab5e-f973e2421a8d",
+      "cleanup_report_reference": null,
+      "canonical_title": "Quisiera",
+      "current_disambiguation": "pop version",
+      "current_identity_summary": {
+        "first_release_id": "934a0ee2-6022-4df6-8016-069c8ccdb5f5",
+        "first_release_title": "The Collection",
+        "first_release_year": 2000,
+        "representative_release_id": "4fdd105f-8ef0-41e7-8d47-2665917e3186",
+        "representative_release_title": "Bonus Tracks",
+        "track_appearance_count": 7,
+        "release_appearance_count": 6,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "ARRANGEMENT_TEXT"
+    },
+    {
+      "recording_id": "e99f137a-344e-46f2-b0b8-24e56265611b",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_08_NI_ES_LO_MISMO_NI_ES_IGUAL.md",
+      "evidence_section_or_reference": "Song: Quisiera",
+      "evidence_summary": "Physical and official album evidence identifies the canonical 1998 salsa treatment; style belongs only to future Arrangement identity.",
+      "independent_evidence_sources": [
+        "Independent sources cited in the referenced manual verification section"
+      ],
+      "proposed_profile": {
+        "performance_kind": null,
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": null
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": true,
+        "description": "1998 salsa arrangement.",
+        "evidence": "Physical and official album evidence identifies the canonical 1998 salsa treatment; style belongs only to future Arrangement identity."
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "ARRANGEMENT_ONLY_HOLD",
+      "reasoning": "Physical and official album evidence identifies the canonical 1998 salsa treatment; style belongs only to future Arrangement identity.",
+      "original_researched_uuid": "e99f137a-344e-46f2-b0b8-24e56265611b",
+      "cleanup_survivor_uuid": "e99f137a-344e-46f2-b0b8-24e56265611b",
+      "cleanup_report_reference": null,
+      "canonical_title": "Quisiera",
+      "current_disambiguation": "salsa version",
+      "current_identity_summary": {
+        "first_release_id": "747e6079-40f1-47f5-af1b-394f8511387d",
+        "first_release_title": "Ni es lo mismo ni es igual",
+        "first_release_year": 1998,
+        "representative_release_id": "747e6079-40f1-47f5-af1b-394f8511387d",
+        "representative_release_title": "Ni es lo mismo ni es igual",
+        "track_appearance_count": 9,
+        "release_appearance_count": 9,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "ARRANGEMENT_TEXT"
+    },
+    {
+      "recording_id": "970812f9-01db-4424-901c-a9834f6d05b9",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_04_OJALA_QUE_LLUEVA_CAFE.md",
+      "evidence_section_or_reference": "Song: Razones",
+      "evidence_summary": "Separate official collection audio and fingerprint establish a distinct romantic-collection presentation; exact rerecording/arrangement mechanism is not proven.",
+      "independent_evidence_sources": [
+        "Independent sources cited in the referenced manual verification section"
+      ],
+      "proposed_profile": {
+        "performance_kind": null,
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": null
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": true,
+        "description": "Colección romántica treatment; exact mechanism unverified.",
+        "evidence": "Separate official collection audio and fingerprint establish a distinct romantic-collection presentation; exact rerecording/arrangement mechanism is not proven."
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": "Colección romántica version",
+      "unresolved": true,
+      "confidence": "medium",
+      "proposed_action": "MIXED",
+      "reasoning": "Separate official collection audio and fingerprint establish a distinct romantic-collection presentation; exact rerecording/arrangement mechanism is not proven.",
+      "original_researched_uuid": "970812f9-01db-4424-901c-a9834f6d05b9",
+      "cleanup_survivor_uuid": "970812f9-01db-4424-901c-a9834f6d05b9",
+      "cleanup_report_reference": null,
+      "canonical_title": "Razones",
+      "current_disambiguation": null,
+      "current_identity_summary": {
+        "first_release_id": "934a0ee2-6022-4df6-8016-069c8ccdb5f5",
+        "first_release_title": "The Collection",
+        "first_release_year": 2000,
+        "representative_release_id": "4fdd105f-8ef0-41e7-8d47-2665917e3186",
+        "representative_release_title": "Bonus Tracks",
+        "track_appearance_count": 6,
+        "release_appearance_count": 6,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "EMPTY"
+    },
+    {
+      "recording_id": "f96218bb-e5c0-4384-9a9d-a948aaa3d6a1",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_05_BACHATA_ROSA.md",
+      "evidence_section_or_reference": "Song: Bachata rosa",
+      "evidence_summary": "Official Romance Rosa title and release evidence establish the 1992 Portuguese-language studio performance.",
+      "independent_evidence_sources": [
+        "Independent sources cited in the referenced manual verification section"
+      ],
+      "proposed_profile": {
+        "performance_kind": "studio",
+        "derivation_kind": "rerecording",
+        "language_code": "pt",
+        "performance_date": "1992-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Romance Rosa"
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": true,
+        "description": "Portuguese-language treatment for future Arrangement review.",
+        "evidence": "Official Romance Rosa title and release evidence establish the 1992 Portuguese-language studio performance."
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "MIXED",
+      "reasoning": "Official Romance Rosa title and release evidence establish the 1992 Portuguese-language studio performance.",
+      "original_researched_uuid": "f96218bb-e5c0-4384-9a9d-a948aaa3d6a1",
+      "cleanup_survivor_uuid": "f96218bb-e5c0-4384-9a9d-a948aaa3d6a1",
+      "cleanup_report_reference": null,
+      "canonical_title": "Romance rosa",
+      "current_disambiguation": null,
+      "current_identity_summary": {
+        "first_release_id": "81602ec5-4534-4d99-9687-d5bb591d7f73",
+        "first_release_title": "Romance rosa",
+        "first_release_year": 1992,
+        "representative_release_id": "4fdd105f-8ef0-41e7-8d47-2665917e3186",
+        "representative_release_title": "Bonus Tracks",
+        "track_appearance_count": 4,
+        "release_appearance_count": 4,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "EMPTY"
+    },
+    {
+      "recording_id": "ee5f3e74-3f8a-462a-8018-c588066d0f33",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_05_BACHATA_ROSA.md",
+      "evidence_section_or_reference": "Song: Rosalía",
+      "evidence_summary": "Official Concierto Aniversario release, concert ISRC, and event-specific official audio establish a distinct 2005 stadium performance.",
+      "independent_evidence_sources": [
+        "Official Concierto Aniversario release",
+        "Official artist-channel concert audio"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2005-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Estadio Olímpico, Santo Domingo"
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE",
+      "reasoning": "Official Concierto Aniversario release, concert ISRC, and event-specific official audio establish a distinct 2005 stadium performance.",
+      "original_researched_uuid": "ee5f3e74-3f8a-462a-8018-c588066d0f33",
+      "cleanup_survivor_uuid": "ee5f3e74-3f8a-462a-8018-c588066d0f33",
+      "cleanup_report_reference": null,
+      "canonical_title": "Rosalía",
+      "current_disambiguation": null,
+      "current_identity_summary": {
+        "first_release_id": "bf46ec31-e5eb-4c00-8c15-256dd3bbef22",
+        "first_release_title": "Concierto aniversario",
+        "first_release_year": 2023,
+        "representative_release_id": "bf46ec31-e5eb-4c00-8c15-256dd3bbef22",
+        "representative_release_title": "Concierto aniversario",
+        "track_appearance_count": 1,
+        "release_appearance_count": 1,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "EMPTY"
+    },
+    {
+      "recording_id": "44d97abe-f206-4d93-acc9-a7e4d0ed52b5",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_09_PARA_TI.md",
+      "evidence_section_or_reference": "Song: Soldado",
+      "evidence_summary": "Official Concierto Aniversario release, concert ISRC, and event-specific official audio establish a distinct 2005 stadium performance.",
+      "independent_evidence_sources": [
+        "Official Concierto Aniversario release",
+        "Official artist-channel concert audio"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2005-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Estadio Olímpico, Santo Domingo"
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE",
+      "reasoning": "Official Concierto Aniversario release, concert ISRC, and event-specific official audio establish a distinct 2005 stadium performance.",
+      "original_researched_uuid": "44d97abe-f206-4d93-acc9-a7e4d0ed52b5",
+      "cleanup_survivor_uuid": "44d97abe-f206-4d93-acc9-a7e4d0ed52b5",
+      "cleanup_report_reference": null,
+      "canonical_title": "Soldado",
+      "current_disambiguation": null,
+      "current_identity_summary": {
+        "first_release_id": "bf46ec31-e5eb-4c00-8c15-256dd3bbef22",
+        "first_release_title": "Concierto aniversario",
+        "first_release_year": 2023,
+        "representative_release_id": "bf46ec31-e5eb-4c00-8c15-256dd3bbef22",
+        "representative_release_title": "Concierto aniversario",
+        "track_appearance_count": 1,
+        "release_appearance_count": 1,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "EMPTY"
+    },
+    {
+      "recording_id": "1a3faed8-48c4-4b33-aeb2-ad1281014c0a",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_09_PARA_TI.md",
+      "evidence_section_or_reference": "Song: Tan solo he venido",
+      "evidence_summary": "Official Concierto Aniversario release, concert ISRC, and event-specific official audio establish a distinct 2005 stadium performance.",
+      "independent_evidence_sources": [
+        "Official Concierto Aniversario release",
+        "Official artist-channel concert audio"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2005-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Estadio Olímpico, Santo Domingo"
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE",
+      "reasoning": "Official Concierto Aniversario release, concert ISRC, and event-specific official audio establish a distinct 2005 stadium performance.",
+      "original_researched_uuid": "1a3faed8-48c4-4b33-aeb2-ad1281014c0a",
+      "cleanup_survivor_uuid": "1a3faed8-48c4-4b33-aeb2-ad1281014c0a",
+      "cleanup_report_reference": null,
+      "canonical_title": "Tan solo he venido",
+      "current_disambiguation": null,
+      "current_identity_summary": {
+        "first_release_id": "bf46ec31-e5eb-4c00-8c15-256dd3bbef22",
+        "first_release_title": "Concierto aniversario",
+        "first_release_year": 2023,
+        "representative_release_id": "bf46ec31-e5eb-4c00-8c15-256dd3bbef22",
+        "representative_release_title": "Concierto aniversario",
+        "track_appearance_count": 1,
+        "release_appearance_count": 1,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "EMPTY"
+    },
+    {
+      "recording_id": "2219fdb5-f214-4c90-8b0c-c48bc60d3513",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_08_NI_ES_LO_MISMO_NI_ES_IGUAL.md",
+      "evidence_section_or_reference": "Song: Vale la pena",
+      "evidence_summary": "Official Entre Mar y Palmeras release and official performance video establish a separate 2021 live performance.",
+      "independent_evidence_sources": [
+        "Official Entre Mar y Palmeras release",
+        "Official performance video"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2021-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Entre Mar y Palmeras"
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE",
+      "reasoning": "Official Entre Mar y Palmeras release and official performance video establish a separate 2021 live performance.",
+      "original_researched_uuid": "2219fdb5-f214-4c90-8b0c-c48bc60d3513",
+      "cleanup_survivor_uuid": "2219fdb5-f214-4c90-8b0c-c48bc60d3513",
+      "cleanup_report_reference": null,
+      "canonical_title": "Vale la pena",
+      "current_disambiguation": "live, 2021",
+      "current_identity_summary": {
+        "first_release_id": "8562d880-e42d-4c4d-8c55-d9101fdf3d22",
+        "first_release_title": "Entre mar y palmeras",
+        "first_release_year": 2021,
+        "representative_release_id": "8562d880-e42d-4c4d-8c55-d9101fdf3d22",
+        "representative_release_title": "Entre mar y palmeras",
+        "track_appearance_count": 2,
+        "release_appearance_count": 2,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "PARTIALLY_MATCHES"
+    },
+    {
+      "recording_id": "f178eaee-bb21-4f01-b527-4da27126bbbe",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_08_NI_ES_LO_MISMO_NI_ES_IGUAL.md",
+      "evidence_section_or_reference": "Song: Vale la pena",
+      "evidence_summary": "Official Concierto Aniversario release, concert ISRC, and event-specific official audio establish a distinct 2005 stadium performance.",
+      "independent_evidence_sources": [
+        "Official Concierto Aniversario release",
+        "Official artist-channel concert audio"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": "2005-01-01",
+        "performance_date_precision": "year",
+        "performance_context": "Estadio Olímpico, Santo Domingo"
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE",
+      "reasoning": "Official Concierto Aniversario release, concert ISRC, and event-specific official audio establish a distinct 2005 stadium performance.",
+      "original_researched_uuid": "f178eaee-bb21-4f01-b527-4da27126bbbe",
+      "cleanup_survivor_uuid": "f178eaee-bb21-4f01-b527-4da27126bbbe",
+      "cleanup_report_reference": null,
+      "canonical_title": "Vale la pena",
+      "current_disambiguation": null,
+      "current_identity_summary": {
+        "first_release_id": "bf46ec31-e5eb-4c00-8c15-256dd3bbef22",
+        "first_release_title": "Concierto aniversario",
+        "first_release_year": 2023,
+        "representative_release_id": "bf46ec31-e5eb-4c00-8c15-256dd3bbef22",
+        "representative_release_title": "Concierto aniversario",
+        "track_appearance_count": 1,
+        "release_appearance_count": 1,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "EMPTY"
+    },
+    {
+      "recording_id": "a72f9729-df72-4cbd-ba1e-e2d98336580e",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_04_OJALA_QUE_LLUEVA_CAFE.md",
+      "evidence_section_or_reference": "Song: Visa para un sueño",
+      "evidence_summary": "Official Asondeguerra Tour release identifies the full stadium-tour performance; release wording leaves 2012/2013 performance-year precision ambiguous.",
+      "independent_evidence_sources": [
+        "Official Asondeguerra Tour live release and event audio"
+      ],
+      "proposed_profile": {
+        "performance_kind": "live",
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": "Asondeguerra Tour — Estadio Olímpico, Santo Domingo"
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": false,
+      "confidence": "high",
+      "proposed_action": "PROFILE",
+      "reasoning": "Official Asondeguerra Tour release identifies the full stadium-tour performance; release wording leaves 2012/2013 performance-year precision ambiguous.",
+      "original_researched_uuid": "a72f9729-df72-4cbd-ba1e-e2d98336580e",
+      "cleanup_survivor_uuid": "a72f9729-df72-4cbd-ba1e-e2d98336580e",
+      "cleanup_report_reference": null,
+      "canonical_title": "Visa para un sueño",
+      "current_disambiguation": "live",
+      "current_identity_summary": {
+        "first_release_id": "25e2766f-3fa9-4d9f-9102-b1f2c1d2ad70",
+        "first_release_title": "ASonDeGuerra Tour",
+        "first_release_year": 2013,
+        "representative_release_id": "df79c642-5162-48f0-af69-1ac385bdadd9",
+        "representative_release_title": "Asondeguerra Tour: En Vivo Estadio Olímpico De República Dominicana/2012",
+        "track_appearance_count": 4,
+        "release_appearance_count": 4,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "PARTIALLY_MATCHES"
+    },
+    {
+      "recording_id": "c8b6b240-d2be-4c36-bcff-30cbed0701a5",
+      "evidence_report": "JLG_MANUAL_VERIFICATION_04_OJALA_QUE_LLUEVA_CAFE.md",
+      "evidence_section_or_reference": "Song: Visa para un sueño",
+      "evidence_summary": "This row still conflates a 2010 Directo/Bonus Tracks presentation and a 2005 concert Track; the report requires Track-level correction and full alignment before a canonical profile.",
+      "independent_evidence_sources": [
+        "Independent sources cited in the referenced manual verification section"
+      ],
+      "proposed_profile": {
+        "performance_kind": null,
+        "derivation_kind": null,
+        "language_code": null,
+        "performance_date": null,
+        "performance_date_precision": null,
+        "performance_context": null
+      },
+      "proposed_relationships": [],
+      "arrangement_hold": {
+        "boolean": false,
+        "description": null,
+        "evidence": null
+      },
+      "derived_only_facts": [],
+      "proposed_disambiguation_override": null,
+      "unresolved": true,
+      "confidence": "low",
+      "proposed_action": "UNRESOLVED_NO_WRITE",
+      "reasoning": "This row still conflates a 2010 Directo/Bonus Tracks presentation and a 2005 concert Track; the report requires Track-level correction and full alignment before a canonical profile.",
+      "original_researched_uuid": "c8b6b240-d2be-4c36-bcff-30cbed0701a5",
+      "cleanup_survivor_uuid": "c8b6b240-d2be-4c36-bcff-30cbed0701a5",
+      "cleanup_report_reference": null,
+      "canonical_title": "Visa para un sueño",
+      "current_disambiguation": null,
+      "current_identity_summary": {
+        "first_release_id": "4fdd105f-8ef0-41e7-8d47-2665917e3186",
+        "first_release_title": "Bonus Tracks",
+        "first_release_year": 2010,
+        "representative_release_id": "4fdd105f-8ef0-41e7-8d47-2665917e3186",
+        "representative_release_title": "Bonus Tracks",
+        "track_appearance_count": 2,
+        "release_appearance_count": 2,
+        "work_id": null,
+        "performers": []
+      },
+      "derived_credit_follow_up": false,
+      "legacy_disambiguation_classification": "EMPTY"
+    }
+  ]
+}

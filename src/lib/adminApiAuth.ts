@@ -5,24 +5,25 @@ import {
   getAdminAccessProfile,
   type AdminRole,
 } from "@/lib/adminAccess";
-
-const roleRank: Record<AdminRole, number> = {
-  editor: 1,
-  admin: 2,
-  owner: 3,
-};
+import { getAdminAuthorizationFailureStatus } from "@/lib/adminAuthorization";
 
 export async function requireAdminApiRole(minimumRole: AdminRole = "editor") {
   const user = await getCurrentUser();
   const profile = await getAdminAccessProfile(user);
 
-  if (!profile || roleRank[profile.role] < roleRank[minimumRole]) {
+  const failureStatus = getAdminAuthorizationFailureStatus(
+    Boolean(user),
+    profile?.role ?? null,
+    minimumRole,
+  );
+
+  if (failureStatus) {
     return {
       user,
       profile,
       response: NextResponse.json(
         { ok: false, error: "Insufficient admin permissions." },
-        { status: profile ? 403 : 401 },
+        { status: failureStatus },
       ),
     };
   }

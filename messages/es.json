@@ -246,6 +246,13 @@
     "performedBy": "Interpretado por",
     "release": "Disco",
     "worksCreditsRelease": "Lanzado en",
+    "knownFrom": "Conocida por",
+    "recorded": "Grabado",
+    "duration": "Duración",
+    "releaseGroup": "Grupo de lanzamiento",
+    "openSong": "Abrir Canción",
+    "countryDominicanRepublic": "República Dominicana",
+    "countryWorldwide": "Mundial",
     "workRoles": {
       "composer": "Compositor", "songwriter": "Compositor de canciones", "lyricist": "Letrista", "writer": "Autor", "producer": "Productor", "co_producer": "Coproductor", "executive_producer": "Productor ejecutivo", "arranger": "Arreglista", "orchestrator": "Orquestador", "conductor": "Director", "musician": "Músico", "session_musician": "Músico de sesión", "instrumentalist": "Instrumentista", "engineer": "Ingeniero", "recording_engineer": "Ingeniero de grabación", "mixing_engineer": "Ingeniero de mezcla", "mix_engineer": "Ingeniero de mezcla", "mixing": "Mezcla", "mastering_engineer": "Ingeniero de masterización", "mastering": "Masterización", "beat_programmer": "Programador de ritmos", "remixer": "Remezclador"
     },
@@ -1074,6 +1081,36 @@
     "releaseTypeCounts": "Los recuentos por tipo de publicación aún no están disponibles.",
     "decadeCounts": "Los recuentos de décadas aún no están disponibles."
   },
+  "family": {
+    "title": "Familia",
+    "relationships": "Relaciones familiares",
+    "addRelationship": "Agregar relación",
+    "editRelationship": "Editar relación",
+    "searchArtist": "Buscar artistas de Mangulina...",
+    "changeArtist": "Cambiar",
+    "chooseArtist": "Selecciona un artista relacionado.",
+    "add": "Agregar relación",
+    "update": "Actualizar relación",
+    "cancel": "Cancelar",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "empty": "Este artista no tiene relaciones familiares guardadas.",
+    "confirmDelete": "¿Eliminar la relación familiar con {name}?",
+    "added": "Relación familiar agregada.",
+    "updated": "Relación familiar actualizada.",
+    "loadError": "No se pudieron cargar las relaciones familiares.",
+    "saveError": "No se pudo guardar la relación familiar.",
+    "deleteError": "No se pudo eliminar la relación familiar.",
+    "search": { "dialog": "Seleccionar artista", "label": "Buscar artistas", "placeholder": "Nombre, nombre artístico o alias", "searching": "Buscando…", "error": "La búsqueda falló. Inténtalo de nuevo.", "empty": "No se encontraron artistas.", "cancel": "Cancelar" },
+    "labels": {
+      "father": "Padre", "mother": "Madre", "parent": "Padre o madre", "son": "Hijo", "daughter": "Hija", "child": "Hijo/a",
+      "brother": "Hermano", "sister": "Hermana", "sibling": "Hermano/a", "cousin": "Primo/a",
+      "husband": "Esposo", "wife": "Esposa", "spouse": "Cónyuge", "ex_husband": "Exesposo", "ex_wife": "Exesposa", "ex_spouse": "Excónyuge", "widow_of": "Viuda de", "widower_of": "Viudo de", "late_husband": "Esposo fallecido", "late_wife": "Esposa fallecida",
+      "grandfather": "Abuelo", "grandmother": "Abuela", "grandparent": "Abuelo/a", "grandson": "Nieto", "granddaughter": "Nieta", "grandchild": "Nieto/a",
+      "uncle": "Tío", "aunt": "Tía", "nephew": "Sobrino", "niece": "Sobrina",
+      "great_uncle": "Tío abuelo", "great_aunt": "Tía abuela", "great_nephew": "Sobrino nieto", "great_niece": "Sobrina nieta", "great_uncle_aunt": "Tío/a abuelo/a", "great_nibling": "Sobrino/a nieto/a"
+    }
+  },
   "admin": {
     "recordingCredits": {
       "title": "Créditos",
@@ -1131,6 +1168,16 @@
         "title": "Admin de Grabaciones / Canciones",
         "eyebrow": "Catálogo",
         "description": "Crea y edita canciones, artistas, IDs de YouTube, géneros, contexto, ISRCs, duración y enlaces a publicaciones."
+      },
+      "works": {
+        "title": "Obras",
+        "eyebrow": "Conocimiento Musical",
+        "description": "Administra obras musicales, créditos de composición, evidencia y relaciones con grabaciones."
+      },
+      "recordingReview": {
+        "title": "Revisión de Identidad de Grabaciones",
+        "eyebrow": "Revisión Editorial",
+        "description": "Investiga candidatos de identidad de grabaciones, compara evidencia y registra decisiones editoriales sin modificar el catálogo."
       },
       "songs": {
         "title": "Editor de Canciones / Grabaciones",
@@ -1192,6 +1239,16 @@
       "goToTool": "Ir a herramienta",
       "branding": "Mangulina Admin",
       "adminAccess": "Acceso de Administración"
+    },
+    "workWorkspace": {
+      "title": "Obras",
+      "description": "Administra obras musicales, créditos de composición, evidencia y relaciones con grabaciones.",
+      "backToPortal": "Volver al Portal Administrativo"
+    },
+    "recordingReview": {
+      "title": "Revisión de Identidad de Grabaciones",
+      "description": "Investiga preguntas de identidad antes de vincular Obras y poblar créditos a gran escala.",
+      "backToPortal": "Volver al Portal Administrativo"
     },
     "buttons": {
       "exitToHome": "Salir a Inicio",

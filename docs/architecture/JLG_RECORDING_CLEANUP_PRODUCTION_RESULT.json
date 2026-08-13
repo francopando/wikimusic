@@ -1,0 +1,28 @@
+{
+  "executed_at": "2026-08-13T00:18:20.438Z",
+  "before": {
+    "recordings": 370,
+    "tracks": 1452,
+    "releases": 146,
+    "all_recordings": 17094,
+    "all_tracks": 22756
+  },
+  "after": {
+    "recordings": 327,
+    "tracks": 1452,
+    "releases": 146,
+    "all_recordings": 17051,
+    "all_tracks": 22756
+  },
+  "recordings_deleted": 43,
+  "tracks_repointed": 46,
+  "platform_rows_deleted": 241,
+  "apple_candidates_deleted": 4,
+  "isrc_rows_migrated": 2,
+  "isrc_rows_deduplicated": 1,
+  "isrc_source_rows_repointed": 1,
+  "release_rows_and_order_stable": true,
+  "redundant_remaining": 0,
+  "survivors_remaining": 42,
+  "passed": true
+}

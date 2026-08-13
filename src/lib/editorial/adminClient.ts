@@ -1,4 +1,5 @@
 import type { EditorialDocumentRecord, EditorialDocumentV1, EditorialLocale } from "@/types/editorialDocument";
+import { readApiJson } from "@/lib/clientApiResponse";
 
 export type AdminEditorialDocumentState = Pick<EditorialDocumentRecord,
   "id" | "documentType" | "ownerArtistId" | "locale" | "schemaVersion" | "document" | "status" | "revision" | "updatedAt"
@@ -7,6 +8,10 @@ export type AdminEditorialDocumentState = Pick<EditorialDocumentRecord,
 export type AdminEditorialLoadResult =
   | { ok: true; exists: false }
   | { ok: true; exists: true; document: AdminEditorialDocumentState }
+  | { ok: false; error: string; issues?: Array<{ path: string; message: string }> };
+
+export type AdminEditorialSaveResult =
+  | { ok: true; document: AdminEditorialDocumentState }
   | { ok: false; error: string; issues?: Array<{ path: string; message: string }> };
 
 export type EditorialSavePayload = {
@@ -25,6 +30,6 @@ export async function saveAdminEditorialDocument(payload: EditorialSavePayload) 
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),
   });
-  const result = await response.json();
+  const result = await readApiJson<AdminEditorialSaveResult>(response, "Editorial documents endpoint");
   return { response, result } as const;
 }

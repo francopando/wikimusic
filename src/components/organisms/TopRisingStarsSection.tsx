@@ -5,6 +5,7 @@ import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import SectionCard from "@/components/layout/SectionCard";
 import ArtistCard from "@/components/molecules/ArtistCard";
+import ArtistCarousel from "@/components/molecules/ArtistCarousel";
 import CarouselArrow from "@/components/molecules/CarouselArrow";
 import type { ArtistSummary } from "@/types/home";
 import { HOME_ARTIST_CARD_LIMIT } from "@/lib/homepageLimits";
@@ -48,10 +49,7 @@ export default function TopRisingStarsSection({ risingStars }: TopRisingStarsSec
         <CarouselArrow direction="left" onClick={() => scroll("left")} />
         <CarouselArrow direction="right" onClick={() => scroll("right")} />
 
-        <div
-          ref={scrollRef}
-          className="flex w-full gap-4 overflow-x-auto scrollbar-none pb-2"
-        >
+        <ArtistCarousel ref={scrollRef}>
           {risingStars.slice(0, HOME_ARTIST_CARD_LIMIT).map((artist) => (
             <div
               key={artist.id}
@@ -60,7 +58,7 @@ export default function TopRisingStarsSection({ risingStars }: TopRisingStarsSec
               <ArtistCard artist={artist} titleAs="h3" />
             </div>
           ))}
-        </div>
+        </ArtistCarousel>
       </div>
     </SectionCard>
   );

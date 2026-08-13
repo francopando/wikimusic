@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
-import { getSupabaseClient } from "@/lib/supabase";
+import { requireAdminApiRole } from "@/lib/adminApiAuth";
+import { createServiceRoleClient } from "@/lib/supabaseService";
 
 /**
  * GET /api/admin/platform-links/recording-search?q=...
@@ -7,12 +8,14 @@ import { getSupabaseClient } from "@/lib/supabase";
  * Used by the Manual Add form on the platform-links admin page.
  */
 export async function GET(request: Request) {
+  const auth = await requireAdminApiRole("editor");
+  if (auth.response) return auth.response;
   const { searchParams } = new URL(request.url);
   const q = searchParams.get("q")?.trim() ?? "";
 
   if (!q) return NextResponse.json({ recordings: [] });
 
-  const supabase = getSupabaseClient();
+  const supabase = createServiceRoleClient();
 
   const { data: recordings, error: recErr } = await supabase
     .from("recordings")

@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { requireAdminApiRole } from "@/lib/adminApiAuth";
-import { getSupabaseClient } from "@/lib/supabase";
+import { createServiceRoleClient } from "@/lib/supabaseService";
 import { revalidateArtistProfilePaths } from "@/lib/revalidateArtistProfile";
 import { revalidateHomepageData } from "@/lib/homepageCache";
 
@@ -26,7 +26,7 @@ export async function POST(request: Request) {
   const nextHasImage = hasImage !== false;
   const imageUpdatedAt = new Date().toISOString();
 
-  const { data: updatedArtist, error } = await getSupabaseClient()
+  const { data: updatedArtist, error } = await createServiceRoleClient()
     .from("artists")
     .update({ has_image: nextHasImage, image_updated_at: imageUpdatedAt })
     .eq("id", artistId)

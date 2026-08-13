@@ -1,11 +1,11 @@
 import "server-only";
 
-import { getSupabaseServiceClient } from "@/lib/adminAccess";
+import { createServiceRoleClient } from "@/lib/supabaseService";
 import { revalidateArtistProfilePaths } from "@/lib/revalidateArtistProfile";
 import { revalidateHomepageData } from "@/lib/homepageCache";
 
 export async function revalidateEditorialDocumentOwner(ownerArtistId: string) {
-  const supabase = getSupabaseServiceClient();
+  const supabase = createServiceRoleClient();
   const [{ data }, { data: featured }] = await Promise.all([
     supabase
     .from("artists")
@@ -19,7 +19,7 @@ export async function revalidateEditorialDocumentOwner(ownerArtistId: string) {
 }
 
 export async function revalidateEditorialDocumentsReferencingArtist(targetArtistId: string) {
-  const supabase = getSupabaseServiceClient();
+  const supabase = createServiceRoleClient();
   const { data: references } = await supabase
     .from("editorial_entity_references")
     .select("editorial_document:editorial_documents!inner(owner_artist_id)")

@@ -8,6 +8,7 @@ import {
   isArtistWorkCreditRole,
   normalizeArtistWorkCreditRole,
 } from "@/lib/artistWorkCreditRoles";
+import { comparePortfolioPresentation } from "@/lib/artistPortfolioPresentation";
 
 export type PortfolioPerformer = {
   artistId: string | null;
@@ -25,11 +26,17 @@ export type PortfolioWork = {
   creditedAs: string | null;
   recordingId: string | null;
   recordingSlug: string | null;
+  recordingYear: number | null;
+  disambiguation: string | null;
+  duration: number | null;
   performers: PortfolioPerformer[];
   releaseId: string | null;
   releaseTitle: string | null;
   releaseSlug: string | null;
   releaseYear: number | null;
+  releaseType: string | null;
+  releaseCountry: string | null;
+  releaseGroupTitle: string | null;
   creditedWorkId: string | null;
   sourceUrl: string | null;
   sourceConfidence: string | null;
@@ -45,6 +52,8 @@ type RecordingRow = {
   title: string;
   slug: string | null;
   recording_year: number | null;
+  disambiguation: string | null;
+  duration: number | null;
   artist_id: string | null;
   artist: Related<ArtistRow>;
 };
@@ -73,7 +82,9 @@ type ReleaseRow = {
   slug: string | null;
   release_year: number | null;
   year: number | null;
+  type: string | null;
   country: string | null;
+  release_group: Related<{ title: string | null }>;
   date: string | null;
   created_at: string | null;
   status: string | null;
@@ -118,18 +129,13 @@ function compareReleases(a: ReleaseRow, b: ReleaseRow) {
 }
 
 function sortPortfolio(works: PortfolioWork[]) {
-  return works.sort((a, b) =>
-    (b.releaseYear ?? Number.MIN_SAFE_INTEGER) - (a.releaseYear ?? Number.MIN_SAFE_INTEGER) ||
-    a.title.localeCompare(b.title) ||
-    compareArtistWorkCreditRoles(a.roles[0] ?? "", b.roles[0] ?? "") ||
-    a.id.localeCompare(b.id),
-  );
+  return works.sort((a, b) => comparePortfolioPresentation(a, b) || compareArtistWorkCreditRoles(a.roles[0] ?? "", b.roles[0] ?? ""));
 }
 
 async function getRecordingPortfolio(artistId: string): Promise<PortfolioWork[]> {
   const { data: creditData, error: creditError } = await supabase
     .from("recording_credits")
-    .select("id,recording_id,artist_id,role,credited_as,display_order,metadata,created_at,recording:recordings!inner(id,title,slug,recording_year,artist_id,artist:artists(id,name,slug,status))")
+    .select("id,recording_id,artist_id,role,credited_as,display_order,metadata,created_at,recording:recordings!inner(id,title,slug,recording_year,disambiguation,duration,artist_id,artist:artists(id,name,slug,status))")
     .eq("artist_id", artistId)
     .in("role", [...ARTIST_WORK_CREDIT_ROLES]);
 
@@ -152,7 +158,7 @@ async function getRecordingPortfolio(artistId: string): Promise<PortfolioWork[]>
         .eq("artist.status", "published"),
       supabase
         .from("tracks")
-        .select("recording_id,release:releases!inner(id,title,slug,release_year,year,country,date,created_at,status)")
+        .select("recording_id,release:releases!inner(id,title,slug,release_year,year,type,country,date,created_at,status,release_group:release_groups(title))")
         .in("recording_id", recordingIds)
         .eq("release.status", "published"),
     ]);
@@ -221,11 +227,17 @@ async function getRecordingPortfolio(artistId: string): Promise<PortfolioWork[]>
       creditedAs: recordingCredits.find((credit) => credit.credited_as?.trim())?.credited_as ?? null,
       recordingId: recording.id,
       recordingSlug: recording.slug,
+      recordingYear: recording.recording_year,
+      disambiguation: recording.disambiguation,
+      duration: recording.duration,
       performers,
       releaseId: selectedRelease?.id ?? null,
       releaseTitle: selectedRelease?.title ?? null,
       releaseSlug: selectedRelease?.slug ?? null,
-      releaseYear: selectedRelease?.release_year ?? selectedRelease?.year ?? recording.recording_year,
+      releaseYear: selectedRelease?.release_year ?? selectedRelease?.year ?? null,
+      releaseType: selectedRelease?.type ?? null,
+      releaseCountry: selectedRelease?.country ?? null,
+      releaseGroupTitle: firstRelated(selectedRelease?.release_group ?? null)?.title ?? null,
       creditedWorkId: null,
       sourceUrl: null,
       sourceConfidence: null,
@@ -251,6 +263,9 @@ async function getEditorialPortfolio(artistId: string): Promise<PortfolioWork[]>
     creditedAs: null,
     recordingId: work.recording_id ?? null,
     recordingSlug: null,
+    recordingYear: null,
+    disambiguation: null,
+    duration: null,
     performers: work.performer_text || work.performer_artist_name
       ? [{
           artistId: work.performer_artist_id,
@@ -264,6 +279,9 @@ async function getEditorialPortfolio(artistId: string): Promise<PortfolioWork[]>
     releaseTitle: work.release_title,
     releaseSlug: null,
     releaseYear: work.release_year,
+    releaseType: null,
+    releaseCountry: null,
+    releaseGroupTitle: null,
     creditedWorkId: work.id,
     sourceUrl: null,
     sourceConfidence: work.source_confidence ?? null,

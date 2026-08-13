@@ -26,3 +26,59 @@ export interface Artist {
   views?: number | null;         // Kept from your other file
 death_year?: number | null;
 }
+
+export type OntologyStatus =
+  | "draft"
+  | "published"
+  | "hidden"
+  | "needs_review"
+  | "duplicate"
+  | "archived";
+
+export type AssertionVerificationStatus =
+  | "unverified"
+  | "verified"
+  | "disputed"
+  | "superseded";
+
+export interface MusicalWork {
+  id: string;
+  preferred_title: string;
+  slug: string | null;
+  language: string | null;
+  composition_year: number | null;
+  publication_year: number | null;
+  status: OntologyStatus;
+  editorial_notes: string | null;
+  metadata: Record<string, unknown>;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface WorkCredit {
+  id: string;
+  work_id: string;
+  artist_id: string;
+  role: string;
+  credited_as: string | null;
+  credit_detail: string | null;
+  sequence: number | null;
+  verification_status: AssertionVerificationStatus;
+  notes: string | null;
+  metadata: Record<string, unknown>;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface RecordingIsrc {
+  id: string;
+  recording_id: string;
+  isrc: string;
+  verification_status: AssertionVerificationStatus;
+  first_observed_at: string | null;
+  last_verified_at: string | null;
+  notes: string | null;
+  metadata: Record<string, unknown>;
+  created_at: string;
+  updated_at: string;
+}

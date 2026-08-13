@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { requireAdminApiRole } from "@/lib/adminApiAuth";
 import {
   fetchTopArtistViews,
   fetchTopRecordingViews,
@@ -17,6 +18,8 @@ import {
  * Called by client component to refresh analytics
  */
 export async function GET() {
+  const auth = await requireAdminApiRole("editor");
+  if (auth.response) return auth.response;
   try {
     const [
       artistViewsData,

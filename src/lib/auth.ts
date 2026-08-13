@@ -2,25 +2,7 @@ import { createServerClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { getSupabasePublicConfig } from "@/lib/supabaseConfig";
-
-export function isAdminEmail(email: string | undefined) {
-  const allowlist = getAdminEmailAllowlist();
-
-  if (allowlist.length === 0) return Boolean(email);
-  return Boolean(email && allowlist.includes(email.toLowerCase()));
-}
-
-export function getAdminEmailAllowlist() {
-  return (
-    process.env.MANGULINA_ADMIN_EMAILS ||
-    process.env.ADMIN_EMAILS ||
-    process.env.NEXT_PUBLIC_ADMIN_EMAILS ||
-    ""
-  )
-    .split(",")
-    .map((item) => item.trim().toLowerCase())
-    .filter(Boolean);
-}
+import { getAdminAccessProfile } from "@/lib/adminAccess";
 
 export async function createServerSupabaseAuthClient() {
   const cookieStore = await cookies();
@@ -57,7 +39,7 @@ export async function getCurrentUser() {
 export async function requireAdminUser() {
   const user = await getCurrentUser();
 
-  if (!isAdminEmail(user?.email)) {
+  if (!(await getAdminAccessProfile(user))) {
     redirect("/admin/login");
   }
 
