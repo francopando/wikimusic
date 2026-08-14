@@ -1,4 +1,4 @@
-import { buildCanonical, SITE_NAME, SITE_URL } from "@/lib/seo";
+import { buildCanonical, buildLocalizedCanonical, resolveSeoLocale, SITE_NAME, SITE_URL, type SeoLocale } from "@/lib/seo";
 
 export type BreadcrumbItem = {
   name: string;
@@ -11,11 +11,15 @@ export const websiteReference = {
   url: SITE_URL,
 };
 
-export function absoluteUrl(pathOrUrl: string) {
-  return /^https?:\/\//i.test(pathOrUrl) ? pathOrUrl : buildCanonical(pathOrUrl);
+export function absoluteUrl(pathOrUrl: string, locale?: SeoLocale | string) {
+  return /^https?:\/\//i.test(pathOrUrl)
+    ? pathOrUrl
+    : locale
+      ? buildLocalizedCanonical(pathOrUrl, resolveSeoLocale(locale))
+      : buildCanonical(pathOrUrl);
 }
 
-export function breadcrumbSchema(items: BreadcrumbItem[]) {
+export function breadcrumbSchema(items: BreadcrumbItem[], locale?: SeoLocale | string) {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -23,7 +27,7 @@ export function breadcrumbSchema(items: BreadcrumbItem[]) {
       "@type": "ListItem",
       position: index + 1,
       name: item.name,
-      item: buildCanonical(item.path),
+      item: absoluteUrl(item.path, locale),
     })),
   };
 }

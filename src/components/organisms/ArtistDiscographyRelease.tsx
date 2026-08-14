@@ -8,6 +8,7 @@ import { useLocale } from "next-intl";
 
 import { Link } from "@/i18n/navigation";
 import type { DiscographyEditionSummary } from "@/lib/artistApi";
+import { formatDurationMilliseconds } from "@/lib/artistPortfolioPresentation";
 
 type LazyDiscographyTrack = {
   track_id: string;
@@ -36,16 +37,6 @@ type ArtistDiscographyReleaseProps = {
     editions: DiscographyEditionSummary[];
   };
 };
-
-function formatDuration(ms: number | null) {
-  if (!ms) return "";
-
-  const totalSeconds = Math.round(ms / 1000);
-  const minutes = Math.floor(totalSeconds / 60);
-  const seconds = totalSeconds % 60;
-
-  return `${minutes}:${seconds.toString().padStart(2, "0")}`;
-}
 
 export default function ArtistDiscographyRelease({
   release,
@@ -225,7 +216,7 @@ export default function ArtistDiscographyRelease({
                   </div>
 
                   <span className="text-gray-400 tabular-nums text-xs shrink-0">
-                    {formatDuration(track.duration_ms)}
+                    {formatDurationMilliseconds(track.duration_ms)}
                   </span>
                 </Link>
               );

@@ -135,13 +135,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     });
   }
 
-  const description = `Song information, credits, releases and platform links for ${song.recording_title} in the Dominican Music Database.`;
+  const description = locale === "es"
+    ? `Información, créditos, lanzamientos y enlaces de plataformas para ${song.recording_title} en la Base de Datos de Música Dominicana.`
+    : `Song information, credits, releases and platform links for ${song.recording_title} in the Dominican Music Database.`;
   const image = song.release_id && song.has_cover_image
     ? getPublicReleaseCoverUrl(song.release_id, 300)
     : null;
 
   return createPageMetadata({
-    title: songSeoTitle(song),
+    title: songSeoTitle(song, locale),
     description,
     path: `/songs/${slug}`,
     image,
@@ -153,7 +155,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 // ── Page ──────────────────────────────────────────────────────────────────────
 
 export default async function SongProfilePage({ params }: PageProps) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const cleanSlug = cleanSongParam(slug);
 
   const song = await getSongBySlug(cleanSlug);
@@ -214,19 +216,19 @@ export default async function SongProfilePage({ params }: PageProps) {
     "@context": "https://schema.org",
     "@type": "MusicRecording",
     name: song.recording_title,
-    url: absoluteUrl(songPath),
+    url: absoluteUrl(songPath, locale),
     byArtist: song.artist_name
       ? {
           "@type": "MusicGroup",
           name: song.artist_name,
-          url: artistSlug ? absoluteUrl(`/artists/${artistSlug}`) : undefined,
+          url: artistSlug ? absoluteUrl(`/artists/${artistSlug}`, locale) : undefined,
         }
       : undefined,
     inAlbum: song.release_title
       ? {
           "@type": "MusicAlbum",
           name: song.release_title,
-          url: song.release_slug ? absoluteUrl(`/releases/${song.release_slug}`) : undefined,
+          url: song.release_slug ? absoluteUrl(`/releases/${song.release_slug}`, locale) : undefined,
         }
       : undefined,
     duration: isoDuration(song.duration),
@@ -245,7 +247,7 @@ export default async function SongProfilePage({ params }: PageProps) {
             { name: "Home", path: "/" },
             { name: "Songs", path: "/archive" },
             { name: song.recording_title, path: songPath },
-          ]),
+          ], locale),
         ]}
       />
       <AnalyticsPageView eventType="recording_view" entityId={recordingId} />

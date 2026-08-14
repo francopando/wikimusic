@@ -1,0 +1,401 @@
+Recording portfolio release query failed: {
+  code: 'PGRST200',
+  details: "Searched for a foreign key relationship between 'releases' and 'release_groups' in the schema 'public', but no matches were found.",
+  hint: "Perhaps you meant 'release_artists' instead of 'release_groups'.",
+  message: "Could not find a relationship between 'releases' and 'release_groups' in the schema cache"
+}
+[browser] In HTML, <a> cannot be a descendant of <a>.
+This will cause a hydration error.
+
+  ...
+    <ArtistProfile>
+      <MainWrapper>
+        <main className={"pt-16 pb..."}>
+          <script>
+          <AnalyticsPageView>
+          ...
+            <div className="grid min-w...">
+              <div>
+              <div className="min-w-0 sp...">
+                <Suspense fallback={<div>}>
+                  <ArtistWorksPortfolio>
+                    <section className="min-w-0 ro...">
+                      <div>
+                      <div className="space-y-5">
+                        <article className="border-b b...">
+                          <div>
+                          <div className="mt-3 grid ...">
+                            <RecordingRow>
+                              <Link>
+                                <BaseLink href="/songs/col..." localeCookie={false} prefetch={false} ...>
+                                  <LinkComponent ref={null} href="/songs/col..." hrefLang={undefined} ...>
+>                                   <a
+>                                     hrefLang={undefined}
+>                                     aria-label="Colegiala: Version bachata"
+>                                     className="flex flex-wrap items-center gap-x-2 rounded-lg border border-gray-100..."
+>                                     ref={function}
+>                                     onClick={function onClick}
+>                                     onMouseEnter={function onMouseEnter}
+>                                     onTouchStart={function onTouchStart}
+>                                     href="/songs/colegiala-alex-bueno"
+>                                   >
+                                      <span>
+                                      <span>
+                                      ...
+                                        <Link>
+                                          <BaseLink href="/artists/a..." localeCookie={false} prefetch={false} ...>
+                                            <LinkComponent ref={null} href="/artists/a..." hrefLang={undefined} ...>
+>                                             <a
+>                                               hrefLang={undefined}
+>                                               className="font-medium text-(--color-flagblue) underline-offset-2 hove..."
+>                                               ref={function}
+>                                               onClick={function onClick}
+>                                               onMouseEnter={function onMouseEnter}
+>                                               onTouchStart={function onTouchStart}
+>                                               href="/artists/alex-bueno"
+>                                             >
+                            ...
+                      ...
+ 
+[browser] <a> cannot contain a nested <a>.
+See this log for the ancestor stack trace. 
+[browser] Image with src "https://srulenjahemkuxtkfmzt.supabase.co/storage/v1/object/public/artists-images/0760875d-6b6f-4a48-8aed-6e57934d1baa.webp?v=2026-07-09T14%3A00%3A38.685%2B00%3A00" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+Error: MISSING_MESSAGE: Could not resolve `artist.otherRecordingCredits` in messages for locale `en`.
+    at ArtistWorksPortfolio (src\components\organisms\ArtistWorksPortfolio.tsx:51:138)
+  49 | ...s font-normal uppercase text-(--color-wikicrimson)">{t("worksAndCredits")}</h3><div cla...
+  50 | ...rder-b border-gray-100 pb-5 last:border-b-0"><div className="flex flex-wrap items-basel...
+> 51 | ...ld uppercase tracking-wide text-gray-500">{t("otherRecordingCredits")}</h4><div classNa...
+     |                                               ^
+  52 | ...
+  53 | ...
+  54 | ... {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `artist.otherRecordingCredits` in messages for locale `en`.'
+}
+Error: MISSING_MESSAGE: Could not resolve `artist.recording` in messages for locale `en`.
+    at versionLabel (src\components\organisms\ArtistWorksPortfolio.tsx:24:13)
+    at RecordingRow (src\components\organisms\ArtistWorksPortfolio.tsx:36:206)
+  22 |   if (recording.identityLabel) return recording.identityLabel;
+  23 |   if (recording.workTitle && recording.title !== recording.workTitle) return recording.title;
+> 24 |   return `${t("recording")}${recording.releaseYear ? ` · ${recording.releaseYear}` : ""}`;
+     |             ^
+  25 | }
+  26 |
+  27 | function PerformerList({ recording }: { recording: PortfolioRecording }) { {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `artist.recording` in messages for locale `en`.'
+}
+Error: MISSING_MESSAGE: Could not resolve `artist.recording` in messages for locale `en`.
+    at versionLabel (src\components\organisms\ArtistWorksPortfolio.tsx:24:13)
+    at RecordingRow (src\components\organisms\ArtistWorksPortfolio.tsx:36:418)
+  22 |   if (recording.identityLabel) return recording.identityLabel;
+  23 |   if (recording.workTitle && recording.title !== recording.workTitle) return recording.title;
+> 24 |   return `${t("recording")}${recording.releaseYear ? ` · ${recording.releaseYear}` : ""}`;
+     |             ^
+  25 | }
+  26 |
+  27 | function PerformerList({ recording }: { recording: PortfolioRecording }) { {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `artist.recording` in messages for locale `en`.'
+}
+Error: MISSING_MESSAGE: Could not resolve `artist.recording` in messages for locale `en`.
+    at versionLabel (src\components\organisms\ArtistWorksPortfolio.tsx:24:13)
+    at RecordingRow (src\components\organisms\ArtistWorksPortfolio.tsx:36:206)
+  22 |   if (recording.identityLabel) return recording.identityLabel;
+  23 |   if (recording.workTitle && recording.title !== recording.workTitle) return recording.title;
+> 24 |   return `${t("recording")}${recording.releaseYear ? ` · ${recording.releaseYear}` : ""}`;
+     |             ^
+  25 | }
+  26 |
+  27 | function PerformerList({ recording }: { recording: PortfolioRecording }) { {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `artist.recording` in messages for locale `en`.'
+}
+Error: MISSING_MESSAGE: Could not resolve `artist.recording` in messages for locale `en`.
+    at versionLabel (src\components\organisms\ArtistWorksPortfolio.tsx:24:13)
+    at RecordingRow (src\components\organisms\ArtistWorksPortfolio.tsx:36:418)
+  22 |   if (recording.identityLabel) return recording.identityLabel;
+  23 |   if (recording.workTitle && recording.title !== recording.workTitle) return recording.title;
+> 24 |   return `${t("recording")}${recording.releaseYear ? ` · ${recording.releaseYear}` : ""}`;
+     |             ^
+  25 | }
+  26 |
+  27 | function PerformerList({ recording }: { recording: PortfolioRecording }) { {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `artist.recording` in messages for locale `en`.'
+}
+Error: MISSING_MESSAGE: Could not resolve `artist.recording` in messages for locale `en`.
+    at versionLabel (src\components\organisms\ArtistWorksPortfolio.tsx:24:13)
+    at RecordingRow (src\components\organisms\ArtistWorksPortfolio.tsx:36:206)
+  22 |   if (recording.identityLabel) return recording.identityLabel;
+  23 |   if (recording.workTitle && recording.title !== recording.workTitle) return recording.title;
+> 24 |   return `${t("recording")}${recording.releaseYear ? ` · ${recording.releaseYear}` : ""}`;
+     |             ^
+  25 | }
+  26 |
+  27 | function PerformerList({ recording }: { recording: PortfolioRecording }) { {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `artist.recording` in messages for locale `en`.'
+}
+Error: MISSING_MESSAGE: Could not resolve `artist.recording` in messages for locale `en`.
+    at versionLabel (src\components\organisms\ArtistWorksPortfolio.tsx:24:13)
+    at RecordingRow (src\components\organisms\ArtistWorksPortfolio.tsx:36:418)
+  22 |   if (recording.identityLabel) return recording.identityLabel;
+  23 |   if (recording.workTitle && recording.title !== recording.workTitle) return recording.title;
+> 24 |   return `${t("recording")}${recording.releaseYear ? ` · ${recording.releaseYear}` : ""}`;
+     |             ^
+  25 | }
+  26 |
+  27 | function PerformerList({ recording }: { recording: PortfolioRecording }) { {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `artist.recording` in messages for locale `en`.'
+}
+Error: MISSING_MESSAGE: Could not resolve `artist.otherRecordingCredits` in messages for locale `en`.
+    at ArtistWorksPortfolio (src\components\organisms\ArtistWorksPortfolio.tsx:51:138)
+  49 | ...s font-normal uppercase text-(--color-wikicrimson)">{t("worksAndCredits")}</h3><div cla...
+  50 | ...rder-b border-gray-100 pb-5 last:border-b-0"><div className="flex flex-wrap items-basel...
+> 51 | ...ld uppercase tracking-wide text-gray-500">{t("otherRecordingCredits")}</h4><div classNa...
+     |                                               ^
+  52 | ...
+  53 | ...
+  54 | ... {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `artist.otherRecordingCredits` in messages for locale `en`.'
+}
+Error: MISSING_MESSAGE: Could not resolve `artist.recording` in messages for locale `en`.
+    at versionLabel (src\components\organisms\ArtistWorksPortfolio.tsx:24:13)
+    at RecordingRow (src\components\organisms\ArtistWorksPortfolio.tsx:36:206)
+  22 |   if (recording.identityLabel) return recording.identityLabel;
+  23 |   if (recording.workTitle && recording.title !== recording.workTitle) return recording.title;
+> 24 |   return `${t("recording")}${recording.releaseYear ? ` · ${recording.releaseYear}` : ""}`;
+     |             ^
+  25 | }
+  26 |
+  27 | function PerformerList({ recording }: { recording: PortfolioRecording }) { {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `artist.recording` in messages for locale `en`.'
+}
+Error: MISSING_MESSAGE: Could not resolve `artist.recording` in messages for locale `en`.
+    at versionLabel (src\components\organisms\ArtistWorksPortfolio.tsx:24:13)
+    at RecordingRow (src\components\organisms\ArtistWorksPortfolio.tsx:36:418)
+  22 |   if (recording.identityLabel) return recording.identityLabel;
+  23 |   if (recording.workTitle && recording.title !== recording.workTitle) return recording.title;
+> 24 |   return `${t("recording")}${recording.releaseYear ? ` · ${recording.releaseYear}` : ""}`;
+     |             ^
+  25 | }
+  26 |
+  27 | function PerformerList({ recording }: { recording: PortfolioRecording }) { {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `artist.recording` in messages for locale `en`.'
+}
+Error: MISSING_MESSAGE: Could not resolve `artist.recording` in messages for locale `en`.
+    at versionLabel (src\components\organisms\ArtistWorksPortfolio.tsx:24:13)
+    at RecordingRow (src\components\organisms\ArtistWorksPortfolio.tsx:36:206)
+  22 |   if (recording.identityLabel) return recording.identityLabel;
+  23 |   if (recording.workTitle && recording.title !== recording.workTitle) return recording.title;
+> 24 |   return `${t("recording")}${recording.releaseYear ? ` · ${recording.releaseYear}` : ""}`;
+     |             ^
+  25 | }
+  26 |
+  27 | function PerformerList({ recording }: { recording: PortfolioRecording }) { {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `artist.recording` in messages for locale `en`.'
+}
+Error: MISSING_MESSAGE: Could not resolve `artist.recording` in messages for locale `en`.
+    at versionLabel (src\components\organisms\ArtistWorksPortfolio.tsx:24:13)
+    at RecordingRow (src\components\organisms\ArtistWorksPortfolio.tsx:36:418)
+  22 |   if (recording.identityLabel) return recording.identityLabel;
+  23 |   if (recording.workTitle && recording.title !== recording.workTitle) return recording.title;
+> 24 |   return `${t("recording")}${recording.releaseYear ? ` · ${recording.releaseYear}` : ""}`;
+     |             ^
+  25 | }
+  26 |
+  27 | function PerformerList({ recording }: { recording: PortfolioRecording }) { {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `artist.recording` in messages for locale `en`.'
+}
+Error: MISSING_MESSAGE: Could not resolve `artist.recording` in messages for locale `en`.
+    at versionLabel (src\components\organisms\ArtistWorksPortfolio.tsx:24:13)
+    at RecordingRow (src\components\organisms\ArtistWorksPortfolio.tsx:36:206)
+  22 |   if (recording.identityLabel) return recording.identityLabel;
+  23 |   if (recording.workTitle && recording.title !== recording.workTitle) return recording.title;
+> 24 |   return `${t("recording")}${recording.releaseYear ? ` · ${recording.releaseYear}` : ""}`;
+     |             ^
+  25 | }
+  26 |
+  27 | function PerformerList({ recording }: { recording: PortfolioRecording }) { {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `artist.recording` in messages for locale `en`.'
+}
+Error: MISSING_MESSAGE: Could not resolve `artist.recording` in messages for locale `en`.
+    at versionLabel (src\components\organisms\ArtistWorksPortfolio.tsx:24:13)
+    at RecordingRow (src\components\organisms\ArtistWorksPortfolio.tsx:36:418)
+  22 |   if (recording.identityLabel) return recording.identityLabel;
+  23 |   if (recording.workTitle && recording.title !== recording.workTitle) return recording.title;
+> 24 |   return `${t("recording")}${recording.releaseYear ? ` · ${recording.releaseYear}` : ""}`;
+     |             ^
+  25 | }
+  26 |
+  27 | function PerformerList({ recording }: { recording: PortfolioRecording }) { {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `artist.recording` in messages for locale `en`.'
+}
+Error: MISSING_MESSAGE: Could not resolve `artist.recording` in messages for locale `en`.
+    at versionLabel (src\components\organisms\ArtistWorksPortfolio.tsx:24:13)
+    at RecordingRow (src\components\organisms\ArtistWorksPortfolio.tsx:36:206)
+  22 |   if (recording.identityLabel) return recording.identityLabel;
+  23 |   if (recording.workTitle && recording.title !== recording.workTitle) return recording.title;
+> 24 |   return `${t("recording")}${recording.releaseYear ? ` · ${recording.releaseYear}` : ""}`;
+     |             ^
+  25 | }
+  26 |
+  27 | function PerformerList({ recording }: { recording: PortfolioRecording }) { {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `artist.recording` in messages for locale `en`.'
+}
+Error: MISSING_MESSAGE: Could not resolve `artist.recording` in messages for locale `en`.
+    at versionLabel (src\components\organisms\ArtistWorksPortfolio.tsx:24:13)
+    at RecordingRow (src\components\organisms\ArtistWorksPortfolio.tsx:36:418)
+  22 |   if (recording.identityLabel) return recording.identityLabel;
+  23 |   if (recording.workTitle && recording.title !== recording.workTitle) return recording.title;
+> 24 |   return `${t("recording")}${recording.releaseYear ? ` · ${recording.releaseYear}` : ""}`;
+     |             ^
+  25 | }
+  26 |
+  27 | function PerformerList({ recording }: { recording: PortfolioRecording }) { {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `artist.recording` in messages for locale `en`.'
+}
+Error: MISSING_MESSAGE: Could not resolve `artist.recording` in messages for locale `en`.
+    at versionLabel (src\components\organisms\ArtistWorksPortfolio.tsx:24:13)
+    at RecordingRow (src\components\organisms\ArtistWorksPortfolio.tsx:36:206)
+  22 |   if (recording.identityLabel) return recording.identityLabel;
+  23 |   if (recording.workTitle && recording.title !== recording.workTitle) return recording.title;
+> 24 |   return `${t("recording")}${recording.releaseYear ? ` · ${recording.releaseYear}` : ""}`;
+     |             ^
+  25 | }
+  26 |
+  27 | function PerformerList({ recording }: { recording: PortfolioRecording }) { {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `artist.recording` in messages for locale `en`.'
+}
+Error: MISSING_MESSAGE: Could not resolve `artist.recording` in messages for locale `en`.
+    at versionLabel (src\components\organisms\ArtistWorksPortfolio.tsx:24:13)
+    at RecordingRow (src\components\organisms\ArtistWorksPortfolio.tsx:36:418)
+  22 |   if (recording.identityLabel) return recording.identityLabel;
+  23 |   if (recording.workTitle && recording.title !== recording.workTitle) return recording.title;
+> 24 |   return `${t("recording")}${recording.releaseYear ? ` · ${recording.releaseYear}` : ""}`;
+     |             ^
+  25 | }
+  26 |
+  27 | function PerformerList({ recording }: { recording: PortfolioRecording }) { {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `artist.recording` in messages for locale `en`.'
+}
+Error: MISSING_MESSAGE: Could not resolve `artist.recording` in messages for locale `en`.
+    at versionLabel (src\components\organisms\ArtistWorksPortfolio.tsx:24:13)
+    at RecordingRow (src\components\organisms\ArtistWorksPortfolio.tsx:36:206)
+  22 |   if (recording.identityLabel) return recording.identityLabel;
+  23 |   if (recording.workTitle && recording.title !== recording.workTitle) return recording.title;
+> 24 |   return `${t("recording")}${recording.releaseYear ? ` · ${recording.releaseYear}` : ""}`;
+     |             ^
+  25 | }
+  26 |
+  27 | function PerformerList({ recording }: { recording: PortfolioRecording }) { {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `artist.recording` in messages for locale `en`.'
+}
+Error: MISSING_MESSAGE: Could not resolve `artist.recording` in messages for locale `en`.
+    at versionLabel (src\components\organisms\ArtistWorksPortfolio.tsx:24:13)
+    at RecordingRow (src\components\organisms\ArtistWorksPortfolio.tsx:36:418)
+  22 |   if (recording.identityLabel) return recording.identityLabel;
+  23 |   if (recording.workTitle && recording.title !== recording.workTitle) return recording.title;
+> 24 |   return `${t("recording")}${recording.releaseYear ? ` · ${recording.releaseYear}` : ""}`;
+     |             ^
+  25 | }
+  26 |
+  27 | function PerformerList({ recording }: { recording: PortfolioRecording }) { {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `artist.recording` in messages for locale `en`.'
+}
+Error: MISSING_MESSAGE: Could not resolve `artist.recording` in messages for locale `en`.
+    at versionLabel (src\components\organisms\ArtistWorksPortfolio.tsx:24:13)
+    at RecordingRow (src\components\organisms\ArtistWorksPortfolio.tsx:36:206)
+  22 |   if (recording.identityLabel) return recording.identityLabel;
+  23 |   if (recording.workTitle && recording.title !== recording.workTitle) return recording.title;
+> 24 |   return `${t("recording")}${recording.releaseYear ? ` · ${recording.releaseYear}` : ""}`;
+     |             ^
+  25 | }
+  26 |
+  27 | function PerformerList({ recording }: { recording: PortfolioRecording }) { {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `artist.recording` in messages for locale `en`.'
+}
+Error: MISSING_MESSAGE: Could not resolve `artist.recording` in messages for locale `en`.
+    at versionLabel (src\components\organisms\ArtistWorksPortfolio.tsx:24:13)
+    at RecordingRow (src\components\organisms\ArtistWorksPortfolio.tsx:36:418)
+  22 |   if (recording.identityLabel) return recording.identityLabel;
+  23 |   if (recording.workTitle && recording.title !== recording.workTitle) return recording.title;
+> 24 |   return `${t("recording")}${recording.releaseYear ? ` · ${recording.releaseYear}` : ""}`;
+     |             ^
+  25 | }
+  26 |
+  27 | function PerformerList({ recording }: { recording: PortfolioRecording }) { {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `artist.recording` in messages for locale `en`.'
+}
+Error: MISSING_MESSAGE: Could not resolve `artist.recording` in messages for locale `en`.
+    at versionLabel (src\components\organisms\ArtistWorksPortfolio.tsx:24:13)
+    at RecordingRow (src\components\organisms\ArtistWorksPortfolio.tsx:36:206)
+  22 |   if (recording.identityLabel) return recording.identityLabel;
+  23 |   if (recording.workTitle && recording.title !== recording.workTitle) return recording.title;
+> 24 |   return `${t("recording")}${recording.releaseYear ? ` · ${recording.releaseYear}` : ""}`;
+     |             ^
+  25 | }
+  26 |
+  27 | function PerformerList({ recording }: { recording: PortfolioRecording }) { {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `artist.recording` in messages for locale `en`.'
+}
+Error: MISSING_MESSAGE: Could not resolve `artist.recording` in messages for locale `en`.
+    at versionLabel (src\components\organisms\ArtistWorksPortfolio.tsx:24:13)
+    at RecordingRow (src\components\organisms\ArtistWorksPortfolio.tsx:36:418)
+  22 |   if (recording.identityLabel) return recording.identityLabel;
+  23 |   if (recording.workTitle && recording.title !== recording.workTitle) return recording.title;
+> 24 |   return `${t("recording")}${recording.releaseYear ? ` · ${recording.releaseYear}` : ""}`;
+     |             ^
+  25 | }
+  26 |
+  27 | function PerformerList({ recording }: { recording: PortfolioRecording }) { {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `artist.recording` in messages for locale `en`.'
+}
+Error: MISSING_MESSAGE: Could not resolve `artist.recording` in messages for locale `en`.
+    at versionLabel (src\components\organisms\ArtistWorksPortfolio.tsx:24:13)
+    at RecordingRow (src\components\organisms\ArtistWorksPortfolio.tsx:36:206)
+  22 |   if (recording.identityLabel) return recording.identityLabel;
+  23 |   if (recording.workTitle && recording.title !== recording.workTitle) return recording.title;
+> 24 |   return `${t("recording")}${recording.releaseYear ? ` · ${recording.releaseYear}` : ""}`;
+     |             ^
+  25 | }
+  26 |
+  27 | function PerformerList({ recording }: { recording: PortfolioRecording }) { {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `artist.recording` in messages for locale `en`.'
+}
+Error: MISSING_MESSAGE: Could not resolve `artist.recording` in messages for locale `en`.
+    at versionLabel (src\components\organisms\ArtistWorksPortfolio.tsx:24:13)
+    at RecordingRow (src\components\organisms\ArtistWorksPortfolio.tsx:36:418)
+  22 |   if (recording.identityLabel) return recording.identityLabel;
+  23 |   if (recording.workTitle && recording.title !== recording.workTitle) return recording.title;
+> 24 |   return `${t("recording")}${recording.releaseYear ? ` · ${recording.releaseYear}` : ""}`;
+     |             ^
+  25 | }
+  26 |
+  27 | function PerformerList({ recording }: { recording: PortfolioRecording }) { {
+  code: 'MISSING_MESSAGE',
+  originalMessage: 'Could not resolve `artist.recording` in messages for locale `en`.'
+}
+[browser] Image with src "https://srulenjahemkuxtkfmzt.supabase.co/storage/v1/object/public/artists-images/0760875d-6b6f-4a48-8aed-6e57934d1baa.webp?v=2026-07-09T14%3A00%3A38.685%2B00%3A00" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading

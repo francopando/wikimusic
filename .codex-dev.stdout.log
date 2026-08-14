@@ -1,0 +1,95 @@
+
+> mangulina@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://10.0.0.3:3000
+- Environments: .env
+✓ Ready in 1699ms
+
+ GET /artists/manuel-tejada 200 in 6.5s (next.js: 1213ms, proxy.ts: 13ms, application-code: 5.2s)
+✓ Compiled in 366ms
+ GET /artists/manuel-tejada 200 in 860ms (next.js: 219ms, proxy.ts: 109ms, application-code: 532ms)
+ GET /artists/manuel-tejada 200 in 294ms (next.js: 28ms, proxy.ts: 20ms, application-code: 246ms)
+✓ Compiled in 237ms
+ GET /artists/manuel-tejada 200 in 719ms (next.js: 174ms, proxy.ts: 84ms, application-code: 461ms)
+ GET /artists/manuel-tejada 200 in 234ms (next.js: 18ms, proxy.ts: 11ms, application-code: 205ms)
+ GET /artists/manuel-tejada 200 in 2.6s (next.js: 32ms, proxy.ts: 8ms, application-code: 2.6s)
+✓ Compiled in 217ms
+ GET /artists/manuel-tejada 200 in 1233ms (next.js: 188ms, proxy.ts: 104ms, application-code: 941ms)
+ GET /artists/manuel-tejada 200 in 732ms (next.js: 29ms, proxy.ts: 13ms, application-code: 691ms)
+ GET /artists/manuel-tejada 200 in 1038ms (next.js: 26ms, proxy.ts: 7ms, application-code: 1005ms)
+✓ Compiled in 231ms
+ GET /artists/manuel-tejada 200 in 1853ms (next.js: 184ms, proxy.ts: 81ms, application-code: 1588ms)
+ GET /artists/manuel-tejada 200 in 1373ms (next.js: 37ms, proxy.ts: 14ms, application-code: 1321ms)
+ GET /artists/manuel-tejada 200 in 1127ms (next.js: 28ms, proxy.ts: 14ms, application-code: 1085ms)
+ GET /artists/manuel-tejada 200 in 1127ms (next.js: 190ms, proxy.ts: 15ms, application-code: 922ms)
+ GET /artists/manuel-tejada 200 in 1324ms (next.js: 29ms, proxy.ts: 17ms, application-code: 1278ms)
+ GET / 200 in 1871ms (next.js: 977ms, proxy.ts: 11ms, generate-params: 840ms, application-code: 883ms)
+ GET /api/homepage/birthdays?date=2026-08-13 200 in 377ms (next.js: 256ms, proxy.ts: 6ms, application-code: 115ms)
+ GET /search?q=tejada 200 in 5.3s (next.js: 930ms, proxy.ts: 8ms, generate-params: 826ms, application-code: 4.3s)
+ GET /artists/manuel-tejada 200 in 1624ms (next.js: 20ms, proxy.ts: 7ms, application-code: 1598ms)
+ GET /songs/colegiala-alex-bueno-3 200 in 6.8s (next.js: 3.3s, proxy.ts: 6ms, application-code: 3.5s)
+✓ Compiled in 519ms
+ GET /artists/manuel-tejada 200 in 1647ms (next.js: 541ms, proxy.ts: 280ms, application-code: 826ms)
+ GET /artists/manuel-tejada 200 in 1127ms (next.js: 30ms, proxy.ts: 17ms, application-code: 1080ms)
+✓ Compiled in 396ms
+ GET /artists/manuel-tejada 200 in 1644ms (next.js: 554ms, proxy.ts: 244ms, application-code: 847ms)
+ GET /artists/manuel-tejada 200 in 359ms (next.js: 25ms, proxy.ts: 14ms, application-code: 319ms)
+✓ Compiled in 404ms
+ GET /artists/manuel-tejada 200 in 1262ms (next.js: 514ms, proxy.ts: 204ms, application-code: 544ms)
+ GET /artists/manuel-tejada 200 in 386ms (next.js: 29ms, proxy.ts: 11ms, application-code: 345ms)
+ GET /artists/manuel-tejada 200 in 402ms (next.js: 27ms, proxy.ts: 10ms, application-code: 364ms)
+ GET /artists/manuel-tejada 200 in 260ms (next.js: 21ms, proxy.ts: 11ms, application-code: 228ms)
+ GET /artists/manuel-tejada 200 in 206ms (next.js: 17ms, proxy.ts: 9ms, application-code: 179ms)
+ GET /artists/manuel-tejada 200 in 220ms (next.js: 30ms, proxy.ts: 10ms, application-code: 180ms)
+✓ Compiled in 278ms
+ GET /artists/manuel-tejada 200 in 731ms (next.js: 302ms, proxy.ts: 156ms, application-code: 273ms)
+ GET /artists/manuel-tejada 200 in 296ms (next.js: 28ms, proxy.ts: 9ms, application-code: 258ms)
+ GET /artists/manuel-tejada 200 in 390ms (next.js: 32ms, proxy.ts: 10ms, application-code: 347ms)
+ GET /artists/manuel-tejada 200 in 320ms (next.js: 24ms, proxy.ts: 12ms, application-code: 284ms)
+ GET /artists/manuel-tejada 200 in 344ms (next.js: 40ms, proxy.ts: 13ms, application-code: 290ms)
+ GET /artists/manuel-tejada 200 in 3.0s (next.js: 26ms, proxy.ts: 7ms, application-code: 2.9s)
+✓ Compiled in 214ms
+ GET /artists/manuel-tejada 200 in 1329ms (next.js: 277ms, proxy.ts: 177ms, application-code: 875ms)
+ GET /artists/manuel-tejada 200 in 1153ms (next.js: 572ms, proxy.ts: 10ms, application-code: 571ms)
+ GET /artists/manuel-tejada 200 in 607ms (next.js: 235ms, proxy.ts: 13ms, application-code: 359ms)
+ GET /artists/manuel-tejada 200 in 290ms (next.js: 36ms, proxy.ts: 15ms, application-code: 240ms)
+ GET /artists/manuel-tejada 200 in 1948ms (next.js: 29ms, proxy.ts: 8ms, application-code: 1911ms)
+ GET /es/artists/manuel-tejada 200 in 1011ms (next.js: 30ms, proxy.ts: 9ms, application-code: 973ms)
+ GET /artists/manuel-tejada 200 in 1138ms (next.js: 35ms, proxy.ts: 9ms, application-code: 1094ms)
+ GET /artists/manuel-tejada 200 in 1650ms (next.js: 28ms, proxy.ts: 8ms, application-code: 1615ms)
+ GET /songs/colegiala-alex-bueno-4 200 in 5.5s (next.js: 481ms, proxy.ts: 7ms, application-code: 5.0s)
+ GET /api/search/suggestions?q=uno 200 in 2.2s (next.js: 346ms, proxy.ts: 6ms, application-code: 1815ms)
+ GET /search?q=orlando 200 in 2.2s (next.js: 226ms, proxy.ts: 9ms, generate-params: 8ms, application-code: 1982ms)
+ GET /artists/ramon-orlando 200 in 2.2s (next.js: 48ms, proxy.ts: 8ms, application-code: 2.1s)
+✓ Compiled in 862ms
+✓ Compiled in 246ms
+✓ Compiled in 207ms
+✓ Compiled in 212ms
+✓ Compiled in 186ms
+✓ Compiled in 174ms
+ GET / 200 in 2.8s (next.js: 511ms, proxy.ts: 544ms, generate-params: 9ms, application-code: 1795ms)
+ GET /es 200 in 537ms (next.js: 35ms, proxy.ts: 6ms, generate-params: 8ms, application-code: 496ms)
+ GET /artists/omar-franco 200 in 4.0s (next.js: 246ms, proxy.ts: 7ms, application-code: 3.8s)
+ GET /es/artists/omar-franco 200 in 509ms (next.js: 23ms, proxy.ts: 6ms, application-code: 480ms)
+ GET /songs/colegiala-alex-bueno 200 in 2.5s (next.js: 477ms, proxy.ts: 5ms, application-code: 1988ms)
+ GET /releases/grandes-exitos-alex-bueno 200 in 2.7s (next.js: 1075ms, proxy.ts: 5ms, application-code: 1653ms)
+ GET /genres/merengue 200 in 3.9s (next.js: 3.3s, proxy.ts: 6ms, generate-params: 1164ms, application-code: 606ms)
+ GET /es/songs/colegiala-alex-bueno 200 in 1367ms (next.js: 23ms, proxy.ts: 5ms, application-code: 1339ms)
+ GET /es/releases/grandes-exitos-alex-bueno 200 in 1372ms (next.js: 20ms, proxy.ts: 6ms, application-code: 1345ms)
+ GET /es/genres/merengue 200 in 538ms (next.js: 17ms, proxy.ts: 5ms, generate-params: 7ms, application-code: 516ms)
+ GET /sitemap.xml 200 in 4.3s (next.js: 1857ms, application-code: 2.4s)
+✓ Compiled in 234ms
+ GET /es/releases/grandes-exitos-alex-bueno 200 in 2.0s (next.js: 160ms, proxy.ts: 111ms, application-code: 1774ms)
+ GET /es/artists/omar-franco 200 in 1113ms (next.js: 180ms, proxy.ts: 6ms, application-code: 927ms)
+ GET / 200 in 3.2s (next.js: 1037ms, proxy.ts: 13ms, generate-params: 14ms, application-code: 2.2s)
+ GET /api/homepage/birthdays?date=2026-08-14 200 in 652ms (next.js: 504ms, proxy.ts: 16ms, application-code: 132ms)
+ GET /artists/adriana-green 200 in 1553ms (next.js: 35ms, proxy.ts: 7ms, application-code: 1511ms)
+ GET /es/artists/adriana-green 200 in 452ms (next.js: 19ms, proxy.ts: 7ms, application-code: 426ms)
+ GET /es/discover 200 in 2.4s (next.js: 2.1s, proxy.ts: 5ms, generate-params: 772ms, application-code: 283ms)
+ GET /es/composers 200 in 2.3s (next.js: 2.0s, proxy.ts: 6ms, generate-params: 1007ms, application-code: 251ms)
+ GET /es/artists/cristino-gomez 200 in 899ms (next.js: 22ms, proxy.ts: 5ms, application-code: 872ms)
+ GET /es/artists/cristino-gomez 200 in 559ms (next.js: 18ms, proxy.ts: 9ms, application-code: 532ms)
+[?25h

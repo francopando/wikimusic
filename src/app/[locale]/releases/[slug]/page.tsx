@@ -193,8 +193,8 @@ async function ReleaseTrackList({ tracks }: { tracks: ReleaseTrack[] }) {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const t = await getTranslations("pages.releases");
   const { slug, locale } = await params;
+  const t = await getTranslations({ locale, namespace: "pages.releases" });
   const release = await getReleaseBySlug(cleanSlug(slug));
 
   if (!release) {
@@ -208,7 +208,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return createPageMetadata({
-    title: releaseSeoTitle(release),
+    title: releaseSeoTitle(release, locale),
     description: t("metadataDescription", { title: release.title }),
     path: `/releases/${release.slug}`,
     image: release.coverImageUrl,
@@ -219,7 +219,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function ReleasePage({ params }: PageProps) {
   const t = await getTranslations("pages");
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const release = await getReleaseBySlug(cleanSlug(slug));
 
   if (!release) notFound();
@@ -237,13 +237,13 @@ export default async function ReleasePage({ params }: PageProps) {
     "@context": "https://schema.org",
     "@type": "MusicAlbum",
     name: release.title,
-    url: absoluteUrl(releasePath),
+    url: absoluteUrl(releasePath, locale),
     byArtist: release.artist
       ? {
           "@type": "MusicGroup",
           name: release.artist.name,
           url: release.artist.slug
-            ? absoluteUrl(`/artists/${release.artist.slug}`)
+            ? absoluteUrl(`/artists/${release.artist.slug}`, locale)
             : undefined,
         }
       : undefined,
@@ -255,7 +255,7 @@ export default async function ReleasePage({ params }: PageProps) {
           "@type": "MusicRecording",
           position: track.trackNumber ?? index + 1,
           name: track.title,
-          url: getTrackHref(track) ? absoluteUrl(getTrackHref(track)!) : undefined,
+          url: getTrackHref(track) ? absoluteUrl(getTrackHref(track)!, locale) : undefined,
         }))
       : undefined,
   };
@@ -270,7 +270,7 @@ export default async function ReleasePage({ params }: PageProps) {
             { name: t("releaseListing.homeBreadcrumb"), path: "/" },
             { name: t("releaseListing.releasesBreadcrumb"), path: "/releases" },
             { name: release.title, path: releasePath },
-          ]),
+          ], locale),
         ]}
       />
       <PageSection className="mt-4">

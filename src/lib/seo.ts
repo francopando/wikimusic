@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
 
 export const SITE_NAME = "Mangulina";
-export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL ??
-  process.env.SITE_URL ??
-  "https://mangulina.vercel.app"
-).replace(/\/$/, "");
+// Canonical public origin. Preview hosts must never leak into production SEO.
+export const SITE_URL = "https://mangulina.do";
 
 export const DEFAULT_DESCRIPTION =
   "Explore Dominican artists, songs, albums, genres, awards, and music history.";
@@ -63,27 +60,49 @@ export function truncateDescription(text: string | null | undefined, fallback: s
   return `${clean.slice(0, 157).replace(/\s+\S*$/, "").trim()}...`;
 }
 
-export function artistSeoTitle(artist: { name: string }) {
-  return `${artist.name} - Biography, Songs & Discography`;
+export function artistSeoTitle(artist: { name: string }, locale: SeoLocale | string = "en") {
+  return resolveSeoLocale(locale) === "es"
+    ? `${artist.name} - Biografía, canciones y discografía`
+    : `${artist.name} - Biography, Songs & Discography`;
 }
 
-export function songSeoTitle(recording: { recording_title: string }) {
-  return `${recording.recording_title} - Song Information`;
+export function songSeoTitle(recording: { recording_title: string }, locale: SeoLocale | string = "en") {
+  return resolveSeoLocale(locale) === "es"
+    ? `${recording.recording_title} - Información de la canción`
+    : `${recording.recording_title} - Song Information`;
 }
 
 export function releaseSeoTitle(release: {
   title: string;
   type?: string | null;
   artist?: { name: string } | null;
-}) {
-  if (!release.artist?.name) return `${release.title} - Release Information`;
+}, locale: SeoLocale | string = "en") {
+  const isSpanish = resolveSeoLocale(locale) === "es";
+  if (!release.artist?.name) return `${release.title} - ${isSpanish ? "Información del lanzamiento" : "Release Information"}`;
   const type = release.type?.trim() || "Release";
-  const formattedType = type.charAt(0).toUpperCase() + type.slice(1).toLowerCase();
-  return `${release.title} - ${formattedType} by ${release.artist.name}`;
+  const normalizedType = type.toLowerCase();
+  const spanishTypes: Record<string, string> = {
+    album: "Álbum",
+    compilation: "Compilación",
+    ep: "EP",
+    live: "En vivo",
+    release: "Lanzamiento",
+    single: "Sencillo",
+    soundtrack: "Banda sonora",
+  };
+  const formattedType = isSpanish
+    ? spanishTypes[normalizedType] ?? type
+    : type.charAt(0).toUpperCase() + type.slice(1).toLowerCase();
+  return isSpanish
+    ? `${release.title} - ${formattedType} de ${release.artist.name}`
+    : `${release.title} - ${formattedType} by ${release.artist.name}`;
 }
 
-export function genreSeoTitle(genre: { title?: string; name?: string }) {
-  return `${genre.title ?? genre.name ?? "Genre"} Artists, Songs & Albums`;
+export function genreSeoTitle(genre: { title?: string; name?: string }, locale: SeoLocale | string = "en") {
+  const name = genre.title ?? genre.name ?? (resolveSeoLocale(locale) === "es" ? "Género" : "Genre");
+  return resolveSeoLocale(locale) === "es"
+    ? `${name} - Artistas, canciones y álbumes`
+    : `${name} Artists, Songs & Albums`;
 }
 
 type PageMetadataOptions = {

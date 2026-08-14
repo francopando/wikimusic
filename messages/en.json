@@ -242,6 +242,11 @@
     "openSong": "Open Song",
     "countryDominicanRepublic": "Dominican Republic",
     "countryWorldwide": "Worldwide",
+    "otherRecordingCredits": "Other recording credits",
+    "recording": "Recording",
+    "recordingIdentity": {
+      "live": "Live", "demo": "Demo", "rehearsal": "Rehearsal", "other": "Alternate version", "rerecording": "Rerecording", "remix": "Remix", "edit": "Edit", "alternate_take": "Alternate take", "medley": "Medley"
+    },
     "workRoles": {
       "composer": "Composer", "songwriter": "Songwriter", "lyricist": "Lyricist", "writer": "Writer", "producer": "Producer", "co_producer": "Co-producer", "executive_producer": "Executive producer", "arranger": "Arranger", "orchestrator": "Orchestrator", "conductor": "Conductor", "musician": "Musician", "session_musician": "Session musician", "instrumentalist": "Instrumentalist", "engineer": "Engineer", "recording_engineer": "Recording engineer", "mixing_engineer": "Mixing engineer", "mix_engineer": "Mix engineer", "mixing": "Mixing", "mastering_engineer": "Mastering engineer", "mastering": "Mastering", "beat_programmer": "Beat programmer", "remixer": "Remixer"
     },

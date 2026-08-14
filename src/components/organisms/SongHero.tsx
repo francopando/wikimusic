@@ -4,6 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 
 import { genreDefinitions } from "@/lib/genres";
+import { formatDurationMilliseconds } from "@/lib/artistPortfolioPresentation";
 
 type SongHeroProps = {
   title: string;
@@ -19,13 +20,6 @@ type SongHeroProps = {
   releaseTitle?: string | null;
   releaseSlug?: string | null;
 };
-
-function formatDuration(ms: number): string {
-  const totalSec = Math.floor(ms / 1000);
-  const min = Math.floor(totalSec / 60);
-  const sec = totalSec % 60;
-  return `${min}:${String(sec).padStart(2, "0")}`;
-}
 
 function slugify(value: string): string {
   return value
@@ -70,7 +64,7 @@ export default function SongHero({
   const t = useTranslations();
   const genreChips = [genre, subgenre].filter(Boolean) as string[];
   const isrcText = (isrcs ?? []).filter(Boolean).join(" · ");
-  const durationStr = duration && duration > 0 ? formatDuration(duration) : null;
+  const durationStr = duration && duration > 0 ? formatDurationMilliseconds(duration) : null;
   const heroFacts = [
     releaseTitle ? { key: "album", label: t("song.hero.album"), value: releaseTitle } : null,
     year ? { key: "releaseYear", label: t("song.hero.releaseYear"), value: String(year) } : null,

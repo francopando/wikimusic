@@ -52,15 +52,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return createPageMetadata({
-    title: genreSeoTitle(data.genre),
-    description: `Explore ${data.genre.title} artists, songs, albums and recordings in the Dominican Music Database.`,
+    title: genreSeoTitle(data.genre, locale),
+    description: locale === "es"
+      ? `Explora artistas, canciones, álbumes y grabaciones de ${data.genre.title} en la Base de Datos de Música Dominicana.`
+      : `Explore ${data.genre.title} artists, songs, albums and recordings in the Dominican Music Database.`,
     path: `/genres/${data.genre.slug}`,
     locale,
   });
 }
 
 export default async function GenrePage({ params, searchParams }: PageProps) {
-  const { slug } = await params;
+  const { slug, locale: routeLocale } = await params;
   const requestedValue = (await searchParams).subgenre;
   const requestedSubgenre = typeof requestedValue === "string" ? requestedValue : undefined;
   const [data, topGenreOptions] = await Promise.all([
@@ -107,7 +109,7 @@ export default async function GenrePage({ params, searchParams }: PageProps) {
             { name: "Home", path: "/" },
             { name: "Genres", path: "/discover#genres" },
             { name: genre.title, path: `/genres/${genre.slug}` },
-          ]),
+          ], routeLocale),
         ]}
       />
       <AnalyticsPageView eventType="genre_view" entityId={genre.slug} />

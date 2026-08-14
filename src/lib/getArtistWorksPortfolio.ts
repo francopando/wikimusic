@@ -1,6 +1,7 @@
 import { unstable_cache } from "next/cache";
 import { supabase } from "@/lib/supabase";
 import { ARTIST_PORTFOLIO_CACHE_TAG } from "@/lib/artistPortfolioCache";
+import { getRecordingIdentitySummaries } from "@/lib/recordingIdentity";
 import {
   ARTIST_WORK_CREDIT_ROLES,
   RECORDING_PERFORMER_ROLES,
@@ -8,7 +9,8 @@ import {
   isArtistWorkCreditRole,
   normalizeArtistWorkCreditRole,
 } from "@/lib/artistWorkCreditRoles";
-import { comparePortfolioPresentation } from "@/lib/artistPortfolioPresentation";
+import { groupPortfolioRecordings, type GroupedPortfolio } from "@/lib/artistPortfolioPresentation";
+import type { RecordingIdentitySummary } from "@/types/recordingVersion";
 
 export type PortfolioPerformer = {
   artistId: string | null;
@@ -18,7 +20,7 @@ export type PortfolioPerformer = {
   joinPhrase: string | null;
 };
 
-export type PortfolioWork = {
+export type PortfolioRecording = {
   source: "recording" | "editorial";
   id: string;
   title: string;
@@ -26,8 +28,11 @@ export type PortfolioWork = {
   creditedAs: string | null;
   recordingId: string | null;
   recordingSlug: string | null;
+  workId: string | null;
+  workTitle: string | null;
   recordingYear: number | null;
-  disambiguation: string | null;
+  identityLabel: string | null;
+  identitySummary: RecordingIdentitySummary | null;
   duration: number | null;
   performers: PortfolioPerformer[];
   releaseId: string | null;
@@ -43,6 +48,8 @@ export type PortfolioWork = {
   createdAt: string;
 };
 
+export type PortfolioWork = GroupedPortfolio<PortfolioRecording>;
+
 export type RoleSummary = { role: string; count: number };
 
 type Related<T> = T | T[] | null;
@@ -56,6 +63,8 @@ type RecordingRow = {
   duration: number | null;
   artist_id: string | null;
   artist: Related<ArtistRow>;
+  work_id: string | null;
+  work: Related<{ id: string; preferred_title: string }>;
 };
 type RecordingCreditRow = {
   id: string;
@@ -84,7 +93,7 @@ type ReleaseRow = {
   year: number | null;
   type: string | null;
   country: string | null;
-  release_group: Related<{ title: string | null }>;
+  release_group_id: string | null;
   date: string | null;
   created_at: string | null;
   status: string | null;
@@ -128,14 +137,20 @@ function compareReleases(a: ReleaseRow, b: ReleaseRow) {
   );
 }
 
-function sortPortfolio(works: PortfolioWork[]) {
-  return works.sort((a, b) => comparePortfolioPresentation(a, b) || compareArtistWorkCreditRoles(a.roles[0] ?? "", b.roles[0] ?? ""));
+function structuredIdentityLabel(summary: RecordingIdentitySummary | null, fallback: string | null) {
+  if (!summary) return fallback;
+  return summary.disambiguation_override ?? summary.performance_context ?? summary.derivation_kind ??
+    (summary.performance_kind && summary.performance_kind !== "studio" ? summary.performance_kind : null) ?? fallback;
 }
 
-async function getRecordingPortfolio(artistId: string): Promise<PortfolioWork[]> {
+function sortPortfolio(works: PortfolioWork[]) {
+  return works.sort((a, b) => a.title.localeCompare(b.title) || a.id.localeCompare(b.id));
+}
+
+async function getRecordingPortfolio(artistId: string): Promise<PortfolioRecording[]> {
   const { data: creditData, error: creditError } = await supabase
     .from("recording_credits")
-    .select("id,recording_id,artist_id,role,credited_as,display_order,metadata,created_at,recording:recordings!inner(id,title,slug,recording_year,disambiguation,duration,artist_id,artist:artists(id,name,slug,status))")
+    .select("id,recording_id,artist_id,role,credited_as,display_order,metadata,created_at,recording:recordings!inner(id,title,slug,work_id,recording_year,disambiguation,duration,artist_id,artist:artists(id,name,slug,status),work:works(id,preferred_title))")
     .eq("artist_id", artistId)
     .in("role", [...ARTIST_WORK_CREDIT_ROLES]);
 
@@ -148,7 +163,7 @@ async function getRecordingPortfolio(artistId: string): Promise<PortfolioWork[]>
   const recordingIds = [...new Set(credits.map((credit) => credit.recording_id))];
   if (!recordingIds.length) return [];
 
-  const [{ data: performerData, error: performerError }, { data: trackData, error: trackError }] =
+  const [{ data: performerData, error: performerError }, { data: trackData, error: trackError }, identitySummaries] =
     await Promise.all([
       supabase
         .from("recording_credits")
@@ -158,13 +173,22 @@ async function getRecordingPortfolio(artistId: string): Promise<PortfolioWork[]>
         .eq("artist.status", "published"),
       supabase
         .from("tracks")
-        .select("recording_id,release:releases!inner(id,title,slug,release_year,year,type,country,date,created_at,status,release_group:release_groups(title))")
+        .select("recording_id,release:releases!inner(id,title,slug,release_year,year,type,country,date,created_at,status,release_group_id)")
         .in("recording_id", recordingIds)
         .eq("release.status", "published"),
+      getRecordingIdentitySummaries(recordingIds),
     ]);
+  const identitiesByRecording = new Map(identitySummaries.map((summary) => [summary.recording_id, summary]));
 
   if (performerError) console.error("Recording portfolio performer query failed:", performerError);
   if (trackError) console.error("Recording portfolio release query failed:", trackError);
+  const trackRows = (trackData ?? []) as unknown as TrackReleaseRow[];
+  const releaseGroupIds = [...new Set(trackRows.map((track) => firstRelated(track.release)?.release_group_id).filter((id): id is string => Boolean(id)))];
+  const { data: releaseGroups, error: releaseGroupError } = releaseGroupIds.length
+    ? await supabase.from("release_groups").select("id,title").in("id", releaseGroupIds)
+    : { data: [], error: null };
+  if (releaseGroupError) console.error("Recording portfolio Release Group query failed:", releaseGroupError);
+  const releaseGroupTitles = new Map((releaseGroups ?? []).map((group) => [group.id, group.title]));
 
   const performersByRecording = new Map<string, PerformerCreditRow[]>();
   for (const performer of (performerData ?? []) as unknown as PerformerCreditRow[]) {
@@ -175,7 +199,7 @@ async function getRecordingPortfolio(artistId: string): Promise<PortfolioWork[]>
   }
 
   const releasesByRecording = new Map<string, ReleaseRow[]>();
-  for (const track of (trackData ?? []) as unknown as TrackReleaseRow[]) {
+  for (const track of trackRows) {
     const release = firstRelated(track.release);
     if (!release) continue;
     const existing = releasesByRecording.get(track.recording_id) ?? [];
@@ -192,7 +216,7 @@ async function getRecordingPortfolio(artistId: string): Promise<PortfolioWork[]>
     ]);
   }
 
-  const works: PortfolioWork[] = [];
+  const works: PortfolioRecording[] = [];
   for (const recordingCredits of creditsByRecording.values()) {
     const firstCredit = recordingCredits[0];
     const recording = firstRelated(firstCredit.recording);
@@ -204,6 +228,8 @@ async function getRecordingPortfolio(artistId: string): Promise<PortfolioWork[]>
       (a, b) => (a.display_order ?? Number.MAX_SAFE_INTEGER) - (b.display_order ?? Number.MAX_SAFE_INTEGER),
     );
     const fallbackArtist = firstRelated(recording.artist);
+    const work = firstRelated(recording.work);
+    const identitySummary = identitiesByRecording.get(recording.id) ?? null;
     const performers: PortfolioPerformer[] = performerRows.length
       ? performerRows.map((performer) => {
           const performerArtist = firstRelated(performer.artist);
@@ -227,17 +253,20 @@ async function getRecordingPortfolio(artistId: string): Promise<PortfolioWork[]>
       creditedAs: recordingCredits.find((credit) => credit.credited_as?.trim())?.credited_as ?? null,
       recordingId: recording.id,
       recordingSlug: recording.slug,
+      workId: recording.work_id,
+      workTitle: work?.preferred_title ?? null,
       recordingYear: recording.recording_year,
-      disambiguation: recording.disambiguation,
+      identityLabel: structuredIdentityLabel(identitySummary, recording.disambiguation),
+      identitySummary,
       duration: recording.duration,
       performers,
-      releaseId: selectedRelease?.id ?? null,
-      releaseTitle: selectedRelease?.title ?? null,
+      releaseId: selectedRelease?.id ?? identitySummary?.first_release_id ?? null,
+      releaseTitle: selectedRelease?.title ?? identitySummary?.first_release_title ?? null,
       releaseSlug: selectedRelease?.slug ?? null,
-      releaseYear: selectedRelease?.release_year ?? selectedRelease?.year ?? null,
+      releaseYear: selectedRelease?.release_year ?? selectedRelease?.year ?? identitySummary?.first_release_year ?? null,
       releaseType: selectedRelease?.type ?? null,
       releaseCountry: selectedRelease?.country ?? null,
-      releaseGroupTitle: firstRelated(selectedRelease?.release_group ?? null)?.title ?? null,
+      releaseGroupTitle: selectedRelease?.release_group_id ? releaseGroupTitles.get(selectedRelease.release_group_id) ?? null : null,
       creditedWorkId: null,
       sourceUrl: null,
       sourceConfidence: null,
@@ -247,7 +276,7 @@ async function getRecordingPortfolio(artistId: string): Promise<PortfolioWork[]>
   return works;
 }
 
-async function getEditorialPortfolio(artistId: string): Promise<PortfolioWork[]> {
+async function getEditorialPortfolio(artistId: string): Promise<PortfolioRecording[]> {
   const { data, error } = await supabase.rpc("get_artist_credited_works_with_roles", {
     p_artist_id: artistId,
   });
@@ -263,8 +292,11 @@ async function getEditorialPortfolio(artistId: string): Promise<PortfolioWork[]>
     creditedAs: null,
     recordingId: work.recording_id ?? null,
     recordingSlug: null,
+    workId: null,
+    workTitle: work.title,
     recordingYear: null,
-    disambiguation: null,
+    identityLabel: null,
+    identitySummary: null,
     duration: null,
     performers: work.performer_text || work.performer_artist_name
       ? [{
@@ -307,7 +339,7 @@ async function loadArtistWorksPortfolio(artistId: string): Promise<PortfolioWork
       );
       return roles.length ? [{ ...work, roles }] : [];
     });
-    return sortPortfolio([...recordingWorks, ...deduplicatedEditorial]);
+    return sortPortfolio(groupPortfolioRecordings([...recordingWorks, ...deduplicatedEditorial]));
   } catch (error) {
     console.error("Exception in getArtistWorksPortfolio:", error);
     return [];
@@ -316,7 +348,7 @@ async function loadArtistWorksPortfolio(artistId: string): Promise<PortfolioWork
 
 export const getArtistWorksPortfolio = unstable_cache(
   loadArtistWorksPortfolio,
-  ["artist-works-portfolio-v1"],
+  ["artist-works-portfolio-v4-public-hierarchy"],
   {
     revalidate: 600,
     tags: [ARTIST_PORTFOLIO_CACHE_TAG],
@@ -326,6 +358,7 @@ export const getArtistWorksPortfolio = unstable_cache(
 export function summarizePortfolioRoles(works: PortfolioWork[]): RoleSummary[] {
   const counts = new Map<string, number>();
   for (const work of works) {
+    if (!work.workId && work.recordings.every((recording) => recording.source === "recording")) continue;
     for (const role of work.roles) counts.set(role, (counts.get(role) ?? 0) + 1);
   }
   return [...counts].map(([role, count]) => ({ role, count })).sort((a, b) => compareArtistWorkCreditRoles(a.role, b.role));

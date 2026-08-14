@@ -253,6 +253,11 @@
     "openSong": "Abrir Canción",
     "countryDominicanRepublic": "República Dominicana",
     "countryWorldwide": "Mundial",
+    "otherRecordingCredits": "Otros créditos de grabación",
+    "recording": "Grabación",
+    "recordingIdentity": {
+      "live": "En vivo", "demo": "Demo", "rehearsal": "Ensayo", "other": "Versión alternativa", "rerecording": "Nueva grabación", "remix": "Remezcla", "edit": "Edición", "alternate_take": "Toma alternativa", "medley": "Popurrí"
+    },
     "workRoles": {
       "composer": "Compositor", "songwriter": "Compositor de canciones", "lyricist": "Letrista", "writer": "Autor", "producer": "Productor", "co_producer": "Coproductor", "executive_producer": "Productor ejecutivo", "arranger": "Arreglista", "orchestrator": "Orquestador", "conductor": "Director", "musician": "Músico", "session_musician": "Músico de sesión", "instrumentalist": "Instrumentista", "engineer": "Ingeniero", "recording_engineer": "Ingeniero de grabación", "mixing_engineer": "Ingeniero de mezcla", "mix_engineer": "Ingeniero de mezcla", "mixing": "Mezcla", "mastering_engineer": "Ingeniero de masterización", "mastering": "Masterización", "beat_programmer": "Programador de ritmos", "remixer": "Remezclador"
     },

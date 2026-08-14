@@ -53,10 +53,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     });
   }
 
-  const description = `Explore the biography, songs, albums, awards and career of ${artist.name} in the Dominican Music Database.`;
+  const isSpanish = locale === "es";
+  const description = isSpanish
+    ? `Explora la biografía, canciones, álbumes, premios y trayectoria de ${artist.name} en la Base de Datos de Música Dominicana.`
+    : `Explore the biography, songs, albums, awards and career of ${artist.name} in the Dominican Music Database.`;
 
   return createPageMetadata({
-    title: artistSeoTitle(artist),
+    title: artistSeoTitle(artist, locale),
     description,
     path: `/artists/${artist.slug}`,
     image: getArtistImageUrlIfAvailable(artist),
@@ -66,7 +69,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export default async function ArtistProfile({ params }: PageProps) {
-  const { slug } = await params;
+  const { slug, locale: routeLocale } = await params;
   const artist = await getArtistProfile(slug);
 
   if (!artist) return notFound();
@@ -111,7 +114,7 @@ export default async function ArtistProfile({ params }: PageProps) {
     "@type": isSoloArtist ? "Person" : "MusicGroup",
     name: artist.name,
     alternateName: alternateNames.length ? alternateNames : artist.stage_name ?? undefined,
-    url: absoluteUrl(`/artists/${artist.slug}`),
+    url: absoluteUrl(`/artists/${artist.slug}`, routeLocale),
     image: imageUrl ?? undefined,
     birthDate: isSoloArtist ? artist.date_of_birth ?? undefined : undefined,
     deathDate: isSoloArtist ? artist.date_of_death ?? undefined : undefined,
@@ -135,7 +138,7 @@ export default async function ArtistProfile({ params }: PageProps) {
             { name: "Home", path: "/" },
             { name: "Artists", path: "/artists" },
             { name: artist.name, path: `/artists/${artist.slug}` },
-          ]),
+          ], routeLocale),
         ]}
       />
       <AnalyticsPageView eventType="artist_view" entityId={artist.id} />
