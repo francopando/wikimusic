@@ -1,11 +1,11 @@
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Finlandica, Instrument_Serif, Inter } from "next/font/google";
+import { Finlandica_Text, Instrument_Serif, Inter } from "next/font/google";
 
 import RoutePageView from "@/components/analytics/RoutePageView";
 import GradientBackground from "@/components/atoms/GradientBackground";
 
-const finlandica = Finlandica({
+const finlandica = Finlandica_Text({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-finlandica",
