@@ -1,6 +1,7 @@
 // src/lib/queries/songs.ts
 import { cache } from "react";
 import { supabase } from "@/lib/supabase";
+import { isPublicRecording } from "@/lib/publicRecordingVisibility";
 
 export type SongRecord = {
   recording_id: string;
@@ -205,6 +206,8 @@ function firstRelated<T>(value: T | T[] | null | undefined): T | null {
 export async function getSongById(id: string): Promise<SongRecord | null> {
   const cleanId = decodeURIComponent(id).trim().replace(/^"|"$/g, "");
 
+  if (!(await isPublicRecording(cleanId))) return null;
+
   const { data, error } = await supabase
     .from("recordings_with_release_info")
     .select("*")
@@ -217,10 +220,6 @@ export async function getSongById(id: string): Promise<SongRecord | null> {
   }
 
   const song = data as SongRecord;
-
-  if (!(await isPublishedArtist(song.artist_id))) {
-    return null;
-  }
 
   if (song.release_id) {
     const { data: rel } = await supabase

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import type { ArtistBrowseRole } from "@/components/artists/ArtistDirectory";
 import { createPageMetadata } from "@/lib/seo";
+import { getTranslations } from "next-intl/server";
 
 export type ArtistRolePageKey =
   | "artists"
@@ -158,15 +159,28 @@ export const ARTIST_ROLE_PAGES: Record<ArtistRolePageKey, ArtistRolePageConfig> 
   },
 };
 
-export function createArtistRoleMetadata(
-  key: ArtistRolePageKey,
-  locale?: string,
-): Metadata {
-  const config = ARTIST_ROLE_PAGES[key];
+export async function createArtistDirectoryMetadata(
+  key: ArtistRolePageKey | "christian" | "instrumentalClassical",
+  path: string,
+  locale = "en",
+): Promise<Metadata> {
+  const t = await getTranslations({
+    locale,
+    namespace: `artistDirectory.${key}`,
+  });
+
   return createPageMetadata({
-    title: config.heading,
-    description: config.description,
-    path: config.path,
+    title: t("metadataTitle"),
+    description: t("metadataDescription"),
+    path,
     locale,
   });
+}
+
+export function createArtistRoleMetadata(
+  key: ArtistRolePageKey,
+  locale = "en",
+): Promise<Metadata> {
+  const config = ARTIST_ROLE_PAGES[key];
+  return createArtistDirectoryMetadata(key, config.path, locale);
 }

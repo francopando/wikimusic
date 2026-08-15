@@ -350,19 +350,27 @@
   "artistDirectory": {
     "artists": {
       "heading": "Dominican Singers",
-      "intro": "Explore Dominican singers across generations, genres and provinces in Mangulina, the Dominican Music Database."
+      "intro": "Explore Dominican singers across generations, genres and provinces in Mangulina, the Dominican Music Database.",
+      "metadataTitle": "Dominican Singers",
+      "metadataDescription": "Browse Dominican singers by genre, province and musical context in Mangulina, the Dominican Music Database."
     },
     "composers": {
       "heading": "Dominican Composers and Songwriters",
-      "intro": "Discover Dominican composers, songwriters, and creators behind the music in Mangulina, the Dominican Music Database."
+      "intro": "Discover Dominican composers, songwriters, and creators behind the music in Mangulina, the Dominican Music Database.",
+      "metadataTitle": "Dominican Composers and Songwriters",
+      "metadataDescription": "Discover Dominican composers, songwriters, and creators behind the music in Mangulina, the Dominican Music Database."
     },
     "songwriters": {
       "heading": "Dominican Songwriters",
-      "intro": "Explore Dominican songwriters and the songs they helped shape in Mangulina, the Dominican Music Database."
+      "intro": "Explore Dominican songwriters and the songs they helped shape in Mangulina, the Dominican Music Database.",
+      "metadataTitle": "Dominican Songwriters",
+      "metadataDescription": "Explore Dominican songwriters and their work in Mangulina, the Dominican Music Database."
     },
     "lyricists": {
       "heading": "Dominican Lyricists",
-      "intro": "Browse Dominican lyricists whose words form part of the musical record preserved by Mangulina, the Dominican Music Database."
+      "intro": "Browse Dominican lyricists whose words form part of the musical record preserved by Mangulina, the Dominican Music Database.",
+      "metadataTitle": "Dominican Lyricists",
+      "metadataDescription": "Browse Dominican lyricists and their contributions to music in Mangulina, the Dominican Music Database."
     },
     "arrangers": {
       "heading": "Arrangers",
@@ -380,15 +388,21 @@
     },
     "musicians": {
       "heading": "Dominican Musicians",
-      "intro": "Discover Dominican musicians, instrumentalists and performers in Mangulina, the Dominican Music Database."
+      "intro": "Discover Dominican musicians, instrumentalists and performers in Mangulina, the Dominican Music Database.",
+      "metadataTitle": "Dominican Musicians",
+      "metadataDescription": "Discover Dominican musicians across genres and generations in Mangulina, the Dominican Music Database."
     },
     "djs": {
       "heading": "Dominican DJs",
-      "intro": "Explore Dominican DJs and the selectors who move Dominican music culture forward in Mangulina, the Dominican Music Database."
+      "intro": "Explore Dominican DJs and the selectors who move Dominican music culture forward in Mangulina, the Dominican Music Database.",
+      "metadataTitle": "Dominican DJs",
+      "metadataDescription": "Explore Dominican DJs and their role in music culture in Mangulina, the Dominican Music Database."
     },
     "producers": {
       "heading": "Dominican Music Producers",
-      "intro": "Discover Dominican producers and the creative work behind recorded music in Mangulina, the Dominican Music Database."
+      "intro": "Discover Dominican producers and the creative work behind recorded music in Mangulina, the Dominican Music Database.",
+      "metadataTitle": "Dominican Music Producers",
+      "metadataDescription": "Discover Dominican music producers and their creative work in Mangulina, the Dominican Music Database."
     },
     "legends": {
       "heading": "Dominican Music Legends",
@@ -408,11 +422,15 @@
     },
     "christian": {
       "heading": "Dominican Christian Artists",
-      "intro": "Explore Dominican Christian artists across worship, merengue, bachata, contemporary Christian music, and other expressions of faith-based Dominican music in Mangulina, the Dominican Music Database."
+      "intro": "Explore Dominican Christian artists across worship, merengue, bachata, contemporary Christian music, and other expressions of faith-based Dominican music in Mangulina, the Dominican Music Database.",
+      "metadataTitle": "Dominican Christian Artists",
+      "metadataDescription": "Explore Dominican Christian artists, singers, musicians, composers, and worship leaders in Mangulina, the Dominican Music Database."
     },
     "instrumentalClassical": {
       "heading": "Dominican Instrumental and Classical Artists",
-      "intro": "Explore Dominican instrumentalists, classical musicians, orchestral performers, and related artists in Mangulina, the Dominican Music Database."
+      "intro": "Explore Dominican instrumentalists, classical musicians, orchestral performers, and related artists in Mangulina, the Dominican Music Database.",
+      "metadataTitle": "Dominican Instrumental and Classical Artists",
+      "metadataDescription": "Explore Dominican instrumentalists, classical musicians, orchestral performers, and related artists in Mangulina, the Dominican Music Database."
     },
     "provinceHeading": "Dominican Artists from the Province {province}",
     "provinceMobilePrefix": "Dominican Artists from the Province",

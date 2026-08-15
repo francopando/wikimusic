@@ -1,6 +1,7 @@
 // app/songs/[slug]/page.tsx
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { setRequestLocale } from "next-intl/server";
 import { getPublicReleaseCoverUrl } from "@/lib/releaseCover";
 import { createPageMetadata, songSeoTitle } from "@/lib/seo";
 
@@ -42,6 +43,12 @@ import { getPublishedEditorialPlainText } from "@/lib/editorial/publicData";
 type PageProps = {
   params: Promise<{ slug: string; locale: string }>;
 };
+
+export const revalidate = 600;
+
+export function generateStaticParams() {
+  return [];
+}
 
 type SongArtistPreview = {
   id: string;
@@ -156,6 +163,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function SongProfilePage({ params }: PageProps) {
   const { slug, locale } = await params;
+  setRequestLocale(locale);
   const cleanSlug = cleanSongParam(slug);
 
   const song = await getSongBySlug(cleanSlug);

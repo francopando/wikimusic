@@ -1,4 +1,5 @@
 import type { ArtistBrowseRole } from "@/components/artists/ArtistDirectory";
+import { unstable_cache } from "next/cache";
 import type { FilteredArtistGenreOptions } from "@/lib/artistGenreOptions";
 import {
   ARTIST_DIRECTORY_ITEMS_PER_PAGE,
@@ -6,6 +7,10 @@ import {
   type ArtistDirectoryInitialData,
 } from "@/lib/artistDirectoryShared";
 import { getSupabaseClient } from "@/lib/supabase";
+import {
+  PUBLIC_ARTIST_DIRECTORY_CACHE_TAG,
+  PUBLIC_CATALOG_REVALIDATE_SECONDS,
+} from "@/lib/publicCatalogCache";
 import type { Artist } from "@/types/music";
 
 type ArtistDirectoryQueryOptions = {
@@ -42,6 +47,8 @@ function toSearchParamsString(searchParams?: Record<string, string | string[] | 
     const firstValue = firstParam(value);
     if (firstValue) params.set(key, firstValue);
   });
+
+  params.sort();
 
   return params.toString();
 }
@@ -86,7 +93,7 @@ export function createArtistDirectoryInitialDataKey({
   ].join("::");
 }
 
-export async function getArtistDirectoryInitialData(
+async function loadArtistDirectoryInitialData(
   options: ArtistDirectoryQueryOptions,
 ): Promise<ArtistDirectoryInitialData> {
   const supabase = getSupabaseClient();
@@ -176,3 +183,12 @@ export async function getArtistDirectoryInitialData(
     cacheKey: createArtistDirectoryInitialDataKey(options),
   };
 }
+
+export const getArtistDirectoryInitialData = unstable_cache(
+  loadArtistDirectoryInitialData,
+  ["public-artist-directory-initial-data-v1"],
+  {
+    revalidate: PUBLIC_CATALOG_REVALIDATE_SECONDS,
+    tags: [PUBLIC_ARTIST_DIRECTORY_CACHE_TAG],
+  },
+);

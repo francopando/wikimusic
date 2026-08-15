@@ -3,7 +3,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import { getLocale, getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import AnalyticsPageView from "@/components/analytics/AnalyticsPageView";
 import ArtistImage from "@/components/atoms/ArtistImage";
 import MainWrapper from "@/components/layout/MainWrapper";
@@ -39,6 +39,12 @@ type PageProps = {
   params: Promise<{ slug: string; locale: string }>;
 };
 
+export const revalidate = 600;
+
+export function generateStaticParams() {
+  return [];
+}
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug, locale } = await params;
   const artist = await getArtistProfile(slug);
@@ -70,11 +76,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function ArtistProfile({ params }: PageProps) {
   const { slug, locale: routeLocale } = await params;
+  setRequestLocale(routeLocale);
   const artist = await getArtistProfile(slug);
 
   if (!artist) return notFound();
 
-  const locale = await getLocale();
+  const locale = routeLocale;
   const t = await getTranslations("artist");
   const tCommon = await getTranslations("common");
   const imageUrl = getArtistImageUrlIfAvailable(artist);

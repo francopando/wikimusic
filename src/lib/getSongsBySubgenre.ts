@@ -1,5 +1,6 @@
 import type { ArchiveSongRow } from "@/app/[locale]/archive/SongsByYearList";
 import { supabase } from "@/lib/supabase";
+import { getPublicRecordingIds } from "@/lib/publicRecordingVisibility";
 
 type SubgenreSongOptions = {
   limit?: number;
@@ -8,7 +9,6 @@ type SubgenreSongOptions = {
 };
 
 const SUPABASE_BATCH_SIZE = 1000;
-const ARTIST_ID_BATCH_SIZE = 500;
 
 type RecordingViewRow = ArchiveSongRow & {
   artist_id: string | null;
@@ -72,33 +72,8 @@ export async function getSongsBySubgenre(
     rows.push(...batch);
     if (batch.length < SUPABASE_BATCH_SIZE) break;
   }
-  const artistIds = [
-    ...new Set(
-      rows
-        .map((row) => row.artist_id)
-        .filter((id): id is string => typeof id === "string" && id.length > 0),
-    ),
-  ];
-
-  let publishedArtistIds = new Set<string>();
-
-  if (artistIds.length > 0) {
-    publishedArtistIds = new Set<string>();
-    for (let index = 0; index < artistIds.length; index += ARTIST_ID_BATCH_SIZE) {
-      const { data: artists, error: artistsError } = await supabase
-        .from("artists")
-        .select("id")
-        .eq("status", "published")
-        .in("id", artistIds.slice(index, index + ARTIST_ID_BATCH_SIZE));
-
-      if (artistsError) throw artistsError;
-      for (const artist of artists ?? []) publishedArtistIds.add(artist.id);
-    }
-  }
-
-  const visibleRows = rows.filter(
-    (row) => !row.artist_id || publishedArtistIds.has(row.artist_id),
-  );
+  const publicRecordingIds = await getPublicRecordingIds(rows.map((row) => row.recording_id));
+  const visibleRows = rows.filter((row) => publicRecordingIds.has(row.recording_id));
   const offset = Math.max(0, options.offset ?? 0);
   const limit = Math.min(Math.max(1, options.limit ?? 25), 100);
   const pageRows = visibleRows.slice(offset, offset + limit);

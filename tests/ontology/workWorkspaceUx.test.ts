@@ -2,10 +2,10 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
 
-const ui = readFileSync("src/app/admin/authoritative-works/page.tsx", "utf8");
+const ui = readFileSync("src/app/admin/(protected)/authoritative-works/page.tsx", "utf8");
 const api = readFileSync("src/app/api/admin/editorial-workflows/route.ts", "utf8");
-const portal = readFileSync("src/app/admin/page.tsx", "utf8");
-const portalContent = readFileSync("src/app/admin/AdminPortalContent.tsx", "utf8");
+const portal = readFileSync("src/app/admin/(protected)/page.tsx", "utf8");
+const portalContent = readFileSync("src/app/admin/(protected)/AdminPortalContent.tsx", "utf8");
 const en = JSON.parse(readFileSync("messages/en.json", "utf8"));
 const es = JSON.parse(readFileSync("messages/es.json", "utf8"));
 

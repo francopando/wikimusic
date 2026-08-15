@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { requireAdminUser } from "@/lib/auth";
 import AdminAnalyticsClientWrapper from "./AdminAnalyticsClientWrapper";
 import AnalyticsHealthSection from "./AnalyticsHealthSection";
 import AnalyticsTabs from "./AnalyticsTabs";
@@ -17,7 +18,11 @@ export const dynamic = "force-dynamic";
  * - Platform click engagement metrics
  * - View trends over time
  */
-export default function AdminAnalyticsPage() {
+export default async function AdminAnalyticsPage() {
+  // Keep the page-local guard: parent layouts and child Server Components may
+  // be evaluated concurrently, and the health section uses the service role.
+  await requireAdminUser();
+
   return (
     <main className="min-h-screen bg-gray-50 px-5 pb-10 pt-8 font-sans text-gray-900 sm:px-6 sm:pb-12 sm:pt-10">
       <div className="mx-auto max-w-6xl">

@@ -7,9 +7,9 @@ const migration = readFileSync(
   "utf8",
 );
 const uploadRoute = readFileSync("src/app/api/admin/image-upload/route.ts", "utf8");
-const artistAdmin = readFileSync("src/app/admin/artists/page.tsx", "utf8");
+const artistAdmin = readFileSync("src/app/admin/(protected)/artists/page.tsx", "utf8");
 const contributorAdmin = readFileSync(
-  "src/app/admin/contributors/ContributorsAdminClient.tsx",
+  "src/app/admin/(protected)/contributors/ContributorsAdminClient.tsx",
   "utf8",
 );
 

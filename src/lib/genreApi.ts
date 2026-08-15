@@ -1,4 +1,9 @@
 import { getSupabaseClient } from "@/lib/supabase";
+import { unstable_cache } from "next/cache";
+import {
+  PUBLIC_CATALOG_REVALIDATE_SECONDS,
+  PUBLIC_GENRE_CACHE_TAG,
+} from "@/lib/publicCatalogCache";
 import {
   createGenericGenreDefinition,
   genreDefinitions,
@@ -92,7 +97,7 @@ function toArtistSummary(artist: ArtistGenreRow): ArtistSummary {
   };
 }
 
-async function getCatalogGenre(slug: string) {
+async function loadCatalogGenre(slug: string) {
   const supabase = getSupabaseClient();
   const genreResponse = await supabase
     .from("genres")
@@ -129,6 +134,15 @@ async function getCatalogGenre(slug: string) {
 
   return { genre, subgenres };
 }
+
+const getCatalogGenre = unstable_cache(
+  loadCatalogGenre,
+  ["public-catalog-genre-v1"],
+  {
+    revalidate: PUBLIC_CATALOG_REVALIDATE_SECONDS,
+    tags: [PUBLIC_GENRE_CACHE_TAG],
+  },
+);
 
 function mergeGenreDefinition(
   staticGenre: GenreDefinition | null,
@@ -180,7 +194,7 @@ function mergeGenreDefinition(
   };
 }
 
-async function getMostViewedPrimaryGenreArtists(values: string[]) {
+async function loadMostViewedPrimaryGenreArtists(values: string[]) {
   if (values.length === 0) return [];
 
   const supabase = getSupabaseClient();
@@ -196,6 +210,15 @@ async function getMostViewedPrimaryGenreArtists(values: string[]) {
   if (response.error) throw response.error;
   return (response.data ?? []) as ArtistGenreRow[];
 }
+
+const getMostViewedPrimaryGenreArtists = unstable_cache(
+  loadMostViewedPrimaryGenreArtists,
+  ["public-genre-artists-v1"],
+  {
+    revalidate: PUBLIC_CATALOG_REVALIDATE_SECONDS,
+    tags: [PUBLIC_GENRE_CACHE_TAG],
+  },
+);
 
 export async function getGenrePageData(
   slug: string,
@@ -243,7 +266,7 @@ export async function getGenrePageSlugs() {
   return uniqueValues((response.data ?? []).map((genre) => genre.slug));
 }
 
-export async function getTopGenreOptions(): Promise<TopGenreOption[]> {
+async function loadTopGenreOptions(): Promise<TopGenreOption[]> {
   const supabase = getSupabaseClient();
   const response = await supabase
     .from("genres")
@@ -264,7 +287,16 @@ export async function getTopGenreOptions(): Promise<TopGenreOption[]> {
     .map((genre) => ({ slug: genre.slug, name: genre.name }));
 }
 
-export async function getGenreMedia(genreId: number): Promise<GenreMedia[]> {
+export const getTopGenreOptions = unstable_cache(
+  loadTopGenreOptions,
+  ["public-top-genre-options-v1"],
+  {
+    revalidate: PUBLIC_CATALOG_REVALIDATE_SECONDS,
+    tags: [PUBLIC_GENRE_CACHE_TAG],
+  },
+);
+
+async function loadGenreMedia(genreId: number): Promise<GenreMedia[]> {
   const { data, error } = await getSupabaseClient()
     .from("genre_media")
     .select("id,title,url,platform,media_type,external_id,thumbnail_url,published_date,youtube_channel_id,youtube_channel_name,youtube_channel_url,youtube_channel_avatar_url,youtube_metadata_fetched_at,notes")
@@ -278,3 +310,12 @@ export async function getGenreMedia(genreId: number): Promise<GenreMedia[]> {
   }
   return (data ?? []) as GenreMedia[];
 }
+
+export const getGenreMedia = unstable_cache(
+  loadGenreMedia,
+  ["public-genre-media-v1"],
+  {
+    revalidate: PUBLIC_CATALOG_REVALIDATE_SECONDS,
+    tags: [PUBLIC_GENRE_CACHE_TAG],
+  },
+);

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { createPageMetadata, type SeoLocale } from "@/lib/seo";
 
 export async function generateMetadata({
@@ -35,7 +35,13 @@ function SectionEyebrow({ children }: { children: React.ReactNode }) {
   );
 }
 
-export default async function AboutPage() {
+export default async function AboutPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("pages.about");
 
   return (

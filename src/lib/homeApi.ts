@@ -14,6 +14,7 @@ import {
   HOMEPAGE_CACHE_SECONDS,
   HOMEPAGE_DATA_CACHE_TAG,
 } from "@/lib/homepageCache";
+import { getPublicRecordingIds } from "@/lib/publicRecordingVisibility";
 
 type HomepageMostAwardedArtistRow = {
   id: string;
@@ -195,25 +196,11 @@ async function loadHomeData() {
     return bv - av || Number(b.views || 0) - Number(a.views || 0);
   });
 
-  const trendingArtistIds = [
-    ...new Set(rankedTrending.map((r) => r.artist_id).filter(Boolean)),
-  ];
-  const publishedTrendingArtistIds = new Set<string>();
-
-  if (trendingArtistIds.length > 0) {
-    const { data: publishedTrendingArtists } = await supabase
-      .from("artists")
-      .select("id")
-      .eq("status", "published")
-      .in("id", trendingArtistIds);
-
-    for (const artist of publishedTrendingArtists || []) {
-      publishedTrendingArtistIds.add(artist.id);
-    }
-  }
-
+  const publicTrendingRecordingIds = await getPublicRecordingIds(
+    rankedTrending.map((row) => row.recording_id),
+  );
   const filteredTrending = rankedTrending
-    .filter((r) => !r.artist_id || publishedTrendingArtistIds.has(r.artist_id))
+    .filter((row) => publicTrendingRecordingIds.has(row.recording_id))
     .slice(0, HOME_SONG_CARD_LIMIT);
 
   // Fetch slugs for the filtered recording IDs

@@ -1,7 +1,7 @@
 import ArtistDirectory from "@/components/artists/ArtistDirectory";
 import { getArtistOccupationOptions } from "@/lib/artistOccupationOptions";
 import { getArtistDirectoryInitialData } from "@/lib/artistDirectoryData";
-import { createPageMetadata } from "@/lib/seo";
+import { createArtistDirectoryMetadata } from "@/lib/artist-role-pages";
 
 export async function generateMetadata({
   params,
@@ -9,13 +9,11 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  return createPageMetadata({
-    title: "Dominican Instrumental and Classical Artists",
-    description:
-      "Explore Dominican instrumentalists, classical musicians, orchestral performers, and related artists in Mangulina, the Dominican Music Database.",
-    path: "/instrumental-classical",
+  return createArtistDirectoryMetadata(
+    "instrumentalClassical",
+    "/instrumental-classical",
     locale,
-  });
+  );
 }
 
 type InstrumentalClassicalPageProps = {

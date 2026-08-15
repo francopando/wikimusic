@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { Link } from "@/i18n/navigation";
 import { createPageMetadata, type SeoLocale } from "@/lib/seo";
@@ -29,7 +29,13 @@ function SectionEyebrow({ children }: { children: React.ReactNode }) {
   );
 }
 
-export default async function DmcaPage() {
+export default async function DmcaPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("legal.dmca");
 
   const thirdPartyItems = [

@@ -3,7 +3,7 @@ import { readFileSync } from "node:fs";
 import test from "node:test";
 
 const sql = readFileSync("supabase/migrations/20260812000000_external_contributors_foundation.sql", "utf8");
-const workflow = readFileSync("src/app/admin/authoritative-works/page.tsx", "utf8");
+const workflow = readFileSync("src/app/admin/(protected)/authoritative-works/page.tsx", "utf8");
 const songCredits = readFileSync("src/components/organisms/SongCreditsSection.tsx", "utf8");
 const publicQuery = readFileSync("src/lib/queries/songs.ts", "utf8");
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { Link } from "@/i18n/navigation";
 import { createPageMetadata, type SeoLocale } from "@/lib/seo";
@@ -39,7 +39,13 @@ function SectionEyebrow({ children }: { children: React.ReactNode }) {
 const legalLinkClass =
   "font-medium text-[#002D62] underline underline-offset-4 hover:text-[#8B0000]";
 
-export default async function TermsOfUsePage() {
+export default async function TermsOfUsePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("legal.terms");
 
   const sections: TermsSection[] = [

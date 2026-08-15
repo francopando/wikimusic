@@ -2,8 +2,8 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
 
-const recording = readFileSync("src/app/admin/catalog/recordings/page.tsx", "utf8");
-const work = readFileSync("src/app/admin/authoritative-works/page.tsx", "utf8");
+const recording = readFileSync("src/app/admin/(protected)/catalog/recordings/page.tsx", "utf8");
+const work = readFileSync("src/app/admin/(protected)/authoritative-works/page.tsx", "utf8");
 
 test("unresolved Recording prominently offers all three editorial outcomes", () => {
   assert.match(recording, /Search Existing Work/);

@@ -1,5 +1,5 @@
 import { Link } from "@/i18n/navigation";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Sparkles } from "lucide-react";
 import JsonLd from "@/components/seo/JsonLd";
 
@@ -72,7 +72,13 @@ function LinkGrid({ links, label }: { links: DirectoryLink[]; label: (key: strin
   );
 }
 
-export default async function DiscoverPage() {
+export default async function DiscoverPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("pages.discover");
   const [provinces, archiveCounts] = await Promise.all([
     getPublishedProvinces(),

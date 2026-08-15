@@ -1,10 +1,7 @@
 import ArtistDirectory from "@/components/artists/ArtistDirectory";
 import { getArtistDirectoryInitialData } from "@/lib/artistDirectoryData";
 import { getArtistGenreOptions } from "@/lib/artistGenreOptions";
-import { createPageMetadata } from "@/lib/seo";
-
-const description =
-  "Explore Dominican Christian artists, singers, musicians, composers, and worship leaders in Mangulina, the Dominican Music Database.";
+import { createArtistDirectoryMetadata } from "@/lib/artist-role-pages";
 
 export async function generateMetadata({
   params,
@@ -12,12 +9,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  return createPageMetadata({
-    title: "Dominican Christian Artists",
-    description,
-    path: "/christian",
-    locale,
-  });
+  return createArtistDirectoryMetadata("christian", "/christian", locale);
 }
 
 type ChristianArtistsPageProps = {

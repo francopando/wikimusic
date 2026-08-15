@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { createPageMetadata } from "@/lib/seo";
+import { createArtistRoleMetadata } from "@/lib/artist-role-pages";
 
 export async function generateMetadata({
   params,
@@ -8,18 +8,17 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const baseMetadata = createPageMetadata({
-    title: "Dominican Singers",
-    description:
-      "Browse Dominican singers by genre, province and musical context in Mangulina, the Dominican Music Database.",
-    path: "/artists",
-    locale,
-  });
+  const baseMetadata = await createArtistRoleMetadata("artists", locale);
+  const localizedTitle = typeof baseMetadata.title === "string"
+    ? baseMetadata.title
+    : typeof baseMetadata.openGraph?.title === "string"
+      ? baseMetadata.openGraph.title
+      : "Dominican Singers";
 
   return {
     ...baseMetadata,
     title: {
-      default: "Dominican Singers",
+      default: localizedTitle,
       template: "%s | Mangulina",
     },
   };

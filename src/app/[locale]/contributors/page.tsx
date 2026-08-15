@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import ContributorImage from "@/components/atoms/ContributorImage";
 import { supabase } from "@/lib/supabase";
 import type { Contributor } from "@/types/contributor";
@@ -30,7 +30,13 @@ function SectionEyebrow({ children }: { children: React.ReactNode }) {
   );
 }
 
-export default async function ContributorsPage() {
+export default async function ContributorsPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("pages.contributors");
   const { data: contributors, error } = await supabase
     .from("contributors")

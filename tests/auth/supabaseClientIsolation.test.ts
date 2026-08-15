@@ -19,16 +19,16 @@ test("ordinary Supabase client never selects the service-role key", () => {
 
 test("client components do not import the privileged client", () => {
   for (const path of [
-    "../../src/app/admin/awards/page.tsx",
-    "../../src/app/admin/artists/page.tsx",
-    "../../src/app/admin/contributors/ContributorsAdminClient.tsx",
+    "../../src/app/admin/(protected)/awards/page.tsx",
+    "../../src/app/admin/(protected)/artists/page.tsx",
+    "../../src/app/admin/(protected)/contributors/ContributorsAdminClient.tsx",
   ]) {
     assert.doesNotMatch(source(path), /supabaseService|createServiceRoleClient/);
   }
 });
 
 test("Awards mutations cross a guarded API boundary", () => {
-  const page = source("../../src/app/admin/awards/page.tsx");
+  const page = source("../../src/app/admin/(protected)/awards/page.tsx");
   const route = source("../../src/app/api/admin/awards/route.ts");
 
   assert.doesNotMatch(page, /from\("(?:awards|award_categories|artist_awards)"\)\s*\.(?:insert|update|delete)/);

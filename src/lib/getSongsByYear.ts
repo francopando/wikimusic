@@ -6,6 +6,7 @@ import {
   HOMEPAGE_ARCHIVE_CACHE_TAG,
   HOMEPAGE_CACHE_SECONDS,
 } from "@/lib/homepageCache";
+import { getPublicRecordingIds } from "@/lib/publicRecordingVisibility";
 
 type RecordingArchiveRow = ArchiveSongRow & {
   release_year_actual: number | null;
@@ -21,27 +22,6 @@ type ArchiveYearCountRow = {
   year: number | string | null;
   count: number | string | null;
 };
-
-async function getPublishedArtistIds(artistIds: unknown[]) {
-  const ids = [...new Set(artistIds.filter((id): id is string => typeof id === "string" && id.length > 0))];
-
-  if (!ids.length) return new Set<string>();
-
-  // Large-ID audit: decade/archive result sets can contain more than 100 artists;
-  // publication filtering should move into the archive query/RPC, not be chunked here.
-  const { data, error } = await supabase
-    .from("artists")
-    .select("id")
-    .eq("status", "published")
-    .in("id", ids);
-
-  if (error) {
-    console.error(error);
-    return new Set<string>();
-  }
-
-  return new Set((data ?? []).map((artist) => artist.id));
-}
 
 async function addRecordingSlugs(rows: RecordingArchiveRow[]) {
   const recordingIds = rows
@@ -107,9 +87,9 @@ async function addReleaseCoverAvailability<T extends { release_id?: string | nul
   }));
 }
 
-async function filterToPublishedArtists<T extends { artist_id?: string | null }>(rows: T[]) {
-  const publishedArtistIds = await getPublishedArtistIds(rows.map((row) => row.artist_id));
-  return rows.filter((row) => !row.artist_id || publishedArtistIds.has(row.artist_id));
+async function filterToPublishedArtists<T extends { recording_id: string }>(rows: T[]) {
+  const publicRecordingIds = await getPublicRecordingIds(rows.map((row) => row.recording_id));
+  return rows.filter((row) => publicRecordingIds.has(row.recording_id));
 }
 
 type SongsByYearOptions = {
@@ -190,71 +170,22 @@ export async function getArchiveCountsForYearRange(
   startYear?: number,
   endYear?: number,
 ): Promise<ArchiveCounts> {
-  if (startYear !== undefined && endYear !== undefined) {
-    const { data, error } = await supabase.rpc("get_archive_year_counts", {
-      p_start_year: startYear,
-      p_end_year: endYear,
-    });
+  const { data, error } = await supabase.rpc("get_archive_year_counts", {
+    p_start_year: startYear ?? null,
+    p_end_year: endYear ?? null,
+  });
+  if (error) throw new Error(`get_archive_year_counts failed: ${error.message}`, { cause: error });
 
-    if (!error) {
-      return ((data ?? []) as ArchiveYearCountRow[]).reduce(
-        (counts, row) => {
-          const year = Number(row.year);
-          const count = Number(row.count ?? 0);
-          if (!Number.isInteger(year) || !Number.isFinite(count)) return counts;
-
-          const yearKey = String(year);
-          const decade = `${Math.floor(year / 10) * 10}s`;
-          counts.yearCounts[yearKey] = count;
-          counts.decadeCounts[decade] = (counts.decadeCounts[decade] ?? 0) + count;
-          return counts;
-        },
-        { decadeCounts: {}, yearCounts: {} } as ArchiveCounts,
-      );
-    }
-
-    console.error("get_archive_year_counts failed; falling back to archive row count:", error);
-  }
-
-  const pageSize = 1000;
-  let from = 0;
-  const rows: Pick<RecordingArchiveRow, "release_year_actual" | "artist_id">[] = [];
-
-  while (true) {
-    let query = supabase
-      .from("recordings_with_release_info")
-      .select("release_year_actual, artist_id")
-      .not("release_year_actual", "is", null)
-      .order("release_year_actual", { ascending: true })
-      .order("artist_id", { ascending: true, nullsFirst: true });
-
-    if (startYear !== undefined) query = query.gte("release_year_actual", startYear);
-    if (endYear !== undefined) query = query.lte("release_year_actual", endYear);
-
-    const { data, error } = await query.range(from, from + pageSize - 1);
-
-    if (error) {
-      console.error(error);
-      return { decadeCounts: {}, yearCounts: {} };
-    }
-
-    rows.push(...((data ?? []) as Pick<RecordingArchiveRow, "release_year_actual" | "artist_id">[]));
-
-    if (!data || data.length < pageSize) break;
-    from += pageSize;
-  }
-
-  const visibleRows = await filterToPublishedArtists(rows);
-
-  return visibleRows.reduce(
+  return ((data ?? []) as ArchiveYearCountRow[]).reduce(
     (counts, row) => {
-      const year = Number(row.release_year_actual);
-      if (!Number.isInteger(year)) return counts;
+      const year = Number(row.year);
+      const count = Number(row.count ?? 0);
+      if (!Number.isInteger(year) || !Number.isFinite(count)) return counts;
 
       const yearKey = String(year);
       const decade = `${Math.floor(year / 10) * 10}s`;
-      counts.yearCounts[yearKey] = (counts.yearCounts[yearKey] ?? 0) + 1;
-      counts.decadeCounts[decade] = (counts.decadeCounts[decade] ?? 0) + 1;
+      counts.yearCounts[yearKey] = count;
+      counts.decadeCounts[decade] = (counts.decadeCounts[decade] ?? 0) + count;
       return counts;
     },
     { decadeCounts: {}, yearCounts: {} } as ArchiveCounts,

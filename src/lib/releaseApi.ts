@@ -1,5 +1,7 @@
 import { supabase } from "@/lib/supabase";
+import { cache } from "react";
 import { getPublicReleaseCoverUrl } from "@/lib/releaseCover";
+import { isPublicReleaseArtist } from "@/lib/publicRecordingVisibility";
 
 const RELEASE_LIST_PAGE_SIZE = 24;
 const RELEASE_SECTION_LIMIT = 12;
@@ -903,7 +905,9 @@ export async function getMoreReleasesInDominantGenre(
   return { genre, releases };
 }
 
-export async function getReleaseBySlug(slug: string): Promise<ReleasePageData | null> {
+export const getReleaseBySlug = cache(async function getReleaseBySlug(
+  slug: string,
+): Promise<ReleasePageData | null> {
   async function runReleaseQuery(includeViews: boolean) {
     return supabase
       .from("releases")
@@ -930,6 +934,8 @@ export async function getReleaseBySlug(slug: string): Promise<ReleasePageData | 
   if (!release) return null;
 
   const releaseRow = release as unknown as ReleaseRow;
+
+  if (!(await isPublicReleaseArtist(releaseRow.release_artist_id))) return null;
 
   const [artistInfo, tracksResponse] = await Promise.all([
     getReleaseArtistInfo(releaseRow.id),
@@ -1024,4 +1030,4 @@ export async function getReleaseBySlug(slug: string): Promise<ReleasePageData | 
     artist: displayArtist,
     tracks,
   };
-}
+});

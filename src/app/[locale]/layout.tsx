@@ -2,10 +2,13 @@ import type { Metadata } from "next";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
+import "../globals.css";
 
 import { routing } from "@/i18n/routing";
 import SiteChrome from "@/components/layout/SiteChrome";
 import HtmlLangSync from "@/components/HtmlLangSync";
+import DocumentShell from "@/components/layout/DocumentShell";
+import { ROOT_METADATA } from "@/lib/root-metadata";
 import { createPageMetadata, type SeoLocale } from "@/lib/seo";
 
 const LOCALE_DEFAULT_METADATA: Record<SeoLocale, { title: string; description: string }> = {
@@ -34,12 +37,15 @@ export async function generateMetadata({
   const locale: SeoLocale = routeLocale === "es" ? "es" : "en";
   const { title, description } = LOCALE_DEFAULT_METADATA[locale];
 
-  return createPageMetadata({
-    title,
-    description,
-    path: "/",
-    locale,
-  });
+  return {
+    ...ROOT_METADATA,
+    ...createPageMetadata({
+      title,
+      description,
+      path: "/",
+      locale,
+    }),
+  };
 }
 
 // This layout is scoped to the [locale] segment, so it RE-RENDERS whenever the
@@ -72,10 +78,12 @@ export default async function LocaleLayout({
   delete clientMessages.pages;
 
   return (
-    <NextIntlClientProvider locale={locale} messages={clientMessages}>
-      <HtmlLangSync locale={locale} />
-      {children}
-      <SiteChrome />
-    </NextIntlClientProvider>
+    <DocumentShell lang={locale}>
+      <NextIntlClientProvider locale={locale} messages={clientMessages}>
+        <HtmlLangSync locale={locale} />
+        {children}
+        <SiteChrome />
+      </NextIntlClientProvider>
+    </DocumentShell>
   );
 }

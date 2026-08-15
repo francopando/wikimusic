@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import { notFound } from "next/navigation";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import MainWrapper from "@/components/layout/MainWrapper";
 import AnalyticsPageView from "@/components/analytics/AnalyticsPageView";
@@ -24,6 +24,12 @@ import { absoluteUrl, breadcrumbSchema } from "@/lib/structuredData";
 type PageProps = {
   params: Promise<{ slug: string; locale: string }>;
 };
+
+export const revalidate = 600;
+
+export function generateStaticParams() {
+  return [];
+}
 
 function cleanSlug(raw: string) {
   return decodeURIComponent(raw).trim().replace(/^"|"$/g, "");
@@ -218,8 +224,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export default async function ReleasePage({ params }: PageProps) {
-  const t = await getTranslations("pages");
   const { slug, locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("pages");
   const release = await getReleaseBySlug(cleanSlug(slug));
 
   if (!release) notFound();

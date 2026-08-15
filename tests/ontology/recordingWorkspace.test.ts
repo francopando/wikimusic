@@ -5,7 +5,7 @@ import test from "node:test";
 const migration = readFileSync("supabase/migrations/20260813000000_recording_workspace.sql", "utf8");
 const api = readFileSync("src/app/api/admin/recordings/route.ts", "utf8");
 const creditApi = readFileSync("src/app/api/admin/recording-credits/route.ts", "utf8");
-const page = readFileSync("src/app/admin/catalog/recordings/page.tsx", "utf8");
+const page = readFileSync("src/app/admin/(protected)/catalog/recordings/page.tsx", "utf8");
 const credits = readFileSync("src/components/admin/RecordingCreditsManager.tsx", "utf8");
 
 test("Recording search is canonical-row based and workspace search is catalog-wide", () => {

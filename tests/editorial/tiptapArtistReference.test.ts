@@ -35,11 +35,11 @@ test("client UUID utility uses getRandomValues when randomUUID is unavailable", 
 
 test("admin editorial clients use the browser-compatible UUID utility", () => {
   const files = [
-    "src/app/admin/catalog/recordings/page.tsx",
-    "src/app/admin/authoritative-works/page.tsx",
+    "src/app/admin/(protected)/catalog/recordings/page.tsx",
+    "src/app/admin/(protected)/authoritative-works/page.tsx",
     "src/components/admin/RecordingCreditsManager.tsx",
-    "src/app/admin/external-contributors/page.tsx",
-    "src/app/admin/recording-review/page.tsx",
+    "src/app/admin/(protected)/external-contributors/page.tsx",
+    "src/app/admin/(protected)/recording-review/page.tsx",
   ];
   for (const file of files) {
     const source = readFileSync(file, "utf8");

@@ -6,7 +6,7 @@ import ReleaseGrid from "@/components/releases/ReleaseGrid";
 import { getEssentialReleases } from "@/lib/releaseApi";
 import { createPageMetadata } from "@/lib/seo";
 import { breadcrumbSchema, collectionPageSchema } from "@/lib/structuredData";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 const DESCRIPTION =
   "An editorial guide to culturally important Dominican albums and releases in Mangulina.";
@@ -27,7 +27,13 @@ export async function generateMetadata({
 
 export const revalidate = 3600;
 
-export default async function EssentialDominicanAlbumsPage() {
+export default async function EssentialDominicanAlbumsPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("pages");
   const releases = await getEssentialReleases(48);
 
