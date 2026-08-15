@@ -20,6 +20,8 @@ export default function TopDjsSection({ djs }: TopDjsSectionProps) {
   const nav = useTranslations("navigation");
   const scrollRef = useRef<HTMLDivElement>(null);
 
+  if (!djs.length) return null;
+
   const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
       const { scrollLeft, clientWidth } = scrollRef.current;

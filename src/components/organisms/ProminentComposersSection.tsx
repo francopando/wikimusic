@@ -22,6 +22,8 @@ export default function ProminentComposersSection({
   const nav = useTranslations("navigation");
   const scrollRef = useRef<HTMLDivElement>(null);
 
+  if (!composers.length) return null;
+
   const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
       const { scrollLeft, clientWidth } = scrollRef.current;

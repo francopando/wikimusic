@@ -126,11 +126,13 @@ export default async function ReleasesHubPage() {
           </header>
 
           <FeaturedRelease release={data.featuredRelease} />
-          <ReleaseSection
-            title={t("mostViewed")}
-            releases={data.mostViewed}
-            href="/releases/most-viewed"
-          />
+          {data.mostViewed.length > 0 && (
+            <ReleaseSection
+              title={t("mostViewed")}
+              releases={data.mostViewed}
+              href="/releases/most-viewed"
+            />
+          )}
           <ReleaseSection
             title={t("recent")}
             releases={data.recent}

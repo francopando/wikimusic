@@ -2,8 +2,26 @@ import { describe, it } from "node:test";
 import assert from "node:assert/strict";
 import {
   chronologicalTrendRows,
+  hasPositiveRecentOrAllTimeViews,
+  hasPositiveViews,
   normalizeSevenDayViews,
 } from "../../src/lib/analyticsPresentation";
+
+describe("zero-state popularity qualification", () => {
+  it("excludes zero-view entities and accepts a positive all-time view", () => {
+    assert.equal(hasPositiveViews(0), false);
+    assert.equal(hasPositiveViews(null), false);
+    assert.equal(hasPositiveViews("0"), false);
+    assert.equal(hasPositiveViews(1), true);
+  });
+
+  it("requires positive recent or all-time engagement for trending and rising", () => {
+    assert.equal(hasPositiveRecentOrAllTimeViews(0, 0), false);
+    assert.equal(hasPositiveRecentOrAllTimeViews(null, null), false);
+    assert.equal(hasPositiveRecentOrAllTimeViews(1, 0), true);
+    assert.equal(hasPositiveRecentOrAllTimeViews(0, 1), true);
+  });
+});
 
 describe("normalizeSevenDayViews", () => {
   it("never falls back to a different metric window", () => {

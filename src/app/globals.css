@@ -1,3 +1,7 @@
+@import '@fontsource/finlandica/400.css';
+@import '@fontsource/finlandica/500.css';
+@import '@fontsource/finlandica/600.css';
+@import '@fontsource/finlandica/700.css';
 @import 'tailwindcss';
 /*@import 'tw-animate-css';*/
 @custom-variant dark (&:is(.dark *));
@@ -9,9 +13,6 @@
     --color-flagblue: #002D62;
     --color-canvas: #FFFFFF;
     --color-ink: #1d1d1f;
-    /* Typography */
-    --font-serif: "Instrument Serif", serif;
-    --font-outfit: var(--font-outfit), ui-sans-serif, system-ui;
     /* Shadcn / v0 System Tokens */
     --background: oklch(1 0 0);
     --foreground: oklch(0.145 0 0);
@@ -84,8 +85,8 @@
 }
 
 @theme inline {
-    --font-sans: 'Finlandica', 'Finlandica Fallback', system-ui, sans-serif;
-    --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+    --font-sans: 'Finlandica', system-ui, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
     --color-background: var(--background);
     --color-foreground: var(--foreground);
     --color-card: var(--card);
@@ -177,7 +178,7 @@
         border: 1px solid rgba(0, 0, 0, 0.1);
         background: rgba(255, 255, 255, 0.4);
         backdrop-filter: blur(10px);
-        font-family: var(--font-outfit);
+        font-family: inherit;
         transition: all 0.2s ease;
     }
 
@@ -191,7 +192,7 @@
     }
 
     .tm-fix {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        font-family: inherit;
         font-size: 0.65em;
         /* Manually shrinks it to balance with Finlandica */
         vertical-align: 0.4em;

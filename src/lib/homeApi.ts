@@ -15,6 +15,7 @@ import {
   HOMEPAGE_DATA_CACHE_TAG,
 } from "@/lib/homepageCache";
 import { getPublicRecordingIds } from "@/lib/publicRecordingVisibility";
+import { hasPositiveRecentOrAllTimeViews } from "@/lib/analyticsPresentation";
 
 type HomepageMostAwardedArtistRow = {
   id: string;
@@ -85,6 +86,7 @@ async function loadHomeData() {
   const allTimeTrendingPromise = startRequest(supabase
     .from("recordings_with_release_info")
     .select("recording_id, recording_title, views, release_id, artist_id, artist_name")
+    .gt("views", 0)
     .order("views", { ascending: false, nullsFirst: false })
     .limit(HOME_SONG_CARD_LIMIT * 5));
 
@@ -94,6 +96,7 @@ async function loadHomeData() {
     .select(artistFields)
     .eq("status", "published")
     .eq("primary_role", "singer")
+    .gt("views", 0)
     .order("views", { ascending: false, nullsFirst: false })
     .limit(HOME_ARTIST_CARD_LIMIT));
   const regionsResponsePromise = startRequest(supabase.rpc("get_homepage_region_counts"));
@@ -102,6 +105,7 @@ async function loadHomeData() {
     .select(artistFields)
     .eq("status", "published")
     .eq("primary_role", "composer")
+    .gt("views", 0)
     .order("views", { ascending: false, nullsFirst: false })
     .limit(HOME_ARTIST_CARD_LIMIT));
   const djsResponsePromise = startRequest(supabase
@@ -109,6 +113,7 @@ async function loadHomeData() {
     .select(artistFields)
     .eq("status", "published")
     .eq("primary_role", "dj")
+    .gt("views", 0)
     .order("views", { ascending: false, nullsFirst: false })
     .limit(HOME_ARTIST_CARD_LIMIT));
   const christianResponsePromise = startRequest(supabase
@@ -116,6 +121,7 @@ async function loadHomeData() {
     .select(artistFields)
     .eq("status", "published")
     .contains("artist_tags", ["christian"])
+    .gt("views", 0)
     .order("views", { ascending: false, nullsFirst: false })
     .limit(HOME_ARTIST_CARD_LIMIT));
   const mostAwardedResponsePromise = startRequest(supabase.rpc("get_homepage_most_awarded_artists", {
@@ -126,6 +132,7 @@ async function loadHomeData() {
     .select(artistFields)
     .eq("status", "published")
     .eq("primary_role", "instrumentalist")
+    .gt("views", 0)
     .order("views", { ascending: false, nullsFirst: false })
     .limit(HOME_ARTIST_CARD_LIMIT));
   const risingResponsePromise = startRequest(supabase
@@ -133,6 +140,7 @@ async function loadHomeData() {
     .select(artistFields)
     .eq("status", "published")
     .contains("artist_tags", ["emerging"])
+    .gt("views", 0)
     .order("views", { ascending: false, nullsFirst: false })
     .limit(HOME_ARTIST_CARD_LIMIT * 4));
   const legendsResponsePromise = startRequest(supabase
@@ -140,6 +148,7 @@ async function loadHomeData() {
     .select(artistFields)
     .eq("status", "published")
     .contains("artist_tags", ["legend"])
+    .gt("views", 0)
     .order("views", { ascending: false, nullsFirst: false })
     .limit(HOME_ARTIST_CARD_LIMIT));
 
@@ -160,7 +169,7 @@ async function loadHomeData() {
 
   // 3. Trending Songs — ranked by REAL last-7-day activity (mv_recording_views_7d),
   // not all-time views. Falls back to all-time `views` when the 7-day window is
-  // sparse so the section is never empty. The card still displays the all-time
+  // sparse. Zero-view fallback rows never qualify. The card still displays the all-time
   // view count; only the ordering reflects recent momentum.
   const recordingViews7d = await recordingViews7dPromise;
 
@@ -197,10 +206,18 @@ async function loadHomeData() {
   });
 
   const publicTrendingRecordingIds = await getPublicRecordingIds(
-    rankedTrending.map((row) => row.recording_id),
+    rankedTrending
+      .filter((row) => hasPositiveRecentOrAllTimeViews(
+        recordingViews7d.get(row.recording_id),
+        row.views,
+      ))
+      .map((row) => row.recording_id),
   );
   const filteredTrending = rankedTrending
-    .filter((row) => publicTrendingRecordingIds.has(row.recording_id))
+    .filter((row) =>
+      hasPositiveRecentOrAllTimeViews(recordingViews7d.get(row.recording_id), row.views) &&
+      publicTrendingRecordingIds.has(row.recording_id),
+    )
     .slice(0, HOME_SONG_CARD_LIMIT);
 
   // Fetch slugs for the filtered recording IDs
@@ -448,7 +465,7 @@ async function loadHomeData() {
 
   // 11. Rising Stars — emerging-tagged artists ranked by REAL last-7-day views
   // (weekly trending), with all-time `views` as a tiebreak so the section is
-  // never empty while the 7-day window is sparse. Card still shows all-time views.
+  // the 7-day window is sparse. Artists without either signal do not qualify.
   const [risingResponse, artistViews7d] = await Promise.all([
     risingResponsePromise,
     artistViews7dPromise,
@@ -457,6 +474,7 @@ async function loadHomeData() {
   const risingStars: ArtistSummary[] =
     ((risingResponse.data as ArtistSummary[]) || [])
       .map((a) => ({ a, v7: artistViews7d.get(a.id) || 0 }))
+      .filter(({ a, v7 }) => hasPositiveRecentOrAllTimeViews(v7, a.views))
       .sort((x, y) => y.v7 - x.v7 || Number(y.a.views || 0) - Number(x.a.views || 0))
       .slice(0, HOME_ARTIST_CARD_LIMIT)
       .map(({ a }) => ({

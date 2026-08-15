@@ -94,17 +94,21 @@ export default async function HomePage() {
         <FeaturedArtistSection featuredArtist={data.featuredArtist} />
       </PageSection>
 
-      <PageSection>
-        <TopArtistsSection topArtists={data.topArtists} />
-      </PageSection>
+      {data.topArtists.length > 0 && (
+        <PageSection>
+          <TopArtistsSection topArtists={data.topArtists} />
+        </PageSection>
+      )}
 
       <PageSection>
         <DecadeTimelineCarousel decadeCounts={archiveCounts.decadeCounts} />
       </PageSection>
 
-      <PageSection>
-        <TopChristianArtistsSection christianArtists={data.christianArtists} />
-      </PageSection>
+      {data.christianArtists.length > 0 && (
+        <PageSection>
+          <TopChristianArtistsSection christianArtists={data.christianArtists} />
+        </PageSection>
+      )}
 
       <PageSection>
         <BrowseByGenreSection />
@@ -114,33 +118,45 @@ export default async function HomePage() {
         <MostAwardedArtistsSection artists={data.mostAwardedArtists} />
       </PageSection>
 
-      <PageSection>
-        <TrendingSongsSection songs={data.trendingSongs} />
-      </PageSection>
+      {data.trendingSongs.length > 0 && (
+        <PageSection>
+          <TrendingSongsSection songs={data.trendingSongs} />
+        </PageSection>
+      )}
 
-      <PageSection>
-        <TopLegendsArtistsSection artists={data.legendsArtists} />
-      </PageSection>
+      {data.legendsArtists.length > 0 && (
+        <PageSection>
+          <TopLegendsArtistsSection artists={data.legendsArtists} />
+        </PageSection>
+      )}
 
       <PageSection>
         <BrowseByRegionSection regions={data.regions} />
       </PageSection>
 
-      <PageSection>
-        <ClassicalArtistsSection classicalArtists={data.classicalArtists} />
-      </PageSection>
+      {data.classicalArtists.length > 0 && (
+        <PageSection>
+          <ClassicalArtistsSection classicalArtists={data.classicalArtists} />
+        </PageSection>
+      )}
 
-      <PageSection>
-        <ProminentComposersSection composers={data.composers} />
-      </PageSection>
+      {data.composers.length > 0 && (
+        <PageSection>
+          <ProminentComposersSection composers={data.composers} />
+        </PageSection>
+      )}
 
-      <PageSection>
-        <TopDjsSection djs={data.djs} />
-      </PageSection>
+      {data.djs.length > 0 && (
+        <PageSection>
+          <TopDjsSection djs={data.djs} />
+        </PageSection>
+      )}
 
-      <PageSection>
-        <TopRisingStarsSection risingStars={data.risingStars} />
-      </PageSection>
+      {data.risingStars.length > 0 && (
+        <PageSection>
+          <TopRisingStarsSection risingStars={data.risingStars} />
+        </PageSection>
+      )}
 
       <PageSection className="!mb-2">
         <BirthdaySection birthdayArtists={data.birthdayArtists} />

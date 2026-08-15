@@ -360,6 +360,7 @@ type ReleaseDiscoveryOptions = {
   sort?: ReleaseSort;
   type?: ReleaseTypeDefinition;
   decade?: ReleaseDecadeDefinition;
+  requirePositiveViews?: boolean;
 };
 
 function isMissingReleaseViewsColumn(error: unknown) {
@@ -563,6 +564,9 @@ export async function getReleaseSummaries(
       });
 
     query = applyReleaseFilters(query, options);
+    if (includeViews && options.requirePositiveViews) {
+      query = query.gt("views", 0);
+    }
     query = applyReleaseOrder(query, includeViews ? sort : sort === "views" ? "recent" : sort).range(from, to);
 
     return query;
@@ -697,7 +701,7 @@ export async function getReleaseHubData() {
   const [featuredRelease, mostViewed, recent, typeCounts, decadeCounts, essential] =
     await Promise.all([
       getFeaturedRelease(),
-      getReleaseSummaries({ limit: RELEASE_SECTION_LIMIT, sort: "views" }),
+      getReleaseSummaries({ limit: RELEASE_SECTION_LIMIT, sort: "views", requirePositiveViews: true }),
       getReleaseSummaries({ limit: RELEASE_SECTION_LIMIT, sort: "recent" }),
       getReleaseTypeCounts(),
       getReleaseDecadeCounts(),

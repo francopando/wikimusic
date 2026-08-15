@@ -34,6 +34,8 @@ export default function MostSearchedSongs({ songs = [] }: MostSearchedSongsProps
 
   const safeSongs = Array.isArray(songs) ? songs : [];
 
+  if (!safeSongs.length) return null;
+
   return (
     <SectionCard compact>
       <CarouselArrows onLeft={() => scroll("left")} onRight={() => scroll("right")} />

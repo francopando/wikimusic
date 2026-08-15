@@ -1,28 +1,8 @@
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Finlandica_Text, Instrument_Serif, Inter } from "next/font/google";
 
 import RoutePageView from "@/components/analytics/RoutePageView";
 import GradientBackground from "@/components/atoms/GradientBackground";
-
-const finlandica = Finlandica_Text({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-finlandica",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  preload: false,
-});
-
-const instrumentSerif = Instrument_Serif({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-serif",
-  preload: false,
-});
 
 export default function DocumentShell({
   children,
@@ -35,9 +15,8 @@ export default function DocumentShell({
     <html
       lang={lang}
       suppressHydrationWarning
-      className={`${finlandica.variable} ${inter.variable} ${instrumentSerif.variable}`}
     >
-      <body className={`${finlandica.className} antialiased min-h-screen`}>
+      <body className="min-h-screen font-sans antialiased">
         <GradientBackground />
 
         <div

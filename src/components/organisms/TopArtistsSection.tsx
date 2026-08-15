@@ -20,6 +20,8 @@ export default function TopArtistsSection({ topArtists }: TopArtistsSectionProps
   const nav = useTranslations("navigation");
   const scrollRef = useRef<HTMLDivElement>(null);
 
+  if (!topArtists.length) return null;
+
   const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
       const { scrollLeft, clientWidth } = scrollRef.current;

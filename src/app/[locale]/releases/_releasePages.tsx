@@ -153,6 +153,7 @@ async function ReleaseListingPage({
     decade: decade ?? decadeFilter ?? undefined,
     sort,
     page,
+    requirePositiveViews: eventType === "release_most_viewed_view",
   });
 
   if (listing.total === 0) notFound();
