@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 
 import { genreDefinitions } from "@/lib/genres";
 import { formatDurationMilliseconds } from "@/lib/artistPortfolioPresentation";
+import ShareButton from "@/components/atoms/ShareButton";
 
 type SongHeroProps = {
   title: string;
@@ -19,6 +20,8 @@ type SongHeroProps = {
   coverImageUrl?: string | null;
   releaseTitle?: string | null;
   releaseSlug?: string | null;
+  shareUrl: string;
+  shareTitle: string;
 };
 
 function slugify(value: string): string {
@@ -60,6 +63,8 @@ export default function SongHero({
   coverImageUrl,
   releaseTitle,
   releaseSlug,
+  shareUrl,
+  shareTitle,
 }: SongHeroProps) {
   const t = useTranslations();
   const genreChips = [genre, subgenre].filter(Boolean) as string[];
@@ -81,6 +86,7 @@ export default function SongHero({
       <div className="px-5 py-6 sm:px-6">
         <div className="flex flex-col items-start gap-6 md:flex-row">
           <div className="group relative aspect-square w-full shrink-0 overflow-hidden rounded-lg border border-black/5 bg-gray-100 sm:w-56 lg:w-64">
+            <ShareButton url={shareUrl} title={shareTitle} subject={title} placement="artwork" />
             {coverImageUrl ? (
               // Song pages select the stored 300px WebP variant. Optimizing it
               // would only upscale/re-encode that fixed source; see the image architecture.

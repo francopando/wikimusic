@@ -10,9 +10,11 @@ import type { IconType } from "react-icons";
 import type { ArtistProfileData } from "@/lib/artistApi";
 import type { ArtistRelationshipItem } from "@/lib/artistRelationships";
 import type { FamilyRelationshipItem } from "@/lib/artistFamilyRelationships";
+import ShareButton from "@/components/atoms/ShareButton";
 
 type Props = {
   artist: ArtistProfileData;
+  shareUrl: string;
   memberships?: ArtistRelationshipItem[];
   foundedProjects?: ArtistRelationshipItem[];
   ledProjects?: ArtistRelationshipItem[];
@@ -425,6 +427,7 @@ function MembershipList({
 
 export default function ArtistFactsCard({
   artist,
+  shareUrl,
   memberships = [],
   foundedProjects = [],
   ledProjects = [],
@@ -484,9 +487,12 @@ export default function ArtistFactsCard({
 
   return (
     <section className="rounded-xl border border-gray-100 bg-white p-6 font-sans shadow-sm">
-      <h3 className="mb-4 text-xs font-normal uppercase tracking-[0.18em] text-(--color-wikicrimson)">
-        {t("artist.technicalSheet")}
-      </h3>
+      <div className="mb-4 flex items-center justify-between gap-3">
+        <h3 className="text-xs font-normal uppercase tracking-[0.18em] text-(--color-wikicrimson)">
+          {t("artist.technicalSheet")}
+        </h3>
+        <ShareButton url={shareUrl} title={artist.name} subject={artist.name} placement="facts" />
+      </div>
 
       <div className="space-y-4">
         <Field label={t("artist.stageName")}>{artist.stage_name}</Field>

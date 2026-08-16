@@ -88,6 +88,11 @@
   "homePage": {
     "intro": "Mangulina is the Dominican Music Database, dedicated to preserving and documenting Dominican artists, recordings, releases, genres, and music history. Explore the people and songs that shape Dominican music across generations."
   },
+  "share": {
+    "label": "Share",
+    "linkCopied": "Link copied",
+    "text": "Explore {subject} on Mangulina."
+  },
   "song": {
     "credits": "Song Credits",
     "media": "Media",

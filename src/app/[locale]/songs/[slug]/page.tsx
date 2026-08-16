@@ -274,6 +274,8 @@ export default async function SongProfilePage({ params }: PageProps) {
             coverImageUrl={coverImageUrl}
             releaseTitle={song.release_title}
             releaseSlug={song.release_slug}
+            shareUrl={absoluteUrl(songPath, locale)}
+            shareTitle={songSeoTitle(song, locale)}
           />
 
           <div className="space-y-5">

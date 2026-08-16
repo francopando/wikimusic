@@ -88,6 +88,11 @@
   "homePage": {
     "intro": "Mangulina es la Base de Datos de Música Dominicana, dedicada a preservar y documentar artistas, grabaciones, publicaciones musicales, géneros e historia musical dominicana. Explora las personas y canciones que dan forma a la música dominicana a través de las generaciones."
   },
+  "share": {
+    "label": "Compartir",
+    "linkCopied": "Enlace copiado",
+    "text": "Explora {subject} en Mangulina."
+  },
   "song": {
     "credits": "Créditos de la Canción",
     "media": "Medios",

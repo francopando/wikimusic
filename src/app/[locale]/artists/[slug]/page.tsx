@@ -175,6 +175,7 @@ export default async function ArtistProfile({ params }: PageProps) {
 
             <ArtistFactsCard
               artist={artist}
+              shareUrl={absoluteUrl(`/artists/${artist.slug}`, locale)}
               memberships={relationships.memberships}
               foundedProjects={relationships.foundedProjects}
               ledProjects={relationships.ledProjects}
