@@ -2,8 +2,6 @@ import { NextResponse } from "next/server";
 import sharp from "sharp";
 
 import { requireAdminApiRole } from "@/lib/adminApiAuth";
-import { revalidateHomepageData } from "@/lib/homepageCache";
-import { revalidateArtistProfilePaths } from "@/lib/revalidateArtistProfile";
 import { createServiceRoleClient } from "@/lib/supabaseService";
 
 const MAX_SOURCE_BYTES = 10 * 1024 * 1024;
@@ -11,10 +9,9 @@ const MAX_INPUT_PIXELS = 25_000_000;
 const UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 const ALLOWED_INPUT_FORMATS = new Set(["jpeg", "png", "webp"]);
 
-type ImageTarget = "artist" | "contributor" | "externalContributor";
+type ImageTarget = "contributor" | "externalContributor";
 
 const targetConfig = {
-  artist: { bucket: "artists-images", table: "artists", size: 300 },
   contributor: { bucket: "contributors-images", table: "contributors", size: 600 },
   externalContributor: { bucket: "contributors-images", table: "external_contributors", size: 600 },
 } as const;
@@ -39,7 +36,7 @@ export async function POST(request: Request) {
   const entityId = form.get("entityId");
   const file = form.get("file");
 
-  if ((target !== "artist" && target !== "contributor" && target !== "externalContributor") || typeof entityId !== "string" || !UUID_PATTERN.test(entityId)) {
+  if ((target !== "contributor" && target !== "externalContributor") || typeof entityId !== "string" || !UUID_PATTERN.test(entityId)) {
     return NextResponse.json({ ok: false, error: "Invalid image target or entity id." }, { status: 400 });
   }
   if (!(file instanceof File) || file.size === 0 || file.size > MAX_SOURCE_BYTES) {
@@ -50,7 +47,7 @@ export async function POST(request: Request) {
   const supabase = createServiceRoleClient();
   const { data: entity, error: entityError } = await supabase
     .from(config.table)
-    .select(target === "artist" ? "id,slug" : "id")
+    .select("id")
     .eq("id", entityId)
     .maybeSingle();
 
@@ -78,22 +75,12 @@ export async function POST(request: Request) {
   const { error: uploadError } = await supabase.storage.from(config.bucket).upload(objectName, output, {
     upsert: true,
     contentType: "image/webp",
-    cacheControl: target === "artist" ? "0" : "3600",
+    cacheControl: "3600",
   });
   if (uploadError) return NextResponse.json({ ok: false, error: uploadError.message }, { status: 500 });
 
   const imageUpdatedAt = new Date().toISOString();
-  if (target === "artist") {
-    const { error: updateError } = await supabase
-      .from("artists")
-      .update({ has_image: true, image_updated_at: imageUpdatedAt })
-      .eq("id", entityId);
-    if (updateError) return NextResponse.json({ ok: false, error: updateError.message }, { status: 500 });
-
-    const slug = "slug" in entity && typeof entity.slug === "string" ? entity.slug : null;
-    if (slug) revalidateArtistProfilePaths(slug);
-    revalidateHomepageData();
-  } else if (target === "externalContributor") {
+  if (target === "externalContributor") {
     const { error: updateError } = await supabase
       .from("external_contributors")
       .update({ has_image: true, image_updated_at: imageUpdatedAt })

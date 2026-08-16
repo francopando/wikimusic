@@ -1278,6 +1278,14 @@
       "description": "Investiga preguntas de identidad antes de vincular Obras y poblar créditos a gran escala.",
       "backToPortal": "Volver al Portal Administrativo"
     },
+    "imageUpload": {
+      "uploading": "Subiendo la imagen original...",
+      "processing": "Procesando la imagen de forma segura (WebP de 300x300)...",
+      "failed": "La carga de la imagen falló. Inténtalo de nuevo.",
+      "unsupportedType": "Este tipo de archivo no es compatible.",
+      "tooLarge": "La imagen es demasiado grande.",
+      "success": "La imagen del artista se cargó correctamente como {filePath}."
+    },
     "buttons": {
       "exitToHome": "Salir a Inicio",
       "signOut": "Cerrar Sesión",

@@ -1265,6 +1265,14 @@
       "description": "Investigate Recording identity questions before Work linking and large-scale credit population.",
       "backToPortal": "Back to Admin Portal"
     },
+    "imageUpload": {
+      "uploading": "Uploading original image...",
+      "processing": "Securely processing image (300x300 WebP)...",
+      "failed": "Image upload failed. Please try again.",
+      "unsupportedType": "This file type is not supported.",
+      "tooLarge": "The image is too large.",
+      "success": "Artist image uploaded successfully as {filePath}."
+    },
     "buttons": {
       "exitToHome": "Exit to Homepage",
       "signOut": "Sign Out",

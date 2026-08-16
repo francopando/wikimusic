@@ -143,7 +143,21 @@ type AdminWriteResponse = {
   id?: string;
   artistId?: string;
   error?: string;
+  code?: string;
 };
+
+type ArtistImageAuthorizationResponse = AdminWriteResponse & {
+  bucket?: string;
+  objectPath?: string;
+  token?: string;
+};
+
+type ArtistImageFinalizationResponse = AdminWriteResponse & {
+  imageUpdatedAt?: string;
+};
+
+const MAX_ARTIST_IMAGE_BYTES = 25 * 1024 * 1024;
+const ARTIST_IMAGE_MIME_TYPES = new Set(["image/jpeg", "image/png", "image/webp"]);
 
 type ArtistMediaListResponse = {
   ok: boolean;
@@ -1012,42 +1026,84 @@ export default function AdminDashboard() {
       return;
     }
 
+    if (!ARTIST_IMAGE_MIME_TYPES.has(file.type)) {
+      setStatus(t("admin.imageUpload.unsupportedType"));
+      return;
+    }
+    if (file.size <= 0 || file.size > MAX_ARTIST_IMAGE_BYTES) {
+      setStatus(t("admin.imageUpload.tooLarge"));
+      return;
+    }
+
     setLoading(true);
-    setStatus("Uploading and securely processing image (300x300 WebP)...");
+    setStatus(t("admin.imageUpload.uploading"));
     const filePath = `${selectedArtistId}.webp`;
     let imageUpdatedAt: string;
 
     try {
-      const formData = new FormData();
-      formData.set("target", "artist");
-      formData.set("entityId", selectedArtistId);
-      formData.set("file", file);
-      const response = await fetch("/api/admin/image-upload", {
+      const authorizationResponse = await fetch("/api/admin/artist-image", {
         method: "POST",
-        body: formData,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          action: "authorize",
+          artistId: selectedArtistId,
+          mimeType: file.type,
+          fileSize: file.size,
+        }),
       });
-
-      const contentType = response.headers.get("content-type");
-      if (!contentType?.includes("application/json")) {
-        const body = await response.text();
-        throw new Error(
-          `Expected JSON from artist-image endpoint, received ${contentType ?? "unknown content type"}: ${body.slice(0, 200)}`,
-        );
+      const authorization = await readApiJson<ArtistImageAuthorizationResponse>(
+        authorizationResponse,
+        "Artist image authorization",
+      );
+      if (
+        !authorizationResponse.ok ||
+        !authorization.ok ||
+        !authorization.bucket ||
+        !authorization.objectPath ||
+        !authorization.token
+      ) {
+        throw new Error(authorization.code || "upload_failed");
       }
 
-      const result = (await response.json()) as AdminWriteResponse & {
-        imageUpdatedAt?: string;
-      };
-
-      if (!response.ok || !result.ok || !result.imageUpdatedAt) {
-        throw new Error(result.error || "Artist image upload failed.");
+      const { error: directUploadError } = await supabase.storage
+        .from(authorization.bucket)
+        .uploadToSignedUrl(authorization.objectPath, authorization.token, file, {
+          contentType: file.type,
+          upsert: true,
+        });
+      if (directUploadError) {
+        console.error("Direct artist original upload failed:", directUploadError);
+        throw new Error("storage_upload_failed");
       }
 
-      imageUpdatedAt = result.imageUpdatedAt;
+      setStatus(t("admin.imageUpload.processing"));
+      const finalizationResponse = await fetch("/api/admin/artist-image", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          action: "finalize",
+          artistId: selectedArtistId,
+          objectPath: authorization.objectPath,
+        }),
+      });
+      const finalization = await readApiJson<ArtistImageFinalizationResponse>(
+        finalizationResponse,
+        "Artist image finalization",
+      );
+      if (!finalizationResponse.ok || !finalization.ok || !finalization.imageUpdatedAt) {
+        throw new Error(finalization.code || "processing_failed");
+      }
+
+      imageUpdatedAt = finalization.imageUpdatedAt;
     } catch (error) {
       console.error("Artist image upload failed:", error);
+      const code = error instanceof Error ? error.message : "upload_failed";
       setStatus(
-        `Error uploading image: ${error instanceof Error ? error.message : "Unknown error"}`
+        code === "unsupported_type"
+          ? t("admin.imageUpload.unsupportedType")
+          : code === "file_too_large"
+            ? t("admin.imageUpload.tooLarge")
+            : t("admin.imageUpload.failed"),
       );
       setLoading(false);
       return;
@@ -1065,7 +1121,7 @@ export default function AdminDashboard() {
       ),
     );
 
-    setStatus(`Artist image uploaded successfully as ${filePath}.`);
+    setStatus(t("admin.imageUpload.success", { filePath }));
     setPreviewImageUrl((currentUrl) => {
       if (currentUrl?.startsWith("blob:")) {
         URL.revokeObjectURL(currentUrl);
