@@ -6,7 +6,7 @@ export const SITE_URL = "https://mangulina.do";
 
 export const DEFAULT_DESCRIPTION =
   "Explore Dominican artists, songs, albums, genres, awards, and music history.";
-export const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
+export const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image-v2.png`;
 
 export type SeoLocale = "en" | "es";
 
@@ -155,6 +155,7 @@ export function createPageMetadata({
           url: imageUrl,
           width: 1200,
           height: 630,
+          type: image ? undefined : "image/png",
           alt: title,
         },
       ],
