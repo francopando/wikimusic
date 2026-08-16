@@ -2,6 +2,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import RoutePageView from "@/components/analytics/RoutePageView";
+import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 import GradientBackground from "@/components/atoms/GradientBackground";
 
 export default function DocumentShell({
@@ -36,6 +37,7 @@ export default function DocumentShell({
 
         {process.env.NODE_ENV === "production" && <Analytics />}
         {process.env.NODE_ENV === "production" && <SpeedInsights />}
+        <GoogleAnalytics />
       </body>
     </html>
   );
