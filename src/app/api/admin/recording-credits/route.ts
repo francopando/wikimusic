@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { requireAdminApiRole } from "@/lib/adminApiAuth";
 import { createServiceRoleClient } from "@/lib/supabaseService";
+import { revalidateSongProfileByRecordingId } from "@/lib/revalidateCatalogProfiles";
 
 const clean = (value: unknown) => typeof value === "string" ? value.trim() : "";
 const ids = (value: unknown) => Array.isArray(value) ? value.filter((item): item is string => typeof item === "string" && Boolean(item)) : [];
@@ -34,6 +35,7 @@ export async function POST(request: Request) {
     internal_notes_value: clean(body.internalNotes) || null,
   });
   if (result.error) return NextResponse.json({ ok: false, error: result.error.message }, { status: result.error.code === "42501" ? 403 : 400 });
+  await revalidateSongProfileByRecordingId(recordingId);
   return NextResponse.json({ ok: true, result: result.data, id: result.data?.recording_credit_id });
 }
 
@@ -44,6 +46,7 @@ export async function PATCH(request: Request) {
   const db = createServiceRoleClient(); const { data } = await db.from("recording_credits").select("id").eq("recording_id", recordingId).in("id", creditIds);
   if ((data ?? []).length !== creditIds.length) return NextResponse.json({ ok: false, error: "reorderInvalid" }, { status: 400 });
   for (let index = 0; index < creditIds.length; index += 1) { const { error } = await db.from("recording_credits").update({ display_order: index, position: index }).eq("id", creditIds[index]).eq("recording_id", recordingId); if (error) return NextResponse.json({ ok: false, error: "reorderFailed" }, { status: 500 }); }
+  await revalidateSongProfileByRecordingId(recordingId);
   return NextResponse.json({ ok: true });
 }
 
@@ -52,5 +55,7 @@ export async function DELETE(request: Request) {
   const body = await request.json(); const recordingId = clean(body.recordingId); const creditId = clean(body.creditId);
   if (!recordingId || !creditId) return NextResponse.json({ ok: false, error: "creditRequired" }, { status: 400 });
   const { error } = await createServiceRoleClient().from("recording_credits").delete().eq("id", creditId).eq("recording_id", recordingId);
-  if (error) return NextResponse.json({ ok: false, error: "removeFailed" }, { status: 500 }); return NextResponse.json({ ok: true });
+  if (error) return NextResponse.json({ ok: false, error: "removeFailed" }, { status: 500 });
+  await revalidateSongProfileByRecordingId(recordingId);
+  return NextResponse.json({ ok: true });
 }

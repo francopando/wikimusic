@@ -16,6 +16,11 @@ import {
   revalidateHomepageArchiveCounts,
   revalidateHomepageData,
 } from "@/lib/homepageCache";
+import {
+  revalidateArtistProfilesByArtistIds,
+  revalidateReleaseProfilePaths,
+  revalidateSongsOnRelease,
+} from "@/lib/revalidateCatalogProfiles";
 
 type ReleasePayload = Record<string, unknown>;
 
@@ -164,17 +169,22 @@ export async function POST(request: Request) {
   // the RPC and excluded from the plain field update below.
   let reassignment: Record<string, unknown> | null = null;
 
+  let previousSlug: string | null = null;
+  let previousArtistId: string | null = null;
+
   if (releaseId) {
     const { data: currentRelease, error: currentError } = await supabase
       .from("releases")
-      .select("release_artist_id")
+      .select("release_artist_id,slug")
       .eq("id", releaseId)
       .maybeSingle();
 
     if (currentError) return jsonError(currentError.message, 500);
     if (!currentRelease) return jsonError("Release not found.", 404);
 
+    previousSlug = (currentRelease.slug as string | null) ?? null;
     const currentArtistId = (currentRelease.release_artist_id as string | null) ?? null;
+    previousArtistId = currentArtistId;
 
     if (currentArtistId && releaseArtist.value && currentArtistId !== releaseArtist.value) {
       const { data: reassignResult, error: reassignError } = await supabase.rpc(
@@ -238,6 +248,15 @@ export async function POST(request: Request) {
     }
   }
 
+  // Release profiles use a long fallback TTL; editorial freshness comes from
+  // the targeted revalidation below. Songs on this release render its
+  // title/slug/year, and the primary artist's profile renders its discography,
+  // so both dependents are refreshed (old artist covered on reassignment).
+  if (previousSlug && previousSlug !== slug) revalidateReleaseProfilePaths(previousSlug);
+  if (slug) revalidateReleaseProfilePaths(slug);
+  await revalidateSongsOnRelease(finalReleaseId);
+  await revalidateArtistProfilesByArtistIds([previousArtistId, releaseArtist.value]);
+
   revalidateHomepageData();
   revalidateHomepageArchiveCounts();
   return NextResponse.json({ ok: true, id: finalReleaseId, reassignment });
@@ -272,8 +291,18 @@ export async function DELETE(request: Request) {
     return jsonError(`Release cannot be deleted while linked rows exist. ${blockers.join("; ")}`, 409);
   }
 
-  const { error } = await createServiceRoleClient().from("releases").delete().eq("id", releaseId);
+  const supabase = createServiceRoleClient();
+  const { data: deletedRelease } = await supabase
+    .from("releases")
+    .select("slug,release_artist_id")
+    .eq("id", releaseId)
+    .maybeSingle();
+  const { error } = await supabase.from("releases").delete().eq("id", releaseId);
   if (error) return jsonError(error.message, 500);
+  // Blockers above guarantee no tracks/recordings remain, so only the release
+  // page itself and the owning artist's discography need refreshing.
+  if (deletedRelease?.slug) revalidateReleaseProfilePaths(deletedRelease.slug);
+  await revalidateArtistProfilesByArtistIds([deletedRelease?.release_artist_id ?? null]);
   revalidateHomepageData();
   revalidateHomepageArchiveCounts();
   return NextResponse.json({ ok: true, id: releaseId });

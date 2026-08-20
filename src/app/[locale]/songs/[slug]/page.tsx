@@ -44,7 +44,9 @@ type PageProps = {
   params: Promise<{ slug: string; locale: string }>;
 };
 
-export const revalidate = 600;
+// Fallback-only TTL: editorial changes revalidate this page on demand
+// (revalidateSongProfilePaths), so the clock exists purely as a safety net.
+export const revalidate = 86400;
 
 export function generateStaticParams() {
   return [];

@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { requireAdminApiRole } from "@/lib/adminApiAuth";
 import { createServiceRoleClient } from "@/lib/supabaseService";
+import { revalidateSongProfileByRecordingId, revalidateSongsLinkedToWork } from "@/lib/revalidateCatalogProfiles";
 
 const text=(value:unknown)=>typeof value==="string"?value.trim():"";
 const ids=(value:unknown)=>Array.isArray(value)?value.filter((item):item is string=>typeof item==="string"&&Boolean(item)):[];
@@ -31,5 +32,12 @@ export async function POST(request:Request){
  else if(action==="work.unlink")result=await db.rpc("request_recording_work_unlink",{actor:auth.user.id,key,recording_uuid:text(body.recordingId),reason_value:text(body.reason)});
  else if(action==="decision.resolve")result=await db.rpc("resolve_recording_work_decision",{actor:auth.user.id,key,decision_uuid:text(body.decisionId),resolution:text(body.resolution),approver_note:text(body.note)||null});
  else return NextResponse.json({ok:false,error:"Unknown workflow action"},{status:400});
- if(result.error)return NextResponse.json({ok:false,error:result.error.message},{status:result.error.code==="42501"?403:400}); return NextResponse.json({ok:true,result:result.data});
+ if(result.error)return NextResponse.json({ok:false,error:result.error.message},{status:result.error.code==="42501"?403:400});
+ // Work assertions and work credits surface in public song credits. Actions
+ // carrying only an assertion/decision id (work.select, credit.verify,
+ // evidence.attach, decision.resolve) stay on the TTL fallback.
+ const recordingId=text(body.recordingId); const workId=text(body.workId);
+ if(recordingId)await revalidateSongProfileByRecordingId(recordingId);
+ else if(workId)await revalidateSongsLinkedToWork(workId);
+ return NextResponse.json({ok:true,result:result.data});
 }

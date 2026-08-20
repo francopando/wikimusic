@@ -2,6 +2,11 @@ import { NextResponse } from "next/server";
 
 import { requireAdminApiRole } from "@/lib/adminApiAuth";
 import { createServiceRoleClient } from "@/lib/supabaseService";
+import {
+  revalidateArtistProfilesByArtistIds,
+  revalidateReleaseProfilePaths,
+  revalidateSongsOnRelease,
+} from "@/lib/revalidateCatalogProfiles";
 
 type ReleasePayload = {
   title?: string;
@@ -111,12 +116,12 @@ export async function POST(request: Request) {
         .update(writePayload)
         .eq("id", releaseId)
         .eq("release_artist_id", payload.release_artist_id)
-        .select("id")
+        .select("id, slug")
         .maybeSingle()
     : await supabase
         .from("releases")
         .insert(writePayload)
-        .select("id")
+        .select("id, slug")
         .maybeSingle();
 
   if (response.error) {
@@ -132,6 +137,13 @@ export async function POST(request: Request) {
       { status: 500 }
     );
   }
+
+  // Release profiles use a long fallback TTL; refresh the release page, the
+  // songs that render this release's title/year, and the owning artist's
+  // discography. This route never changes the slug, so no old-path handling.
+  if (response.data.slug) revalidateReleaseProfilePaths(response.data.slug);
+  await revalidateSongsOnRelease(response.data.id);
+  await revalidateArtistProfilesByArtistIds([payload.release_artist_id]);
 
   return NextResponse.json({ ok: true, id: response.data.id });
 }

@@ -10,6 +10,7 @@ import {
   nullableString,
   nullableUuid,
 } from "@/lib/adminCatalog";
+import { revalidateReleaseProfileByReleaseId } from "@/lib/revalidateCatalogProfiles";
 
 type TrackPayload = Record<string, unknown>;
 
@@ -123,12 +124,23 @@ export async function POST(request: Request) {
   };
 
   const supabase = createServiceRoleClient();
+  const previousTrackResponse = trackId
+    ? await supabase.from("tracks").select("release_id").eq("id", trackId).maybeSingle()
+    : null;
   const response = trackId
     ? await supabase.from("tracks").update(payload).eq("id", trackId).select("id").maybeSingle()
     : await supabase.from("tracks").insert(payload).select("id").maybeSingle();
 
   if (response.error) return jsonError(response.error.message, 500);
   if (!response.data?.id) return jsonError("No track row was saved.", 500);
+
+  // Release pages render the tracklist, so refresh the release this track
+  // belongs to — and its previous release when a track is moved.
+  const previousReleaseId = previousTrackResponse?.data?.release_id as string | null | undefined;
+  if (previousReleaseId && previousReleaseId !== release.value) {
+    await revalidateReleaseProfileByReleaseId(previousReleaseId);
+  }
+  await revalidateReleaseProfileByReleaseId(release.value);
 
   return NextResponse.json({ ok: true, id: response.data.id });
 }
@@ -140,7 +152,16 @@ export async function DELETE(request: Request) {
   const { trackId } = (await request.json()) as { trackId?: string };
   if (!trackId) return jsonError("Track id is required.");
 
-  const { error } = await createServiceRoleClient().from("tracks").delete().eq("id", trackId);
+  const supabase = createServiceRoleClient();
+  const { data: deletedTrack } = await supabase
+    .from("tracks")
+    .select("release_id")
+    .eq("id", trackId)
+    .maybeSingle();
+  const { error } = await supabase.from("tracks").delete().eq("id", trackId);
   if (error) return jsonError(error.message, 500);
+  if (deletedTrack?.release_id) {
+    await revalidateReleaseProfileByReleaseId(deletedTrack.release_id);
+  }
   return NextResponse.json({ ok: true, id: trackId });
 }

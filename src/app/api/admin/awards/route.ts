@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 
 import { requireAdminApiRole } from "@/lib/adminApiAuth";
 import { createServiceRoleClient } from "@/lib/supabaseService";
+import { revalidateArtistProfilesByArtistIds } from "@/lib/revalidateCatalogProfiles";
 
 const resourceTables = {
   award: "awards",
@@ -55,6 +56,18 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: "No award row was saved." }, { status: 500 });
   }
 
+  // Artist-award rows render in the profile's awards section. The payload may
+  // omit artist_id on partial updates, so read it from the saved row. Award
+  // and category renames fan out to many artists and stay on the TTL.
+  if (body.resource === "artistAward") {
+    const { data: savedAward } = await supabase
+      .from("artist_awards")
+      .select("artist_id")
+      .eq("id", response.data.id)
+      .maybeSingle();
+    await revalidateArtistProfilesByArtistIds([savedAward?.artist_id ?? null]);
+  }
+
   return NextResponse.json({ ok: true, id: response.data.id });
 }
 
@@ -67,7 +80,18 @@ export async function DELETE(request: Request) {
     return NextResponse.json({ ok: false, error: "Award resource and id are required." }, { status: 400 });
   }
 
-  const { error } = await createServiceRoleClient()
+  const supabase = createServiceRoleClient();
+  const deletedArtistId =
+    body.resource === "artistAward"
+      ? (
+          await supabase
+            .from("artist_awards")
+            .select("artist_id")
+            .eq("id", body.id)
+            .maybeSingle()
+        ).data?.artist_id ?? null
+      : null;
+  const { error } = await supabase
     .from(resourceTables[body.resource])
     .delete()
     .eq("id", body.id);
@@ -75,6 +99,8 @@ export async function DELETE(request: Request) {
   if (error) {
     return NextResponse.json({ ok: false, error: error.message }, { status: 500 });
   }
+
+  await revalidateArtistProfilesByArtistIds([deletedArtistId]);
 
   return NextResponse.json({ ok: true, id: body.id });
 }

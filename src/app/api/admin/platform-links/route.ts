@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { requireAdminApiRole } from "@/lib/adminApiAuth";
 import { createServiceRoleClient } from "@/lib/supabaseService";
+import { revalidateSongProfileByRecordingId } from "@/lib/revalidateCatalogProfiles";
 
 // ---------------------------------------------------------------------------
 // GET /api/admin/platform-links
@@ -190,6 +191,13 @@ export async function PATCH(request: Request) {
   const safeUpdates = { ...updates, updated_at: new Date().toISOString() };
 
   const supabase = createServiceRoleClient();
+  // Approving/rejecting a link changes the public song page, which resolves
+  // its target recording from the row (the body only carries the link id).
+  const { data: existingLink } = await supabase
+    .from("recording_platform_links")
+    .select("recording_id")
+    .eq("id", id)
+    .maybeSingle();
   const { error } = await supabase
     .from("recording_platform_links")
     .update(safeUpdates)
@@ -198,6 +206,10 @@ export async function PATCH(request: Request) {
   if (error) {
     console.error("[platform-links PATCH] error:", error.message);
     return NextResponse.json({ ok: false, error: error.message }, { status: 500 });
+  }
+
+  if (existingLink?.recording_id) {
+    await revalidateSongProfileByRecordingId(existingLink.recording_id);
   }
 
   return NextResponse.json({ ok: true });
@@ -235,6 +247,8 @@ export async function POST(request: Request) {
     console.error("[platform-links POST] error:", error.message);
     return NextResponse.json({ ok: false, error: error.message }, { status: 500 });
   }
+
+  await revalidateSongProfileByRecordingId(body.recording_id as string);
 
   return NextResponse.json({ ok: true, id: data?.id });
 }

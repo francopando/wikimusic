@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 
 import { requireAdminApiRole } from "@/lib/adminApiAuth";
+import { revalidateArtistProfilesByArtistIds } from "@/lib/revalidateCatalogProfiles";
 import {
   isArtistRelationshipType,
   getArtistRelationships,
@@ -173,6 +174,13 @@ export async function POST(request: Request) {
     );
   }
 
+  // Relationships render on BOTH profiles (memberships on one side,
+  // members/founders/leaders on the other), so refresh both artists.
+  await revalidateArtistProfilesByArtistIds([
+    writePayload.source_artist_id,
+    writePayload.target_artist_id,
+  ]);
+
   return NextResponse.json({ ok: true, id: response.data.id });
 }
 
@@ -189,6 +197,13 @@ export async function DELETE(request: Request) {
   }
 
   const supabase = createServiceRoleClient();
+  // Fetch the other side before deleting so both profiles can be refreshed.
+  const { data: existingRelationship } = await supabase
+    .from("artist_relationships")
+    .select("target_artist_id")
+    .eq("id", relationshipId)
+    .eq("source_artist_id", artistId)
+    .maybeSingle();
   const { error } = await supabase
     .from("artist_relationships")
     .delete()
@@ -201,6 +216,11 @@ export async function DELETE(request: Request) {
       { status: 500 }
     );
   }
+
+  await revalidateArtistProfilesByArtistIds([
+    artistId,
+    existingRelationship?.target_artist_id ?? null,
+  ]);
 
   return NextResponse.json({ ok: true });
 }

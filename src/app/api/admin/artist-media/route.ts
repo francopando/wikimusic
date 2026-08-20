@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 
 import { requireAdminApiRole } from "@/lib/adminApiAuth";
 import { createServiceRoleClient } from "@/lib/supabaseService";
+import { revalidateArtistProfilesByArtistIds } from "@/lib/revalidateCatalogProfiles";
 
 type ArtistMediaPayload = {
   artist_id?: string;
@@ -113,6 +114,10 @@ export async function POST(request: Request) {
     );
   }
 
+  // The artist profile embeds this media (interviews carousel) and uses a
+  // long fallback TTL, so refresh it immediately.
+  await revalidateArtistProfilesByArtistIds([payload.artist_id]);
+
   return NextResponse.json({ ok: true, id: response.data.id });
 }
 
@@ -141,6 +146,8 @@ export async function DELETE(request: Request) {
       { status: 500 }
     );
   }
+
+  await revalidateArtistProfilesByArtistIds([artistId]);
 
   return NextResponse.json({ ok: true });
 }

@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { requireAdminApiRole } from "@/lib/adminApiAuth";
 import { createServiceRoleClient } from "@/lib/supabaseService";
 import { invalidateArtistPortfolioCache } from "@/lib/artistPortfolioCache";
+import { revalidateArtistProfilesByArtistIds } from "@/lib/revalidateCatalogProfiles";
 
 const WORK_FIELDS = "id,title,performer_artist_id,performer_text,release_title,release_year,created_at,updated_at";
 const WORK_ROLES = new Set(["composer", "lyricist", "writer", "songwriter", "orchestrator", "arranger", "co-composer", "co-writer"]);
@@ -105,6 +106,14 @@ export async function POST(request: Request) {
   const additions = credits.filter((credit) => !have.has(`${credit.artist_id}:${credit.role}`)).map((credit) => ({ credited_work_id: workId, ...credit }));
   if (additions.length) { const result = await supabase.from("credited_work_credits").insert(additions); if (result.error) return NextResponse.json({ ok: false, error: result.error.code === "23505" ? "duplicateCredit" : result.error.message }, { status: 409 }); }
   invalidateArtistPortfolioCache();
+  // The works portfolio is embedded in artist profile HTML (long fallback
+  // TTL), so the tag invalidation above is not enough on its own: refresh
+  // every artist whose portfolio gained or lost this work's credits.
+  await revalidateArtistProfilesByArtistIds([
+    performer_artist_id,
+    ...credits.map((credit) => credit.artist_id),
+    ...(existing.data ?? []).map((credit) => credit.artist_id),
+  ]);
   return NextResponse.json({ ok: true, id: workId });
 }
 
@@ -113,9 +122,17 @@ export async function DELETE(request: Request) {
   const body = await request.json(); const workId = text(body.workId); const artistId = text(body.artistId);
   if (!workId) return NextResponse.json({ ok: false, error: "workRequired" }, { status: 400 });
   const supabase = createServiceRoleClient();
-  if (artistId && !body.deleteEntireWork) { const result = await supabase.from("credited_work_credits").delete().eq("credited_work_id", workId).eq("artist_id", artistId); if (result.error) return NextResponse.json({ ok: false, error: result.error.message }, { status: 500 }); invalidateArtistPortfolioCache(); return NextResponse.json({ ok: true }); }
+  if (artistId && !body.deleteEntireWork) { const result = await supabase.from("credited_work_credits").delete().eq("credited_work_id", workId).eq("artist_id", artistId); if (result.error) return NextResponse.json({ ok: false, error: result.error.message }, { status: 500 }); invalidateArtistPortfolioCache(); await revalidateArtistProfilesByArtistIds([artistId]); return NextResponse.json({ ok: true }); }
   if (body.confirmTitle !== body.title) return NextResponse.json({ ok: false, error: "confirmationMismatch" }, { status: 400 });
+  // Collect every artist whose embedded portfolio loses this work before the
+  // rows disappear.
+  const { data: affectedCredits } = await supabase.from("credited_work_credits").select("artist_id").eq("credited_work_id", workId);
+  const { data: deletedWork } = await supabase.from("credited_works").select("performer_artist_id").eq("id", workId).maybeSingle();
   const result = await supabase.from("credited_works").delete().eq("id", workId); if (result.error) return NextResponse.json({ ok: false, error: result.error.message }, { status: 500 });
   invalidateArtistPortfolioCache();
+  await revalidateArtistProfilesByArtistIds([
+    deletedWork?.performer_artist_id ?? null,
+    ...(affectedCredits ?? []).map((credit) => credit.artist_id),
+  ]);
   return NextResponse.json({ ok: true });
 }

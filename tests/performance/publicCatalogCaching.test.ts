@@ -14,11 +14,13 @@ const directoryApi = readFileSync("src/lib/artistDirectoryData.ts", "utf8");
 const searchApi = readFileSync("src/lib/searchApi.ts", "utf8");
 const artistRevalidation = readFileSync("src/lib/revalidateArtistProfile.ts", "utf8");
 
-test("entity profiles use ten-minute on-demand ISR without prebuilding the catalog", () => {
+test("entity profiles use long fallback ISR with on-demand editorial revalidation", () => {
   assert.equal(PUBLIC_CATALOG_REVALIDATE_SECONDS, 600);
 
   for (const source of [artistRoute, songRoute, releaseRoute]) {
-    assert.match(source, /export const revalidate = 600/);
+    // 24h is a fallback safety net only: admin mutation routes revalidate the
+    // affected profile paths immediately (see revalidateCatalogProfiles.ts).
+    assert.match(source, /export const revalidate = 86400/);
     assert.match(source, /export function generateStaticParams\(\) \{\s*return \[\];\s*\}/);
     assert.match(source, /setRequestLocale\(/);
     assert.doesNotMatch(source, /force-dynamic|noStore|unstable_noStore/);

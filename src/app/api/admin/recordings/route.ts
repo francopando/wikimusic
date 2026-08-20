@@ -18,6 +18,10 @@ import {
   revalidateHomepageArchiveCounts,
   revalidateHomepageData,
 } from "@/lib/homepageCache";
+import {
+  revalidateReleasesContainingRecording,
+  revalidateSongProfilePaths,
+} from "@/lib/revalidateCatalogProfiles";
 
 type RecordingPayload = Record<string, unknown>;
 
@@ -244,6 +248,9 @@ export async function POST(request: Request) {
   };
 
   const supabase = createServiceRoleClient();
+  const previousSlugResponse = recordingId
+    ? await supabase.from("recordings").select("slug").eq("id", recordingId).maybeSingle()
+    : null;
   const response = recordingId
     ? await supabase.from("recordings").update(payload).eq("id", recordingId).select("id").maybeSingle()
     : await supabase.from("recordings").insert(payload).select("id").maybeSingle();
@@ -252,6 +259,13 @@ export async function POST(request: Request) {
   if (!response.data?.id) return jsonError("No recording row was saved.", 500);
 
   const finalRecordingId = response.data.id;
+
+  // Song profiles use a long fallback TTL; editorial freshness comes from the
+  // targeted revalidation below (old slug covered on slug changes).
+  const previousSlug = previousSlugResponse?.data?.slug as string | null | undefined;
+  if (previousSlug && previousSlug !== slug) revalidateSongProfilePaths(previousSlug);
+  if (slug) revalidateSongProfilePaths(slug);
+  await revalidateReleasesContainingRecording(finalRecordingId);
 
   revalidateHomepageData();
   revalidateHomepageArchiveCounts();
@@ -306,8 +320,17 @@ export async function DELETE(request: Request) {
     return jsonError(`Recording cannot be deleted while linked rows exist. ${blockers.join("; ")}`, 409);
   }
 
-  const { error } = await createServiceRoleClient().from("recordings").delete().eq("id", recordingId);
+  const supabase = createServiceRoleClient();
+  const { data: deletedRecording } = await supabase
+    .from("recordings")
+    .select("slug")
+    .eq("id", recordingId)
+    .maybeSingle();
+  const { error } = await supabase.from("recordings").delete().eq("id", recordingId);
   if (error) return jsonError(error.message, 500);
+  // Regenerating the deleted slug turns the cached page into a 404. The
+  // blockers above guarantee no tracks remain, so no release fan-out needed.
+  if (deletedRecording?.slug) revalidateSongProfilePaths(deletedRecording.slug);
   revalidateHomepageData();
   revalidateHomepageArchiveCounts();
   return NextResponse.json({ ok: true, id: recordingId });

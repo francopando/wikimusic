@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { requireAdminApiRole } from "@/lib/adminApiAuth";
 import { createServiceRoleClient } from "@/lib/supabaseService";
 import { getArtistFamilyRelationships, isFamilyEditorLabel, normalizeFamilyRelationship } from "@/lib/artistFamilyRelationships";
+import { revalidateArtistProfilesByArtistIds } from "@/lib/revalidateCatalogProfiles";
 
 export async function GET(request: Request) {
   const auth = await requireAdminApiRole("editor"); if (auth.response) return auth.response;
@@ -25,6 +26,8 @@ export async function POST(request: Request) {
   const id = relationshipId || existing?.id;
   const result = id ? await supabase.from("artist_family_relationships").update(payload).eq("id",id).select("id").single() : await supabase.from("artist_family_relationships").insert(payload).select("id").single();
   if (result.error) return NextResponse.json({ok:false,error:result.error.message},{status:500});
+  // Family relationships render on both artists' profiles.
+  await revalidateArtistProfilesByArtistIds([artistId, relatedArtistId]);
   return NextResponse.json({ok:true,id:result.data.id});
 }
 
@@ -32,7 +35,11 @@ export async function DELETE(request: Request) {
   const auth = await requireAdminApiRole("admin"); if (auth.response) return auth.response;
   const { relationshipId, artistId } = await request.json();
   if (!relationshipId || !artistId) return NextResponse.json({ok:false,error:"Relationship id and artist id are required."},{status:400});
-  const { error } = await createServiceRoleClient().from("artist_family_relationships").delete().eq("id",relationshipId).or(`artist_id.eq.${artistId},related_artist_id.eq.${artistId}`);
+  const supabase = createServiceRoleClient();
+  // Fetch both sides before deleting so both profiles can be refreshed.
+  const { data: existingRelationship } = await supabase.from("artist_family_relationships").select("artist_id,related_artist_id").eq("id",relationshipId).maybeSingle();
+  const { error } = await supabase.from("artist_family_relationships").delete().eq("id",relationshipId).or(`artist_id.eq.${artistId},related_artist_id.eq.${artistId}`);
   if (error) return NextResponse.json({ok:false,error:error.message},{status:500});
+  await revalidateArtistProfilesByArtistIds([existingRelationship?.artist_id ?? artistId, existingRelationship?.related_artist_id ?? null]);
   return NextResponse.json({ok:true});
 }
