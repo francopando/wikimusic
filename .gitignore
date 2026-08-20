@@ -68,3 +68,5 @@ releases*.json
 # Local notes
 notes/
 scratch/
+
+.vercel
