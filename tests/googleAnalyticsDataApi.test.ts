@@ -43,12 +43,14 @@ describe("Google Analytics Data API integration", () => {
       toLabeledRows({
         rows: [
           { dimensionValues: [{ value: "Direct" }], metricValues: [{ value: "42" }] },
+          { dimensionValues: [{ value: "" }], metricValues: [{ value: "3" }] },
           { metricValues: [{ value: "oops" }] },
         ],
       }),
       [
         { label: "Direct", value: 42 },
-        { label: "(unknown)", value: 0 },
+        { label: "(not set)", value: 3 },
+        { label: "(not set)", value: 0 },
       ],
     );
   });

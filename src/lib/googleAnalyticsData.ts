@@ -191,10 +191,15 @@ function metricNumber(row: Ga4Row | undefined, index: number): number {
 
 /** Flattens a one-dimension/one-metric report into label/value rows. */
 export function toLabeledRows(response: RunReportResponse): LabeledMetricRow[] {
-  return (response.rows ?? []).map((row) => ({
-    label: row.dimensionValues?.[0]?.value ?? "(unknown)",
-    value: metricNumber(row, 0),
-  }));
+  return (response.rows ?? []).map((row) => {
+    // GA4 sends an empty string for unset dimensions (e.g. traffic it has
+    // not classified yet); mirror GA's own "(not set)" convention.
+    const label = row.dimensionValues?.[0]?.value?.trim();
+    return {
+      label: label || "(not set)",
+      value: metricNumber(row, 0),
+    };
+  });
 }
 
 /**
