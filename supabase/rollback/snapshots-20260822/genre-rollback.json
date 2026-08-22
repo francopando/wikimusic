@@ -1,0 +1,698 @@
+[
+ {
+  "id": "c61142b8-986a-4ae0-a31b-f93b056237e4",
+  "slug": "brandom-regino",
+  "name": "Brandom Regino",
+  "primary_genre": "other"
+ },
+ {
+  "id": "90ed5c7e-595d-4931-8a81-7f9101642800",
+  "slug": "joa-el-super-mc",
+  "name": "Joa El Super MC",
+  "primary_genre": "rap"
+ },
+ {
+  "id": "c99a96f2-8b37-4b30-b90d-4fd331eed0f8",
+  "slug": "joly-sc",
+  "name": "Joly SC",
+  "primary_genre": "urban"
+ },
+ {
+  "id": "a4f98603-5d27-4971-bea9-d8c1c9e996da",
+  "slug": "juan-francisco-garcia",
+  "name": "Juan Francisco García",
+  "primary_genre": "classical"
+ },
+ {
+  "id": "5944b296-9419-418a-a0e9-bcd7fcf35a82",
+  "slug": "lapiitoh-dangers",
+  "name": "Lapiitoh Dangers",
+  "primary_genre": "dembow"
+ },
+ {
+  "id": "a0aabbd1-4e4b-4cb9-bfb7-6f8c310b7e53",
+  "slug": "carlos-manuel-vargas",
+  "name": "Carlos Manuel Vargas",
+  "primary_genre": "classical"
+ },
+ {
+  "id": "0804b55a-63d4-4bc5-abb3-d97cc8f52c17",
+  "slug": "ninon-lapeiretta-de-brouwer",
+  "name": "Ninón Lapeiretta de Brouwer",
+  "primary_genre": "classical"
+ },
+ {
+  "id": "368e51e3-2157-4f4b-aed3-d18a9a1f6060",
+  "slug": "adonis-produciendo",
+  "name": "Adonis Produciendo",
+  "primary_genre": "dembow"
+ },
+ {
+  "id": "55209840-f1d7-4206-8243-f0e92ac2fa17",
+  "slug": "keren-montero",
+  "name": "Keren Montero",
+  "primary_genre": "other"
+ },
+ {
+  "id": "af726afa-c7a0-47da-99bb-a4c7669a8785",
+  "slug": "natti-natasha",
+  "name": "Natti Natasha",
+  "primary_genre": "reggaeton"
+ },
+ {
+  "id": "4363445d-711d-4e7f-b60b-7de274f81d17",
+  "slug": "blackee-impala",
+  "name": "Blackee Impala",
+  "primary_genre": "trap"
+ },
+ {
+  "id": "97b42ad8-6465-42a8-a673-15aacedb01f5",
+  "slug": "nmnl",
+  "name": "NMNL",
+  "primary_genre": "hip-hop"
+ },
+ {
+  "id": "243bc1f8-9bf1-4c9d-a921-899c697346a0",
+  "slug": "domingo-philharmonic-orchestra",
+  "name": "Domingo Philharmonic Orchestra",
+  "primary_genre": "classical"
+ },
+ {
+  "id": "769ea693-aa56-4e2e-9ab5-111b0ec4a308",
+  "slug": "calor-urbano",
+  "name": "Calor Urbano",
+  "primary_genre": "urban"
+ },
+ {
+  "id": "559f2ed4-8831-483b-bc00-7cb4f340ad92",
+  "slug": "el-alfa",
+  "name": "El Alfa",
+  "primary_genre": "dembow"
+ },
+ {
+  "id": "71ebd02b-8ba4-4cd7-b7e4-a990a9c3c3bb",
+  "slug": "rochy-rd",
+  "name": "Rochy RD",
+  "primary_genre": "dembow"
+ },
+ {
+  "id": "8e7eee90-35c9-4151-a8a5-fa91c8b311cf",
+  "slug": "arrozito",
+  "name": "Arrozito",
+  "primary_genre": "urban"
+ },
+ {
+  "id": "59d62142-837b-48bc-9f3a-9f9cfdb61700",
+  "slug": "jose-luis-hernandez-moreno",
+  "name": "José Luis Hernández Moreno",
+  "primary_genre": "classical"
+ },
+ {
+  "id": "f78661d2-7e96-48b7-baf3-fd99a94d10e6",
+  "slug": "tunes",
+  "name": "Tunes",
+  "primary_genre": "reggaeton"
+ },
+ {
+  "id": "18e7fdfa-e697-440a-9402-b1b0fd01b952",
+  "slug": "redimi2",
+  "name": "Redimi2",
+  "primary_genre": "rap"
+ },
+ {
+  "id": "951ae3d4-40cc-425c-acb1-59926ee7c739",
+  "slug": "oasis-ministry",
+  "name": "Oasis Ministry",
+  "primary_genre": "other"
+ },
+ {
+  "id": "629a7daa-5ab3-4b77-825f-6795b8c4a566",
+  "slug": "marcos-yaroide",
+  "name": "Marcos Yaroide",
+  "primary_genre": "other"
+ },
+ {
+  "id": "5fb12fee-64fe-4887-b87e-28f28a15c4f9",
+  "slug": "amenazzy",
+  "name": "Amenazzy",
+  "primary_genre": "reggaeton"
+ },
+ {
+  "id": "3a70464d-2841-4a2c-a832-21b49eba7bf6",
+  "slug": "necro",
+  "name": "Necro",
+  "primary_genre": "hip-hop"
+ },
+ {
+  "id": "6de9f638-4a9f-4fcc-ab2b-8b836166101c",
+  "slug": "korven-brox",
+  "name": "Korven Brox",
+  "primary_genre": "urban"
+ },
+ {
+  "id": "0be0eb05-8312-41f5-9490-a616b3db0d27",
+  "slug": "mc-wayne",
+  "name": "Mc Wayne",
+  "primary_genre": "urban"
+ },
+ {
+  "id": "3937f2ed-1ca8-41a0-b1fd-40fc3bd79025",
+  "slug": "twovm-para-cristo",
+  "name": "TwoVm Para Cristo",
+  "primary_genre": "reggaeton"
+ },
+ {
+  "id": "fb7698ed-caa4-474e-851b-a9ce63a4cf11",
+  "slug": "lizzy-parra",
+  "name": "Lizzy Parra",
+  "primary_genre": "hip-hop"
+ },
+ {
+  "id": "c36accc6-c958-41ed-a356-8e8dbee73c36",
+  "slug": "chiky-bombom-la-pantera",
+  "name": "Chiky Bombom La Pantera",
+  "primary_genre": "urban"
+ },
+ {
+  "id": "8243655e-17a7-4dea-98ee-1c16674c38cd",
+  "slug": "dj-adoni",
+  "name": "DJ Adoni",
+  "primary_genre": "dembow"
+ },
+ {
+  "id": "ea351de4-218b-469d-a752-d1c46330d53d",
+  "slug": "tercer-cielo",
+  "name": "Tercer Cielo",
+  "primary_genre": "other"
+ },
+ {
+  "id": "0612d71d-ee8e-4ff3-98b8-349652d7bfcf",
+  "slug": "jezzy",
+  "name": "Jezzy",
+  "primary_genre": "rap"
+ },
+ {
+  "id": "cadebd75-4af4-4519-9599-6ec606694a36",
+  "slug": "shelow-shaq",
+  "name": "Shelow Shaq",
+  "primary_genre": "urban"
+ },
+ {
+  "id": "40095dfd-4827-4266-a7ba-3f0cfeee6910",
+  "slug": "david-appleton",
+  "name": "David Appleton",
+  "primary_genre": "classical"
+ },
+ {
+  "id": "866a9865-ef60-4c22-853e-5d0473181b81",
+  "slug": "j-a",
+  "name": "J.A.",
+  "primary_genre": "dembow"
+ },
+ {
+  "id": "f1320df9-0258-4aa4-ab66-fa4d49b92da1",
+  "slug": "orquesta-sinfonica-nacional",
+  "name": "Orquesta Sinfónica Nacional",
+  "primary_genre": "classical"
+ },
+ {
+  "id": "c605b06d-7428-45cd-b53f-923e60c5c147",
+  "slug": "jacinto-gimbernard",
+  "name": "Jacinto Gimbernard",
+  "primary_genre": "classical"
+ },
+ {
+  "id": "6a58afd5-2832-4008-988e-b7b22d532c9f",
+  "slug": "king-caballero",
+  "name": "King Caballero",
+  "primary_genre": "urban"
+ },
+ {
+  "id": "d08f2c85-7f47-449e-a486-a19ba3b5841a",
+  "slug": "la-insuperable",
+  "name": "La Insuperable",
+  "primary_genre": "urban"
+ },
+ {
+  "id": "725f7cd5-de62-4e76-b382-0d55c160d51f",
+  "slug": "flow-28",
+  "name": "Flow 28",
+  "primary_genre": "dembow"
+ },
+ {
+  "id": "73cac635-71c3-407f-b9f5-02a705d6956b",
+  "slug": "messiah",
+  "name": "Messiah",
+  "primary_genre": "trap"
+ },
+ {
+  "id": "8f152297-560f-4ebb-9e93-7b46e5b86aac",
+  "slug": "beethoven-villaman",
+  "name": "Beethoven Villaman",
+  "primary_genre": "rap"
+ },
+ {
+  "id": "e0bde8f5-859f-435e-98ed-d59be5e74a78",
+  "slug": "bs-el-ideologo",
+  "name": "BS El Ideologo",
+  "primary_genre": "dembow"
+ },
+ {
+  "id": "09e9f364-62b4-44ca-8a49-0e4d7ef2d3ec",
+  "slug": "kikito-black",
+  "name": "Kikito Black",
+  "primary_genre": "urban"
+ },
+ {
+  "id": "dbfd2c92-b0b4-44ef-9ad6-61774a99cf89",
+  "slug": "nancy-amancio",
+  "name": "Nancy Amancio",
+  "primary_genre": "other"
+ },
+ {
+  "id": "381b198b-b175-4be5-ad05-7b878d739e3a",
+  "slug": "killer-rap",
+  "name": "Killer Rap",
+  "primary_genre": "hip-hop"
+ },
+ {
+  "id": "af23b96d-fe2a-4712-8d6a-972dac1fdb9e",
+  "slug": "r1-la-esencia",
+  "name": "R1 la Esencia",
+  "primary_genre": "rap"
+ },
+ {
+  "id": "31fbfbf8-9d7f-473c-8ea0-c7cb68fa7612",
+  "slug": "ghetto",
+  "name": "Ghetto",
+  "primary_genre": "dembow"
+ },
+ {
+  "id": "c90645c8-e146-4312-ac65-fe40a59c7528",
+  "slug": "jeffrey-henriquez-rijo",
+  "name": "Jeff",
+  "primary_genre": "urban"
+ },
+ {
+  "id": "a49523d4-ca03-4274-8213-2ec356fadf5e",
+  "slug": "francikario",
+  "name": "Francikario",
+  "primary_genre": "hip-hop"
+ },
+ {
+  "id": "908867f1-64c4-4cd6-a08d-eaa82bfce1b7",
+  "slug": "jesus-juan-antonio",
+  "name": "Jesus Juan Antonio",
+  "primary_genre": "classical"
+ },
+ {
+  "id": "349e25fa-268a-4036-870f-147e82155f3c",
+  "slug": "puyalo-pantera",
+  "name": "Puyalo Pantera",
+  "primary_genre": "dembow"
+ },
+ {
+  "id": "0aafb9ed-af98-4f1a-a030-e47526fa2310",
+  "slug": "emetede",
+  "name": "eMeTeDe",
+  "primary_genre": "urban"
+ },
+ {
+  "id": "9be0ed08-6eb6-4ca0-bb68-d5126190aeb1",
+  "slug": "kiko-el-crazy",
+  "name": "Kiko el Crazy",
+  "primary_genre": "dembow"
+ },
+ {
+  "id": "cc21ddb7-f3be-486e-9c44-4519c691731d",
+  "slug": "black-45-king",
+  "name": "Black 45 King",
+  "primary_genre": "rap"
+ },
+ {
+  "id": "0d586b6c-5699-4c0b-913f-4d702e507301",
+  "slug": "milka-la-mas-dura",
+  "name": "Milka la Más Dura",
+  "primary_genre": "dembow"
+ },
+ {
+  "id": "580293c3-1e1e-418f-8555-8082665c22b0",
+  "slug": "melymel",
+  "name": "MelyMel",
+  "primary_genre": "hip-hop"
+ },
+ {
+  "id": "c07f3ddc-91c1-46c6-8803-43014bcd670f",
+  "slug": "rubinsky-rbk",
+  "name": "Rubinsky RBK",
+  "primary_genre": "rap"
+ },
+ {
+  "id": "aefd5b14-694e-4f3e-ad31-ade13f14ca64",
+  "slug": "luis-armando-rivera-gonzalez",
+  "name": "Luis Armando Rivera González",
+  "primary_genre": "classical"
+ },
+ {
+  "id": "639de91e-2507-491c-a58a-ce4e77af065d",
+  "slug": "la-materialista",
+  "name": "La Materialista",
+  "primary_genre": "urban"
+ },
+ {
+  "id": "594b49f0-b18e-40d7-8ae2-884434c1a954",
+  "slug": "aposento-alto",
+  "name": "Aposento Alto",
+  "primary_genre": "rap"
+ },
+ {
+  "id": "605a9e7a-1897-4421-a375-63283364de3a",
+  "slug": "las-gemelas-fantasticas-rd",
+  "name": "Las Gemelas Fantásticas RD",
+  "primary_genre": "other"
+ },
+ {
+  "id": "f6865535-50d6-46a2-991e-402a5f3b27d6",
+  "slug": "dj-urba",
+  "name": "DJ Urba",
+  "primary_genre": "reggaeton"
+ },
+ {
+  "id": "36e6d6ef-16a5-4bb3-a0de-ddd08c31d642",
+  "slug": "alex-linares",
+  "name": "Alex Linares",
+  "primary_genre": "urban"
+ },
+ {
+  "id": "9615de95-19e4-46be-bad8-9ed67cb3c6b8",
+  "slug": "dj-joe-catador",
+  "name": "DJ Joe Catador",
+  "primary_genre": "dembow"
+ },
+ {
+  "id": "a35802ef-6a43-427d-af4b-410afceb4455",
+  "slug": "sammy-the-greatest",
+  "name": "Sammy the Greatest",
+  "primary_genre": "dembow"
+ },
+ {
+  "id": "b3841446-0bdb-48f5-9ace-b492db7d9be2",
+  "slug": "shadow-blow",
+  "name": "Shadow Blow",
+  "primary_genre": "rap"
+ },
+ {
+  "id": "e611e3fc-c00d-46e6-b397-27425787d6d1",
+  "slug": "luny",
+  "name": "Luny",
+  "primary_genre": "reggaeton"
+ },
+ {
+  "id": "2ad8ccef-e648-4f68-8f6e-d2473457ac3d",
+  "slug": "luna-drums",
+  "name": "Luna Drums",
+  "primary_genre": "urban"
+ },
+ {
+  "id": "7329c820-e6e3-4e67-874f-69c44dd04cd6",
+  "slug": "paramba",
+  "name": "Paramba",
+  "primary_genre": "dembow"
+ },
+ {
+  "id": "a233c0c3-fb1d-45cb-9323-3cb0e3aac01c",
+  "slug": "eilyn-paulina",
+  "name": "Eilyn Paulina",
+  "primary_genre": "other"
+ },
+ {
+  "id": "f588dfa7-06ce-4b33-8d63-51182258bb71",
+  "slug": "gabriel-del-orbe",
+  "name": "Gabriel del Orbe",
+  "primary_genre": "classical"
+ },
+ {
+  "id": "bf7c3b92-08c0-4fb4-9186-a6570319ec9b",
+  "slug": "jairo-puello",
+  "name": "Jairo Puello",
+  "primary_genre": "other"
+ },
+ {
+  "id": "88d390a9-c00e-427f-8e3c-86d0a0b55f29",
+  "slug": "la-noe-aposento-alto",
+  "name": "La Noe Aposento Alto",
+  "primary_genre": "hip-hop"
+ },
+ {
+  "id": "b8f26dfb-06b1-43de-8117-ef1c60b2e206",
+  "slug": "angel-dior",
+  "name": "Angel Dior",
+  "primary_genre": "dembow"
+ },
+ {
+  "id": "3e1718be-c12d-42f5-85e7-2156d9574940",
+  "slug": "tokischa",
+  "name": "Tokischa",
+  "primary_genre": "reggaeton"
+ },
+ {
+  "id": "b23f7786-af97-439d-809f-4f528e9477c0",
+  "slug": "crisisromani",
+  "name": "crisisromani",
+  "primary_genre": "urban"
+ },
+ {
+  "id": "550df3b5-6488-4aec-a476-a5d28d52ceea",
+  "slug": "bulin-47",
+  "name": "Bulin 47",
+  "primary_genre": "dembow"
+ },
+ {
+  "id": "be3bd870-e380-44a2-82c5-4849e2022f6e",
+  "slug": "inka",
+  "name": "Inka",
+  "primary_genre": "urban"
+ },
+ {
+  "id": "63e7a8e1-6ab0-4c67-a917-1ae7b6df37fd",
+  "slug": "enmanuel-richarson",
+  "name": "Enmanuel Richarson",
+  "primary_genre": "classical"
+ },
+ {
+  "id": "80c1b2e0-0ced-4808-a529-70b120e04d73",
+  "slug": "jabes",
+  "name": "Jabes",
+  "primary_genre": "other"
+ },
+ {
+  "id": "78edb083-e4c4-4031-80a5-c0fcd6a72f2d",
+  "slug": "indhira-rubiera",
+  "name": "Indhira Rubiera",
+  "primary_genre": "classical"
+ },
+ {
+  "id": "f57eb2e7-9ca7-463d-baee-8b3ea1800e6b",
+  "slug": "secreto-el-famoso-biberon",
+  "name": "Secreto “El Famoso Biberón”",
+  "primary_genre": "dembow"
+ },
+ {
+  "id": "fdc8f94d-46fc-4bd2-a559-2fc930d80492",
+  "slug": "bladimir-vasquez",
+  "name": "Bladimir Vásquez",
+  "primary_genre": "urban"
+ },
+ {
+  "id": "741eb4c0-4ab8-4ad5-8a64-2f156da6a395",
+  "slug": "ceky-viciny",
+  "name": "Ceky Viciny",
+  "primary_genre": "dembow"
+ },
+ {
+  "id": "5a564588-0496-4a7a-a075-5f49abf02a3a",
+  "slug": "guillermo",
+  "name": "Guillermo",
+  "primary_genre": "other"
+ },
+ {
+  "id": "0ba48748-6a20-47b4-b320-24cbd30267a1",
+  "slug": "los-homeboys",
+  "name": "Los Homeboys",
+  "primary_genre": "hip-hop"
+ },
+ {
+  "id": "894e8c21-3cb7-4eb1-8742-266b5624029e",
+  "slug": "enrique-de-marchena",
+  "name": "Enrique de Marchena",
+  "primary_genre": "classical"
+ },
+ {
+  "id": "73742460-eb2d-4b33-a57e-0dda4a5fe9d4",
+  "slug": "toqita",
+  "name": "Toqita",
+  "primary_genre": "urban"
+ },
+ {
+  "id": "80afcde5-4535-48ee-944f-8c157f61ae36",
+  "slug": "king-streetz",
+  "name": "King Streetz",
+  "primary_genre": "hip-hop"
+ },
+ {
+  "id": "600d9e8c-4b46-40f2-a083-24ef05f5bfbe",
+  "slug": "anthony",
+  "name": "Anthony",
+  "primary_genre": "urban"
+ },
+ {
+  "id": "a9586ee9-7b3e-425b-8560-f9389296cfe5",
+  "slug": "jay-miky-flow",
+  "name": "Jay Miky Flow",
+  "primary_genre": "dembow"
+ },
+ {
+  "id": "6321da6c-e2d5-490a-a4e8-416bbee81edf",
+  "slug": "don-miguelo",
+  "name": "Don Miguelo",
+  "primary_genre": "urban"
+ },
+ {
+  "id": "5cbc8f2b-cb68-4ebd-8006-6837be54bbe4",
+  "slug": "leo-rd",
+  "name": "Leo RD",
+  "primary_genre": "dembow"
+ },
+ {
+  "id": "de562eb7-a0fb-49c2-a3c8-db97a4be80e3",
+  "slug": "quimico-ultra-mega",
+  "name": "Químico Ultra Mega",
+  "primary_genre": "dembow"
+ },
+ {
+  "id": "97610f30-fb92-4d77-8b98-ddec14d12afc",
+  "slug": "musicologo-the-libro",
+  "name": "Musicólogo the Libro",
+  "primary_genre": "urban"
+ },
+ {
+  "id": "8e6e074d-e008-4069-9a86-206413167e11",
+  "slug": "young-grin",
+  "name": "Young Grin",
+  "primary_genre": "urban"
+ },
+ {
+  "id": "ec8ba439-3772-49ff-a218-05f5dc615763",
+  "slug": "vakero",
+  "name": "Vakeró",
+  "primary_genre": "dembow"
+ },
+ {
+  "id": "e0c48f11-acb7-4cf5-a1e3-6874f59ddc2e",
+  "slug": "dj-plano",
+  "name": "DJ Plano",
+  "primary_genre": "dembow"
+ },
+ {
+  "id": "112318bf-a1a0-424f-a09e-31ae6c57e1c0",
+  "slug": "profeta-lirical",
+  "name": "Profeta Lirical",
+  "primary_genre": "rap"
+ },
+ {
+  "id": "d25ea8c2-1e9f-4f77-832a-48886d50c47b",
+  "slug": "toxic-crow",
+  "name": "Toxic Crow",
+  "primary_genre": "rap"
+ },
+ {
+  "id": "7d104f9a-1fef-4e74-99c1-6e107eb24fd4",
+  "slug": "jeyless",
+  "name": "Jeyless",
+  "primary_genre": "urban"
+ },
+ {
+  "id": "6f95dfa1-463d-4487-b774-82c63358f1c9",
+  "slug": "devin",
+  "name": "Devin",
+  "primary_genre": "urban"
+ },
+ {
+  "id": "83278734-f0dc-4561-92f2-d2b029f60861",
+  "slug": "adriel-sfx",
+  "name": "Adriel.sfx",
+  "primary_genre": "urban"
+ },
+ {
+  "id": "1073b3fc-41a4-43b5-a07f-dba7fccbb30b",
+  "slug": "donny-whey",
+  "name": "Donny Whey",
+  "primary_genre": "urban"
+ },
+ {
+  "id": "5bdcbc0d-24de-451d-abdd-4e40ab13b3d4",
+  "slug": "barak",
+  "name": "Barak",
+  "primary_genre": "other"
+ },
+ {
+  "id": "bfe5f1a7-c6e5-45f6-96b7-d06eb088e1eb",
+  "slug": "jp-rmt",
+  "name": "JP RMT",
+  "primary_genre": "urban"
+ },
+ {
+  "id": "30f61137-9e6b-472a-b4ef-b13aecae2d7a",
+  "slug": "o-g-black",
+  "name": "O.G. Black",
+  "primary_genre": "rap"
+ },
+ {
+  "id": "33b2b3b7-67a7-4bb5-a02b-21765c961297",
+  "slug": "dary-hezz",
+  "name": "Dary Hezz",
+  "primary_genre": "urban"
+ },
+ {
+  "id": "b2d83ba2-33f6-4616-9045-357530630b33",
+  "slug": "j-noa",
+  "name": "J NOA",
+  "primary_genre": "rap"
+ },
+ {
+  "id": "6bfd238f-0945-4267-89b4-8817a0d90764",
+  "slug": "felipe-a-linares",
+  "name": "FELIPE A. LINARES",
+  "primary_genre": "other"
+ },
+ {
+  "id": "88304ea5-3c5f-4a3d-8f72-6e99e925ccb7",
+  "slug": "akinohayley",
+  "name": "AKINOhayLEY",
+  "primary_genre": "urban"
+ },
+ {
+  "id": "cea4b00e-cabe-48a8-9e1b-13b72a92d10a",
+  "slug": "poeta-callejero",
+  "name": "Poeta Callejero",
+  "primary_genre": "rap"
+ },
+ {
+  "id": "ab5f3288-2c71-45d7-bdcc-a3542077c774",
+  "slug": "iris-franklyn",
+  "name": "Iris & Franklyn",
+  "primary_genre": "other"
+ },
+ {
+  "id": "f838ab51-002f-4737-ab38-17f65beec9ab",
+  "slug": "proytecto-uno",
+  "name": "Proyecto Uno",
+  "primary_genre": "rap"
+ },
+ {
+  "id": "95e181f1-58e5-4537-a5e8-75a9f60c6aca",
+  "slug": "tivi-gunz",
+  "name": "Tivi Gunz",
+  "primary_genre": "urban"
+ }
+]

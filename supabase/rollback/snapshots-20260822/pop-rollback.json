@@ -1,0 +1,86 @@
+[
+ {
+  "id": "a617f08c-0d62-4d34-89a8-ce9afaa87dac",
+  "name": "Bocatabú",
+  "primary_genre": "pop",
+  "status": "published"
+ },
+ {
+  "id": "9e585186-f3b8-4720-979b-505f6198558e",
+  "name": "Charytin",
+  "primary_genre": "pop",
+  "status": "published"
+ },
+ {
+  "id": "a0c641ff-4a9a-4171-a765-7bea47e623b6",
+  "name": "Alex Ferreira",
+  "primary_genre": "pop",
+  "status": "published"
+ },
+ {
+  "id": "112ab16f-a56b-4a93-8562-120bfee1c70b",
+  "name": "Sharlene",
+  "primary_genre": "pop",
+  "status": "published"
+ },
+ {
+  "id": "35c38532-efe6-4e27-a836-875c3b6ba928",
+  "name": "Lenny Santana",
+  "primary_genre": "pop",
+  "status": "published"
+ },
+ {
+  "id": "068ab5ca-818e-46b3-a933-f034faaa3ea5",
+  "name": "Leny",
+  "primary_genre": "pop",
+  "status": "needs_review"
+ },
+ {
+  "id": "4fc53691-33ab-4ae0-a2e5-72b5d67b2183",
+  "name": "Andrés Rodríguez",
+  "primary_genre": "pop",
+  "status": "needs_review"
+ },
+ {
+  "id": "4e81dfc4-be26-459d-9700-13defa778092",
+  "name": "Mariangel",
+  "primary_genre": "pop",
+  "status": "published"
+ },
+ {
+  "id": "56339ed8-84c9-47eb-be7f-41449dd04865",
+  "name": "DJ Arelis Hot",
+  "primary_genre": "pop",
+  "status": "published"
+ },
+ {
+  "id": "5ea95de4-bc3f-468f-8d7e-442eab202a93",
+  "name": "Adriel Music",
+  "primary_genre": "pop",
+  "status": "published"
+ },
+ {
+  "id": "22de671f-2ec6-41f9-abef-7effec5bed97",
+  "name": "Anaís",
+  "primary_genre": "pop",
+  "status": "published"
+ },
+ {
+  "id": "0001efad-adc4-4c01-8c72-3fc681b50511",
+  "name": "Rosangela Abreu",
+  "primary_genre": "pop",
+  "status": "draft"
+ },
+ {
+  "id": "259b6b41-fa15-44ac-ab39-e341e1e97256",
+  "name": "Martha Heredia",
+  "primary_genre": "pop",
+  "status": "published"
+ },
+ {
+  "id": "3b50d339-1ddb-455f-80fd-34cd953a44b4",
+  "name": "Abel",
+  "primary_genre": "pop",
+  "status": "needs_review"
+ }
+]

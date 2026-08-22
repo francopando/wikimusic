@@ -1,0 +1,2432 @@
+[
+ {
+  "id": "fc6740eb-da07-4aea-9ab5-6e247e492478",
+  "name": "Pirou Pérez",
+  "genres": [
+   "jazz"
+  ]
+ },
+ {
+  "id": "c99a96f2-8b37-4b30-b90d-4fd331eed0f8",
+  "name": "Joly SC",
+  "genres": [
+   "rap",
+   "dembow"
+  ]
+ },
+ {
+  "id": "0be0eb05-8312-41f5-9490-a616b3db0d27",
+  "name": "Mc Wayne",
+  "genres": [
+   "hip hop"
+  ]
+ },
+ {
+  "id": "6daac2c1-9759-4980-bffd-a53e67b42b1b",
+  "name": "Palmer Hernández",
+  "genres": [
+   "Salsa Romántica",
+   "Bachata"
+  ]
+ },
+ {
+  "id": "e7616ce4-8189-44c9-b381-145051744e96",
+  "name": "RL & Vanessa",
+  "genres": [
+   "merengue-urbano"
+  ]
+ },
+ {
+  "id": "08ca978e-07cd-437a-8460-3eb0fbb51dcc",
+  "name": "OVNI Exp",
+  "genres": [
+   "urban-rap-hip-hop"
+  ]
+ },
+ {
+  "id": "23e6e2d6-b371-4393-9ce2-14c91d6d1d2e",
+  "name": "Natan El Profeta",
+  "genres": [
+   "merengue-urbano",
+   "urban-reggaeton",
+   "urban-rap-hip-hop"
+  ]
+ },
+ {
+  "id": "6eccc3e7-82bf-435f-8ae1-ea7e8a721560",
+  "name": "Martín Valoy",
+  "genres": [
+   "merengue"
+  ]
+ },
+ {
+  "id": "a57f3a5e-2058-4fb9-ae4e-e3bc22b93cc8",
+  "name": "Mario Díaz",
+  "genres": [
+   "merengue",
+   "bachata",
+   "ballads"
+  ]
+ },
+ {
+  "id": "6321da6c-e2d5-490a-a4e8-416bbee81edf",
+  "name": "Don Miguelo",
+  "genres": [
+   "dembow",
+   "reggaeton"
+  ]
+ },
+ {
+  "id": "d2c0eb06-4b6e-45d1-b795-3778cdf82488",
+  "name": "Juliana O'Neal",
+  "genres": [
+   "mambo"
+  ]
+ },
+ {
+  "id": "69289f21-4168-4fb5-af44-90438e068e3a",
+  "name": "Ray Polanco",
+  "genres": [
+   "merengue-orquesta"
+  ]
+ },
+ {
+  "id": "34b63c95-f79a-4f7b-aa1d-426926d12959",
+  "name": "Pavel Núñez",
+  "genres": [
+   "ballads"
+  ]
+ },
+ {
+  "id": "8243655e-17a7-4dea-98ee-1c16674c38cd",
+  "name": "DJ Adoni",
+  "genres": [
+   "reggaeton",
+   "latin urban",
+   "merengue",
+   "bachata",
+   "salsa"
+  ]
+ },
+ {
+  "id": "725f7cd5-de62-4e76-b382-0d55c160d51f",
+  "name": "Flow 28",
+  "genres": [
+   "urban"
+  ]
+ },
+ {
+  "id": "bc4db4c6-c96f-4eb7-af95-ac637785c5bf",
+  "name": "Bonny Cepeda",
+  "genres": [
+   "merengue-orquesta"
+  ]
+ },
+ {
+  "id": "31fbfbf8-9d7f-473c-8ea0-c7cb68fa7612",
+  "name": "Ghetto",
+  "genres": [
+   "urban",
+   "trap"
+  ]
+ },
+ {
+  "id": "8fc78100-e51e-48a8-91e9-3007f4c67ec0",
+  "name": "Félix del Rosario",
+  "genres": [
+   "jazz latino"
+  ]
+ },
+ {
+  "id": "50e3c4f1-6640-4b9e-b8df-106e2469c2a0",
+  "name": "Eddie Bastián",
+  "genres": [
+   "salsa-classic",
+   "bolero"
+  ]
+ },
+ {
+  "id": "ae5db457-05c9-4618-9714-22fb45620eb5",
+  "name": "Lilly Goodman",
+  "genres": [
+   "ballads",
+   "worship-gospel"
+  ]
+ },
+ {
+  "id": "5944b296-9419-418a-a0e9-bcd7fcf35a82",
+  "name": "Lapiitoh Dangers",
+  "genres": [
+   "urban"
+  ]
+ },
+ {
+  "id": "9be0ed08-6eb6-4ca0-bb68-d5126190aeb1",
+  "name": "Kiko el Crazy",
+  "genres": [
+   "urban"
+  ]
+ },
+ {
+  "id": "19124a2a-a49c-435e-989e-049b5dc3726c",
+  "name": "Niní Cáffaro",
+  "genres": [
+   "latin pop",
+   "ballads-bolero"
+  ]
+ },
+ {
+  "id": "fa592bc6-78af-41e8-a1ff-f6fe59fae250",
+  "name": "Damirón",
+  "genres": [
+   "folclor dominicano"
+  ]
+ },
+ {
+  "id": "b916e519-f427-45d3-9a42-b5c1ff6d6509",
+  "name": "Manuel de Jesús Jiménez Ortega",
+  "genres": [
+   "Bachata",
+   "Balada",
+   "Son"
+  ]
+ },
+ {
+  "id": "a9586ee9-7b3e-425b-8560-f9389296cfe5",
+  "name": "Jay Miky Flow",
+  "genres": [
+   "urban",
+   "reggaeton"
+  ]
+ },
+ {
+  "id": "90ed5c7e-595d-4931-8a81-7f9101642800",
+  "name": "Joa El Super MC",
+  "genres": [
+   "hip-hop",
+   "urban"
+  ]
+ },
+ {
+  "id": "8f152297-560f-4ebb-9e93-7b46e5b86aac",
+  "name": "Beethoven Villaman",
+  "genres": [
+   "hip-hop",
+   "urban"
+  ]
+ },
+ {
+  "id": "97b42ad8-6465-42a8-a673-15aacedb01f5",
+  "name": "NMNL",
+  "genres": [
+   "urban"
+  ]
+ },
+ {
+  "id": "052b710d-e91f-41c6-94ac-480100f95f5b",
+  "name": "July Mateo \"Rasputín\"",
+  "genres": [
+   "merengue-orquesta"
+  ]
+ },
+ {
+  "id": "368e51e3-2157-4f4b-aed3-d18a9a1f6060",
+  "name": "Adonis Produciendo",
+  "genres": [
+   "urban",
+   "reggaeton",
+   "producer"
+  ]
+ },
+ {
+  "id": "3937f2ed-1ca8-41a0-b1fd-40fc3bd79025",
+  "name": "TwoVm Para Cristo",
+  "genres": [
+   "urban contemporary"
+  ]
+ },
+ {
+  "id": "65ebdda7-27ba-4150-ae60-12c3236e3d16",
+  "name": "Jankobow",
+  "genres": [
+   "urban"
+  ]
+ },
+ {
+  "id": "af726afa-c7a0-47da-99bb-a4c7669a8785",
+  "name": "Natti Natasha",
+  "genres": [
+   "bachata",
+   "latin pop",
+   "urban"
+  ]
+ },
+ {
+  "id": "a4f98603-5d27-4971-bea9-d8c1c9e996da",
+  "name": "Juan Francisco García",
+  "genres": [
+   "académica",
+   "folclor"
+  ]
+ },
+ {
+  "id": "6159dc70-bd8f-439d-bf17-5d690262e5cb",
+  "name": "Omega",
+  "genres": [
+   "Mambo",
+   "merengue"
+  ]
+ },
+ {
+  "id": "a0aabbd1-4e4b-4cb9-bfb7-6f8c310b7e53",
+  "name": "Carlos Manuel Vargas",
+  "genres": [
+   "chamber music",
+   "latin american classical",
+   "dominican classical"
+  ]
+ },
+ {
+  "id": "4363445d-711d-4e7f-b60b-7de274f81d17",
+  "name": "Blackee Impala",
+  "genres": [
+   "urban"
+  ]
+ },
+ {
+  "id": "f5bdc55b-ac05-45cc-b118-375010a44f21",
+  "name": "Mario de Jesús Báez",
+  "genres": [
+   "Cumbia",
+   "Salsa",
+   "Merengue"
+  ]
+ },
+ {
+  "id": "d133f2df-cb21-4dd4-8673-8efb63e6cc5d",
+  "name": "Banda Real",
+  "genres": [
+   "folklore"
+  ]
+ },
+ {
+  "id": "c834e323-7e56-4e4b-8413-b02556eb2ecc",
+  "name": "Andre Parra Marte",
+  "genres": [
+   "alternative",
+   "acoustic"
+  ]
+ },
+ {
+  "id": "f8531cdb-3d19-4dd2-9ec1-a49dc5516252",
+  "name": "José Bello",
+  "genres": [
+   "son"
+  ]
+ },
+ {
+  "id": "0804b55a-63d4-4bc5-abb3-d97cc8f52c17",
+  "name": "Ninón Lapeiretta de Brouwer",
+  "genres": [
+   "instrumental-classical"
+  ]
+ },
+ {
+  "id": "559f2ed4-8831-483b-bc00-7cb4f340ad92",
+  "name": "El Alfa",
+  "genres": [
+   "urban",
+   "reggaeton"
+  ]
+ },
+ {
+  "id": "243bc1f8-9bf1-4c9d-a921-899c697346a0",
+  "name": "Domingo Philharmonic Orchestra",
+  "genres": [
+   "symphonic",
+   "instrumental"
+  ]
+ },
+ {
+  "id": "8c784f57-4ee4-41b5-b140-c45d0da1c5f6",
+  "name": "Joseíto Mateo",
+  "genres": [
+   "bolero"
+  ]
+ },
+ {
+  "id": "59d62142-837b-48bc-9f3a-9f9cfdb61700",
+  "name": "José Luis Hernández Moreno",
+  "genres": [
+   "académica"
+  ]
+ },
+ {
+  "id": "f07fcc6b-a888-4e97-ac50-6ce6ea37a714",
+  "name": "El Prodigio",
+  "genres": [
+   "jazz latino",
+   "merengue",
+   "merengue-perico-ripiao"
+  ]
+ },
+ {
+  "id": "8e7eee90-35c9-4151-a8a5-fa91c8b311cf",
+  "name": "Arrozito",
+  "genres": [
+   "comedy"
+  ]
+ },
+ {
+  "id": "3c55f669-3c12-40fb-a87e-14d995c5d207",
+  "name": "Deyvi Simé",
+  "genres": [
+   "jazz latino"
+  ]
+ },
+ {
+  "id": "96f8034f-02c2-4123-97ff-50a4afbd18f1",
+  "name": "Alberto Plata",
+  "genres": [
+   "folklore"
+  ]
+ },
+ {
+  "id": "023b1292-5c14-42df-9b81-da3e5057fcd0",
+  "name": "Mula",
+  "genres": [
+   "urbano",
+   "electronic"
+  ]
+ },
+ {
+  "id": "b409d2f6-f182-4583-825d-6f7ea263a6c8",
+  "name": "Martha Candela",
+  "genres": [
+   "merengue-urbano",
+   "merengue-mambo"
+  ]
+ },
+ {
+  "id": "c11c2dda-ffa1-4f09-9d24-00dc4473bc8d",
+  "name": "Cuco Valoy",
+  "genres": [
+   "Son Dominicano"
+  ]
+ },
+ {
+  "id": "16ebb72b-7e58-42ff-8ae1-1ceb104608ba",
+  "name": "Jorge Luis Rosario Rodríguez",
+  "genres": [
+   "académica"
+  ]
+ },
+ {
+  "id": "aefd5b14-694e-4f3e-ad31-ade13f14ca64",
+  "name": "Luis Armando Rivera González",
+  "genres": [
+   "Merengue",
+   "Bolero",
+   "Zarzuela"
+  ]
+ },
+ {
+  "id": "439a9467-df91-459c-9c87-aa8640b780f8",
+  "name": "Dioris Valladares",
+  "genres": [
+   "bolero"
+  ]
+ },
+ {
+  "id": "55209840-f1d7-4206-8243-f0e92ac2fa17",
+  "name": "Keren Montero",
+  "genres": [
+   "adoracion"
+  ]
+ },
+ {
+  "id": "743c18ed-8dde-4c20-9ae1-4f5a70185b18",
+  "name": "Manuel Simó",
+  "genres": [
+   "Classical"
+  ]
+ },
+ {
+  "id": "2b6e247c-f1d1-409c-809b-8c427520d791",
+  "name": "Reychesta Secret Weapon",
+  "genres": [
+   "Rap / Hip Hop"
+  ]
+ },
+ {
+  "id": "84aba9ce-ba69-4caa-b71b-2bedb2f848fc",
+  "name": "Daniel Santacruz",
+  "genres": [
+   "pop latino",
+   "merengue",
+   "kizomba"
+  ]
+ },
+ {
+  "id": "a233c0c3-fb1d-45cb-9323-3cb0e3aac01c",
+  "name": "Eilyn Paulina",
+  "genres": [
+   "adoración"
+  ]
+ },
+ {
+  "id": "ea77d6c8-791d-4faa-943d-eb54cc9a0377",
+  "name": "Richie Cepeda",
+  "genres": [
+   "merengue"
+  ]
+ },
+ {
+  "id": "79d013c7-dafc-4807-966e-32c370172dee",
+  "name": "Adalgisa Pantaleón",
+  "genres": [
+   "merengue",
+   "bachata",
+   "tropical",
+   "bolero"
+  ]
+ },
+ {
+  "id": "41536f78-c4db-4a97-9fdc-ec1dd645561c",
+  "name": "Luís Pimentel",
+  "genres": [
+   "traditional"
+  ]
+ },
+ {
+  "id": "2e9ab43f-84b6-4521-9a8e-732b0eeabd6f",
+  "name": "Nelson Estevez",
+  "genres": [
+   "bachata"
+  ]
+ },
+ {
+  "id": "2c68ee42-dcf1-44e8-a931-601c7c0ce2fc",
+  "name": "Kilvin Peña",
+  "genres": [
+   "salsa"
+  ]
+ },
+ {
+  "id": "629a7daa-5ab3-4b77-825f-6795b8c4a566",
+  "name": "Marcos Yaroide",
+  "genres": [
+   "latin pop"
+  ]
+ },
+ {
+  "id": "5fb12fee-64fe-4887-b87e-28f28a15c4f9",
+  "name": "Amenazzy",
+  "genres": [
+   "r&b latino",
+   "urban"
+  ]
+ },
+ {
+  "id": "3a70464d-2841-4a2c-a832-21b49eba7bf6",
+  "name": "Necro",
+  "genres": [
+   "urban"
+  ]
+ },
+ {
+  "id": "35c38532-efe6-4e27-a836-875c3b6ba928",
+  "name": "Lenny Santana",
+  "genres": [
+   "romantic"
+  ]
+ },
+ {
+  "id": "7f216f19-be38-4369-adb6-0f51922cb75c",
+  "name": "Ala Jaza",
+  "genres": [
+   "bachata",
+   "merengue-urbano",
+   "merengue-mambo"
+  ]
+ },
+ {
+  "id": "8e29188a-215b-4c6c-b34a-45b381765e46",
+  "name": "Xiomara Fortuna",
+  "genres": [
+   "jazz",
+   "folk music"
+  ]
+ },
+ {
+  "id": "332bd0c8-9cf7-4ee9-9ccb-97bcf5ebf9a9",
+  "name": "Gangrena Cerebral",
+  "genres": [
+   "grindcore",
+   "metal"
+  ]
+ },
+ {
+  "id": "27c82e93-8c8f-4466-86ab-e1afba1e5487",
+  "name": "José Manuel Calderón",
+  "genres": [
+   "bolero"
+  ]
+ },
+ {
+  "id": "8af29e3a-6ae7-4a2d-9389-8ec927790901",
+  "name": "Monkey Black",
+  "genres": [
+   "dembow",
+   "urban"
+  ]
+ },
+ {
+  "id": "a0c641ff-4a9a-4171-a765-7bea47e623b6",
+  "name": "Alex Ferreira",
+  "genres": [
+   "indie folk",
+   "tropical alternative"
+  ]
+ },
+ {
+  "id": "112ab16f-a56b-4a93-8562-120bfee1c70b",
+  "name": "Sharlene",
+  "genres": [
+   "pop"
+  ]
+ },
+ {
+  "id": "4fc53691-33ab-4ae0-a2e5-72b5d67b2183",
+  "name": "Andrés Rodríguez",
+  "genres": [
+   "acoustic",
+   "ballad"
+  ]
+ },
+ {
+  "id": "8da2665e-3035-4a8d-810c-98d2d8c8a27b",
+  "name": "Juan Bautista Alfonseca",
+  "genres": [
+   "classical",
+   "folclor"
+  ]
+ },
+ {
+  "id": "60b0cfd0-b572-4d0f-a913-bbeb1aa734c6",
+  "name": "Fausto Rey",
+  "genres": [
+   "bolero",
+   "merengue"
+  ]
+ },
+ {
+  "id": "8a0f2603-fc00-48a1-a50a-deefa0f661fd",
+  "name": "Lolo en el Micrófono",
+  "genres": [
+   "urban"
+  ]
+ },
+ {
+  "id": "998fcf05-a3bd-48b5-a95e-4e7cd6cb96b4",
+  "name": "Daniel Monción",
+  "genres": [
+   "pop latino"
+  ]
+ },
+ {
+  "id": "e707e6cd-84f9-4c70-8c96-c3afb7d3f8fb",
+  "name": "Anthony Cariño",
+  "genres": [
+   "folklore"
+  ]
+ },
+ {
+  "id": "a617f08c-0d62-4d34-89a8-ce9afaa87dac",
+  "name": "Bocatabú",
+  "genres": [
+   "alternative rock",
+   "indie"
+  ]
+ },
+ {
+  "id": "c61142b8-986a-4ae0-a31b-f93b056237e4",
+  "name": "Brandom Regino",
+  "genres": [
+   "pop",
+   "worship"
+  ]
+ },
+ {
+  "id": "f0e81576-728d-4c68-b416-b2df67101496",
+  "name": "Amarfis y La Banda de Atakke",
+  "genres": [
+   "mambo",
+   "merengue"
+  ]
+ },
+ {
+  "id": "b000b7d5-23f1-42a2-b089-f522a29a5d20",
+  "name": "Los Sufridos",
+  "genres": [
+   "bachata"
+  ]
+ },
+ {
+  "id": "fb7698ed-caa4-474e-851b-a9ce63a4cf11",
+  "name": "Lizzy Parra",
+  "genres": [
+   "urban",
+   "christian"
+  ]
+ },
+ {
+  "id": "b3bfb1d2-2727-4181-a9f2-680dbe84b16b",
+  "name": "André Velóz",
+  "genres": [
+   "bolero"
+  ]
+ },
+ {
+  "id": "e005898c-4fcc-45da-b857-c6775e92fa52",
+  "name": "Johnny Pacheco",
+  "genres": [
+   "son",
+   "guaguancó"
+  ]
+ },
+ {
+  "id": "8fd3269b-6945-4f8d-98d0-51b360f4197c",
+  "name": "La Armada",
+  "genres": [
+   "urban"
+  ]
+ },
+ {
+  "id": "f838a2ce-b6eb-4200-8d4f-c3c8c28217da",
+  "name": "Expresión Joven",
+  "genres": [
+   "trova",
+   "folk"
+  ]
+ },
+ {
+  "id": "f0a5c773-b904-4feb-bf20-9d938bead0b1",
+  "name": "Mario Rivera",
+  "genres": [
+   "Jazz",
+   "Salsa",
+   "Merengue Jazz"
+  ]
+ },
+ {
+  "id": "f9c7c317-14d0-41ab-bb2b-b401b4294eff",
+  "name": "Chris Alflow",
+  "genres": [
+   "Dembow"
+  ]
+ },
+ {
+  "id": "0612d71d-ee8e-4ff3-98b8-349652d7bfcf",
+  "name": "Jezzy",
+  "genres": [
+   "hip-hop",
+   "urban"
+  ]
+ },
+ {
+  "id": "05bcf026-2c83-4944-bc0e-6e0befaa9d87",
+  "name": "Josean Jacobo",
+  "genres": [
+   "Jazz",
+   "Afro-Dominican Jazz",
+   "Fusion"
+  ]
+ },
+ {
+  "id": "6b6d24d4-c6fe-42d6-8937-2d2f9f6c9292",
+  "name": "Janina Rosado",
+  "genres": [
+   "merengue",
+   "bachata",
+   "jazz",
+   "fusion"
+  ]
+ },
+ {
+  "id": "99537a98-fb19-4487-814d-c60d91c4d10b",
+  "name": "Luis \"Terror\" Días",
+  "genres": [
+   "folklore",
+   "fusion",
+   "merengue",
+   "bachata"
+  ]
+ },
+ {
+  "id": "40095dfd-4827-4266-a7ba-3f0cfeee6910",
+  "name": "David Appleton",
+  "genres": [
+   "fusión",
+   "cinematic"
+  ]
+ },
+ {
+  "id": "0b2e1a39-b265-42d6-95d5-85ad930eee84",
+  "name": "El Cherry Scom",
+  "genres": [
+   "urban",
+   "reggaeton"
+  ]
+ },
+ {
+  "id": "866a9865-ef60-4c22-853e-5d0473181b81",
+  "name": "J.A.",
+  "genres": [
+   "urban"
+  ]
+ },
+ {
+  "id": "9bf41d47-c5ab-45e3-b048-7bb7886b0912",
+  "name": "DJ Scuff",
+  "genres": [
+   "hip hop",
+   "rap",
+   "dembow",
+   "reggaeton",
+   "trap"
+  ]
+ },
+ {
+  "id": "d2d1dde7-94a6-4463-9a41-7be7245e3f55",
+  "name": "Grunjeo",
+  "genres": [
+   "alternative"
+  ]
+ },
+ {
+  "id": "1cd11a22-573a-43b4-8f54-fbd08329a4e2",
+  "name": "Ilegales",
+  "genres": [
+   "pop latino",
+   "urban"
+  ]
+ },
+ {
+  "id": "c960822a-caf3-4598-8714-172139a91957",
+  "name": "Donaty",
+  "genres": [
+   "urban"
+  ]
+ },
+ {
+  "id": "c605b06d-7428-45cd-b53f-923e60c5c147",
+  "name": "Jacinto Gimbernard",
+  "genres": [
+   "académica"
+  ]
+ },
+ {
+  "id": "1ef2c413-7ee7-450f-82ad-540dac7b6b92",
+  "name": "Johnny Chocolate",
+  "genres": [
+   "salsa"
+  ]
+ },
+ {
+  "id": "6a58afd5-2832-4008-988e-b7b22d532c9f",
+  "name": "King Caballero",
+  "genres": [
+   "alternative"
+  ]
+ },
+ {
+  "id": "53215c59-9bfa-476f-8889-7b5aaebcac5b",
+  "name": "Jonatan Piña Duluc",
+  "genres": [
+   "fusion",
+   "rock"
+  ]
+ },
+ {
+  "id": "fd3c8182-ba3a-4b0d-9c19-e7dfaa1658fb",
+  "name": "El Fecho RD",
+  "genres": [
+   "urban"
+  ]
+ },
+ {
+  "id": "d08f2c85-7f47-449e-a486-a19ba3b5841a",
+  "name": "La Insuperable",
+  "genres": [
+   "dembow"
+  ]
+ },
+ {
+  "id": "dee014d6-cb3c-4abb-9262-165538277a0d",
+  "name": "Héctor Acosta “El Torito”",
+  "genres": [
+   "bachata"
+  ]
+ },
+ {
+  "id": "e9004428-e647-4a06-8316-b398452d46df",
+  "name": "María Díaz",
+  "genres": [
+   "merengue",
+   "merengue-perico-ripiao"
+  ]
+ },
+ {
+  "id": "876ede84-627b-4f24-ae9a-04ba7e02ff09",
+  "name": "Ángela Carrasco",
+  "genres": [
+   "pop-latin-pop",
+   "ballads-romantic",
+   "merengue"
+  ]
+ },
+ {
+  "id": "f37c7f0f-9bf4-4e80-a151-9a944b07baf0",
+  "name": "Enerolisa Núñez",
+  "genres": [
+   "salve"
+  ]
+ },
+ {
+  "id": "73cac635-71c3-407f-b9f5-02a705d6956b",
+  "name": "Messiah",
+  "genres": [
+   "urban",
+   "hip hop"
+  ]
+ },
+ {
+  "id": "55c4969c-61a3-4541-aad6-00408493c88d",
+  "name": "23Thierno",
+  "genres": [
+   "latin trap",
+   "urban"
+  ]
+ },
+ {
+  "id": "fc7077d7-2374-4de2-82ed-3c30d01238e0",
+  "name": "MÓRIA",
+  "genres": [
+   "urbano",
+   "urban-dembow"
+  ]
+ },
+ {
+  "id": "7f0cc5cd-8688-4f97-bfd0-418056402a77",
+  "name": "MR. Yeison",
+  "genres": [
+   "Dembow"
+  ]
+ },
+ {
+  "id": "b7afc66a-72e5-42f5-a5a3-0e2fc0555877",
+  "name": "Darío Estrella",
+  "genres": [
+   "merengue",
+   "fusión"
+  ]
+ },
+ {
+  "id": "28a3745e-90d6-45cd-b8bd-798028f8deb8",
+  "name": "Antony Santos",
+  "genres": [
+   "bachata-romantica",
+   "merengue-perico-ripiao"
+  ]
+ },
+ {
+  "id": "e0bde8f5-859f-435e-98ed-d59be5e74a78",
+  "name": "BS El Ideologo",
+  "genres": [
+   "urban",
+   "trap"
+  ]
+ },
+ {
+  "id": "381b198b-b175-4be5-ad05-7b878d739e3a",
+  "name": "Killer Rap",
+  "genres": [
+   "urban"
+  ]
+ },
+ {
+  "id": "dbfd2c92-b0b4-44ef-9ad6-61774a99cf89",
+  "name": "Nancy Amancio",
+  "genres": [
+   "balada",
+   "pop"
+  ]
+ },
+ {
+  "id": "c90645c8-e146-4312-ac65-fe40a59c7528",
+  "name": "Jeff",
+  "genres": [
+   "académica",
+   "bachata",
+   "reggaeton"
+  ]
+ },
+ {
+  "id": "a49523d4-ca03-4274-8213-2ec356fadf5e",
+  "name": "Francikario",
+  "genres": [
+   "rap",
+   "urban"
+  ]
+ },
+ {
+  "id": "4968d375-0833-49e2-8442-633cbaa39404",
+  "name": "Vicente García",
+  "genres": [
+   "world music",
+   "music of the Caribbean",
+   "merengue",
+   "alternative music",
+   "reggae"
+  ]
+ },
+ {
+  "id": "2cb00350-16da-41b4-bec9-5c86b5d8438c",
+  "name": "Frank Cruz",
+  "genres": [
+   "bolero"
+  ]
+ },
+ {
+  "id": "84cdb60f-a0a4-4b2a-bac1-7c25474c8f3d",
+  "name": "Juan Hidalgo",
+  "genres": [
+   "bachata"
+  ]
+ },
+ {
+  "id": "908867f1-64c4-4cd6-a08d-eaa82bfce1b7",
+  "name": "Jesus Juan Antonio",
+  "genres": [
+   "académica"
+  ]
+ },
+ {
+  "id": "358ff3da-d3b2-4158-b601-3abc1005f927",
+  "name": "Manny Cruz",
+  "genres": [
+   "latin pop",
+   "bachata"
+  ]
+ },
+ {
+  "id": "79f11fdc-3b07-4453-aae1-75f95cc22e6b",
+  "name": "Frecox Unic",
+  "genres": [
+   "trap"
+  ]
+ },
+ {
+  "id": "4b5afbb3-551f-4a66-90b2-4982ce17a65f",
+  "name": "GDA El Unico",
+  "genres": [
+   "dembow"
+  ]
+ },
+ {
+  "id": "5ce0aa05-7d1a-4750-8cd2-dab62b06a244",
+  "name": "Grupo Extra",
+  "genres": [
+   "pop latino"
+  ]
+ },
+ {
+  "id": "bd3ad92b-1a26-48dd-a667-8a0debeaf5a3",
+  "name": "Jandy Feliz",
+  "genres": [
+   "pop latino"
+  ]
+ },
+ {
+  "id": "0ec0fb20-b5b2-4a7c-9b7f-80d27b517a81",
+  "name": "mamajuana",
+  "genres": [
+   "House"
+  ]
+ },
+ {
+  "id": "059d4b29-4925-48f1-a171-9d0bfc450141",
+  "name": "Genoveva La Patrona",
+  "genres": [
+   "latin",
+   "merengue",
+   "reggaeton"
+  ]
+ },
+ {
+  "id": "01db8904-c39e-428d-bbea-da4049a79ee6",
+  "name": "Aridia Ventura",
+  "genres": [
+   "folklore"
+  ]
+ },
+ {
+  "id": "8dcfc4e1-9af4-4378-9e19-52573af429a7",
+  "name": "Henry Santos",
+  "genres": [
+   "urban"
+  ]
+ },
+ {
+  "id": "87e66e95-ba18-43d3-b636-607d607f5151",
+  "name": "Luigui Bleand",
+  "genres": [
+   "afrobeat",
+   "Rap / Hip Hop"
+  ]
+ },
+ {
+  "id": "10034596-47cb-46ba-9e80-9ea319a2c0df",
+  "name": "Juan Luis Guerra 4.40",
+  "genres": [
+   "bachata",
+   "fusion"
+  ]
+ },
+ {
+  "id": "0aafb9ed-af98-4f1a-a030-e47526fa2310",
+  "name": "eMeTeDe",
+  "genres": [
+   "dembow"
+  ]
+ },
+ {
+  "id": "14777546-5b72-4dcf-b18a-15320124a0ee",
+  "name": "Alex Matos",
+  "genres": [
+   "balada"
+  ]
+ },
+ {
+  "id": "dba9a057-4e1b-4602-b0af-dd14aeb264e3",
+  "name": "Alejandro Torrens",
+  "genres": [
+   "pop latino",
+   "bolero"
+  ]
+ },
+ {
+  "id": "068ab5ca-818e-46b3-a933-f034faaa3ea5",
+  "name": "Leny",
+  "genres": [
+   "pop"
+  ]
+ },
+ {
+  "id": "cc21ddb7-f3be-486e-9c44-4519c691731d",
+  "name": "Black 45 King",
+  "genres": [
+   "hip-hop",
+   "urban"
+  ]
+ },
+ {
+  "id": "00dd094f-71fd-4ffe-a9dd-1ad335738bbb",
+  "name": "Félix Cumbé",
+  "genres": [
+   "bachata"
+  ]
+ },
+ {
+  "id": "001831dd-3baa-4512-88f5-f420ec7c2619",
+  "name": "Pochy y su Cocoband",
+  "genres": [
+   "merengue-orquesta"
+  ]
+ },
+ {
+  "id": "73032c71-e46c-45b1-b02c-8f4de18426ad",
+  "name": "Los Toros Band",
+  "genres": [
+   "bachata"
+  ]
+ },
+ {
+  "id": "0d586b6c-5699-4c0b-913f-4d702e507301",
+  "name": "Milka la Más Dura",
+  "genres": [
+   "urban"
+  ]
+ },
+ {
+  "id": "ddd4bc68-eaef-400f-a272-1ca003902b57",
+  "name": "Francisco Casanova",
+  "genres": [
+   "lírico"
+  ]
+ },
+ {
+  "id": "102e7b78-ff98-4adc-9a54-ae73791fb176",
+  "name": "Lápiz Conciente",
+  "genres": [
+   "urban"
+  ]
+ },
+ {
+  "id": "987ec9d9-fcf0-4afd-be22-ba74c3d620d6",
+  "name": "Anon Müller",
+  "genres": [
+   "indie"
+  ]
+ },
+ {
+  "id": "580293c3-1e1e-418f-8555-8082665c22b0",
+  "name": "MelyMel",
+  "genres": [
+   "rap",
+   "urban"
+  ]
+ },
+ {
+  "id": "dd05b1f8-01cb-4e63-a630-db82c9583f18",
+  "name": "DJ Mari D",
+  "genres": [
+   "latin",
+   "hip hop",
+   "open format",
+   "club",
+   "dance"
+  ]
+ },
+ {
+  "id": "c07f3ddc-91c1-46c6-8803-43014bcd670f",
+  "name": "Rubinsky RBK",
+  "genres": [
+   "Christian hip-hop",
+   "reggaeton"
+  ]
+ },
+ {
+  "id": "bcac24c6-16a2-4d82-b9d5-1d7f70e3d631",
+  "name": "Antidoto Casero",
+  "genres": [
+   "alternative",
+   "reggae"
+  ]
+ },
+ {
+  "id": "639de91e-2507-491c-a58a-ce4e77af065d",
+  "name": "La Materialista",
+  "genres": [
+   "pop",
+   "dembow"
+  ]
+ },
+ {
+  "id": "78a3aef8-c53a-4829-997c-a2293f4475c3",
+  "name": "Morbid",
+  "genres": [
+   "rock"
+  ]
+ },
+ {
+  "id": "594b49f0-b18e-40d7-8ae2-884434c1a954",
+  "name": "Aposento Alto",
+  "genres": [
+   "hip-hop",
+   "urban"
+  ]
+ },
+ {
+  "id": "548bc0df-b19a-43af-b5a4-798b8a401780",
+  "name": "Averly Morillo",
+  "genres": [
+   "ballads"
+  ]
+ },
+ {
+  "id": "0db45920-cb02-4785-92e9-861e73a73a3d",
+  "name": "Mickey Dastinz",
+  "genres": [
+   "hip hop"
+  ]
+ },
+ {
+  "id": "080c0205-8b66-4f16-915e-1d867acf82cc",
+  "name": "Maridalia Hernández",
+  "genres": [
+   "merengue",
+   "bachata"
+  ]
+ },
+ {
+  "id": "605a9e7a-1897-4421-a375-63283364de3a",
+  "name": "Las Gemelas Fantásticas RD",
+  "genres": [
+   "adoracion"
+  ]
+ },
+ {
+  "id": "a73d457d-6ff6-4dde-89e9-1e41dfdf2d54",
+  "name": "Ramón Torres",
+  "genres": [
+   "tropical music"
+  ]
+ },
+ {
+  "id": "fa06f87b-9f79-42ce-8c17-0fddf4cbf8c4",
+  "name": "Luis Pimentel y su Conjunto de Estrellas",
+  "genres": [
+   "traditional"
+  ]
+ },
+ {
+  "id": "ba42e200-51b0-437b-99ac-1daf39ade337",
+  "name": "Rafael Solano",
+  "genres": [
+   "Bolero",
+   "Merengue",
+   "Folk"
+  ]
+ },
+ {
+  "id": "d4551f69-84e9-4c33-a51e-1dbd8ea2aff0",
+  "name": "El Cata",
+  "genres": [
+   "urban"
+  ]
+ },
+ {
+  "id": "3a235020-7be9-4884-b964-9efbd6a3e82f",
+  "name": "Apofis Imn",
+  "genres": [
+   "rap underground",
+   "urban"
+  ]
+ },
+ {
+  "id": "d5f32223-92d0-43c4-b039-0a8a4eb48ada",
+  "name": "Negrito Chapuseaux",
+  "genres": [
+   "bolero",
+   "son",
+   "merengue"
+  ]
+ },
+ {
+  "id": "f6865535-50d6-46a2-991e-402a5f3b27d6",
+  "name": "DJ Urba",
+  "genres": [
+   "urban"
+  ]
+ },
+ {
+  "id": "270ba4bb-287a-401d-b672-818fbe9477d3",
+  "name": "Nino Freestyle",
+  "genres": [
+   "urban",
+   "Rap / Hip Hop"
+  ]
+ },
+ {
+  "id": "9761143c-4e04-4590-8fa7-fe82674a6cf7",
+  "name": "[MERGED] Juan Luis Guerra  & 4.40",
+  "genres": [
+   "bachata",
+   "fusion"
+  ]
+ },
+ {
+  "id": "36e6d6ef-16a5-4bb3-a0de-ddd08c31d642",
+  "name": "Alex Linares",
+  "genres": [
+   "comedy"
+  ]
+ },
+ {
+  "id": "9615de95-19e4-46be-bad8-9ed67cb3c6b8",
+  "name": "DJ Joe Catador",
+  "genres": [
+   "latin urban",
+   "reggaeton"
+  ]
+ },
+ {
+  "id": "a35802ef-6a43-427d-af4b-410afceb4455",
+  "name": "Sammy the Greatest",
+  "genres": [
+   "latin urban",
+   "reggaeton"
+  ]
+ },
+ {
+  "id": "cf438c62-e0b8-4ba9-8e4b-f328ddce0c9b",
+  "name": "Chimbala",
+  "genres": [
+   "reggaeton",
+   "urbano music",
+   "urban contemporary",
+   "Dembow"
+  ]
+ },
+ {
+  "id": "66512533-3c96-45f0-b248-d0d5e0e586d7",
+  "name": "Nico Clínico",
+  "genres": [
+   "reggaeton"
+  ]
+ },
+ {
+  "id": "ba636221-43cb-4650-b3e2-b0f63c3a7e77",
+  "name": "Juan Colón",
+  "genres": [
+   "jazz latino"
+  ]
+ },
+ {
+  "id": "19e6c6f8-bdd7-4137-953f-0657b8617259",
+  "name": "Bienvenido Brens",
+  "genres": [
+   "merengue"
+  ]
+ },
+ {
+  "id": "da791d26-8bab-45e4-b7d1-f09314869f09",
+  "name": "Michel Camilo",
+  "genres": [
+   "Jazz",
+   "Clásica",
+   "Classical"
+  ]
+ },
+ {
+  "id": "77223a7f-b1dd-4072-9695-b8231670807e",
+  "name": "Musiquito",
+  "genres": [
+   "merengue"
+  ]
+ },
+ {
+  "id": "424d789c-fe7a-4912-a1c1-c8baa74b4359",
+  "name": "Raquel Arias",
+  "genres": [
+   "worship"
+  ]
+ },
+ {
+  "id": "1e97b740-518c-4ef3-b0b1-a508fc6901b3",
+  "name": "Johandy Ureña",
+  "genres": [
+   "fusion"
+  ]
+ },
+ {
+  "id": "1b072bb2-eeac-41da-956e-cd5bb576a901",
+  "name": "La Baby",
+  "genres": [
+   "urban",
+   "Dembow"
+  ]
+ },
+ {
+  "id": "e611e3fc-c00d-46e6-b397-27425787d6d1",
+  "name": "Luny",
+  "genres": [
+   "urban"
+  ]
+ },
+ {
+  "id": "40573905-55a6-492d-a22a-45969f9cf6e6",
+  "name": "Índigo",
+  "genres": [
+   "pop",
+   "alternative"
+  ]
+ },
+ {
+  "id": "2ad8ccef-e648-4f68-8f6e-d2473457ac3d",
+  "name": "Luna Drums",
+  "genres": [
+   "percussion"
+  ]
+ },
+ {
+  "id": "de2f4d59-b736-4691-961a-f1f010e67f85",
+  "name": "AntiHippie",
+  "genres": [
+   "punk",
+   "indie",
+   "urban",
+   "rock"
+  ]
+ },
+ {
+  "id": "d08df81f-db6b-4919-a741-7b45c3789dc2",
+  "name": "Jorge Morel",
+  "genres": [
+   "académica"
+  ]
+ },
+ {
+  "id": "be6e5b01-4eaa-45ee-bd34-dd567fab6b64",
+  "name": "Aisha Syed Castro",
+  "genres": [
+   "instrumental-classical"
+  ]
+ },
+ {
+  "id": "c958758c-a949-4bd9-963d-6d48bc750b60",
+  "name": "Jorge Taveras",
+  "genres": [
+   "balada"
+  ]
+ },
+ {
+  "id": "36ebc210-c772-4d02-a92f-cdedb953692a",
+  "name": "Dominic",
+  "genres": [
+   "salsa"
+  ]
+ },
+ {
+  "id": "f588dfa7-06ce-4b33-8d63-51182258bb71",
+  "name": "Gabriel del Orbe",
+  "genres": [
+   "Romanticismo"
+  ]
+ },
+ {
+  "id": "25a420d1-7a98-4fd2-93c8-38d3ed2d2dc1",
+  "name": "José Antonio Rodríguez",
+  "genres": [
+   "balada",
+   "canción de autor"
+  ]
+ },
+ {
+  "id": "2b644026-3e99-4229-a729-003f04103f30",
+  "name": "Blas Durán",
+  "genres": [
+   "merengue de guataca"
+  ]
+ },
+ {
+  "id": "4688614f-d936-4fb8-8bf1-04008de4256b",
+  "name": "Maffio",
+  "genres": [
+   "reggaeton",
+   "latin pop",
+   "merengue",
+   "bachata"
+  ]
+ },
+ {
+  "id": "7bc2d1c9-baa4-4928-86f1-bbd0168fdf7c",
+  "name": "Adriano Ventura",
+  "genres": [
+   "folklore"
+  ]
+ },
+ {
+  "id": "bf7c3b92-08c0-4fb4-9186-a6570319ec9b",
+  "name": "Jairo Puello",
+  "genres": [
+   "gospel",
+   "christian pop"
+  ]
+ },
+ {
+  "id": "fc8e9689-004d-46d8-9458-b238aaa05aae",
+  "name": "Luys Bien",
+  "genres": [
+   "bachata",
+   "bolero",
+   "salsa",
+   "pambiche",
+   "latin"
+  ]
+ },
+ {
+  "id": "56339ed8-84c9-47eb-be7f-41449dd04865",
+  "name": "DJ Arelis Hot",
+  "genres": [
+   "soul",
+   "urban",
+   "rap",
+   "hip hop",
+   "reggaeton romantico",
+   "merengue"
+  ]
+ },
+ {
+  "id": "88d390a9-c00e-427f-8e3c-86d0a0b55f29",
+  "name": "La Noe Aposento Alto",
+  "genres": [
+   "christian rap",
+   "latin hip hop",
+   "latin urban"
+  ]
+ },
+ {
+  "id": "c3d7e5bd-c783-4542-8f01-ae08a4b7a0a7",
+  "name": "Bryan Dotel",
+  "genres": [
+   "ballad",
+   "acoustic"
+  ]
+ },
+ {
+  "id": "5ea95de4-bc3f-468f-8d7e-442eab202a93",
+  "name": "Adriel Music",
+  "genres": [
+   "r&b",
+   "urban"
+  ]
+ },
+ {
+  "id": "b8f26dfb-06b1-43de-8117-ef1c60b2e206",
+  "name": "Angel Dior",
+  "genres": [
+   "urban"
+  ]
+ },
+ {
+  "id": "fa9cc802-28ca-4695-b585-f75aa90a2b6c",
+  "name": "Mozart la Para",
+  "genres": [
+   "rap",
+   "reggaeton",
+   "urban",
+   "urban-rap-hip-hop"
+  ]
+ },
+ {
+  "id": "b34a3ded-ded2-4bca-b46d-c964b0a70176",
+  "name": "Juan Lanfranco",
+  "genres": [
+   "merengue"
+  ]
+ },
+ {
+  "id": "214e98cc-cac9-4473-9741-2a87481b0685",
+  "name": "Carlos Alfredo Fatule",
+  "genres": [
+   "merengue",
+   "musical theatre"
+  ]
+ },
+ {
+  "id": "8769e02a-52d7-4818-ac19-e5dd46d7075f",
+  "name": "Juan Francisco Ordóñez",
+  "genres": [
+   "rock alternativo",
+   "jazz latino",
+   "bachata"
+  ]
+ },
+ {
+  "id": "919b182d-973f-4f11-96a4-cb3a9763afd4",
+  "name": "DJ Miller",
+  "genres": [
+   "dance",
+   "house",
+   "afro house",
+   "latin electronic",
+   "techno"
+  ]
+ },
+ {
+  "id": "86fdf7d2-f8c3-457f-a318-20bb7b5a207e",
+  "name": "Ito Ogamy",
+  "genres": [
+   "Rap / Hip Hop"
+  ]
+ },
+ {
+  "id": "28abb584-d43a-4338-9cda-71f3bd78ab4c",
+  "name": "Gior Chambonea",
+  "genres": [
+   "urban"
+  ]
+ },
+ {
+  "id": "9c57ee5c-6abd-4191-ac88-959ff86f0f7c",
+  "name": "Oscar Micheli",
+  "genres": [
+   "jazz"
+  ]
+ },
+ {
+  "id": "b1c6099c-d348-4003-90fb-d2c4f889034b",
+  "name": "Oscar Dominic",
+  "genres": [
+   "ballads"
+  ]
+ },
+ {
+  "id": "7da4869c-bffe-4a72-ba92-5b5d72dafe4f",
+  "name": "Luis Aquino",
+  "genres": [
+   "salsa",
+   "pop"
+  ]
+ },
+ {
+  "id": "b8699416-10d2-4c84-a43a-2a035387126f",
+  "name": "Eklectico",
+  "genres": [
+   "dembow",
+   "alternative",
+   "urban-rap-hip-hop"
+  ]
+ },
+ {
+  "id": "dab88410-db45-49e3-a663-6b2547e46d9e",
+  "name": "Freddy Antonio Sarante Perdomo",
+  "genres": [
+   "merengue"
+  ]
+ },
+ {
+  "id": "76c3c113-eea0-4dbd-8e71-c7dc6662c86c",
+  "name": "Yovanny Polanco",
+  "genres": [
+   "Perico Ripiao"
+  ]
+ },
+ {
+  "id": "4100dae2-e08e-47cd-9c3b-552b8d35aa86",
+  "name": "Fair Trade",
+  "genres": [
+   "alternative"
+  ]
+ },
+ {
+  "id": "fb068903-a085-4a3f-b846-0be0b3e28934",
+  "name": "Henry García",
+  "genres": [
+   "salsa"
+  ]
+ },
+ {
+  "id": "3e1718be-c12d-42f5-85e7-2156d9574940",
+  "name": "Tokischa",
+  "genres": [
+   "Dominican dembow",
+   "diva house",
+   "dancehall"
+  ]
+ },
+ {
+  "id": "63d21eeb-86d7-447b-9ddc-b764046880dc",
+  "name": "Karlos Rosé",
+  "genres": [
+   "urban"
+  ]
+ },
+ {
+  "id": "91a38407-26b0-473a-94e1-42e0ea544479",
+  "name": "Luis Caracter",
+  "genres": [
+   "traditional"
+  ]
+ },
+ {
+  "id": "550df3b5-6488-4aec-a476-a5d28d52ceea",
+  "name": "Bulin 47",
+  "genres": [
+   "urban",
+   "comedy"
+  ]
+ },
+ {
+  "id": "070e7449-814e-4ea6-a009-7a091b7e4878",
+  "name": "Milly Quezada",
+  "genres": [
+   "bachata"
+  ]
+ },
+ {
+  "id": "be3bd870-e380-44a2-82c5-4849e2022f6e",
+  "name": "Inka",
+  "genres": [
+   "hip-hop",
+   "rap"
+  ]
+ },
+ {
+  "id": "8da26ee1-8079-4232-b9a2-66eccee08cb3",
+  "name": "Elenita Santos",
+  "genres": [
+   "merengue"
+  ]
+ },
+ {
+  "id": "244703fb-3d9b-4443-b19a-a67535076178",
+  "name": "Cocolo-RD",
+  "genres": [
+   "urban-dembow"
+  ]
+ },
+ {
+  "id": "2993cde1-f93d-4cf0-9668-fa1e54b09919",
+  "name": "Haraca Kiko",
+  "genres": [
+   "urban",
+   "Dembow"
+  ]
+ },
+ {
+  "id": "63e7a8e1-6ab0-4c67-a917-1ae7b6df37fd",
+  "name": "Enmanuel Richarson",
+  "genres": [
+   "instrumental"
+  ]
+ },
+ {
+  "id": "3b6f60a1-2baa-4e2c-acec-452c5b026397",
+  "name": "Alfredo Polonia",
+  "genres": [
+   "folklore"
+  ]
+ },
+ {
+  "id": "aba8fe5e-92d5-436f-9b5d-47b319e6cd53",
+  "name": "Hollywood",
+  "genres": [
+   "pop",
+   "alternative"
+  ]
+ },
+ {
+  "id": "80c1b2e0-0ced-4808-a529-70b120e04d73",
+  "name": "Jabes",
+  "genres": [
+   "gospel",
+   "pop"
+  ]
+ },
+ {
+  "id": "b181edca-515a-45ad-8fae-8b61195de1cc",
+  "name": "Orquesta La Muralla",
+  "genres": [
+   "merengue"
+  ]
+ },
+ {
+  "id": "0d90e940-b27f-4983-8146-81899c729246",
+  "name": "Albertino Graciano",
+  "genres": [
+   "folklore"
+  ]
+ },
+ {
+  "id": "1410b448-6357-4895-a32a-58708697e10d",
+  "name": "Alberto Beltrán",
+  "genres": [
+   "merengue",
+   "guaracha"
+  ]
+ },
+ {
+  "id": "60322cee-49d2-431b-9a5c-1f17b860ef8a",
+  "name": "Draconum Oth",
+  "genres": [
+   "metal",
+   "alternative"
+  ]
+ },
+ {
+  "id": "6a9881c8-8d0b-4144-857b-67e7319498c9",
+  "name": "La Pajarita La Paul",
+  "genres": [
+   "dembow"
+  ]
+ },
+ {
+  "id": "78edb083-e4c4-4031-80a5-c0fcd6a72f2d",
+  "name": "Indhira Rubiera",
+  "genres": [
+   "lírico"
+  ]
+ },
+ {
+  "id": "22de671f-2ec6-41f9-abef-7effec5bed97",
+  "name": "Anaís",
+  "genres": [
+   "ballad"
+  ]
+ },
+ {
+  "id": "fdc8f94d-46fc-4bd2-a559-2fc930d80492",
+  "name": "Bladimir Vásquez",
+  "genres": [
+   "reggaeton"
+  ]
+ },
+ {
+  "id": "f57eb2e7-9ca7-463d-baee-8b3ea1800e6b",
+  "name": "Secreto “El Famoso Biberón”",
+  "genres": [
+   "reggaeton",
+   "urban merengue"
+  ]
+ },
+ {
+  "id": "6c3e0d74-23b7-4d80-969f-9d5319ee5127",
+  "name": "Alex Bueno",
+  "genres": [
+   "bachata",
+   "salsa",
+   "bolero",
+   "ballads"
+  ]
+ },
+ {
+  "id": "b14bb5a3-2cb8-427d-9a31-85e898f60775",
+  "name": "Fritz Abreu",
+  "genres": [
+   "fusion"
+  ]
+ },
+ {
+  "id": "3c671ce9-585f-492f-bc0c-7cf3da6f75c6",
+  "name": "Antonio Vásquez",
+  "genres": [
+   "folklore"
+  ]
+ },
+ {
+  "id": "dab6636c-21fd-4e34-a0a2-e59e9e147bbd",
+  "name": "Luis Kalaff",
+  "genres": [
+   "bolero",
+   "traditional",
+   "salve"
+  ]
+ },
+ {
+  "id": "32c17637-5cad-40d0-b828-3604bdbd6bba",
+  "name": "Lucien Le Grub",
+  "genres": [
+   "alternative"
+  ]
+ },
+ {
+  "id": "fb2a3c19-e28e-44ec-984b-ddad8b76e579",
+  "name": "Fernando Soriano",
+  "genres": [
+   "bachata"
+  ]
+ },
+ {
+  "id": "5a564588-0496-4a7a-a075-5f49abf02a3a",
+  "name": "Guillermo",
+  "genres": [
+   "adoración"
+  ]
+ },
+ {
+  "id": "8af28323-f2b3-49ac-844f-27e30ffeea6e",
+  "name": "José Rufino Reyes y Siancas",
+  "genres": [
+   "sacra"
+  ]
+ },
+ {
+  "id": "2a0565c7-307a-492c-bc15-dac3f34f74cd",
+  "name": "Nelson de la Olla",
+  "genres": [
+   "merengue"
+  ]
+ },
+ {
+  "id": "ede33702-50a8-4e3d-825b-a43d96956807",
+  "name": "Orquesta in Art",
+  "genres": [
+   "jazz"
+  ]
+ },
+ {
+  "id": "0ba48748-6a20-47b4-b320-24cbd30267a1",
+  "name": "Los Homeboys",
+  "genres": [
+   "merenhouse",
+   "urban"
+  ]
+ },
+ {
+  "id": "9e148524-3310-448e-b1a0-df0093ea2af7",
+  "name": "Kalimete",
+  "genres": [
+   "urban"
+  ]
+ },
+ {
+  "id": "3dd4ffd4-6d58-4e78-b6d8-28f126eaed08",
+  "name": "BlackFox",
+  "genres": [
+   "indie"
+  ]
+ },
+ {
+  "id": "259b6b41-fa15-44ac-ab39-e341e1e97256",
+  "name": "Martha Heredia",
+  "genres": [
+   "r&b",
+   "reggaeton"
+  ]
+ },
+ {
+  "id": "775a5598-26f8-45ee-9583-8c3193db5934",
+  "name": "Papaa Tyga",
+  "genres": [
+   "urbano",
+   "urban-dembow"
+  ]
+ },
+ {
+  "id": "11b204c1-c8d1-4056-8b68-4084e1d493fc",
+  "name": "Hancel Osorius",
+  "genres": [
+   "classical"
+  ]
+ },
+ {
+  "id": "fc7db5b6-35fe-4f8d-a7b3-d1a3c13f495d",
+  "name": "DJ Gabriel Beast",
+  "genres": [
+   "latin urban",
+   "dembow"
+  ]
+ },
+ {
+  "id": "894e8c21-3cb7-4eb1-8742-266b5624029e",
+  "name": "Enrique de Marchena",
+  "genres": [
+   "romántico",
+   "classical"
+  ]
+ },
+ {
+  "id": "97aba7a6-2428-4540-8ddd-79ea8c487e36",
+  "name": "Teodoro Reyes",
+  "genres": [
+   "bachata"
+  ]
+ },
+ {
+  "id": "3bcd6c98-08d9-4008-8b5f-72ce8a10afa5",
+  "name": "Archaios",
+  "genres": [
+   "alternative"
+  ]
+ },
+ {
+  "id": "29832daf-f093-4ccb-820d-441cdc3f48c0",
+  "name": "Fernando Echavarría",
+  "genres": [
+   "son",
+   "merengue"
+  ]
+ },
+ {
+  "id": "80afcde5-4535-48ee-944f-8c157f61ae36",
+  "name": "King Streetz",
+  "genres": [
+   "urban"
+  ]
+ },
+ {
+  "id": "90f607a4-944a-4a19-9318-293693ebf109",
+  "name": "Los Congos del Espiritu Santo",
+  "genres": [
+   "afro-dominican",
+   "traditional"
+  ]
+ },
+ {
+  "id": "c462498c-0f4d-464f-b624-a576f8080e9d",
+  "name": "La India Canela",
+  "genres": [
+   "merengue",
+   "merengue-perico-ripiao"
+  ]
+ },
+ {
+  "id": "cf03a666-9ffc-4679-916f-f233959eb989",
+  "name": "Gabriel Pagán",
+  "genres": [
+   "pop latino"
+  ]
+ },
+ {
+  "id": "5cbc8f2b-cb68-4ebd-8006-6837be54bbe4",
+  "name": "Leo RD",
+  "genres": [
+   "urban"
+  ]
+ },
+ {
+  "id": "3b50d339-1ddb-455f-80fd-34cd953a44b4",
+  "name": "Abel",
+  "genres": [
+   "ballad"
+  ]
+ },
+ {
+  "id": "bc310977-31a9-41bb-9af2-7d3a0d7fabdd",
+  "name": "Fernando Villalona",
+  "genres": [
+   "bolero",
+   "balada"
+  ]
+ },
+ {
+  "id": "ab922331-8061-4359-b82b-b18415f84fec",
+  "name": "Derick Daniel Pérez Cordero",
+  "genres": [
+   "fusión"
+  ]
+ },
+ {
+  "id": "97610f30-fb92-4d77-8b98-ddec14d12afc",
+  "name": "Musicólogo the Libro",
+  "genres": [
+   "reggaeton",
+   "hip hop"
+  ]
+ },
+ {
+  "id": "b6063f89-aac3-48da-9833-6e6d98ec341d",
+  "name": "Mickey Taveras",
+  "genres": [
+   "merengue",
+   "bachata",
+   "latin pop"
+  ]
+ },
+ {
+  "id": "58fef0f7-b2a4-42bb-ac8c-462dd66609e4",
+  "name": "Sandy Gabriel",
+  "genres": [
+   "Latin Jazz",
+   "Fusion"
+  ]
+ },
+ {
+  "id": "4c291d80-954a-4c8f-8f82-6317253b26d8",
+  "name": "Esme",
+  "genres": [
+   "pop latino"
+  ]
+ },
+ {
+  "id": "e0c48f11-acb7-4cf5-a1e3-6874f59ddc2e",
+  "name": "DJ Plano",
+  "genres": [
+   "latin urban"
+  ]
+ },
+ {
+  "id": "f6f95f0f-e008-47b9-8b4c-10fe5508bfd9",
+  "name": "Los Ahijados",
+  "genres": [
+   "bolero"
+  ]
+ },
+ {
+  "id": "4d3a653c-688e-47c1-8cec-b8cf85a4abac",
+  "name": "Manuel Tejada",
+  "genres": [
+   "latin pop"
+  ]
+ },
+ {
+  "id": "7d104f9a-1fef-4e74-99c1-6e107eb24fd4",
+  "name": "Jeyless",
+  "genres": [
+   "pop"
+  ]
+ },
+ {
+  "id": "14a4dba6-84d2-4e50-bfb7-d40e3009b42a",
+  "name": "Alexandra Queen",
+  "genres": [
+   "Romantic"
+  ]
+ },
+ {
+  "id": "6f95dfa1-463d-4487-b774-82c63358f1c9",
+  "name": "Devin",
+  "genres": [
+   "bachata",
+   "pop latino"
+  ]
+ },
+ {
+  "id": "83278734-f0dc-4561-92f2-d2b029f60861",
+  "name": "Adriel.sfx",
+  "genres": [
+   "instrumental",
+   "experimental"
+  ]
+ },
+ {
+  "id": "d2153ac9-6cdd-4375-819b-12ea38034c5b",
+  "name": "Petiton Guzman",
+  "genres": [
+   "instrumental-classical"
+  ]
+ },
+ {
+  "id": "1073b3fc-41a4-43b5-a07f-dba7fccbb30b",
+  "name": "Donny Whey",
+  "genres": [
+   "dembow",
+   "reggaeton"
+  ]
+ },
+ {
+  "id": "f0d5984d-5cb5-4e32-9987-22e34738628b",
+  "name": "Jodio Loco Sucio",
+  "genres": [
+   "punk",
+   "alternative",
+   "funk rock"
+  ]
+ },
+ {
+  "id": "729fe0b1-aff4-4b83-a76e-f4cb1799f72d",
+  "name": "Irka Mateo",
+  "genres": [
+   "world music",
+   "fusion"
+  ]
+ },
+ {
+  "id": "bfe5f1a7-c6e5-45f6-96b7-d06eb088e1eb",
+  "name": "JP RMT",
+  "genres": [
+   "rap"
+  ]
+ },
+ {
+  "id": "5bdcbc0d-24de-451d-abdd-4e40ab13b3d4",
+  "name": "Barak",
+  "genres": [
+   "musica cristiana",
+   "pop rock"
+  ]
+ },
+ {
+  "id": "e8f0b2fb-1aa1-4c68-b806-89ff0b85bf4c",
+  "name": "Bullumba Landestoy",
+  "genres": [
+   "classical"
+  ]
+ },
+ {
+  "id": "33b2b3b7-67a7-4bb5-a02b-21765c961297",
+  "name": "Dary Hezz",
+  "genres": [
+   "dembow",
+   "reggaeton"
+  ]
+ },
+ {
+  "id": "b2d83ba2-33f6-4616-9045-357530630b33",
+  "name": "J NOA",
+  "genres": [
+   "hip-hop",
+   "urban"
+  ]
+ },
+ {
+  "id": "7aa05a4d-6647-41b0-8a1c-59786dee2d01",
+  "name": "Leonor Porcella de Brea",
+  "genres": [
+   "Bolero",
+   "Pop Latino"
+  ]
+ },
+ {
+  "id": "abbde0ea-e6c3-423e-9782-9b3364846898",
+  "name": "JC",
+  "genres": [
+   "trap"
+  ]
+ },
+ {
+  "id": "c0cb9ed6-e608-47a0-9808-8071dfe270c8",
+  "name": "Egleyda Belliard",
+  "genres": [
+   "pop latino",
+   "adoración"
+  ]
+ },
+ {
+  "id": "cc388346-fb30-46cc-90ae-4ee0ac2c35c4",
+  "name": "Alex Díaz",
+  "genres": [
+   "latin jazz",
+   "merengue"
+  ]
+ },
+ {
+  "id": "864288d0-a26a-4568-914a-d20c3b88ddcb",
+  "name": "Papi Sánchez",
+  "genres": [
+   "urban-rap-hip-hop"
+  ]
+ },
+ {
+  "id": "76b449e5-d6bc-431c-a602-d6807117ef31",
+  "name": "Héctor Santana",
+  "genres": [
+   "jazz latino"
+  ]
+ },
+ {
+  "id": "b22dbf04-c87b-4842-baac-0616b7613208",
+  "name": "Jhoni the Voice",
+  "genres": [
+   "urban"
+  ]
+ },
+ {
+  "id": "c0b20b8c-bb08-4bcf-b993-db19712a9fe1",
+  "name": "Emil Cerda",
+  "genres": [
+   "experimental",
+   "ambient"
+  ]
+ },
+ {
+  "id": "f5cc6a89-f6bc-4c3d-8130-82d98aa356d2",
+  "name": "José Batista \"Fuchi\"",
+  "genres": [
+   "folclor"
+  ]
+ },
+ {
+  "id": "6bfd238f-0945-4267-89b4-8817a0d90764",
+  "name": "FELIPE A. LINARES",
+  "genres": [
+   "choral",
+   "adoración"
+  ]
+ },
+ {
+  "id": "081c1484-bf1c-4b11-ba01-d68446b7b111",
+  "name": "Anthony Ríos",
+  "genres": [
+   "bolero",
+   "merengue",
+   "bachata"
+  ]
+ },
+ {
+  "id": "94078650-c948-4d90-8403-dde7632fcae1",
+  "name": "El Trio",
+  "genres": [
+   "son"
+  ]
+ },
+ {
+  "id": "71cf6272-50ba-4bb9-8211-b3d3bddfe3ae",
+  "name": "Amarfis",
+  "genres": [
+   "mambo"
+  ]
+ },
+ {
+  "id": "4d9ac6ac-6802-47f4-8731-5fa567713513",
+  "name": "Joan Soriano",
+  "genres": [
+   "world music"
+  ]
+ },
+ {
+  "id": "858f68cd-dc14-497a-8391-c4a1b1777d27",
+  "name": "Fortuna la Súper F",
+  "genres": [
+   "urban",
+   "Reggaeton"
+  ]
+ },
+ {
+  "id": "59f1f901-ea28-41d4-afa9-f7385dd594a4",
+  "name": "Alih Jey",
+  "genres": [
+   "indie pop",
+   "latin pop"
+  ]
+ },
+ {
+  "id": "88304ea5-3c5f-4a3d-8f72-6e99e925ccb7",
+  "name": "AKINOhayLEY",
+  "genres": [
+   "r&b",
+   "alternative",
+   "rap"
+  ]
+ },
+ {
+  "id": "360bec27-421a-466f-8604-3598aa46a7a4",
+  "name": "Luis Alberti",
+  "genres": [
+   "bolero",
+   "traditional",
+   "big-band"
+  ]
+ },
+ {
+  "id": "ef56311a-ac4b-451e-a7a7-97e5f240cd47",
+  "name": "Luny Tunes",
+  "genres": [
+   "latin urban",
+   "bachaton",
+   "latin"
+  ]
+ },
+ {
+  "id": "ab5f3288-2c71-45d7-bdcc-a3542077c774",
+  "name": "Iris & Franklyn",
+  "genres": [
+   "adoración"
+  ]
+ },
+ {
+  "id": "96e69c00-dbb0-4cb4-ab48-ea46be9c4591",
+  "name": "Raulín Rodríguez",
+  "genres": [
+   "bachata-romantica"
+  ]
+ },
+ {
+  "id": "71f57b0b-1070-401b-b2c5-b7d4ea9a716b",
+  "name": "Lismar",
+  "genres": [
+   "urban",
+   "dembow",
+   "Drill"
+  ]
+ },
+ {
+  "id": "2d0d3f67-3018-4ddb-b388-f5abe48b729b",
+  "name": "Bartolito y Los Bravos del Son",
+  "genres": [
+   "afro-cuban"
+  ]
+ },
+ {
+  "id": "41fa2ce2-dd3d-44b8-82b5-ab2df86f9a8a",
+  "name": "Duluc",
+  "genres": [
+   "fusión",
+   "rock"
+  ]
+ }
+]

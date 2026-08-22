@@ -1,0 +1,20 @@
+[
+ {
+  "id": "a617f08c-0d62-4d34-89a8-ce9afaa87dac",
+  "name": "Bocatabú",
+  "primary_genre": "pop",
+  "status": "published"
+ },
+ {
+  "id": "c61142b8-986a-4ae0-a31b-f93b056237e4",
+  "name": "Brandom Regino",
+  "primary_genre": "other",
+  "status": "needs_review"
+ },
+ {
+  "id": "4e81dfc4-be26-459d-9700-13defa778092",
+  "name": "Mariangel",
+  "primary_genre": "pop",
+  "status": "published"
+ }
+]
