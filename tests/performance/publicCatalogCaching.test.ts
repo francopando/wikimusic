@@ -53,8 +53,11 @@ test("genre data caches isolate slug, subgenre, options, and media inputs", () =
   assert.match(genreApi, /public-top-genre-options-v1/);
   assert.match(genreApi, /public-genre-media-v1/);
   assert.doesNotMatch(genreApi, /public-genre-page-data-v1/);
-  assert.match(genreRoute, /export const dynamic = "force-dynamic"/);
-  assert.match(genreRoute, /requestedSubgenre/);
+  // Phase 3A moved genre profiles into the Full Route Cache: the route no
+  // longer opts out of caching, and subgenre state moved to the client.
+  // Detailed coverage lives in genreProfileCaching.test.ts.
+  assert.doesNotMatch(genreRoute, /export const dynamic = "force-dynamic"/);
+  assert.match(genreRoute, /export const revalidate = 86400/);
 });
 
 test("artist mutations invalidate profile paths and shared public directories", () => {

@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { requireAdminApiRole } from "@/lib/adminApiAuth";
 import { createServiceRoleClient } from "@/lib/supabaseService";
+import { revalidateGenreContent } from "@/lib/revalidateGenre";
 
 type SubgenrePayload = {
   genre_id?: string | number;
@@ -163,6 +164,9 @@ export async function POST(request: Request) {
       { status: 500 },
     );
   }
+
+  // Subgenre names/history render on the cached genre page.
+  revalidateGenreContent();
 
   return NextResponse.json({ ok: true, id: response.data.id });
 }

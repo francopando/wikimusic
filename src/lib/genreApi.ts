@@ -1,7 +1,7 @@
 import { getSupabaseClient } from "@/lib/supabase";
 import { unstable_cache } from "next/cache";
 import {
-  PUBLIC_CATALOG_REVALIDATE_SECONDS,
+  PUBLIC_GENRE_REVALIDATE_SECONDS,
   PUBLIC_GENRE_CACHE_TAG,
 } from "@/lib/publicCatalogCache";
 import {
@@ -139,7 +139,7 @@ const getCatalogGenre = unstable_cache(
   loadCatalogGenre,
   ["public-catalog-genre-v1"],
   {
-    revalidate: PUBLIC_CATALOG_REVALIDATE_SECONDS,
+    revalidate: PUBLIC_GENRE_REVALIDATE_SECONDS,
     tags: [PUBLIC_GENRE_CACHE_TAG],
   },
 );
@@ -215,7 +215,7 @@ const getMostViewedPrimaryGenreArtists = unstable_cache(
   loadMostViewedPrimaryGenreArtists,
   ["public-genre-artists-v1"],
   {
-    revalidate: PUBLIC_CATALOG_REVALIDATE_SECONDS,
+    revalidate: PUBLIC_GENRE_REVALIDATE_SECONDS,
     tags: [PUBLIC_GENRE_CACHE_TAG],
   },
 );
@@ -291,7 +291,7 @@ export const getTopGenreOptions = unstable_cache(
   loadTopGenreOptions,
   ["public-top-genre-options-v1"],
   {
-    revalidate: PUBLIC_CATALOG_REVALIDATE_SECONDS,
+    revalidate: PUBLIC_GENRE_REVALIDATE_SECONDS,
     tags: [PUBLIC_GENRE_CACHE_TAG],
   },
 );
@@ -315,7 +315,43 @@ export const getGenreMedia = unstable_cache(
   loadGenreMedia,
   ["public-genre-media-v1"],
   {
-    revalidate: PUBLIC_CATALOG_REVALIDATE_SECONDS,
+    revalidate: PUBLIC_GENRE_REVALIDATE_SECONDS,
     tags: [PUBLIC_GENRE_CACHE_TAG],
   },
 );
+
+/**
+ * Artists and media for one subgenre of a genre.
+ *
+ * Phase 3A moved subgenre filtering off the server render so the canonical
+ * genre page can live in the Full Route Cache. The server now always renders
+ * the unfiltered genre; this is what the client calls when a visitor picks a
+ * subgenre. It reuses the same cached helpers the canonical render uses
+ * (getGenrePageData, getMostViewedPrimaryGenreArtists, getGenreMedia), so a
+ * filtered view costs no more database work than the page already did — and
+ * usually none, because those caches are warm.
+ *
+ * Returns null for an unknown genre or subgenre so the caller can fall back to
+ * the canonical view rather than render an empty state.
+ */
+export async function getSubgenreContext(
+  genreSlug: string,
+  subgenreSlug: string,
+): Promise<{ artists: ArtistSummary[]; media: GenreMedia[] } | null> {
+  const data = await getGenrePageData(genreSlug);
+  if (!data) return null;
+
+  const subgenre = data.subgenres.find((entry) => entry.slug === subgenreSlug);
+  if (!subgenre) return null;
+
+  const artistRows =
+    (await safeQuery("subgenreArtists", () =>
+      getMostViewedPrimaryGenreArtists(
+        uniqueValues([subgenre.slug, subgenre.name, normalize(subgenre.name)]),
+      ),
+    )) ?? [];
+
+  const media = subgenre.id ? await getGenreMedia(subgenre.id) : [];
+
+  return { artists: artistRows.map(toArtistSummary), media };
+}

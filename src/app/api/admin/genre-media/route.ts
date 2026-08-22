@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { requireAdminApiRole } from "@/lib/adminApiAuth";
 import { createServiceRoleClient } from "@/lib/supabaseService";
+import { revalidateGenreContent } from "@/lib/revalidateGenre";
 
 const FIELDS = "id,genre_id,media_type,title,url,platform,external_id,thumbnail_url,published_date,youtube_channel_id,youtube_channel_name,youtube_channel_url,youtube_channel_avatar_url,youtube_metadata_fetched_at,is_official,is_featured,display_order,notes";
 
@@ -29,6 +30,7 @@ export async function POST(request: Request) {
     : createServiceRoleClient().from("genre_media").insert(payload);
   const { data, error } = await query.select("id").maybeSingle();
   if (error) return NextResponse.json({ ok: false, error: error.message }, { status: 500 });
+  revalidateGenreContent();
   return NextResponse.json({ ok: true, id: data?.id });
 }
 
@@ -39,5 +41,6 @@ export async function DELETE(request: Request) {
   if (!mediaId || !genreId) return NextResponse.json({ ok: false, error: "Media and genre ids are required." }, { status: 400 });
   const { error } = await createServiceRoleClient().from("genre_media").delete().eq("id", mediaId).eq("genre_id", genreId);
   if (error) return NextResponse.json({ ok: false, error: error.message }, { status: 500 });
+  revalidateGenreContent();
   return NextResponse.json({ ok: true });
 }

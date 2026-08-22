@@ -4,14 +4,10 @@ import { getLocale, getTranslations } from "next-intl/server";
 import { localizeGenreContent } from "@/lib/genreContent.es";
 import MainWrapper from "@/components/layout/MainWrapper";
 import AnalyticsPageView from "@/components/analytics/AnalyticsPageView";
-import SectionCard from "@/components/layout/SectionCard";
-import ArtistCard from "@/components/molecules/ArtistCard";
-import BioText from "@/components/molecules/BioText";
-import GenreCarouselSection from "@/components/organisms/GenreCarouselSection";
-import ArtistInterviewsCarousel from "@/components/organisms/ArtistInterviewsCarousel";
+import GenreDynamicSections, { GenreHistoryLink } from "@/components/genres/GenreDynamicSections";
+import GenreSubgenreProvider from "@/components/genres/GenreSubgenreProvider";
 import SubgenreSelector from "@/components/genres/SubgenreSelector";
 import GenreTitleSelector from "@/components/genres/GenreTitleSelector";
-import GenreSubgenreSongs from "@/components/genres/GenreSubgenreSongs";
 import JsonLd from "@/components/seo/JsonLd";
 import {
   getGenrePageData,
@@ -19,17 +15,37 @@ import {
   getGenreMedia,
   getTopGenreOptions,
 } from "@/lib/genreApi";
+import { ALL_SUBGENRES, type GenreLabelSet, type GenreLabels } from "@/lib/genreLabels";
 import { genreDefinitions } from "@/lib/genres";
 import { createPageMetadata, genreSeoTitle } from "@/lib/seo";
 import { breadcrumbSchema, collectionPageSchema } from "@/lib/structuredData";
 
 type PageProps = {
   params: Promise<{ slug: string; locale: string }>;
-  searchParams: Promise<{ subgenre?: string | string[] }>;
 };
 
-export const dynamic = "force-dynamic";
+/**
+ * Genre profiles are cacheable HTML.
+ *
+ * This route was `force-dynamic` and read `?subgenre=` during the server
+ * render, so every request — including repeated hits on the same canonical
+ * URL — was rendered at origin. Production logs showed 78 genre renders with
+ * zero cache hits of any kind.
+ *
+ * The server now renders only the canonical, unfiltered genre, so the route
+ * has a bounded cache identity: query strings are ignored here and therefore
+ * cannot multiply Full Route Cache entries. Subgenre filtering moved to the
+ * client (see GenreSubgenreProvider).
+ *
+ * The 24h fallback TTL is a safety net, not the freshness mechanism: the admin
+ * genre, subgenre and genre-media routes revalidate this page on demand (see
+ * src/lib/revalidateGenre.ts).
+ */
+export const revalidate = 86400;
 
+// Genres are a small, bounded family (~18 canonical slugs), so prerendering
+// them at build is cheap and gives crawlers a warm cache from the first hit.
+// This export existed before but was inert under `force-dynamic`.
 export async function generateStaticParams() {
   const dbSlugs = await getGenrePageSlugs();
   const slugs = Array.from(new Set([...genreDefinitions.map((genre) => genre.slug), ...dbSlugs]));
@@ -61,12 +77,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   });
 }
 
-export default async function GenrePage({ params, searchParams }: PageProps) {
+export default async function GenrePage({ params }: PageProps) {
   const { slug, locale: routeLocale } = await params;
-  const requestedValue = (await searchParams).subgenre;
-  const requestedSubgenre = typeof requestedValue === "string" ? requestedValue : undefined;
   const [data, topGenreOptions] = await Promise.all([
-    getGenrePageData(slug, requestedSubgenre),
+    getGenrePageData(slug),
     getTopGenreOptions(),
   ]);
 
@@ -75,26 +89,37 @@ export default async function GenrePage({ params, searchParams }: PageProps) {
   const t = await getTranslations("pages.genreDetail");
   const locale = await getLocale();
 
-  const {
-    subgenres,
-    connectedArtists,
-  } = data;
+  const { subgenres, connectedArtists } = data;
   const genre = localizeGenreContent(data.genre, locale);
-  const selectedSubgenre = requestedSubgenre
-    ? subgenres.find((subgenre) => subgenre.slug === requestedSubgenre) ?? null
-    : null;
-  const genreMediaId = selectedSubgenre?.id ?? genre.catalogId;
-  const genreMedia = genreMediaId ? await getGenreMedia(genreMediaId) : [];
-  const activeGenreName = selectedSubgenre?.name ?? genre.title;
-  const activeHistory = selectedSubgenre
-    ? locale === "es"
-      ? selectedSubgenre.historyEs || selectedSubgenre.history
-      : selectedSubgenre.history
-    : genre.history;
+  const genreMedia = genre.catalogId ? await getGenreMedia(genre.catalogId) : [];
   const sortedSubgenres = subgenres.slice().sort((a, b) =>
     a.name.localeCompare(b.name, locale, { sensitivity: "base" }),
   );
   const Icon = genre.icon;
+
+  // The public client bundle deliberately excludes the `pages.*` messages
+  // (see [locale]/layout.tsx), so headings are resolved here and handed down.
+  // Every possible active name is known server-side — the genre itself plus
+  // each of its subgenres — so this is a small, bounded set of strings.
+  const labelsFor = (name: string): GenreLabelSet => ({
+    connectedArtists: t("connectedArtists", { genre: name }),
+    songsHeading: t("subgenreSongs", { name }),
+    songsEmpty: t("noSongsAssigned", { name }),
+    mediaTitle: t("publicMedia.title", { genre: name }),
+    history: t("history", { genre: name }),
+    learnMoreHistory: t("learnMoreHistory", { genre: name }),
+  });
+  const labels: GenreLabels = {
+    byKey: {
+      [ALL_SUBGENRES]: labelsFor(genre.title),
+      ...Object.fromEntries(
+        sortedSubgenres.map((subgenre) => [subgenre.slug, labelsFor(subgenre.name)]),
+      ),
+    },
+    loadError: t("loadError"),
+    sortAria: t("sortAria"),
+    mediaSubtitle: t("publicMedia.subtitle"),
+  };
 
   return (
     <MainWrapper>
@@ -113,101 +138,53 @@ export default async function GenrePage({ params, searchParams }: PageProps) {
         ]}
       />
       <AnalyticsPageView eventType="genre_view" entityId={genre.slug} />
-      <div className="w-full px-5 pb-10 pt-5 sm:px-6 sm:pb-12 sm:pt-6">
-        <header className="mb-8 overflow-hidden rounded-lg border border-black/5 bg-white shadow-sm">
-          <div className="grid gap-0 md:grid-cols-[1fr_280px]">
-            <div className="p-6 sm:p-8">
-              <GenreTitleSelector
-                currentSlug={genre.slug}
-                currentTitle={genre.title}
-                options={topGenreOptions}
-                label={t("genreSelectorLabel")}
-              />
-              <p className="mt-5 max-w-3xl text-base leading-relaxed text-gray-700 sm:text-lg">
-                {genre.description}
-              </p>
-              {activeHistory && (
-                <a
-                  href="#genre-history"
-                  className="mt-4 inline-flex text-sm font-semibold text-[#8B0000] underline decoration-[#8B0000]/30 underline-offset-4 transition-colors hover:text-[#CE1126]"
-                >
-                  {t("learnMoreHistory", { genre: activeGenreName })}
-                </a>
-              )}
-            </div>
+      <GenreSubgenreProvider
+        genreSlug={genre.slug}
+        genreHistory={genre.history ?? null}
+        subgenres={sortedSubgenres}
+        canonicalArtists={connectedArtists}
+        canonicalMedia={genreMedia}
+        locale={locale}
+        labels={labels}
+      >
+        <div className="w-full px-5 pb-10 pt-5 sm:px-6 sm:pb-12 sm:pt-6">
+          <header className="mb-8 overflow-hidden rounded-lg border border-black/5 bg-white shadow-sm">
+            <div className="grid gap-0 md:grid-cols-[1fr_280px]">
+              <div className="p-6 sm:p-8">
+                <GenreTitleSelector
+                  currentSlug={genre.slug}
+                  currentTitle={genre.title}
+                  options={topGenreOptions}
+                  label={t("genreSelectorLabel")}
+                />
+                <p className="mt-5 max-w-3xl text-base leading-relaxed text-gray-700 sm:text-lg">
+                  {genre.description}
+                </p>
+                <GenreHistoryLink />
+              </div>
 
-            <div className={`flex min-h-48 flex-col items-center justify-center py-6 ${genre.color}`}>
-              <Icon className="h-20 w-20 text-white/90" strokeWidth={1.4} />
-              {sortedSubgenres.length > 0 && (
-                <>
-                  <p className="mt-4 text-center text-sm font-semibold uppercase tracking-[0.16em] text-white">
-                    {t("subgenresStyles")}
-                  </p>
-                  <SubgenreSelector
-                    options={sortedSubgenres}
-                    selectedSlug={selectedSubgenre?.slug ?? null}
-                    hasInvalidSelection={Boolean(requestedSubgenre && !selectedSubgenre)}
-                    label={t("subgenreSelector.label")}
-                    allLabel={t("subgenreSelector.all")}
-                  />
-                </>
-              )}
+              <div className={`flex min-h-48 flex-col items-center justify-center py-6 ${genre.color}`}>
+                <Icon className="h-20 w-20 text-white/90" strokeWidth={1.4} />
+                {sortedSubgenres.length > 0 && (
+                  <>
+                    <p className="mt-4 text-center text-sm font-semibold uppercase tracking-[0.16em] text-white">
+                      {t("subgenresStyles")}
+                    </p>
+                    <SubgenreSelector
+                      label={t("subgenreSelector.label")}
+                      allLabel={t("subgenreSelector.all")}
+                    />
+                  </>
+                )}
+              </div>
             </div>
+          </header>
+
+          <div className="space-y-8">
+            <GenreDynamicSections genreCatalogId={genre.catalogId ?? null} />
           </div>
-        </header>
-
-        <div className="space-y-8">
-          {connectedArtists.length > 0 && (
-            <GenreCarouselSection
-              title={t("connectedArtists", {
-                genre: activeGenreName,
-              })}
-            >
-              {connectedArtists.map((artist, index) => (
-                <div key={artist.id} className="shrink-0 w-28 sm:w-32 lg:w-36">
-                  <ArtistCard artist={artist} titleAs="h3" priorityImage={index === 0} />
-                </div>
-              ))}
-            </GenreCarouselSection>
-          )}
-
-          {genre.catalogId && (
-            <GenreSubgenreSongs
-              key={selectedSubgenre?.slug ?? "all"}
-              genreId={genre.catalogId}
-              subgenre={selectedSubgenre}
-              labels={{
-                loadError: t("loadError"),
-                heading: t("subgenreSongs", { name: activeGenreName }),
-                sortAria: t("sortAria"),
-                empty: t("noSongsAssigned", { name: activeGenreName }),
-              }}
-            />
-          )}
-
-          <ArtistInterviewsCarousel
-            interviews={genreMedia}
-            title={t("publicMedia.title", { genre: activeGenreName })}
-            subtitle={t("publicMedia.subtitle")}
-          />
-
-          {activeHistory && (
-            <div id="genre-history" className="scroll-mt-20 sm:scroll-mt-24">
-              <SectionCard>
-                <div className="section-inner">
-                  <div className="section-header">
-                    <h2>{t("history", { genre: activeGenreName })}</h2>
-                  </div>
-                  <div className="max-w-5xl">
-                    <BioText bio={activeHistory} />
-                  </div>
-                </div>
-              </SectionCard>
-            </div>
-          )}
-
         </div>
-      </div>
+      </GenreSubgenreProvider>
     </MainWrapper>
   );
 }

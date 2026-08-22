@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { requireAdminApiRole } from "@/lib/adminApiAuth";
 import { createServiceRoleClient } from "@/lib/supabaseService";
+import { revalidateGenreContent } from "@/lib/revalidateGenre";
 
 export async function GET(request: Request) {
   const auth = await requireAdminApiRole("editor");
@@ -92,6 +93,10 @@ export async function POST(request: Request) {
       { status: 500 },
     );
   }
+
+  // Genre profiles are cached HTML with a 24h fallback TTL, so editorial
+  // changes have to invalidate rather than wait for expiry.
+  revalidateGenreContent(payload.slug);
 
   return NextResponse.json({ ok: true, id: response.data.id });
 }
