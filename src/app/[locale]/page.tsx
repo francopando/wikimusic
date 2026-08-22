@@ -109,12 +109,12 @@ export default async function HomePage({
           },
         ]}
       />
-      <PageSection className="!mt-6 !mb-2">
-        <div className="max-w-4xl">
-          <h1 className="text-2xl sm:text-3xl font-normal tracking-tight text-gray-800">
+      <PageSection className="!mt-3 !mb-0">
+        <div className="max-w-3xl">
+          <h1 className="text-lg sm:text-xl font-normal tracking-tight text-gray-700">
             {t("title")}
           </h1>
-          <p className="mt-2 text-sm sm:text-base leading-relaxed text-gray-600">
+          <p className="mt-1 text-sm leading-snug text-gray-500">
             {t("introduction")}
           </p>
         </div>
