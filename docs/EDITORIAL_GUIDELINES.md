@@ -7,6 +7,7 @@ This document explains the editorial philosophy and decision-making framework fo
 **Related Documents:**
 - [DATA_GOVERNANCE.md](DATA_GOVERNANCE.md) — Technical data model (entity definitions, relationships)
 - [ROLE_DICTIONARY.md](ROLE_DICTIONARY.md) — Valid role names at each level
+- [EDITORIAL_BIOGRAPHY_FORMAT.md](EDITORIAL_BIOGRAPHY_FORMAT.md) — How artist biographies are structured and stored
 
 ---
 

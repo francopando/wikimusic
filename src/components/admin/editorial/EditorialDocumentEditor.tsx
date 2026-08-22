@@ -5,6 +5,7 @@ import { NodeSelection } from "@tiptap/pm/state";
 import { AlignLeft, AtSign, Bold, Eye, Heading2, Heading3, Heading4, IndentDecrease, IndentIncrease, Italic, Link2, List, ListOrdered, Minus, Quote, Redo2, RemoveFormatting, RotateCcw, Save, Unlink, Undo2 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useEffect, useMemo, useState } from "react";
+import { createPortal } from "react-dom";
 import ArtistCombobox, { type ArtistComboboxOption } from "@/components/admin/ArtistCombobox";
 import { editorialDocumentHasVisibleText } from "@/lib/editorial/biographyFallback";
 import { saveAdminEditorialDocument, type AdminEditorialDocumentState } from "@/lib/editorial/adminClient";
@@ -24,9 +25,15 @@ type Props = {
   initial: AdminEditorialDocumentState | null;
   onDirtyChange: (dirty: boolean) => void;
   onReloadRequested: () => Promise<void>;
+  /**
+   * Optional container for the Save draft / Publish controls, letting a parent
+   * host them outside this component (the biography editor puts them on the
+   * language-tab row). When omitted the controls stay in the footer as before.
+   */
+  actionsSlot?: HTMLElement | null;
 };
 
-export default function EditorialDocumentEditor({ ownerArtistId, locale, initial, onDirtyChange, onReloadRequested }: Props) {
+export default function EditorialDocumentEditor({ ownerArtistId, locale, initial, onDirtyChange, onReloadRequested, actionsSlot }: Props) {
   const t = useTranslations("admin.editorialToolbar");
   const [dirty, setDirty] = useState(false);
   const [status, setStatus] = useState<"draft" | "published">(initial?.status ?? "draft");
@@ -127,6 +134,14 @@ export default function EditorialDocumentEditor({ ownerArtistId, locale, initial
 
   if (!editor) return <p className="p-4 text-sm text-gray-500">Loading editor…</p>;
 
+  const documentActions = (
+    <>
+      <button type="button" disabled={saving} onClick={() => void save("draft")} className="inline-flex items-center gap-2 rounded bg-gray-700 px-4 py-2 text-sm text-white disabled:opacity-40"><Save size={15}/>Save draft</button>
+      <button type="button" disabled={saving} onClick={() => void save("published")} className="inline-flex items-center gap-2 rounded bg-(--color-flagblue) px-4 py-2 text-sm text-white disabled:opacity-40">Publish</button>
+      {dirty && <span className="self-center text-xs font-medium text-amber-700">Unsaved changes</span>}
+    </>
+  );
+
   return (
     <div className="rounded-xl border border-blue-100 bg-white shadow-sm" data-document-id={documentId ?? undefined}>
       <div className="flex flex-wrap items-center justify-between gap-3 border-b border-gray-100 px-4 py-3">
@@ -178,7 +193,9 @@ export default function EditorialDocumentEditor({ ownerArtistId, locale, initial
       {issues.length > 0 && <ul role="alert" className="mx-4 mb-3 list-disc pl-5 text-sm text-red-700">{issues.map((issue) => <li key={`${issue.path}:${issue.message}`}>{issue.path}: {issue.message}</li>)}</ul>}
       {message && <p role="status" className={`mx-4 mb-3 text-sm ${stale ? "text-amber-800" : "text-gray-700"}`}>{message}</p>}
       {stale && <button type="button" onClick={async () => { if (window.confirm("Reloading will replace your unsaved changes. Continue?")) await onReloadRequested(); }} className="mx-4 mb-3 inline-flex items-center gap-2 rounded border px-3 py-2 text-sm"><RotateCcw size={15}/>Reload saved version</button>}
-      <div className="flex flex-wrap gap-2 border-t p-3"><button type="button" disabled={saving} onClick={() => void save("draft")} className="inline-flex items-center gap-2 rounded bg-gray-700 px-4 py-2 text-sm text-white disabled:opacity-40"><Save size={15}/>Save draft</button><button type="button" disabled={saving} onClick={() => void save("published")} className="inline-flex items-center gap-2 rounded bg-(--color-flagblue) px-4 py-2 text-sm text-white disabled:opacity-40">Publish</button>{dirty && <span className="self-center text-xs font-medium text-amber-700">Unsaved changes</span>}</div>
+      {actionsSlot
+        ? createPortal(documentActions, actionsSlot)
+        : <div className="flex flex-wrap gap-2 border-t p-3">{documentActions}</div>}
     </div>
   );
 }

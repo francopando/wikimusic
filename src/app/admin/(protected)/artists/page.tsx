@@ -211,6 +211,12 @@ type AdminGenresResponse = {
   error?: string;
 };
 
+type AdminArtistsListResponse = {
+  ok: boolean;
+  artists?: AdminArtist[];
+  error?: string;
+};
+
 async function readAdminJson<T extends { ok?: boolean; error?: string }>(
   response: Response,
   fallbackMessage: string
@@ -734,22 +740,25 @@ export default function AdminDashboard() {
   const fetchData = useCallback(async () => {
     setLoading(true);
 
-    const { data: artistsData, error: artistsError } = await supabase
-      .from("artists")
-      .select("*")
-      .order("name", { ascending: true });
+    // Loaded through the admin API instead of the browser client: the only
+    // SELECT policy on `artists` is `status = 'published'` for anon/authenticated,
+    // so a direct query hides draft, hidden, duplicate and needs_review artists
+    // from the editor whose job is to review them.
+    const response = await fetch("/api/admin/artists?all=1");
+    const result = await readApiJson<AdminArtistsListResponse>(
+      response,
+      "Admin artists endpoint"
+    );
 
-    if (artistsError) {
-      console.error("Error fetching artists:", artistsError);
-      setStatus(`Error loading artists: ${artistsError.message}`);
-    }
-
-    if (artistsData) {
-      setArtists(artistsData as AdminArtist[]);
+    if (!response.ok || !result.ok) {
+      console.error("Error fetching artists:", result.error);
+      setStatus(`Error loading artists: ${result.error || response.statusText}`);
+    } else {
+      setArtists(result.artists ?? []);
     }
 
     setLoading(false);
-  }, [supabase]);
+  }, []);
 
   const fetchGenreCatalog = useCallback(async () => {
     const genresResponse = await fetch("/api/admin/genres?hierarchy=1");

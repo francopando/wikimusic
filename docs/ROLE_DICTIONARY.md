@@ -61,6 +61,20 @@ Roles are organized by credit level (per ADR-001: Three-Level Credit Architectur
 | `percussion` | Percussionist on this recording | Timbales, congas, etc. | General percussion |
 | `conductor` | Conductor/director of this recording session | Orchestra conductor | Conducting role |
 
+#### Dominican Traditional Instruments
+
+The three instruments of the merengue típico trio. Added because the general
+roles above cannot express them: `percussion` erases the distinction between
+güira and tambora, which are different instruments played by different people,
+and the accordion had no role at all despite being the lead instrument of the
+genre. Use these rather than approximating with `percussion`.
+
+| Role | Definition | Example | Notes |
+|------|-----------|---------|-------|
+| `accordion` | Accordion player on this recording | Merengue típico accordionist | Lead instrument of merengue típico |
+| `guira` | Güira player on this recording | Güirero | Metal scraper; distinct from `percussion` |
+| `tambora` | Tambora player on this recording | Tamborero | Two-headed drum; distinct from `percussion` |
+
 ### Technical Roles
 
 | Role | Definition | Example | Notes |

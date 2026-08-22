@@ -8,6 +8,32 @@ import { hasForbiddenArtistBiographyFields } from "@/lib/editorial/migration";
 import { getArtistBiographyReferences } from "@/lib/editorial/serverLifecycle";
 import { summarizeBiographyReferencesForDelete } from "@/lib/editorial/lifecycle";
 
+const LIST_COLUMNS =
+  "id,name,slug,stage_name,sort_name,status,type,primary_role,primary_genre,province,aliases";
+
+// `all=1` backs the admin artists editor, which needs full records for every
+// status. The browser client cannot serve that list: the only SELECT policy on
+// `artists` is `status = 'published'` for anon/authenticated, so drafts and
+// needs_review records are invisible to it. This route runs under the service
+// role, so it is the admin's only complete view of the catalog.
+const ALL_ROWS_LIMIT = 2000;
+
+type SubtitleFields = {
+  primary_role?: string | null;
+  primary_genre?: string | null;
+  province?: string | null;
+  stage_name?: string | null;
+};
+
+function withSubtitles<T extends SubtitleFields>(rows: T[]) {
+  return rows.map((artist) => ({
+    ...artist,
+    subtitle: [artist.primary_role, artist.primary_genre, artist.province, artist.stage_name]
+      .filter(Boolean)
+      .join(" · "),
+  }));
+}
+
 export async function GET(request: Request) {
   const auth = await requireAdminApiRole();
   if (auth.response) return auth.response;
@@ -17,10 +43,27 @@ export async function GET(request: Request) {
   const ids = (searchParams.get("ids") ?? "").split(",").filter(Boolean).slice(0, 50);
   const q = searchParams.get("q")?.trim() ?? "";
   const limit = Math.min(Number(searchParams.get("limit") ?? "25"), 50);
+  const all = searchParams.get("all") === "1";
+
+  // Whole catalog, every status, full records. Kept as its own query because the
+  // typed client needs a literal `select`, so this cannot share the builder below.
+  if (all) {
+    const { data, error } = await createServiceRoleClient()
+      .from("artists")
+      .select("*")
+      .order("name", { ascending: true })
+      .limit(ALL_ROWS_LIMIT);
+
+    if (error) {
+      return NextResponse.json({ ok: false, error: error.message }, { status: 500 });
+    }
+
+    return NextResponse.json({ ok: true, artists: withSubtitles(data ?? []) });
+  }
 
   let query = createServiceRoleClient()
     .from("artists")
-    .select("id,name,slug,stage_name,sort_name,status,type,primary_role,primary_genre,province,aliases")
+    .select(LIST_COLUMNS)
     .order("name", { ascending: true })
     .limit(limit);
 
@@ -50,7 +93,7 @@ export async function GET(request: Request) {
   if (!id && q) {
     const { data: aliasRows } = await createServiceRoleClient()
       .from("artists")
-      .select("id,name,slug,stage_name,sort_name,status,type,primary_role,primary_genre,province,aliases")
+      .select(LIST_COLUMNS)
       .contains("aliases", [q])
       .limit(limit);
     const byId = new Map(rows.map((artist) => [artist.id, artist]));
@@ -58,14 +101,7 @@ export async function GET(request: Request) {
     rows = [...byId.values()].slice(0, limit);
   }
 
-  const artists = rows.map((artist) => ({
-    ...artist,
-    subtitle: [artist.primary_role, artist.primary_genre, artist.province, artist.stage_name]
-      .filter(Boolean)
-      .join(" · "),
-  }));
-
-  return NextResponse.json({ ok: true, artists });
+  return NextResponse.json({ ok: true, artists: withSubtitles(rows) });
 }
 
 export async function POST(request: Request) {

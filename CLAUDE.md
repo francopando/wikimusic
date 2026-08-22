@@ -39,7 +39,14 @@ Valid role names and relationship types.
 - Don't invent new roles
 - Search this before adding to any role field
 
-### 4. **[docs/BUILD_NOTES.md](docs/BUILD_NOTES.md)** ← If modifying build/architecture
+### 4. **[docs/EDITORIAL_BIOGRAPHY_FORMAT.md](docs/EDITORIAL_BIOGRAPHY_FORMAT.md)** ← Before writing any artist biography
+How biographies are structured and stored.
+- Bold is for section titles only — never inline bold
+- Biographies live in `editorial_documents`, not `artists.bio_*`
+- Linking other artists (`artistReference` + `editorial_entity_references`)
+- Field hygiene: `occupations`/`genres` must not repeat `primary_role`/`primary_genre`
+
+### 5. **[docs/BUILD_NOTES.md](docs/BUILD_NOTES.md)** ← If modifying build/architecture
 Build and deployment conventions.
 - Only needed if touching CI/CD, migrations, or infrastructure
 
@@ -130,6 +137,7 @@ If uncertain about any of these, ask for review rather than guessing.
 | AI_INSTRUCTIONS.md | Before any code change | docs/AI_INSTRUCTIONS.md |
 | DATA_GOVERNANCE.md | Before any schema change | docs/DATA_GOVERNANCE.md |
 | ROLE_DICTIONARY.md | When adding roles | docs/ROLE_DICTIONARY.md |
+| EDITORIAL_BIOGRAPHY_FORMAT.md | Before writing an artist biography | docs/EDITORIAL_BIOGRAPHY_FORMAT.md |
 | BUILD_NOTES.md | When modifying build | docs/BUILD_NOTES.md |
 
 ---
