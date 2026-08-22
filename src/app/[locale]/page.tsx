@@ -21,7 +21,8 @@ import DecadeTimelineCarousel from "@/components/home/DecadeTimelineCarousel";
 import { getArchiveCounts } from "@/lib/getSongsByYear";
 import { createPageMetadata, type SeoLocale } from "@/lib/seo";
 import JsonLd from "@/components/seo/JsonLd";
-import { SITE_NAME, SITE_URL } from "@/lib/seo";
+import { buildLocalizedCanonical, SITE_NAME, SITE_URL } from "@/lib/seo";
+import { getTranslations } from "next-intl/server";
 
 const HOME_METADATA: Record<SeoLocale, { title: string; description: string }> = {
   en: {
@@ -55,9 +56,18 @@ export async function generateMetadata({
 
 export const revalidate = 600; // 10 minutes
 
-export default async function HomePage() {
+export default async function HomePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale: routeLocale } = await params;
+  const locale: SeoLocale = routeLocale === "es" ? "es" : "en";
+  const t = await getTranslations({ locale, namespace: "homepageIdentity" });
+  const canonicalUrl = buildLocalizedCanonical("/", locale);
+  const { description } = HOME_METADATA[locale];
   const [data, archiveCounts] = await Promise.all([
-    getHomeData(),
+    getHomeData(locale),
     getArchiveCounts(),
   ]);
 
@@ -68,28 +78,47 @@ export default async function HomePage() {
           {
             "@context": "https://schema.org",
             "@type": "WebSite",
+            "@id": `${SITE_URL}/#website`,
             name: SITE_NAME,
             alternateName: "Dominican Music Database",
             url: SITE_URL,
+            inLanguage: ["en", "es"],
             description:
               "Mangulina is a Dominican Music Database dedicated to documenting artists, songs, releases, genres, and Dominican music history.",
-            potentialAction: {
-              "@type": "SearchAction",
-              target: `${SITE_URL}/search?q={search_term_string}`,
-              "query-input": "required name=search_term_string",
-            },
+            publisher: { "@id": `${SITE_URL}/#organization` },
           },
           {
             "@context": "https://schema.org",
             "@type": "Organization",
+            "@id": `${SITE_URL}/#organization`,
             name: SITE_NAME,
             alternateName: "Dominican Music Database",
             url: SITE_URL,
             description:
               "Mangulina is a Dominican Music Database dedicated to documenting artists, songs, releases, genres, and Dominican music history.",
           },
+          {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "@id": `${canonicalUrl}#webpage`,
+            name: t("title"),
+            description,
+            url: canonicalUrl,
+            inLanguage: locale,
+            isPartOf: { "@id": `${SITE_URL}/#website` },
+          },
         ]}
       />
+      <PageSection className="!mt-6 !mb-2">
+        <div className="max-w-4xl">
+          <h1 className="text-2xl sm:text-3xl font-normal tracking-tight text-gray-800">
+            {t("title")}
+          </h1>
+          <p className="mt-2 text-sm sm:text-base leading-relaxed text-gray-600">
+            {t("introduction")}
+          </p>
+        </div>
+      </PageSection>
       <PageSection>
         <FeaturedArtistSection featuredArtist={data.featuredArtist} />
       </PageSection>

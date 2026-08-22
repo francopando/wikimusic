@@ -1076,6 +1076,10 @@
       "views": "Views"
     }
   },
+  "homepageIdentity": {
+    "title": "Mangulina — The Dominican Music Database",
+    "introduction": "Explore Dominican music through its artists, songs, recordings, releases, genres, composers, musicians, producers, and musical history."
+  },
   "components": {
     "noData": "No data available",
     "noArtistsFound": "No artists found.",

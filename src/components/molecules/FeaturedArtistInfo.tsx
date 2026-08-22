@@ -33,9 +33,9 @@ export default function FeaturedArtistInfo({
         {t("featuredArtist")}
       </p>
 
-      <h1 className="text-3xl sm:text-4xl font-normal tracking-tight text-gray-800 mb-4">
+      <h2 className="text-3xl sm:text-4xl font-normal tracking-tight text-gray-800 mb-4">
         {featuredArtist?.name || t("featuredArtist")}
-      </h1>
+      </h2>
 
       <div className="flex flex-wrap items-center gap-2 mb-4 text-sm font-normal">
         {(featuredArtist?.birth_place || featuredArtist?.province) && (

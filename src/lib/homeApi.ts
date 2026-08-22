@@ -16,6 +16,7 @@ import {
 } from "@/lib/homepageCache";
 import { getPublicRecordingIds } from "@/lib/publicRecordingVisibility";
 import { hasPositiveRecentOrAllTimeViews } from "@/lib/analyticsPresentation";
+import type { EditorialLocale } from "@/types/editorialDocument";
 
 type HomepageMostAwardedArtistRow = {
   id: string;
@@ -47,7 +48,7 @@ function startRequest<T>(request: PromiseLike<T>): Promise<T> {
   return Promise.resolve(request);
 }
 
-async function loadHomeData() {
+async function loadHomeData(locale: EditorialLocale) {
   const supabase = getSupabaseClient();
 
   if (!supabase) {
@@ -159,9 +160,14 @@ async function loadHomeData() {
   const featuredArtistBase = Array.isArray(featuredRelation)
     ? featuredRelation[0] ?? null
     : featuredRelation ?? null;
-  const featuredArtist = featuredArtistBase
-    ? { ...featuredArtistBase, biography: await (await import("@/lib/editorial/publicData")).getPublishedEditorialPlainText(featuredArtistBase.id, "en") }
-    : null;
+  let featuredArtist: Artist | null = null;
+  if (featuredArtistBase) {
+    const { getPublishedEditorialPlainText } = await import("@/lib/editorial/publicData");
+    const localizedBiography = await getPublishedEditorialPlainText(featuredArtistBase.id, locale);
+    const biography = localizedBiography
+      ?? (locale === "es" ? await getPublishedEditorialPlainText(featuredArtistBase.id, "en") : null);
+    featuredArtist = { ...featuredArtistBase, biography };
+  }
 
   // 2. Birthday Artists
   // Loaded in BirthdaySection using the visitor's local browser date.
@@ -517,11 +523,15 @@ async function loadHomeData() {
   };
 }
 
-export const getHomeData = unstable_cache(
+const getCachedHomeData = unstable_cache(
   loadHomeData,
-  ["homepage-data-v1"],
+  ["homepage-data-v2"],
   {
     revalidate: HOMEPAGE_CACHE_SECONDS,
     tags: [HOMEPAGE_DATA_CACHE_TAG],
   },
 );
+
+export function getHomeData(locale: string) {
+  return getCachedHomeData(locale === "es" ? "es" : "en");
+}
