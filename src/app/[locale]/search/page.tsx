@@ -3,7 +3,7 @@ import SearchAnalytics from "@/components/analytics/SearchAnalytics";
 import MainWrapper from "@/components/layout/MainWrapper";
 import SearchContent from "./SearchContent";
 import { getCachedGlobalSearch } from "@/lib/searchApi";
-import { MIN_SEARCH_QUERY_LENGTH } from "@/lib/searchTypes";
+import { MAX_SEARCH_QUERY_LENGTH, MIN_SEARCH_QUERY_LENGTH } from "@/lib/searchTypes";
 import { createPageMetadata, type SeoLocale } from "@/lib/seo";
 
 const SEARCH_METADATA: Record<SeoLocale, { title: string; description: string }> = {
@@ -43,7 +43,10 @@ type SearchPageProps = {
 export default async function SearchPage({ searchParams }: SearchPageProps) {
   const { q = "" } = await searchParams;
   const query = q.trim();
-  const shouldSearch = query.length >= MIN_SEARCH_QUERY_LENGTH;
+  // Same bounds the suggestions endpoint enforces. Without the upper bound a
+  // long ?q= would reach the search cache and mint an entry for it.
+  const shouldSearch =
+    query.length >= MIN_SEARCH_QUERY_LENGTH && query.length <= MAX_SEARCH_QUERY_LENGTH;
 
   const results = shouldSearch
     ? await getCachedGlobalSearch(query)

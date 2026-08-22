@@ -66,6 +66,9 @@ test("artist mutations invalidate profile paths and shared public directories", 
 });
 
 test("public search retains its separate bounded query cache", () => {
-  assert.match(searchApi, /getCachedGlobalSearch = unstable_cache/);
+  // Phase 3D wrapped the cache so its key is bounded; detailed coverage lives
+  // in provinceAndSearchCaching.test.ts.
+  assert.match(searchApi, /cachedGlobalSearchByKey = unstable_cache/);
   assert.match(searchApi, /revalidate: 300/);
+  assert.match(searchApi, /searchCacheKey\(query\)/);
 });

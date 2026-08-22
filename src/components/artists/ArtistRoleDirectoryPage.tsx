@@ -4,12 +4,19 @@ import { getArtistDirectoryInitialData } from "@/lib/artistDirectoryData";
 import { getArtistGenreOptions } from "@/lib/artistGenreOptions";
 import { getArtistInstrumentOptions } from "@/lib/artistInstrumentOptions";
 
+/**
+ * Server shell for the canonical artist and role directories.
+ *
+ * It deliberately takes no searchParams: reading them here forced every
+ * directory request — filtered or not — through a fresh server render. The
+ * shell now always renders the canonical first page, and ArtistDirectory
+ * loads any filtered/paginated/sorted view on the client, which it already
+ * did whenever the server payload did not match the requested view.
+ */
 export default async function ArtistRoleDirectoryPage({
   config,
-  searchParams,
 }: {
   config: ArtistRolePageConfig;
-  searchParams?: Record<string, string | string[] | undefined>;
 }) {
   const filteredGenreOptions = config.hideGenreFilter
     ? undefined
@@ -21,7 +28,6 @@ export default async function ArtistRoleDirectoryPage({
     ? await getArtistInstrumentOptions(config.role)
     : undefined;
   const initialData = await getArtistDirectoryInitialData({
-    searchParams,
     role: config.role,
     filteredGenreOptions,
   });

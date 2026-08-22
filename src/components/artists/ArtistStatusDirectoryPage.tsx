@@ -7,7 +7,6 @@ type ArtistStatusDirectoryPageProps = {
   intro?: string;
   i18nKey?: string;
   artistStatus: "legend" | "emerging";
-  searchParams?: Record<string, string | string[] | undefined>;
 };
 
 export default async function ArtistStatusDirectoryPage({
@@ -16,10 +15,8 @@ export default async function ArtistStatusDirectoryPage({
   intro,
   i18nKey,
   artistStatus,
-  searchParams,
 }: ArtistStatusDirectoryPageProps) {
   const initialData = await getArtistDirectoryInitialData({
-    searchParams,
     fixedArtistStatus: artistStatus,
   });
 

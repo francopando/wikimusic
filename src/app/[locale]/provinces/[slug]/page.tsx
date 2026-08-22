@@ -13,12 +13,25 @@ import { createPageMetadata } from "@/lib/seo";
 
 type ProvincePageProps = {
   params: Promise<{ slug: string; locale: string }>;
-  searchParams: Promise<Record<string, string | string[] | undefined>>;
 };
 
 // Render dynamically (matches genres/[slug]); the localized root layout reads
 // the request locale, which is incompatible with static prerendering here.
-export const dynamic = "force-dynamic";
+/**
+ * Province profiles are cacheable HTML.
+ *
+ * The route was force-dynamic and read searchParams for directory filter
+ * state, so every request re-rendered at origin and the populated
+ * generateStaticParams below was inert. The server now renders the canonical,
+ * unfiltered province; ArtistDirectory loads filtered or paginated views on
+ * the client exactly as it already did when the server payload did not match
+ * the requested view.
+ *
+ * The 24h TTL is a fallback: artist publication and role changes invalidate
+ * this through PUBLIC_ARTIST_DIRECTORY_CACHE_TAG. Province rows themselves
+ * have no admin mutation route.
+ */
+export const revalidate = 86400;
 
 export async function generateStaticParams() {
   const provinces = await getPublishedProvinces();
@@ -40,10 +53,7 @@ export async function generateMetadata({ params }: ProvincePageProps): Promise<M
   });
 }
 
-export default async function ProvinceArtistsPage({
-  params,
-  searchParams,
-}: ProvincePageProps) {
+export default async function ProvinceArtistsPage({ params }: ProvincePageProps) {
   const { slug } = await params;
   const province = await getPublishedProvinceBySlug(slug);
   if (!province) notFound();
@@ -51,7 +61,6 @@ export default async function ProvinceArtistsPage({
 
   const t = await getTranslations("artistDirectory");
   const initialData = await getArtistDirectoryInitialData({
-    searchParams: await searchParams,
     fixedProvince: province.name,
   });
 

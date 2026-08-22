@@ -6,7 +6,9 @@ import { getPublicReleaseCoverUrl } from "@/lib/releaseCover";
 import { getArtistImageUrl } from "@/utils/getArtistImageUrl";
 import { normalizeSearchText } from "@/lib/searchRanking";
 import {
+  MAX_SEARCH_QUERY_LENGTH,
   MIN_SEARCH_QUERY_LENGTH,
+  searchCacheKey,
   type GlobalSearchResponse,
   type SearchResult,
 } from "@/lib/searchTypes";
@@ -275,8 +277,12 @@ export async function globalSearch(query: string): Promise<GlobalSearchResponse>
   };
 }
 
-export const getCachedGlobalSearch = unstable_cache(
+const cachedGlobalSearchByKey = unstable_cache(
   globalSearch,
-  ["global-search-v1"],
+  ["global-search-v2"],
   { revalidate: 300 },
 );
+
+export function getCachedGlobalSearch(query: string) {
+  return cachedGlobalSearchByKey(searchCacheKey(query));
+}

@@ -4,6 +4,9 @@ import test from "node:test";
 import { createRobotsPolicy } from "../src/app/robots";
 
 const INTERNAL_PATHS = ["/admin", "/admin/", "/api/", "/auth/", "/debug"];
+// Phase 3D also keeps crawlers out of site search, whose result pages are
+// user-driven and effectively unbounded.
+const CRAWLER_DISALLOWED = [...INTERNAL_PATHS, "/search"];
 
 test("robots remains fail-closed when indexing is disabled", () => {
   assert.deepEqual(createRobotsPolicy(false), {
@@ -34,6 +37,6 @@ test("robots explicitly permits Meta without widening internal access", () => {
 
   for (const rule of rules) {
     assert.equal(rule.allow, "/");
-    assert.deepEqual(rule.disallow, INTERNAL_PATHS);
+    assert.deepEqual(rule.disallow, CRAWLER_DISALLOWED);
   }
 });
