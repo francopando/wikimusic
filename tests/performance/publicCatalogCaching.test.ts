@@ -44,15 +44,17 @@ test("directory cache keys are stable and isolate filters", () => {
   assert.equal(first, reordered);
   assert.notEqual(first, otherRole);
   assert.match(directoryApi, /\.eq\("status", "published"\)/);
-  assert.match(directoryApi, /public-artist-directory-initial-data-v1/);
+  assert.match(directoryApi, /public-artist-directory-initial-data-v\d+/);
 });
 
 test("genre data caches isolate slug, subgenre, options, and media inputs", () => {
-  assert.match(genreApi, /public-catalog-genre-v1/);
-  assert.match(genreApi, /public-genre-artists-v1/);
-  assert.match(genreApi, /public-top-genre-options-v1/);
-  assert.match(genreApi, /public-genre-media-v1/);
-  assert.doesNotMatch(genreApi, /public-genre-page-data-v1/);
+  // Version suffixes are cache-busting handles and change by design; assert
+  // the cache exists rather than which generation it is on.
+  assert.match(genreApi, /public-catalog-genre-v\d+/);
+  assert.match(genreApi, /public-genre-artists-v\d+/);
+  assert.match(genreApi, /public-top-genre-options-v\d+/);
+  assert.match(genreApi, /public-genre-media-v\d+/);
+  assert.doesNotMatch(genreApi, /public-genre-page-data-v\d+/);
   // Phase 3A moved genre profiles into the Full Route Cache: the route no
   // longer opts out of caching, and subgenre state moved to the client.
   // Detailed coverage lives in genreProfileCaching.test.ts.
