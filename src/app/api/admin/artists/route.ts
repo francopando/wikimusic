@@ -8,6 +8,12 @@ import { hasForbiddenArtistBiographyFields } from "@/lib/editorial/migration";
 import { getArtistBiographyReferences } from "@/lib/editorial/serverLifecycle";
 import { summarizeBiographyReferencesForDelete } from "@/lib/editorial/lifecycle";
 
+// The admin editor is the only complete view of the catalog and is edited
+// against live data, so its reads must never be served from a cache. Without
+// this the GET carries no Cache-Control at all and becomes eligible for
+// browser heuristic caching, which silently hands the editor a stale row.
+export const dynamic = "force-dynamic";
+
 const LIST_COLUMNS =
   "id,name,slug,stage_name,sort_name,status,type,primary_role,primary_genre,province,aliases";
 
@@ -34,6 +40,10 @@ function withSubtitles<T extends SubtitleFields>(rows: T[]) {
   }));
 }
 
+// Route-segment config alone does not attach Cache-Control to a Route Handler
+// response, so the header is set explicitly on every read.
+const NO_STORE = { "Cache-Control": "no-store, max-age=0, must-revalidate" };
+
 export async function GET(request: Request) {
   const auth = await requireAdminApiRole();
   if (auth.response) return auth.response;
@@ -58,7 +68,10 @@ export async function GET(request: Request) {
       return NextResponse.json({ ok: false, error: error.message }, { status: 500 });
     }
 
-    return NextResponse.json({ ok: true, artists: withSubtitles(data ?? []) });
+    return NextResponse.json(
+      { ok: true, artists: withSubtitles(data ?? []) },
+      { headers: NO_STORE },
+    );
   }
 
   let query = createServiceRoleClient()
@@ -101,7 +114,10 @@ export async function GET(request: Request) {
     rows = [...byId.values()].slice(0, limit);
   }
 
-  return NextResponse.json({ ok: true, artists: withSubtitles(rows) });
+  return NextResponse.json(
+    { ok: true, artists: withSubtitles(rows) },
+    { headers: NO_STORE },
+  );
 }
 
 export async function POST(request: Request) {

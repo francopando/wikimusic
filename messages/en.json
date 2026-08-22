@@ -226,7 +226,9 @@
       "bassist": "Bassist",
       "drummer": "Drummer",
       "instrumentalist": "Instrumentalist",
-      "singer_songwriter": "Singer-songwriter"
+      "singer_songwriter": "Singer-songwriter",
+      "vocal_coach": "Vocal coach",
+      "music_educator": "Music educator"
     }
   },
   "artist": {

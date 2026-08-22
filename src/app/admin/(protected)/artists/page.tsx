@@ -744,7 +744,7 @@ export default function AdminDashboard() {
     // SELECT policy on `artists` is `status = 'published'` for anon/authenticated,
     // so a direct query hides draft, hidden, duplicate and needs_review artists
     // from the editor whose job is to review them.
-    const response = await fetch("/api/admin/artists?all=1");
+    const response = await fetch("/api/admin/artists?all=1", { cache: "no-store" });
     const result = await readApiJson<AdminArtistsListResponse>(
       response,
       "Admin artists endpoint"

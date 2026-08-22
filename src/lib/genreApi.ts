@@ -238,9 +238,24 @@ export async function getGenrePageData(
   const activeSubgenre = requestedSubgenreSlug
     ? subgenres.find((subgenre) => subgenre.slug === requestedSubgenreSlug) ?? null
     : null;
+  // The parent view rolls its subgenres up. `primary_genre` legitimately holds
+  // level-1 slugs (merengue-orquesta, urban-dembow), and matching the parent's
+  // own labels alone hid every artist classified that precisely — 122 published
+  // artists, including the whole dembow and perico ripiao rosters. Selecting a
+  // subgenre still narrows to that subgenre only.
   const primaryGenreValues = activeSubgenre
     ? uniqueValues([activeSubgenre.slug, activeSubgenre.name, normalize(activeSubgenre.name)])
-    : uniqueValues([genre.primaryGenre, genre.slug, genre.title, normalize(genre.title)]);
+    : uniqueValues([
+        genre.primaryGenre,
+        genre.slug,
+        genre.title,
+        normalize(genre.title),
+        ...subgenres.flatMap((subgenre) => [
+          subgenre.slug,
+          subgenre.name,
+          normalize(subgenre.name),
+        ]),
+      ]);
   const connectedArtistRows =
     (await safeQuery("connectedArtists", () =>
       getMostViewedPrimaryGenreArtists(primaryGenreValues),

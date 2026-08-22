@@ -7,7 +7,7 @@ This document is the authoritative reference for all valid role names in the Man
 **Rule:** Do not invent new role names. Always check this dictionary first.
 
 **Status:** Active  
-**Last Updated:** 2026-07-05  
+**Last Updated:** 2026-08-22  
 **Authority:** Editorial & Technical Governance
 
 ---
@@ -19,6 +19,7 @@ Roles are organized by credit level (per ADR-001: Three-Level Credit Architectur
 1. **Recording-Level Roles** — Who performed on or technically engineered a specific recording
 2. **Work-Level Roles** — Who created or composed the underlying musical work
 3. **Release-Level Roles** — Who is credited for an album/single product
+4. **Artist-Level Occupations** — What an artist *is*, independent of any single credit
 
 ---
 
@@ -124,6 +125,52 @@ genre. Use these rather than approximating with `percussion`.
 
 ---
 
+## Level 4: Artist-Level Occupations
+
+**Table:** `artists`  
+**Column:** `occupations` (jsonb array of strings)  
+**Purpose:** Describes what an artist *is*, independent of any single recording, work, or release
+
+Unlike Levels 1–3, these are not credits on a specific item. They answer "what does this
+person do?" rather than "what did they do on this track?"
+
+**Field hygiene:** `occupations` must not repeat `artists.primary_role`. If `primary_role`
+is `singer`, do not also list `singer` or `vocalist` in `occupations`.
+
+**Rendering:** Values are translated by `translateRoleLikeValue()` in
+`src/components/organisms/ArtistFactsCard.tsx`, which lowercases the value and replaces
+spaces and hyphens with underscores to build the key `artistFields.roles.<value>`. Every
+value below therefore requires matching entries in `messages/en.json` and `messages/es.json`.
+Unknown values fall back to the raw string, so a missing key degrades to untranslated text
+rather than an error — but shipping without the key violates the i18n rule in CLAUDE.md.
+
+`occupations` also drives a directory facet filter (`src/lib/artistDirectoryData.ts`), so the
+stored string must match exactly across artists.
+
+| Occupation | Definition | Example | Notes |
+|------------|-----------|---------|-------|
+| `songwriter` | Writes songs (lyrics and/or music) | Averly Morillo | Distinct from work-level `composer` credit |
+| `composer` | Composes musical works | Juan Luis Guerra | |
+| `lyricist` | Writes lyrics | | |
+| `arranger` | Writes arrangements | | |
+| `producer` | Produces recordings | | |
+| `bandleader` | Leads an ensemble | Johnny Ventura | |
+| `conductor` | Conducts an ensemble | | |
+| `musician` | General instrumental practice | | Prefer a specific instrument when known |
+| `instrumentalist` | Plays instruments, unspecified | | Prefer a specific instrument when known |
+| `accordionist` · `bassist` · `drummer` · `guitarist` · `percussionist` · `pianist` · `saxophonist` · `violinist` | Instrument-specific practice | | |
+| `dj` | DJ | | |
+| `singer-songwriter` | Performs own material | | Renders via key `singer_songwriter` |
+| `vocal coach` | Trains other singers' technique professionally | Lorens Salcedo | Teaching practice, not a performance credit |
+| `music educator` | Teaches music formally — academy, conservatory, or school | Lorens Salcedo | Use for institutional or sustained teaching work |
+| `actress` · `writer` | Non-musical professional practice | Adalgisa Pantaleón | Only when notable and documented |
+
+**On `vocal coach` vs. `music educator`:** `vocal coach` is specific to voice — technique,
+placement, repertoire coaching for singers. `music educator` is broader institutional teaching.
+An artist who founded and runs a singing academy warrants both; a session musician who takes
+private students warrants neither unless the teaching is a documented part of their public work.
+
+---
 ## Decision Rules
 
 ### When in Doubt: Use Explicit Roles
@@ -247,6 +294,7 @@ From Phase 3B:
 | Date | Version | Change | Authority |
 |------|---------|--------|-----------|
 | 2026-07-05 | 1.0 | Initial dictionary created | Phase 3C Governance |
+| 2026-08-22 | 1.1 | Level 4 (artist-level `occupations`) documented; added `vocal coach` and `music educator` with en/es translation keys | Editorial request |
 | | | 13 `performer` rows migrated to `lead_performer` | Phase 3C Implementation |
 | | | Recording-level roles defined | DATA_GOVERNANCE.md § 8 |
 | | | Work-level roles defined | DATA_GOVERNANCE.md § 8 |

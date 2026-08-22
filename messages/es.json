@@ -237,7 +237,9 @@
       "bassist": "Bajista",
       "drummer": "Baterista",
       "instrumentalist": "Instrumentista",
-      "singer_songwriter": "Cantautor"
+      "singer_songwriter": "Cantautor",
+      "vocal_coach": "Coach vocal",
+      "music_educator": "Educador musical"
     }
   },
   "artist": {
