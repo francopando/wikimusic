@@ -125,10 +125,27 @@ export async function POST(request: Request) {
   if (auth.response) return auth.response;
   const { artistId, artistData } = await request.json();
 
-  if (!artistData?.name) {
+  // Updates carry only the fields the editor changed, so `name` is present
+  // just when it was edited. Requiring it on every write forced the client to
+  // post the whole row, which is what let one edit revert every other field.
+  if (!artistId && !artistData?.name) {
     return NextResponse.json(
       { ok: false, error: "Artist name is required." },
       { status: 400 }
+    );
+  }
+
+  if (artistId && (!artistData || Object.keys(artistData).length === 0)) {
+    return NextResponse.json(
+      { ok: false, error: "No fields to update." },
+      { status: 400 },
+    );
+  }
+
+  if (artistId && "name" in artistData && !artistData.name) {
+    return NextResponse.json(
+      { ok: false, error: "Artist name cannot be cleared." },
+      { status: 400 },
     );
   }
 

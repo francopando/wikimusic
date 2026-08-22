@@ -6,6 +6,16 @@ import Link from "next/link";
 import { BookOpenText, UserRound } from "lucide-react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
+import {
+  buildArtistWrite,
+  changedArtistFields,
+  nullable,
+  parseCsv,
+  slugify,
+  type ArtistForm,
+  type ArtistStatus,
+  type ArtistWrite,
+} from "@/lib/adminArtistWrite";
 import { usePathname } from "next/navigation";
 import type { FormEvent } from "react";
 import { getSupabaseClient } from "@/lib/supabase";
@@ -23,13 +33,6 @@ import ArtistBiographyEditor from "@/components/admin/editorial/ArtistBiographyE
 import ArtistFamilyRelationshipsManager from "@/components/admin/ArtistFamilyRelationshipsManager";
 import { normalizeSearchText, rankSearchText } from "@/lib/searchRanking";
 import { readApiJson } from "@/lib/clientApiResponse";
-
-type ArtistStatus =
-  | "draft"
-  | "published"
-  | "hidden"
-  | "needs_review"
-  | "duplicate";
 
 type AdminArtist = Artist & {
   sort_name?: string | null;
@@ -64,39 +67,6 @@ type AdminArtist = Artist & {
   wikidata_id?: string | null;
 };
 
-type ArtistForm = {
-  name: string;
-  sort_name: string;
-  slug: string;
-  stage_name: string;
-  first_name: string;
-  middle_name: string;
-  last_name: string;
-  second_last_name: string;
-  date_of_birth: string;
-  birth_year: string;
-  date_of_death: string;
-  death_year: string;
-  birth_place: string;
-  province: string;
-  type: string;
-  primary_role: string;
-  primary_genre: string;
-  status: ArtistStatus;
-  occupations: string;
-  instruments: string;
-  genres: string;
-  artist_tags: string;
-  aliases: string;
-  website: string;
-  facebook: string;
-  instagram: string;
-  youtube: string;
-  gender: string;
-  disambiguation: string;
-  wikidata_id: string;
-  ended: boolean;
-};
 
 type AdminArtistMedia = {
   id: string;
@@ -422,14 +392,6 @@ const provinceOptions = [
   "Valverde",
 ];
 
-function parseCsv(value: string | null | undefined) {
-  if (!value) return [];
-
-  return value
-    .split(",")
-    .map((item) => item.trim())
-    .filter(Boolean);
-}
 
 function toCsv(value: string[] | Record<string, unknown> | null | undefined) {
   if (!value) return "";
@@ -469,21 +431,7 @@ function toggleExclusiveCsvValue(
   return isSelected ? remainingItems.join(", ") : [...remainingItems, selectedOption].join(", ");
 }
 
-function nullable(value: string | null | undefined) {
-  const trimmed = (value ?? "").trim();
-  return trimmed ? trimmed : null;
-}
 
-function slugify(value: string) {
-  return value
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/&/g, " and ")
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "")
-    .replace(/-{2,}/g, "-");
-}
 
 function yearFromDate(value: string) {
   const year = value.slice(0, 4);
@@ -629,8 +577,12 @@ function detectMediaPlatform(url: string) {
   return "other";
 }
 
+
 export default function AdminDashboard() {
   const t = useTranslations();
+  // The row as it looked when this editor loaded it. Saves send the difference
+  // against this, never the whole row, so fields changed elsewhere survive.
+  const loadedArtistRef = useRef<ArtistWrite | null>(null);
   const supabase = getSupabaseClient();
 
   const [mounted, setMounted] = useState(false);
@@ -944,6 +896,7 @@ export default function AdminDashboard() {
     setSearch("");
     closeArtistPicker();
     setForm({ ...emptyForm });
+    loadedArtistRef.current = null;
     setArtistMedia([]);
     setOutgoingRelationships([]);
     setIncomingRelationships([]);
@@ -989,7 +942,7 @@ export default function AdminDashboard() {
     void fetchArtistMedia(artist.id);
     void fetchArtistRelationships(artist.id);
 
-    setForm({
+    const nextForm: ArtistForm = {
       name: artist.name ?? "",
       sort_name: artist.sort_name ?? "",
       slug: artist.slug ?? "",
@@ -1024,7 +977,10 @@ export default function AdminDashboard() {
       disambiguation: artist.disambiguation ?? "",
       wikidata_id: artist.wikidata_id ?? "",
       ended: Boolean(artist.ended),
-    });
+    };
+
+    setForm(nextForm);
+    loadedArtistRef.current = buildArtistWrite(nextForm);
 
     setStatus("");
   }
@@ -1459,48 +1415,20 @@ export default function AdminDashboard() {
     setLoading(true);
     setStatus("");
 
-    const resolvedSlug = form.slug.trim() || slugify(form.name);
-    const artistData = {
-      name: form.name.trim(),
-      sort_name: nullable(form.sort_name),
-      slug: nullable(resolvedSlug),
-      stage_name: nullable(form.stage_name),
+    const isEditing = Boolean(selectedArtistId);
+    const baseline = loadedArtistRef.current;
+    const nextWrite = buildArtistWrite(form);
 
-      first_name: nullable(form.first_name),
-      middle_name: nullable(form.middle_name),
-      last_name: nullable(form.last_name),
-      second_last_name: nullable(form.second_last_name),
+    // On an update send only what changed. Creating still sends everything.
+    const artistData = isEditing && baseline
+      ? changedArtistFields(baseline, nextWrite)
+      : nextWrite;
 
-      date_of_birth: nullable(form.date_of_birth),
-      birth_year: form.birth_year ? Number(form.birth_year) : null,
-      date_of_death: nullable(form.date_of_death),
-      death_year: form.death_year ? Number(form.death_year) : null,
-
-      birth_place: nullable(form.birth_place),
-      province: nullable(form.province),
-
-      type: nullable(form.type),
-      primary_role: nullable(form.primary_role),
-      primary_genre: nullable(form.primary_genre),
-      status: form.status || "published",
-
-      occupations: parseCsv(form.occupations),
-      instruments: parseCsv(form.instruments),
-      genres: parseCsv(form.genres),
-      artist_tags: parseCsv(form.artist_tags),
-      aliases: parseCsv(form.aliases),
-
-      website: nullable(form.website),
-      facebook: nullable(form.facebook),
-      instagram: nullable(form.instagram),
-      youtube: nullable(form.youtube),
-
-      gender: nullable(form.gender),
-      disambiguation: nullable(form.disambiguation),
-      wikidata_id: nullable(form.wikidata_id),
-
-      ended: form.ended,
-    };
+    if (isEditing && baseline && Object.keys(artistData).length === 0) {
+      setStatus("No changes to save.");
+      setLoading(false);
+      return;
+    }
 
     const response = await fetch("/api/admin/artists", {
       method: "POST",
