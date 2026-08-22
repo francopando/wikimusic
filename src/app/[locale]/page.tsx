@@ -3,6 +3,7 @@
 import type { Metadata } from "next";
 import MainWrapper from "@/components/layout/MainWrapper";
 import PageSection from "@/components/layout/PageSection";
+import SectionCard from "@/components/layout/SectionCard";
 import { getHomeData } from "@/lib/homeApi";
 import FeaturedArtistSection from "@/components/organisms/FeaturedArtistSection";
 import TopArtistsSection from "@/components/organisms/TopArtistsSection";
@@ -109,15 +110,17 @@ export default async function HomePage({
           },
         ]}
       />
-      <PageSection className="!mt-3 !mb-0">
-        <div className="max-w-3xl">
-          <h1 className="text-lg sm:text-xl font-normal tracking-tight text-gray-700">
-            {t("title")}
-          </h1>
-          <p className="mt-1 text-sm leading-snug text-gray-500">
-            {t("introduction")}
-          </p>
-        </div>
+      <PageSection className="!mt-3">
+        <SectionCard compact className="text-center">
+          <div className="mx-auto max-w-3xl">
+            <h1 className="text-lg sm:text-xl font-normal tracking-tight text-gray-700">
+              {t("title")}
+            </h1>
+            <p className="mt-1 text-sm leading-snug text-gray-500">
+              {t("introduction")}
+            </p>
+          </div>
+        </SectionCard>
       </PageSection>
       <PageSection>
         <FeaturedArtistSection featuredArtist={data.featuredArtist} />
