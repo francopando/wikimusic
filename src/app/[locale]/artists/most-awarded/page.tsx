@@ -41,11 +41,8 @@ export default async function MostAwardedArtistsPage({
     type === "award" || type === "category" ? { type, id } : undefined,
   );
   const rankedArtistIds = awardRankings.map((ranking) => ranking.artist_id);
-  // This page stays dynamic: ?award= is validated against a bounded option
-  // list and genuinely drives the server-computed rankings below. The raw
-  // query string is deliberately not passed into the directory cache key,
-  // which would otherwise mint an entry per arbitrary query.
   const initialData = await getArtistDirectoryInitialData({
+    searchParams: resolvedSearchParams,
     rankedArtistIds,
   });
 

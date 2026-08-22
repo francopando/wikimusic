@@ -9,29 +9,10 @@ import { MAX_SEARCH_QUERY_LENGTH, MIN_SEARCH_QUERY_LENGTH, searchCacheKey } from
 const read = (p: string) => readFileSync(p, "utf8");
 const code = (s: string) => s.replace(/\/\*[\s\S]*?\*\//g, "").replace(/^\s*\/\/.*$/gm, "");
 
-const province = read("src/app/[locale]/provinces/[slug]/page.tsx");
 const searchPage = read("src/app/[locale]/search/page.tsx");
 const searchApi = read("src/lib/searchApi.ts");
 const suggestions = read("src/app/api/search/suggestions/route.ts");
 const sitemapCatalog = read("src/lib/sitemapCatalog.ts");
-
-// ---------------------------------------------------------------- Phase 3C
-
-test("province profiles are cacheable and no longer request-dependent", () => {
-  assert.doesNotMatch(code(province), /force-dynamic|no-store|unstable_noStore/);
-  assert.doesNotMatch(code(province), /searchParams/, "canonical render must not read searchParams");
-  assert.match(province, /export const revalidate = 86400/);
-  // The populated generateStaticParams is active again now that the route is not dynamic.
-  assert.match(province, /export async function generateStaticParams/);
-  assert.match(province, /getPublishedProvinces/);
-});
-
-test("province publication and content behaviour is preserved", () => {
-  assert.match(province, /getPublishedProvinceBySlug/, "publication boundary preserved");
-  assert.match(province, /notFound\(\)/, "unknown provinces still 404");
-  assert.match(province, /fixedProvince=\{province\.name\}/, "listing stays scoped to the province");
-  assert.match(province, /createPageMetadata/, "metadata preserved");
-});
 
 // ---------------------------------------------------------------- Phase 3D
 

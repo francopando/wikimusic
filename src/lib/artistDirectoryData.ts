@@ -9,7 +9,7 @@ import {
 import { getSupabaseClient } from "@/lib/supabase";
 import {
   PUBLIC_ARTIST_DIRECTORY_CACHE_TAG,
-  PUBLIC_ARTIST_DIRECTORY_REVALIDATE_SECONDS,
+  PUBLIC_CATALOG_REVALIDATE_SECONDS,
 } from "@/lib/publicCatalogCache";
 import type { Artist } from "@/types/music";
 
@@ -188,7 +188,7 @@ export const getArtistDirectoryInitialData = unstable_cache(
   loadArtistDirectoryInitialData,
   ["public-artist-directory-initial-data-v1"],
   {
-    revalidate: PUBLIC_ARTIST_DIRECTORY_REVALIDATE_SECONDS,
+    revalidate: PUBLIC_CATALOG_REVALIDATE_SECONDS,
     tags: [PUBLIC_ARTIST_DIRECTORY_CACHE_TAG],
   },
 );
