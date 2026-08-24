@@ -70,3 +70,27 @@ notes/
 scratch/
 
 .vercel
+
+# Ingest pipeline run artifacts
+/models
+/output
+/outputs
+/rebuild_recordings_resume.json
+/recordings_failures.log
+
+# Local-only ingest tooling, kept out of the repo the same way /steps,
+# /scripts and /backups are. ingest.ts imports entirely from ./steps, and the
+# only consumer of mbResolver is steps/4_recordings.ts, so committing these
+# would add files whose imports are absent from a fresh clone.
+# src/lib/index.ts is listed by exact path only because it is the barrel that
+# re-exports mbResolver; drop this entry if src/lib ever needs a real barrel.
+/ingest.ts
+/utils.ts
+/recoverArtists.ts
+/recoverArtistsFromTitles.ts
+/src/lib/index.ts
+/src/lib/mbResolver.ts
+
+# Abandoned shadcn/ui scaffolding: nothing in the app imports either file.
+/components.json
+/src/components/ui/use-mobile.tsx
