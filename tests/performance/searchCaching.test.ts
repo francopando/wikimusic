@@ -48,7 +48,24 @@ test("both search entry points enforce the same query bounds", () => {
 
 test("crawlers are kept out of search permutations without touching catalog access", () => {
   const policy = createRobotsPolicy(true);
-  const rules = policy.rules as Array<{ userAgent: string; allow?: string; disallow?: string[] }>;
+  const allRules = policy.rules as Array<{
+    userAgent: string;
+    allow?: string;
+    disallow?: string | string[];
+  }>;
+
+  // Agents denied the whole site (see BLOCKED_CRAWLERS in src/app/robots.ts)
+  // have no catalog access to preserve, so the per-path guarantees below do
+  // not apply to them. They are asserted separately: a denial must be total,
+  // so path-level rules can never be smuggled in under a "blocked" label.
+  const denied = allRules.filter((rule) => rule.disallow === "/");
+  for (const rule of denied) {
+    assert.equal(rule.allow, undefined, `${rule.userAgent} is denied, not partially allowed`);
+  }
+
+  const rules = allRules.filter((rule) => rule.allow === "/");
+  assert.ok(rules.length > 0, "at least one crawler group retains catalog access");
+
   for (const rule of rules) {
     assert.ok(rule.disallow?.includes("/search"), `${rule.userAgent} is kept out of /search`);
     assert.equal(rule.allow, "/", `${rule.userAgent} retains catalog access`);

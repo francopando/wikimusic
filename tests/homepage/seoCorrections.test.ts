@@ -47,9 +47,20 @@ test("homepage biography and cache identity are bounded by locale", () => {
 test("search remains crawler-blocked while SearchAction is absent", () => {
   const policy = createRobotsPolicy(true);
   assert.ok(Array.isArray(policy.rules));
+
+  // Agents denied the whole site (BLOCKED_CRAWLERS in src/app/robots.ts) reach
+  // /search through the blanket denial rather than a path list. Every agent
+  // still permitted on the catalog must name /search explicitly.
+  let permitted = 0;
   for (const rule of policy.rules) {
+    if (rule.disallow === "/") {
+      assert.equal(rule.allow, undefined, `${rule.userAgent} is denied outright`);
+      continue;
+    }
     assert.ok(Array.isArray(rule.disallow));
     assert.ok(rule.disallow.includes("/search"));
+    permitted += 1;
   }
+  assert.ok(permitted > 0, "search must stay blocked for permitted crawlers");
   assert.doesNotMatch(homepage, /SearchAction/);
 });

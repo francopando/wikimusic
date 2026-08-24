@@ -23,6 +23,26 @@ const INTERNAL_PATHS = ["/admin", "/admin/", "/api/", "/auth/", "/debug"];
 const CRAWLER_DISALLOWED = [...INTERNAL_PATHS, "/search"];
 const META_CRAWLERS = ["facebookexternalhit", "Facebot", "meta-externalagent"];
 
+/**
+ * Crawlers denied the whole site.
+ *
+ * Amazonbot walks the catalogue exhaustively: 3.3K edge requests in a 12h
+ * window at a 2% cache hit rate, meaning almost every request was a distinct
+ * URL with no cache entry, forcing a cold origin render. That accounted for
+ * roughly 60% of all function invocations and the largest single share of ISR
+ * writes. It feeds Alexa and Amazon product search, so it returns no
+ * organic-search value for this catalogue.
+ *
+ * Deliberately narrow: Googlebot, GoogleOther, bingbot and DuckDuckBot are
+ * untouched, and no path rule changes for anyone. This is a user-agent denial,
+ * not an adjustment to what the site exposes.
+ *
+ * robots.txt is advisory. Amazon documents that Amazonbot honours it; if the
+ * traffic does not fall within a day or two, enforcement belongs in the Vercel
+ * firewall rather than here.
+ */
+const BLOCKED_CRAWLERS = ["Amazonbot"];
+
 export function createRobotsPolicy(indexingEnabled: boolean): MetadataRoute.Robots {
   if (!indexingEnabled) {
     return {
@@ -44,6 +64,10 @@ export function createRobotsPolicy(indexingEnabled: boolean): MetadataRoute.Robo
         userAgent,
         allow: "/",
         disallow: CRAWLER_DISALLOWED,
+      })),
+      ...BLOCKED_CRAWLERS.map((userAgent) => ({
+        userAgent,
+        disallow: "/",
       })),
     ],
     sitemap: buildCanonical("/sitemap.xml"),
