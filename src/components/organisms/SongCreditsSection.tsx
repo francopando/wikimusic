@@ -189,7 +189,7 @@ export default function SongCreditsSection({
           })}
         </dl>
       )}
-      {openExternal && <div role="dialog" aria-modal="true" aria-labelledby="external-contributor-name" className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4" onClick={() => setOpenExternal(null)}><div className="w-full max-w-sm rounded-xl bg-white p-5 shadow-xl" onClick={(event) => event.stopPropagation()}><h3 id="external-contributor-name" className="text-lg font-bold text-[#002D62]">{openExternal.name}</h3><p className="mt-2 text-sm text-gray-600">{openExternal.country ?? "Country not documented"}</p><button type="button" autoFocus onClick={() => setOpenExternal(null)} className="mt-5 rounded-lg border px-4 py-2 text-sm">Close</button></div></div>}
+      {openExternal && <div role="dialog" aria-modal="true" aria-labelledby="external-contributor-name" className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4" onClick={() => setOpenExternal(null)}><div className="w-full max-w-sm rounded-xl bg-white p-5 shadow-xl" onClick={(event) => event.stopPropagation()}><h3 id="external-contributor-name" className="text-lg font-bold text-[#002D62]">{openExternal.name}</h3><p className="mt-2 text-sm text-gray-600">{openExternal.country ?? tSong("countryNotDocumented")}</p><button type="button" autoFocus onClick={() => setOpenExternal(null)} className="mt-5 rounded-lg border px-4 py-2 text-sm">{tSong("close")}</button></div></div>}
     </section>
   );
 }

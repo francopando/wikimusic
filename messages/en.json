@@ -94,6 +94,8 @@
     "text": "Explore {subject} on Mangulina."
   },
   "song": {
+    "close": "Close",
+    "countryNotDocumented": "Country not documented",
     "credits": "Song Credits",
     "media": "Media",
     "mediaDescription": "Videos, performances, interviews, and other media connected to this recording.",
