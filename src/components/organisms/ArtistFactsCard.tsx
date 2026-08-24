@@ -63,13 +63,19 @@ function formatDisplayValue(value: string | null | undefined, locale: string) {
     .join(" ");
 }
 
-function normalizeGenreKey(value: string) {
-  const normalized = value
+// Editorial values are stored as free text; message keys are the same value
+// lowercased, unaccented, with separators collapsed to underscores.
+function normalizeMessageKey(value: string) {
+  return value
     .trim()
     .toLowerCase()
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .replace(/[\s-]+/g, "_");
+}
+
+function normalizeGenreKey(value: string) {
+  const normalized = normalizeMessageKey(value);
 
   if (normalized === "romantica") return "romantic";
   if (normalized === "balada" || normalized === "baladas") return "ballads";
@@ -86,6 +92,16 @@ function translateGenreValue(
 
   const key = `genres.${normalizeGenreKey(value)}`;
   return t.has(key) ? t(key) : formatDisplayValue(value, locale);
+}
+
+// Instruments are stored as free-text English values. Unknown ones fall back to
+// the raw label so editorial data stays visible rather than disappearing.
+function translateInstrumentValue(
+  value: string,
+  t: ReturnType<typeof useTranslations>,
+) {
+  const key = `instruments.${normalizeMessageKey(value)}`;
+  return t.has(key) ? t(key) : formatLabel(value);
 }
 
 function translateArtistType(
@@ -542,7 +558,9 @@ export default function ArtistFactsCard({
 
         {instruments.length > 0 && (
           <Field label={t("artist.instruments")}>
-            <InlineList values={instruments.map((instrument) => formatLabel(instrument))} />
+            <InlineList
+              values={instruments.map((instrument) => translateInstrumentValue(instrument, t))}
+            />
           </Field>
         )}
 

@@ -242,6 +242,26 @@
     "urban_drill": "Drill",
     "worship_gospel": "Gospel"
   },
+  "instruments": {
+    "accordion": "Acordeón",
+    "bass": "Bajo",
+    "bongos": "Bongós",
+    "congas": "Congas",
+    "drums": "Batería",
+    "guira": "Güira",
+    "guitar": "Guitarra",
+    "keyboards": "Teclados",
+    "percussion": "Percusión",
+    "piano": "Piano",
+    "saxophone": "Saxofón",
+    "synthesizer": "Sintetizador",
+    "tambora": "Tambora",
+    "trumpet": "Trompeta",
+    "turntables": "Tornamesas",
+    "violin": "Violín",
+    "vocals": "Voz",
+    "voice": "Voz"
+  },
   "artistFields": {
     "types": {
       "person": "Solista",

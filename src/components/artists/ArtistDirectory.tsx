@@ -335,6 +335,7 @@ function ArtistsContent({
 }: ArtistDirectoryProps) {
   const supabase = getSupabaseClient();
   const t = useTranslations();
+  const directoryLocale = useLocale();
   const router = useRouter();
   const searchParams = useSearchParams();
   const searchParamsString = searchParams.toString();
@@ -371,6 +372,25 @@ function ArtistsContent({
     const key = `filters.roleLabels.${option.href.replace(/^\//, "")}`;
     return t.has(key) ? t(key) : option.label;
   };
+  // Instrument options arrive from the server with raw English labels, already
+  // sorted by those. Translate them via the instruments namespace — keyed the
+  // same way as on the artist card — and re-sort, or the Spanish list keeps the
+  // English ordering. Unknown values keep their English label.
+  const localizedInstrumentOptions = useMemo(() => {
+    const label = (option: { value: string; label: string }) => {
+      const key = `instruments.${option.value
+        .trim()
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[̀-ͯ]/g, "")
+        .replace(/[\s-]+/g, "_")}`;
+      return t.has(key) ? t(key) : option.label;
+    };
+
+    return instrumentOptions
+      .map((option) => ({ value: option.value, label: label(option) }))
+      .sort((left, right) => left.label.localeCompare(right.label, directoryLocale));
+  }, [instrumentOptions, t, directoryLocale]);
   const tag = searchParams.get("tag");
   const selectedContext = fixedContext ?? "";
   const artistStatuses = useMemo(
@@ -1155,7 +1175,7 @@ function ArtistsContent({
                   aria-label={t("filters.ariaInstrument")}
                 >
                   <option value="">{t("filters.instrument")}</option>
-                  {instrumentOptions.map((option) => (
+                  {localizedInstrumentOptions.map((option) => (
                     <option key={option.value} value={option.value}>
                       {option.label}
                     </option>
@@ -1366,7 +1386,7 @@ function ArtistsContent({
                 aria-label={t("filters.ariaInstrument")}
               >
                 <option value="">{t("filters.instrument")}</option>
-                {instrumentOptions.map((option) => (
+                {localizedInstrumentOptions.map((option) => (
                   <option key={option.value} value={option.value}>
                     {option.label}
                   </option>
