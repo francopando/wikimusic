@@ -70,10 +70,10 @@ export default function GenreDynamicSections({ genreCatalogId }: { genreCatalogI
         <div id="genre-history" className="scroll-mt-20 sm:scroll-mt-24">
           <SectionCard>
             <div className="section-inner">
-              <div className="section-header">
+              <div className="section-header mx-auto max-w-5xl">
                 <h2>{labels.history}</h2>
               </div>
-              <div className="max-w-5xl">
+              <div className="mx-auto max-w-5xl">
                 <BioText bio={activeHistory} />
               </div>
             </div>

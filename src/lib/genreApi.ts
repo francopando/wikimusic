@@ -137,7 +137,7 @@ async function loadCatalogGenre(slug: string) {
 
 const getCatalogGenre = unstable_cache(
   loadCatalogGenre,
-  ["public-catalog-genre-v1"],
+  ["public-catalog-genre-v5"],
   {
     revalidate: PUBLIC_GENRE_REVALIDATE_SECONDS,
     tags: [PUBLIC_GENRE_CACHE_TAG],
