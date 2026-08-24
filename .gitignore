@@ -24,6 +24,7 @@
 /scripts/*
 !/scripts/auditDatabaseHealth.ts
 !/scripts/uploadGeneratedArtistImage.ts
+!/scripts/i18n-audit.mjs
 /ingest
 /backups
 /steps
@@ -71,7 +72,11 @@ scratch/
 
 .vercel
 
-# Ingest pipeline run artifacts
+# Script run artifacts, plus three directories that hold files belonging to
+# other work entirely (a visa form, a paint-assignment spreadsheet, a face
+# detection model). They arrived in a single bulk write on 2026-08-22 and are
+# not Mangulina's; they are ignored here so they stop cluttering git status,
+# but they are worth deleting from the working tree.
 /models
 /output
 /outputs
