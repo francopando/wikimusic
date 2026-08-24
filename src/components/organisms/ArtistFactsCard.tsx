@@ -393,30 +393,28 @@ function MembershipList({
             relationship.endYear,
             t
           );
-          const content = (
-            <>
-              <span className="block font-normal text-(--color-ink)">
-                {relationship.relatedArtistName || t("fallback.unknownArtist")}
-              </span>
+          const name =
+            relationship.relatedArtistName || t("fallback.unknownArtist");
+
+          // Only the artist name is the link. The years sit outside it so the
+          // hover underline does not run through the date range.
+          return (
+            <div key={relationship.id} className="text-sm leading-snug">
+              {relationship.relatedArtistSlug ? (
+                <Link
+                  href={`/artists/${relationship.relatedArtistSlug}`}
+                  className="font-normal text-(--color-ink) underline-offset-4 hover:text-(--color-wikicrimson) hover:underline"
+                >
+                  {name}
+                </Link>
+              ) : (
+                <span className="font-normal text-(--color-ink)">{name}</span>
+              )}
               {years && (
                 <span className="mt-0.5 block text-xs text-gray-500">
                   {years}
                 </span>
               )}
-            </>
-          );
-
-          return relationship.relatedArtistSlug ? (
-            <Link
-              key={relationship.id}
-              href={`/artists/${relationship.relatedArtistSlug}`}
-              className="block text-sm leading-snug underline-offset-4 hover:text-(--color-wikicrimson) hover:underline"
-            >
-              {content}
-            </Link>
-          ) : (
-            <div key={relationship.id} className="text-sm leading-snug">
-              {content}
             </div>
           );
         })}
