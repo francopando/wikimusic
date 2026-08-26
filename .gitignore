@@ -25,6 +25,7 @@
 !/scripts/auditDatabaseHealth.ts
 !/scripts/uploadGeneratedArtistImage.ts
 !/scripts/i18n-audit.mjs
+!/scripts/instagram/
 /ingest
 /backups
 /steps
@@ -99,3 +100,12 @@ scratch/
 # Abandoned shadcn/ui scaffolding: nothing in the app imports either file.
 /components.json
 /src/components/ui/use-mobile.tsx
+
+# Instagram engagement worker runtime state.
+# .instagram-profile holds a real logged-in Chrome session (cookies) and must
+# never be committed. logs/ is per-machine run output. The activity history in
+# data/ carries only public post URLs, so it is left tracked on purpose: it is
+# the worker's memory and is worth keeping across clones.
+/.instagram-profile/
+/logs/
+/data/*.corrupt-*
