@@ -7,10 +7,15 @@ import type { FamilyEditorLabel, FamilyRelationshipItem } from "@/lib/artistFami
 
 const labelKeys: FamilyEditorLabel[] = ["father","mother","parent","son","daughter","child","brother","sister","sibling","cousin","husband","wife","spouse","ex_husband","ex_wife","ex_spouse","widow_of","widower_of","grandfather","grandmother","grandparent","grandson","granddaughter","grandchild","uncle","aunt","nephew","niece","great_uncle","great_aunt","great_nephew","great_niece"];
 
+// Presentation-only keys have no entry in the editor dropdown, so map each one
+// back to the label an editor would have picked.
 function editableLabel(item: FamilyRelationshipItem): FamilyEditorLabel {
   if (item.labelKey === "late_husband" || item.labelKey === "late_wife") return "widow_of";
   if (item.labelKey === "great_uncle_aunt") return "great_uncle";
   if (item.labelKey === "great_nibling") return "great_nephew";
+  if (item.labelKey === "male_cousin" || item.labelKey === "female_cousin") return "cousin";
+  if (item.labelKey === "uncle_aunt") return "uncle";
+  if (item.labelKey === "nibling") return "nephew";
   return item.labelKey;
 }
 

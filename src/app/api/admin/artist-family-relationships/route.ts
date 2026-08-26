@@ -8,7 +8,10 @@ export async function GET(request: Request) {
   const auth = await requireAdminApiRole("editor"); if (auth.response) return auth.response;
   const artistId = new URL(request.url).searchParams.get("artistId");
   if (!artistId) return NextResponse.json({ok:false,error:"Artist id is required."},{status:400});
-  return NextResponse.json({ok:true,relationships:await getArtistFamilyRelationships(artistId)});
+  // Service role: editors must see relationships that involve draft artists too.
+  // The anon client cannot read draft rows from artists, which would drop every
+  // relationship on an unpublished profile.
+  return NextResponse.json({ok:true,relationships:await getArtistFamilyRelationships(artistId, createServiceRoleClient())});
 }
 
 export async function POST(request: Request) {

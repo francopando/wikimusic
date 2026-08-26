@@ -281,6 +281,20 @@ function getFacebookUrl(value: string | null | undefined) {
   return username ? `https://www.facebook.com/${username}` : null;
 }
 
+/**
+ * Some artists have no Facebook vanity URL, only a numeric identifier — stored
+ * either as "profile.php?id=100044569503508" or as the bare "100044564523848".
+ * Both link correctly but read as noise, so show the network name instead of
+ * the raw identifier.
+ */
+function getFacebookDisplay(value: string | null | undefined) {
+  const username = normalizeSocialUsername(value);
+  if (!username) return null;
+  const isNumericIdentifier =
+    username.startsWith("profile.php") || /^\d{6,}$/.test(username);
+  return isNumericIdentifier ? "Facebook" : username;
+}
+
 function getInstagramUrl(value: string | null | undefined) {
   const username = normalizeSocialUsername(value);
   return username ? `https://www.instagram.com/${username}` : null;
@@ -472,6 +486,7 @@ export default function ArtistFactsCard({
   const youtubeUrl = getYoutubeUrl(artist.youtube);
 
   const facebookUsername = normalizeSocialUsername(artist.facebook);
+  const facebookDisplay = getFacebookDisplay(artist.facebook);
   const facebookUrl = getFacebookUrl(artist.facebook);
 
   const instagramUsername = normalizeSocialUsername(artist.instagram);
@@ -586,7 +601,7 @@ export default function ArtistFactsCard({
             </SocialLink>
 
             <SocialLink href={facebookUrl} label="Facebook" Icon={SiFacebook}>
-              {facebookUsername}
+              {facebookDisplay}
             </SocialLink>
 
             <SocialLink href={instagramUrl} label="Instagram" Icon={SiInstagram}>

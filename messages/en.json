@@ -283,7 +283,20 @@
       "instrumentalist": "Instrumentalist",
       "singer_songwriter": "Singer-songwriter",
       "vocal_coach": "Vocal coach",
-      "music_educator": "Music educator"
+      "music_educator": "Music educator",
+      "writer": "Writer",
+      "rapper": "Rapper",
+      "actor": "Actor",
+      "actress": "Actress",
+      "musical_director": "Musical director",
+      "comedian": "Comedian",
+      "television_host": "Television host",
+      "radio_host": "Radio host",
+      "teacher": "Teacher",
+      "model": "Model",
+      "engineer": "Sound engineer",
+      "pastor": "Pastor",
+      "dancer": "Dancer"
     }
   },
   "artist": {
@@ -1180,10 +1193,10 @@
     "search": { "dialog": "Select an artist", "label": "Search artists", "placeholder": "Name, stage name, or alias", "searching": "Searching…", "error": "Artist search failed. Try again.", "empty": "No artists found.", "cancel": "Cancel" },
     "labels": {
       "father": "Father", "mother": "Mother", "parent": "Parent", "son": "Son", "daughter": "Daughter", "child": "Child",
-      "brother": "Brother", "sister": "Sister", "sibling": "Sibling", "cousin": "Cousin",
+      "brother": "Brother", "sister": "Sister", "sibling": "Sibling", "cousin": "Cousin", "male_cousin": "Cousin", "female_cousin": "Cousin",
       "husband": "Husband", "wife": "Wife", "spouse": "Spouse", "ex_husband": "Ex-husband", "ex_wife": "Ex-wife", "ex_spouse": "Ex-spouse", "widow_of": "Widow of", "widower_of": "Widower of", "late_husband": "Late husband", "late_wife": "Late wife",
       "grandfather": "Grandfather", "grandmother": "Grandmother", "grandparent": "Grandparent", "grandson": "Grandson", "granddaughter": "Granddaughter", "grandchild": "Grandchild",
-      "uncle": "Uncle", "aunt": "Aunt", "nephew": "Nephew", "niece": "Niece",
+      "uncle": "Uncle", "aunt": "Aunt", "uncle_aunt": "Uncle/aunt", "nephew": "Nephew", "niece": "Niece", "nibling": "Nephew/niece",
       "great_uncle": "Great-uncle", "great_aunt": "Great-aunt", "great_nephew": "Great-nephew", "great_niece": "Great-niece", "great_uncle_aunt": "Great-uncle/aunt", "great_nibling": "Great-nephew/niece"
     }
   },
