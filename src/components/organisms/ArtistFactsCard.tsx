@@ -10,6 +10,7 @@ import type { IconType } from "react-icons";
 import type { ArtistProfileData } from "@/lib/artistApi";
 import type { ArtistRelationshipItem } from "@/lib/artistRelationships";
 import type { FamilyRelationshipItem } from "@/lib/artistFamilyRelationships";
+import { formatOrigin } from "@/lib/artistDirectoryShared";
 import ShareButton from "@/components/atoms/ShareButton";
 
 type Props = {
@@ -146,7 +147,7 @@ function getRealName(artist: ArtistProfileData) {
 }
 
 function getBirthPlace(artist: ArtistProfileData) {
-  return [artist.birth_place, artist.province].filter(Boolean).join(", ") || null;
+  return formatOrigin(artist.birth_place, artist.province);
 }
 
 function getOccupationList(occupations: ArtistProfileData["occupations"]) {
