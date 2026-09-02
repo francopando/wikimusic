@@ -5,8 +5,25 @@ import { createRobotsPolicy } from "../src/app/robots";
 
 const INTERNAL_PATHS = ["/admin", "/admin/", "/api/", "/auth/", "/debug"];
 // Phase 3D also keeps crawlers out of site search, whose result pages are
-// user-driven and effectively unbounded.
-const CRAWLER_DISALLOWED = [...INTERNAL_PATHS, "/search"];
+// user-driven and effectively unbounded. Faceted listing query strings are
+// denied for the same reason — see FACETED_QUERY_PARAMS in src/app/robots.ts.
+const FACETED_QUERY_DISALLOWED = [
+  "page",
+  "sort",
+  "genre",
+  "subgenre",
+  "province",
+  "region",
+  "tag",
+  "classical",
+  "decade",
+  "view",
+].map((param) => `/*?*${param}=`);
+const CRAWLER_DISALLOWED = [
+  ...INTERNAL_PATHS,
+  "/search",
+  ...FACETED_QUERY_DISALLOWED,
+];
 
 test("robots remains fail-closed when indexing is disabled", () => {
   assert.deepEqual(createRobotsPolicy(false), {
@@ -77,4 +94,69 @@ test("blocking Amazonbot leaves search crawlers on the wildcard rule", () => {
 test("robots stays fail-closed for Amazonbot when indexing is disabled", () => {
   const policy = createRobotsPolicy(false);
   assert.deepEqual(policy.rules, { userAgent: "*", disallow: "/" });
+});
+
+/** robots.txt matching: prefix match on path+query, `*` matches any run. */
+function isDisallowed(rules: string[], url: string) {
+  return rules.some((pattern) => {
+    const source = pattern
+      .split("*")
+      .map((part) => part.replace(/[.+?^${}()|[\]\\]/g, "\\$&"))
+      .join(".*");
+    return new RegExp(`^${source}`).test(url);
+  });
+}
+
+// Faceted listing URLs are duplicates of their bare path and each one is an
+// uncached origin render. Blocking them must not cost any real crawl surface:
+// the bare listings stay open and the catalogue is reached via the sitemaps.
+test("faceted listing query strings are denied while bare listings stay crawlable", () => {
+  const wildcard = (createRobotsPolicy(true).rules as RobotsRule[]).find(
+    (rule) => rule.userAgent === "*",
+  );
+  const rules = wildcard?.disallow as string[];
+
+  for (const url of [
+    "/releases/albums?page=2",
+    "/releases/albums?sort=views&page=3",
+    "/releases/1990s?decade=1990s",
+    "/artists?genre=merengue",
+    "/artists?subgenre=bachata-urbana",
+    "/musicians?page=4",
+    "/producers?sort=name",
+    "/provinces/azua?province=azua",
+    "/artists/birthdays?view=zodiac",
+    "/es/releases/eps?page=7",
+  ]) {
+    assert.ok(isDisallowed(rules, url), `${url} must be denied`);
+  }
+
+  for (const url of [
+    "/",
+    "/releases",
+    "/releases/albums",
+    "/releases/1990s",
+    "/artists",
+    "/musicians",
+    "/artists/birthdays",
+    "/artists/juan-luis-guerra",
+    "/songs/ojala-que-llueva-cafe",
+    "/genres/merengue",
+    "/archive/1990",
+    "/es/releases/albums",
+  ]) {
+    assert.ok(!isDisallowed(rules, url), `${url} must stay crawlable`);
+  }
+});
+
+// /archive?year=1990 permanently redirects to /archive/1990. Blocking it would
+// strand the legacy URL in the index instead of letting it consolidate.
+test("the legacy archive redirect stays crawlable", () => {
+  const wildcard = (createRobotsPolicy(true).rules as RobotsRule[]).find(
+    (rule) => rule.userAgent === "*",
+  );
+  const rules = wildcard?.disallow as string[];
+
+  assert.ok(!isDisallowed(rules, "/archive?year=1990"));
+  assert.ok(!isDisallowed(rules, "/es/archive?year=1990"));
 });

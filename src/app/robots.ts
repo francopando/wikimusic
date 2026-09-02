@@ -20,7 +20,54 @@ const INTERNAL_PATHS = ["/admin", "/admin/", "/api/", "/auth/", "/debug"];
  * canonical to /search, and the site publishes no SearchAction markup that
  * depends on /search being crawlable.
  */
-const CRAWLER_DISALLOWED = [...INTERNAL_PATHS, "/search"];
+/**
+ * Faceted-navigation parameters, blocked wherever they appear.
+ *
+ * The public listings — release types and decades, the artist role
+ * directories, provinces, the birthday hub — are server-rendered per request
+ * and accept sort/page/filter query strings. A crawler following their own
+ * pagination and filter links multiplies those into an effectively unbounded
+ * set of distinct URLs, every one an uncached origin render. None of them is
+ * separately indexable: each listing canonicalises to its bare path (see
+ * metadataForReleaseType and createArtistDirectoryMetadata), so the
+ * parameterised forms are duplicates by construction.
+ *
+ * Discovery does not depend on them either. Every artist, song and release
+ * profile is enumerated directly in the segmented child sitemaps
+ * (sitemapCatalog.ts), so a crawler never needs to page through a listing to
+ * reach the catalogue. This is the argument that already keeps crawlers out
+ * of /search, applied to the same problem one level up.
+ *
+ * The bare listing paths stay fully crawlable — only the query forms are
+ * denied.
+ *
+ * `year` is deliberately absent. /archive?year=1990 permanently redirects to
+ * /archive/1990 (see redirectLegacyArchiveQuery in proxy.ts), and that
+ * redirect must stay crawlable for the legacy URL to consolidate onto its
+ * canonical form.
+ */
+const FACETED_QUERY_PARAMS = [
+  "page",
+  "sort",
+  "genre",
+  "subgenre",
+  "province",
+  "region",
+  "tag",
+  "classical",
+  "decade",
+  "view",
+];
+
+const FACETED_QUERY_DISALLOWED = FACETED_QUERY_PARAMS.map(
+  (param) => `/*?*${param}=`,
+);
+
+const CRAWLER_DISALLOWED = [
+  ...INTERNAL_PATHS,
+  "/search",
+  ...FACETED_QUERY_DISALLOWED,
+];
 const META_CRAWLERS = ["facebookexternalhit", "Facebot", "meta-externalagent"];
 
 /**
