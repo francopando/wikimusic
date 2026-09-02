@@ -1,6 +1,7 @@
 import { unstable_cache } from "next/cache";
 import { supabase } from "@/lib/supabase";
 import { ARTIST_PORTFOLIO_CACHE_TAG } from "@/lib/artistPortfolioCache";
+import { PUBLIC_PROFILE_REVALIDATE_SECONDS } from "@/lib/publicCatalogCache";
 import { getRecordingIdentitySummaries } from "@/lib/recordingIdentity";
 import {
   ARTIST_WORK_CREDIT_ROLES,
@@ -350,7 +351,10 @@ export const getArtistWorksPortfolio = unstable_cache(
   loadArtistWorksPortfolio,
   ["artist-works-portfolio-v4-public-hierarchy"],
   {
-    revalidate: 600,
+    // Caps the artist profile route's TTL if shortened — see
+    // PUBLIC_PROFILE_REVALIDATE_SECONDS. Invalidated on demand by
+    // invalidateArtistPortfolioCache() on every artist and works mutation.
+    revalidate: PUBLIC_PROFILE_REVALIDATE_SECONDS,
     tags: [ARTIST_PORTFOLIO_CACHE_TAG],
   },
 );

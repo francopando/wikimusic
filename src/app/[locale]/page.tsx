@@ -55,7 +55,10 @@ export async function generateMetadata({
   });
 }
 
-export const revalidate = 600; // 10 minutes
+// Homepage data is invalidated on demand through HOMEPAGE_DATA_CACHE_TAG and
+// HOMEPAGE_ARCHIVE_CACHE_TAG whenever an admin mutation lands, so this clock
+// only bounds drift from changes made outside the admin routes.
+export const revalidate = 3600; // 1 hour
 
 export default async function HomePage({
   params,

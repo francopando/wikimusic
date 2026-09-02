@@ -18,9 +18,15 @@ test("entity profiles use long fallback ISR with on-demand editorial revalidatio
   assert.equal(PUBLIC_CATALOG_REVALIDATE_SECONDS, 600);
 
   for (const source of [artistRoute, songRoute, releaseRoute]) {
-    // 24h is a fallback safety net only: admin mutation routes revalidate the
+    // 30d is a fallback safety net only: admin mutation routes revalidate the
     // affected profile paths immediately (see revalidateCatalogProfiles.ts).
-    assert.match(source, /export const revalidate = 86400/);
+    //
+    // The value is deliberately long. These three routes cover ~41,700
+    // cacheable URLs across both locales, so the clock — not editorial
+    // activity — sets the ISR write bill: at 24h it projected past 1.2M
+    // writes/month. Freshness must keep coming from the on-demand path, so
+    // shortening this is only correct if that path is removed.
+    assert.match(source, /export const revalidate = 2592000/);
     assert.match(source, /export function generateStaticParams\(\) \{\s*return \[\];\s*\}/);
     assert.match(source, /setRequestLocale\(/);
     assert.doesNotMatch(source, /force-dynamic|noStore|unstable_noStore/);

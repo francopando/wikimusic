@@ -41,7 +41,21 @@ type PageProps = {
 
 // Fallback-only TTL: editorial changes revalidate this page on demand
 // (revalidateArtistProfilePaths), so the clock exists purely as a safety net.
-export const revalidate = 86400;
+//
+// Held at 30 days because this clock is the dominant ISR cost. The public
+// catalogue is ~41,700 cacheable profile URLs across both locales, so every
+// expiry sweep rewrites the whole catalogue: a 24h value projected past 1.2M
+// ISR writes/month against a 200K budget. Freshness comes from the on-demand
+// path above, never from this number — lower it only if that path is removed.
+//
+// KNOWN DISCREPANCY: unlike the Song and Release profiles, this route still
+// serves s-maxage=600 in a production build. Ruled out by bisection: the
+// export itself, artists/layout.tsx, the Suspense boundary, the works
+// portfolio cache, PUBLIC_CATALOG_REVALIDATE_SECONDS, the sibling
+// artists/birthdays TTL, and stale build/ISR caches. A page on this route
+// reading any data collapses to 600, while the identical read under
+// /songs/[slug] holds 30 days. Unresolved.
+export const revalidate = 2592000; // 30 days
 
 export function generateStaticParams() {
   return [];

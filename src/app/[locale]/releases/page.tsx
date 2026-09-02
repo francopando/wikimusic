@@ -36,7 +36,9 @@ export async function generateMetadata({
   });
 }
 
-export const revalidate = 3600;
+// No on-demand invalidation covers this hub, so the clock is its only
+// freshness path: a newly published release surfaces here within a day.
+export const revalidate = 86400; // 24 hours
 
 async function FeaturedRelease({ release }: { release: ReleaseSummary | null }) {
   const t = await getTranslations("pages");

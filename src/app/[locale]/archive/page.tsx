@@ -25,7 +25,13 @@ export async function generateMetadata({
   });
 }
 
-export const revalidate = 3600;
+// Counts come from getArchiveCounts, which admin recording/release mutations
+// invalidate through HOMEPAGE_ARCHIVE_CACHE_TAG, so this clock is a fallback.
+//
+// The effective TTL is HOMEPAGE_CACHE_SECONDS (1h), not this value: Next
+// resolves a route's revalidate as the minimum across every cache it reads,
+// and getArchiveCounts is shorter. This stays as the route-level ceiling.
+export const revalidate = 86400; // 24 hours (capped to 1h by the data cache)
 
 export default async function ArchivePage() {
   const archiveCounts = await getArchiveCounts();

@@ -46,7 +46,13 @@ type PageProps = {
 
 // Fallback-only TTL: editorial changes revalidate this page on demand
 // (revalidateSongProfilePaths), so the clock exists purely as a safety net.
-export const revalidate = 86400;
+//
+// Held at 30 days because this clock is the dominant ISR cost. The public
+// catalogue is ~41,700 cacheable profile URLs across both locales, so every
+// expiry sweep rewrites the whole catalogue: a 24h value projected past 1.2M
+// ISR writes/month against a 200K budget. Freshness comes from the on-demand
+// path above, never from this number — lower it only if that path is removed.
+export const revalidate = 2592000; // 30 days
 
 export function generateStaticParams() {
   return [];

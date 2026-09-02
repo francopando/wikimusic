@@ -25,7 +25,9 @@ export async function generateMetadata({
   });
 }
 
-export const revalidate = 3600;
+// Editorially curated and rarely changing; the clock is its only freshness
+// path, so a day of lag is the intended trade.
+export const revalidate = 86400; // 24 hours
 
 export default async function EssentialDominicanAlbumsPage({
   params,

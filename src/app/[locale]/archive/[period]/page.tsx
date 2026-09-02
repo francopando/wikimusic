@@ -53,7 +53,22 @@ export async function generateMetadata({ params }: ArchivePeriodPageProps): Prom
   return result.metadata;
 }
 
-export const revalidate = 3600;
+// The archive spans ~118 periods (decades from 1920 plus every year), each
+// cached per locale, and the route has no on-demand invalidation — this clock
+// is its only freshness path. At 1h that was ~236 URLs expiring 24x a day,
+// the largest ISR cost outside the profile routes. Archive listings describe
+// historical catalogue, so a day of lag is immaterial.
+export const revalidate = 86400; // 24 hours
+
+// Required for this route to be cacheable at all. A dynamic segment with no
+// generateStaticParams is rendered per request, so before this the route was
+// pure origin compute: every crawler hit on any of ~236 period URLs paid a
+// full render. Returning [] prebuilds nothing (the catalogue must never be
+// serialized at build time) and lets dynamicParams fill the cache on first
+// request, exactly as the profile routes do.
+export function generateStaticParams() {
+  return [];
+}
 
 export default async function ArchivePeriodPage({
   params,
