@@ -63,34 +63,38 @@ test("robots explicitly permits Meta without widening internal access", () => {
   }
 });
 
-// Amazonbot walked the catalogue at a 2% cache hit rate, forcing a cold origin
-// render on nearly every request. It is denied outright; the block must stay
-// scoped to that agent so search crawlers keep their existing access.
-test("robots denies Amazonbot the whole site", () => {
+// Amazonbot was denied outright while the profile routes were effectively
+// uncached and its exhaustive walk forced a cold render per request. With
+// profiles in the route cache that cost is gone, and the catalogue exists to
+// be found — so no crawler is denied the site any more.
+test("no crawler is denied the whole site", () => {
   const rules = createRobotsPolicy(true).rules as RobotsRule[];
-  const amazonbot = rules.find((rule) => rule.userAgent === "Amazonbot");
-
-  assert.ok(amazonbot, "Amazonbot must have its own group");
-  assert.equal(amazonbot.disallow, "/");
-  assert.equal(amazonbot.allow, undefined, "a denied agent must not be granted an allow");
-});
-
-test("blocking Amazonbot leaves search crawlers on the wildcard rule", () => {
-  const rules = createRobotsPolicy(true).rules as RobotsRule[];
-
   const denied = rules.filter((rule) => rule.disallow === "/");
+
   assert.deepEqual(
     denied.map((rule) => rule.userAgent),
-    ["Amazonbot"],
-    "only Amazonbot may be denied outright",
+    [],
+    "a blanket denial keeps a crawler from discovering the catalogue at all",
   );
-
-  const wildcard = rules.find((rule) => rule.userAgent === "*");
-  assert.equal(wildcard?.allow, "/");
-  assert.deepEqual(wildcard?.disallow, CRAWLER_DISALLOWED);
+  assert.equal(
+    rules.find((rule) => rule.userAgent === "Amazonbot"),
+    undefined,
+  );
 });
 
-test("robots stays fail-closed for Amazonbot when indexing is disabled", () => {
+test("every named agent is allowed the catalogue on the same terms", () => {
+  const rules = createRobotsPolicy(true).rules as RobotsRule[];
+
+  for (const rule of rules) {
+    assert.equal(rule.allow, "/", `${rule.userAgent} must reach the catalogue`);
+    assert.deepEqual(rule.disallow, CRAWLER_DISALLOWED);
+  }
+
+  const wildcard = rules.find((rule) => rule.userAgent === "*");
+  assert.ok(wildcard, "the wildcard group must exist");
+});
+
+test("robots stays fail-closed when indexing is disabled", () => {
   const policy = createRobotsPolicy(false);
   assert.deepEqual(policy.rules, { userAgent: "*", disallow: "/" });
 });

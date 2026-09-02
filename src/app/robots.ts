@@ -79,24 +79,30 @@ const CRAWLER_DISALLOWED = [
 const META_CRAWLERS = ["facebookexternalhit", "Facebot", "meta-externalagent"];
 
 /**
- * Crawlers denied the whole site.
+ * Crawlers denied the whole site. Currently none.
  *
- * Amazonbot walks the catalogue exhaustively: 3.3K edge requests in a 12h
- * window at a 2% cache hit rate, meaning almost every request was a distinct
- * URL with no cache entry, forcing a cold origin render. That accounted for
- * roughly 60% of all function invocations and the largest single share of ISR
- * writes. It feeds Alexa and Amazon product search, so it returns no
- * organic-search value for this catalogue.
+ * Amazonbot was denied here in August 2026 on cost grounds: it walked the
+ * catalogue exhaustively — 3.3K edge requests in a 12h window at a 2% cache
+ * hit rate — and because the profile routes were effectively uncached at the
+ * time, almost every request forced a cold origin render. It accounted for
+ * roughly 60% of all function invocations.
  *
- * Deliberately narrow: Googlebot, GoogleOther, bingbot and DuckDuckBot are
- * untouched, and no path rule changes for anyone. This is a user-agent denial,
- * not an adjustment to what the site exposes.
+ * That reasoning no longer holds. Profiles now sit in the full route cache
+ * behind a 7-day fallback, so an exhaustive walk is answered from cache rather
+ * than by rendering, and the cost of being crawled thoroughly has collapsed.
  *
- * robots.txt is advisory. Amazon documents that Amazonbot honours it; if the
- * traffic does not fall within a day or two, enforcement belongs in the Vercel
- * firewall rather than here.
+ * The denial is lifted because this catalogue exists to be found. Amazonbot
+ * sends no organic search traffic back, but it is an indexer rather than a
+ * content scraper, and a Dominican music record that nobody can discover
+ * fails at its purpose. A crawler is only worth denying here when it takes
+ * something without giving discovery in return.
+ *
+ * The mechanism stays. Add a user agent to this list to deny it outright,
+ * scoped to that agent and changing no path rule for anyone else. Note that
+ * robots.txt is advisory: an agent that ignores it needs the Vercel firewall,
+ * not this file.
  */
-const BLOCKED_CRAWLERS = ["Amazonbot"];
+const BLOCKED_CRAWLERS: string[] = [];
 
 export function createRobotsPolicy(indexingEnabled: boolean): MetadataRoute.Robots {
   if (!indexingEnabled) {
