@@ -26,6 +26,7 @@
 !/scripts/uploadGeneratedArtistImage.ts
 !/scripts/i18n-audit.mjs
 !/scripts/instagram/
+!/scripts/revalidate.ts
 /ingest
 /backups
 /steps

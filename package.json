@@ -21,7 +21,8 @@
     "instagram:status": "tsx scripts/instagram/queue.ts status",
     "instagram:chrome": "tsx scripts/instagram/launchChrome.ts",
     "instagram:digest": "tsx scripts/instagram/runDigest.ts",
-    "instagram:ack": "tsx scripts/instagram/acknowledge.ts"
+    "instagram:ack": "tsx scripts/instagram/acknowledge.ts",
+    "revalidate": "tsx scripts/revalidate.ts"
   },
   "dependencies": {
     "@fontsource/finlandica": "^5.3.0",
