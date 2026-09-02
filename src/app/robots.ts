@@ -41,13 +41,21 @@ const INTERNAL_PATHS = ["/admin", "/admin/", "/api/", "/auth/", "/debug"];
  * The bare listing paths stay fully crawlable — only the query forms are
  * denied.
  *
- * `year` is deliberately absent. /archive?year=1990 permanently redirects to
- * /archive/1990 (see redirectLegacyArchiveQuery in proxy.ts), and that
- * redirect must stay crawlable for the legacy URL to consolidate onto its
- * canonical form.
+ * Two parameters are deliberately absent:
+ *
+ * `page`, because it is linear rather than multiplicative and is the site's
+ * real crawl path into the catalogue. Listings show 24 items
+ * (ARTIST_DIRECTORY_ITEMS_PER_PAGE, RELEASE_LIST_PAGE_SIZE), so blocking it
+ * would leave 610 of 634 artists reachable only from the sitemap. Sitemaps
+ * give discovery; internal links give crawl paths and link equity, and this
+ * catalogue exists to be found. Allowing it costs a few hundred bounded URLs
+ * against the many thousands the filter matrix would generate.
+ *
+ * `year`, because /archive?year=1990 permanently redirects to /archive/1990
+ * (see redirectLegacyArchiveQuery in proxy.ts), and that redirect must stay
+ * crawlable for the legacy URL to consolidate onto its canonical form.
  */
 const FACETED_QUERY_PARAMS = [
-  "page",
   "sort",
   "genre",
   "subgenre",

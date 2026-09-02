@@ -8,7 +8,6 @@ const INTERNAL_PATHS = ["/admin", "/admin/", "/api/", "/auth/", "/debug"];
 // user-driven and effectively unbounded. Faceted listing query strings are
 // denied for the same reason — see FACETED_QUERY_PARAMS in src/app/robots.ts.
 const FACETED_QUERY_DISALLOWED = [
-  "page",
   "sort",
   "genre",
   "subgenre",
@@ -117,16 +116,13 @@ test("faceted listing query strings are denied while bare listings stay crawlabl
   const rules = wildcard?.disallow as string[];
 
   for (const url of [
-    "/releases/albums?page=2",
     "/releases/albums?sort=views&page=3",
     "/releases/1990s?decade=1990s",
     "/artists?genre=merengue",
     "/artists?subgenre=bachata-urbana",
-    "/musicians?page=4",
     "/producers?sort=name",
     "/provinces/azua?province=azua",
     "/artists/birthdays?view=zodiac",
-    "/es/releases/eps?page=7",
   ]) {
     assert.ok(isDisallowed(rules, url), `${url} must be denied`);
   }
@@ -144,6 +140,13 @@ test("faceted listing query strings are denied while bare listings stay crawlabl
     "/genres/merengue",
     "/archive/1990",
     "/es/releases/albums",
+    // Pagination is the catalogue's crawl path. Listings show 24 items, so
+    // blocking it would strand 610 of 634 artists outside the internal link
+    // graph and leave them reachable only from the sitemap.
+    "/artists?page=2",
+    "/musicians?page=4",
+    "/releases/albums?page=2",
+    "/es/releases/eps?page=7",
   ]) {
     assert.ok(!isDisallowed(rules, url), `${url} must stay crawlable`);
   }

@@ -28,12 +28,16 @@ type PageProps = {
 // Fallback-only TTL: editorial changes revalidate this page on demand
 // (revalidateReleaseProfilePaths), so the clock exists purely as a safety net.
 //
-// Held at 30 days because this clock is the dominant ISR cost. The public
-// catalogue is ~41,700 cacheable profile URLs across both locales, so every
-// expiry sweep rewrites the whole catalogue: a 24h value projected past 1.2M
-// ISR writes/month against a 200K budget. Freshness comes from the on-demand
-// path above, never from this number — lower it only if that path is removed.
-export const revalidate = 2592000; // 30 days
+// Held at 7 days. The public catalogue is ~41,700 cacheable profile URLs
+// across both locales, so this clock — not editorial activity — sets the ISR
+// write bill: roughly 41,700 / 7 days, about 179K writes a month. A 24h value
+// projected past 1.2M.
+//
+// Freshness comes from the on-demand path above and from /api/revalidate after
+// work written straight to Postgres. This is the backstop for when both are
+// missed, which is why it is a week rather than a month: a correction nobody
+// revalidated still reaches the public site within seven days.
+export const revalidate = 604800; // 7 days
 
 export function generateStaticParams() {
   return [];

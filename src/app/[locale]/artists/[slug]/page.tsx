@@ -42,20 +42,27 @@ type PageProps = {
 // Fallback-only TTL: editorial changes revalidate this page on demand
 // (revalidateArtistProfilePaths), so the clock exists purely as a safety net.
 //
-// Held at 30 days because this clock is the dominant ISR cost. The public
-// catalogue is ~41,700 cacheable profile URLs across both locales, so every
-// expiry sweep rewrites the whole catalogue: a 24h value projected past 1.2M
-// ISR writes/month against a 200K budget. Freshness comes from the on-demand
-// path above, never from this number — lower it only if that path is removed.
+// Held at 7 days. The public catalogue is ~41,700 cacheable profile URLs
+// across both locales, so this clock — not editorial activity — sets the ISR
+// write bill: roughly 41,700 / 7 days, about 179K writes a month. A 24h value
+// projected past 1.2M.
 //
-// KNOWN DISCREPANCY: unlike the Song and Release profiles, this route still
-// serves s-maxage=600 in a production build. Ruled out by bisection: the
-// export itself, artists/layout.tsx, the Suspense boundary, the works
-// portfolio cache, PUBLIC_CATALOG_REVALIDATE_SECONDS, the sibling
-// artists/birthdays TTL, and stale build/ISR caches. A page on this route
-// reading any data collapses to 600, while the identical read under
-// /songs/[slug] holds 30 days. Unresolved.
-export const revalidate = 2592000; // 30 days
+// Freshness comes from the on-demand path above and from /api/revalidate after
+// work written straight to Postgres. This is the backstop for when both are
+// missed, which is why it is a week rather than a month: a correction nobody
+// revalidated still reaches the public site within seven days.
+//
+// Historical note, because this route has misbehaved before: at 2592000 it
+// served s-maxage=600 in a production build while /songs and /releases
+// honoured that same value. Bisection never found the cause — the export, the
+// artists layout, the Suspense boundary, the works portfolio cache,
+// PUBLIC_CATALOG_REVALIDATE_SECONDS, the sibling birthdays TTL and stale
+// build caches were each ruled out. At 604800 it honours the declared value,
+// verified by response header on fresh cache misses in both locales.
+//
+// If this is ever changed, check the served Cache-Control rather than trusting
+// the source: on this route the two have diverged silently once already.
+export const revalidate = 604800; // 7 days
 
 export function generateStaticParams() {
   return [];

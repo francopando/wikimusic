@@ -1,5 +1,6 @@
 import "dotenv/config";
 
+import { SITE_URL } from "../src/lib/seo";
 import {
   MAX_SLUGS_PER_ENTITY,
   REVALIDATION_TARGETS,
@@ -30,7 +31,7 @@ const USAGE = `Usage: npm run revalidate -- [options]
   --songs    <slugs>   Recording slugs
   --releases <slugs>   Release slugs
   --all-artists        Refresh every artist profile in one call
-  --url      <origin>  Target origin (default: NEXT_PUBLIC_SITE_URL)
+  --url      <origin>  Target origin (default: the canonical site origin)
   --dry-run            Print what would be sent, then exit
 
 Requires REVALIDATION_TOKEN in the environment.`;
@@ -138,11 +139,10 @@ async function main() {
     process.exit(1);
   }
 
-  const origin = (
-    args.url ??
-    process.env.NEXT_PUBLIC_SITE_URL ??
-    "http://localhost:3000"
-  ).replace(/\/+$/, "");
+  // SITE_URL, not NEXT_PUBLIC_SITE_URL: the canonical origin is a constant in
+  // src/lib/seo.ts precisely so a preview host can never stand in for it, and
+  // nothing in the app reads the env var. Pass --url to target somewhere else.
+  const origin = (args.url ?? SITE_URL).replace(/\/+$/, "");
   const endpoint = `${origin}/api/revalidate`;
 
   if (args.dryRun) {
