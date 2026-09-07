@@ -16,26 +16,36 @@ export const PUBLIC_GENRE_CACHE_TAG = "public-genres";
 export const PUBLIC_GENRE_REVALIDATE_SECONDS = 86400;
 
 /**
- * Fallback freshness for data read by the Artist, Song and Release profiles.
+ * Fallback freshness for the profile routes, split by how often the underlying
+ * rows actually change.
  *
- * Same minimum rule as above, and the same trap: these three routes declare a
- * 7-day fallback TTL, but any shorter revalidate on a cache they read silently
- * becomes the route's real TTL. The artist works portfolio hardcoded 600, which
- * is exactly the kind of cap that quietly defeats the export.
+ * Same minimum rule as above, and the same trap: a route declares a TTL, but
+ * any shorter revalidate on a cache it reads silently becomes the route's real
+ * TTL. The artist works portfolio once hardcoded 600, which is exactly the kind
+ * of cap that quietly defeats the export, so the portfolio cache must carry the
+ * artist value below and not a shorter one.
  *
- * Verified against a production build: all three profile routes serve this
- * value on a fresh cache miss, in both locales. That verification matters —
- * at 2592000 the artist route served 600 instead, for reasons bisection never
- * established. See the note on that route before changing this.
+ * WHY THESE ARE LONG. The clock is not the freshness mechanism and has not been
+ * since the on-demand path was built: admin mutations revalidate what they
+ * touch, and /api/revalidate closes the gap after work written straight to
+ * Postgres. The TTL only bounds how long a *missed* revalidation can persist.
  *
- * A week, not a month: freshness comes from the admin mutation routes and from
- * /api/revalidate after direct database work, so this only matters when both
- * are missed. Bounding that to a week keeps an unrevalidated correction from
- * sitting stale for a whole month, at a cost of roughly 41,700 URLs / 7 days —
- * about 179K ISR writes a month, which needs headroom beyond the Hobby tier.
+ * Paying for it as though it were the freshness mechanism is expensive, because
+ * an ISR write unit is 8 KB and a profile rebuild writes roughly 34 KB — about
+ * 4.2 units. The catalogue is ~41,700 cacheable profile URLs, so a full pass
+ * costs around 174,000 write units against a 200,000 monthly Hobby allowance.
+ * At a 7-day clock that pass repeats four times a month on rows nobody edited.
  *
- * Admin mutations invalidate these caches on demand (ARTIST_PORTFOLIO_CACHE_TAG
- * via invalidateArtistPortfolioCache, plus the per-path helpers in
- * revalidateCatalogProfiles.ts). Keep this aligned with the routes' exports.
+ * Hence the split. Artists are the rows under constant editorial work and are
+ * only ~1,286 URLs, so they keep a month-long safety net cheaply. Songs and
+ * releases are ~40,400 URLs that are essentially never edited after creation,
+ * and a year costs almost nothing.
+ *
+ * VERIFY THE SERVED HEADER AFTER CHANGING THESE. At 2592000 the artist route
+ * once served s-maxage=600 instead of the declared value, for reasons bisection
+ * never established; at 604800 it honoured it. That is why the artist value
+ * below is 31 days rather than exactly 2592000. Check the header on a fresh
+ * cache miss in both locales rather than trusting this source.
  */
-export const PUBLIC_PROFILE_REVALIDATE_SECONDS = 604800;
+export const ARTIST_PROFILE_REVALIDATE_SECONDS = 2678400; // 31 days
+export const CATALOG_PROFILE_REVALIDATE_SECONDS = 31536000; // 365 days

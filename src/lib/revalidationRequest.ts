@@ -5,7 +5,7 @@
  * and release passes — runs no Next.js code, so none of the on-demand
  * revalidation in revalidateArtistProfile.ts or revalidateCatalogProfiles.ts
  * ever fires. Those helpers are reached only from an admin save. Public
- * profiles therefore sit on their fallback TTL (30 days) until something tells
+ * profiles therefore sit on their fallback TTL (7 days) until something tells
  * them the underlying rows changed, which is what /api/revalidate is for.
  *
  * Parsing lives here rather than in the route so the validation rules are

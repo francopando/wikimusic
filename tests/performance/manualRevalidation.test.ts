@@ -87,9 +87,31 @@ test("allArtists sweeps the shared tags without inventing a slug", () => {
     "a sentinel slug would revalidate a path that does not exist",
   );
   assert.match(artistRevalidation, /export function revalidateAllArtistProfiles\(\)/);
-  assert.match(
-    artistRevalidation,
-    /revalidateArtistProfilePaths[\s\S]{0,120}revalidateAllArtistProfiles\(\)/,
-    "per-slug revalidation must keep sweeping the shared tags",
+});
+
+// This assertion is the reverse of what it used to be, and the reversal is the
+// point. It previously required per-slug revalidation to keep sweeping the
+// shared tags, on the reasoning that the portfolio cache is read by every
+// profile so any change had to clear all of them.
+//
+// The cost of that was never measured until it was: an ISR write unit is 8 KB
+// and a profile rebuild writes ~34 KB, so sweeping rebuilt the whole artist
+// catalogue -- ~5,400 write units at 643 artists, ~42,000 at 5,000 -- every
+// time one artist was saved. The portfolio now carries a per-artist tag, so
+// the sweep is available when it is wanted and is no longer the only option.
+test("naming one artist revalidates that artist and not the catalogue", () => {
+  const targeted = artistRevalidation.slice(
+    artistRevalidation.indexOf("export function revalidateArtistProfile("),
   );
+  assert.doesNotMatch(
+    targeted,
+    /invalidateArtistPortfolioCache\(\)/,
+    "targeted revalidation must not drop every artist portfolio",
+  );
+  assert.match(targeted, /invalidateArtistPortfolio\(artistId\)/);
+
+  // The manual route must resolve slug -> id, or the portfolio cannot be
+  // targeted and the entry silently falls back to waiting for the clock.
+  assert.match(route, /\.select\("id,slug"\)/);
+  assert.match(route, /revalidateArtistProfilePaths\(slug, idBySlug\.get\(slug\) \?\? null\)/);
 });

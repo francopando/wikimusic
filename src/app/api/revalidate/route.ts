@@ -1,6 +1,8 @@
 import { createHash, timingSafeEqual } from "node:crypto";
 import { NextResponse } from "next/server";
 
+import { createServiceRoleClient } from "@/lib/supabaseService";
+
 import {
   revalidateAllArtistProfiles,
   revalidateArtistProfilePaths,
@@ -16,7 +18,7 @@ import { parseRevalidationRequest } from "@/lib/revalidationRequest";
  *
  * Admin saves already revalidate the entities they touch. Editorial passes
  * that write straight to Postgres do not — no Next.js code runs, so the
- * affected profiles keep serving their cached copy until the 30-day fallback
+ * affected profiles keep serving their cached copy until the 7-day fallback
  * TTL expires. This endpoint closes that gap: run the pass, then name what
  * changed.
  *
@@ -75,15 +77,28 @@ export async function POST(request: Request) {
 
   const { artists, songs, releases, allArtists } = parsed.request;
 
-  // allArtists leans on the shared portfolio tag that every artist profile
-  // reads: invalidating it through any single slug sweeps all of them. Songs
-  // and releases have no shared tag by design, so they are revalidated one
-  // path set at a time.
+  // allArtists is the deliberate sweep: it clears the shared portfolio tag that
+  // every artist profile reads, rebuilding the whole artist catalogue. Reach
+  // for it when the portfolio's shape changed for everyone, not to publish a
+  // handful of entries -- at ~4.2 ISR write units per profile and two locales
+  // it costs roughly 5,400 units today and scales with the catalogue.
   if (allArtists) {
     revalidateAllArtistProfiles();
   }
 
-  for (const slug of artists) revalidateArtistProfilePaths(slug);
+  // Named artists are targeted: each drops only its own portfolio entry and its
+  // own paths. Resolving slug -> id in one query is what makes that possible;
+  // without the id the portfolio cannot be targeted and falls back to the clock.
+  if (artists.length) {
+    const { data: rows } = await createServiceRoleClient()
+      .from("artists")
+      .select("id,slug")
+      .in("slug", artists);
+    const idBySlug = new Map((rows ?? []).map((row) => [row.slug, row.id]));
+    for (const slug of artists) {
+      revalidateArtistProfilePaths(slug, idBySlug.get(slug) ?? null);
+    }
+  }
   for (const slug of songs) revalidateSongProfilePaths(slug);
   for (const slug of releases) revalidateReleaseProfilePaths(slug);
 

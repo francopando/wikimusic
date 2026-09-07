@@ -14,7 +14,7 @@ export async function revalidateEditorialDocumentOwner(ownerArtistId: string) {
     .maybeSingle(),
     supabase.from("featured_artist").select("artist_id").eq("artist_id", ownerArtistId).maybeSingle(),
   ]);
-  if (data?.slug) revalidateArtistProfilePaths(data.slug);
+  if (data?.slug) revalidateArtistProfilePaths(data.slug, ownerArtistId);
   if (featured) revalidateHomepageData();
 }
 
@@ -31,6 +31,6 @@ export async function revalidateEditorialDocumentsReferencingArtist(targetArtist
     return document?.owner_artist_id ? [document.owner_artist_id] : [];
   }))];
   if (!ownerIds.length) return;
-  const { data: owners } = await supabase.from("artists").select("slug").in("id", ownerIds);
-  for (const owner of owners ?? []) if (owner.slug) revalidateArtistProfilePaths(owner.slug);
+  const { data: owners } = await supabase.from("artists").select("id,slug").in("id", ownerIds);
+  for (const owner of owners ?? []) if (owner.slug) revalidateArtistProfilePaths(owner.slug, owner.id);
 }

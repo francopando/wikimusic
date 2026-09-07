@@ -1,7 +1,7 @@
 import { unstable_cache } from "next/cache";
 import { supabase } from "@/lib/supabase";
-import { ARTIST_PORTFOLIO_CACHE_TAG } from "@/lib/artistPortfolioCache";
-import { PUBLIC_PROFILE_REVALIDATE_SECONDS } from "@/lib/publicCatalogCache";
+import { ARTIST_PORTFOLIO_CACHE_TAG, artistPortfolioTag } from "@/lib/artistPortfolioCache";
+import { ARTIST_PROFILE_REVALIDATE_SECONDS } from "@/lib/publicCatalogCache";
 import { getRecordingIdentitySummaries } from "@/lib/recordingIdentity";
 import {
   ARTIST_WORK_CREDIT_ROLES,
@@ -347,17 +347,32 @@ async function loadArtistWorksPortfolio(artistId: string): Promise<PortfolioWork
   }
 }
 
-export const getArtistWorksPortfolio = unstable_cache(
-  loadArtistWorksPortfolio,
-  ["artist-works-portfolio-v4-public-hierarchy"],
-  {
-    // Caps the artist profile route's TTL if shortened — see
-    // PUBLIC_PROFILE_REVALIDATE_SECONDS. Invalidated on demand by
-    // invalidateArtistPortfolioCache() on every artist and works mutation.
-    revalidate: PUBLIC_PROFILE_REVALIDATE_SECONDS,
-    tags: [ARTIST_PORTFOLIO_CACHE_TAG],
-  },
-);
+/**
+ * One cache entry per artist, tagged both globally and individually.
+ *
+ * unstable_cache's `tags` are fixed at the call site, so tagging per artist
+ * means building the cached function per artist id rather than once at module
+ * scope. The key array carries the id for the same reason it always did — the
+ * entry is per artist — and the extra tag is what makes a single artist
+ * droppable without dropping the rest.
+ *
+ * Before this, every entry carried only ARTIST_PORTFOLIO_CACHE_TAG, so one
+ * artist save invalidated the portfolio of every artist in the catalogue.
+ */
+export function getArtistWorksPortfolio(artistId: string): Promise<PortfolioWork[]> {
+  return unstable_cache(
+    loadArtistWorksPortfolio,
+    ["artist-works-portfolio-v4-public-hierarchy", artistId],
+    {
+      // Caps the artist profile route's TTL if shortened — see
+      // ARTIST_PROFILE_REVALIDATE_SECONDS. Invalidated on demand by
+      // invalidateArtistPortfolio(artistId) on that artist's mutations, or by
+      // invalidateArtistPortfolioCache() when every portfolio must go.
+      revalidate: ARTIST_PROFILE_REVALIDATE_SECONDS,
+      tags: [ARTIST_PORTFOLIO_CACHE_TAG, artistPortfolioTag(artistId)],
+    },
+  )(artistId);
+}
 
 export function summarizePortfolioRoles(works: PortfolioWork[]): RoleSummary[] {
   const counts = new Map<string, number>();

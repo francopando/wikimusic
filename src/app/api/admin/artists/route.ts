@@ -197,11 +197,11 @@ export async function POST(request: Request) {
   }
 
   if (previousSlugResponse?.data?.slug && previousSlugResponse.data.slug !== response.data.slug) {
-    revalidateArtistProfilePaths(previousSlugResponse.data.slug);
+    revalidateArtistProfilePaths(previousSlugResponse.data.slug, response.data.id);
   }
 
   if (response.data.slug) {
-    revalidateArtistProfilePaths(response.data.slug);
+    revalidateArtistProfilePaths(response.data.slug, response.data.id);
   }
 
   await revalidateEditorialDocumentsReferencingArtist(response.data.id);
@@ -280,7 +280,7 @@ export async function DELETE(request: Request) {
   }
 
   if (artist.slug) {
-    revalidateArtistProfilePaths(artist.slug);
+    revalidateArtistProfilePaths(artist.slug, artistId);
   }
 
   revalidateHomepageData();

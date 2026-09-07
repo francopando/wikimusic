@@ -42,27 +42,32 @@ type PageProps = {
 // Fallback-only TTL: editorial changes revalidate this page on demand
 // (revalidateArtistProfilePaths), so the clock exists purely as a safety net.
 //
-// Held at 7 days. The public catalogue is ~41,700 cacheable profile URLs
-// across both locales, so this clock — not editorial activity — sets the ISR
-// write bill: roughly 41,700 / 7 days, about 179K writes a month. A 24h value
-// projected past 1.2M.
+// Held at 31 days, and the split from /songs and /releases is deliberate.
 //
-// Freshness comes from the on-demand path above and from /api/revalidate after
-// work written straight to Postgres. This is the backstop for when both are
-// missed, which is why it is a week rather than a month: a correction nobody
-// revalidated still reaches the public site within seven days.
+// An ISR write unit is 8 KB and a profile rebuild writes roughly 34 KB, so a
+// full pass over the ~41,700 cacheable profile URLs costs about 174K write
+// units against a 200K monthly allowance. Paying that four times a month for a
+// 7-day clock, on rows nobody edited, was most of the bill.
+//
+// Artists are only ~1,286 of those URLs and are the rows under constant
+// editorial work, so a month-long backstop costs little and still catches a
+// revalidation that was missed. Songs and releases are the other ~40,400 and
+// are essentially never edited after creation, so they carry a year.
 //
 // Historical note, because this route has misbehaved before: at 2592000 it
 // served s-maxage=600 in a production build while /songs and /releases
 // honoured that same value. Bisection never found the cause — the export, the
 // artists layout, the Suspense boundary, the works portfolio cache,
 // PUBLIC_CATALOG_REVALIDATE_SECONDS, the sibling birthdays TTL and stale
-// build caches were each ruled out. At 604800 it honours the declared value,
+// build caches were each ruled out. At 604800 it honoured the declared value,
 // verified by response header on fresh cache misses in both locales.
 //
-// If this is ever changed, check the served Cache-Control rather than trusting
-// the source: on this route the two have diverged silently once already.
-export const revalidate = 604800; // 7 days
+// 2678400 is 31 days rather than the round 2592000 precisely to stay off the
+// value that misbehaved. That is a guess about a cause nobody established, so
+// VERIFY THE SERVED Cache-Control on this route after deploying rather than
+// trusting this source: the two have diverged silently once already. If it
+// serves 600 again, fall back to 604800 and note it here.
+export const revalidate = 2678400; // 31 days -- see ARTIST_PROFILE_REVALIDATE_SECONDS
 
 export function generateStaticParams() {
   return [];

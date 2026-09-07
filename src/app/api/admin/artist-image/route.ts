@@ -170,7 +170,7 @@ export async function POST(request: Request) {
     return jsonError("Image processing failed. Please try again.", "processing_failed", 500);
   }
 
-  if (artist.slug) revalidateArtistProfilePaths(artist.slug);
+  if (artist.slug) revalidateArtistProfilePaths(artist.slug, artistId);
   revalidateHomepageData();
 
   return NextResponse.json({

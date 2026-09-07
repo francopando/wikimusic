@@ -12,7 +12,7 @@ import {
  * Postgres.
  *
  * Admin saves revalidate what they touch. Direct database work does not — no
- * Next.js code runs, so profiles keep serving cached copies until their 30-day
+ * Next.js code runs, so profiles keep serving cached copies until their 7-day
  * fallback TTL expires. Run this at the end of such a pass and name what
  * changed.
  *

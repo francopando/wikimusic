@@ -1,6 +1,9 @@
 import { revalidatePath, revalidateTag } from "next/cache";
 import { routing } from "@/i18n/routing";
-import { invalidateArtistPortfolioCache } from "@/lib/artistPortfolioCache";
+import {
+  invalidateArtistPortfolio,
+  invalidateArtistPortfolioCache,
+} from "@/lib/artistPortfolioCache";
 import { PUBLIC_ARTIST_DIRECTORY_CACHE_TAG } from "@/lib/publicCatalogCache";
 
 export function getArtistProfileRevalidationPaths(slug: string) {
@@ -25,26 +28,64 @@ export function getArtistProfileRevalidationPaths(slug: string) {
 }
 
 /**
+ * Refreshes the listings an artist appears in, without touching any profile.
+ *
+ * The directory tag is read by the artist directories, the province and role
+ * listings and the paginated pages behind them — never by a profile page. So
+ * clearing it rebuilds a few hundred listing URLs and leaves every profile
+ * cached, which is exactly what a newly published artist needs: the profile
+ * itself has never been cached, so it renders fresh on first request and costs
+ * nothing to "revalidate".
+ */
+export function revalidateArtistDirectories() {
+  revalidateTag(PUBLIC_ARTIST_DIRECTORY_CACHE_TAG, { expire: 0 });
+}
+
+/**
  * Invalidates every artist profile and directory in one call.
  *
  * Both tags are shared across all artists — the portfolio cache is read by
  * every profile page, the directory cache by every listing — so clearing them
- * sweeps the whole set without naming a slug. That breadth is why a single
- * artist save already refreshes far more than the artist it touched.
+ * sweeps the whole set without naming a slug.
  *
- * Exposed on its own for /api/revalidate, which needs exactly this after an
- * editorial pass that wrote straight to Postgres and so never reached any of
- * the admin mutation routes.
+ * That breadth is the point when the portfolio's shape changes for everyone: a
+ * schema change, a layout change, a credit-role change. It is the wrong tool
+ * for editing one artist, and it used to be the only tool, which is why a
+ * single admin save rebuilt the entire artist catalogue. Prefer
+ * revalidateArtistProfile below.
+ *
+ * The cost is the whole catalogue: at ~4.2 ISR write units per profile rebuild
+ * and two locales, 643 artists is roughly 5,400 units and 5,000 artists would
+ * be roughly 42,000.
  */
 export function revalidateAllArtistProfiles() {
   invalidateArtistPortfolioCache();
-  revalidateTag(PUBLIC_ARTIST_DIRECTORY_CACHE_TAG, { expire: 0 });
+  revalidateArtistDirectories();
 }
 
-export function revalidateArtistProfilePaths(slug: string) {
-  revalidateAllArtistProfiles();
+/**
+ * Refreshes one artist and the listings that show them. Nothing else.
+ *
+ * Pass the artist id whenever it is known: it targets that artist's portfolio
+ * entry instead of dropping all of them. Without it the portfolio cannot be
+ * targeted, so callers that only hold a slug should resolve the id first —
+ * every caller in this repo now does.
+ */
+export function revalidateArtistProfile(slug: string, artistId?: string | null) {
+  if (artistId) invalidateArtistPortfolio(artistId);
+  revalidateArtistDirectories();
 
   for (const path of getArtistProfileRevalidationPaths(slug)) {
     revalidatePath(path, "page");
   }
+}
+
+/**
+ * Back-compatible alias.
+ *
+ * It no longer sweeps every profile — that behaviour moved to
+ * revalidateAllArtistProfiles, which callers must now ask for explicitly.
+ */
+export function revalidateArtistProfilePaths(slug: string, artistId?: string | null) {
+  revalidateArtistProfile(slug, artistId);
 }

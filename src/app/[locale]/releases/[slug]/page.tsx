@@ -37,7 +37,7 @@ type PageProps = {
 // work written straight to Postgres. This is the backstop for when both are
 // missed, which is why it is a week rather than a month: a correction nobody
 // revalidated still reaches the public site within seven days.
-export const revalidate = 604800; // 7 days
+export const revalidate = 31536000; // 365 days -- see CATALOG_PROFILE_REVALIDATE_SECONDS
 
 export function generateStaticParams() {
   return [];
