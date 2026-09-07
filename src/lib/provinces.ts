@@ -9,8 +9,10 @@ export type PublishedProvince = {
   count: number;
 };
 
+const LEGACY_ABROAD = new Set(["X - Born Outside", "Born Abroad"]);
+
 export function getProvinceDisplayName(province: string) {
-  return province === "X - Born Outside" ? "Born Abroad" : province;
+  return LEGACY_ABROAD.has(province) ? "Nacido en el Exterior" : province;
 }
 
 export async function getPublishedProvinces(): Promise<PublishedProvince[]> {

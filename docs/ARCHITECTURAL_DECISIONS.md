@@ -125,6 +125,49 @@ As Mangulina documents more international collaborations, the decision may need 
 - Whether to include diaspora artists (Dominican heritage, but grew up elsewhere)
 - How to handle artists who worked in Dominican Republic but are not Dominican nationals
 
+#### Open question: what "diaspora" would have to mean (raised 2026-09-06)
+
+An `artist_tags` value `diaspora` exists on 8 rows. It was written directly into
+the column during the catalogue run and has never been part of the tag
+vocabulary: the admin form offers only `["christian","secular"]` and
+`["legend","emerging"]`, `ArtistDirectory` types the filter as
+`"legend" | "emerging"`, and the routes that read the column are `/christian`,
+`/artists/legends` and `/artists/emerging`. Nothing can surface it.
+
+It is **not** a substitute for the `province` sentinel `"Born Abroad"`. That
+sentinel answers *which of the thirty-two provinces* with *none*, is offered in
+the admin dropdown, and is filtered out of display by `formatOrigin`. A tag
+would answer a different question: *what kind of artist is this*.
+
+The data shows the definition is unsettled, because the tag currently means
+three different things at once. Of the 8 tagged rows, 4 also carry province
+`"Born Abroad"`, 2 carry a Dominican province (Yasser Tejeda, Distrito
+Nacional; Chiky Bombom, Santiago) and 2 carry none.
+
+The word also appears in the prose of about 50 biographies — Milly Quezada,
+Fernando Villalona, Eddy Herrera, Raulín Rodríguez, Luis Vargas, Rubby Pérez,
+Oro Sólido, The New York Band, Ilegales, Joe Veras, Elvis Martínez, Víctor
+Víctor and others. Only 2 of the 8 tagged artists are among them. The tag and
+the prose are almost disjoint sets.
+
+Before the tag can become a facet, one of these has to be chosen:
+
+1. **Born abroad to Dominican family.** Prince Royce, Mark B, Daniel Santacruz,
+   Proyecto Uno. This is nearly a duplicate of the `"Born Abroad"` province
+   sentinel and would add little.
+2. **Working abroad, wherever born.** Adds Yasser Tejeda and Pierre Carbuccia,
+   and also everyone who built a career in the Dominican Republic and then
+   moved — Milly Quezada, Fernando Villalona, Eddy Herrera, Raulín Rodríguez.
+   This is the largest reading and the one the prose already reflects.
+3. **Formed abroad as an act.** The New York Band, Oro Sólido, Proyecto Uno,
+   Fulanito. A statement about where the music was made rather than about the
+   person.
+
+Reading 2 is the one that matches how the biographies already use the word, and
+it is also the one that makes the tag hardest to maintain, because an artist can
+cross into it at any point in a career. No decision has been taken. The 8 rows
+are left in place pending one.
+
 ---
 
 ## ADR-003: Freeze the Official Genre Taxonomy

@@ -18,6 +18,7 @@ import {
 } from "@/lib/adminArtistWrite";
 import { usePathname } from "next/navigation";
 import type { FormEvent } from "react";
+import { DOMINICAN_PROVINCES } from "@/lib/artistDirectoryShared";
 import { getSupabaseClient } from "@/lib/supabase";
 import {
   artistRelationshipTypeLabels,
@@ -356,41 +357,10 @@ const emptyForm: ArtistForm = {
   ended: false,
 };
 
-const provinceOptions = [
-  "Born Abroad",
-  "Azua",
-  "Bahoruco",
-  "Barahona",
-  "Dajabón",
-  "Distrito Nacional",
-  "Duarte",
-  "El Seibo",
-  "Elías Piña",
-  "Espaillat",
-  "Hato Mayor",
-  "Hermanas Mirabal",
-  "Independencia",
-  "La Altagracia",
-  "La Romana",
-  "La Vega",
-  "María Trinidad Sánchez",
-  "Monseñor Nouel",
-  "Monte Cristi",
-  "Monte Plata",
-  "Pedernales",
-  "Peravia",
-  "Puerto Plata",
-  "Samaná",
-  "San Cristóbal",
-  "San José de Ocoa",
-  "San Juan",
-  "San Pedro de Macorís",
-  "Sánchez Ramírez",
-  "Santiago",
-  "Santiago Rodríguez",
-  "Santo Domingo",
-  "Valverde",
-];
+// The province dropdown is built from the shared set the public renderer
+// checks against, plus the sentinel for artists born outside the country,
+// so the form can never offer a value the profile page would then drop.
+const provinceOptions = ["Nacido en el Exterior", ...Array.from(DOMINICAN_PROVINCES)];
 
 
 function toCsv(value: string[] | Record<string, unknown> | null | undefined) {
@@ -957,8 +927,8 @@ export default function AdminDashboard() {
       death_year: artist.death_year ? String(artist.death_year) : "",
       birth_place: artist.birth_place ?? "",
       province:
-        artist.province === "X - Born Outside"
-          ? "Born Abroad"
+        artist.province === "X - Born Outside" || artist.province === "Born Abroad"
+          ? "Nacido en el Exterior"
           : artist.province ?? "",
       type: artist.type ?? "",
       primary_role: artist.primary_role ?? "",
